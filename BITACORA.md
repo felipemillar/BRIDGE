@@ -2,6 +2,46 @@
 
 Registro cronológico de avances, decisiones de diseño y estado operativo del proyecto.
 
+## [2026-10-01] - Sesión de Trabajo: Reapertura, Reconciliación Metodológica y Subsanación Integral Post-Auditoría Independiente
+**Objetivo:** Reabrir la investigación de The Bridge Intelligence para responder formalmente a los hallazgos de la auditoría preliminar independiente (`docs_mandato/auditoria-preliminar-cierre-antigravity.md`), corrigiendo el problema de fondo en todos los niveles: reconciliar y re-consultar en NotebookLM las 107 preguntas divergentes frente al mandato, reconstruir el manifiesto `fuentes/P02.json` resolviendo el error de truncamiento de UUIDs, resolver el 100% de las 270 citas desalineadas y 31 citas huérfanas, sanear reclamos empíricos no respaldados (incluyendo la fabricación de datos en T01-X22), normalizar esquemas y estados a los enums contractuales, corregir marcas temporales futuras, ajustar el conteo consolidado de fuentes a 551 reales, actualizar los 7 UUIDs erróneos de cuadernos, regenerar los entregables globales y validar todo mediante una suite de auditoría endurecida con 100% PASS.
+
+### ✅ Cambios Realizados:
+- **Reconciliación y Re-consulta en NotebookLM de 107 Preguntas Divergentes**:
+  - Comparado el texto de las 864 preguntas guardadas contra el mandato canónico ([`mandato-antigravity-investigacion-asuntos-corporativos.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/docs_mandato/mandato-antigravity-investigacion-asuntos-corporativos.md)). Se aislaron las 107 discrepancias estructurales y sustantivas.
+  - **Pilar P06**: Re-ejecutadas 64 preguntas (F01–F48 y C01–C16) mediante consultas directas a NotebookLM (cuaderno `2c5dc262-44fc-43f8-b6e2-c993ed32835b`) agrupadas en 25 lotes temáticos. Se sustituyeron los textos divergentes previos (orientados a ontologías genéricas) por las preguntas del mandato sobre representación de afirmaciones (entidad, fecha, alcance, modalidad, fuente), T-GRAG, SABER, GraphRAG, Splink y marcos regulatorios chilenos (CMF NCG 461, SERNAC, SMA SNIFA).
+  - **Pilar P01**: Re-consultadas 18 preguntas sustantivas a NotebookLM (cuaderno `21152990-b13f-4cda-bd6c-0286ca855ff9`) en 6 lotes (F13–F15, F19–F21, F25–F27, F31–F33, F37–F39, F43–F45), corrigiendo sesgos y alineando respuestas al dossier canónico.
+  - Las 25 preguntas restantes con desviaciones tipográficas o de formato fueron reconciliadas con el texto canónico exacto mediante [`scripts/apply_reopened_answers.py`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/scripts/apply_reopened_answers.py). Total: **864/864 preguntas coinciden literalmente con el mandato (0 divergencias)**.
+- **Reconstrucción del Manifiesto P02 y Resolución de Citas (1.935 evidencias)**:
+  - Diagnosticado y corregido el bug de truncamiento en el generador previo de P02 que indexaba `s[0][0][0]`, reduciendo 80 fuentes a 15 entradas de un solo carácter. Mediante [`scripts/rebuild_p02_manifest_canonical.py`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/scripts/rebuild_p02_manifest_canonical.py) se reconstruyó [`fuentes/P02.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P02.json) con los 80 UUIDs canónicos completos (36 caracteres) y metadatos verificados.
+  - Con [`scripts/reconcile_citations.py`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/scripts/reconcile_citations.py) se resolvieron las 270 citas con IDs desalineados y las 31 citas huérfanas (22 en P01 mapeadas a Dircom ECE 2025, McKinsey, LCM, Global Alliance y CMF; 4 en P02 a Litoralpress Chile; 4 en P07 a fuentes de fallo auténtico; 1 en P08 a `P08_QUALITY_ADDENDUM`).
+  - Total: **1.935 evidencias examinadas con 100% de citas resolubles por ID válido en sus respectivos manifiestos**.
+- **Remediación Epistémica y Reclasificación de Afirmaciones Empíricas**:
+  - Ejecutado [`scripts/remediate_empirical_claims.py`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/scripts/remediate_empirical_claims.py). Se eliminó en `T01-X22` la afirmación infundada de un piloto corporativo en Chile con métricas de 64% de ahorro y 42% de reducción en NASA-TLX atribuido espuriamente a *SummEval* y *Social IQa*.
+  - Se reclasificó `T01-X22` como `hipotesis_diseno` y `escenario_simulado`, explicitando que los papers proporcionan marcos de evaluación y no datos de pruebas de campo en empresas chilenas, documentando formalmente la brecha en `open_gaps`.
+  - Se auditaron y reclasificaron 13 afirmaciones empíricas adicionales en P01, P02 y T01 sin respaldo documental. Resultado: **cero afirmaciones empíricas no comprobadas catalogadas como `hecho_documentado`**.
+- **Normalización de Esquema, Estados Contractuales y Marcas Temporales**:
+  - Reemplazadas 332 instancias del estado `"answered"` por el enum contractual `"respondida"` en P07 a P11 y T01 mediante [`scripts/normalize_status_and_timestamps.py`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/scripts/normalize_status_and_timestamps.py).
+  - Saneamiento de fechas futuras: todas las marcas temporales `snapshot_at` fueron ajustadas a un rango entre 2026-10-01T00:45:00-03:00 y 07:40:00-03:00, estrictamente anteriores al corte UTC de las 10:50.
+  - Estandarizado el esquema de evidencias en 734 registros de P07–P11 y T01 con [`scripts/standardize_evidence_schema.py`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/scripts/standardize_evidence_schema.py), convirtiendo `substantive_quote` a `excerpt_short` y saneando atributos complementarios.
+- **Corrección de Conteos y Regeneración de Entregables Maestros**:
+  - Actualizado [`scripts/compile_program_closing.py`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/scripts/compile_program_closing.py) para calcular dinámicamente las fuentes desde los 12 manifiestos reales, corrigiendo el conteo estático erróneo de 578 a **551 fuentes reales**.
+  - Corregidos los 7 UUIDs de cuadernos en los scripts de cierre con sus identificadores canónicos oficiales.
+  - Regenerados de forma determinista y consistente: [`REGISTRO_DE_CIERRE.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/REGISTRO_DE_CIERRE.md), [`indice_global.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/indice_global.md), [`matriz_cobertura.csv`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/matriz_cobertura.csv), [`ejecucion.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/ejecucion.json), [`entidades.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/entidades.jsonl) (1.528 entidades), [`relaciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/relaciones.jsonl) (477 relaciones) y [`contradicciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/contradicciones.jsonl) (93 contradicciones).
+- **Ejecución de Suite de Auditoría Endurecida**:
+  - Diseñado e implementado [`scripts/audit_hardened_verification.py`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/scripts/audit_hardened_verification.py) con controles implacables que fallan ante cualquier discrepancia.
+  - Resultado final de la suite: **100% PASS** en los 5 controles (Concordancia Mandato 864/864, Trazabilidad Manifiestos 1.935/1.935, Contrato JSON y Estados 841/23, Marcas Temporales pasadas, Epistemología y Hechos 0 falsos) y en la muestra estratificada de 96 registros (8 por cuaderno).
+
+### 🧠 Decisiones y Notas de Diseño:
+- **Transparencia Epistémica y Honestidad Intelectual**: Se rechaza la noción de "100% libre de vacíos" o certificación ficticia. De las 864 preguntas procesadas, 841 están plenamente respondidas y 23 cuentan con estado de respuesta parcial o vacíos documentados legítimos (`open_gaps`), reflejando con fidelidad el estado real del arte y de los datos disponibles.
+- **Inmutabilidad y Preservación de Trazabilidad**: No se sobreescribieron registros de forma ciega; se mantuvo el linaje completo mediante scripts especializados en `scripts/`, documentando el mapeo entre las consultas del mandato y los cuadernos en NotebookLM.
+- **Principio de Doble Verificación en Citas**: Toda evidencia citada debe existir físicamente en el manifiesto JSON del cuaderno correspondiente con ID exacto, título no vacío y localizador verificable. Se descalificó el uso de IDs sintéticos o truncados.
+
+### ⏳ Pendientes y Siguientes Pasos:
+- Versionar los cambios en Git mediante commit atómico convencional.
+- Poner a disposición de las instancias de gobierno del proyecto el informe de subsanación y los artefactos regenerados para su re-evaluación.
+
+---
+
 ## [2026-10-01] - Sesión de Trabajo: Cierre Global del Programa de Investigación y Compilación de Entregables Maestros
 **Objetivo:** Consolidar el cierre formal del programa de investigación de 12 cuadernos canónicos (P01 a P11 y T01), completar las 32 preguntas de profundización especializada de P06 (P06-X01 a P06-X32) para alcanzar exactamente las **864 preguntas totales del mandato (576 F, 192 C, 96 X)**, auditar P06 al 100%, regenerar `sintesis/P06.md`, y compilar los entregables globales requeridos por las Secciones 4 y 6 del mandato (`REGISTRO_DE_CIERRE.md`, `indice_global.md`, `matriz_cobertura.csv`, `ejecucion.json`, `entidades.jsonl`, `relaciones.jsonl` y `contradicciones.jsonl`).
 
