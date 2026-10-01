@@ -23,33 +23,35 @@ def run_p06_stratified_audit():
     print(f"Total registros cargados en P06.jsonl: {len(records)}")
     
     # 1. Total count check
-    expected_count = 64
+    expected_count = 96
     if len(records) != expected_count:
         print(f"ERROR: Se esperaban {expected_count} registros y se encontraron {len(records)}")
         sys.exit(1)
-    print(f"✅ Control 1: Conteo exacto de 64 registros cumplido (48 F + 16 C).")
+    print(f"✅ Control 1: Conteo exacto de 96 registros cumplido (48 F + 16 C + 32 X).")
     
     # 2. Sequence integrity check
     expected_f = [f"P06-F{i:02d}" for i in range(1, 49)]
     expected_c = [f"P06-C{i:02d}" for i in range(1, 17)]
-    expected_ids = expected_f + expected_c
+    expected_x = [f"P06-X{i:02d}" for i in range(1, 33)]
+    expected_ids = expected_f + expected_c + expected_x
     
     actual_ids = [r["question_id"] for r in records]
     if actual_ids != expected_ids:
-        print("ERROR: La secuencia de IDs no coincide exactamente con el orden F->C.")
+        print("ERROR: La secuencia de IDs no coincide exactamente con el orden F->C->X.")
         missing = set(expected_ids) - set(actual_ids)
         extra = set(actual_ids) - set(expected_ids)
         print(f"Faltantes: {missing}, Extras: {extra}")
         sys.exit(1)
-    print("✅ Control 2: Secuencia exacta F01..F48 -> C01..C16 sin saltos ni duplicados.")
+    print("✅ Control 2: Secuencia exacta F01..F48 -> C01..C16 -> X01..X32 sin saltos ni duplicados.")
     
-    # 3. Stratified sample (at least 10% = 7 records across F and C)
+    # 3. Stratified sample (at least 10% = 10 records across F, C and X)
     random.seed(42)  # For deterministic reproducibility
     sample_f = random.sample(records[:48], 5)
     sample_c = random.sample(records[48:64], 2)
-    sample = sample_f + sample_c
+    sample_x = random.sample(records[64:96], 3)
+    sample = sample_f + sample_c + sample_x
     sample_ids = [r["question_id"] for r in sample]
-    print(f"\n✅ Muestra estratificada del 10%+ ({len(sample)} registros seleccionados): {sample_ids}")
+    print(f"\n✅ Muestra estratificada del 10.4% ({len(sample)} registros seleccionados): {sample_ids}")
     
     # Audit each sampled record
     manifest_sources_by_id = {s.get("source_id"): s for s in manifest.get("sources", [])}

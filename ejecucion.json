@@ -1,0 +1,295 @@
+{
+  "programa": "Inteligencia de Asuntos Corporativos (The Bridge Intelligence)",
+  "version_mandato": "1.0",
+  "cuenta_notebooklm": "felipemillarsilva@gmail.com",
+  "conector": "NotebookLM MCP Read-Only Client (Local Environment)",
+  "fecha_cierre_global": "2026-10-01T04:34:28.095588",
+  "total_preguntas_alcance_aprobado": 864,
+  "total_preguntas_ejecutadas": 864,
+  "total_fundamentales_f": 576,
+  "total_contraste_c": 192,
+  "total_profundizacion_x": 96,
+  "distribucion_global_estados": {
+    "respondida": 848,
+    "parcial": 16,
+    "sin_evidencia": 0,
+    "fuente_fallida": 0,
+    "conflicto": 0,
+    "bloqueada": 0
+  },
+  "auditorias_estratificadas": {
+    "tasa_aprobacion_global": "100.0%",
+    "violaciones_criticas": 0,
+    "muestra_promedio_por_pilar": ">= 10.0%"
+  },
+  "pilares": {
+    "P01": {
+      "title": "Usuarios, problemas y decisiones en asuntos corporativos",
+      "notebook_uuid": "0439e6a3-b6d4-42b4-82a1-1e967a685cb4",
+      "total_records": 64,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 0,
+      "status_distribution": {
+        "respondida": 64
+      },
+      "sintesis_size_bytes": 30262,
+      "respuestas_size_bytes": 380029
+    },
+    "P02": {
+      "title": "Panorama de soluciones y mercado",
+      "notebook_uuid": "d2258957-3f36-4191-897b-3b320ec2c7c7",
+      "total_records": 96,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 32,
+      "status_distribution": {
+        "respondida": 96
+      },
+      "sintesis_size_bytes": 37886,
+      "respuestas_size_bytes": 467361
+    },
+    "P03": {
+      "title": "Captura de señales externas y monitoreo de entorno",
+      "notebook_uuid": "2cff09ff-fbe9-450d-85fa-7f4c9cff89d8",
+      "total_records": 64,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 0,
+      "status_distribution": {
+        "respondida": 64
+      },
+      "sintesis_size_bytes": 36605,
+      "respuestas_size_bytes": 277383
+    },
+    "P04": {
+      "title": "Memoria corporativa y conocimiento interno",
+      "notebook_uuid": "a4a8523c-f513-4f91-8902-602ee5fe6866",
+      "total_records": 64,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 0,
+      "status_distribution": {
+        "respondida": 64
+      },
+      "sintesis_size_bytes": 36314,
+      "respuestas_size_bytes": 294037
+    },
+    "P05": {
+      "title": "Riesgos, reputación y materialidad",
+      "notebook_uuid": "5b23e846-5f56-4c91-9e73-b3c959d99723",
+      "total_records": 64,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 0,
+      "status_distribution": {
+        "respondida": 64
+      },
+      "sintesis_size_bytes": 41088,
+      "respuestas_size_bytes": 335282
+    },
+    "P06": {
+      "title": "Cruce de conocimiento interno y señales externas",
+      "notebook_uuid": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+      "total_records": 96,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 32,
+      "status_distribution": {
+        "respondida": 92,
+        "parcial": 4
+      },
+      "sintesis_size_bytes": 66100,
+      "respuestas_size_bytes": 486075
+    },
+    "P07": {
+      "title": "Preparación ejecutiva y apoyo estratégico",
+      "notebook_uuid": "521c2c59-1c43-493b-adb9-7de2c7cf9dce",
+      "total_records": 64,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 0,
+      "status_distribution": {
+        "respondida": 64
+      },
+      "sintesis_size_bytes": 31482,
+      "respuestas_size_bytes": 291184
+    },
+    "P08": {
+      "title": "Factibilidad y arquitectura de solución",
+      "notebook_uuid": "aaeb5822-774f-4d92-bf3c-41c19bcf82c8",
+      "total_records": 64,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 0,
+      "status_distribution": {
+        "respondida": 64
+      },
+      "sintesis_size_bytes": 32314,
+      "respuestas_size_bytes": 308583
+    },
+    "P09": {
+      "title": "Gestión de compromisos y partes interesadas",
+      "notebook_uuid": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+      "total_records": 64,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 0,
+      "status_distribution": {
+        "respondida": 64
+      },
+      "sintesis_size_bytes": 46190,
+      "respuestas_size_bytes": 301349
+    },
+    "P10": {
+      "title": "Aprobación y consistencia de declaraciones y vocería",
+      "notebook_uuid": "3dfae498-0dd8-48b0-a35d-6c16aa9166d3",
+      "total_records": 64,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 0,
+      "status_distribution": {
+        "respondida": 64
+      },
+      "sintesis_size_bytes": 35732,
+      "respuestas_size_bytes": 331938
+    },
+    "P11": {
+      "title": "Gobernanza de información y operación entre clientes",
+      "notebook_uuid": "64271ecf-776c-4692-b302-d936ea00a501",
+      "total_records": 64,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 0,
+      "status_distribution": {
+        "respondida": 64
+      },
+      "sintesis_size_bytes": 51082,
+      "respuestas_size_bytes": 386301
+    },
+    "T01": {
+      "title": "Evaluación y pilotos",
+      "notebook_uuid": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+      "total_records": 96,
+      "f_count": 48,
+      "c_count": 16,
+      "x_count": 32,
+      "status_distribution": {
+        "respondida": 84,
+        "parcial": 12
+      },
+      "sintesis_size_bytes": 58434,
+      "respuestas_size_bytes": 500751
+    }
+  },
+  "manifiestos": {
+    "P01": {
+      "notebook_id": "0439e6a3-b6d4-42b4-82a1-1e967a685cb4",
+      "title": "Usuarios, problemas y decisiones en asuntos corporativos",
+      "snapshot_at": "2026-10-01T00:25:00-03:00",
+      "total_sources": 39,
+      "substantive_count": 32,
+      "partial_count": 7,
+      "precedence_rule": "Precedencia canónica"
+    },
+    "P02": {
+      "notebook_id": "d2258957-3f36-4191-897b-3b320ec2c7c7",
+      "title": "Panorama de soluciones y mercado",
+      "snapshot_at": "2026-10-01T01:21:00-03:00",
+      "total_sources": 80,
+      "substantive_count": 74,
+      "partial_count": 6,
+      "precedence_rule": "00_P02_GLOBAL_READ_ME_AND_ERRATA takes absolute precedence over all other sources in this notebook. Reconciles atlas count and corrects commercial vendor claims."
+    },
+    "P03": {
+      "notebook_id": "2cff09ff-fbe9-450d-85fa-7f4c9cff89d8",
+      "title": "Captura de señales externas y monitoreo de entorno",
+      "snapshot_at": "2026-10-01T01:55:00-03:00",
+      "total_sources": 33,
+      "substantive_count": 32,
+      "partial_count": 1,
+      "precedence_rule": "P03_QUALITY_ADDENDUM and P03_EVIDENCE_MAP take precedence over informal summaries in this notebook. Governs taxonomy of external signals, broadcast latency, API rate limits, and legal copyright restrictions."
+    },
+    "P04": {
+      "notebook_id": "a4a8523c-f513-4f91-8902-602ee5fe6866",
+      "title": "Memoria corporativa y conocimiento interno",
+      "snapshot_at": "2026-10-01T02:50:00-03:00",
+      "total_sources": 34,
+      "substantive_count": 30,
+      "partial_count": 4,
+      "precedence_rule": "P04_EVIDENCE_MAP and P04_RESEARCH_DOSSIER govern corporate document classification, RAG architecture, ABAC governance, and factuality evaluation in this notebook."
+    },
+    "P05": {
+      "notebook_id": "5b23e846-5f56-4c91-9e73-b3c959d99723",
+      "title": "Riesgos, reputación y materialidad",
+      "snapshot_at": "2026-10-01T03:00:00-03:00",
+      "total_sources": 36,
+      "substantive_count": 35,
+      "partial_count": 1,
+      "precedence_rule": "P05_EVIDENCE_MAP, P05_QUALITY_ADDENDUM and P05_RESEARCH_DOSSIER govern analytical methodologies, structured analytic techniques (SATs), intelligence synthesis, and bias mitigation in this notebook."
+    },
+    "P06": {
+      "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+      "title": "Cruce de conocimiento interno y señales externas",
+      "snapshot_at": "2026-10-01T03:30:00-03:00",
+      "total_sources": 38,
+      "substantive_count": 38,
+      "partial_count": 0,
+      "precedence_rule": "P06_EVIDENCE_MAP, P06_QUALITY_ADDENDUM and P06_RESEARCH_DOSSIER govern semantic reconciliation, entity resolution, temporal knowledge graphs, discrepancy typology, greenwashing detection, and verification protocols in this notebook."
+    },
+    "P07": {
+      "notebook_id": "521c2c59-1c43-493b-adb9-7de2c7cf9dce",
+      "title": "Preparación ejecutiva y apoyo estratégico",
+      "snapshot_at": "2026-10-01T04:00:00-03:00",
+      "total_sources": 39,
+      "substantive_count": 35,
+      "partial_count": 4,
+      "precedence_rule": "P07_EVIDENCE_MAP, P07_RESEARCH_DOSSIER, P07_GAPS_AND_VALIDATION and P07_SOURCE_INDEX govern executive preparation, briefing architectures, media training techniques (bridging, hooking, flagging), message houses, scenario wargaming, regulatory governance (Ley 20.730, Ley 18.045, CMF NCG 461), and human review gates."
+    },
+    "P08": {
+      "notebook_id": "aaeb5822-774f-4d92-bf3c-41c19bcf82c8",
+      "title": "Factibilidad y arquitectura de solución",
+      "snapshot_at": "2026-10-01T07:00:00-03:00",
+      "total_sources": 40,
+      "substantive_count": 34,
+      "partial_count": 6,
+      "precedence_rule": "P08_EVIDENCE_MAP, P08_QUALITY_ADDENDUM, P08_RESEARCH_DOSSIER, P08_GAPS_AND_VALIDATION and P08_SOURCE_INDEX govern business models, SaaS pricing tiers, TAM/SAM/SOM sizing in Chile/LatAm, buyer willingness-to-pay, API cost structures, and data privacy governance (Ley 21.719, Ley 20.730, CMF)."
+    },
+    "P09": {
+      "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+      "title": "Gestión de compromisos y partes interesadas",
+      "snapshot_at": "2026-10-01T08:15:00-03:00",
+      "total_sources": 45,
+      "substantive_count": 36,
+      "partial_count": 9,
+      "precedence_rule": "En P09, P09_VERIFICATION_CORRECTIONS y P09_OECD_SCOPE_CORRECTION prevalecen sobre P09_QUALITY_ADDENDUM y síntesis preliminares. El informe OECD PDF complementa la Ley 20.730 pero no es norma vinculante."
+    },
+    "P10": {
+      "notebook_id": "3dfae498-0dd8-48b0-a35d-6c16aa9166d3",
+      "title": "Aprobación y consistencia de declaraciones y vocería",
+      "snapshot_at": "2026-10-01T09:30:00-03:00",
+      "total_sources": 41,
+      "substantive_count": 38,
+      "partial_count": 3,
+      "precedence_rule": "P10_VERIFICATION_CORRECTIONS (f043631e) prevalece sobre P10_QUALITY_ADDENDUM (1da04c4e) y síntesis previas."
+    },
+    "P11": {
+      "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+      "title": "Gobernanza de información y operación entre clientes",
+      "snapshot_at": "2026-10-01T13:45:00-03:00",
+      "total_sources": 51,
+      "substantive_count": 48,
+      "partial_count": 3,
+      "precedence_rule": "P11_VERIFICATION_CORRECTIONS (49d7882a) y P11_2026_LAW_AND_PROVIDER_CORRECTION (0716e04e) ejercen prevalencia canónica rectora sobre P11_QUALITY_ADDENDUM, P11_PENDING_SOURCES_RESOLUTION y síntesis anteriores. Descarte de WIPO Lex como no sustantiva y sustitución canónica de HTMLs de OpenAI por PDFs oficiales vigentes."
+    },
+    "T01": {
+      "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+      "title": "Evaluación y pilotos",
+      "snapshot_at": "2026-10-01T17:30:00-03:00",
+      "total_sources": 75,
+      "substantive_count": 61,
+      "partial_count": 14,
+      "precedence_rule": "T01_VERIFICATION_CORRECTIONS (f5a15f9d) ejerce prevalencia canónica rectora sobre T01_QUALITY_ADDENDUM (45782049) y las síntesis previas. Prevalencia de los 9 Full-Texts en PDF sobre las fichas /abs/; descarte canónico de Bridge Studio MX (bridgestudio.mx) como atribución errónea ajena a thebridgeintelligence.ai."
+    }
+  }
+}

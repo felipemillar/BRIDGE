@@ -17,7 +17,7 @@ def generate_p06_synthesis():
     md.append("**Repositorio:** BRIDGE (`/Users/fmillar/Proyectos_Desarrollo/BRIDGE`)  ")
     md.append("**Cuaderno Canónico:** `2c5dc262-44fc-43f8-b6e2-c993ed32835b` (NotebookLM: P06 — Cruce de conocimiento interno y señales externas)  ")
     md.append("**Fecha de Cierre de Pilar:** 2026-10-01  ")
-    md.append("**Estado de Cobertura:** 64/64 preguntas respondidas y auditadas (48 Fundamentales F01–F48, 16 Contraste C01–C16). Auditoría Estratificada: 100% Aprobada.\n")
+    md.append("**Estado de Cobertura:** 96/96 preguntas respondidas y auditadas (48 Fundamentales F01–F48, 16 Contraste C01–C16, 32 Profundización X01–X32). Auditoría Estratificada: 100% Aprobada.\n")
     
     md.append("---\n")
     md.append("## 1. Alcance, Manifiesto y Gobernanza Editorial\n")
@@ -25,9 +25,10 @@ def generate_p06_synthesis():
     md.append("Este pilar erradica la simplificación ingenua de calificar cualquier discrepancia como 'mentira o greenwashing', estableciendo una taxonomía epistémica rigurosa en cuatro categorías: Contradicción Real, Diferencia Temporal, Diferencia de Alcance y Acusación No Verificada. Asimismo, formaliza los mecanismos de resolución de entidades corporativas complejas en América Latina (Splink / Fellegi-Sunter), la indexación contextual con grafos temporales dinámicos (GraphRAG / T-GRAG), la verificación factual atómica (CoVe / FEVER) y la política de abstención activa algorítmica (SABER / SelfCheckGPT) bajo una estricta gobernanza Human-in-the-Loop.\n")
     
     md.append("### Dimensiones Cuantitativas del Pilar:")
-    md.append("- **Total preguntas ejecutadas:** 64 preguntas (100% del alcance aprobado para P06).")
+    md.append("- **Total preguntas ejecutadas:** 96 preguntas (100% del alcance aprobado para P06: 48 F + 16 C + 32 X).")
     md.append("- **Preguntas Fundamentales (F):** 48 preguntas distribuidas en 8 ejes temáticos (6 preguntas por eje).")
     md.append("- **Preguntas de Contraste y Límites (C):** 16 preguntas distribuidas en los 8 ejes (2 preguntas por eje: contrastes metodológicos y pruebas de estrés empírico).")
+    md.append("- **Preguntas de Profundización Especializada (X):** 32 preguntas en 4 ejes avanzados (X1: Grafo de afirmaciones, X2: Resolución de contradicciones complejas, X3: Seguridad en recuperación combinada, X4: Ablación y valor del cruce).")
     md.append("- **Fuentes Catalogadas en Manifiesto:** 38 fuentes totales:")
     md.append("  - **33 fuentes externas activas y sustantivas** (investigaciones académicas de GraphRAG de Microsoft, T-GRAG temporal, SABER trust-or-abstain, FEVER, Sentence-BERT, CoVe de Meta AI, SelfCheckGPT de Cambridge, surveys de greenwashing de Calamai et al. y Vinella et al., plataformas comerciales Signal AI, AlphaSense, Dataminr Pulse, Factiva Dow Jones, Palantir Foundry/AIP, y el marco regulatorio chileno CMF NCG 461, SMA SNIFA y Circular SERNAC 2024).")
     md.append("  - **5 documentos analíticos internos de síntesis:** `P06_QUALITY_ADDENDUM`, `P06_RESEARCH_DOSSIER`, `P06_EVIDENCE_MAP`, `P06_GAPS_AND_VALIDATION` y `P06_SOURCE_INDEX`.")
@@ -240,7 +241,7 @@ def generate_p06_synthesis():
     md.append("| **C16** | Adopción de Software | Confianza en marketing comercial | Validación empírica en terreno vía PoC | Validación en 3 fases (backtesting, entrevistas IPSA y shadow running). |\n")
     
     md.append("---\n")
-    md.append("## 7. Matriz de Trazabilidad Completa de las 64 Preguntas de P06\n")
+    md.append("## 7. Matriz de Trazabilidad Completa de las 96 Preguntas de P06\n")
     md.append("| ID | Eje / Tipo | Pregunta | Estado Epistémico | Fuentes Clave | Hallazgo Central / Directriz BRIDGE |")
     md.append("|---|---|---|---|---|---|")
     
@@ -256,9 +257,15 @@ def generate_p06_synthesis():
             fnum = int(qid.split("-F")[1])
             eje_idx = (fnum - 1) // 6 + 1
             eje_str = f"Eje {eje_idx} (F)"
-        else:
+        elif qid.startswith("P06-C"):
             cnum = int(qid.split("-C")[1])
             eje_str = f"Contraste {cnum} (C)"
+        elif qid.startswith("P06-X"):
+            xnum = int(qid.split("-X")[1])
+            x_tier = (xnum - 1) // 8 + 1
+            eje_str = f"Profundización X{x_tier} (X)"
+        else:
+            eje_str = "Otro"
             
         # Extract sources
         sources_used = []
