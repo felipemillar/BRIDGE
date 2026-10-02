@@ -48,7 +48,7 @@
 
 > Los hechos están respaldados por fuentes primarias técnicas y reportes sectoriales independientes: 1) AlphaSense: respaldado por la ficha oficial 'AlphaSense Market and Competitive Intelligence Platform' (2026) y el reporte 'AlphaSense Forrester Wave Market and Competitive Intelligence Leader' (2024
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P02-F29.json](P02-F29.json)
 ### P02-F30: ¿Qué caso concreto, con entradas y resultado esperado, ilustra conocimiento interno y cruce de fuentes sin introducir datos no documentados?
 
