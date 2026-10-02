@@ -494,6 +494,81 @@ P02_MAP = {
     "REG_FUENTES_ESCUCHA": ("conservado", "doc:registro-fuentes-plataformas-escucha-p02", "documento", "Registro de Fuentes de Plataformas de Escucha", ["Fuentes Escucha P02"], None),
 }
 
+# Mapeo explícito y verificado para P03 (64 IDs legados)
+P03_MAP = {
+    # Esquemas internos de datos -> eliminados
+    "ENT_ALERT_SCHEMA": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_BROADCAST_SCHEMA": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_DATA_GOVERNANCE_SCHEMA": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_PRESS_SCHEMA": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_REGULATORY_SCHEMA": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_SEMANTIC_ANALYSIS_SCHEMA": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_SIGNAL_SCHEMA": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_SOCIAL_DATA_SCHEMA": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+
+    # Casos de prueba demostrativos / hipotéticos -> eliminados
+    "ENT_CASO_AUDITORIA_INGESTA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_BLOQUEO_RUTA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_DESALINADORA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_ESCASEZ_HIDRICA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_PRENSA_REGIONAL": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_RADIO_REGIONAL": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_ROYALTY": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_SALAR_DESAMBIGUACION": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+
+    # Registros editoriales internos -> eliminados
+    "ENT_CORRECCION_REDES_P03": ("eliminado", None, None, None, [], "registro_editorial_interno"),
+    "ENT_RECTIFICACION_APIS_REGULATORIAS": ("eliminado", None, None, None, [], "registro_editorial_interno"),
+
+    # Entidades conservadas
+    "ENT_ACTOR_CENTRIC_TRACKING": ("conservado", "tema:monitoreo-centrado-actores", "tema", "Monitoreo Centrado en Actores Clave", ["Stakeholder-Centric Tracking", "Monitoreo Centrado en Actores"], None),
+    "ENT_ALERTS_EVIDENCE_CORPUS": ("conservado", "doc:corpus-evidencia-alertas-p03", "documento", "Corpus de Evidencia de Alertas P03", ["Alerts Evidence Corpus", "Corpus Alertas P03"], None),
+    "ENT_ALERT_FATIGUE_CONTROLS": ("conservado", "tema:controles-fatiga-alertas", "tema", "Controles de Mitigación de Fatiga de Alertas", ["Alert Fatigue Controls", "Mitigación Fatiga Alertas"], None),
+    "ENT_ALERT_ROLE_MATRIX": ("conservado", "doc:matriz-roles-severidad-alertas", "documento", "Matriz de Roles y Severidad de Alertas", ["Alert Role-Severity Matrix", "Matriz Roles Severidad Alertas"], None),
+    "ENT_ASR_CHILEAN_BIAS": ("conservado", "riesgo:degradacion-fonetica-asr-chileno", "riesgo", "Degradación Fonética de ASR en Español Chileno", ["Chilean Spanish ASR Degradation", "Sesgo Fonético ASR Chileno"], None),
+    "ENT_AUDIOVISUAL_EVIDENCE_RULES": ("conservado", "doc:reglas-evidencia-audiovisual", "documento", "Reglas de Evidencia Audiovisual", ["Audiovisual Evidence Rules", "Reglas Evidencia Audiovisual"], None),
+    "ENT_AUDITORIA_TERRITORIAL_PRENSA": ("conservado", "exp:panel-auditoria-territorial-prensa", "experimento", "Panel de Auditoría Territorial de Prensa", ["Territorial Press Audit Panel", "Auditoría Territorial Prensa"], None),
+    "ENT_BENCHMARK_AUDIO_CHILENO": ("conservado", "exp:benchmark-transcripcion-audio-chileno", "experimento", "Benchmark de Transcripción de Audio Radial Chileno", ["Chilean Audio Benchmark", "Benchmark Audio Radial Chileno"], None),
+    "ENT_BENCHMARK_POSTURA_CHILENA": ("conservado", "exp:benchmark-postura-riesgo-regulatorio-chileno", "experimento", "Benchmark de Postura y Riesgo Regulatorio Chileno", ["Chilean Stance Benchmark", "Benchmark Postura Chilena"], None),
+    "ENT_BERTOPIC_PIPELINE": ("conservado", "prod:pipeline-neuronal-bertopic", "producto", "Pipeline Neuronal BERTopic", ["BERTopic Neural Pipeline", "Pipeline BERTopic"], None),
+    "ENT_BLINK_FRAMEWORK": ("conservado", "prod:arquitectura-desambiguacion-blink", "producto", "Arquitectura de Desambiguación BLINK", ["BLINK Entity Linking", "Framework BLINK"], None),
+    "ENT_BROADCAST_EVIDENCE_CORPUS": ("conservado", "doc:corpus-evidencia-audiovisual-p03", "documento", "Corpus de Evidencia Audiovisual P03", ["Audiovisual Evidence Corpus", "Corpus Audiovisual P03"], None),
+    "ENT_BROADCAST_PIPELINE": ("conservado", "prod:pipeline-monitoreo-audiovisual", "producto", "Pipeline de Monitoreo Audiovisual", ["Audiovisual Monitoring Pipeline", "Pipeline Monitoreo Audiovisual"], None),
+    "ENT_CANONICAL_CORPUS_P03": ("conservado", "doc:corpus-canonico-evidencia-p03", "documento", "Corpus Canónico de Evidencia P03", ["P03 Evidence Corpus", "Corpus Canónico P03"], None),
+    "ENT_CONTROL_FATIGA_ALERTAS": ("conservado", "doc:politica-control-fatiga-alertas", "documento", "Política de Control de Fatiga de Alertas", ["Alert Fatigue Prevention Policy", "Control Fatiga Alertas"], None),
+    "ENT_DESACOPLAMIENTO_EPISTEMICO": ("conservado", "tema:desacoplamiento-coordinacion-falsedad", "tema", "Regla de Desacoplamiento Coordinación-Falsedad", ["Epistemic Decoupling Rule", "Regla Desacoplamiento Coordinación Falsedad"], None),
+    "ENT_ESTATUS_BETO_CHILE": ("conservado", "exp:calibracion-epistemica-beto-chile", "experimento", "Calibración Epistémica de BETO en Chile", ["BETO Epistemic Status", "Calibración BETO Chile"], None),
+    "ENT_ESTUDIO_REGULACION_MUNICIPAL": ("conservado", "doc:estudio-recuperabilidad-regulatoria-municipal", "documento", "Estudio de Recuperabilidad Regulatoria Municipal", ["Municipal Regulatory Ingest Study", "Estudio Regulación Municipal"], None),
+    "ENT_ESTUDIO_TCO_MONITOREO": ("conservado", "doc:estudio-tco-real-monitoreo-medios", "documento", "Estudio de TCO Real en Monitoreo de Medios", ["Real TCO Media Ingest Study", "TCO Monitoreo Medios"], None),
+    "ENT_INGEST_COST_STRUCTURE": ("conservado", "tema:estructura-costos-ingesta", "tema", "Estructura de Costos de Ingesta", ["Ingest Cost Structure", "Estructura Costos Ingesta"], None),
+    "ENT_INGEST_QUALITY_METRICS": ("conservado", "met:calidad-de-ingesta", "metrica", "Métricas y Denominadores de Calidad de Ingesta", ["Ingest Quality Metrics", "Métricas Calidad Ingesta"], None),
+    "ENT_IP_RIGHTS_FRAMEWORK": ("conservado", "doc:marco-derechos-uso-retencion-datos", "documento", "Marco de Derechos de Uso y Retención de Datos", ["Data Rights & IP Framework", "Marco Derechos y Retención Datos"], None),
+    "ENT_LATENCY_METRICS": ("conservado", "met:latencia-ttd-ttv", "metrica", "Métricas de Latencia TTD y TTV", ["TTD and TTV Latency Metrics", "Latencia TTD TTV"], None),
+    "ENT_LEGAL_EVIDENCE_CORPUS": ("conservado", "doc:corpus-evidencia-legal-p03", "documento", "Corpus de Evidencia Legal y Contractual P03", ["Legal Evidence Corpus", "Corpus Legal P03"], None),
+    "ENT_MATERIAL_CHANGE": ("conservado", "evt:cambio-material-corporativo", "evento", "Cambio Material Corporativo (Hecho Esencial)", ["Hecho Esencial", "Material Event", "Cambio Material Corporativo"], None),
+    "ENT_NLP_EVIDENCE_CORPUS": ("conservado", "doc:corpus-evidencia-nlp-p03", "documento", "Corpus de Evidencia de NLP P03", ["NLP Evidence Corpus", "Corpus NLP P03"], None),
+    "ENT_NLP_LIMITATIONS": ("conservado", "riesgo:limites-epistemicos-nlp-sentimiento", "riesgo", "Límites Epistémicos de NLP y Sentimiento", ["NLP Epistemic Limitations", "Límites Epistémicos NLP"], None),
+    "ENT_OFFICIAL_FORMATS": ("conservado", "doc:especificaciones-formato-trazabilidad-oficial", "documento", "Especificaciones de Formato y Trazabilidad Oficial", ["Official Formats & Traceability", "Especificaciones Formato Oficial"], None),
+    "ENT_OFFICIAL_REGISTRIES": ("conservado", "tema:ecosistema-registros-oficiales-prioritarios", "tema", "Ecosistema de Registros Oficiales Prioritarios", ["Official Regulatory Registries", "Registros Oficiales Prioritarios"], None),
+    "ENT_PILOTO_CAMPO_DIRECTORES": ("conservado", "exp:piloto-campo-directores-asuntos-corporativos", "experimento", "Piloto de Campo con Directores de Asuntos Corporativos", ["Field Pilot Corporate Affairs", "Piloto Directores Asuntos Corporativos"], None),
+    "ENT_POLITICA_CUMPLIMIENTO_IP": ("conservado", "doc:politica-cumplimiento-propiedad-intelectual-ingesta", "documento", "Política de Cumplimiento de Propiedad Intelectual e Ingesta", ["IP Compliance Policy", "Política Cumplimiento IP"], None),
+    "ENT_PRECEDENTE_HIQ_LINKEDIN": ("conservado", "doc:litigio-hiq-v-linkedin", "documento", "Precedente y Litigio hiQ v. LinkedIn Corp.", ["hiQ v. LinkedIn Scraping Case", "Precedente hiQ LinkedIn"], None),
+    "ENT_PRENSA_REGIONAL_CHILE": ("conservado", "tema:ecosistema-prensa-regional-chile", "tema", "Ecosistema de Prensa Regional y Provincial de Chile", ["Chilean Regional Press", "Prensa Regional Chile"], None),
+    "ENT_PRESS_CHANNELS": ("conservado", "tema:canales-ingesta-prensa", "tema", "Canales de Ingesta de Prensa", ["Press Access Channels", "Canales Ingesta Prensa"], None),
+    "ENT_PRESS_EVIDENCE_CORPUS": ("conservado", "doc:corpus-evidencia-prensa-p03", "documento", "Corpus de Evidencia de Prensa P03", ["Press Evidence Corpus", "Corpus Prensa P03"], None),
+    "ENT_REGULATORY_EVIDENCE_CORPUS": ("conservado", "doc:corpus-evidencia-regulatoria-p03", "documento", "Corpus de Evidencia Regulatoria P03", ["Regulatory Evidence Corpus", "Corpus Regulatorio P03"], None),
+    "ENT_REGULATORY_FSM": ("conservado", "prod:fsm-ciclo-vida-regulatorio", "producto", "Máquina de Estados de Ciclo de Vida Regulatorio", ["Regulatory Lifecycle FSM", "Máquina de Estados Regulatoria"], None),
+    "ENT_SANDBOX_PRUEBA_ESTRES": ("conservado", "exp:sandbox-prueba-estres-desinformacion", "experimento", "Sandbox de Prueba de Estrés de Desinformación Sintética", ["Synthetic Disinformation Sandbox", "Sandbox Desinformación"], None),
+    "ENT_SIGNAL_FAMILIES": ("conservado", "tema:familias-senales-entorno", "tema", "Familias de Señales de Entorno", ["Signal Taxonomy", "Familias Señales Entorno"], None),
+    "ENT_SIGNAL_TAXONOMY": ("conservado", "doc:ontologia-senales-externas", "documento", "Ontología de Señales Externas", ["Signal Ontology", "Taxonomía Señales Externas"], None),
+    "ENT_SLA_BROADCAST_REAL": ("conservado", "comp:sla-monitoreo-audiovisual", "compromiso", "SLA Real de Monitoreo Audiovisual", ["Real Broadcast SLA", "SLA Monitoreo Audiovisual"], None),
+    "ENT_SOCIAL_BIAS": ("conservado", "riesgo:sesgos-estructurales-redes-sociales", "riesgo", "Sesgos Estructurales de Redes Sociales", ["Social Media Sampling Bias", "Sesgos Redes Sociales"], None),
+    "ENT_SOCIAL_EVIDENCE_CORPUS": ("conservado", "doc:corpus-evidencia-redes-p03", "documento", "Corpus de Evidencia de Redes P03", ["Social Evidence Corpus", "Corpus Redes P03"], None),
+    "ENT_SOCIAL_PLATFORMS": ("conservado", "tema:ecosistema-plataformas-sociales-oficiales", "tema", "Ecosistema de Plataformas Sociales Oficiales", ["Official Social Platforms", "Plataformas Sociales Oficiales"], None),
+    "ENT_TEST_CRISIS_HISTORICAS": ("conservado", "exp:test-crisis-historicas-asuntos-publicos", "experimento", "Test de Crisis Históricas de Asuntos Públicos", ["Historical Crisis Benchmark", "Test Crisis Históricas"], None),
+    "ENT_TRADE_OFF_INGEST": ("conservado", "doc:matriz-trade-off-ingesta", "documento", "Matriz de Trade-Off de Ingesta", ["Ingest Trade-Off Matrix", "Trade-Off Ingesta"], None),
+}
+
 
 def aplicar_mapa_pilar(
     entidades: dict[str, dict], mapa: list[dict], pilar_map: dict
@@ -600,6 +675,12 @@ def resolver_pilar_p02(r: Path) -> tuple[dict[str, dict], list[dict]]:
     return aplicar_mapa_pilar(entidades, mapa, P02_MAP)
 
 
+def resolver_pilar_p03(r: Path) -> tuple[dict[str, dict], list[dict]]:
+    """Resuelve las 64 entidades del pilar P03."""
+    entidades, mapa = cargar_existentes(r)
+    return aplicar_mapa_pilar(entidades, mapa, P03_MAP)
+
+
 def guardar_grafo(r: Path, entidades: dict[str, dict], mapa: list[dict]):
     """Guarda entidades.jsonl y mapa_ids.jsonl de forma atómica y determinista."""
     grafo_dir = r / "kb" / "grafo"
@@ -679,6 +760,8 @@ def main():
         entidades, mapa = resolver_pilar_p01(r)
     elif pilar == "P02":
         entidades, mapa = resolver_pilar_p02(r)
+    elif pilar == "P03":
+        entidades, mapa = resolver_pilar_p03(r)
     else:
         print(f"Resolución para pilar {pilar} aún no implementada en este paso.")
         sys.exit(1)
