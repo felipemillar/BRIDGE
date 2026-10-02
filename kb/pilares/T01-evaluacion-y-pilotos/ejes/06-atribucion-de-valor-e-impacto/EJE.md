@@ -54,6 +54,6 @@
 
 > Caso Concreto de Atribución CCA-T01-140 (Piloto en Empresa Energética durante Consulta Indígena): 1) Entradas: Tarea de monitoreo y redacción asignada a BRIDGE ante 15 observaciones comunitarias complejas; Histórico manual: 80 horas de analista senior (costo interno: $4.000 USD) y 10 días de ciclo d
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [T01-F36.json](T01-F36.json)
 

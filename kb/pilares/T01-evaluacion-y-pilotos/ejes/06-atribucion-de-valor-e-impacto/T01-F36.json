@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Caso concreto de evaluación que aplica estrictamente los principios AMEC y Page.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://amecorg.com/amecframework/",
+        "sha256_texto": "4bfa982274bf3139d26adb3839d26aa96f6b8548bf4e2f2e58688f9cab655810",
+        "pasaje": "Rigorous case evaluation credits the technology with workflow velocity and factual accuracy, while properly attributing broader social acceptance to organizational actions.",
+        "motivos": []
       }
     }
   ],

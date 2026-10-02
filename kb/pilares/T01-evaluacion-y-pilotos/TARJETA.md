@@ -32,10 +32,10 @@ Su propósito es establecer la evidencia empírica, legal y procedimental para e
 
 ## Estado de verificación
 Distribución de verificación para los 110 hallazgos del pilar:
-- `no_verificada`: 80
+- `no_verificada`: 79
 - `en_proceso`: 0
 - `no_verificable`: 0
-- `verificada`: 3
+- `verificada`: 4
 - `refutada`: 0
 
 ## Vacíos abiertos
