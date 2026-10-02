@@ -24,7 +24,7 @@
 
 > El corpus distribuye con precisión las actividades según los tres modelos de entrega: 1) SaaS Puro (Software Desatendido): Ingesta continua multi-fuente (BCN, SMA, CMF, medios), clasificación temática algorítmica, deduplicación de noticias, indexación vectorial y dashboards de autoservicio; 2) Consu
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P08-F19.json](P08-F19.json)
 ### P08-F20: ¿Qué tareas se automatizan de forma segura y cuáles retienen revisión experta?
 

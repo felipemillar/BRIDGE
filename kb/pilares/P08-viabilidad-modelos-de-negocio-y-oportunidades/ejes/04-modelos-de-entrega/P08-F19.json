@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.95,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://page.org/blog/beyond-communication-preview/",
+        "sha256_texto": "6d146a29d8f627759c64d8bdb22110484d068468e7135f8b549a827070efb676",
+        "pasaje": "Leading corporate communication departments are replacing traditional labor-intensive clipping retainers with technology-enabled services. In this architecture, AI handles continuous environmental scanning and narrative tracking, while specialized human advisors validate strategic implications before presenting to the board.",
+        "motivos": []
       }
     }
   ],
