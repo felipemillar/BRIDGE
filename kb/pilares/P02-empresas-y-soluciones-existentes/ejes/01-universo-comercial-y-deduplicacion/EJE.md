@@ -24,7 +24,7 @@
 
 > La investigación corporativa y la fe de erratas (00_P02_GLOBAL_READ_ME_AND_ERRATA) distinguen grupos matrices, entidades legales y marcas de producto: 1) WPP plc es matriz de Burson Global, que adquirió Limbik (12 agosto 2026) operando bajo la suite Burson Decipher; 2) FGS Global pertenece a Kite Bi
 
-- **Verificación:** no_verificada: 3
+- **Verificación:** no_verificada: 2, verificada: 1
 - **Registro:** [P02-F01.json](P02-F01.json)
 ### P02-F02: ¿Qué criterios separan proveedor comercial, asociación, estándar, consultora y propuesta de referencia?
 

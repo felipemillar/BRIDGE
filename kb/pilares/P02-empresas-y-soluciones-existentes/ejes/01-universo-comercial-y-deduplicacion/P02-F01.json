@@ -125,12 +125,18 @@
       "confidence": "alta",
       "confidence_reason": "Confirmación oficial en newsroom de Burson y corrección explícita de fe de erratas.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.bursonglobal.com/newsroom/global/burson-acquires-cognitive-ai-company-limbik",
+        "sha256_texto": "a12a6dae8b77aa59478ca6109e9251fc69455d1ac01909cb211038c8032da8e3",
+        "pasaje": "Burson acquires cognitive AI company Limbik to enhance predictive media and audience engagement.",
+        "motivos": []
       }
     }
   ],
