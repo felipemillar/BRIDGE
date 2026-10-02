@@ -36,7 +36,7 @@
 
 > La distinción operativa entre fuente de verdad, borrador y contexto histórico se rige por su estado de formalización legal y vigencia temporal: 1) Fuente de Verdad (Single Source of Truth - SSOT): artefactos oficiales formalmente aprobados y publicados que reflejan la postura o cifra corporativa vig
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P04-F03.json](P04-F03.json)
 ### P04-F04: ¿Qué variables, categorías, relaciones y condiciones exige representar inventario de documentos corporativos de forma estructurada?
 

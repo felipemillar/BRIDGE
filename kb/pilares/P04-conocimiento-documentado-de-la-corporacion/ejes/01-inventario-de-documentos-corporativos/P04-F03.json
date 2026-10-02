@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Estándar formal W3C DCAT-3 y reglas de superación documental en P04_EVIDENCE_MAP.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.w3.org/TR/vocab-dcat-3/",
+        "sha256_texto": "11321493d23fbedd3279ab46c8787bace013e1461d97138a6fa243efb6fd4654",
+        "pasaje": "dcterms:replaces and dcterms:isReplacedBy define strict superseded relations between cataloged datasets and documents.",
+        "motivos": []
       }
     }
   ],
