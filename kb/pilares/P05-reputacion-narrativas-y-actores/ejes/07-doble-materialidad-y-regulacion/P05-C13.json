@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Resolución normativa expresa consagrada en la directiva CSRD europea y adoptada en la NCG 461 de la CMF.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.efrag.org/",
+        "sha256_texto": "fc584f10a555213b2175229c3b935cb85ec3c41e153f16d36e9746f571566c70",
+        "pasaje": "Double materiality is the cornerstone of corporate sustainability reporting, requiring identification of severe impacts on society regardless of immediate financial translation.",
+        "motivos": []
       }
     }
   ],

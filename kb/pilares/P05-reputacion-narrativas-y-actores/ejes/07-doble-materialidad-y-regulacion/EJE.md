@@ -12,7 +12,7 @@
 
 > La discrepancia doctrinal en el ámbito ESG contrapone el enfoque anglosajón tradicional de 'Materialidad Financiera Simple' (respaldado históricamente por SASB y adoptado por los estándares ISSB / IFRS S1 y S2), el cual exige reportar únicamente aquellos factores ambientales o sociales que impacten
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P05-C13.json](P05-C13.json)
 ### P05-C14: ¿Qué sigue sin prueba sobre doble materialidad y regulación, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?
 
