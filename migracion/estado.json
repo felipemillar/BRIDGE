@@ -1,13 +1,14 @@
 {
   "plan": "auditoria/PLAN_MIGRACION_ANTIGRAVITY.md",
   "sha256_comprobador": "6c3155f0e601624df962b695882118f5fa11f6cd1fbec11ced74d13079abf84d",
-  "fase_actual": "F2",
+  "fase_actual": "F3",
   "fases_cerradas": [
     "PREP",
     "F0",
-    "F1"
+    "F1",
+    "F2"
   ],
-  "iteracion": 10,
+  "iteracion": 17,
   "tareas": {
     "P.1": {
       "estado": "hecha",
@@ -110,9 +111,9 @@
       "commit": "69975dc"
     },
     "F2.7": {
-      "estado": "pendiente",
-      "intentos": 0,
-      "commit": null
+      "estado": "hecha",
+      "intentos": 1,
+      "commit": "3d66629"
     },
     "F3.1": {
       "estado": "pendiente",
@@ -551,9 +552,9 @@
     }
   },
   "ultima_comprobacion": {
-    "comando": "python3 auditoria/comprobar_migracion.py --hasta F1",
+    "comando": "python3 auditoria/comprobar_migracion.py --hasta F2",
     "resultado": "OK",
-    "fecha": "2026-10-02T14:31:40Z"
+    "fecha": "2026-10-02T14:47:01Z"
   },
   "bloqueo": null
 }
