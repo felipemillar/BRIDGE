@@ -36,6 +36,27 @@ La base de conocimiento opera bajo una arquitectura de divulgación progresiva e
 
 ---
 
+## 🐝 Sistema Enjambre Multi-Agente
+
+El repositorio opera con un enjambre multi-agente modular bajo contratos estrictos en `enjambre/`:
+
+- **Roles y Contratos:** Cada rol opera bajo una especificación en Markdown y un contrato de esquema JSON:
+  - `enrutador`: `enjambre/roles/enrutador.md` y `enjambre/contratos/enrutador.schema.json`
+  - `especialista_pilar`: `enjambre/roles/especialista_pilar.md` y `enjambre/contratos/especialista_pilar.schema.json`
+  - `verificador_evidencia`: `enjambre/roles/verificador_evidencia.md` y `enjambre/contratos/verificador_evidencia.schema.json`
+  - `curador_grafo`: `enjambre/roles/curador_grafo.md` y `enjambre/contratos/curador_grafo.schema.json`
+  - `analista_contradicciones`: `enjambre/roles/analista_contradicciones.md` y `enjambre/contratos/analista_contradicciones.schema.json`
+  - `sintetizador_transversal`: `enjambre/roles/sintetizador_transversal.md` y `enjambre/contratos/sintetizador_transversal.schema.json`
+  - `integrador`: `enjambre/roles/integrador.md` y `enjambre/contratos/integrador.schema.json`
+  - `auditor`: `enjambre/roles/auditor.md` y `enjambre/contratos/auditor.schema.json`
+- **Protocolos de Operación:**
+  - Protocolo de Lectura: `enjambre/protocolos/lectura.md` (divulgación progresiva en 5 niveles y optimización presupuestaria).
+  - Protocolo de Escritura: `enjambre/protocolos/escritura.md` (aislamiento en staging y compuertas de calidad).
+  - Protocolo de Verificación: `enjambre/protocolos/verificacion.md` (evidencias primarias, pasajes auditados y huellas SHA-256).
+- **Rutas de Consulta:** `enjambre/rutas.json` define 24 rutas preconfiguradas que cubren los 12 pilares temáticos.
+
+---
+
 ## 🛠️ Herramientas Canónicas del Repositorio
 
 - **`herramientas/validar.py`**: Valida integridad referencial, conformidad de vocabularios, reglas epistémicas y estructura física (`python3 herramientas/validar.py`).
