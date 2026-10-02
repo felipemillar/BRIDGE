@@ -36,7 +36,7 @@
 
 > La coherencia sin redundancia textual se logra desacoplando la 'Columna Vertebral Semántica' (Shared Semantic Backbone) del 'Registro Retórico de Canal': 1) Registro Unificado de Hechos (Shared Fact Record): Todas las versiones se alimentan de las mismas entidades, cifras certificadas, fechas y líne
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P10-F39.json](P10-F39.json)
 ### P10-F40: ¿Qué variables, categorías, relaciones y condiciones exige representar canales y escenarios de forma estructurada?
 

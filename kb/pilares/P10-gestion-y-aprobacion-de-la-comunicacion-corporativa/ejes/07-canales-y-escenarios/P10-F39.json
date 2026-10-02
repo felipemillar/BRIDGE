@@ -65,15 +65,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.99,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://page.org/who-we-are/page-principles/",
+        "sha256_texto": "109446dc7a57eb0175fc9741c70950cd450eef80060651b55995331a038788de",
+        "pasaje": "Public relations must present the character of the enterprise as a unified whole. Speaking with different voices or offering contradictory accounts to different publics destroys corporate credibility.",
+        "motivos": []
       }
     }
   ],
