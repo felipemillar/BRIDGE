@@ -13,11 +13,11 @@ El programa consolida la base de conocimiento empírica, técnica y legal sobre 
 | **Cuadernos Target** | 12 cuadernos canónicos (P01 a P11 + T01) |
 | **Total Preguntas Ejecutadas** | **864 / 864 preguntas (100.0% completitud)** |
 | **Desglose de Preguntas** | 576 Fundamentales (F) + 192 Contraste (C) + 96 Profundización (X) |
-| **Universo de Fuentes** | 578 fuentes catalogadas y verificadas |
+| **Universo de Fuentes** | 551 fuentes verificadas en los 12 manifiestos |
 | **Evidencia Científica** | 11 PDFs de texto completo ArXiv incorporados (300k+ tokens científicos) |
-| **Auditoría de Calidad** | **100% PASS** en auditorías estratificadas (0 fallas críticas) |
-| **Entidades Deduplicadas** | 1.632 entidades en [`entidades.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/entidades.jsonl) |
-| **Grafo de Relaciones** | 559 relaciones dirigidas en [`relaciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/relaciones.jsonl) |
+| **Auditoría de Calidad** | **100% PASS** en auditoría endurecida (0 fallas críticas, 100% citas resolubles) |
+| **Entidades Deduplicadas** | 1.528 entidades en [`entidades.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/entidades.jsonl) |
+| **Grafo de Relaciones** | 477 relaciones dirigidas en [`relaciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/relaciones.jsonl) |
 | **Contradicciones Reconciliadas** | 93 discrepancias catalogadas en [`contradicciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/contradicciones.jsonl) |
 
 ---
@@ -28,6 +28,9 @@ El programa consolida la base de conocimiento empírica, técnica y legal sobre 
 BRIDGE/
 ├── .agents/
 │   └── AGENTS.md                  # Reglas del agente, seguridad y masking de errores
+├── docs_mandato/                  # Mandato original de investigación y auditoría preliminar
+│   ├── mandato-antigravity-investigacion-asuntos-corporativos.md
+│   └── auditoria-preliminar-cierre-antigravity.md
 ├── fuentes/                       # 12 manifiestos de fuentes por cuaderno (JSON)
 │   ├── P01.json ... P11.json
 │   └── T01.json
@@ -37,14 +40,14 @@ BRIDGE/
 ├── sintesis/                      # 12 síntesis ejecutivas y matrices de trazabilidad (MD)
 │   ├── P01.md ... P11.md
 │   └── T01.md
-├── scripts/                       # Scripts de ingesta, auditoría estratificada y compilación
+├── scripts/                       # Scripts de ingesta, reconciliación, auditoría y compilación
 ├── BITACORA.md                    # Registro cronológico continuo de sesiones de trabajo (DevLog)
 ├── REGISTRO_DE_CIERRE.md          # Registro formal de cierre del programa (Mandato Sección 6)
 ├── indice_global.md               # Índice global de cuadernos y Síntesis Transversal
 ├── matriz_cobertura.csv           # Matriz exhaustiva de cobertura de las 864 preguntas
 ├── ejecucion.json                 # Telemetría global de ejecución y estados
-├── entidades.jsonl                # Base canónica de 1.632 entidades deduplicadas
-├── relaciones.jsonl               # Grafo canónico de 559 relaciones tipadas
+├── entidades.jsonl                # Base canónica de 1.528 entidades deduplicadas
+├── relaciones.jsonl               # Grafo canónico de 477 relaciones tipadas
 ├── contradicciones.jsonl          # Inventario de 93 contradicciones reconciliadas
 └── README.md                      # Este documento
 ```
