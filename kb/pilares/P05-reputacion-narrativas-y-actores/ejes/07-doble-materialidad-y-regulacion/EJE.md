@@ -48,7 +48,7 @@
 
 > Los hechos documentados sobre doble materialidad y regulación se respaldan en cuatro fuentes primarias normativas y técnicas: 1) EFRAG ESRS Implementation Guidance 1 (IG 1) Materiality Assessment (2024, European Financial Reporting Advisory Group, ámbito: regulación europea y directiva CSRD): respal
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P05-F41.json](P05-F41.json)
 ### P05-F42: ¿Qué caso concreto, con entradas y resultado esperado, ilustra doble materialidad y regulación sin introducir datos no documentados?
 

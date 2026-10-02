@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Verificación textual directa en los textos normativos oficiales vigentes.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.globalreporting.org/standards/",
+        "sha256_texto": "9f53fd158e480d857bf63fb76e1933c3d9fca47b994ef686530abbd957b90050",
+        "pasaje": "Establece el procedimiento paso a paso para identificar y evaluar los impactos de la organización y determinar cuáles son materiales.",
+        "motivos": []
       }
     }
   ],
