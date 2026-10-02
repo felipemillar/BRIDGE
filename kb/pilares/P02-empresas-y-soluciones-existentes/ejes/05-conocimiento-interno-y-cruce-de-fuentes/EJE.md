@@ -54,6 +54,6 @@
 
 > Caso de prueba concreto y verificable: 'Respuesta ante cuestionamiento público por consumo hídrico en faena industrial'. Entradas: 1) Alerta mediática externa capturada por monitoreo de prensa matutino con un artículo que denuncia que la empresa duplicó la extracción de agua en su planta de la Regió
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P02-F30.json](P02-F30.json)
 
