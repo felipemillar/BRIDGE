@@ -39,12 +39,18 @@
       "confidence": "alta",
       "confidence_reason": "Especificación arquitectónica de System of Record corporativo.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.broadsight.com/solutions/knowledge-management/",
+        "sha256_texto": "26823cfe6da1873a3c8c314afb67d1d79f7a09c39af42b428367fa3c53fc1ffc",
+        "pasaje": "Structured schema enforcing multi-step approvals, version locking, and complete audit logging for corporate statements.",
+        "motivos": []
       }
     }
   ],

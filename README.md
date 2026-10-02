@@ -27,10 +27,10 @@ De acuerdo con el protocolo de verificación epistémica, el estado consolidado 
 
 | Estado de Verificación | Cantidad | Porcentaje |
 | :--- | :--- | :--- |
-| `no_verificada` | 570 | 99.0% |
+| `no_verificada` | 569 | 98.8% |
 | `en_proceso` | 0 | 0.0% |
 | `no_verificable` | 0 | 0.0% |
-| `verificada` | 6 | 1.0% |
+| `verificada` | 7 | 1.2% |
 | `refutada` | 0 | 0.0% |
 | **Total** | **1318** | **100.0%** |
 

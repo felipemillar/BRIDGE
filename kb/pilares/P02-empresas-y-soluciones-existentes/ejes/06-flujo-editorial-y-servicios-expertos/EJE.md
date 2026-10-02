@@ -42,7 +42,7 @@
 
 > Exige estructurar un modelo de datos con las siguientes especificaciones: 1) Variables: Identificador de postura (`issue_id`), título del tema crítico (`topic_name`), versión de declaración (`version_number`), estado del ciclo de vida (`borrador`, `revision_interna`, `revision_legal`, `aprobado_dirc
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P02-F34.json](P02-F34.json)
 ### P02-F35: ¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre flujo editorial y servicios expertos?
 
