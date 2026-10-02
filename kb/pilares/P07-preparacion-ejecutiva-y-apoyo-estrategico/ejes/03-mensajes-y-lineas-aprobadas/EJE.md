@@ -12,7 +12,7 @@
 
 > Discrepan en la generalización del uso de mensajes corporativos: las guías tradicionales de relaciones públicas asumen que un 'Message House' aprobado puede ser utilizado libremente por cualquier portavoz en cualquier soporte; mientras que las síntesis internas (P07_RESEARCH_DOSSIER, P07_EVIDENCE_MA
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P07-C05.json](P07-C05.json)
 ### P07-C06: ¿Qué sigue sin prueba sobre mensajes y líneas aprobadas, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?
 
