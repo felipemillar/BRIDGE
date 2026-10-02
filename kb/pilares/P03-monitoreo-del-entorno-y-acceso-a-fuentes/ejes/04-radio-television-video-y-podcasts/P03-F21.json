@@ -39,12 +39,18 @@
       "confidence": "alta",
       "confidence_reason": "Verificación con estándares AMEC de transparencia y rigor de fuentes.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://amecorg.com/barcelona-principles-3-0-translations/",
+        "sha256_texto": "6ba53ad595e3e54630cfe795dceb835f981b042e4ddb3d21162e7a47fd51f55d",
+        "pasaje": "Rigorous measurement requires distinguishing direct source evidence from filtered secondary interpretations or commentary.",
+        "motivos": []
       }
     }
   ],

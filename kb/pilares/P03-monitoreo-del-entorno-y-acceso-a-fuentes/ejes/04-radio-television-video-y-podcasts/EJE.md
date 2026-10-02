@@ -36,7 +36,7 @@
 
 > La distinción se rige por la trazabilidad del registro de voz y la intermediación editorial: 1) Evidencia original primaria: grabaciones de audio/video sin cortes donde se emiten declaraciones directas, conferencias de prensa oficiales, comisiones legislativas en vivo o entrevistas directas a vocero
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P03-F21.json](P03-F21.json)
 ### P03-F22: ¿Qué variables, categorías, relaciones y condiciones exige representar radio, televisión, video y podcasts de forma estructurada?
 
