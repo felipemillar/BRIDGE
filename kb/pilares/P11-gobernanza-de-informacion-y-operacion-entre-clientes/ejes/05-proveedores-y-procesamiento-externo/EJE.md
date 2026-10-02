@@ -42,7 +42,7 @@
 
 > El modelamiento estructurado de proveedores externos y transferencias de datos exige representar: 1) Entidad CloudProvider (provider_id, provider_name: [AWS_BEDROCK, AZURE_OPENAI, VERTEX_AI, ANTHROPIC, OPENAI_API, QDRANT_CLOUD], contract_tier: [ENTERPRISE_B2B, STANDARD], dpa_signed: boolean, no_trai
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P11-F28.json](P11-F28.json)
 ### P11-F29: ¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre proveedores y procesamiento externo?
 

@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.99,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4",
+        "sha256_texto": "baafffcae01e7e1084533860364778eff49cd08873c80091e3f646109205607b",
+        "pasaje": "Maintain an inventory of all third-party cloud services, documenting contract terms, processing regions, data flows, and security requirements to manage supply chain risks.",
+        "motivos": []
       }
     }
   ],
