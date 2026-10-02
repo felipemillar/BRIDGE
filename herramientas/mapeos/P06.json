@@ -1,0 +1,317 @@
+{
+  "GAP_GRAPH_SCALE": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_investigacion"
+  ],
+  "GAP_LEGAL_CHILE_NLP": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_investigacion"
+  ],
+  "GAP_LONGITUDINAL_REPUTATION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_investigacion"
+  ],
+  "GAP_SIDE_CHANNEL": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_investigacion"
+  ],
+  "CASO_CAV_P06_404": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "CASO_CG_P06_101": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "CASO_CRC_P06_202": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "CASO_CSR_P06_303": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "ENT_TGRAG_SCHEMA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "esquema_grafo_interno"
+  ],
+  "ENT_ABLATION_SCHEMA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "esquema_datos_interno"
+  ],
+  "ENT_DISCREPANCY_RECORD": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "esquema_datos_interno"
+  ],
+  "ENT_SEC_SCHEMA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "esquema_datos_interno"
+  ],
+  "ENT_ABAC_GATE": [
+    "conservado",
+    "prod:controlador-abac-recuperacion-segura",
+    "producto",
+    "Controlador ABAC de Recuperación Segura",
+    [
+      "Attribute-Based Access Filter",
+      "Filtro ABAC"
+    ],
+    null
+  ],
+  "ENT_ABLATION_SUITE": [
+    "conservado",
+    "exp:suite-ablacion-experimental-cruce",
+    "experimento",
+    "Suite de Ablación Experimental del Cruce",
+    [
+      "Cross-Source Ablation Framework",
+      "Ablación Experimental Cruce"
+    ],
+    null
+  ],
+  "ENT_ADDENDUM_P06": [
+    "conservado",
+    "doc:p06-quality-addendum",
+    "documento",
+    "P06 Quality Addendum",
+    [
+      "Addendum P06"
+    ],
+    null
+  ],
+  "ENT_ALERT_AUDIT": [
+    "conservado",
+    "comp:protocolo-reconstruccion-causal-alertas",
+    "compromiso",
+    "Reconstrucción Causal de Alertas",
+    [
+      "Alert Lineage Audit",
+      "Auditoría Causal Alertas"
+    ],
+    null
+  ],
+  "ENT_BIBLIO_ABLATION": [
+    "conservado",
+    "doc:corpus-cientifico-evaluacion-ablacion",
+    "documento",
+    "Corpus Científico de Evaluación y Ablación",
+    [
+      "Ablation Scientific Basis",
+      "Bibliografía Ablación"
+    ],
+    null
+  ],
+  "ENT_BIBLIO_CONFLICTS": [
+    "conservado",
+    "doc:corpus-cientifico-resolucion-contradicciones",
+    "documento",
+    "Corpus Científico de Resolución de Contradicciones",
+    [
+      "Conflict Resolution Sources",
+      "Bibliografía Contradicciones"
+    ],
+    null
+  ],
+  "ENT_BIBLIO_GRAPH": [
+    "conservado",
+    "doc:corpus-cientifico-grafos-corporativos",
+    "documento",
+    "Corpus Científico de Grafos Corporativos",
+    [
+      "Scientific Basis P06",
+      "Bibliografía Grafos"
+    ],
+    null
+  ],
+  "ENT_BIBLIO_SEC": [
+    "conservado",
+    "doc:corpus-ciberseguridad-aislamiento",
+    "documento",
+    "Corpus de Ciberseguridad y Aislamiento",
+    [
+      "Security Sources P06",
+      "Bibliografía Seguridad"
+    ],
+    null
+  ],
+  "ENT_BLIND_ESCALATION": [
+    "conservado",
+    "comp:patron-blind-escalation-token",
+    "compromiso",
+    "Patrón Blind Escalation Token",
+    [
+      "Alerta Ciega Desacoplada",
+      "Blind Escalation"
+    ],
+    null
+  ],
+  "ENT_CANARY_TEST": [
+    "conservado",
+    "exp:bateria-pruebas-canario-cross-tenant",
+    "experimento",
+    "Batería de Pruebas Canario Cross-Tenant",
+    [
+      "Cross-Tenant Isolation Suite",
+      "Pruebas Canario"
+    ],
+    null
+  ],
+  "ENT_DECISION_OUTCOMES": [
+    "conservado",
+    "met:outcome-decisional-amec-page",
+    "metrica",
+    "Métricas de Outcome Decisional AMEC/Page",
+    [
+      "Decision-Centric Evaluation",
+      "Outcome Decisional"
+    ],
+    null
+  ],
+  "ENT_FEVER_TAXONOMY": [
+    "conservado",
+    "tema:taxonomia-verificacion-fever-tgrag",
+    "tema",
+    "Taxonomía de Verificación FEVER / T-GRAG",
+    [
+      "FEVER Relational Schema",
+      "Taxonomía FEVER"
+    ],
+    null
+  ],
+  "ENT_GRAPH_SCHEMA_SPEC": [
+    "conservado",
+    "doc:especificacion-esquema-grafo-corporativo",
+    "documento",
+    "Especificación de Esquema de Grafo Corporativo",
+    [
+      "Corporate Graph DDL",
+      "DDL Grafo Corporativo"
+    ],
+    null
+  ],
+  "ENT_HUMAN_GATEKEEPER": [
+    "conservado",
+    "rol:gatekeeper-humano-contradicciones",
+    "persona_rol",
+    "Gatekeeper Humano de Contradicciones",
+    [
+      "Human-in-the-Loop Conflict Gate",
+      "Gatekeeper Humano"
+    ],
+    null
+  ],
+  "ENT_NUMERICAL_DISCREPANCY": [
+    "conservado",
+    "tema:tipologia-discrepancias-numericas",
+    "tema",
+    "Tipología de Discrepancias Numéricas",
+    [
+      "Numerical Discrepancy Taxonomy",
+      "Discrepancias Numéricas"
+    ],
+    null
+  ],
+  "ENT_PRECISION_POLICY": [
+    "conservado",
+    "doc:politica-precision-pre-generacion",
+    "documento",
+    "Política de Precisión Pre-Generación",
+    [
+      "Context Precision Filter",
+      "Filtro Precisión Contexto"
+    ],
+    null
+  ],
+  "ENT_RLS_STANDARD": [
+    "conservado",
+    "doc:estandar-seguridad-rls-pre-inferencia",
+    "documento",
+    "Estándar de Seguridad RLS Pre-Inferencia",
+    [
+      "Pre-Inference Data Pruning",
+      "Seguridad RLS Pre-Inferencia"
+    ],
+    null
+  ],
+  "ENT_SABER_FRAMEWORK": [
+    "conservado",
+    "doc:benchmark-saber-zhu-et-al-2026",
+    "documento",
+    "Benchmark SABER (Zhu et al. 2026)",
+    [
+      "SABER RAG Framework",
+      "Framework SABER"
+    ],
+    null
+  ],
+  "ENT_SPURIOUS_SYNCRETISM": [
+    "conservado",
+    "riesgo:sincretismo-espurio-multi-documento",
+    "riesgo",
+    "Sincretismo Espurio Multi-Documento",
+    [
+      "Spurious Reconciliation Hallucination",
+      "Sincretismo Espurio"
+    ],
+    null
+  ],
+  "TAXONOMIA_MUTACION": [
+    "conservado",
+    "tema:taxonomia-mutaciones-corporativas",
+    "tema",
+    "Taxonomía de Mutaciones Corporativas",
+    [
+      "Corporate Change Typology",
+      "Tipología Mutación Corporativa"
+    ],
+    null
+  ]
+}
