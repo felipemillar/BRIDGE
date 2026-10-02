@@ -24,7 +24,7 @@
 
 > El corpus institucional para asuntos corporativos se estructura en ocho familias de artefactos documentales canónicos: 1) Memoria Anual Integrada (reporte retrospectivo y estratégico anual bajo CMF NCG 461, GRI e IFRS S1/S2 con secciones obligatorias de gobierno corporativo, estrategia, riesgos y mé
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P04-F01.json](P04-F01.json)
 ### P04-F02: ¿Qué propietario, vigencia, aprobación y nivel de acceso necesita cada tipo documental?
 

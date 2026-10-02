@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Taxonomía tipificada en regulación oficial CMF y dossier de arquitectura P04.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+        "sha256_texto": "95c52b5b51e1655cefd07f9faac6f69d7e6250705df4e311cd066fa7270062d6",
+        "pasaje": "Modifica la estructura de la memoria anual de los emisores de valores, incorporando de forma integral aspectos de gobierno corporativo, estrategia, riesgos, indicadores y metas de sostenibilidad.",
+        "motivos": []
       }
     }
   ],
