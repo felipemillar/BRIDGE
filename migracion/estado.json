@@ -6,7 +6,7 @@
     "PREP",
     "F0"
   ],
-  "iteracion": 7,
+  "iteracion": 8,
   "tareas": {
     "P.1": {
       "estado": "hecha",
@@ -64,9 +64,9 @@
       "commit": "7677bcb"
     },
     "F1.1": {
-      "estado": "pendiente",
-      "intentos": 0,
-      "commit": null
+      "estado": "hecha",
+      "intentos": 1,
+      "commit": "c9ff052"
     },
     "F1.2": {
       "estado": "pendiente",
@@ -552,7 +552,7 @@
   "ultima_comprobacion": {
     "comando": "python3 auditoria/comprobar_migracion.py --hasta F0",
     "resultado": "OK",
-    "fecha": "2026-10-02T14:23:05Z"
+    "fecha": "2026-10-02T14:25:47Z"
   },
   "bloqueo": null
 }
