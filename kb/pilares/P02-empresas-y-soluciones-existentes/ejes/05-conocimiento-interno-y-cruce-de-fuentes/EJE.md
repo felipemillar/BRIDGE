@@ -24,7 +24,7 @@
 
 > Prueban la viabilidad técnica y las fronteras arquitectónicas entre la búsqueda semántica en repositorios internos corporativos y el cruce con señales externas estructuradas: 1) AlphaSense (AlphaSense Inc.): demuestra la potencia del RAG financiero/estratégico cruzando transcripciones de conferencia
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P02-F25.json](P02-F25.json)
 ### P02-F26: ¿Qué conectores, permisos, citas y actualización documentan sus fuentes originales?
 

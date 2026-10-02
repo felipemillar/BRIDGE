@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Verificación cruzada de fichas técnicas oficiales y evaluaciones independientes de analistas (Forrester Wave).",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.alpha-sense.com/platform/",
+        "sha256_texto": "6e15d4b62a99b543168117d7d69409b615d9ac2ecfae721eb2d975445a98af2d",
+        "pasaje": "AlphaSense combines external premium content (broker research, SEC filings, global news) with internal company knowledge to deliver AI-driven market intelligence.",
+        "motivos": []
       }
     }
   ],
