@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Convergencia de marco B2B enterprise y censo presupuestario de Dircom.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.dircom.org/2025/09/25/mas-de-la-mitad-de-los-dircoms-reportan-al-ceo-y-uno-de-cada-tres-esta-en-el-comite-ejecutivo-segun-el-estado-de-la-comunicacion-en-espana-2025/",
+        "sha256_texto": "9c633642ab48a8cd10afd999b0ec3d81fbc1bd848a22c27204c40502cf295011",
+        "pasaje": "El 83% de los departamentos de comunicación mantuvo o incrementó sus presupuestos en el último ciclo.",
+        "motivos": []
       }
     },
     {

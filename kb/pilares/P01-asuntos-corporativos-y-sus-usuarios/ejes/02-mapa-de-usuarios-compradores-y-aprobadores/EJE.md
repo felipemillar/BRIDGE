@@ -30,7 +30,7 @@
 
 > El comprador es el CCO junto al CEO; el presupuesto lo aprueba el CFO (con el 83% de los departamentos manteniendo o subiendo presupuesto); la seguridad la aprueba el CISO y el Fiscal Legal; y el CISO junto al Fiscal Legal tienen poder de veto absoluto e inmediato ante riesgos de fuga de datos o alu
 
-- **Verificación:** no_verificada: 1, solo_sintesis_interna: 2
+- **Verificación:** solo_sintesis_interna: 2, verificada: 1
 - **Registro:** [P01-F08.json](P01-F08.json)
 ### P01-F09: ¿Cómo varían estos roles entre empresa grande, regulada, consultora y organización con presencia territorial?
 
