@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Trazabilidad cruzada de fuentes primarias y documentos canónicos del pilar.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://blog.gdeltproject.org/gdelt-2-0-our-global-world-in-realtime/",
+        "sha256_texto": "a7655f58dfc5958f842b976361eebed8e82c8276de3026ceea6c80cde06f5f60",
+        "pasaje": "GDELT 2.0 translates and monitors global news in over 100 languages, updating its Event, Mentions, and Global Knowledge Graph tables every 15 minutes.",
+        "motivos": []
       }
     }
   ],

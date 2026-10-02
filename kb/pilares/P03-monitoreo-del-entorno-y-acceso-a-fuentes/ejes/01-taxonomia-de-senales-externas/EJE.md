@@ -48,7 +48,7 @@
 
 > Los hechos de la taxonomía de señales externas están respaldados por: 1) Estándares de medición comunicacional: AMEC Barcelona Principles 3.0 (2020), que fundamenta el abandono de impresiones superficiales y exige medir outcomes organizacionales e institucionales; 2) Normalización de eventos noticio
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P03-F05.json](P03-F05.json)
 ### P03-F06: ¿Qué caso concreto, con entradas y resultado esperado, ilustra taxonomía de señales externas sin introducir datos no documentados?
 
