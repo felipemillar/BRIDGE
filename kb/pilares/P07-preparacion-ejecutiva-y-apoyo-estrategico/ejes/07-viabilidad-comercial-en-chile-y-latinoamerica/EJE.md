@@ -24,7 +24,7 @@
 
 > Requiere dos formatos y registros discursivos marcadamente diferenciados: 1) Audiencia con Autoridad Pública Chilena (Ministros, Subsecretarios, Directores SMA o CMF): Registro técnico, sobrio, formal e institucional; minutas ejecutivas de 1 a 2 páginas con citas exactas a Resoluciones de Calificaci
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P07-F37.json](P07-F37.json)
 ### P07-F38: ¿Cómo considerar lenguaje, contexto político y sensibilidad territorial sin estereotipos?
 
