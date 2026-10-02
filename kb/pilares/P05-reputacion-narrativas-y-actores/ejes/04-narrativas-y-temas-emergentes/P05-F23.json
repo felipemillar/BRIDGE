@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Verificación textual directa en los manuscritos fundacionales de la teoría de encuadres y economía narrativa.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://academic.oup.com/joc/article-abstract/43/4/51/4657475",
+        "sha256_texto": "afdbfb3ebcc6b921485b6fcf6dde547914038255882c6d38d6853e323c59d24b",
+        "pasaje": "Text analysis of framing provides an empirical foundation to track how public issues are constructed and contested across actors.",
+        "motivos": []
       }
     }
   ],

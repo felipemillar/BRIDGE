@@ -48,7 +48,7 @@
 
 > Los hechos documentados sobre narrativas y temas emergentes se sustentan en cuatro fuentes canónicas del corpus: 1) Entman (1993, Journal of Communication, 43(4), pp. 51-58, ámbito: teoría del framing y ciencia política): respalda la definición de encuadre y sus cuatro funciones analíticas (problema
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P05-F23.json](P05-F23.json)
 ### P05-F24: ¿Qué caso concreto, con entradas y resultado esperado, ilustra narrativas y temas emergentes sin introducir datos no documentados?
 
