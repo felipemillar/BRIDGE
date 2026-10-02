@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContratoSalidaIntegrador",
+  "type": "object",
+  "required": [
+    "run_id",
+    "resultado_validacion",
+    "archivos_integrados",
+    "vistas_regeneradas",
+    "_procedencia"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "resultado_validacion": {
+      "type": "string",
+      "enum": [
+        "exitosa",
+        "fallida"
+      ]
+    },
+    "archivos_integrados": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "vistas_regeneradas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "commit_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bitacora_ruta": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "_procedencia": {
+      "type": "object",
+      "required": [
+        "rol",
+        "modelo",
+        "run_id",
+        "fecha"
+      ],
+      "properties": {
+        "rol": {
+          "type": "string"
+        },
+        "modelo": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "fecha": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

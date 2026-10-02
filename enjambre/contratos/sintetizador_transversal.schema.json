@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContratoSalidaSintetizadorTransversal",
+  "type": "object",
+  "required": [
+    "run_id",
+    "titulo",
+    "alcance_pilares",
+    "hechos_verificados",
+    "hipotesis_identificadas",
+    "_procedencia"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "alcance_pilares": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hechos_verificados": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hipotesis_identificadas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "documento_sintesis": {
+      "type": "string"
+    },
+    "_procedencia": {
+      "type": "object",
+      "required": [
+        "rol",
+        "modelo",
+        "run_id",
+        "fecha"
+      ],
+      "properties": {
+        "rol": {
+          "type": "string"
+        },
+        "modelo": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "fecha": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContratoSalidaEnrutador",
+  "type": "object",
+  "required": [
+    "run_id",
+    "intencion",
+    "tareas_despachadas",
+    "_procedencia"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "intencion": {
+      "type": "string"
+    },
+    "tareas_despachadas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "tarea_id",
+          "rol",
+          "pilares",
+          "archivos_lectura",
+          "requiere_verificacion"
+        ],
+        "properties": {
+          "tarea_id": {
+            "type": "string"
+          },
+          "rol": {
+            "type": "string"
+          },
+          "pilares": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ejes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "archivos_lectura": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "requiere_verificacion": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "_procedencia": {
+      "type": "object",
+      "required": [
+        "rol",
+        "modelo",
+        "run_id",
+        "fecha"
+      ],
+      "properties": {
+        "rol": {
+          "type": "string"
+        },
+        "modelo": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "fecha": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

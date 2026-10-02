@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContratoSalidaAnalistaContradicciones",
+  "type": "object",
+  "required": [
+    "run_id",
+    "contradiccion_id",
+    "resolution",
+    "regla_aplicada",
+    "claim_ids",
+    "_procedencia"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "contradiccion_id": {
+      "type": "string"
+    },
+    "difference": {
+      "type": "string"
+    },
+    "resolution": {
+      "type": "string",
+      "enum": [
+        "resuelta",
+        "abierta"
+      ]
+    },
+    "regla_aplicada": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reason": {
+      "type": "string"
+    },
+    "_procedencia": {
+      "type": "object",
+      "required": [
+        "rol",
+        "modelo",
+        "run_id",
+        "fecha"
+      ],
+      "properties": {
+        "rol": {
+          "type": "string"
+        },
+        "modelo": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "fecha": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContratoSalidaCuradorGrafo",
+  "type": "object",
+  "required": [
+    "run_id",
+    "operacion",
+    "elementos",
+    "_procedencia"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "operacion": {
+      "type": "string",
+      "enum": [
+        "crear_entidad",
+        "fusionar_entidad",
+        "crear_relacion",
+        "descartar_relacion"
+      ]
+    },
+    "elementos": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "_procedencia": {
+      "type": "object",
+      "required": [
+        "rol",
+        "modelo",
+        "run_id",
+        "fecha"
+      ],
+      "properties": {
+        "rol": {
+          "type": "string"
+        },
+        "modelo": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "fecha": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

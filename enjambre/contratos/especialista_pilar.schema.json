@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContratoSalidaEspecialistaPilar",
+  "type": "object",
+  "required": [
+    "run_id",
+    "pilar",
+    "tipo_entrega",
+    "resultados",
+    "_procedencia"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "pilar": {
+      "type": "string"
+    },
+    "tipo_entrega": {
+      "type": "string",
+      "enum": [
+        "respuesta_pregunta",
+        "analisis_eje",
+        "propuesta_hallazgo"
+      ]
+    },
+    "resultados": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "question_id",
+          "short_answer"
+        ],
+        "properties": {
+          "question_id": {
+            "type": "string"
+          },
+          "short_answer": {
+            "type": "string"
+          },
+          "claims_citados": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "analisis_detallado": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "_procedencia": {
+      "type": "object",
+      "required": [
+        "rol",
+        "modelo",
+        "run_id",
+        "fecha"
+      ],
+      "properties": {
+        "rol": {
+          "type": "string"
+        },
+        "modelo": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "fecha": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

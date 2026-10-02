@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContratoSalidaAuditor",
+  "type": "object",
+  "required": [
+    "run_id",
+    "lote_auditado",
+    "dictamen",
+    "criterios_evaluados",
+    "_procedencia"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "lote_auditado": {
+      "type": "string"
+    },
+    "dictamen": {
+      "type": "string",
+      "enum": [
+        "aprobado",
+        "rechazado",
+        "observado"
+      ]
+    },
+    "motivos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "criterios_evaluados": {
+      "type": "object",
+      "required": [
+        "esquema_valido",
+        "evidencia_sustantiva",
+        "procedencia_valida"
+      ],
+      "properties": {
+        "esquema_valido": {
+          "type": "boolean"
+        },
+        "evidencia_sustantiva": {
+          "type": "boolean"
+        },
+        "procedencia_valida": {
+          "type": "boolean"
+        }
+      }
+    },
+    "_procedencia": {
+      "type": "object",
+      "required": [
+        "rol",
+        "modelo",
+        "run_id",
+        "fecha"
+      ],
+      "properties": {
+        "rol": {
+          "type": "string"
+        },
+        "modelo": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "fecha": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

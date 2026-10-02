@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContratoSalidaVerificadorEvidencia",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "verificacion",
+    "_procedencia"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "verificacion": {
+      "type": "object",
+      "required": [
+        "estado",
+        "fecha",
+        "verificado_por",
+        "metodo"
+      ],
+      "properties": {
+        "estado": {
+          "type": "string",
+          "enum": [
+            "verificada",
+            "no_verificada",
+            "refutada",
+            "no_verificable"
+          ]
+        },
+        "fecha": {
+          "type": "string"
+        },
+        "verificado_por": {
+          "type": "object",
+          "required": [
+            "rol",
+            "modelo",
+            "run_id"
+          ],
+          "properties": {
+            "rol": {
+              "type": "string"
+            },
+            "modelo": {
+              "type": "string"
+            },
+            "run_id": {
+              "type": "string"
+            }
+          }
+        },
+        "metodo": {
+          "type": "string"
+        },
+        "url_consultada": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sha256_texto": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pasaje": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "motivos": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "_procedencia": {
+      "type": "object",
+      "required": [
+        "rol",
+        "modelo",
+        "run_id",
+        "fecha"
+      ],
+      "properties": {
+        "rol": {
+          "type": "string"
+        },
+        "modelo": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "fecha": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
