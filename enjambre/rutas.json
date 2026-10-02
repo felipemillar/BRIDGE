@@ -1,0 +1,320 @@
+[
+  {
+    "intencion": "Analisis de arquitectura de escucha y monitoreo de medios",
+    "pilares": [
+      "P01"
+    ],
+    "ejes": [
+      "P01/01",
+      "P01/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de fuentes y cobertura territorial en escucha",
+    "pilares": [
+      "P01"
+    ],
+    "ejes": [
+      "P01/03",
+      "P01/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Evaluacion de plataformas comerciales de listening y social intelligence",
+    "pilares": [
+      "P02"
+    ],
+    "ejes": [
+      "P02/01",
+      "P02/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de compliance de terminos de servicio y APIs de listening",
+    "pilares": [
+      "P02"
+    ],
+    "ejes": [
+      "P02/05",
+      "P02/06"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Auditoria de accesibilidad y scraping de prensa chilena",
+    "pilares": [
+      "P03"
+    ],
+    "ejes": [
+      "P03/01",
+      "P03/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Contraste de paywalls y licencias de agregacion de noticias",
+    "pilares": [
+      "P03"
+    ],
+    "ejes": [
+      "P03/03",
+      "P03/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Ingenieria de pipelines de ingesta y normalizacion de audio y video",
+    "pilares": [
+      "P04"
+    ],
+    "ejes": [
+      "P04/01",
+      "P04/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Auditoria de modelos ASR y procesamiento de habla chilena",
+    "pilares": [
+      "P04"
+    ],
+    "ejes": [
+      "P04/03",
+      "P04/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Modelos de prominencia y analisis de actores criticos y stakeholders",
+    "pilares": [
+      "P05"
+    ],
+    "ejes": [
+      "P05/01",
+      "P05/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de metodologias de reputacion corporativa y framing",
+    "pilares": [
+      "P05"
+    ],
+    "ejes": [
+      "P05/05",
+      "P05/06"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Monitoreo de agenda legislativa y regulacion sectorial",
+    "pilares": [
+      "P06"
+    ],
+    "ejes": [
+      "P06/01",
+      "P06/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de tramitacion de proyectos de ley y actas parlamentarias",
+    "pilares": [
+      "P06"
+    ],
+    "ejes": [
+      "P06/03",
+      "P06/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Gestion de incidentes corporativos y protocolos de voceria",
+    "pilares": [
+      "P07"
+    ],
+    "ejes": [
+      "P07/01",
+      "P07/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de planes de contingencia y registros de lobby",
+    "pilares": [
+      "P07"
+    ],
+    "ejes": [
+      "P07/03",
+      "P07/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Analisis de riesgos reputacionales y matrices de materialidad ESG",
+    "pilares": [
+      "P08"
+    ],
+    "ejes": [
+      "P08/01",
+      "P08/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de memorias integradas y reportabilidad NCG 461",
+    "pilares": [
+      "P08"
+    ],
+    "ejes": [
+      "P08/03",
+      "P08/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Medicion de impacto y taxonomias de evaluacion AMEC",
+    "pilares": [
+      "P09"
+    ],
+    "ejes": [
+      "P09/01",
+      "P09/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de metricas de atribucion y descarte de AVE pseudocientifico",
+    "pilares": [
+      "P09"
+    ],
+    "ejes": [
+      "P09/03",
+      "P09/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Diseno de dashboards ejecutivos y alertas tempranas",
+    "pilares": [
+      "P10"
+    ],
+    "ejes": [
+      "P10/01",
+      "P10/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de SLAs de telemetria y entrega de reportes ejecutivos",
+    "pilares": [
+      "P10"
+    ],
+    "ejes": [
+      "P10/03",
+      "P10/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Gobernanza de datos personales y cumplimiento Ley 21.719 / GDPR",
+    "pilares": [
+      "P11"
+    ],
+    "ejes": [
+      "P11/01",
+      "P11/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de clausulas de privacidad y seguridad en la nube",
+    "pilares": [
+      "P11"
+    ],
+    "ejes": [
+      "P11/03",
+      "P11/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Evaluacion de fidelidad en modelos RAG corporativos",
+    "pilares": [
+      "T01"
+    ],
+    "ejes": [
+      "T01/01",
+      "T01/02"
+    ],
+    "rol": "especialista_pilar",
+    "requiere_verificacion": false
+  },
+  {
+    "intencion": "Verificacion de benchmarks de alucinacion y grounding RAGAS",
+    "pilares": [
+      "T01"
+    ],
+    "ejes": [
+      "T01/03",
+      "T01/04"
+    ],
+    "rol": "verificador_evidencia",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Sintesis estrategica de riesgos corporativos y gobernanza legal",
+    "pilares": [
+      "P06",
+      "P08",
+      "P11"
+    ],
+    "ejes": [
+      "P06/01",
+      "P08/01",
+      "P11/01"
+    ],
+    "rol": "sintetizador_transversal",
+    "requiere_verificacion": true
+  },
+  {
+    "intencion": "Curaduria integral del grafo de conocimiento inter-pilar",
+    "pilares": [
+      "P01",
+      "P05",
+      "T01"
+    ],
+    "ejes": [
+      "P01/01",
+      "P05/01",
+      "T01/01"
+    ],
+    "rol": "curador_grafo",
+    "requiere_verificacion": false
+  }
+]
