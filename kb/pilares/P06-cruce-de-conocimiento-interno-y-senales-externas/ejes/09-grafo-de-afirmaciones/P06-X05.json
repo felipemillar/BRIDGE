@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Fuentes primarias de texto completo y publicaciones autoritativas en el corpus de P06.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://arxiv.org/pdf/2508.01680",
+        "sha256_texto": "d34828cd9c0dd2b60eed9c9c5c22763d3dd3c7d362a21676f053ef8c4f70fbdc",
+        "pasaje": "T-GRAG introduces dynamic temporal graph retrieval to resolve evolving and conflicting knowledge across multi-hop reasoning tasks.",
+        "motivos": []
       }
     }
   ],

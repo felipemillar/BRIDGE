@@ -36,7 +36,7 @@
 
 > Los hechos, arquitecturas y esquemas sobre el grafo de afirmaciones se sustentan en las siguientes fuentes canónicas verificadas en el corpus: 1) Li et al. (2025, ArXiv:2508.01680; 'T-GRAG: Dynamic GraphRAG for Temporal Conflicts', Agosto 2025): Secciones 1, 3 y 4, demostrando el modelado de grafos
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P06-X05.json](P06-X05.json)
 ### P06-X06: ¿Qué caso concreto, con entradas y resultado esperado, ilustra grafo de afirmaciones sin introducir datos no documentados?
 
