@@ -1,0 +1,1823 @@
+{
+  "D1 Público": [
+    "conservado",
+    "tema:clasificacion-datos-d1-publico",
+    "tema",
+    "Nivel de Clasificación de Datos D1: Información Pública",
+    [
+      "D1 Público"
+    ],
+    null
+  ],
+  "D2 Interno": [
+    "conservado",
+    "tema:clasificacion-datos-d2-interno",
+    "tema",
+    "Nivel de Clasificación de Datos D2: Información Interna",
+    [
+      "D2 Interno"
+    ],
+    null
+  ],
+  "D3 Confidencial": [
+    "conservado",
+    "tema:clasificacion-datos-d3-confidencial",
+    "tema",
+    "Nivel de Clasificación de Datos D3: Información Confidencial",
+    [
+      "D3 Confidencial"
+    ],
+    null
+  ],
+  "D3 Confidencial Estratégico": [
+    "fusionado",
+    "tema:clasificacion-datos-d3-confidencial",
+    "tema",
+    "Nivel de Clasificación de Datos D3: Información Confidencial",
+    [
+      "D3 Confidencial Estratégico"
+    ],
+    "variante_denominacion"
+  ],
+  "D4 Datos Personales": [
+    "conservado",
+    "tema:clasificacion-datos-d4-datos-personales",
+    "tema",
+    "Nivel de Clasificación de Datos D4: Datos Personales Regulados",
+    [
+      "D4 Datos Personales"
+    ],
+    null
+  ],
+  "D5 Secretos Terceros": [
+    "conservado",
+    "tema:clasificacion-datos-d5-secretos-terceros",
+    "tema",
+    "Nivel de Clasificación de Datos D5: Secretos Comerciales e Industriales de Terceros",
+    [
+      "D5 Secretos Terceros"
+    ],
+    null
+  ],
+  "Taxonomía D1-D5": [
+    "conservado",
+    "tema:taxonomia-clasificacion-seguridad-d1-d5",
+    "tema",
+    "Taxonomía Estándar de Clasificación y Seguridad de la Información D1-D5",
+    [
+      "Taxonomía D1-D5"
+    ],
+    null
+  ],
+  "NIST SP 800-53": [
+    "conservado",
+    "doc:nist-sp-800-53",
+    "documento",
+    "NIST Special Publication 800-53 (Security and Privacy Controls for Information Systems)",
+    [
+      "NIST SP 800-53 r5"
+    ],
+    null
+  ],
+  "NIST SP 800-53 r5": [
+    "fusionado",
+    "doc:nist-sp-800-53",
+    "documento",
+    "NIST Special Publication 800-53 (Security and Privacy Controls for Information Systems)",
+    [
+      "NIST SP 800-53 r5"
+    ],
+    "variante_denominacion"
+  ],
+  "NIST SP 800-53 AC-4": [
+    "fusionado",
+    "doc:nist-sp-800-53",
+    "documento",
+    "NIST Special Publication 800-53 (Security and Privacy Controls for Information Systems)",
+    [
+      "NIST SP 800-53 AC-4"
+    ],
+    "control_especifico_nist"
+  ],
+  "NIST SP 800-53 IR-7": [
+    "fusionado",
+    "doc:nist-sp-800-53",
+    "documento",
+    "NIST Special Publication 800-53 (Security and Privacy Controls for Information Systems)",
+    [
+      "NIST SP 800-53 IR-7"
+    ],
+    "control_especifico_nist"
+  ],
+  "NIST SP 800-162": [
+    "conservado",
+    "doc:nist-sp-800-162-abac",
+    "documento",
+    "NIST Special Publication 800-162 (Guide to Attribute Based Access Control - ABAC)",
+    [
+      "NIST SP 800-162"
+    ],
+    null
+  ],
+  "NIST SP 800-92": [
+    "conservado",
+    "doc:nist-sp-800-92-log-management",
+    "documento",
+    "NIST Special Publication 800-92 (Guide to Computer Security Log Management)",
+    [
+      "NIST SP 800-92"
+    ],
+    null
+  ],
+  "NIST SP 800-88 r2": [
+    "conservado",
+    "doc:nist-sp-800-88-media-sanitization",
+    "documento",
+    "NIST Special Publication 800-88 Rev. 2 (Guidelines for Media Sanitization)",
+    [
+      "NIST SP 800-88"
+    ],
+    null
+  ],
+  "NIST SP 800-88 Rev. 2": [
+    "fusionado",
+    "doc:nist-sp-800-88-media-sanitization",
+    "documento",
+    "NIST Special Publication 800-88 Rev. 2 (Guidelines for Media Sanitization)",
+    [
+      "NIST SP 800-88 Rev. 2"
+    ],
+    "variante_denominacion"
+  ],
+  "NIST SP 800-61 Rev. 3": [
+    "conservado",
+    "doc:nist-sp-800-61-incident-handling",
+    "documento",
+    "NIST Special Publication 800-61 Rev. 3 (Computer Security Incident Handling Guide)",
+    [
+      "NIST SP 800-61"
+    ],
+    null
+  ],
+  "NIST SP 800-61 r3": [
+    "fusionado",
+    "doc:nist-sp-800-61-incident-handling",
+    "documento",
+    "NIST Special Publication 800-61 Rev. 3 (Computer Security Incident Handling Guide)",
+    [
+      "NIST SP 800-61 r3"
+    ],
+    "variante_denominacion"
+  ],
+  "NIST AI 100-1 AI RMF": [
+    "fusionado",
+    "doc:nist-ai-rmf",
+    "documento",
+    "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+    [
+      "NIST AI 100-1 AI RMF"
+    ],
+    "entidad_existente"
+  ],
+  "CSA CCM v4": [
+    "conservado",
+    "doc:csa-cloud-controls-matrix-v4",
+    "documento",
+    "Cloud Security Alliance Cloud Controls Matrix (CSA CCM v4)",
+    [
+      "CSA CCM"
+    ],
+    null
+  ],
+  "ISO/IEC 42001": [
+    "conservado",
+    "doc:iso-iec-42001-ai-management",
+    "documento",
+    "Norma Internacional ISO/IEC 42001 (Sistemas de Gestión de Inteligencia Artificial)",
+    [
+      "ISO 42001"
+    ],
+    null
+  ],
+  "ISO/IEC 27001": [
+    "conservado",
+    "doc:iso-iec-27001-seguridad-informacion",
+    "documento",
+    "Norma Internacional ISO/IEC 27001 (Sistemas de Gestión de Seguridad de la Información)",
+    [
+      "ISO 27001"
+    ],
+    null
+  ],
+  "OWASP GenAI 2025": [
+    "conservado",
+    "doc:owasp-top-10-for-llm-applications",
+    "documento",
+    "OWASP Top 10 for Large Language Model Applications & Generative AI",
+    [
+      "OWASP GenAI Top 10"
+    ],
+    null
+  ],
+  "OWASP GenAI Top 10": [
+    "fusionado",
+    "doc:owasp-top-10-for-llm-applications",
+    "documento",
+    "OWASP Top 10 for Large Language Model Applications & Generative AI",
+    [
+      "OWASP GenAI Top 10"
+    ],
+    "variante_denominacion"
+  ],
+  "OWASP GenAI LLM01": [
+    "fusionado",
+    "doc:owasp-top-10-for-llm-applications",
+    "documento",
+    "OWASP Top 10 for Large Language Model Applications & Generative AI",
+    [
+      "OWASP GenAI LLM01"
+    ],
+    "vulnerabilidad_owasp"
+  ],
+  "OWASP GenAI LLM02": [
+    "fusionado",
+    "doc:owasp-top-10-for-llm-applications",
+    "documento",
+    "OWASP Top 10 for Large Language Model Applications & Generative AI",
+    [
+      "OWASP GenAI LLM02"
+    ],
+    "vulnerabilidad_owasp"
+  ],
+  "AICPA SOC 2": [
+    "fusionado",
+    "doc:estandar-soc-2",
+    "documento",
+    "Estándar de Control y Seguridad SOC 2 Type II",
+    [
+      "AICPA SOC 2"
+    ],
+    "entidad_existente"
+  ],
+  "AICPA SOC 2 Type II": [
+    "fusionado",
+    "doc:estandar-soc-2",
+    "documento",
+    "Estándar de Control y Seguridad SOC 2 Type II",
+    [
+      "AICPA SOC 2 Type II"
+    ],
+    "entidad_existente"
+  ],
+  "SOC 2 Criteria": [
+    "fusionado",
+    "doc:estandar-soc-2",
+    "documento",
+    "Estándar de Control y Seguridad SOC 2 Type II",
+    [
+      "SOC 2 Criteria"
+    ],
+    "entidad_existente"
+  ],
+  "SOC 2 Criteria CC6.3": [
+    "fusionado",
+    "doc:estandar-soc-2",
+    "documento",
+    "Estándar de Control y Seguridad SOC 2 Type II",
+    [
+      "SOC 2 Criteria CC6.3"
+    ],
+    "entidad_existente"
+  ],
+  "AWS SaaS Whitepaper": [
+    "conservado",
+    "doc:aws-saas-architecture-whitepaper",
+    "documento",
+    "AWS SaaS Architecture and Multitenancy Best Practices Whitepaper",
+    [
+      "AWS SaaS Whitepaper"
+    ],
+    null
+  ],
+  "AWS SaaS Strategies": [
+    "fusionado",
+    "doc:aws-saas-architecture-whitepaper",
+    "documento",
+    "AWS SaaS Architecture and Multitenancy Best Practices Whitepaper",
+    [
+      "AWS SaaS Strategies"
+    ],
+    "variante_denominacion"
+  ],
+  "OpenAI Services Agreement": [
+    "conservado",
+    "doc:openai-services-agreement-and-dpa",
+    "documento",
+    "OpenAI Business Services Agreement and Data Processing Addendum (DPA)",
+    [
+      "OpenAI DPA",
+      "OpenAI Agreement"
+    ],
+    null
+  ],
+  "OpenAI Agreement": [
+    "fusionado",
+    "doc:openai-services-agreement-and-dpa",
+    "documento",
+    "OpenAI Business Services Agreement and Data Processing Addendum (DPA)",
+    [
+      "OpenAI Agreement"
+    ],
+    "variante_denominacion"
+  ],
+  "OpenAI DPA": [
+    "fusionado",
+    "doc:openai-services-agreement-and-dpa",
+    "documento",
+    "OpenAI Business Services Agreement and Data Processing Addendum (DPA)",
+    [
+      "OpenAI DPA"
+    ],
+    "variante_denominacion"
+  ],
+  "OpenAI Services Agreement PDF": [
+    "fusionado",
+    "doc:openai-services-agreement-and-dpa",
+    "documento",
+    "OpenAI Business Services Agreement and Data Processing Addendum (DPA)",
+    [
+      "OpenAI Services Agreement PDF"
+    ],
+    "variante_denominacion"
+  ],
+  "OpenAI DPA PDF": [
+    "fusionado",
+    "doc:openai-services-agreement-and-dpa",
+    "documento",
+    "OpenAI Business Services Agreement and Data Processing Addendum (DPA)",
+    [
+      "OpenAI DPA PDF"
+    ],
+    "variante_denominacion"
+  ],
+  "OpenAI PDFs Oficiales": [
+    "fusionado",
+    "doc:openai-services-agreement-and-dpa",
+    "documento",
+    "OpenAI Business Services Agreement and Data Processing Addendum (DPA)",
+    [
+      "OpenAI PDFs Oficiales"
+    ],
+    "variante_denominacion"
+  ],
+  "DPA": [
+    "fusionado",
+    "doc:openai-services-agreement-and-dpa",
+    "documento",
+    "OpenAI Business Services Agreement and Data Processing Addendum (DPA)",
+    [
+      "DPA"
+    ],
+    "variante_denominacion"
+  ],
+  "Anthropic Terms": [
+    "conservado",
+    "doc:anthropic-commercial-terms-of-service",
+    "documento",
+    "Anthropic Commercial Terms of Service and Data Privacy Policy",
+    [
+      "Anthropic Terms"
+    ],
+    null
+  ],
+  "Ley 21.719": [
+    "fusionado",
+    "doc:ley-21719",
+    "documento",
+    "Ley N° 21.719 (Protección de Datos Personales)",
+    [
+      "Ley 21.719"
+    ],
+    "entidad_existente"
+  ],
+  "Ley N° 21.719": [
+    "fusionado",
+    "doc:ley-21719",
+    "documento",
+    "Ley N° 21.719 (Protección de Datos Personales)",
+    [
+      "Ley N° 21.719"
+    ],
+    "entidad_existente"
+  ],
+  "Ley 21.719 Vacatio Legis": [
+    "fusionado",
+    "doc:ley-21719",
+    "documento",
+    "Ley N° 21.719 (Protección de Datos Personales)",
+    [
+      "Ley 21.719 Vacatio Legis"
+    ],
+    "variante_denominacion"
+  ],
+  "Ley N° 21.719 Vacatio Legis": [
+    "fusionado",
+    "doc:ley-21719",
+    "documento",
+    "Ley N° 21.719 (Protección de Datos Personales)",
+    [
+      "Ley N° 21.719 Vacatio Legis"
+    ],
+    "variante_denominacion"
+  ],
+  "Ley 21.719 Principio de Conservación": [
+    "fusionado",
+    "doc:ley-21719",
+    "documento",
+    "Ley N° 21.719 (Protección de Datos Personales)",
+    [
+      "Ley 21.719 Principio de Conservación"
+    ],
+    "principio_ley_21719"
+  ],
+  "Ley 21.663": [
+    "conservado",
+    "doc:ley-21663",
+    "documento",
+    "Ley N° 21.663 Marco sobre Ciberseguridad e Infraestructura Crítica de la Información",
+    [
+      "Ley Marco de Ciberseguridad",
+      "Ley 21663"
+    ],
+    null
+  ],
+  "Ley N° 21.663": [
+    "fusionado",
+    "doc:ley-21663",
+    "documento",
+    "Ley N° 21.663 Marco sobre Ciberseguridad e Infraestructura Crítica de la Información",
+    [
+      "Ley N° 21.663"
+    ],
+    "variante_denominacion"
+  ],
+  "Ley 21.663 Art. 9": [
+    "fusionado",
+    "doc:ley-21663",
+    "documento",
+    "Ley N° 21.663 Marco sobre Ciberseguridad e Infraestructura Crítica de la Información",
+    [
+      "Ley 21.663 Art. 9"
+    ],
+    "articulo_especifico_ley"
+  ],
+  "Ley N° 21.663 Art 24": [
+    "fusionado",
+    "doc:ley-21663",
+    "documento",
+    "Ley N° 21.663 Marco sobre Ciberseguridad e Infraestructura Crítica de la Información",
+    [
+      "Ley N° 21.663 Art 24"
+    ],
+    "articulo_especifico_ley"
+  ],
+  "Ley N° 18.045": [
+    "fusionado",
+    "doc:ley-18045",
+    "documento",
+    "Ley N° 18.045 de Mercado de Valores",
+    [
+      "Ley N° 18.045"
+    ],
+    "entidad_existente"
+  ],
+  "Ley N° 19.628": [
+    "conservado",
+    "doc:ley-19628",
+    "documento",
+    "Ley N° 19.628 sobre Protección de la Vida Privada",
+    [
+      "Ley 19628"
+    ],
+    null
+  ],
+  "Ley 19.799 Firma Electrónica": [
+    "conservado",
+    "doc:ley-19799-firma-electronica",
+    "documento",
+    "Ley N° 19.799 sobre Documentos Electrónicos, Firma Electrónica y Servicios de Certificación",
+    [
+      "Ley 19799"
+    ],
+    null
+  ],
+  "Código Tributario Art. 17": [
+    "conservado",
+    "doc:codigo-tributario-chile-art-17",
+    "documento",
+    "Artículo 17 del Código Tributario de Chile (Conservación de Libros y Documentos)",
+    [
+      "Código Tributario Art. 17"
+    ],
+    null
+  ],
+  "GDPR": [
+    "conservado",
+    "doc:gdpr-reglamento-general-proteccion-datos",
+    "documento",
+    "Reglamento General de Protección de Datos de la Unión Europea (GDPR)",
+    [
+      "GDPR",
+      "RGPD"
+    ],
+    null
+  ],
+  "GDPR Art. 17": [
+    "fusionado",
+    "doc:gdpr-reglamento-general-proteccion-datos",
+    "documento",
+    "Reglamento General de Protección de Datos de la Unión Europea (GDPR)",
+    [
+      "GDPR Art. 17"
+    ],
+    "articulo_especifico_gdpr"
+  ],
+  "GDPR Art 3.2": [
+    "fusionado",
+    "doc:gdpr-reglamento-general-proteccion-datos",
+    "documento",
+    "Reglamento General de Protección de Datos de la Unión Europea (GDPR)",
+    [
+      "GDPR Art 3.2"
+    ],
+    "articulo_especifico_gdpr"
+  ],
+  "Lei 13.709 LGPD": [
+    "conservado",
+    "doc:lei-13709-lgpd-brasil",
+    "documento",
+    "Lei Geral de Proteção de Dados Pessoais do Brasil (Lei N° 13.709/2018 - LGPD)",
+    [
+      "LGPD"
+    ],
+    null
+  ],
+  "Lei 15.352/2026": [
+    "conservado",
+    "doc:lei-15352-2026-brasil",
+    "documento",
+    "Lei N° 15.352/2026 do Brasil sobre Inteligência Artificial e Governança Digital",
+    [
+      "Lei 15.352"
+    ],
+    null
+  ],
+  "Lei Nº 15.352/2026": [
+    "fusionado",
+    "doc:lei-15352-2026-brasil",
+    "documento",
+    "Lei N° 15.352/2026 do Brasil sobre Inteligência Artificial e Governança Digital",
+    [
+      "Lei Nº 15.352/2026"
+    ],
+    "variante_denominacion"
+  ],
+  "EU AI Act Annex III": [
+    "conservado",
+    "doc:eu-ai-act-annex-iii",
+    "documento",
+    "Anexo III del Reglamento de Inteligencia Artificial de la Unión Europea (EU AI Act)",
+    [
+      "EU AI Act"
+    ],
+    null
+  ],
+  "Data Owner": [
+    "conservado",
+    "rol:data-owner-corporativo",
+    "persona_rol",
+    "Responsable y Propietario de la Información (Data Owner)",
+    [
+      "Data Owner"
+    ],
+    null
+  ],
+  "Data Owner Nominal": [
+    "fusionado",
+    "rol:data-owner-corporativo",
+    "persona_rol",
+    "Responsable y Propietario de la Información (Data Owner)",
+    [
+      "Data Owner Nominal"
+    ],
+    "variante_denominacion"
+  ],
+  "Data Custodian": [
+    "conservado",
+    "rol:data-custodian-corporativo",
+    "persona_rol",
+    "Custodio Técnico de la Información (Data Custodian)",
+    [
+      "Data Custodian"
+    ],
+    null
+  ],
+  "Data Protection Officer": [
+    "conservado",
+    "rol:data-protection-officer-dpo",
+    "persona_rol",
+    "Delegado de Protección de Datos (Data Protection Officer - DPO)",
+    [
+      "DPO"
+    ],
+    null
+  ],
+  "Consultor A3": [
+    "conservado",
+    "rol:consultor-externo-a3",
+    "persona_rol",
+    "Consultor Externo Especializado (Rol A3 en Escenarios de Crisis)",
+    [
+      "Consultor A3"
+    ],
+    null
+  ],
+  "Carlos Henríquez": [
+    "conservado",
+    "rol:carlos-henriquez-ejecutivo",
+    "persona_rol",
+    "Carlos Henríquez (Perfil de Usuario Ejecutivo en Caso de Prueba)",
+    [
+      "Carlos Henríquez"
+    ],
+    null
+  ],
+  "CSIRT Nacional": [
+    "conservado",
+    "org:csirt-nacional-chile",
+    "organizacion",
+    "Equipo de Respuesta ante Incidentes de Seguridad Informática (CSIRT Nacional de Chile)",
+    [
+      "CSIRT Nacional"
+    ],
+    null
+  ],
+  "Futura Agencia de Protección de Datos": [
+    "conservado",
+    "org:agencia-de-proteccion-de-datos-personales-chile",
+    "organizacion",
+    "Agencia de Protección de Datos Personales de Chile (creada por Ley N° 21.719)",
+    [
+      "Agencia de Protección de Datos"
+    ],
+    null
+  ],
+  "Banco Santander Chile": [
+    "conservado",
+    "org:banco-santander-chile",
+    "organizacion",
+    "Banco Santander-Chile",
+    [
+      "Santander"
+    ],
+    null
+  ],
+  "Banco de Chile": [
+    "conservado",
+    "org:banco-de-chile",
+    "organizacion",
+    "Banco de Chile",
+    [],
+    null
+  ],
+  "Minera del Cono Sur": [
+    "conservado",
+    "org:minera-del-cono-sur",
+    "organizacion",
+    "Minera del Cono Sur S.A.",
+    [],
+    null
+  ],
+  "Câmara dos Deputados": [
+    "conservado",
+    "org:camara-dos-deputados-brasil",
+    "organizacion",
+    "Câmara dos Deputados do Brasil",
+    [
+      "Câmara dos Deputados"
+    ],
+    null
+  ],
+  "Faena Pelambres": [
+    "conservado",
+    "org:minera-los-pelambres",
+    "organizacion",
+    "Minera Los Pelambres (Antofagasta Minerals)",
+    [
+      "Faena Pelambres"
+    ],
+    null
+  ],
+  "Faena Centinela": [
+    "conservado",
+    "org:minera-centinela",
+    "organizacion",
+    "Minera Centinela (Antofagasta Minerals)",
+    [
+      "Faena Centinela"
+    ],
+    null
+  ],
+  "Faena Candelaria": [
+    "conservado",
+    "org:minera-candelaria",
+    "organizacion",
+    "Compañía Contractual Minera Candelaria (Lundin Mining)",
+    [
+      "Faena Candelaria"
+    ],
+    null
+  ],
+  "Collahuasi": [
+    "conservado",
+    "org:compania-minera-dona-ines-de-collahuasi",
+    "organizacion",
+    "Compañía Minera Doña Inés de Collahuasi SCM",
+    [
+      "Collahuasi"
+    ],
+    null
+  ],
+  "Escondida": [
+    "conservado",
+    "org:minera-escondida",
+    "organizacion",
+    "Minera Escondida | BHP",
+    [
+      "Escondida"
+    ],
+    null
+  ],
+  "Qdrant": [
+    "conservado",
+    "prod:qdrant-vector-database",
+    "producto",
+    "Qdrant Vector Database Engine",
+    [
+      "Qdrant"
+    ],
+    null
+  ],
+  "Qdrant Multitenancy": [
+    "fusionado",
+    "prod:qdrant-vector-database",
+    "producto",
+    "Qdrant Vector Database Engine",
+    [
+      "Qdrant Multitenancy"
+    ],
+    "variante_denominacion"
+  ],
+  "Qdrant Vector DB": [
+    "fusionado",
+    "prod:qdrant-vector-database",
+    "producto",
+    "Qdrant Vector Database Engine",
+    [
+      "Qdrant Vector DB"
+    ],
+    "variante_denominacion"
+  ],
+  "Qdrant Engine": [
+    "fusionado",
+    "prod:qdrant-vector-database",
+    "producto",
+    "Qdrant Vector Database Engine",
+    [
+      "Qdrant Engine"
+    ],
+    "variante_denominacion"
+  ],
+  "Qdrant Dedicated Cluster": [
+    "fusionado",
+    "prod:qdrant-vector-database",
+    "producto",
+    "Qdrant Vector Database Engine",
+    [
+      "Qdrant Dedicated Cluster"
+    ],
+    "variante_denominacion"
+  ],
+  "PostgreSQL 18 RLS": [
+    "conservado",
+    "prod:postgresql-database-engine",
+    "producto",
+    "Motor de Base de Datos PostgreSQL con Row-Level Security (RLS)",
+    [
+      "PostgreSQL RLS"
+    ],
+    null
+  ],
+  "PostgreSQL 18": [
+    "fusionado",
+    "prod:postgresql-database-engine",
+    "producto",
+    "Motor de Base de Datos PostgreSQL con Row-Level Security (RLS)",
+    [
+      "PostgreSQL 18"
+    ],
+    "variante_denominacion"
+  ],
+  "PostgreSQL RLS": [
+    "fusionado",
+    "prod:postgresql-database-engine",
+    "producto",
+    "Motor de Base de Datos PostgreSQL con Row-Level Security (RLS)",
+    [
+      "PostgreSQL RLS"
+    ],
+    "variante_denominacion"
+  ],
+  "Vertex AI": [
+    "fusionado",
+    "prod:google-cloud-vertex-ai",
+    "producto",
+    "Google Cloud Vertex AI Platform",
+    [
+      "Vertex AI"
+    ],
+    "entidad_existente"
+  ],
+  "AWS Bedrock": [
+    "conservado",
+    "prod:amazon-bedrock-platform",
+    "producto",
+    "Amazon Bedrock Foundation Model Service",
+    [
+      "AWS Bedrock"
+    ],
+    null
+  ],
+  "Claude 3.5 Sonnet": [
+    "conservado",
+    "prod:claude-35-sonnet-model",
+    "producto",
+    "Anthropic Claude 3.5 Sonnet Model",
+    [
+      "Claude 3.5 Sonnet"
+    ],
+    null
+  ],
+  "AWS KMS": [
+    "conservado",
+    "prod:aws-key-management-service-kms",
+    "producto",
+    "AWS Key Management Service (KMS)",
+    [
+      "AWS KMS"
+    ],
+    null
+  ],
+  "KMS CMK": [
+    "fusionado",
+    "prod:aws-key-management-service-kms",
+    "producto",
+    "AWS Key Management Service (KMS)",
+    [
+      "KMS CMK"
+    ],
+    "variante_denominacion"
+  ],
+  "Redis ACL Cache": [
+    "conservado",
+    "prod:redis-cache-engine",
+    "producto",
+    "Redis In-Memory Cache con Control de Acceso por Listas (ACL)",
+    [
+      "Redis Cache"
+    ],
+    null
+  ],
+  "Redis Attribute Cache": [
+    "fusionado",
+    "prod:redis-cache-engine",
+    "producto",
+    "Redis In-Memory Cache con Control de Acceso por Listas (ACL)",
+    [
+      "Redis Attribute Cache"
+    ],
+    "variante_denominacion"
+  ],
+  "Locust Load Testing": [
+    "fusionado",
+    "prod:locust-load-testing",
+    "producto",
+    "Locust Open Source Load Testing Tool",
+    [
+      "Locust Load Testing"
+    ],
+    "entidad_existente"
+  ],
+  "ABAC PDP/PEP": [
+    "conservado",
+    "prod:motor-abac-pdp-pep",
+    "producto",
+    "Arquitectura y Motor ABAC (Policy Decision Point / Policy Enforcement Point)",
+    [
+      "ABAC PDP/PEP"
+    ],
+    null
+  ],
+  "Sanitizador de Salida": [
+    "conservado",
+    "prod:sanitizador-de-salida-guardrails",
+    "producto",
+    "Componente Sanitizador de Salida y Filtro Anti-Fuga de Información",
+    [
+      "Output Sanitizer"
+    ],
+    null
+  ],
+  "Deterministic Paraphrase Neutralizer": [
+    "conservado",
+    "prod:neutralizador-parafraseo-determinista",
+    "producto",
+    "Módulo Neutralizador de Parafraseo Determinista contra Fuga de Estilo",
+    [
+      "Paraphrase Neutralizer"
+    ],
+    null
+  ],
+  "Auto-clasificador LLM": [
+    "conservado",
+    "prod:auto-clasificador-llm-seguridad",
+    "producto",
+    "Clasificador Automatizado LLM de Sensibilidad de Documentos",
+    [
+      "Auto-clasificador LLM"
+    ],
+    null
+  ],
+  "Invariance Assertion Engine": [
+    "conservado",
+    "prod:invariance-assertion-engine",
+    "producto",
+    "Motor de Verificación e Invariantes de Seguridad (Invariance Assertion Engine)",
+    [
+      "Invariance Assertion Engine"
+    ],
+    null
+  ],
+  "Multi-Agent Testing Suite": [
+    "conservado",
+    "prod:multi-agent-testing-suite",
+    "producto",
+    "Suite de Pruebas Multi-Agente para Evaluación de Fugas Multitenant",
+    [
+      "Multi-Agent Testing Suite"
+    ],
+    null
+  ],
+  "No-Training Clause": [
+    "conservado",
+    "comp:clausula-no-entrenamiento-modelos",
+    "compromiso",
+    "Cláusula de Garantía de Cero Entrenamiento de Modelos con Datos de Clientes",
+    [
+      "No-Training Clause"
+    ],
+    null
+  ],
+  "Limitación de Responsabilidad": [
+    "conservado",
+    "comp:clausula-limitacion-responsabilidad",
+    "compromiso",
+    "Cláusula Contractual de Limitación de Responsabilidad ante Terceros",
+    [
+      "Limitación de Responsabilidad"
+    ],
+    null
+  ],
+  "Controles Compensatorios": [
+    "conservado",
+    "comp:adopcion-controles-compensatorios-seguridad",
+    "compromiso",
+    "Obligación de Implementación de Controles Compensatorios de Ciberseguridad",
+    [
+      "Controles Compensatorios"
+    ],
+    null
+  ],
+  "Invariantes de Autorización": [
+    "conservado",
+    "comp:invariantes-autorizacion-abac",
+    "compromiso",
+    "Invariantes Categóricas de Autorización y Aislamiento Multitenant",
+    [
+      "Invariantes de Autorización"
+    ],
+    null
+  ],
+  "Mínimo Privilegio": [
+    "conservado",
+    "comp:principio-minimo-privilegio-seguridad",
+    "compromiso",
+    "Principio de Menor Privilegio (Least Privilege) en Accesos Corporativos",
+    [
+      "Mínimo Privilegio"
+    ],
+    null
+  ],
+  "Data Minimization": [
+    "conservado",
+    "comp:principio-minimizacion-de-datos",
+    "compromiso",
+    "Principio de Minimización de Datos en Ingesta y Procesamiento",
+    [
+      "Data Minimization"
+    ],
+    null
+  ],
+  "ABAC": [
+    "fusionado",
+    "prod:control-acceso-pre-recuperacion-abac",
+    "producto",
+    "Control de Acceso Pre-Recuperación ABAC",
+    [
+      "ABAC"
+    ],
+    "entidad_existente"
+  ],
+  "RBAC Estático": [
+    "fusionado",
+    "tema:control-acceso-basado-en-roles-rbac",
+    "tema",
+    "Control de Acceso Basado en Roles (Role-Based Access Control - RBAC)",
+    [
+      "RBAC Estático"
+    ],
+    "entidad_existente"
+  ],
+  "Compuertas Copulativas": [
+    "conservado",
+    "tema:compuertas-copulativas-autorizacion",
+    "tema",
+    "Mecanismo de Compuertas Copulativas de Validación Estricta",
+    [
+      "Compuertas Copulativas"
+    ],
+    null
+  ],
+  "RAG Admissibility": [
+    "conservado",
+    "tema:reglas-admisibilidad-rag-seguridad",
+    "tema",
+    "Reglas de Admisibilidad y Filtrado Previo en Arquitecturas RAG Multitenant",
+    [
+      "RAG Admissibility"
+    ],
+    null
+  ],
+  "Choapa": [
+    "conservado",
+    "tema:provincia-del-choapa-territorio",
+    "tema",
+    "Provincia del Choapa (Zona de Influencia Minera)",
+    [
+      "Choapa"
+    ],
+    null
+  ],
+  "Los Vilos": [
+    "conservado",
+    "tema:comuna-de-los-vilos-territorio",
+    "tema",
+    "Comuna de Los Vilos (Zona de Influencia Portuaria y Comunitaria)",
+    [
+      "Los Vilos"
+    ],
+    null
+  ],
+  "Tokenización PII": [
+    "conservado",
+    "tema:tokenizacion-datos-sensibles-pii",
+    "tema",
+    "Técnicas de Tokenización y Anonimización de Datos Personales (PII)",
+    [
+      "Tokenización PII"
+    ],
+    null
+  ],
+  "Tokenización Local": [
+    "fusionado",
+    "tema:tokenizacion-datos-sensibles-pii",
+    "tema",
+    "Técnicas de Tokenización y Anonimización de Datos Personales (PII)",
+    [
+      "Tokenización Local"
+    ],
+    "variante_denominacion"
+  ],
+  "Envelope Encryption": [
+    "conservado",
+    "tema:cifrado-en-sobre-envelope-encryption",
+    "tema",
+    "Técnica Criptográfica de Cifrado en Sobre (Envelope Encryption)",
+    [
+      "Envelope Encryption"
+    ],
+    null
+  ],
+  "Pruebas de Aislamiento": [
+    "conservado",
+    "tema:pruebas-aislamiento-multitenant",
+    "tema",
+    "Metodología de Pruebas de Aislamiento Multitenant e Inyección",
+    [
+      "Pruebas de Aislamiento"
+    ],
+    null
+  ],
+  "Testing CI/CD": [
+    "conservado",
+    "tema:integracion-testing-seguridad-cicd",
+    "tema",
+    "Integración de Pruebas Automatizadas de Seguridad en Pipelines CI/CD",
+    [
+      "Testing CI/CD"
+    ],
+    null
+  ],
+  "CI/CD Sandbox": [
+    "fusionado",
+    "tema:integracion-testing-seguridad-cicd",
+    "tema",
+    "Integración de Pruebas Automatizadas de Seguridad en Pipelines CI/CD",
+    [
+      "CI/CD Sandbox"
+    ],
+    "variante_denominacion"
+  ],
+  "Header Tampering": [
+    "conservado",
+    "tema:vulnerabilidad-header-tampering",
+    "tema",
+    "Vulnerabilidad de Manipulación de Encabezados (Header Tampering)",
+    [
+      "Header Tampering"
+    ],
+    null
+  ],
+  "Session Bleed": [
+    "conservado",
+    "tema:vulnerabilidad-session-bleed-multitenant",
+    "tema",
+    "Vulnerabilidad de Filtración de Sesión entre Clientes (Session Bleed)",
+    [
+      "Session Bleed"
+    ],
+    null
+  ],
+  "BOLA / IDOR": [
+    "conservado",
+    "tema:vulnerabilidades-bola-idor-api",
+    "tema",
+    "Vulnerabilidades de Broken Object Level Authorization (BOLA / IDOR) en APIs",
+    [
+      "BOLA / IDOR"
+    ],
+    null
+  ],
+  "Negociación Colectiva": [
+    "conservado",
+    "tema:negociacion-colectiva-laboral-mineria",
+    "tema",
+    "Procesos de Negociación Colectiva Laboral en Gran Minería",
+    [
+      "Negociación Colectiva"
+    ],
+    null
+  ],
+  "High Water Mark": [
+    "conservado",
+    "tema:patron-high-water-mark-seguridad",
+    "tema",
+    "Patrón de Seguridad High Water Mark para Propagación de Sensibilidad",
+    [
+      "High Water Mark"
+    ],
+    null
+  ],
+  "Revocación en Cascada": [
+    "conservado",
+    "tema:revocacion-en-cascada-accesos",
+    "tema",
+    "Protocolo de Revocación en Cascada de Credenciales y Permisos",
+    [
+      "Revocación en Cascada"
+    ],
+    null
+  ],
+  "WORM Storage": [
+    "conservado",
+    "tema:almacenamiento-inmutable-worm",
+    "tema",
+    "Almacenamiento Inmutable Write Once Read Many (WORM)",
+    [
+      "WORM Storage"
+    ],
+    null
+  ],
+  "Bitácora WORM": [
+    "fusionado",
+    "tema:almacenamiento-inmutable-worm",
+    "tema",
+    "Almacenamiento Inmutable Write Once Read Many (WORM)",
+    [
+      "Bitácora WORM"
+    ],
+    "variante_denominacion"
+  ],
+  "WORM Log": [
+    "fusionado",
+    "tema:almacenamiento-inmutable-worm",
+    "tema",
+    "Almacenamiento Inmutable Write Once Read Many (WORM)",
+    [
+      "WORM Log"
+    ],
+    "variante_denominacion"
+  ],
+  "SHA-256 Chaining": [
+    "conservado",
+    "tema:encadenamiento-criptografico-hashes",
+    "tema",
+    "Encadenamiento Criptográfico de Hashes (Hash Chaining) para Auditoría",
+    [
+      "SHA-256 Chaining"
+    ],
+    null
+  ],
+  "HTTP 403 Forbidden": [
+    "conservado",
+    "tema:manejo-errores-autorizacion-http-403",
+    "tema",
+    "Protocolo de Manejo y Monitoreo de Respuestas HTTP 403 Forbidden",
+    [
+      "HTTP 403"
+    ],
+    null
+  ],
+  "Ciclo de Vida": [
+    "conservado",
+    "tema:ciclo-de-vida-de-la-informacion-dlm",
+    "tema",
+    "Ciclo de Vida de la Información y Gestión Documental (Data Lifecycle Management)",
+    [
+      "Data Lifecycle"
+    ],
+    null
+  ],
+  "Crypto-shredding": [
+    "conservado",
+    "tema:destruccion-criptografica-crypto-shredding",
+    "tema",
+    "Destrucción Criptográfica de Claves y Datos (Crypto-shredding)",
+    [
+      "Crypto-shredding"
+    ],
+    null
+  ],
+  "Crypto-shredding Verification": [
+    "fusionado",
+    "tema:destruccion-criptografica-crypto-shredding",
+    "tema",
+    "Destrucción Criptográfica de Claves y Datos (Crypto-shredding)",
+    [
+      "Crypto-shredding Verification"
+    ],
+    "variante_denominacion"
+  ],
+  "Legal Hold": [
+    "conservado",
+    "tema:preservacion-legal-hold-litigios",
+    "tema",
+    "Retención Legal y Preservación Documental por Litigios (Legal Hold)",
+    [
+      "Legal Hold"
+    ],
+    null
+  ],
+  "Políticas Propuestas": [
+    "conservado",
+    "tema:politicas-seguridad-propuestas-adopcion",
+    "tema",
+    "Directrices y Políticas de Seguridad Propuestas para Adopción Corporativa",
+    [
+      "Políticas Propuestas"
+    ],
+    null
+  ],
+  "Derecho al Olvido": [
+    "conservado",
+    "tema:derecho-al-olvido-y-supresion-datos",
+    "tema",
+    "Ejercicio del Derecho de Supresión y Derecho al Olvido",
+    [
+      "Derecho al Olvido"
+    ],
+    null
+  ],
+  "Qdrant Vector Purge": [
+    "conservado",
+    "tema:purga-definitiva-vectores-qdrant",
+    "tema",
+    "Mecanismo de Purga Definitiva y Hard Delete de Embeddings en Qdrant",
+    [
+      "Vector Purge"
+    ],
+    null
+  ],
+  "Qdrant Hard Purge": [
+    "fusionado",
+    "tema:purga-definitiva-vectores-qdrant",
+    "tema",
+    "Mecanismo de Purga Definitiva y Hard Delete de Embeddings en Qdrant",
+    [
+      "Qdrant Hard Purge"
+    ],
+    "variante_denominacion"
+  ],
+  "Qdrant Segment Optimization": [
+    "fusionado",
+    "tema:purga-definitiva-vectores-qdrant",
+    "tema",
+    "Mecanismo de Purga Definitiva y Hard Delete de Embeddings en Qdrant",
+    [
+      "Qdrant Segment Optimization"
+    ],
+    "variante_denominacion"
+  ],
+  "Due Diligence": [
+    "conservado",
+    "tema:due-diligence-proveedores-tecnologicos",
+    "tema",
+    "Debida Diligencia (Due Diligence) de Seguridad y Cumplimiento de Proveedores",
+    [
+      "Due Diligence"
+    ],
+    null
+  ],
+  "Marketing Claim": [
+    "conservado",
+    "tema:distincion-marketing-claim-vs-compromiso-contractual",
+    "tema",
+    "Distinción entre Afirmaciones Comerciales (Marketing Claims) y Cláusulas Contractuales Vinculantes",
+    [
+      "Marketing Claim"
+    ],
+    null
+  ],
+  "Post-Mortem Blameless": [
+    "conservado",
+    "tema:analisis-post-mortem-blameless",
+    "tema",
+    "Metodología de Análisis de Incidentes Post-Mortem sin Culpa (Blameless Post-Mortem)",
+    [
+      "Blameless Post-Mortem"
+    ],
+    null
+  ],
+  "Protocolo de Descontaminación": [
+    "conservado",
+    "tema:protocolo-descontaminacion-datos-multitenant",
+    "tema",
+    "Protocolo de Aislamiento y Descontaminación de Datos Multitenant",
+    [
+      "Protocolo de Descontaminación"
+    ],
+    null
+  ],
+  "Bucket Forense Cifrado": [
+    "conservado",
+    "tema:almacenamiento-bucket-forense-cifrado",
+    "tema",
+    "Preservación de Evidencia en Buckets Forenses Cifrados e Inmutables",
+    [
+      "Bucket Forense"
+    ],
+    null
+  ],
+  "Peritaje Forense de Datos": [
+    "fusionado",
+    "tema:almacenamiento-bucket-forense-cifrado",
+    "tema",
+    "Preservación de Evidencia en Buckets Forenses Cifrados e Inmutables",
+    [
+      "Peritaje Forense de Datos"
+    ],
+    "variante_denominacion"
+  ],
+  "Indirect Prompt Injection": [
+    "conservado",
+    "tema:ataque-inyeccion-indirecta-prompts",
+    "tema",
+    "Vector de Ataque por Inyección Indirecta de Prompts (Indirect Prompt Injection)",
+    [
+      "Indirect Prompt Injection"
+    ],
+    null
+  ],
+  "Ataques de Inversión de Vectores": [
+    "conservado",
+    "tema:ataques-inversion-vectores-embeddings",
+    "tema",
+    "Riesgo de Inversión y Reconstrucción de Texto desde Embeddings Vectoriales",
+    [
+      "Inversión de Vectores"
+    ],
+    null
+  ],
+  "Canal Lateral de GPU": [
+    "conservado",
+    "tema:ataques-canal-lateral-gpu-inferencia",
+    "tema",
+    "Ataques por Canal Lateral y Fuga de Memoria en GPU durante Inferencia",
+    [
+      "Canal Lateral GPU"
+    ],
+    null
+  ],
+  "Qdrant Payload Filter": [
+    "conservado",
+    "tema:filtrado-seguro-payload-qdrant",
+    "tema",
+    "Filtrado Seguro de Payload Multitenant en Qdrant Vector DB",
+    [
+      "Qdrant Payload Filter"
+    ],
+    null
+  ],
+  "Gold Standard Dataset": [
+    "conservado",
+    "tema:conjunto-datos-gold-standard-evaluacion",
+    "tema",
+    "Conjunto de Datos de Referencia (Gold Standard Dataset) para Pruebas de Clasificación",
+    [
+      "Gold Standard Dataset"
+    ],
+    null
+  ],
+  "ABAC Micro-Latency": [
+    "conservado",
+    "tema:optimizacion-micro-latencia-abac",
+    "tema",
+    "Optimización de Micro-Latencia en Evaluación de Políticas ABAC",
+    [
+      "ABAC Micro-Latency"
+    ],
+    null
+  ],
+  "Canary Honeytokens": [
+    "conservado",
+    "tema:honeytokens-canary-deteccion-fugas",
+    "tema",
+    "Uso de Honeytokens y Registros Canario para Detección Activa de Fugas",
+    [
+      "Canary Honeytokens"
+    ],
+    null
+  ],
+  "Shared Responsibility Model": [
+    "conservado",
+    "tema:modelo-responsabilidad-compartida-cloud",
+    "tema",
+    "Modelo de Responsabilidad Compartida en la Nube y Servicios de IA",
+    [
+      "Shared Responsibility"
+    ],
+    null
+  ],
+  "In-Context Steganography": [
+    "conservado",
+    "tema:esteganografia-en-contexto-llm",
+    "tema",
+    "Riesgo de Esteganografía en Contexto (In-Context Steganography) para Exfiltración",
+    [
+      "In-Context Steganography"
+    ],
+    null
+  ],
+  "DataAsset": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "ClassificationTier": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "AssetOwnership": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "TenantProfile": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "TenantBoundaryPolicy": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "IsolationAuditLog": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "AccessPolicyRule": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "AuditTrailRecord": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "RetentionSchedule": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "PurgeCertificate": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "LegalHoldRecord": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "CloudProvider": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "ExternalDataFlow": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "CompensatingControl": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "ControlDef": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "ControlImplementation": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "TelemetryAssertion": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "AuditEvidence": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "AttestationReport": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "TenantSecurityProfile": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "CitationCrossTenantScrubber": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "IncidentRecord": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "IncidentTimelineEvent": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "RegulatoryNotification": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "ContainmentAction": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "PostMortemAnalysis": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "RemediationTask": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Jurisdiction": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "StatutoryInstrument": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "StatutoryObligation": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "CanonicalCorrection": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "DisqualifiedSourceRegistry": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "TenantComplianceMapping": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "P11_RESEARCH_DOSSIER": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "P11_VERIFICATION_CORRECTIONS": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "P11_SOURCE_INDEX": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "P11_2026_LAW_AND_PROVIDER_CORRECTION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "WIPO Lex (descartada)": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "fuente_descartada_auditoria"
+  ],
+  "Synthetic Test Cases": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "caso_prueba_hipotetico"
+  ]
+}
