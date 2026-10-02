@@ -24,7 +24,7 @@
 
 > La frontera de automatización en comunicaciones corporativas se define mediante una estricta clasificación de riesgo algorítmico: 1) Tareas Automatizables con Bajo Riesgo: Ingesta de solicitudes y clasificación inicial de tickets por NLP; monitoreo continuo de medios, redes y clipping; extracción y
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P10-F31.json](P10-F31.json)
 ### P10-F32: ¿Qué señales obligan a abstenerse y pedir consejo legal o técnico?
 
