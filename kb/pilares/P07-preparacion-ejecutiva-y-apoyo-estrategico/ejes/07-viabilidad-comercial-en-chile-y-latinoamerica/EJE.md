@@ -30,7 +30,7 @@
 
 > Se consideran implementando filtros semánticos y reglas de neutralidad analítica: 1) Eliminación de sesgos paternalistas o ideologizados (prohibición de calificar a los actores locales como 'manipulados por terceros' o 'ignorantes técnicos'); 2) Caracterización fáctica de las contrapartes (mapeo obj
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P07-F38.json](P07-F38.json)
 ### P07-F39: ¿Qué afirmaciones regulatorias del dossier requieren revisión de vigencia por jurisdicción?
 

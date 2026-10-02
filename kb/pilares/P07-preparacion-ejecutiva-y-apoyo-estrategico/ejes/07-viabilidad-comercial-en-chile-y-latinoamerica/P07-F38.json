@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.95,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.merco.info/cl/ranking-merco-empresas",
+        "sha256_texto": "55778e68d0069fe46bea96989b795781c483424806a9d0ce6a0186caec0ab16c",
+        "pasaje": "La reputación corporativa en Chile se construye sobre la consistencia ética y la licencia social en las regiones donde operan las empresas. Los juicios de stakeholders locales castigan severamente el desdén centralista y las promesas incumplidas.",
+        "motivos": []
       }
     }
   ],
