@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Marco regulatorio vinculante en la Unión Europea y normativa vigente obligatoria de la CMF en Chile.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.efrag.org/",
+        "sha256_texto": "7f1c839ee736bb650ad527a3c5c2c3f9b6706de1b0e951e5c45deb86370f901d",
+        "pasaje": "Impact materiality and financial materiality are interconnected. A sustainability matter can trigger financial effects through reputation, regulation, and stakeholder action.",
+        "motivos": []
       }
     }
   ],

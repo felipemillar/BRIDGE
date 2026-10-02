@@ -24,7 +24,7 @@
 
 > La relación causal entre impactos sociales o ambientales y sus consecuencias financieras y reputacionales se articula formalmente a través del principio de Doble Materialidad consagrado en los estándares europeos EFRAG ESRS (IG 1) y en la regulación chilena CMF NCG 461: 1) Materialidad de Impacto (I
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P05-F37.json](P05-F37.json)
 ### P05-F38: ¿Qué señales anticipan que una controversia se convierta en asunto regulatorio?
 
