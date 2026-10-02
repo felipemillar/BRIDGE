@@ -48,7 +48,7 @@
 
 > El sistema de métricas y denominadores para The Bridge Intelligence se fundamenta en las siguientes fuentes originales y pasajes canónicos verificados en T01: 1) Es et al. (Ragas, 2023-09-27, ArXiv 01d6cab0, p. 2-4): Respalda la formulación matemática de Faithfulness, Answer Relevance y Context Reca
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [T01-F29.json](T01-F29.json)
 ### T01-F30: ¿Qué caso concreto, con entradas y resultado esperado, ilustra métricas y denominadores sin introducir datos no documentados?
 
