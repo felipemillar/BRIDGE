@@ -36,7 +36,7 @@
 
 > La resolución de contradicciones complejas se respalda en las siguientes fuentes canónicas del corpus: 1) Zhu et al. (2026, ArXiv:2605.18792; 'SABER: Trust or Abstain? Towards Self-Aware RAG', Mayo 2026): Texto completo HTML, Secciones 3 y 4, fundamentando los mecanismos de abstención pedagógica cua
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P06-X13.json](P06-X13.json)
 ### P06-X14: ¿Qué caso concreto, con entradas y resultado esperado, ilustra resolución de contradicciones complejas sin introducir datos no documentados?
 

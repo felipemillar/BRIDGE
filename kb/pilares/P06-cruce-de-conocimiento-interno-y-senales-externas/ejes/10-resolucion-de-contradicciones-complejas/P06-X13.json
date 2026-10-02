@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Publicaciones científicas de primer nivel incorporadas y verificadas en el corpus de P06.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://arxiv.org/html/2605.18792v1",
+        "sha256_texto": "5c6f652f7f7bbc702ad5862bb0af5b04d5f1b1284c99df27381a9696e4420d39",
+        "pasaje": "SABER equips RAG systems with self-awareness, allowing models to abstain rather than fabricate answers when facing irreconcilable factual conflicts in retrieved documents.",
+        "motivos": []
       }
     }
   ],
