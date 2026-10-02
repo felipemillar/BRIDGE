@@ -75,12 +75,18 @@
       "confidence": "alta",
       "confidence_reason": "Estándar global consensuado por asociaciones profesionales mundiales.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://globalalliancepr.org/resources/report-and-initiatives/global-capability-framework/",
+        "sha256_texto": "e5b8688ae59e006137e83d6e6340caac3b45438a9ad7b95e7b2404f3dae13cee",
+        "pasaje": "Define capacidades de inteligencia contextual, alineamiento de expectativas multistakeholder y deontología profesional.",
+        "motivos": []
       }
     },
     {
