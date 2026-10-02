@@ -30,7 +30,7 @@
 
 > La gobernanza de datos en BRIDGE estructura la responsabilidad bajo el principio de 'Dueño Único Identificable' (Single Point of Accountability), deslindando tres roles jerárquicos: 1) Dueño del Dato (Data Owner): La persona natural corporativa (con cargo, nombre y correo) titular del proceso de neg
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P11-F02.json](P11-F02.json)
 ### P11-F03: ¿Qué regla decide si una fuente puede incluirse en búsqueda y respuesta?
 
