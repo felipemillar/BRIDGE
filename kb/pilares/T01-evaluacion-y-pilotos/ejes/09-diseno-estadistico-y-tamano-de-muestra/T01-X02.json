@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Práctica estadística obligatoria en literatura científica de texto completo.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://arxiv.org/pdf/2305.14627.pdf",
+        "sha256_texto": "cfbe20094737f2a5b1b6fd465459bc6134c7cfede6128760239a9040d1fb9d86",
+        "pasaje": "We compute 95% confidence intervals via bootstrapping (B=1000) for Citation Precision and Recall, demonstrating statistically significant separation across baseline models.",
+        "motivos": []
       }
     }
   ],
@@ -146,7 +152,7 @@
     "T01-X03"
   ],
   "quality": {
-    "original_citations_resolved": false,
+    "original_citations_resolved": true,
     "correction_precedence_checked": null,
     "duplicate_sources_counted_once": null,
     "human_review_needed": false

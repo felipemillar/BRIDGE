@@ -18,7 +18,7 @@
 
 > En The Bridge Intelligence está terminantemente prohibido reportar estimaciones puntuales aisladas sin su correspondiente medida de incertidumbre estadística: 1) Intervalos de Confianza al 95% (95% CI): Para la Precisión de Citación (Citation Precision) y la Exhaustividad (Citation Recall), se debe
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [T01-X02.json](T01-X02.json)
 ### T01-X03: ¿Cómo evitar seleccionar solo casos fáciles o provenientes de un único sector?
 
