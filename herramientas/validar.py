@@ -228,69 +228,55 @@ def validar_grafo(
                 if not str(e.get("canonical_name", "")).strip():
                     errores.append(f"entidades.jsonl:{n_line}: canonical_name vacío")
 
-    # Validar relaciones si el archivo ha sido reconstruido con indice_legado (F4.3+)
+    # Validar relaciones (F4.3+)
     rel_path = r / "kb" / "grafo" / "relaciones.jsonl"
     if rel_path.exists():
-        es_reconstruido = False
         with open(rel_path, "r", encoding="utf-8") as fh:
-            primera = fh.readline()
-            if primera.strip():
+            for n_line, line in enumerate(fh, start=1):
+                if not line.strip():
+                    continue
                 try:
-                    es_reconstruido = "indice_legado" in json.loads(primera)
-                except Exception:
-                    es_reconstruido = False
-        if es_reconstruido:
-            with open(rel_path, "r", encoding="utf-8") as fh:
-                for n_line, line in enumerate(fh, start=1):
-                    if not line.strip():
-                        continue
-                    try:
-                        rel = json.loads(line)
-                    except Exception as err:
-                        errores.append(f"relaciones.jsonl:{n_line}: JSON inválido: {type(err).__name__} (detalles omitidos por seguridad)")
-                        continue
+                    rel = json.loads(line)
+                except Exception as err:
+                    errores.append(f"relaciones.jsonl:{n_line}: JSON inválido: {type(err).__name__} (detalles omitidos por seguridad)")
+                    continue
 
-                    sub = rel.get("subject_id")
-                    obj = rel.get("object_id")
-                    pred = rel.get("predicate")
+                sub = rel.get("subject_id")
+                obj = rel.get("object_id")
+                pred = rel.get("predicate")
 
-                    if sub not in entidades_ids:
-                        errores.append(f"relaciones.jsonl:{n_line}: subject_id '{sub}' no existe en entidades")
-                    if obj not in entidades_ids:
-                        errores.append(f"relaciones.jsonl:{n_line}: object_id '{obj}' no existe en entidades")
-                    if pred not in predicados:
-                        errores.append(f"relaciones.jsonl:{n_line}: predicate '{pred}' fuera de vocabulario")
+                if sub not in entidades_ids:
+                    errores.append(f"relaciones.jsonl:{n_line}: subject_id '{sub}' no existe en entidades")
+                if obj not in entidades_ids:
+                    errores.append(f"relaciones.jsonl:{n_line}: object_id '{obj}' no existe en entidades")
+                if pred not in predicados:
+                    errores.append(f"relaciones.jsonl:{n_line}: predicate '{pred}' fuera de vocabulario")
 
-                    cids = rel.get("evidence_claim_ids", [])
-                    for cid in cids:
-                        if cid not in all_claims:
-                            errores.append(f"relaciones.jsonl:{n_line}: claim_id '{cid}' no existe en findings")
+                cids = rel.get("evidence_claim_ids", [])
+                for cid in cids:
+                    if cid not in all_claims:
+                        errores.append(f"relaciones.jsonl:{n_line}: claim_id '{cid}' no existe en findings")
 
-    # Validar contradicciones si el archivo ha sido normalizado (F4.4+)
+    # Validar contradicciones (F4.4+)
     cont_path = r / "kb" / "grafo" / "contradicciones.jsonl"
     if cont_path.exists():
-        es_normalizado = False
         with open(cont_path, "r", encoding="utf-8") as fh:
-            primera = fh.readline()
-            if primera.strip():
+            for n_line, line in enumerate(fh, start=1):
+                if not line.strip():
+                    continue
                 try:
-                    es_normalizado = "resolution_original" in json.loads(primera)
-                except Exception:
-                    es_normalizado = False
-        if es_normalizado:
-            with open(cont_path, "r", encoding="utf-8") as fh:
-                for n_line, line in enumerate(fh, start=1):
-                    if not line.strip():
-                        continue
-                    try:
-                        c = json.loads(line)
-                    except Exception as err:
-                        errores.append(f"contradicciones.jsonl:{n_line}: JSON inválido: {type(err).__name__} (detalles omitidos por seguridad)")
-                        continue
+                    c = json.loads(line)
+                except Exception as err:
+                    errores.append(f"contradicciones.jsonl:{n_line}: JSON inválido: {type(err).__name__} (detalles omitidos por seguridad)")
+                    continue
 
-                    res = c.get("resolution")
-                    if res not in ("resuelta", "abierta"):
-                        errores.append(f"contradicciones.jsonl:{n_line}: resolution '{res}' debe ser 'resuelta' o 'abierta'")
+                res = c.get("resolution")
+                if res not in ("resuelta", "abierta"):
+                    errores.append(f"contradicciones.jsonl:{n_line}: resolution '{res}' debe ser 'resuelta' o 'abierta'")
+
+                for cid in c.get("claim_ids", []):
+                    if cid not in all_claims:
+                        errores.append(f"contradicciones.jsonl:{n_line}: claim_id '{cid}' no existe en findings")
 
     return errores
 
