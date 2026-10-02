@@ -48,7 +48,7 @@
 
 > El tema se sustenta en 12 fuentes primarias catalogadas en 4 niveles epistemológicos: Hechos Documentados (BCN Ley 20.730; CMF NCG 461/519; Dircom ECE 2025; LCM/EUPRERA 2022-2024; ECM Retrospectiva 2023; Cadem Marcas Ciudadanas Jun 2026; Merco Chile 2025/2026; Acción Empresas Sep 2026; ICARE); Evide
 
-- **Verificación:** no_verificada: 2
+- **Verificación:** no_verificada: 1, verificada: 1
 - **Registro:** [P01-F41.json](P01-F41.json)
 ### P01-F42: ¿Qué caso concreto, con entradas y resultado esperado, ilustra usuarios de asuntos corporativos en Chile y Latinoamérica sin introducir datos no documentados?
 
