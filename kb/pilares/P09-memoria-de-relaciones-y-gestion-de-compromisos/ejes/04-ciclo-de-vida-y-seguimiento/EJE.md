@@ -36,7 +36,7 @@
 
 > La integridad de la memoria institucional y la defensa jurídica exigen un modelo de inmutabilidad append-only para los cambios de alcance: 1) Prohibición de Borrado o Sobrescritura: Queda taxativamente inhabilitada la edición destructiva de registros en base de datos; 2) Congelamiento de Versión Ori
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P09-F21.json](P09-F21.json)
 ### P09-F22: ¿Qué variables, categorías, relaciones y condiciones exige representar ciclo de vida y seguimiento de forma estructurada?
 
