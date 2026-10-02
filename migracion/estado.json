@@ -1,0 +1,557 @@
+{
+  "plan": "auditoria/PLAN_MIGRACION_ANTIGRAVITY.md",
+  "sha256_comprobador": "6c3155f0e601624df962b695882118f5fa11f6cd1fbec11ced74d13079abf84d",
+  "fase_actual": "F0",
+  "fases_cerradas": [
+    "PREP"
+  ],
+  "iteracion": 2,
+  "tareas": {
+    "P.1": {
+      "estado": "hecha",
+      "intentos": 1,
+      "commit": "014d398"
+    },
+    "P.2": {
+      "estado": "hecha",
+      "intentos": 1,
+      "commit": "014d398"
+    },
+    "P.3": {
+      "estado": "hecha",
+      "intentos": 1,
+      "commit": "014d398"
+    },
+    "P.4": {
+      "estado": "hecha",
+      "intentos": 1,
+      "commit": "014d398"
+    },
+    "P.5": {
+      "estado": "hecha",
+      "intentos": 1,
+      "commit": "014d398"
+    },
+    "P.6": {
+      "estado": "hecha",
+      "intentos": 1,
+      "commit": "4042b90"
+    },
+    "F0.1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F0.2": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F0.3": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F0.4": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F0.5": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F1.1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F1.2": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F1.3": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F2.1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F2.2": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F2.3": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F2.4": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F2.5": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F2.6": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F2.7": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F3.1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F3.2": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F3.3": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F3.4": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F3.5": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F3.6": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P01": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P02": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P03": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P04": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P05": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P06": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P07": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P08": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P09": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P10": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.P11": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.2.T01": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.3": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.4": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F4.5": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.2": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.3": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.4": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P01-F08-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P01-F04-C2": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P01-F05-C4": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P01-F41-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P01-F04-C3": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P02-F01-C3": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P02-F34-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P02-F25-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P02-F29-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P02-F30-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P03-F05-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P03-F21-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P03-F14-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P03-F03-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P03-F08-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P04-F01-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P04-F03-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P04-F17-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P04-F09-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P04-F13-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P05-C13-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P05-F23-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P05-F37-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P05-F29-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P05-F41-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P06-X05-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P06-X21-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P06-X13-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P06-X29-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P07-F38-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P07-F01-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P07-C05-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P07-F32-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P07-F37-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P08-F35-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P08-F23-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P08-F37-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P08-F17-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P08-F19-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P09-F46-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P09-F16-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P09-F21-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P09-F15-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P09-F12-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P10-F48-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P10-C13-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P10-F11-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P10-F31-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P10-F39-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P11-C05-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P11-F28-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P11-F36-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P11-C12-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.P11-F02-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.T01-F28-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.T01-F38-C2": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.T01-F29-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.T01-F36-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.5.T01-X02-C1": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.6": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    },
+    "F5.7": {
+      "estado": "pendiente",
+      "intentos": 0,
+      "commit": null
+    }
+  },
+  "ultima_comprobacion": {
+    "comando": "python3 auditoria/comprobar_migracion.py --hasta PREP",
+    "resultado": "OK",
+    "fecha": "2026-10-02T14:12:43Z"
+  },
+  "bloqueo": null
+}
