@@ -18,7 +18,7 @@
 
 > En el dominio de controles comprobables: 1) Lo que sigue sin prueba empírica: La verificación formal de controles de aislamiento en flujos multi-agente recursivos donde múltiples agentes autónomos encadenan invocaciones dinámicas de herramientas (tools), generando llamadas a sub-modelos o conectores
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P11-C12.json](P11-C12.json)
 ### P11-F31: ¿Qué pruebas muestran cifrado, segregación, registro, control de acceso y respuesta a incidentes?
 
