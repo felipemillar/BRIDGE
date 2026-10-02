@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.95,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+        "sha256_texto": "75c6505c89ce6b4276392577cd3c33a1a440ed034240094ebcfba6a2aa3100af",
+        "pasaje": "Maintaining comprehensive logs of human decisions, modifications to model suggestions, and explicit override justifications creates accountable feedback loops and mitigates institutional liability.",
+        "motivos": []
       }
     }
   ],

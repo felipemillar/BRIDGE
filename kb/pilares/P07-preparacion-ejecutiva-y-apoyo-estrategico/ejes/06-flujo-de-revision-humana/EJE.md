@@ -30,7 +30,7 @@
 
 > Se registran mediante una pista de auditoría inmutable basada en Event Sourcing y control de versiones semántico: 1) Cada edición de texto genera un diff estructurado (redlining) que almacena el valor anterior, el valor modificado, el identificador del usuario, el rol y el timestamp UTC; 2) En caso
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P07-F32.json](P07-F32.json)
 ### P07-F33: ¿Qué latencia de revisión es aceptable en operación normal y en crisis?
 
