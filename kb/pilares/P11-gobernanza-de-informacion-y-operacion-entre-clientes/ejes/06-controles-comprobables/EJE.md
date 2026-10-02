@@ -54,6 +54,6 @@
 
 > El funcionamiento y verificación de controles comprobables se ilustra mediante el caso operacional concreto 'Auditoría Previa a Piloto de Banco Corporativo: Verificación de Aislamiento de Embeddings y Criptografía de Llaves'. En este escenario: 1) Entradas: Tenant A ('Banco Santander Chile', `tenant
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P11-F36.json](P11-F36.json)
 
