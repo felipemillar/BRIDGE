@@ -42,7 +42,7 @@
 
 > Exige representar variables de posición jerárquica (54,4% reporte al CEO, 32,3% en Comité Ejecutivo), una taxonomía de seis roles funcionales, 11 capacidades en tres dominios del GCF, relaciones transversales en el C-Suite (CCO as Integrator) y condiciones críticas de tiempo de respuesta (Golden Hou
 
-- **Verificación:** no_verificada: 3, verificada: 1
+- **Verificación:** no_verificada: 2, verificada: 2
 - **Registro:** [P01-F04.json](P01-F04.json)
 ### P01-F05: ¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre mandato y fronteras de asuntos corporativos?
 
