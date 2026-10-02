@@ -30,7 +30,7 @@
 
 > La captura de datos sociales introduce 4 sesgos estructurales severos: 1) Sesgo de visibilidad y cámaras de eco privadas: las conversaciones en perfiles cerrados de Instagram, grupos privados de Facebook y chats de WhatsApp son inaccesibles legalmente, ocultando la articulación comunitaria territori
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P03-F14.json](P03-F14.json)
 ### P03-F15: ¿Cómo verificar conversaciones relevantes sin atribuir representatividad a una muestra incompleta?
 

@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Verificado con principios de medición AMEC y evaluaciones de transparencia digital.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://amecorg.com/barcelona-principles-3-0-translations/",
+        "sha256_texto": "1353c298993ea1d113b9485991c0abde1cd598ef3519fe72d10a7580e6c2b395",
+        "pasaje": "Social media measurement must recognize the distinct characteristics of each platform, avoiding assumptions of broad public representativeness from isolated digital conversations.",
+        "motivos": []
       }
     }
   ],
