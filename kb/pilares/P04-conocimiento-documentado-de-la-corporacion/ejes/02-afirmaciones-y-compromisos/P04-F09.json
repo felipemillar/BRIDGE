@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Estándar formal W3C PROV-O y modelo relacional del dossier P04.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.w3.org/TR/prov-o/",
+        "sha256_texto": "cc5a786c5bffa47106b80ca78596619d2277e8ed89b2b3a3c5c8b7aaaab8e2b5",
+        "pasaje": "Defines core classes: Entity, Activity, Agent, and properties wasDerivedFrom, wasAttributedTo, wasRevisionOf, wasGeneratedBy to establish explicit provenance chains.",
+        "motivos": []
       }
     }
   ],

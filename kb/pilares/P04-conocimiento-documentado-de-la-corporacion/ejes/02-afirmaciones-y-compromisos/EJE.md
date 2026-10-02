@@ -36,7 +36,7 @@
 
 > El enlace relacional entre afirmaciones, compromisos, documentos y decisiones se implementa mediante un Grafo de Conocimiento fundamentado en el estándar W3C PROV-O y el vocabulario FIBO (Financial Industry Business Ontology). Se configuran cuatro aristas direccionales tipadas: 1) Linaje Documental
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P04-F09.json](P04-F09.json)
 ### P04-F10: ¿Qué variables, categorías, relaciones y condiciones exige representar afirmaciones y compromisos de forma estructurada?
 
