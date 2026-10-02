@@ -12,7 +12,7 @@
 
 > La discrepancia principal giraba en torno a la práctica de 'filtraciones exclusivas' o entrega preferencial anticipada a medios de prensa amigos: Prácticas de relaciones públicas convencionales recomendaban ofrecer la primicia de hechos relevantes bajo reserva informal a un periodista influyente ant
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P10-C13.json](P10-C13.json)
 ### P10-C14: ¿Qué sigue sin prueba sobre canales y escenarios, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?
 
