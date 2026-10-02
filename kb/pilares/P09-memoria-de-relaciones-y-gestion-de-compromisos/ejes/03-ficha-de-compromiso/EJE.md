@@ -42,7 +42,7 @@
 
 > La representación estructurada de la Ficha de Compromiso exige: 1) Identificadores y Metadatos: `commitment_id` (UUID), `code` (slug alfanumérico), `title`, `description_smart`, `category` (ambiental, social, laboral, infraestructura, lobby_acuerdo), `origin_type` (rca_legal, voluntary_dialogue, gri
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P09-F16.json](P09-F16.json)
 ### P09-F17: ¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre ficha de compromiso?
 

@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.98,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.boreal-is.com/blog/the-proving-problem-ai-social-performance/",
+        "sha256_texto": "989469a360e8e88f23579c8375dce00e06872257728ca0c16ccd0e18a1ec3b29",
+        "pasaje": "A structured database table for commitments must enforce foreign keys to the original consultation event and prohibit status progression to closed without an approved verification record.",
+        "motivos": []
       }
     }
   ],
