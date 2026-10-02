@@ -12,7 +12,7 @@
 
 > La discrepancia esencial en la matriz de acceso se centra en el dinamismo y desacoplamiento de la autorización: el dossier inicial (`P11_RESEARCH_DOSSIER`) planteaba una matriz RBAC (Role-Based Access Control) estática vinculada a perfiles fijos (ej. Director, Analista, Operador) evaluados una sola
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P11-C05.json](P11-C05.json)
 ### P11-C06: ¿Qué sigue sin prueba sobre matriz dato, actor, acción y permiso, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?
 
