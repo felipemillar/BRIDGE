@@ -24,7 +24,7 @@
 
 > Un brief ejecutivo debe habilitar tres decisiones críticas: 1) Definir el objetivo estratégico, las líneas rojas (concesiones inadmisibles) y el encuadre narrativo antes de entrar a la interacción; 2) Arbitrar la postura táctica ante contrapartes o medios hostiles (ir a la ofensiva con datos, usar b
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P07-F01.json](P07-F01.json)
 ### P07-F02: ¿Qué información esencial cabe en una primera página y qué debe quedar como respaldo navegable?
 
