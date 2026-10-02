@@ -30,7 +30,7 @@
 
 > El rendimiento varía drásticamente según el vector técnico: 1) Calidad de metadatos: Las licencias sindicadas (Factiva) y APIs estructuradas (Event Registry) entregan la mayor calidad con autor, fecha precisa y categorización temática; los RSS ofrecen calidad media y la captura manual es propensa a
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P03-F08.json](P03-F08.json)
 ### P03-F09: ¿Qué evidencia específica hay de cobertura de medios locales chilenos?
 
