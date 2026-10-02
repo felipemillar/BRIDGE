@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Afirmacion",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "question_id",
+    "pilar",
+    "eje_n",
+    "claim",
+    "epistemic_status",
+    "confidence",
+    "verificacion_estado",
+    "fuentes",
+    "ruta"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "question_id": {
+      "type": "string"
+    },
+    "pilar": {
+      "type": "string"
+    },
+    "eje_n": {
+      "type": "integer"
+    },
+    "claim": {
+      "type": "string"
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "hecho_documentado",
+        "declaracion_proveedor",
+        "inferencia",
+        "hipotesis_diseno"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "alta",
+        "media",
+        "baja"
+      ]
+    },
+    "verificacion_estado": {
+      "type": "string",
+      "enum": [
+        "no_verificada",
+        "cita_sintetica",
+        "solo_sintesis_interna",
+        "verificada",
+        "refutada",
+        "no_verificable"
+      ]
+    },
+    "fuentes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ruta": {
+      "type": "string"
+    }
+  }
+}

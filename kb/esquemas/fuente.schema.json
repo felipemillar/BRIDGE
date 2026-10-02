@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fuente",
+  "type": "object",
+  "required": [
+    "source_id",
+    "title",
+    "text_status"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "original_url": {
+      "type": ["string", "null"]
+    },
+    "text_status": {
+      "type": "string",
+      "enum": [
+        "texto_sustantivo",
+        "resumen_parcial",
+        "solo_navegacion",
+        "captcha",
+        "fallida",
+        "duplicada",
+        "desconocida"
+      ]
+    },
+    "is_internal_synthesis": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "epistemic_status": [
+    "hecho_documentado",
+    "declaracion_proveedor",
+    "inferencia",
+    "hipotesis_diseno"
+  ],
+  "confidence": [
+    "alta",
+    "media",
+    "baja"
+  ],
+  "text_status": [
+    "texto_sustantivo",
+    "resumen_parcial",
+    "solo_navegacion",
+    "captcha",
+    "fallida",
+    "duplicada",
+    "desconocida"
+  ],
+  "verificacion_estado": [
+    "no_verificada",
+    "cita_sintetica",
+    "solo_sintesis_interna",
+    "verificada",
+    "refutada",
+    "no_verificable"
+  ],
+  "answer_status": [
+    "respondida",
+    "parcial",
+    "sin_evidencia",
+    "fuente_fallida",
+    "conflicto",
+    "bloqueada"
+  ],
+  "modulo": [
+    "Saber",
+    "Escuchar",
+    "Hablar",
+    "Relacionar",
+    "transversal"
+  ]
+}

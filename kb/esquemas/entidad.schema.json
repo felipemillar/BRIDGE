@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Entidad",
+  "type": "object",
+  "required": [
+    "entity_id",
+    "canonical_name",
+    "type"
+  ],
+  "properties": {
+    "entity_id": {
+      "type": "string"
+    },
+    "canonical_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mentioned_in_notebooks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "occurrence_count": {
+      "type": "integer"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

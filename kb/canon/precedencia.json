@@ -1,0 +1,33 @@
+{
+  "mandato_seccion_2": {
+    "regla_general": "En todos los pilares, una fuente original pertinente y sustantiva prevalece sobre un resumen interno. Si dos fuentes originales discrepan, conservar ambas, sus fechas y ámbitos; no forzar una síntesis artificial.",
+    "pilares": {
+      "P01": "Precedencia canónica por orden y ámbito de fuentes sustantivas originales.",
+      "P02": "00_P02_GLOBAL_READ_ME_AND_ERRATA prevalece sobre P02_GLOBAL_ATLAS_RECONCILIATION_V1, el anexo regional y los documentos V1 cuando hay conflicto. Las 70 filas son fichas catalogadas, no 70 empresas independientes verificadas; las capacidades comerciales no son pruebas operativas.",
+      "P03": "QUALITY_ADDENDUM prevalece sobre conclusiones originales contradictorias.",
+      "P04": "P04_EVIDENCE_MAP y P04_RESEARCH_DOSSIER rigen la clasificación documental corporativa y la arquitectura.",
+      "P05": "P05_EVIDENCE_MAP, P05_QUALITY_ADDENDUM y P05_RESEARCH_DOSSIER rigen las metodologías analíticas.",
+      "P06": "QUALITY_ADDENDUM prevalece sobre conclusiones originales contradictorias. Distinguir abstracts de textos completos de la misma obra.",
+      "P07": "P07_EVIDENCE_MAP, P07_RESEARCH_DOSSIER y P07_GAPS_AND_VALIDATION rigen la preparación ejecutiva y apoyos estratégicos.",
+      "P08": "QUALITY_ADDENDUM prevalece sobre conclusiones originales contradictorias.",
+      "P09": "VERIFICATION_CORRECTIONS prevalece sobre QUALITY_ADDENDUM y síntesis iniciales. El informe OECD complementa pero no es vinculante.",
+      "P10": "VERIFICATION_CORRECTIONS prevalece sobre QUALITY_ADDENDUM y síntesis iniciales.",
+      "P11": "VERIFICATION_CORRECTIONS prevalece sobre QUALITY_ADDENDUM y síntesis iniciales. P11_PROVIDER_SCOPE_NOTE prevalece específicamente para el alcance de proveedores.",
+      "T01": "VERIFICATION_CORRECTIONS prevalece sobre QUALITY_ADDENDUM y síntesis iniciales. Deduplicar por contenido y procedencia sin contar repetición como corroboración."
+    }
+  },
+  "manifiestos_pilar": {
+    "P01": null,
+    "P02": "00_P02_GLOBAL_READ_ME_AND_ERRATA takes absolute precedence over all other sources in this notebook. Reconciles atlas count and corrects commercial vendor claims.",
+    "P03": "P03_QUALITY_ADDENDUM and P03_EVIDENCE_MAP take precedence over informal summaries in this notebook. Governs taxonomy of external signals, broadcast latency, API rate limits, and legal copyright restrictions.",
+    "P04": "P04_EVIDENCE_MAP and P04_RESEARCH_DOSSIER govern corporate document classification, RAG architecture, ABAC governance, and factuality evaluation in this notebook.",
+    "P05": "P05_EVIDENCE_MAP, P05_QUALITY_ADDENDUM and P05_RESEARCH_DOSSIER govern analytical methodologies, structured analytic techniques (SATs), intelligence synthesis, and bias mitigation in this notebook.",
+    "P06": "P06_EVIDENCE_MAP, P06_QUALITY_ADDENDUM and P06_RESEARCH_DOSSIER govern semantic reconciliation, entity resolution, temporal knowledge graphs, discrepancy typology, greenwashing detection, and verification protocols in this notebook.",
+    "P07": "P07_EVIDENCE_MAP, P07_RESEARCH_DOSSIER, P07_GAPS_AND_VALIDATION and P07_SOURCE_INDEX govern executive preparation, briefing architectures, media training techniques (bridging, hooking, flagging), message houses, scenario wargaming, regulatory governance (Ley 20.730, Ley 18.045, CMF NCG 461), and human review gates.",
+    "P08": "P08_EVIDENCE_MAP, P08_QUALITY_ADDENDUM, P08_RESEARCH_DOSSIER, P08_GAPS_AND_VALIDATION and P08_SOURCE_INDEX govern business models, SaaS pricing tiers, TAM/SAM/SOM sizing in Chile/LatAm, buyer willingness-to-pay, API cost structures, and data privacy governance (Ley 21.719, Ley 20.730, CMF).",
+    "P09": "En P09, P09_VERIFICATION_CORRECTIONS y P09_OECD_SCOPE_CORRECTION prevalecen sobre P09_QUALITY_ADDENDUM y síntesis preliminares. El informe OECD PDF complementa la Ley 20.730 pero no es norma vinculante.",
+    "P10": "P10_VERIFICATION_CORRECTIONS (f043631e) prevalece sobre P10_QUALITY_ADDENDUM (1da04c4e) y síntesis previas.",
+    "P11": "P11_VERIFICATION_CORRECTIONS (49d7882a) y P11_2026_LAW_AND_PROVIDER_CORRECTION (0716e04e) ejercen prevalencia canónica rectora sobre P11_QUALITY_ADDENDUM, P11_PENDING_SOURCES_RESOLUTION y síntesis anteriores. Descarte de WIPO Lex como no sustantiva y sustitución canónica de HTMLs de OpenAI por PDFs oficiales vigentes.",
+    "T01": "T01_VERIFICATION_CORRECTIONS (f5a15f9d) ejerce prevalencia canónica rectora sobre T01_QUALITY_ADDENDUM (45782049) y las síntesis previas. Prevalencia de los 9 Full-Texts en PDF sobre las fichas /abs/; descarte canónico de Bridge Studio MX (bridgestudio.mx) como atribución errónea ajena a thebridgeintelligence.ai."
+  }
+}

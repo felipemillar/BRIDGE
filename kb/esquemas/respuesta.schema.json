@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Respuesta",
+  "type": "object",
+  "required": [
+    "question_id",
+    "pilar",
+    "eje",
+    "eje_n",
+    "tipo",
+    "question_text",
+    "answer_status",
+    "short_answer",
+    "findings"
+  ],
+  "properties": {
+    "question_id": {
+      "type": "string",
+      "pattern": "^(P\\d\\d|T01)-[FCX]\\d\\d$"
+    },
+    "pilar": {
+      "type": "string"
+    },
+    "eje": {
+      "type": "string"
+    },
+    "eje_n": {
+      "type": "integer"
+    },
+    "subeje": {
+      "type": ["string", "null"]
+    },
+    "tipo": {
+      "type": "string",
+      "enum": ["F", "C", "X"]
+    },
+    "question_text": {
+      "type": "string"
+    },
+    "answer_status": {
+      "type": "string",
+      "enum": [
+        "respondida",
+        "parcial",
+        "sin_evidencia",
+        "fuente_fallida",
+        "conflicto",
+        "bloqueada"
+      ]
+    },
+    "short_answer": {
+      "type": ["string", "null"]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim",
+          "epistemic_status",
+          "confidence",
+          "verificacion"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "epistemic_status": {
+            "type": "string",
+            "enum": [
+              "hecho_documentado",
+              "declaracion_proveedor",
+              "inferencia",
+              "hipotesis_diseno"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "alta",
+              "media",
+              "baja"
+            ]
+          },
+          "verificacion": {
+            "type": "object",
+            "required": ["estado"],
+            "properties": {
+              "estado": {
+                "type": "string",
+                "enum": [
+                  "no_verificada",
+                  "cita_sintetica",
+                  "solo_sintesis_interna",
+                  "verificada",
+                  "refutada",
+                  "no_verificable"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

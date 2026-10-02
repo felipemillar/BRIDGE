@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contradiccion",
+  "type": "object",
+  "required": [
+    "claim_ids",
+    "difference",
+    "resolution",
+    "reason",
+    "pilar",
+    "question_id"
+  ],
+  "properties": {
+    "claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "difference": {
+      "type": "string"
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "pilar": {
+      "type": "string"
+    },
+    "question_id": {
+      "type": "string"
+    }
+  }
+}

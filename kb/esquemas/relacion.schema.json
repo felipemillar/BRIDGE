@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Relacion",
+  "type": "object",
+  "required": [
+    "subject_id",
+    "predicate",
+    "object_id"
+  ],
+  "properties": {
+    "subject_id": {
+      "type": "string"
+    },
+    "predicate": {
+      "type": "string"
+    },
+    "object_id": {
+      "type": "string"
+    },
+    "valid_from": {
+      "type": ["string", "null"]
+    },
+    "valid_to": {
+      "type": ["string", "null"]
+    },
+    "evidence_claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notebooks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "occurrence_count": {
+      "type": "integer"
+    }
+  }
+}
