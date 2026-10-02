@@ -1,0 +1,145 @@
+{
+  "question_id": "P03-F32",
+  "pilar": "P03",
+  "eje": "Desambiguación y análisis de señales",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué método permite detectar temas emergentes aun cuando no mencionan a la empresa?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El método estándar es el Modelado de Tópicos Neuronal Dinámico no supervisado mediante BERTopic (Grootendorst 2022): 1) Generación de embeddings: se transforman los documentos noticiosos y publicaciones del entorno en representaciones vectoriales densas de oraciones (Sentence Transformers o BETO); 2) Reducción dimensional preservando vecindades: se aplica UMAP para reducir la alta dimensionalidad sin perder la estructura no lineal de los grupos semánticos; 3) Agrupamiento basado en densidad: HDBSCAN identifica clústeres densos de conversación de forma autónoma sin forzar la asignación de un número fijo de tópicos a priori (k), aislando el ruido no relacionado; 4) Extracción de descriptores con c-TF-IDF: una adaptación de TF-IDF basada en clases extrae las palabras y conceptos que discriminan a cada clúster respecto al corpus global; y 5) Enlace al mapa de riesgos: los temas emergentes descubiertos se comparan vectorialmente con la matriz de riesgos estratégicos de la corporación para alertar sobre tensiones sectoriales antes de que la empresa sea nombrada.",
+  "findings": [
+    {
+      "claim_id": "P03-F32-C1",
+      "claim": "La detección de temas emergentes sin mención de marca se logra mediante modelado de tópicos neuronal con BERTopic (embeddings + UMAP + HDBSCAN + c-TF-IDF), descubriendo clústeres semánticos de forma no supervisada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2026",
+        "region": "Global",
+        "actor": "Modelado de Tópicos P03"
+      },
+      "evidence": [
+        {
+          "source_id": "5ddc89a7-492f-4263-b691-28bb6f9df072",
+          "source_title": "BERTopic: Neural Topic Modeling with a Class-based TF-IDF Procedure (Grootendorst 2022)",
+          "original_url": "https://arxiv.org/abs/2203.05794",
+          "locator": "Section 2: Architectural Pipeline",
+          "excerpt_short": "BERTopic generates document embeddings, clusters them with UMAP and HDBSCAN, and extracts topic representations using a novel class-based TF-IDF procedure.",
+          "source_date": "2022",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        },
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.5: Desafíos de NLP - Hecho Documentado",
+          "excerpt_short": "BERTopic utiliza embeddings de oraciones combinados con reducción de dimensionalidad (UMAP), clustering de densidad (HDBSCAN) y c-TF-IDF para descubrir temas emergentes de forma dinámica sin supervisión humana previa.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica de la publicación original de BERTopic y mapa de evidencia.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus de noticias sectoriales sin filtrar por marca"
+    ],
+    "actors": [
+      "BERTopic Pipeline Worker",
+      "Topic Descriptor Extractor"
+    ],
+    "steps": [
+      "Embedding de oraciones",
+      "Reducción UMAP",
+      "Clustering HDBSCAN",
+      "Ponderación c-TF-IDF"
+    ],
+    "states": [
+      "Unlabeled_Docs",
+      "Clustered_Vectors",
+      "Emerging_Topics_Identified"
+    ],
+    "outputs": [
+      "Lista de tópicos emergentes con palabras clave descriptivas y puntuación de coherencia"
+    ],
+    "exceptions": [
+      "Tópicos excesivamente fragmentados por variaciones estilísticas de redacción"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BERTOPIC_PIPELINE",
+      "type": "modelo_nlp",
+      "name": "Pipeline Neuronal BERTopic",
+      "aliases": [
+        "BERTopic Neural Pipeline"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BERTOPIC_PIPELINE",
+      "predicate": "descubre_temas_emergentes_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F32-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Descubrimiento de temas",
+      "Filtrado por Palabras Clave Fijas": "Ciego ante nuevas terminologías, reclamos imprevistos o eventos sin precedentes.",
+      "BERTopic No Supervisado": "Descubre agrupaciones semánticas orgánicas en tiempo real sin requerir listas de keywords previas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Correr un job periódico de BERTopic sobre la prensa regional y boletines oficiales para anticipar debates regulatorios antes de que impacten a la corporación.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F33"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

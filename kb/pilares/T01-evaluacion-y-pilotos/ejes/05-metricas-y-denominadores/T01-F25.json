@@ -1,0 +1,209 @@
+{
+  "question_id": "T01-F25",
+  "pilar": "T01",
+  "eje": "Métricas y denominadores",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Cómo definir precisión, exhaustividad, cobertura de fuentes, latencia y costo por caso?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el marco evaluativo de The Bridge Intelligence (thebridgeintelligence.ai), las cinco métricas operacionales clave se definen con rigor matemático y desacoplamiento de denominadores: 1) Precisión de Citación (Citation Precision / ALCE, Gao et al. 2023): Citas generadas que respaldan de forma estricta la afirmación asociada divididas por el total de citas generadas en la respuesta (meta >= 95%); 2) Exhaustividad de Citación (Citation Recall / ALCE): Afirmaciones fácticas respaldadas por al menos una cita divididas por el total de afirmaciones fácticas formuladas (meta >= 90%); 3) Cobertura de Fuentes: Porcentaje de documentos críticos obligatorios del repositorio corporativo (memorias, RCA, hechos esenciales) recuperados en el top-k del contexto (Ragas Context Recall / Es et al. 2023, meta >= 85%); 4) Latencia por Caso: Tiempo transcurrido de extremo a extremo desde el ingreso del prompt hasta el cierre del stream de respuesta, reportado en percentiles p50, p95 y p99 (meta p95 < 5.0 segundos); y 5) Costo por Caso: Suma de costos de cómputo de embeddings, tokens de inferencia LLM en entrada/salida y almacenamiento amortizado, medido en USD por consulta (ArXiv 2025 f57279c5, meta <= $0.025 USD por consulta compleja).",
+  "findings": [
+    {
+      "claim_id": "T01-F25-C1",
+      "claim": "El marco Ragas (Es et al. 2023) formaliza las definiciones matemáticas de Faithfulness y Context Recall, estableciendo que la fidelidad factual mide la fracción de oraciones generadas que pueden inferirse directamente del contexto recuperado, eliminando la ambigüedad en la evaluación de sistemas RAG.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023",
+        "region": "Global",
+        "actor": "Es et al. / Ragas Framework"
+      },
+      "evidence": [
+        {
+          "source_id": "01d6cab0-4331-4f04-b66e-4ad6c3fa6f78",
+          "source_title": "Es et al. (2023) — Ragas: Automated Evaluation of Retrieval Augmented Generation",
+          "original_url": "https://arxiv.org/pdf/2309.15217.pdf",
+          "locator": "Section 3: Metrics, p. 2-3",
+          "excerpt_short": "Faithfulness is computed as the number of statements in the generated answer supported by the retrieved context divided by the total number of statements in the answer.",
+          "source_date": "2023-09-27",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Definición matemática formal en Ragas PDF (7.615 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F25-C2",
+      "claim": "El estudio económico de ArXiv (2025) sobre despliegues LLM demuestra que el costo por caso debe descomponerse obligatoriamente en tokens de entrada, tokens de salida y costos fijos de infraestructura, revelando que el uso de arquitecturas híbridas RAG reduce el costo por consulta en hasta un 70% comparado con llamadas a modelos frontera de ventana infinita.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025",
+        "region": "Global",
+        "actor": "ArXiv 2025 f57279c5"
+      },
+      "evidence": [
+        {
+          "source_id": "f57279c5-07ed-4e50-900a-5fa7c66f6a0e",
+          "source_title": "ArXiv (2025) - A Cost-Benefit Analysis of On-Premise LLM Deployment vs Cloud APIs",
+          "original_url": null,
+          "locator": "Section 4: Cost Modeling & Latency Tradeoffs, p. 5-7",
+          "excerpt_short": "Cost per case is rigorously modeled as input token fees + output token fees + amortized retrieval index maintenance, showing significant unit economics advantages for targeted RAG architectures.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fuente económica especializada catalogada en T01.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Trazas OpenTelemetry de ejecución RAG",
+      "Tokens consumidos en gateway",
+      "Respuestas y contextos anotados"
+    ],
+    "actors": [
+      "MLOps Telemetry Collector",
+      "Auditor Financiero de FinOps"
+    ],
+    "steps": [
+      "Capturar marcas de tiempo de inicio y fin para calcular latencia p50, p95 y p99",
+      "Extraer recuento de tokens de entrada y salida para calcular costo monetario exacto",
+      "Segmentar claims de la respuesta para computar Citation Precision y Recall (ALCE)",
+      "Cruzar contextos recuperados contra ground-truth para medir cobertura de fuentes (Ragas Context Recall)"
+    ],
+    "states": [
+      "CAPTURA_TELEMETRIA",
+      "SEGMENTACION_CLAIMS",
+      "COMPUTO_METRICAS",
+      "CONSOLIDACION_DASHBOARD"
+    ],
+    "outputs": [
+      "Panel de telemetría con métricas de exactitud, latencia y costo por caso"
+    ],
+    "exceptions": [
+      "Si la latencia p95 supera los 8 segundos, se genera alerta de degradación de servicio"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "RAGAS_FAITHFULNESS",
+      "type": "metrica",
+      "name": "Ragas Faithfulness",
+      "aliases": [
+        "Fidelidad Factual Ragas"
+      ]
+    },
+    {
+      "entity_id": "ALCE_CITATION_PRECISION",
+      "type": "metrica",
+      "name": "ALCE Citation Precision",
+      "aliases": [
+        "Precisión de Citación ALCE"
+      ]
+    },
+    {
+      "entity_id": "FINOPS_METRIC",
+      "type": "metrica",
+      "name": "Costo Unitario por Caso (USD)",
+      "aliases": [
+        "Inference Cost Per Query"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ALCE_CITATION_PRECISION",
+      "predicate": "garantiza_calidad_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F25-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Precisión de Citación",
+      "item_b": "Exhaustividad de Citación",
+      "dimension": "Riesgo mitigado",
+      "conclusion": "Precisión mitiga la alucinación de respaldo; Exhaustividad mitiga la emisión de declaraciones corporativas infundadas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Citation Precision",
+      "denominator": "Total citas en la respuesta",
+      "target": ">= 95%"
+    },
+    {
+      "metric": "Citation Recall",
+      "denominator": "Total afirmaciones fácticas formuladas",
+      "target": ">= 90%"
+    },
+    {
+      "metric": "Latencia p95",
+      "denominator": "Consultas ejecutadas",
+      "target": "< 5.0 s"
+    },
+    {
+      "metric": "Costo por consulta",
+      "denominator": "Caso de uso corporativo resuelto",
+      "target": "<= $0.025 USD"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite monitorear la viabilidad técnica y financiera en tiempo real durante todo el piloto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F26",
+    "T01-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

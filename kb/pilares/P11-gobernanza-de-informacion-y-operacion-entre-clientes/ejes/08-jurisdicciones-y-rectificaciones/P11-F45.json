@@ -1,0 +1,163 @@
+{
+  "question_id": "P11-F45",
+  "pilar": "P11",
+  "eje": "Jurisdicciones y rectificaciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué precedencia tienen P11_VERIFICATION_CORRECTIONS y P11_PROVIDER_SCOPE_NOTE sobre el dossier?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En la jerarquía editorial, epistemológica y arquitectónica de BRIDGE, los documentos de rectificación canónica ejercen una prevalencia jerárquica absoluta, obligatoria y vinculante sobre el P11_RESEARCH_DOSSIER, P11_QUALITY_ADDENDUM, P11_PENDING_SOURCES_RESOLUTION y cualquier versión previa de síntesis: 1) Prevalencia Canónica Suprema de `P11_VERIFICATION_CORRECTIONS` (49d7882a): Este documento actúa como la norma rectora suprema de reconciliación categorial. Fija taxativamente que: a) WIPO Lex (4caa2cda) es un directorio navegacional no sustantivo que no debe citarse como prueba de la LGPD; b) Las 6 fichas CSRC de NIST (SP 800-145, 800-162, 800-53 r5, 800-61 r3, 800-88 r2, 800-92) son metadatos y resúmenes bibliográficos de fichas técnicas que respaldan estándares federales; c) La Ley 21.719 en Chile se encuentra bajo vacatio legis de 24 meses (hacia fines de 2026), por lo que en el período intermedio rige la Ley 19.628 supletoria y la Ley 21.663 de Ciberseguridad con su plazo de 3 horas; d) El GDPR y el EU AI Act no son legislación universal chilena; y e) Los términos comerciales de proveedores de IA son afirmaciones de marketing o cláusulas contractuales con alcance limitado, nunca pruebas técnicas de aislamiento en tiempo de ejecución; 2) Prevalencia Complementaria de `P11_2026_LAW_AND_PROVIDER_CORRECTION` (0716e04e): Rige específicamente respecto de la LGPD brasileña (sustentada en la Lei 13.709 consolidada y alterada por la Lei 15.352 de 25-02-2026 en fuentes de la Câmara dos Deputados) y de los términos contractuales de OpenAI (sustituyendo las páginas HTML por los PDFs oficiales en vigor al 01-01-2026: Services Agreement 8d9a7ceb y DPA 1bc87361); y 3) Rol de `P11_PROVIDER_SCOPE_NOTE` (ad1bbfc3) y `P11_RESEARCH_DOSSIER` (ddc8b1f3): Operan como catálogos descriptivos de ingeniería y taxonomía de datos (D1 a D5, actores A1 a A5, aislamiento en 4 planos), pero cualquier afirmación que contradiga las correcciones canónicas queda automáticamente revocada y sustituida por las conclusiones de 49d7882a y 0716e04e.",
+  "findings": [
+    {
+      "claim_id": "P11-F45-C1",
+      "claim": "P11_VERIFICATION_CORRECTIONS (49d7882a) y P11_2026_LAW_AND_PROVIDER_CORRECTION (0716e04e) tienen prevalencia rectora absoluta sobre P11_RESEARCH_DOSSIER y síntesis previas, descalificando WIPO Lex como no sustantiva, sustituyendo HTMLs por PDFs oficiales de OpenAI, deslindando la vacatio legis de la Ley 21.719 y prohibiendo confundir contratos de IA con pruebas de aislamiento.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "canonical_hierarchy_and_epistemic_precedence",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Prevalencia Jerárquica y Regla de Resolución de Conflictos'",
+          "retrieved_at": null,
+          "excerpt_short": "Este documento (P11_VERIFICATION_CORRECTIONS) ejerce prevalencia rectora sobre P11_QUALITY_ADDENDUM, P11_PENDING_SOURCES_RESOLUTION y sobre cualquier sección del P11_RESEARCH_DOSSIER que entre en conflicto con las rectificaciones categoriales aquí formalizadas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'Prevalencia Canónica sobre LGPD y Proveedores'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica complementaria sobre fuentes brasileñas actualizadas a 2026 (Lei 15.352) y documentación oficial PDF de OpenAI en vigor al 1 de enero de 2026.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_PROVIDER_SCOPE_NOTE",
+          "source_id": "ad1bbfc3-6d35-4c99-a350-3ccbcdd04647",
+          "locator": "Sección 'Alcance de Proveedores Cloud y Limitaciones'",
+          "retrieved_at": null,
+          "excerpt_short": "El alcance de los proveedores externos de IA debe entenderse acotado a la prestación técnica de inferencia bajo los términos DPA enterprise suscritos, subordinándose a las directrices de verificación de P11.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Mandato explícito de la gobernanza de investigación de BRIDGE y textos fundacionales de las síntesis rectoras.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Conflicto de afirmaciones entre dossier y rectificaciones",
+      "Catálogo de fuentes de P11"
+    ],
+    "actors": [
+      "Auditor Canónico de BRIDGE",
+      "Motor de Inferencia de Calidad",
+      "Investigador Principal"
+    ],
+    "steps": [
+      "Detección de una discrepancia entre el texto del dossier inicial y las correcciones",
+      "Aplicación de la regla de jerarquía: se invoca el UUID 49d7882a (P11_VERIFICATION_CORRECTIONS) o 0716e04e (P11_2026_LAW_AND_PROVIDER_CORRECTION)",
+      "Anulación automática de la premisa desactualizada (ej. calificar WIPO Lex como fuente sustantiva o afirmar que la Ley 21.719 rige plenamente hoy)",
+      "Inyección obligatoria de la formulación rectificada y su cita textual correspondiente",
+      "Sellado del registro como 'verificado_con_sintesis_interna_reconciliada'"
+    ],
+    "states": [
+      "CONFLICT_TRIGGERED",
+      "CANONICAL_RULE_EVALUATED",
+      "OBSOLETE_PREMISE_OVERRIDDEN",
+      "RECONCILED_RECORD_SEALED"
+    ],
+    "outputs": [
+      "Base de conocimiento completamente libre de contradicciones epistémicas y jurídicas"
+    ],
+    "exceptions": [
+      "Cualquier código o respuesta que ignore esta precedencia es rechazado de inmediato por el script de auditoría estratificada"
+    ]
+  },
+  "entities": [
+    "P11_VERIFICATION_CORRECTIONS",
+    "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+    "P11_RESEARCH_DOSSIER",
+    "WIPO Lex (descartada)",
+    "OpenAI PDFs Oficiales"
+  ],
+  "relations": [
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "P11_RESEARCH_DOSSIER",
+      "type": "OVERRULES_CANONICALLY"
+    },
+    {
+      "from": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+      "to": "P11_PENDING_SOURCES_RESOLUTION",
+      "type": "SUPERSEDES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Coexistencia desordenada de fuentes contradictorias vs Jerarquía de prevalencia canónica estricta",
+      "diferencia": "La coexistencia desordenada genera alucinaciones y respuestas ambiguas; la prevalencia canónica estricta garantiza que el sistema siempre responda con la versión más depurada y legalmente precisa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "canonical_override_execution_rate": "100% de discrepancias resueltas en favor de las síntesis rectoras",
+    "disqualified_source_leakage": "0 citas a WIPO Lex como fuente sustantiva"
+  },
+  "bridge_implications": "Garantiza la consistencia interna absoluta de los 64 registros de P11 y elimina cualquier riesgo de arrastrar errores materiales del dossier exploratorio inicial.",
+  "open_gaps": [
+    "Monitoreo continuo de futuras correcciones que puedan generarse tras la auditoría del pilar T01."
+  ],
+  "next_question_ids": [
+    "P11-F46",
+    "P11-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

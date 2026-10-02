@@ -1,0 +1,140 @@
+{
+  "question_id": "P05-C16",
+  "pilar": "P05",
+  "eje": "Decisiones de producto y evaluación",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué sigue sin prueba sobre decisiones de producto y evaluación, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis de gaps documentado en P05_GAPS_AND_VALIDATION Sección 3 y 4 establece: 1) Lo que sigue sin prueba formal: La adopción cultural y confianza efectiva que los miembros de la alta dirección y comités de crisis otorgarán a un sistema de soporte a la decisión basado en IA y grafos de conocimiento. Existe la incertidumbre de si los directivos confiarán en la recomendación de 'Abstención Estratégica' del sistema durante un pico de viralización en redes sociales, o si cederán al impulso emocional tradicional de convocar ruedas de prensa reactivas; 2) Qué fuente es parcial o falló: Fallan los manuales tradicionales de relaciones públicas, que fueron redactados para la era analógica o de medios lineales y no contemplan la dinámica de inyecciones de desinformación algorítmica ni el manejo de compuertas éticas en sistemas basados en LLMs; 3) Validación mínima que resolvería la incertidumbre: Implementar un programa piloto de simulación de crisis corporativas (War Gaming / Crisis Simulation) en modo 'Shadowing' durante 6 meses con comités de crisis activos de tres corporaciones reguladas en Chile: comparar en paralelo las decisiones tomadas intuitivamente por el comité humano con las recomendaciones prescriptivas generadas por BRIDGE, midiendo tasas de desescalamiento, costos de litigación evitados y tiempos de respuesta ejecutiva sin falsos positivos.",
+  "findings": [
+    {
+      "claim_id": "P05-C16-C1",
+      "claim": "La adopción de recomendaciones de abstención y análisis de grafos por comités de crisis requiere validación empírica mediante ejercicios de simulación de crisis (War Gaming) en modo shadowing con directivos activos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Simulación y Validación BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 3: Pregunta de Interfaz y Soporte a la Decisión",
+          "excerpt_short": "¿Cómo debe estructurarse el brief ejecutivo para el Comité de Crisis para que presente la evidencia bajo el marco SCCT de Coombs sin generar sobrecarga cognitiva en los tomadores de decisiones?",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño experimental de validación en entornos organizacionales reales especificado en P05.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Escenarios de simulación de crisis controlados",
+      "Telemetría de decisiones de comités ejecutivos"
+    ],
+    "actors": [
+      "Facilitador de War Games",
+      "Comité de Crisis Corporativo"
+    ],
+    "steps": [
+      "Inyección de señales de crisis simuladas",
+      "Registro de decisiones tomadas por directivos vs sugeridas por BRIDGE",
+      "Análisis comparado de resultados en debriefing"
+    ],
+    "states": [
+      "Simulation_Prepared",
+      "War_Game_Executed",
+      "Adoption_Metrics_Evaluated"
+    ],
+    "outputs": [
+      "Informe de Calibración de Adopción Directiva de BRIDGE"
+    ],
+    "exceptions": [
+      "Resistencia de directores veteranos a seguir recomendaciones algorítmicas de contención"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_WAR_GAMING_PROTOCOL",
+      "type": "protocolo_validacion",
+      "name": "Protocolo de Simulación de Crisis (War Gaming)",
+      "aliases": [
+        "Crisis War Gaming Protocol"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_WAR_GAMING_PROTOCOL",
+      "predicate": "valida_adopcion_de",
+      "object_id": "ENT_PRUDENTIAL_ARCHITECTURE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C16-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Método de entrenamiento",
+      "Capacitación Teórica Tradicional": "Lectura de manuales de crisis de 200 páginas que nadie abre durante una contingencia.",
+      "Simulación Activa BRIDGE": "Ejercicios interactivos en la plataforma donde los directivos experimentan las consecuencias del Efecto Streisand frente a la contención fundamentada."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Módulo de Simulación",
+      "implication": "BRIDGE debe incluir una función de 'Modo Simulación / Simulacro' para que los comités de crisis entrenen sus decisiones antes de enfrentar controversias reales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_C_SUITE_AI_ADOPTION",
+      "description": "Resistencia cultural y sobrecarga cognitiva de comités ejecutivos ante sistemas de soporte algorítmico en crisis.",
+      "severity": "media",
+      "status": "documentado"
+    }
+  ],
+  "next_question_ids": [
+    "P06-F01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

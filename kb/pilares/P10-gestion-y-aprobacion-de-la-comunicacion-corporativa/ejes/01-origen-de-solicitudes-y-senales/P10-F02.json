@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F02",
+  "pilar": "P10",
+  "eje": "Origen de solicitudes y señales",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué información mínima debe acompañar una solicitud de comunicado o respuesta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para que una solicitud de comunicación o respuesta pública sea admisible y procesable en el sistema, debe contener obligatoriamente 8 atributos de entrada estructurados: 1) Canal de Origen e Identificación del Solicitante: Medio de prensa, periodista acreditado con correo/teléfono, autoridad pública reguladora o junta de vecinos; 2) Pregunta o Requerimiento Textual Exacto: Puntos específicos a los que se exige respuesta, evitando interpretaciones verbales ambiguas; 3) Plazo Límite de Cierre (Deadline Fatal): Hora y fecha exacta de publicación o emisión fijada por el requirente; 4) Hecho Fáctico Involucrado: Identificador de faena, proyecto, producto o evento operativo al que alude la consulta; 5) Documentación de Soporte Preliminar: Informes técnicos, actas de fiscalización o comunicaciones previas existentes en P04; 6) Nivel de Criticidad Estimado: Evaluación preliminar de impacto reputacional o legal; 7) Conflictos de Interés o Restricciones Legales Conocidas: Existencia de litigios, reservas bursátiles o secreto comercial; y 8) Solicitante Interno Responsable: Funcionario o consultor que ingresa el ticket al sistema.",
+  "findings": [
+    {
+      "claim_id": "P10-F02-C1",
+      "claim": "El intake de una solicitud comunicacional exige 8 campos obligatorios incluyendo requirente verificado, consulta textual, deadline estricto y contexto fáctico documentado.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "communication_request_intake_fields",
+      "evidence": [
+        {
+          "source_title": "City of Oshawa: Corporate Communications Policy (Spokespersons, Approvals, Retractions)",
+          "source_id": "b634cc27-b43f-4d8d-849c-fdb9b0cfebe8",
+          "locator": "Section 4.1 'Media Inquiries and Intake Requirements', p. 4-6",
+          "retrieved_at": null,
+          "excerpt_short": "All incoming media requests must be formally documented with the reporter's identity, outlet, exact questions, explicit deadline, and subject matter before any staff member initiates draft responses.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Flujo de Trabajo Integral (Fase 1: Ingesta)'",
+          "retrieved_at": null,
+          "excerpt_short": "Datos obligatorios del intake: ID de expediente, canal de origen, requirente, texto exacto de la consulta, deadline perentorio y unidad operativa aludida.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las políticas corporativas de Oshawa y el dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Correo de periodista",
+      "Formulario web de contacto de prensa",
+      "Notificación judicial"
+    ],
+    "actors": [
+      "Periodista Externo",
+      "Jefe de Prensa",
+      "Motor de Validación BRIDGE"
+    ],
+    "steps": [
+      "Carga del formulario de solicitud",
+      "Verificación de completitud de los 8 campos",
+      "Cálculo automático de tiempo restante hasta el deadline",
+      "Asignación de SLA interno"
+    ],
+    "states": [
+      "Solicitud Recibida",
+      "Campos Validados",
+      "Ticket Admitido"
+    ],
+    "outputs": [
+      "Ficha de solicitud estructurada en BRIDGE"
+    ],
+    "exceptions": [
+      "Solicitudes sin deadline explícito reciben automáticamente un deadline por defecto de 4 horas hábiles"
+    ]
+  },
+  "entities": [
+    "City of Oshawa Policy",
+    "P10_RESEARCH_DOSSIER",
+    "Intake Estructurado",
+    "Deadline Fatal",
+    "SLA Interno"
+  ],
+  "relations": [
+    {
+      "from": "Solicitud de Prensa",
+      "to": "Deadline Fatal",
+      "type": "CONSTRAINED_BY"
+    },
+    {
+      "from": "Solicitud de Prensa",
+      "to": "Ficha Estructurada",
+      "type": "NORMALIZED_INTO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Solicitud por WhatsApp informal vs Ticket con 8 campos obligatorios",
+      "diferencia": "WhatsApp pierde el plazo y distorsiona la pregunta; el ticket formal fija el requerimiento y responsabiliza a la cadena de respuesta."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "intake_mandatory_fields_count": "8 campos obligatorios",
+    "time_to_admissibility_check": "< 2 minutos"
+  },
+  "bridge_implications": "Diseñar la interfaz de entrada en BRIDGE con un validador que impida guardar solicitudes que no tengan identificado al periodista o el plazo fatal.",
+  "open_gaps": [
+    "Integrar validación automática de correos institucionales de periodistas contra la base de datos de medios."
+  ],
+  "next_question_ids": [
+    "P10-F03",
+    "P10-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

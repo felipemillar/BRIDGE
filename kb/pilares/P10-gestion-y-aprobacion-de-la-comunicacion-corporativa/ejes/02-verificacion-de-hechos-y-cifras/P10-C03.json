@@ -1,0 +1,150 @@
+{
+  "question_id": "P10-C03",
+  "pilar": "P10",
+  "eje": "Verificación de hechos y cifras",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre verificación de hechos y cifras, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal giraba en torno a la posibilidad de certificar afirmaciones fácticas mediante búsqueda web abierta en tiempo real: Síntesis preliminares proponían permitir que un agente de IA verificara cifras consultando Google o memorias en línea de terceros; en oposición frontal, las especificaciones de Broadsight y el marco ético del PR Council sostienen que la veracidad corporativa solo puede certificarse contra registros internos primarios autenticados (Shared Fact Record) provistos por el SME de la compañía. Conforme a P10_VERIFICATION_CORRECTIONS (f043631e), prevalece la versión de Broadsight y PR Council: Está terminantemente prohibido utilizar búsquedas abiertas en internet para validar cifras corporativas; toda cifra o afirmación fáctica debe contar obligatoriamente con Provenance Tagging anclado a un documento maestro interno certificado de P04, catalogando cualquier dato externo sin contrastar como 'no verificado'.",
+  "findings": [
+    {
+      "claim_id": "P10-C03-C1",
+      "claim": "Conforme a P10_VERIFICATION_CORRECTIONS, prevalece la prohibición absoluta de validar hechos corporativos mediante búsquedas abiertas en la web, exigiendo anclaje estricto en el Shared Fact Record certificado.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "fact_verification_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Prevalencia Canónica: Prohibición de Verificación Web Abierta'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica: La verificación fáctica no puede depender de scraping web abierto por riesgo de circularidad y alucinación. Toda cifra requiere Provenance Tagging hacia el Shared Fact Record de P04.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "PR Council: Ethical Standards and Guidelines for Generative AI",
+          "source_id": "493c8ec0-08c7-4b4a-81c4-c95a7734bfe1",
+          "locator": "Section 'Factual Substantiation and Primary Records'",
+          "retrieved_at": null,
+          "excerpt_short": "Do not rely on AI-generated search summaries as primary sources for organizational facts. Verification requires referencing authenticated internal business documents.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Mandato explícito de las correcciones canónicas rectoras de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borrador con afirmaciones cuantitativas",
+      "Shared Fact Record de P04",
+      "Directiva de prevalencia canónica"
+    ],
+    "actors": [
+      "Validador Factual",
+      "Motor de Provenance BRIDGE",
+      "SME de Operaciones"
+    ],
+    "steps": [
+      "Extracción de entidades numéricas en el borrador",
+      "Cotejo exclusivo contra las tablas certificadas del SFR",
+      "Bloqueo de llamadas a APIs de búsqueda web externa durante la validación",
+      "Asignación de sello de verificación o rechazo por falta de fuente interna"
+    ],
+    "states": [
+      "ENTITIES_EXTRACTED",
+      "INTERNAL_LOOKUP_ONLY",
+      "PROVENANCE_SEALED"
+    ],
+    "outputs": [
+      "Borrador certificado con procedencia interna exclusiva"
+    ],
+    "exceptions": [
+      "Datos macroeconómicos públicos (e.g., inflación INE, valor UF) se consultan exclusivamente a APIs de bancos centrales/INE oficiales"
+    ]
+  },
+  "entities": [
+    "Shared Fact Record",
+    "Provenance Tagging",
+    "PR Council",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "Búsqueda Web Abierta",
+      "type": "PROHIBITS_FOR_FACT_CHECKING"
+    },
+    {
+      "from": "Afirmación Numérica",
+      "to": "Shared Fact Record",
+      "type": "MUST_ANCHOR_INTO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Verificación por Google Search vs Anclaje en Shared Fact Record",
+      "diferencia": "Google Search indexa desinformación y notas de prensa recicladas; el Shared Fact Record contiene la verdad técnica certificada por los ingenieros de la faena."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Verificación fáctica web vs repositorio interno",
+      "resolution": "Prevalece la prohibición de verificación web; se exige anclaje en el Shared Fact Record."
+    }
+  ],
+  "metrics_and_denominators": {
+    "internal_provenance_ratio": "100% de cifras con UUID de procedencia en P04"
+  },
+  "bridge_implications": "Asegura que los agentes de BRIDGE jamás alucinen o incorporen errores de la prensa al redactar comunicados oficiales.",
+  "open_gaps": [
+    "Protocolos de actualización en tiempo real del SFR ante eventos operacionales dinámicos."
+  ],
+  "next_question_ids": [
+    "P10-C04",
+    "P10-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

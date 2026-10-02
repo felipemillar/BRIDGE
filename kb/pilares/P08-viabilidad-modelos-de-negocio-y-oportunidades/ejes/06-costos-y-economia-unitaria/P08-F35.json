@@ -1,0 +1,145 @@
+{
+  "question_id": "P08-F35",
+  "pilar": "P08",
+  "eje": "Costos y economía unitaria",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre costos y economía unitaria?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los datos cuantitativos y fundamentos de la economía unitaria se sustentan en cuatro fuentes primarias del corpus: 1) Michael Page Chile (2025-2026), que provee las tablas salariales y cargas laborales oficiales de analistas de asuntos corporativos en Santiago; 2) Google Cloud Vertex AI Pricing Calculator & Documentation (2025-2026), que detalla el costo de tokens de entrada y salida para Gemini 1.5 Flash y Gemini 1.5 Pro; 3) Dow Jones Factiva Developer & Pricing Guides (2025-2026), con los tramos de tarifas para ingesta corporativa licenciada; y 4) FiscalNote Inc. Annual Financial Filings (2025-2026), que revela los márgenes brutos de referencia (68% a 72%) y los costos de adquisición de clientes en el sector de inteligencia regulatoria.",
+  "findings": [
+    {
+      "claim_id": "P08-F35-C1",
+      "claim": "Los supuestos de precios, márgenes y remuneraciones provienen de tarifas comerciales públicas de proveedores de nube y estudios de compensaciones de mercado en Chile.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "bibliographic_unit_economics_evidence",
+      "evidence": [
+        {
+          "source_title": "Michael Page Chile: Estudios de Remuneraciones y Perfiles en Asuntos Corporativos",
+          "source_id": "b20afdaf-2d4b-40d1-9af6-d6b923893bda",
+          "locator": "Estudio Nacional de Remuneraciones 2026 'Sector Minería, Energía y Servicios Corporativos', p. 12-16",
+          "excerpt_short": "Rango de remuneración mensual para Analista Senior de Asuntos Corporativos y Comunicaciones: Mínimo CLP 2.200.000 líquido, Promedio CLP 2.600.000 líquido, Máximo CLP 3.200.000 líquido. Las empresas multinacionales y mineras se sitúan en el cuartil superior con paquetes de beneficios complementarios.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Google Cloud Vertex AI: Generative AI Data Governance & Enterprise Privacy",
+          "source_id": "99ed7566-0ecf-45dd-b475-8b81c1429419",
+          "locator": "Pricing Architecture 'Gemini Models Enterprise Tier', p. 8-11",
+          "excerpt_short": "Gemini 1.5 Flash is priced at $0.075 per 1 million input tokens and $0.30 per 1 million output tokens for prompts under 128k characters, enabling extreme cost efficiency for high-frequency document classification and summarization pipelines.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de tarifas de Google Cloud y tablas salariales de Michael Page en P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tablas Michael Page",
+      "Calculadora Google Cloud",
+      "Informes SEC de FiscalNote"
+    ],
+    "actors": [
+      "Investigador Antigravity",
+      "Auditor Financiero"
+    ],
+    "steps": [
+      "Verificación de valores y tipos de cambio",
+      "Comprobación de fechas de actualización",
+      "Cálculo de equivalencias USD/CLP"
+    ],
+    "states": [
+      "Fuentes Verificadas",
+      "Tarifas Auditadas",
+      "Respaldado"
+    ],
+    "outputs": [
+      "Catálogo de respaldo del Eje 6"
+    ],
+    "exceptions": [
+      "Ajustes por inflación IPC anual proyectada al 3.5% en Chile"
+    ]
+  },
+  "entities": [
+    "Michael Page Chile",
+    "Google Cloud Vertex AI",
+    "Dow Jones Factiva",
+    "FiscalNote SEC Filings",
+    "IPC Chile"
+  ],
+  "relations": [
+    {
+      "from": "Michael Page",
+      "to": "Costos de Mano de Obra HITL",
+      "type": "validates"
+    },
+    {
+      "from": "Google Cloud Vertex",
+      "to": "Costos de Inferencia Algorítmica",
+      "type": "validates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Datos de sueldos locales vs Datos de sueldos de EE.UU.",
+      "diferencia": "Un analista en EE.UU. cuesta USD 9.000/mes; en Chile cuesta USD 3.600/mes, otorgando a BRIDGE una gran ventaja de arbitraje de costos para atender el mercado hispanohablante."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "gemini_flash_input_price": "$0.075 / 1M tokens",
+    "chilean_analyst_cost_advantage": "> 55% menor costo frente a equivalentes en EE.UU."
+  },
+  "bridge_implications": "Aprovechar la ventaja competitiva de contar con el equipo de analistas HITL basado en Santiago para brindar servicio de calidad mundial a costos altamente eficientes.",
+  "open_gaps": [
+    "Verificar los tramos de retención de talento y bonos de desempeño en empresas consultoras chilenas."
+  ],
+  "next_question_ids": [
+    "P08-F36",
+    "P08-F37"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

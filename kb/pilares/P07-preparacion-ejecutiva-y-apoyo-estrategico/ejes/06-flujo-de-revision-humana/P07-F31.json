@@ -1,0 +1,138 @@
+{
+  "question_id": "P07-F31",
+  "pilar": "P07",
+  "eje": "Flujo de revisión humana",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Quién valida cifras, interpretación, lenguaje y autorización antes de usar un brief?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La validación se ejecuta mediante una cadena colegiada de cuatro roles con responsabilidades indelegables: 1) Cifras duras y parámetros operacionales: Validadas por el Dueño Técnico del Dato (Gerencia de Operaciones, Medio Ambiente o Finanzas); 2) Interpretación estratégica y encuadre narrativo: Validados por el CCO / Director de Asuntos Corporativos; 3) Lenguaje, tono y concisión de soundbites: Validados por el Jefe de Prensa / Vocería; y 4) Autorización legal y cumplimiento regulatorio: Visada por la Gerencia Legal / Fiscal Corporativo (obligatoria si el evento involucra autoridades sujetas a la Ley 20.730 de Lobby, hechos esenciales CMF o procesos sancionatorios de la SMA).",
+  "findings": [
+    {
+      "claim_id": "P07-F31-C1",
+      "claim": "La gobernanza del brief ejecutivo exige una separación estricta de funciones entre validación técnica de datos, encuadre estratégico de comunicaciones y visado de legalidad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "review_roles_segregation",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 4.1 y Sección 6 (Plantilla 1)",
+          "excerpt_short": "Workflow HITL de Validación: 1) Validación Técnica: Ingeniero de proceso confirma métricas operativas; 2) Validación Comunicacional: CCO ajusta encuadre del mensaje y líneas rojas; 3) Visado Legal: Abogado corporativo certifica cumplimiento de Ley 20.730 (Lobby) y Ley 18.045 (Valores). Ningún documento llega al CEO sin las firmas digitales de este triángulo de control.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Page Society: CommTech and Progression Paths for CCOs",
+          "source_id": "8e5c0470-855b-41db-a91e-56a829c84f30",
+          "locator": "Capítulo 'Governance of Cognitive Workflows', p. 18-22",
+          "excerpt_short": "Segregation of duties within enterprise communication workflows guarantees that automated generation does not bypass technical verification or corporate legal oversight before external deployment.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los marcos de CommTech de Page Society y los protocolos de gobernanza del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "cadena_de_validacion": [
+      {
+        "rol": "Dueño Técnico del Dato",
+        "responsabilidad": "Certifica que las cifras de agua, emisiones o dotación coincidan con las mediciones oficiales."
+      },
+      {
+        "rol": "Jefe de Comunicaciones / CCO",
+        "responsabilidad": "Define el encuadre narrativo, aprueba el Message House y fija las líneas rojas."
+      },
+      {
+        "rol": "Fiscal / Gerente Legal",
+        "responsabilidad": "Revisa resguardo de secretos bursátiles y califica la aplicabilidad de la Ley de Lobby."
+      },
+      {
+        "rol": "Portavoz Final (CEO/VP)",
+        "responsabilidad": "Asimila el brief y asume la responsabilidad fiduciaria de la interacción pública."
+      }
+    ]
+  },
+  "entities": [
+    "CCO",
+    "Fiscal Corporativo",
+    "Dueño del Dato",
+    "Portavoz",
+    "Page Society"
+  ],
+  "relations": [
+    {
+      "from": "Cadena de Validación",
+      "to": "Brief Ejecutivo",
+      "type": "authorizes"
+    },
+    {
+      "from": "Dueño del Dato",
+      "to": "Cifras Operacionales",
+      "type": "certifies"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Revisión Monolítica vs Cadena Especializada",
+      "diferencia": "La revisión monolítica por un solo asesor pasa por alto errores jurídicos o técnicos; la cadena especializada asegura exactitud numérica, legalidad y efectividad retórica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "validation_roles_count": "3 firmas mínimas requeridas antes del despacho",
+    "unverified_brief_dispatch_rate": "0.0%"
+  },
+  "bridge_implications": "Implementar en BRIDGE un panel de control con 3 checkboxes de firma obligatoria (Técnica, Legal, CCO) antes de habilitar el botón de exportación para el CEO.",
+  "open_gaps": [
+    "Protocolos de delegación de firma ante ausencia imprevista del CCO o Fiscal en horarios no hábiles."
+  ],
+  "next_question_ids": [
+    "P07-F32",
+    "P07-F33"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

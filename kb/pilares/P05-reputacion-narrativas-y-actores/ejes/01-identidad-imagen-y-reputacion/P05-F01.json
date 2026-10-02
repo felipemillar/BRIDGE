@@ -1,0 +1,196 @@
+{
+  "question_id": "P05-F01",
+  "pilar": "P05",
+  "eje": "Identidad, imagen y reputación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Cómo distingue el corpus identidad declarada, imagen inmediata y reputación acumulada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus distingue de forma taxonómica y rigurosa tres constructos conceptuales basándose en Fombrun & Shanley (1990), Fombrun & van Riel (1997) y los Page Principles (2023): 1) Identidad Corporativa: Lo que la organización es intrínsecamente y declara de sí misma (su misión, valores, cultura interna, estructura de gobernanza y normas de conducta ética: 'Quiénes somos'); 2) Imagen Corporativa: La percepción mental instantánea, superficial y volátil que un público específico se forma en un momento dado, fuertemente condicionada por la exposición publicitaria reciente, noticias de coyuntura o estímulos visuales ('Cómo nos perciben hoy'); y 3) Reputación Corporativa: El juicio evaluativo colectivo, agregado, multidimensional y sostenido en el tiempo que múltiples grupos de interés realizan sobre el carácter, la competencia, la fiabilidad y la integridad de la organización, comparándola con sus pares sobre la base de su historial objetivo de conductas y su capacidad demostrada de cumplir promesas a futuro ('Qué esperan de nosotros a partir de lo que hemos demostrado a lo largo del tiempo'). Actúa como filtro de incertidumbre y reserva de capital moral en mercados con asimetría de información.",
+  "findings": [
+    {
+      "claim_id": "P05-F01-C1",
+      "claim": "Identidad, imagen y reputación constituyen constructos ontológicamente diferenciados por su temporalidad, origen de la señal y nivel de consolidación cognitiva en los stakeholders.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1990-2026",
+        "region": "Global",
+        "actor": "Organizaciones Corporativas"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 1.1: Definición Canónica y Distinción entre Imagen, Identidad y Reputación",
+          "excerpt_short": "Identidad: Lo que la organización es y proyecta intrínsecamente ('Quiénes somos'). Imagen: La fotografía mental instantánea influenciada por coberturas recientes ('Cómo nos perciben hoy'). Reputación: El juicio evaluativo colectivo, agregado y sostenido en el tiempo sobre carácter, competencia y fiabilidad.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "ca96f28d-5a3a-4ddd-b53d-b3d1d6f3797b",
+          "source_title": "Fombrun & Shanley: What's in a Name? Reputation Building and Corporate Strategy",
+          "original_url": "https://journals.aom.org/doi/10.5465/256324",
+          "locator": "Academy of Management Journal, 33(2), pp. 233-258",
+          "excerpt_short": "Corporate reputation represents a collective judgment of a company based on assessments of the financial, social, and environmental impacts attributed to the firm over time.",
+          "source_date": "1990-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "19dae3b0-2400-447a-a840-0cf2c0ec5fd1",
+          "source_title": "Fombrun & van Riel: The Reputational Landscape (Corporate Reputation Review)",
+          "original_url": "https://link.springer.com/article/10.1057/crr.1997.1",
+          "locator": "Corporate Reputation Review, 1(1), pp. 5-13",
+          "excerpt_short": "Reputations are aggregate composite assessments of a company by its various stakeholders, reflecting an organization's relative standing both internally with employees and externally with its stakeholders.",
+          "source_date": "1997-04-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Distinción teórica canónica universalmente validada en la literatura de estrategia y comunicación corporativa.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Estatutos corporativos y código de ética (Identidad)",
+      "Menciones y titulares de coyuntura en prensa (Imagen)",
+      "Historial de cumplimiento y evaluaciones de paneles expertos (Reputación)"
+    ],
+    "actors": [
+      "Comité Directivo",
+      "Gerencia de Asuntos Corporativos",
+      "Stakeholders Multidisciplinarios",
+      "Analistas de Reputación"
+    ],
+    "steps": [
+      "Extracción de compromisos declarados en corpus interno",
+      "Monitoreo de señales emocionales y perceptuales en tiempo real",
+      "Evaluación longitudinal agregada de confianza y credibilidad"
+    ],
+    "states": [
+      "Internal_Identity_Defined",
+      "Immediate_Image_Captured",
+      "Longitudinal_Reputation_Computed"
+    ],
+    "outputs": [
+      "Diferencial bitemporal entre identidad, imagen y reputación"
+    ],
+    "exceptions": [
+      "Confusión semántica en vocerías ejecutivas tratando una crisis de imagen como daño reputacional irreversible o viceversa"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_IDENTITY",
+      "type": "constructo",
+      "name": "Identidad Corporativa",
+      "aliases": [
+        "Corporate Identity",
+        "Quiénes somos"
+      ]
+    },
+    {
+      "entity_id": "ENT_IMAGE",
+      "type": "constructo",
+      "name": "Imagen Corporativa",
+      "aliases": [
+        "Corporate Image",
+        "Percepción inmediata"
+      ]
+    },
+    {
+      "entity_id": "ENT_REPUTATION",
+      "type": "constructo",
+      "name": "Reputación Corporativa",
+      "aliases": [
+        "Corporate Reputation",
+        "Juicio evaluativo longitudinal"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_IDENTITY",
+      "predicate": "proyecta_a",
+      "object_id": "ENT_IMAGE",
+      "valid_from": "1990",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F01-C1"
+    },
+    {
+      "subject_id": "ENT_IMAGE",
+      "predicate": "cristaliza_en",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "1990",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F01-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Horizonte temporal y durabilidad",
+      "Identidad": "Permanente y estructural (revisión plurianual o fundacional).",
+      "Imagen": "Instantánea, volátil y de corto plazo (horas, días o semanas).",
+      "Reputación": "Longitudinal, acumulativa y de mediano/largo plazo (años, décadas)."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Índice de Brecha Identidad-Imagen",
+      "denominator": "Divergencia entre atributos declarados internamente y asociaciones perceptuales externas (0 a 100).",
+      "formula": "|Score_Interno - Score_Percepcion_Externa|"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Analítica Reputacional",
+      "implication": "BRIDGE debe tipificar cada dato ingresado como atributo de identidad, señal de imagen o métrica de reputación para evitar mezclar alertas de coyuntura con erosión de capital estructural.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

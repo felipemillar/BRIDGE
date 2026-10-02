@@ -1,0 +1,127 @@
+{
+  "question_id": "P03-F04",
+  "pilar": "P03",
+  "eje": "Taxonomía de señales externas",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar taxonomía de señales externas de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la taxonomía de señales exige: 1) Variables primarias: `severidad` (crítica, alta, media, baja), `alcance_geografico` (nacional, regional, comunal), `fase_regulatoria` (discusión_publica, proyecto_ley, tramite_legislativo, norma_vigente), `polarizacion_discursiva` y `velocidad_propagacion`; 2) Categorías canónicas: Institucional-Regulatoria, Judicial-Litigios, Operacional-Ambiental, Laboral-Sindical, Financiera-Mercado y Reputacional-Mediatica; 3) Relaciones en grafo: `involucra_a` (entidad), `afecta_sector` (industria), `origina_en` (fuente), `amenaza_objetivo` (KPI o proyecto corporativo) y `precede_a` (secuencia causal); y 4) Condiciones de integridad: toda señal categorizada como regulatoria debe enlazar a un expediente verificable y contar con marca temporal formal.",
+  "findings": [
+    {
+      "claim_id": "P03-F04-C1",
+      "claim": "Una taxonomía estructurada de señales externas requiere modelar variables de severidad y ciclo de vida regulatorio, vinculándolas como grafos de conocimiento a entidades y sectores.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Modelado Ontológico P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.4: Señales Institucionales y Regulatorias",
+          "excerpt_short": "Todas estas fuentes se estructuran por taxonomía de temas (ej. agua, royalty, permisos ambientales, reforma tributaria), no por marca.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del diseño ontológico de monitoreo de entorno.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señal normalizada",
+      "Ontología corporativa en OWL/RDF"
+    ],
+    "actors": [
+      "Semantic Reasoner",
+      "Knowledge Graph Store"
+    ],
+    "steps": [
+      "Mapeo a categorías canónicas",
+      "Instanciación de relaciones en grafo",
+      "Cálculo de variables de severidad"
+    ],
+    "states": [
+      "Raw_Signal",
+      "Graph_Triples_Generated",
+      "Committed_To_KG"
+    ],
+    "outputs": [
+      "Subgrafo RDF de señal externa enriquecido"
+    ],
+    "exceptions": [
+      "Ambigüedad temática que active reglas de inferencia contradictorias"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SIGNAL_TAXONOMY",
+      "type": "ontologia",
+      "name": "Ontología de Señales Externas",
+      "aliases": [
+        "Signal Ontology"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SIGNAL_TAXONOMY",
+      "predicate": "define_esquema_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F04-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Representar las señales como tripletas en el grafo de BRIDGE para permitir razonamiento relacional cruzado con el módulo Saber.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

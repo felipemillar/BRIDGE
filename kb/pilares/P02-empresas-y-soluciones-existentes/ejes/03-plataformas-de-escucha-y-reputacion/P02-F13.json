@@ -1,0 +1,165 @@
+{
+  "question_id": "P02-F13",
+  "pilar": "P02",
+  "eje": "Plataformas de escucha y reputación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué cubren Meltwater, Cision/Brandwatch, Signal AI, Hootsuite/Talkwalker y Onclusive?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cubren la captura y analítica del entorno exterior con focos diferenciados: 1) Meltwater (+300.000 fuentes de noticias, broadcast TV/radio, podcasts, alianzas de datos con Reddit/X/Meta, APIs a Snowflake/BigQuery y soporte MCP desde 2025; brecha: ciega a repositorios internos); 2) Cision / Brandwatch (Cision Ltd. / Platinum Equity: adq. Brandwatch en junio 2021 por USD 450M, combina base de datos de periodistas, PR Newswire y +100M fuentes de consumidor; brecha: orientada a marketing B2C sin RAG interno); 3) Signal AI (motor AIQ con 5,5M docs/día en 80+ idiomas, grafo de entidades ESG y analítica de lecturas reales Memo incorporada el 20 abril 2026; brecha: grafo entrenado solo sobre corpus público); 4) Hootsuite / Talkwalker (adq. abril 2024, motores Blue Silk AI y Yeti AI Agent para escucha social profunda y analítica visual/logos; brecha: orientada a redes de consumo); 5) Onclusive (Symphony Technology Group: fusiona Kantar Rep Intelligence, PRgloo, Critical Mention y Digimind, monitorea 28M contenidos diarios con AI Sense y modelos de PR Attribution a tráfico web; brecha: analítica retrospectiva sin integración a memoria corporativa).",
+  "findings": [
+    {
+      "claim_id": "P02-F13-C1",
+      "claim": "Las cinco principales plataformas de escucha y reputación globales cubren masivamente noticias, broadcast y redes sociales públicas mediante IA analítica y grafos de entidades (Signal AI) o atribución de PR (Onclusive), pero todas comparten la limitación estructural de no indexar repositorios documentales privados ni actas internas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Suites de Escucha Globales"
+      },
+      "evidence": [
+        {
+          "source_id": "1f9d6fc8-3c21-4523-803f-c4c81af0228e",
+          "source_title": "Meltwater Platform Integrations and APIs",
+          "original_url": "https://www.meltwater.com/en/platform/integrations-api",
+          "locator": "Sección: Media Monitoring and Data Exports",
+          "excerpt_short": "Ingests +300k global news sources and social channels with REST APIs to BI warehouses.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:31:00-03:00"
+        },
+        {
+          "source_id": "02867004-2c18-4bfc-b6de-542385dd2bdb",
+          "source_title": "Onclusive Media Monitoring and Measurement Platform",
+          "original_url": "https://onclusive.com/products/media-monitoring/",
+          "locator": "Platform Capabilities and PR Attribution",
+          "excerpt_short": "Monitors 28M contents daily across 60,000 print titles, 3M websites and 12,000 broadcast channels with PR Attribution.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:31:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica en especificaciones de producto de las 5 compañías.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Feeds RSS",
+      "Transmisiones broadcast",
+      "Firehoses de redes sociales"
+    ],
+    "actors": [
+      "Plataformas de Escucha",
+      "Analistas de PR",
+      "Algoritmos NLP"
+    ],
+    "steps": [
+      "Ingesta masiva continua",
+      "Normalización y OCR/ASR",
+      "Extracción de entidades y sentimiento",
+      "Visualización en dashboards volumétricos"
+    ],
+    "states": [
+      "Dato_Capturado",
+      "Entidades_Indexadas",
+      "Alerta_Disparada"
+    ],
+    "outputs": [
+      "Clipping de prensa, alertas de picos y reportes de volumen"
+    ],
+    "exceptions": [
+      "Contenido tras paywalls cerrados o radios locales analógicas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SIGNAL_AI",
+      "type": "plataforma_escucha",
+      "name": "Signal AI Ltd.",
+      "aliases": [
+        "Signal AI AIQ Platform"
+      ]
+    },
+    {
+      "entity_id": "ENT_ONCLUSIVE",
+      "type": "plataforma_escucha",
+      "name": "Onclusive Inc.",
+      "aliases": [
+        "STG Media Intelligence Group"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SIGNAL_AI",
+      "predicate": "procesa_volumen_diario_de",
+      "object_id": "5.5M_Documentos",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F13-C1"
+    },
+    {
+      "subject_id": "ENT_ONCLUSIVE",
+      "predicate": "aplica_modelo_de",
+      "object_id": "PR_Attribution",
+      "valid_from": "2022",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de Signal AI vs Enfoque de Onclusive",
+      "Signal AI": "Grafo de conocimiento probabilístico sobre entidades y pilares ESG en 80+ idiomas.",
+      "Onclusive": "Mayor base de prensa escrita europea y correlación estadística de tráfico web (PR Attribution)."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Comprar feeds de ingesta comercial masiva (APIs) en lugar de construir scrapers globales propios para BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F14",
+    "P02-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:31:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "question_id": "P05-F26",
+  "pilar": "P05",
+  "eje": "Actores y prominencia",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Cómo cambian intereses y posiciones de un actor a lo largo del tiempo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los intereses y posiciones de las partes interesadas no son propiedades estáticas sino vectores dinámicos que mutan a lo largo del tiempo en respuesta a tres factores documentados en el corpus: 1) Adquisición o pérdida de atributos de prominencia: Un grupo vecinal clasificado inicialmente como 'Dependiente' (alta legitimidad y urgencia, pero sin poder) transmuta a 'Definitivo' al aliarse con una ONG internacional con capacidad de litigación climática o al ser admitido a trámite su recurso de protección en una Corte de Apelaciones con orden de no innovar (adquiriendo poder coercitivo); 2) Ciclo de vida del proyecto o relación: Bajo el modelo de Licencia Social para Operar (SLO) de Boutilier & Thomson, los actores transitan por diferentes niveles (Retiro -> Aceptación -> Aprobación -> Copropiedad Psicológica) según se satisfagan los umbrales de legitimidad económica, credibilidad socio-política y confianza plena; si la empresa incumple acuerdos o miente, el actor retrocede bruscamente al nivel de Retiro; y 3) Alteraciones del entorno institucional: Reformas legislativas (e.g. nueva Ley de Delitos Económicos y Ambientales en Chile) o cambios de gobierno empoderan a sindicatos y comunidades otorgándoles nuevos canales de fiscalización y endureciendo sus posturas negociadoras.",
+  "findings": [
+    {
+      "claim_id": "P05-F26-C1",
+      "claim": "Las posturas y prominencia de los actores corporativos son intrínsecamente dinámicas y dependen de alianzas estratégicas, cumplimiento de acuerdos y variaciones en el marco normativo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2011-2026",
+        "region": "Global / Chile",
+        "actor": "Partes Interesadas y Comunidades"
+      },
+      "evidence": [
+        {
+          "source_id": "50e7cfce-93a6-4d51-a53e-50aa586579f3",
+          "source_title": "Boutilier & Thomson: Modelling and Measuring the Social License to Operate (SLO)",
+          "original_url": "https://www.socialicense.com/publications/Modelling_and_Measuring_the_SLO.pdf",
+          "locator": "Páginas 3 a 7: Dynamics of the Social License Thresholds",
+          "excerpt_short": "The SLO is not permanent; it oscillates across boundary thresholds based on perceptions of economic legitimacy, credibility, and full trust.",
+          "source_date": "2011-09-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "6bddf8be-2799-4e7b-b32f-cbc9b34d6e0c",
+          "source_title": "Umbrex: Mitchell-Agle-Wood Stakeholder Salience Model Guide",
+          "original_url": "https://umbrex.com/resources/stakeholder-salience-model/",
+          "locator": "Sección: The Dynamic Nature of Stakeholder Salience",
+          "excerpt_short": "Stakeholders can gain or lose power, legitimacy, or urgency over time, moving between classes as issues evolve and coalitions form.",
+          "source_date": "2024-02-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio central de la dinámica de sistemas de actores y modelos de licencia social.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Historial de acuerdos firmados",
+      "Seguimiento de fallos judiciales",
+      "Actas de mesas de diálogo"
+    ],
+    "actors": [
+      "Encargado de Asuntos Comunitarios",
+      "Oficial de Enlace de Stakeholders"
+    ],
+    "steps": [
+      "Registro bitemporal de cada interacción y acuerdo",
+      "Detección de alertas de cambio de postura (cooperativo a contencioso)",
+      "Actualización del nivel de SLO en el sistema"
+    ],
+    "states": [
+      "Posture_Stable",
+      "Trigger_Event_Occurred",
+      "Salience_Reclassified"
+    ],
+    "outputs": [
+      "Línea de tiempo de evolución de posturas por actor"
+    ],
+    "exceptions": [
+      "Ruptura repentina de confianza por un incidente ambiental no reportado oportunamente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ACTOR_DYNAMICS",
+      "type": "concepto_dinamico",
+      "name": "Dinamismo Temporal de Stakeholders",
+      "aliases": [
+        "Stakeholder Posture Evolution"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ACTOR_DYNAMICS",
+      "predicate": "modifica_clasificacion_de",
+      "object_id": "ENT_MITCHELL_SALIENCE",
+      "valid_from": "2011",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F26-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo estático vs dinámico",
+      "Mapeo Estático Anual": "Asume que una comunidad es 'poco influyente' y no revisa la evaluación durante todo el año fiscal.",
+      "Monitoreo Dinámico Continuo": "Detecta en tiempo real cuando la comunidad presenta un recurso legal, reclasificándola inmediatamente como Actor Definitivo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gestor de Stakeholders",
+      "implication": "BRIDGE debe permitir registrar cambios de postura y atributos con marcas bitemporales para analizar retrospectivamente cómo escalaron los conflictos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

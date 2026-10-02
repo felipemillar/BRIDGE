@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F04",
+  "pilar": "P09",
+  "eje": "Mapa de actores y relaciones",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar mapa de actores y relaciones de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del mapa de actores y relaciones exige modelar: 1) Variables Cuantitativas y Cualitativas (Índice de Salience basado en Poder, Legitimidad y Urgencia según Mitchell et al.; Nivel de Influencia 1 a 5; Grado de Confianza Relacional; Frecuencia de Contacto); 2) Categorías de Clasificación (Comunidad Tradicional, Pueblo Indígena, Autoridad Sujeto Pasivo, Fiscalizador Ambiental, Líder Gremial, Prensa Especializada); 3) Relaciones Inter-Actor (Alianzas territoriales, subordinación jerárquica, vínculos familiares en comunidades, conflictos históricos inter-organizacionales, asesoría jurídica compartida); y 4) Condiciones de Restricción Ética y de Acceso (control de acceso basado en roles RBAC, cifrado de notas de campo confidenciales, auditoría de consultas y estricto apego al principio de no-discriminación).",
+  "findings": [
+    {
+      "claim_id": "P09-F04-C1",
+      "claim": "El mapa de actores articula la teoría clásica de Salience de Mitchell et al. con matrices de poder-interés y controles estrictos de seguridad por rol.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "actor_mapping_structure",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades' y Sección 6 'Matriz Comparativa'",
+          "retrieved_at": null,
+          "excerpt_short": "El esquema estructurado del mapa de relaciones debe formalizar las variables: 'power_score', 'legitimacy_score', 'urgency_score', 'relationship_sentiment_score', 'stakeholder_type_enum', y vincular los grafos de alianzas entre actores para anticipar la conformación de frentes de oposición coordinados ante proyectos de inversión.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: What's The Difference Between CRM and SRM?",
+          "source_id": "8b347889-c8d7-450f-8a1f-41996e0385c4",
+          "locator": "Sección 'Stakeholder Mapping Dimensions & Governance', p. 3-6",
+          "retrieved_at": null,
+          "excerpt_short": "Unlike sales CRMs that measure pipeline velocity, an SRM measures the multidimensional fabric of community relationships: influence vectors, political salience, and mutual trust levels across generational project lifecycles.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia teórica entre la doctrina de SRM de Tractivity y el dossier de investigación de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario de caracterización de actores",
+      "Evaluación de comité de territorio",
+      "Alertas del entorno"
+    ],
+    "actors": [
+      "Gerente de Asuntos Públicos",
+      "Encargado de Comunidades",
+      "SRM Architect"
+    ],
+    "steps": [
+      "Ponderación de Poder, Legitimidad y Urgencia",
+      "Cálculo de categoría de Salience (Latente, Expectante, Definitivo)",
+      "Trazado de alianzas y dependencias en el grafo",
+      "Actualización trimestral"
+    ],
+    "states": [
+      "Actor Caracterizado",
+      "Salience Calculada",
+      "Mapa de Red Activo"
+    ],
+    "outputs": [
+      "Cuadrante de priorización de relacionamiento institucional"
+    ],
+    "exceptions": [
+      "Cambios bruscos de salience tras una emergencia ambiental que elevan de inmediato la urgencia a nivel crítico"
+    ]
+  },
+  "entities": [
+    "Modelo de Salience (Mitchell et al.)",
+    "Poder-Legitimidad-Urgencia",
+    "Tractivity SRM",
+    "RBAC",
+    "Grafo de Alianzas"
+  ],
+  "relations": [
+    {
+      "from": "Poder + Legitimidad + Urgencia",
+      "to": "Actor Definitivo (Prioridad 1)",
+      "type": "classifies_as"
+    },
+    {
+      "from": "Mapa de Actores",
+      "to": "Estrategia de Acercamiento",
+      "type": "informs"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Lista plana de contactos vs Mapa de Salience multidimensional",
+      "diferencia": "La lista plana trata a todos por igual; el mapa de Salience prioriza el tiempo del CCO en los actores críticos que tienen poder e impacto real sobre el proyecto."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "salience_scoring_scale": "Escala normalizada 1 a 5 para cada dimensión",
+    "actor_network_update_frequency": "Revisión trimestral obligatoria"
+  },
+  "bridge_implications": "Implementar en BRIDGE el algoritmo de Salience de Mitchell para calcular automáticamente la prioridad de relacionamiento de cada actor en el dashboard.",
+  "open_gaps": [
+    "Validar la aceptación de la terminología de 'Salience' entre equipos de terreno chilenos habituados a matrices simples de poder-interés."
+  ],
+  "next_question_ids": [
+    "P09-F05",
+    "P09-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

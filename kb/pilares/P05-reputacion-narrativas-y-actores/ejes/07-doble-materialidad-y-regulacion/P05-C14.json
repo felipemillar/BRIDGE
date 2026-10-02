@@ -1,0 +1,153 @@
+{
+  "question_id": "P05-C14",
+  "pilar": "P05",
+  "eje": "Doble materialidad y regulación",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué sigue sin prueba sobre doble materialidad y regulación, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis de limitaciones documentado en P05_GAPS_AND_VALIDATION establece: 1) Lo que sigue sin prueba rigurosa: La consistencia pericial y comparabilidad cruzada de los dictámenes de aseguramiento externo independiente bajo norma ISAE 3000 emitidos por diferentes firmas auditoras en Chile sobre las memorias anuales NCG 461. Al no existir protocolos cuantitativos obligatorios sobre niveles de materialidad cualitativa, una misma práctica corporativa puede ser aprobada sin observaciones por una firma auditora y objetada por otra; 2) Qué fuente es parcial o falló: Fallan las memorias de aseguramiento limitado estándar de las Big Four en Chile, que suelen contener dictámenes con declaraciones genéricas de 'no haber detectado inconsistencias' sin verificar en profundidad los reclamos socioambientales territoriales de base; 3) Validación mínima que resolvería la incertidumbre: El desarrollo y publicación por parte de la Comisión para el Mercado Financiero (CMF) de una Guía de Criterios Periciales de Aseguramiento ESG con rangos de tolerancia específicos, checklists estandarizados de verificación territorial y obligatoriedad de contraste con los expedientes sancionatorios de la SMA y fallos de los Tribunales Ambientales.",
+  "findings": [
+    {
+      "claim_id": "P05-C14-C1",
+      "claim": "El aseguramiento independiente ISAE 3000 sobre métricas cualitativas de sostenibilidad adolece de variabilidad metodológica en Chile, requiriendo guías periciales vinculantes emitidas por la CMF.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Auditoría de Sostenibilidad e ISAE 3000"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1: Vacíos Críticos de Evidencia Identificados en la Literatura",
+          "excerpt_short": "Falta de benchmarks estandarizados y heterogeneidad de criterios periciales en la verificación de reportes de sostenibilidad no financieros.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "11ce6bf4-9dcf-4933-bf0b-d6a7579da3ac",
+          "source_title": "CMF Chile: Norma de Carácter General NCG 461 (Gobierno Corporativo y ESG)",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Instrucciones de Auditoría Externa en Memorias Anuales",
+          "excerpt_short": "Recomienda el aseguramiento independiente de las métricas reportadas, dejando a las sociedades la selección del alcance y nivel de aseguramiento.",
+          "source_date": "2021-11-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío operativo constatado en la implementación de la NCG 461 de la CMF en Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dictámenes de auditoría ISAE 3000 de memorias anuales",
+      "Expedientes de la SMA"
+    ],
+    "actors": [
+      "Auditor Externo",
+      "Regulador CMF",
+      "Comité de Auditoría"
+    ],
+    "steps": [
+      "Cotejo de métricas declaradas en la memoria con expedientes sancionatorios de la SMA",
+      "Detección de omisiones de pasivos ambientales en el dictamen",
+      "Emisión de requerimiento de aclaración a la firma auditora"
+    ],
+    "states": [
+      "Report_Audited",
+      "Discrepancy_Detected",
+      "Clarification_Required"
+    ],
+    "outputs": [
+      "Informe de Auditoría de Aseguramiento de Sostenibilidad Calibrado"
+    ],
+    "exceptions": [
+      "Dictámenes de aseguramiento limitado que excluyen expresamente la revisión de faenas en terreno"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ISAE_3000_GAP",
+      "type": "vacio_metodologico",
+      "name": "Brecha de Estandarización de Aseguramiento ISAE 3000",
+      "aliases": [
+        "ISAE 3000 Assurance Consistency Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ISAE_3000_GAP",
+      "predicate": "afecta_confiabilidad_de",
+      "object_id": "ENT_MATERIALITY_SCHEMA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C14-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de profundidad de auditoría",
+      "Aseguramiento Limitado Tradicional": "Revisión documental en oficina central sin visita a cuencas ni contraste con expedientes judiciales.",
+      "Aseguramiento Robusto Propuesto": "Verificación cruzada obligatoria con el Sistema Nacional de Información de Fiscalización Ambiental (SNIFA de la SMA)."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Validador de Memorias CMF",
+      "implication": "BRIDGE debe cruzar automáticamente los borradores de memoria NCG 461 con el portal SNIFA de la SMA para alertar inconsistencias antes de la entrega al auditor externo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_ISAE3000_CONSISTENCY",
+      "description": "Heterogeneidad de criterios periciales de aseguramiento no financiero ISAE 3000 entre firmas auditoras en Chile.",
+      "severity": "media",
+      "status": "documentado"
+    }
+  ],
+  "next_question_ids": [
+    "P05-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

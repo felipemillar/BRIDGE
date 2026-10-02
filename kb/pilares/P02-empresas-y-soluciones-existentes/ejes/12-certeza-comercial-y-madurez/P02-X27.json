@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X27",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Certeza comercial y madurez",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué preguntas de demo deben resolver los 10 comparables prioritarios antes de puntuarles?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los diez comparables prioritarios del mercado (Meltwater, Cision, Signal AI, Quorum, FiscalNote, Broadsight, Open Point, Simply Stakeholders, AlphaSense, Litoralpress) deben responder obligatoriamente cinco preguntas técnicas de demo antes de otorgarles puntaje funcional: 1) Pregunta de Flujo Cruzado: ¿Cómo se convierte una alerta de prensa local en un evento automático dentro de la ficha de un actor político o comunitario sin intervención manual?; 2) Pregunta de Modelo de Datos: ¿Qué identificador único vincula un compromiso de faena (RCA) con una queja vecinal, una audiencia de lobby y un artículo de prensa en su esquema relacional?; 3) Pregunta de Privacidad y RAG: ¿Cómo garantiza que un documento interno confidencial indexado de SharePoint no sea consultado ni sintetizado por voceros o usuarios que no tengan permisos en el IdP corporativo?; 4) Pregunta de Verdad Territorial: ¿Cuál es su catastro certificado de radioemisoras locales monitoreadas en Chile y cuál es su latencia exacta de transcripción y alerta?; 5) Pregunta de Gobernanza de Vocería: ¿Cómo se registra inmutablemente la aprobación digital de un holding statement por parte del abogado corporativo y del Director de Comunicaciones antes de que el vocero lo reciba en su móvil?",
+  "findings": [
+    {
+      "claim_id": "P02-X27-C1",
+      "claim": "El protocolo de auditoría de P02 establece un cuestionario estándar de cinco preguntas técnicas de demo para desmontar las hipérboles de marketing y evaluar objetivamente la madurez de los 10 comparables líderes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "10 Comparables Prioritarios"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Standard Demo Audit Questionnaire for the Top 10 Comparables",
+          "excerpt_short": "Five mandatory technical demonstration questions targeting cross-module flow, relational entity linking, identity-aware RAG, regional ground truth, and spokesperson governance.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:54:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño metodológico validado en el protocolo de auditoría de P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario de 5 preguntas de demo",
+      "Lista de 10 comparables prioritarios",
+      "Criterios de puntuación técnica"
+    ],
+    "actors": [
+      "Comité Evaluador de Demostraciones",
+      "Representante Técnico de Ventas del Proveedor"
+    ],
+    "steps": [
+      "Envío del cuestionario antes de la sesión de demo",
+      "Exigencia de ejecución en vivo en el software sin diapositivas",
+      "Calificación basada en evidencia demostrada"
+    ],
+    "states": [
+      "Cuestionario_Despachado",
+      "Demo_Ejecutada",
+      "Puntuacion_Asignada"
+    ],
+    "outputs": [
+      "Ficha de evaluación técnica comparativa de los 10 líderes"
+    ],
+    "exceptions": [
+      "Proveedores que se niegan a responder preguntas técnicas aduciendo secreto comercial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PROTOCOLO_DEMO_TOP10",
+      "type": "protocolo_auditoria",
+      "name": "Protocolo de Auditoría de Demos Top 10 Comparables",
+      "aliases": [
+        "Top 10 Demo Protocol"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PROTOCOLO_DEMO_TOP10",
+      "predicate": "aplica_criterio_estricto_a",
+      "object_id": "Top_10_Vendors_P02",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X27-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Demostración Guiada por Ventas vs Auditoría de Preguntas Técnicas",
+      "Demostración Guiada por Ventas": "El comercial muestra un camino preconfigurado (happy path) donde todo funciona mágicamente.",
+      "Auditoría de Preguntas Técnicas": "Obliga al software a resolver los casos de frontera: permisos cruzados, radios locales y firmas legales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe construir su producto de modo que sea capaz de responder afirmativamente a las 5 preguntas de demo sin vacilar.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:54:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

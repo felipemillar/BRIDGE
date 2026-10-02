@@ -1,0 +1,147 @@
+{
+  "question_id": "P05-F04",
+  "pilar": "P05",
+  "eje": "Identidad, imagen y reputación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar identidad, imagen y reputación de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar identidad, imagen y reputación de forma estructurada exige un modelo de datos relacional y de grafos con las siguientes especificaciones formales: 1) Variables principales: `construct_type` (Identidad | Imagen | Reputación), `target_entity_id`, `dimension_driver` (Gobernanza, Ciudadanía, Finanzas, Producto, Workplace, Liderazgo, Innovación), `stakeholder_segment` (Reguladores, Inversores, Comunidades, Empleados, Clientes, Medios), `valence_score` (-1.0 a +1.0 o 0 a 100), `confidence_level` (Bajo, Medio, Alto), `valid_time_interval` (inicio y término de la percepción), `transaction_timestamp` y `verification_status`; 2) Categorías: Constructos epistémicos (Declaración corporativa interna, Señal perceptual externa coyuntural, Juicio evaluativo estructural auditado); 3) Relaciones formales: `proyecta_a` (Identidad -> Imagen), `cristaliza_en` (Imagen -> Reputación), `evalua_driver` (Stakeholder -> Dimensión), `posee_brecha_con` (Percepción -> Hecho auditado); 4) Condiciones de consistencia lógica: Ningún valor de imagen inmediata puede sobreescribir la reputación histórica sin un parámetro de decaimiento temporal y volumen suficiente; toda afirmación de identidad debe estar vinculada a un documento auditable del corpus interno; y toda métrica reputacional debe declarar su fuente y método de recolección.",
+  "findings": [
+    {
+      "claim_id": "P05-F04-C1",
+      "claim": "El esquema de representación estructurada de la reputación requiere parametrizar explícitamente el tipo de constructo, el segmento evaluador, el driver evaluado y las marcas bitemporales de validez.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Datos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 1.1 y 7.1: Arquitectura del Motor de Asuntos Corporativos",
+          "excerpt_short": "Exige estructurar Conocimiento Interno (P04), Señales Externas (P03) y Modelos Reputacionales (P05) vinculando identidad, encuadres mediáticos y prominencia de actores con validación bitemporal.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "51cad286-c7a4-424e-a375-87ea9a1b660e",
+          "source_title": "AMEC: Integrated Evaluation Framework (IEF) & Taxonomy",
+          "original_url": "https://amecorg.com/amecframework/",
+          "locator": "Taxonomía AMEC: Inputs, Outputs, Out-takes, Outcomes, Impact",
+          "excerpt_short": "Structured metrics taxonomy requires categorizing organizational goals, target audiences, activity metrics, audience response and final business impacts.",
+          "source_date": "2022-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en la taxonomía unificada de AMEC y la modelación ontológica de reputación corporativa.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ontología de reputación corporativa",
+      "Datos de encuestas y paneles",
+      "Monitoreo de señales externas"
+    ],
+    "actors": [
+      "Ingeniero de Conocimiento",
+      "Arquitecto de Datos",
+      "Analista de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Definición de entidades y atributos ontológicos",
+      "Validación de tipos de datos y restricciones de cardinalidad",
+      "Almacenamiento en grafo de conocimiento"
+    ],
+    "states": [
+      "Ontology_Defined",
+      "Records_Normalized",
+      "Knowledge_Graph_Populated"
+    ],
+    "outputs": [
+      "Esquema estructurado JSON-LD / OWL de constructos reputacionales"
+    ],
+    "exceptions": [
+      "Datos no estructurados provenientes de redes sociales sin identificación de procedencia"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REP_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Ontológico de Reputación",
+      "aliases": [
+        "Reputation Data Model"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REP_SCHEMA",
+      "predicate": "normaliza_entidades_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F04-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Estructuración de datos",
+      "Registro no estructurado tradicional": "Textos libres de minutas de prensa o resúmenes de agencias de PR con sesgo subjetivo.",
+      "Grafo de Conocimiento Estructurado": "Nodos de actores, vínculos causales bitemporales y aristas tipificadas con nivel de confianza verificable."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Base de Datos de Conocimiento",
+      "implication": "BRIDGE debe implementar entidades tipificadas para cada stakeholder, driver y mención, indexadas bitemporalmente para permitir consultas históricas precisas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

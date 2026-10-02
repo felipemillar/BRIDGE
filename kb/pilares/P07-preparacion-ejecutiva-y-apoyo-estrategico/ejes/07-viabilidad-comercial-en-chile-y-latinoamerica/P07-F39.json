@@ -1,0 +1,143 @@
+{
+  "question_id": "P07-F39",
+  "pilar": "P07",
+  "eje": "Viabilidad comercial en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué afirmaciones regulatorias del dossier requieren revisión de vigencia por jurisdicción?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Requieren revisión periódica de vigencia y calibración transfronteriza cuatro cuerpos regulatorios críticos: 1) Ley 20.730 de Lobby (Chile): Aplica exclusivamente a autoridades chilenas; en Perú rige la Ley 28024 de Gestión de Intereses, en Colombia no existe ley de lobby formal y en México rige el Registro de Cabilderos del Congreso; 2) Ley 18.045 de Mercado de Valores y NCG 461 de la CMF: Aplica a emisores en Chile; matrices globales cotizadas en EE.UU. o Europa deben calibrarse con la SEC (Form 10-K) o las directivas CSRD/ESRS; 3) Ley 21.595 de Delitos Económicos y Ambientales (Chile, 2023): Introduce responsabilidad penal corporativa severa en materia ambiental; y 4) Circular SERNAC sobre Greenwashing (Diciembre 2024, Chile): Exige acreditación científica rigurosa para afirmaciones ecológicas publicitarias en territorio nacional.",
+  "findings": [
+    {
+      "claim_id": "P07-F39-C1",
+      "claim": "Los mandatos regulatorios citados en los briefs corporativos deben estar geolocalizados y sometidos a control de vigencia legal para no aplicar normas chilenas a operaciones en otros países de la región.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "cross_border_regulatory_calibration",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 1 (Brecha 2: La Inadecuación de Suites Globales)",
+          "excerpt_short": "Las suites globales fallan por no entender las leyes locales; pero un software desarrollado para Chile arriesga el error inverso si intenta aplicar la Ley 20.730 de Lobby o la NCG 461 de la CMF a operaciones en Perú, Argentina o Colombia. El sistema debe parametrizar las leyes según el país y verificar semestralmente su vigencia legislativa.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 5 (Particularidades de Aplicación en Chile)",
+          "excerpt_short": "El ecosistema regulatorio chileno se caracteriza por la intersección vinculante entre la Ley 20.730 (Lobby), la Ley 18.045 (Valores), la NCG 461 (ESG) y el catastro ambiental de la SMA. Cualquier brief debe señalar explícitamente el alcance jurisdiccional de estas normas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada entre las brechas identificadas en P07_GAPS_AND_VALIDATION y el análisis normativo del Dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_calibracion_jurisdicciones": [
+      {
+        "norma": "Ley 20.730 (Lobby)",
+        "jurisdiccion": "Chile",
+        "equivalente_latam": "Perú (Ley 28024) / Colombia (Sin ley formal) / México (Reglamento Congreso)"
+      },
+      {
+        "norma": "NCG 461 (CMF)",
+        "jurisdiccion": "Chile",
+        "equivalente_latam": "Perú (SMV Reporte Sostenibilidad) / México (CNBV) / Global (CSRD / SEC)"
+      },
+      {
+        "norma": "Ley 21.595 (Delitos Económicos)",
+        "jurisdiccion": "Chile",
+        "equivalente_latam": "Responsabilidad penal corporativa diferenciada por país"
+      },
+      {
+        "norma": "Circular Greenwashing SERNAC",
+        "jurisdiccion": "Chile",
+        "equivalente_latam": "PROFECO (México) / SIC (Colombia) / INDECOPI (Perú)"
+      }
+    ]
+  },
+  "entities": [
+    "Ley 20.730",
+    "Ley 21.595",
+    "NCG 461 CMF",
+    "SERNAC",
+    "P07_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Jurisdicción Operativa",
+      "to": "Matriz de Normas",
+      "type": "determines"
+    },
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "Calibración Transfronteriza",
+      "type": "recommends"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Monitoreo Monojurisdiccional vs Multi-Jurisdiccional BRIDGE",
+      "diferencia": "El enfoque monojurisdiccional comete errores graves al exportar directrices chilenas a filiales en LatAm; BRIDGE calibra los guardrails legales según el país de la faena."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "regulatory_update_cadence": "Revisión semestral del corpus legal por país",
+    "jurisdiction_tagging_accuracy": "100% de briefs etiquetados con código de país (ISO-3166)"
+  },
+  "bridge_implications": "Incorporar en BRIDGE un selector de país que active los módulos normativos pertinentes (Chile, Perú, Colombia, México).",
+  "open_gaps": [
+    "Seguimiento de la reglamentación en trámite de la Ley de Delitos Económicos en Chile para precisar umbrales en directores."
+  ],
+  "next_question_ids": [
+    "P07-F40",
+    "P07-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T06:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

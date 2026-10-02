@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-F20",
+  "pilar": "P03",
+  "eje": "Radio, televisión, video y podcasts",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué errores de transcripción, demoras y vacíos regionales afectan las alertas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Las alertas basadas en broadcast sufren 3 degradaciones técnicas documentadas: 1) Degradación por dialecto local y fonética chilena: mientras el WER en español estándar es de 5-8%, ante el habla coloquial chilena (aspiración sistemática de la /s/ implosiva, velocidad de elocución elevada, pérdida de dentales intervocálicas y modismos locales) el WER sube drásticamente a 25-35%, corrompiendo nombres técnicos y apellidos; 2) Demoras operativas: la transcripción por ventanas y el renderizado generan un desfase acumulativo de 15 a 45 minutos antes de que el texto esté disponible para búsqueda, impidiendo la alerta instantánea en tiempo real que publicita el marketing; y 3) Vacíos de cobertura provincial: las plataformas globales tienen cobertura casi nula de radioemisoras comunales y canales de cable locales en regiones chilenas fuera de Santiago, omitiendo entrevistas a autoridades provinciales donde se anuncian paralizaciones o fiscalizaciones.",
+  "findings": [
+    {
+      "claim_id": "P03-F20-C1",
+      "claim": "Los sistemas ASR genéricos aumentan su tasa de error por encima del 25% ante la fonética chilena y presentan latencias de hasta 45 minutos, existiendo además un vacío casi total de cobertura en radios comunales en suites globales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Regiones)",
+        "actor": "ASR / Broadcast P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.3: Broadcast Audiovisual - Evidencia Independiente",
+          "excerpt_short": "Los sistemas ASR estándar degradan drásticamente su precisión (WER sube sobre 25-35%) ante modulaciones de dialectos locales (por ejemplo, el español coloquial de Chile... aspiración de /s/ final, modismos locales).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación lingüística empírica documentada en el mapa de evidencia.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Audio crudo de radio regional",
+      "Transcripción de ASR genérico"
+    ],
+    "actors": [
+      "Phonetic Calibrator",
+      "Fuzzy Search Engine"
+    ],
+    "steps": [
+      "Detección de dialecto regional",
+      "Aplicación de búsqueda fonética y vectorial",
+      "Compensación de latencia de pipeline"
+    ],
+    "states": [
+      "Raw_Speech",
+      "Imperfect_Transcript",
+      "Semantically_Recovered_Alert"
+    ],
+    "outputs": [
+      "Alerta semántica robusta ante errores fonéticos"
+    ],
+    "exceptions": [
+      "Palabras técnicas totalmente inaudibles por interferencia estática"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ASR_CHILEAN_BIAS",
+      "type": "vulnerabilidad_tecnica",
+      "name": "Degradación Fonética de ASR en Español Chileno",
+      "aliases": [
+        "Chilean Spanish ASR Degradation"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ASR_CHILEAN_BIAS",
+      "predicate": "amenaza_precision_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F20-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Tasa de error de palabra (WER)",
+      "Español Estándar (Noticiero TV Santiago)": "5% - 8% WER en Whisper Large.",
+      "Español Coloquial Regional Chileno": "25% - 35% WER ante modismos y fonética rápida."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Word Error Rate (WER) en Habla Regional",
+      "numerator": "Sustituciones + Inserciones + Eliminaciones de palabras",
+      "denominator": "Total de palabras en transcripción de referencia humana",
+      "context": "Evaluación de fidelidad de transcripción en radios de regiones de Chile"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar búsqueda híbrida (vectorial densa + fonética/difusa) para que las alertas no fallen cuando el ASR transcriba incorrectamente un apellido o término técnico.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

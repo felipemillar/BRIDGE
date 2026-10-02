@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-F33",
+  "pilar": "P09",
+  "eje": "Registros públicos y obligaciones",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué límites del corpus impiden dar asesoría legal desde estas fuentes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus documental y la arquitectura del sistema BRIDGE presentan límites epistemológicos y normativos insoslayables que PROHÍBEN prestar asesoría legal formal: 1) Naturaleza Descriptiva e Informativa: Los documentos catalogados corresponden a normas legales públicas (BCN Chile), informes sectoriales (OCDE, ICMM, IFC) y dossiers de síntesis, diseñados para inteligencia corporativa y trazabilidad operativa, no para dictaminar viabilidad jurídica; 2) Ausencia de Jurisprudencia Judicial Exhaustiva: El corpus no contiene el repertorio completo de sentencias de la Corte Suprema, Tribunales Ambientales o dictámenes de la Contraloría General de la República (CGR), por lo que cualquier inferencia jurisprudencial carece de certeza jurídica plena; 3) Necesidad de Criterio Letrado: La interpretación de normas sancionatorias (e.g., multas SMA de hasta 10.000 UTA bajo LO-SMA) requiere patrocinio de abogado habilitado considerando las circunstancias del caso concreto; y 4) Cláusula de Exención de Responsabilidad: El sistema debe desplegar un aviso mandatorio estableciendo que los análisis de BRIDGE son herramientas de apoyo de gestión y no sustituyen el dictamen de la gerencia legal o asesores externos.",
+  "findings": [
+    {
+      "claim_id": "P09-F33-C1",
+      "claim": "El sistema BRIDGE y su corpus documental no proporcionan asesoría legal; su propósito es estrictamente la gestión de información, trazabilidad de relaciones y monitoreo de compromisos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "legal_disclaimer_and_corpus_limitations",
+      "evidence": [
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R4 'Límite de Asesoría Legal y Carácter de Herramienta de Gestión'",
+          "retrieved_at": null,
+          "excerpt_short": "Se establece taxativamente que el sistema de memoria de relaciones es una herramienta de gestión operativa y compliance corporativo. Ningún output, reporte o sugerencia del sistema constituye dictamen o asesoría jurídica. La evaluación de responsabilidades legales o defensas sancionatorias compete exclusivamente a abogados habilitados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_OECD_SCOPE_CORRECTION",
+          "source_id": "42eb25f9-bb90-49b6-82d5-32220b2e6f7c",
+          "locator": "Sección 'Límites de Interpretación Normativa'",
+          "retrieved_at": null,
+          "excerpt_short": "Los documentos internacionales y comparativos son marcos de referencia de mejores prácticas. No reemplazan la ley nacional ni habilitan a un software a emitir juicios de legalidad o cumplimiento penal/administrativo vinculante.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia canónica rectora de P09_VERIFICATION_CORRECTIONS.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consultas del usuario",
+      "Generación de reportes ejecutivos",
+      "Exportación de expedientes"
+    ],
+    "actors": [
+      "Motor BRIDGE",
+      "Oficial de Cumplimiento Legal",
+      "Usuario Corporativo"
+    ],
+    "steps": [
+      "Detección de intenciones de consulta legal",
+      "Inclusión de banner legal en todos los reportes emitidos",
+      "Bloqueo de respuestas prescriptivas sobre nulidad de resoluciones o litigios en curso",
+      "Sugerencia de escalamiento a la Gerencia Legal"
+    ],
+    "states": [
+      "Consulta Procesada",
+      "Disclaimer Legal Añadido",
+      "Reporte Emitido"
+    ],
+    "outputs": [
+      "Reporte corporativo con cláusula formal de exención de asesoría legal"
+    ],
+    "exceptions": [
+      "Ninguna; el disclaimer legal es universal e ineludible"
+    ]
+  },
+  "entities": [
+    "Disclaimer Legal Mandatorio",
+    "P09_VERIFICATION_CORRECTIONS",
+    "Gerencia Legal",
+    "Ley Orgánica SMA",
+    "CGR Chile"
+  ],
+  "relations": [
+    {
+      "from": "Sistema BRIDGE",
+      "to": "Asesoría Legal Formal",
+      "type": "EXCLUDES_BY_DESIGN"
+    },
+    {
+      "from": "Reportes BRIDGE",
+      "to": "Disclaimer Legal",
+      "type": "MANDATORILY_INCLUDES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Software de gestión (SRM) vs Firma de abogados externa",
+      "diferencia": "El SRM almacena evidencias y fechas; la firma de abogados analiza estrategias procesales y asume responsabilidad fiduciaria."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "legal_disclaimer_display_rate": "100% de reportes y pantallas de compliance",
+    "statutory_legal_advice_capability": "0% (expresamente excluida)"
+  },
+  "bridge_implications": "Insertar un pie de página permanente en reportes de BRIDGE: 'Herramienta de gestión corporativa. No constituye asesoría jurídica formal'.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F34",
+    "P09-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

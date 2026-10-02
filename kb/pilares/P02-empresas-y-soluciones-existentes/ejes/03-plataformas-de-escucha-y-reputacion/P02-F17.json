@@ -1,0 +1,133 @@
+{
+  "question_id": "P02-F17",
+  "pilar": "P02",
+  "eje": "Plataformas de escucha y reputación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre plataformas de escucha y reputación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cada hecho está sustentado por fuentes oficiales del cuaderno P02 con fechas y pasajes verificables: 1) Burson & Limbik: bursonglobal.com/newsroom/limbik/ (adquisición 12 agosto 2026, suite Decipher para credibilidad de audiencia); 2) Signal AI & Memo: signal-ai.com/insights/post/verified-readership/ (adquisición/anuncio 20 abril 2026, métricas de lectura real verificada); 3) FGS Global & WPP: SEC Form 6-K filing a5017o.htm (3 diciembre 2024, cierre de venta mayoritaria de WPP a Kite Bidco Inc. de KKR); 4) Cision & Brandwatch: comunicado PR Newswire (1 junio 2021, cierre de adquisición por USD 450M); 5) Talkwalker & Hootsuite: adquisición en abril 2024; 6) Onclusive: constituida en enero 2022 por STG (Kantar Rep Intelligence + PRgloo + Digimind); 7) AlphaSense Liderazgo: Forrester Research Wave Q2 2025 (único líder en Market & Competitive Intelligence); 8) Denominador y fechas de corte: fe de erratas canónica 00_P02_GLOBAL_READ_ME_AND_ERRATA (1 octubre 2026, denominador reconciliado en 70 proveedores independientes).",
+  "findings": [
+    {
+      "claim_id": "P02-F17-C1",
+      "claim": "La trazabilidad de los hitos societarios y tecnológicos del mercado de escucha se sustenta en fuentes primarias corporativas y filings de la SEC con fechas comprobadas entre junio de 2021 y octubre de 2026.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Auditoría de Fuentes P02"
+      },
+      "evidence": [
+        {
+          "source_id": "6fa0dfd1-5192-4b3d-8ed7-20c44b7d4dc8",
+          "source_title": "AlphaSense Forrester Wave Market and Competitive Intelligence Leader",
+          "original_url": "https://www.alpha-sense.com/press/alphasense-named-the-only-leader-in-market-and-competitive-intelligence-platforms/",
+          "locator": "Forrester Research Evaluation Q2 2025",
+          "excerpt_short": "AlphaSense named the only leader in Market and Competitive Intelligence Platforms by Forrester.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:31:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de notas de prensa y evaluaciones de firmas independientes.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registros de fuentes del cuaderno P02",
+      "Manifiesto fuentes/P02.json"
+    ],
+    "actors": [
+      "Auditor Epistémico",
+      "Sistema de Verificación"
+    ],
+    "steps": [
+      "Cotejo de identificadores de fuente",
+      "Validación de fechas de corte",
+      "Verificación de resolubilidad de URLs",
+      "Consolidación en el índice"
+    ],
+    "states": [
+      "Fuente_Verificada",
+      "Metadatos_Auditados",
+      "Trazabilidad_Consolidada"
+    ],
+    "outputs": [
+      "Cuadro de Trazabilidad de Fuentes de Escucha"
+    ],
+    "exceptions": [
+      "Fuentes con cambios de enlaces URL externos (se conservan títulos y extractos fidedignos)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "REG_FUENTES_ESCUCHA",
+      "type": "registro_documental",
+      "name": "Registro de Fuentes de Plataformas de Escucha",
+      "aliases": [
+        "Sensing Sources Manifest"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "REG_FUENTES_ESCUCHA",
+      "predicate": "certifica_trazabilidad_de",
+      "object_id": "Plataformas_Escucha_P02",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F17-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Trazabilidad Formal vs Supuestos no Comprobados",
+      "Supuesto no Comprobado": "Asumir que Talkwalker es un proveedor independiente en 2026.",
+      "Trazabilidad Formal": "Adquirida por Hootsuite en abril de 2024, operando bajo su estructura societaria."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Mantener actualizadas las fechas de M&A de la competencia para no presentar un panorama de mercado obsoleto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F18",
+    "P02-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:31:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

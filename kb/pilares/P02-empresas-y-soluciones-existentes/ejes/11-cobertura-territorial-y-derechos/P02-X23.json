@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-X23",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Cobertura territorial y derechos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre cobertura territorial y derechos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan sobre la legalidad de almacenar y reutilizar contenidos periodísticos sin licenciamiento expreso: 1) Discrepancia: Fichas comerciales de software afirman que 'el cliente es dueño de toda la información monitoreada en la plataforma y puede exportarla libremente a sus repositorios corporativos'; síntesis internas tempranas asumían que los datos de clipping podían indexarse indefinidamente en bases RAG internas; 2) Versión que prevalece: '00_P02_GLOBAL_READ_ME_AND_ERRATA' y la adenda regional de integración rectifican esta posición: las leyes de propiedad intelectual y los contratos de proveedores de clipping estipulan que los artículos de prensa están sujetos a licencias de uso temporal y lectura interna, prohibiendo su redistribución o entrenamiento permanente de modelos comerciales sin pagar cánones específicos. Prevalece la regla de que el software debe almacenar representaciones semánticas (embeddings y metadatos) y purgar los textos protegidos para resguardar la legalidad de la operación.",
+  "findings": [
+    {
+      "claim_id": "P02-X23-C1",
+      "claim": "La errata editorial y la adenda legal prevalecen sobre el marketing de los vendors, confirmando que los textos de prensa no pueden almacenarse indefinidamente sin contratos expresos de derechos de autor.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Auditoría Legal P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 7: Copyright and Full-Text Retention Precedence",
+          "excerpt_short": "Vendor claims of unlimited full-text data ownership are legally invalid; statutory media licensing agreements restrict long-term storage and cross-border redistribution.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de directivas de precedencia legal y editorial.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Términos de servicio de plataformas de clipping",
+      "Legislación de propiedad intelectual",
+      "Directiva de errata P02"
+    ],
+    "actors": [
+      "Auditor Legal",
+      "Arquitecto de Datos"
+    ],
+    "steps": [
+      "Revisión de términos contractuales de retención",
+      "Rectificación de afirmaciones sobre propiedad de datos",
+      "Alineación de especificaciones técnicas"
+    ],
+    "states": [
+      "Terminos_Revisados",
+      "Discrepancia_Zanjada",
+      "Especificacion_Alineada"
+    ],
+    "outputs": [
+      "Política canónica de retención de contenidos en BRIDGE"
+    ],
+    "exceptions": [
+      "Medios que autorizan expresamente la republicación bajo licencias Creative Commons"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_POLITICA_RETENCION",
+      "type": "politica_datos",
+      "name": "Política Canónica de Retención y Copyright",
+      "aliases": [
+        "Copyright Retention Policy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_POLITICA_RETENCION",
+      "predicate": "restringe_almacenamiento_de",
+      "object_id": "Textos_Prensa_Completos",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X23-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Promesa de Ventas Irresponsable vs Arquitectura Legal Segura",
+      "Promesa Irresponsable": "'Toda la información es suya para siempre y puede hacer lo que quiera con ella'.",
+      "Arquitectura Segura": "'El software gestiona el uso conforme a derecho, purgando textos íntegros y reteniendo inteligencia semántica'."
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "P02-CONT-08",
+      "description": "Discrepancia entre afirmaciones comerciales de propiedad irrestricta de datos de prensa y los límites reales de la ley de derechos de autor.",
+      "resolution": "Prevalece la errata 00_P02_GLOBAL_READ_ME_AND_ERRATA: retención limitada y obligatoriedad de licencias."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE se posiciona como una plataforma responsable y compliant, evitando trasladar riesgos legales de copyright a sus clientes.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:52:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

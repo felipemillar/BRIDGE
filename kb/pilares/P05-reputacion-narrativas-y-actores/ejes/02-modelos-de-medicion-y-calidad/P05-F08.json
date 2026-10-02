@@ -1,0 +1,149 @@
+{
+  "question_id": "P05-F08",
+  "pilar": "P05",
+  "eje": "Modelos de medición y calidad",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué sesgos aparecen por muestreo, idioma, canal, tamaño de audiencia o período?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis crítico del corpus documenta cinco sesgos metodológicos sistemáticos en la medición de reputación: 1) Sesgo de notoriedad y recordación de marca (Brand Recall): En encuestas generales (RepTrak, Cadem), las empresas de gran tamaño o consumo masivo con altos presupuestos publicitarios rankean artificialmente alto por pura recordación, ocultando riesgos graves de gobernanza; 2) Sesgo elitista de panel corporativo: En modelos como Merco, el filtro inicial de directivos (empresas > US$ 30M) favorece a conglomerados tradicionales e invisibiliza a empresas disruptivas, B2B o con alta conflictividad territorial; 3) Sesgo de canal e hiperactividad digital (Social Listening): Las herramientas de escucha (Brandwatch, Meltwater) están distorsionadas por minorías vocales hiperactivas, indignación algorítmica y bots, produciendo falsos positivos de crisis que no permean en la ciudadanía silenciosa ni en los reguladores; 4) Sesgo de idioma y contexto cultural: Los modelos de NLP y análisis de sentimiento tradicionales fallan ante la ironía, el sarcasmo y los modismos locales del español chileno (chilenismos), malinterpretando interacciones; y 5) Sesgo de período y desfase temporal: Las encuestas anuales sufren desfase frente a contingencias inmediatas, mientras que el monitoreo digital en tiempo real reacciona a modas efímeras sin valor predictivo estructural.",
+  "findings": [
+    {
+      "claim_id": "P05-F08-C1",
+      "claim": "Cada canal y técnica de recolección introduce distorsiones estructurales que exigen correcciones de calibración muestral y contextual antes de orientar decisiones ejecutivas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Internacional",
+        "actor": "Analistas de Datos de Reputación"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2: Limitaciones Metodológicas y Sesgos de las Herramientas Actuales",
+          "excerpt_short": "Tabla de sesgos: NLP sesgo léxico/cultural; Social Listening sesgo de minorías ruidosas; Encuestas sesgo de deseabilidad y Brand Recall; Métricas de alcance supuesto de exposición lineal.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 1: Eje 2, Hallazgo 2.3 (La falacia Sentimiento = Reputación)",
+          "excerpt_short": "El volumen y polaridad en redes sociales está sobrerrepresentado por minorías vocales hiperactivas y bots, sin reflejar la postura de reguladores, clientes mayoritarios ni inversores.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Sesgos rigurosamente catalogados en la literatura psicométrica y en el dossier de gaps del pilar P05.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Muestras brutas de redes sociales",
+      "Bases de datos de encuestas",
+      "Paneles de opinión"
+    ],
+    "actors": [
+      "Científico de Datos",
+      "Metodólogo de Encuestas",
+      "Analista de Inteligencia"
+    ],
+    "steps": [
+      "Detección de cuentas anómalas y bots en redes",
+      "Ponderación demográfica por censo",
+      "Ajuste por modelos de lenguaje afinados al dialecto local (BETO)"
+    ],
+    "states": [
+      "Raw_Signals_Loaded",
+      "Biases_Identified",
+      "Calibrated_Dataset_Produced"
+    ],
+    "outputs": [
+      "Conjunto de datos calibrado con advertencias de sesgo explícitas"
+    ],
+    "exceptions": [
+      "Eventos de saturación viral con brigadas coordinadas de astroturfing"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BIAS_CATALOG",
+      "type": "catalogo_metodologico",
+      "name": "Catálogo de Sesgos Muestrales y de Canal",
+      "aliases": [
+        "Measurement Biases"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BIAS_CATALOG",
+      "predicate": "afecta_mediciones_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F08-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Naturaleza de la distorsión",
+      "Sesgo de Redes Sociales": "Sobrerrepresenta la indignación y la polarización extrema de nichos digitales activos.",
+      "Sesgo de Encuestas Anuales": "Sobrerrepresenta la recordación marcaria masiva y diluye la criticidad de incidentes operacionales recientes."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Filtro de Desintoxicación y Calibración",
+      "implication": "BRIDGE debe acompañar todo gráfico de percepción con notas de sesgo metodológico, indicando el tipo de informante, canal y representatividad.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

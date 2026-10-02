@@ -1,0 +1,135 @@
+{
+  "question_id": "P02-X22",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Cobertura territorial y derechos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra cobertura territorial y derechos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso de prueba concreto y verificable: 'Gestión de derechos de autor y soberanía de datos en el monitoreo de un consorcio minero canadiense que opera en la Región de Antofagasta (Chile)'. Entradas: 1) Casa matriz en Vancouver exige consolidar todas las noticias de prensa en su nube global alojada en AWS Virginia (EE. UU.); 2) Gerencia de Asuntos Corporativos en Santiago necesita monitorear 25 radioemisoras comunales de Calama, Tocopilla y Antofagasta y 4 diarios impresos locales; 3) Auditoría legal de la Asociación Nacional de la Prensa (ANP) y directiva de la Ley de Protección de Datos de Chile: prohibición de exportar expedientes laborales de comunidades sin consentimiento, y obligación de contar con licencia comercial para la redistribución internacional de recortes periodísticos chilenos. Proceso: El sistema aplica la regla de arquitectura territorial de BRIDGE: a) Enlaza la ingesta local a través del conector certificado de Litoralpress con derechos de reproducción pagados; b) Configura un repositorio cifrado en la región AWS Santiago (Chile) para todos los datos sensibles y actas comunitarias; c) Despacha a la sede de Vancouver exclusivamente resúmenes analíticos y métricas agregadas (sin datos personales de dirigentes ni textos periodísticos íntegros sujetos a canon transfronterizo). Resultado esperado: Cumplimiento del 100% de los estándares legales de copyright chileno y soberanía de datos, eliminando el riesgo de demandas por propiedad intelectual y multas regulatorias de privacidad.",
+  "findings": [
+    {
+      "claim_id": "P02-X22-C1",
+      "claim": "La arquitectura que separa la ingesta territorial local con licencias de medios del despacho de resúmenes analíticos hacia la casa matriz resuelve integralmente el conflicto entre soberanía de datos y monitoreo corporativo global.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Canadá",
+        "actor": "Caso Operativo Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "5556e455-7c2c-458c-bcad-e0910d9ccc4e",
+          "source_title": "P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1",
+          "original_url": null,
+          "locator": "Use Case: Cross-Border Corporate Data Sovereignty Architecture",
+          "excerpt_short": "Demonstrates architectural compliance by partitioning local licensed data within domestic cloud boundaries while exporting aggregated analytics to overseas headquarters.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de trabajo operacional documentado y replicable.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Requerimiento de reporte de casa matriz",
+      "Restricciones de copyright de prensa chilena",
+      "Marco de privacidad de datos"
+    ],
+    "actors": [
+      "Gerente de Asuntos Corporativos Chile",
+      "Director Legal de Casa Matriz",
+      "Arquitecto Cloud"
+    ],
+    "steps": [
+      "Particionado de datos en tenant local chileno",
+      "Generación de resúmenes de inteligencia autorizados",
+      "Transmisión segura cifrada a casa matriz"
+    ],
+    "states": [
+      "Datos_Locales_Retenidos",
+      "Resumenes_Generados",
+      "Transmision_Conforme"
+    ],
+    "outputs": [
+      "Reporte global de inteligencia sin contingencias legales"
+    ],
+    "exceptions": [
+      "Auditoría imprevista de la sociedad de gestión de derechos de prensa"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_SOBERANIA_ANTOFAGASTA",
+      "type": "caso_prueba",
+      "name": "Caso Prueba Soberanía de Datos Minería Antofagasta",
+      "aliases": [
+        "Caso Antofagasta P02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_SOBERANIA_ANTOFAGASTA",
+      "predicate": "valida_diseno_de",
+      "object_id": "Particionado_Territorial_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X22-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Exportación Masiva Ilegal vs Particionado Territorial de BRIDGE",
+      "Exportación Masiva Ilegal": "Envía PDFs y datos de dirigentes a servidores en EE. UU.; infringe leyes de copyright y privacidad.",
+      "Particionado Territorial": "Almacena los datos en Chile bajo licencia y envía sólo insights cuantitativos al extranjero."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Este caso valida el diseño de tenencia particionada de BRIDGE como argumento comercial clave para multinacionales en América Latina.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:52:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

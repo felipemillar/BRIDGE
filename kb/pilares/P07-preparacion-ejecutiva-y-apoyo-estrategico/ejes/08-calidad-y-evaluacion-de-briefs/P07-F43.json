@@ -1,0 +1,138 @@
+{
+  "question_id": "P07-F43",
+  "pilar": "P07",
+  "eje": "Calidad y evaluación de briefs",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué rúbrica humana mide utilidad, exactitud, suficiencia y tono de una preparación ejecutiva?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La evaluación se realiza mediante una rúbrica multidimensional estandarizada en escala de 1 a 5 puntos (o 0 a 100%) aplicada a cuatro dimensiones críticas: 1) Utilidad y Accionabilidad (¿Permite tomar decisiones inmediatas, fija líneas rojas claras y asigna responsables concretos en menos de 3 minutos de lectura?); 2) Exactitud y Anclaje Fáctico (Grounding Index ≥ 95%: ¿Cada cifra, fecha y compromiso cuenta con respaldo documental auditable sin alucinaciones?); 3) Suficiencia y Relevancia (¿Contiene toda la información crítica del radar de 24h y el perfil del interlocutor sin saturar al directivo con clipping irrelevante?); y 4) Calibración de Tono y Neutralidad (¿Mantiene un tono institucional sobrio, objetivo y libre de sesgos complacientes o alarmismos infundados?). Un score compuesto inferior a 85 puntos invalida el despacho del brief.",
+  "findings": [
+    {
+      "claim_id": "P07-F43-C1",
+      "claim": "La calidad de los briefs ejecutivos debe medirse mediante una rúbrica estandarizada que pondere la utilidad para la toma de decisiones, la fidelidad documental, la concisión y la neutralidad del tono.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "brief_evaluation_rubric",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 7 (Criterios de Calidad, Utilidad y Trazabilidad)",
+          "excerpt_short": "Rúbrica de Evaluación del Apoyo Estratégico: 1) Grounding Index ≥ 95% (trazabilidad probatoria estricta); 2) Razón de Compresión (< 3 minutos de lectura ejecutiva); 3) Calibración de Tono (cero adulación ni sesgo de complacencia); 4) Accionabilidad (toda alerta concluye con acción, responsable y plazo); y 5) Cumplimiento Regulatorio (verificación de Ley 18.045 y 20.730).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "AMEC: Integrated Evaluation Framework for Public Affairs",
+          "source_id": "634ebc1c-dd54-453f-8187-2975050e8760",
+          "locator": "Sección 'Executive Decision Support Assessment', p. 10-14",
+          "excerpt_short": "Quality evaluation in executive intelligence must move beyond reading speed to assess decision utility: whether the briefing enabled leadership to anticipate adversarial framing and maintain message coherence under scrutiny.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia directa entre el marco de evaluación de AMEC y la rúbrica cuantitativa del dossier técnico P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "rubrica_evaluacion_brief": {
+      "Dimension_Utilidad": {
+        "peso": 0.3,
+        "criterio": "Claridad de línea roja, objetivos alcanzables y tareas concretas asignadas."
+      },
+      "Dimension_Exactitud": {
+        "peso": 0.3,
+        "criterio": "Grounding Index >= 95%, cero discrepancias con balances y memorias CMF."
+      },
+      "Dimension_Suficiencia": {
+        "peso": 0.2,
+        "criterio": "Lectura frontal en < 60 segundos, anexo navegable a 1 clic, sin omisión de riesgos críticos."
+      },
+      "Dimension_Tono": {
+        "peso": 0.2,
+        "criterio": "Neutralidad sobria, ausencia de eufemismos que oculten gravedad y respeto intercultural."
+      }
+    }
+  },
+  "entities": [
+    "AMEC Framework",
+    "Grounding Index",
+    "Rúbrica Multidimensional",
+    "Línea Roja",
+    "P07_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Rúbrica Multidimensional",
+      "to": "Brief Ejecutivo",
+      "type": "scores"
+    },
+    {
+      "from": "Grounding Index",
+      "to": "Exactitud",
+      "type": "measures"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Evaluación por Impresiones Subjetivas vs Rúbrica Estandarizada",
+      "diferencia": "La evaluación subjetiva varía según el estado de ánimo del revisor; la rúbrica objetiva pondera con métricas reproducibles el valor del brief."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "minimum_acceptable_score": ">= 85 / 100 puntos",
+    "grounding_index_threshold": ">= 95% de afirmaciones con cita exacta"
+  },
+  "bridge_implications": "Integrar un módulo de autoevaluación algorítmica en BRIDGE que califique el brief con esta rúbrica antes de enviarlo a la cadena de revisión humana.",
+  "open_gaps": [
+    "Medición empírica de la correlación entre scores altos de la rúbrica y la satisfacción directa reportada por los directores."
+  ],
+  "next_question_ids": [
+    "P07-F44",
+    "P07-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

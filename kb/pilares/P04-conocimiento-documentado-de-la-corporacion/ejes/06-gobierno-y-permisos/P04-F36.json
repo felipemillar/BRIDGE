@@ -1,0 +1,134 @@
+{
+  "question_id": "P04-F36",
+  "pilar": "P04",
+  "eje": "Gobierno y permisos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra gobierno y permisos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Canónico: Control de embargo y prevención de fuga de información privilegiada ante un Hecho Esencial de adquisición. Entradas documentadas: 1) Documento en preparación: 'Borrador de Hecho Esencial: Adquisición de Activos de Litio' (Clasificación: `Bajo Embargo`, `embargo_timestamp: '2026-10-15T09:00:00-03:00'`, accesible únicamente para el rol `Mesa_Directorio_Legal`); 2) Usuario A: Director de Asuntos Corporativos (rol `Mesa_Directorio_Legal`, autorizado); 3) Usuario B: Analista de Prensa de Filial (rol `Comunicaciones_Operativas`, no autorizado); 4) Consulta idéntica ejecutada por ambos usuarios a las 08:30 del 15 de octubre: '¿Cuál es el estado de la negociación de nuevos activos de litio?'. Proceso en el sistema: Para el Usuario A, el evaluador ABAC confirma membresía en rol autorizado y recupera el borrador bajo embargo, entregando los detalles de la adquisición con advertencia de confidencialidad estricta. Para el Usuario B, el pre-retrieval filter excluye el documento por el predicado de embargo; el sistema recupera únicamente comunicados públicos antiguos y responde: 'No existen anuncios oficiales vigentes sobre nuevas adquisiciones de litio en el corpus corporativo'. Resultado esperado: Cero fuga de información privilegiada (Ley 18.045), cumpliendo con 100% de aislamiento de seguridad.",
+  "findings": [
+    {
+      "claim_id": "P04-F36-C1",
+      "claim": "El caso empírico de embargo demuestra la efectividad del filtrado booleano pre-retrieval para garantizar que un analista no acreditado no pueda extraer información privilegiada bajo ninguna circunstancia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Caso Embargo Hecho Esencial"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Fase 5 y Sección 5: Matriz de Criterios (Dimensión 5)",
+          "excerpt_short": "Si un documento está bajo embargo (e.g. Hecho Esencial en preparación), queda completamente invisible para voceros no autorizados. Tasa de no-filtración: 100.0%.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso de prueba de seguridad formalmente modelado en el dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta de Usuario B no acreditado",
+      "Documento bajo embargo en base"
+    ],
+    "actors": [
+      "ABAC Filter",
+      "Retrieval Engine",
+      "Response Generator"
+    ],
+    "steps": [
+      "Evaluación de token del Usuario B",
+      "Exclusión del documento embargado en el índice vectorial",
+      "Generación de respuesta con corpus público"
+    ],
+    "states": [
+      "Unauthorized_Attempt",
+      "Filtered_Silently",
+      "Safe_Response_Generated"
+    ],
+    "outputs": [
+      "Respuesta segura sin revelar la existencia del documento embargado"
+    ],
+    "exceptions": [
+      "Intento de inyección de prompt para saltarse el filtro"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASE_EMBARGO_TEST",
+      "type": "caso_empirico",
+      "name": "Caso de Prueba de Embargo e Información Privilegiada",
+      "aliases": [
+        "Embargo Stress Test Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASE_EMBARGO_TEST",
+      "predicate": "valida_seguridad_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F36-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Resultado de seguridad",
+      "Sistema sin pre-retrieval ABAC": "El LLM filtra accidentalmente que 'hay un hecho esencial preparándose pero es secreto'.",
+      "Sistema con pre-retrieval ABAC": "El documento ni siquiera existe para el motor de búsqueda del usuario no autorizado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe pasar esta prueba adversarial de seguridad antes de autorizarse su despliegue en entornos corporativos reales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F37"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

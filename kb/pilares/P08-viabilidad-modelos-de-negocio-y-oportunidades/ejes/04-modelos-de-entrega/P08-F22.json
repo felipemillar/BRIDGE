@@ -1,0 +1,150 @@
+{
+  "question_id": "P08-F22",
+  "pilar": "P08",
+  "eje": "Modelos de entrega",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar modelos de entrega de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de los modelos de entrega requiere modelar: 1) Variables de Operación (tiempo de generación algorítmica, tiempo de revisión humana, ratio cliente/analista, costo marginal por reporte emitido); 2) Categorías de Servicio (Capa de Cómputo/Algorítmica, Capa de Verificación Experta HITL, Capa de Relación Estratégica Ejecutiva); 3) Relaciones de Flujo (disparo automático de pipeline, encolamiento a analista, validación de referencias, despacho final); y 4) Condiciones de Garantía (SLA de entrega < 2h, disponibilidad 24/7 en contingencias, protocolo de sustitución de analista por vacaciones o licencias, auditoría de trazabilidad de cambios efectuados por el humano sobre el borrador de la IA).",
+  "findings": [
+    {
+      "claim_id": "P08-F22-C1",
+      "claim": "El esquema estructurado del modelo de entrega debe parametrizar la orquestación entre la latencia de las APIs de cómputo y el tiempo de respuesta del equipo humano asignado.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "delivery_model_structure",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 4.4 'Arquitectura Estructurada del Flujo de Entrega Tech-Enabled'",
+          "excerpt_short": "La ontología del servicio debe modelar las entidades: 'Pipeline_Ingesta', 'Borrador_Sintesis', 'Cola_HITL', 'Certificacion_Analista' y 'SLA_Entrega'. Cada instancia de brief generado registra el tiempo de cómputo, el tiempo de lectura humana y el diff de texto entre la salida del modelo de lenguaje y el producto final entregado al CCO.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_EVIDENCE_MAP",
+          "source_id": "1323b514-5154-49f7-b105-42766ddbcaf5",
+          "locator": "Eje 4: Modelos de Entrega - Definición de Parámetros de Operación",
+          "excerpt_short": "Parámetros obligatorios: 'latency_target_minutes', 'human_review_required_flag', 'analyst_assignment_id', 'compliance_audit_log'.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño ontológico riguroso y consistente en la documentación técnica de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Configuración de SLA",
+      "Parámetros de cola HITL",
+      "Registro de analistas disponibles"
+    ],
+    "actors": [
+      "Orquestador Backend",
+      "Supervisor de Operaciones",
+      "Analistas de Turno"
+    ],
+    "steps": [
+      "Recepción de evento",
+      "Ejecución de pipeline algorítmico",
+      "Asignación dinámica de analista disponible",
+      "Auditoría del diff y registro en log"
+    ],
+    "states": [
+      "Evento Recibido",
+      "Borrador en Cola",
+      "En Revisión",
+      "Firmado y Despachado"
+    ],
+    "outputs": [
+      "Log de trazabilidad humana",
+      "Brief despachado"
+    ],
+    "exceptions": [
+      "Superación de tiempo máximo de cola (60 min) que active alerta a supervisor"
+    ]
+  },
+  "entities": [
+    "Orquestador Backend",
+    "Cola HITL",
+    "Diff de Texto",
+    "SLA de Entrega",
+    "Log de Trazabilidad"
+  ],
+  "relations": [
+    {
+      "from": "Pipeline Algorítmico",
+      "to": "Cola HITL",
+      "type": "enqueues"
+    },
+    {
+      "from": "Analista de Turno",
+      "to": "Firma y Despacho",
+      "type": "authorizes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Caja negra de IA vs Registro auditable de cambios humanos",
+      "diferencia": "BRIDGE guarda el registro exacto de qué corrigió el analista sobre la propuesta del modelo, permitiendo retroalimentar y auditar la calidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "max_queue_wait_time": "< 30 minutos",
+    "diff_audit_compliance": "100% de los cambios registrados en base de datos"
+  },
+  "bridge_implications": "Implementar un subsistema de telemetría operativa en BRIDGE que mida el tiempo exacto que cada analista dedica a validar cada brief.",
+  "open_gaps": [
+    "Definir el esquema de turnos para cobertura de fines de semana y festivos en emergencias mineras."
+  ],
+  "next_question_ids": [
+    "P08-F23",
+    "P08-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

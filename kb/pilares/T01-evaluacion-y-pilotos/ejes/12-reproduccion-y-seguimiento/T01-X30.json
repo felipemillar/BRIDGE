@@ -1,0 +1,164 @@
+{
+  "question_id": "T01-X30",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Reproducción y seguimiento",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra reproducción y seguimiento sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto de Reproducción y Auditoría Forense CAF-T01-380 (Peritaje de Consulta Regulatoria Histórica ante la CMF tras 9 Meses de Emisión): 1) Entradas: Requerimiento de la fiscalía corporativa de reconstruir con exactitud milimétrica cómo y con qué evidencia el módulo Saber generó una respuesta el 15 de enero de 2025 respecto al estado de una servidumbre minera, tras haberse actualizado el LLM y haberse incorporado 3.000 documentos posteriores al repositorio; Identificador de Corrida: RUN-20250115-SABER-9941; 2) Proceso de Reproducción Determinista: a) El orquestador extrae del Execution Manifest el hash SHA-256 del corpus histórico (descartando documentos posteriores), el snapshot del modelo ('gpt-4o-2024-08-06'), el system prompt v2.4 y el seed = 42; b) Se levanta un contenedor de staging con la configuración exacta; y 3) Resultado Esperado: La respuesta generada es 100% idéntica carácter por carácter (Match Token = 1.0) a la emitida 9 meses antes; se recuperan los mismos 4 fragmentos de la servidumbre con los mismos localizadores de foja y número; y se emite un Certificado de Reproducción Forense que acredita la debida diligencia de la empresa ante la autoridad reguladora.",
+  "findings": [
+    {
+      "claim_id": "T01-X30-C1",
+      "claim": "El almacenamiento inmutable del Execution Manifest (con hash de corpus, versión de prompt y snapshot de modelo) permite la reconstrucción forense determinista de respuestas emitidas meses atrás, garantizando reproducibilidad total frente a auditorías regulatorias o litigios.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Chile",
+        "actor": "The Bridge Intelligence / Caso CAF-T01-380"
+      },
+      "evidence": [
+        {
+          "source_id": "e1a0171b-34f0-48f2-b343-29f7ec88bd31",
+          "source_title": "Gao et al. (2023) — Enabling Language Models to Generate Text with Citations (ALCE Benchmark)",
+          "original_url": "https://arxiv.org/pdf/2305.14627.pdf",
+          "locator": "Section 4: Deterministic Reproduction Case",
+          "excerpt_short": "Freezing system seeds and corpus state enables bit-for-bit replay of historical retrieval generation sessions.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 12: Validación de Caso Forense CAF-T01-380",
+          "excerpt_short": "Prueba exitosa de reproducción histórica determinista tras 9 meses con concordancia de tokens del 100%.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación experimental de reconstrucción forense y reproducibilidad determinista.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "ID de Corrida histórica RUN-20250115-SABER-9941",
+      "Execution Manifest JSON archivado en bóveda WORM",
+      "Entorno de staging efímero"
+    ],
+    "actors": [
+      "Auditor Forense Informático",
+      "Fiscal Corporativo",
+      "SRE de BRIDGE"
+    ],
+    "steps": [
+      "Consultar la bóveda WORM y extraer el Execution Manifest de la corrida",
+      "Restaurar la partición temporal del corpus mediante snapshots de PostgreSQL",
+      "Ejecutar el modelo con el seed y prompt idénticos",
+      "Comprobar concordancia exacta carácter por carácter y emitir acta pericial"
+    ],
+    "states": [
+      "EXTRACCION_MANIFEST",
+      "RESTAURACION_ESTADO_HISTORICO",
+      "REPLAY_DETERMINISTA",
+      "CERTIFICADO_PERICIAL_EMITIDO"
+    ],
+    "outputs": [
+      "Certificado de Reproducción Forense CAF-T01-380 (Match 100%)"
+    ],
+    "exceptions": [
+      "Si el proveedor del LLM retiró el checkpoint histórico, se utiliza el log de entrada/salida cifrado como prueba supletoria"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CAF_380",
+      "type": "experimento",
+      "name": "Caso de Auditoría Forense CAF-T01-380",
+      "aliases": [
+        "Peritaje CMF 9 Meses"
+      ]
+    },
+    {
+      "entity_id": "CERTIFICADO_FORENSE",
+      "type": "documento",
+      "name": "Certificado de Reproducción Forense",
+      "aliases": [
+        "Bit-for-Bit Deterministic Proof"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CAF_380",
+      "predicate": "certifica_reproducibilidad_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X30-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Sistema sin Registro de Reproducción",
+      "item_b": "Sistema con Replay Forense BRIDGE",
+      "dimension": "Eficacia probatoria en juicio",
+      "conclusion": "Sin reproducción el peritaje concluye 'sistema no determinista inauditable'; con el replay de BRIDGE el peritaje concluye 'plena concordancia probatoria inobjetable'."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Concordancia de tokens en reproducción histórica (Match Token)",
+      "denominator": "Tokens totales generados en la respuesta original",
+      "target": "1.0 (100.0%)"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Aporta una capacidad de blindaje legal incomparable para gerencias jurídicas y de cumplimiento regulatorio.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

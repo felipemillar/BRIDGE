@@ -1,0 +1,142 @@
+{
+  "question_id": "P04-F47",
+  "pilar": "P04",
+  "eje": "Evaluación de calidad documental",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre evaluación de calidad documental?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos relativos a la evaluación de calidad documental se sustentan en cuatro fuentes académicas rigurosas: 1) Min et al. (mayo 2023, FActScore, arXiv:2305.14251, EMNLP), que establece la metodología de evaluación de precisión factual atómica; 2) Es et al. (septiembre 2023, RAGAS, arXiv:2309.15217, EACL), que aporta el framework líder de evaluación automática de RAG (Faithfulness, Answer Relevance, Context Precision); 3) Yue et al. (mayo 2023, arXiv:2305.06311), que define los benchmarks de evaluación automática de atribución en LLMs; y 4) Zhang et al. (septiembre 2023, arXiv:2309.01219, ACM Computing Surveys), que clasifica formalmente las alucinaciones factuales, contextuales y temporales.",
+  "findings": [
+    {
+      "claim_id": "P04-F47-C1",
+      "claim": "Las métricas de evaluación de calidad documental adoptadas se respaldan directamente en los frameworks estandarizados de la comunidad científica de NLP (FActScore, RAGAS y encuestas de alucinación).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023",
+        "region": "Internacional",
+        "actor": "Min et al. / Es et al. / Yue et al. / Zhang et al."
+      },
+      "evidence": [
+        {
+          "source_id": "bb0b173a-5888-4c00-9392-9768bed7824c",
+          "source_title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision (Min et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2305.14251",
+          "locator": "Sección 1 and 2: Atomic Fact Precision",
+          "excerpt_short": "Provides a rigorous atomic framework for measuring factual accuracy in generative language model outputs.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "13da7720-4e15-423b-90d3-10a0c94ee387",
+          "source_title": "RAGAS: Automated Evaluation of Retrieval Augmented Generation (Es et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2309.15217",
+          "locator": "Sección 2 and 3: Framework Overview",
+          "excerpt_short": "Presents reference-free metrics for automated evaluation of retrieval-augmented generation pipelines.",
+          "source_date": "2023-09-27",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de papers académicos fundacionales indexados en el corpus P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus de literatura de evaluación P04"
+    ],
+    "actors": [
+      "Scientific Auditor",
+      "Benchmarking Framework"
+    ],
+    "steps": [
+      "Verificación de formulaciones matemáticas de FActScore y RAGAS",
+      "Integración de librerías de evaluación"
+    ],
+    "states": [
+      "Audited",
+      "Scientific_Grounding_Established"
+    ],
+    "outputs": [
+      "Matriz de respaldo científico para el framework de evaluación documental"
+    ],
+    "exceptions": [
+      "Diferencias en implementación de evaluadores LLM-as-a-Judge"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_EVAL_LITERATURE",
+      "type": "corpus",
+      "name": "Literatura Científica de Evaluación de Factualidad y RAG",
+      "aliases": [
+        "Factuality Evaluation Academic Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_EVAL_LITERATURE",
+      "predicate": "respalda_metodologia_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F47-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Validez del benchmark",
+      "Métricas ad-hoc sin respaldo": "Puntuaciones subjetivas que no permiten comparación con el estado del arte.",
+      "Benchmarks FActScore y RAGAS": "Métricas estandarizadas y reconocidas en las principales conferencias mundiales de IA."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe documentar sus reportes de precisión citando formalmente los estándares FActScore y RAGAS.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

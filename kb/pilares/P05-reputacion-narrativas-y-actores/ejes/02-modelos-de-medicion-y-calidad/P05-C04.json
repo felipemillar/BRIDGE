@@ -1,0 +1,141 @@
+{
+  "question_id": "P05-C04",
+  "pilar": "P05",
+  "eje": "Modelos de medición y calidad",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué sigue sin prueba sobre modelos de medición y calidad, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El diagnóstico de limitaciones metodológicas documentado en P05_GAPS_AND_VALIDATION Sección 1 y 2 establece: 1) Lo que sigue sin prueba: La capacidad real de las plataformas de telemetría en tiempo real basadas en paneles digitales (como Group Caliber) para capturar las posturas de actores clave no digitalizados en territorios rurales de América Latina y Chile (comunidades indígenas, pescadores artesanales, pirquineros o agricultores de subsistencia). Estos actores no participan en paneles web comerciales, por lo que sus percepciones permanecen invisibles en la analítica continua; 2) Qué fuente es parcial o falló: Fallan las herramientas de social listening y paneles online masivos, que sufren de sesgo urbano y digital severo; Merco es parcial porque su panel inicial elitista de directivos (> US$ 30M) tiende a sobre-representar a conglomerados tradicionales; 3) Validación mínima para resolver la incertidumbre: Implementar un modelo de 'Doble Velocidad' que combine la telemetría algorítmica continua de medios y redes con la ingesta estructurada de fuentes no digitales: actas de participación ciudadana temprana del SEA, transcripciones de asambleas territoriales, audios de radios comunitarias locales y registros de diálogo bajo estándar AA1000SES.",
+  "findings": [
+    {
+      "claim_id": "P05-C04-C1",
+      "claim": "Los paneles de opinión digital presentan un punto ciego territorial en comunidades rurales, exigiendo protocolos híbridos que integren fuentes presenciales e institucionales del SEIA.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / América Latina",
+        "actor": "Monitoreo de Licencia Social"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1: Sub-representación y Sesgo Tecnológico en la Captura de Señales Territoriales",
+          "excerpt_short": "Los actores comunitarios raramente canalizan sus demandas en redes sociales masivas. Si la plataforma solo rastrea medios masivos y redes principales, sufrirá ceguera territorial respecto de la SLO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Limitación empírica demostrada en la gestión de proyectos de infraestructura en Chile.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Paneles de escucha digital",
+      "Actas del SEIA",
+      "Informes de relacionamiento comunitario presencial"
+    ],
+    "actors": [
+      "Analista Territorial",
+      "Ingeniero de Datos"
+    ],
+    "steps": [
+      "Detección de zonas de baja cobertura digital",
+      "Carga manual o asistida de actas de asambleas comunitarias",
+      "Ponderación del indicador de Licencia Social territorial"
+    ],
+    "states": [
+      "Digital_Signals_Loaded",
+      "Territorial_Gap_Flagged",
+      "Hybrid_Model_Computed"
+    ],
+    "outputs": [
+      "Índice de Licencia Social para Operar calibrado territorialmente"
+    ],
+    "exceptions": [
+      "Falta de personal en terreno para registrar actas de reuniones comunitarias"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TERRITORIAL_GAP",
+      "type": "vacio_metodologico",
+      "name": "Punto Ciego Territorial Digital",
+      "aliases": [
+        "Territorial Offline Blindspot"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TERRITORIAL_GAP",
+      "predicate": "afecta_representatividad_de",
+      "object_id": "ENT_CALIBER",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C04-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Representatividad de la muestra",
+      "Panel Digital Masivo": "Muestra urbana de Santiago con acceso a internet de alta velocidad.",
+      "Realidad Territorial de Faena": "Comunidad rural colindante al relave minero que delibera en la sede social comunal."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Pipeline de Ingesta Territorial",
+      "implication": "BRIDGE debe permitir la ingesta y vectorización de expedientes PDF del SEIA y minutas de terreno para cerrar la brecha de las comunidades no digitalizadas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_OFFLINE_COMMUNITIES",
+      "description": "Sub-representación sistemática de comunidades territoriales rurales en paneles de opinión online.",
+      "severity": "alta",
+      "status": "documentado"
+    }
+  ],
+  "next_question_ids": [
+    "P05-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

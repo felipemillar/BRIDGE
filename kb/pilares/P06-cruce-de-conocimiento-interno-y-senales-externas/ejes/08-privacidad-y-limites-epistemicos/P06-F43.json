@@ -1,0 +1,336 @@
+{
+  "question_id": "P06-F43",
+  "pilar": "P06",
+  "eje": "Privacidad y límites epistémicos",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué datos internos nunca deben salir a un proveedor externo o a un lector sin permiso?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "[P06-F43] ¿Qué datos internos nunca deben salir a un proveedor externo o a un lector sin permiso? Documentación y contenido no público:** Las búsquedas internas, documentos propietarios, estados financieros intermedios no consolidados y datos operativos confidenciales no deben salir de la red interna de la organización [1, 2]. Plataformas con arquitectura de búsqueda federada cifran las solicitude",
+  "findings": [
+    {
+      "claim_id": "P06-F43-C1",
+      "claim": "[P06-F43] ¿Qué datos internos nunca deben salir a un proveedor externo o a un lector sin permiso?",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F43",
+          "excerpt_short": "[P06-F43] ¿Qué datos internos nunca deben salir a un proveedor externo o a un lector sin permiso?...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F43-C2",
+      "claim": "Documentación y contenido no público:** Las búsquedas internas, documentos propietarios, estados financieros intermedios no consolidados y datos operativos confidenciales no deben salir de la red interna de la organización [1, 2]. Plataformas con arquitectura de búsqueda federada cifran las solicitu",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F43",
+          "excerpt_short": "Documentación y contenido no público:** Las búsquedas internas, documentos propietarios, estados financieros intermedios no consolidados y datos operativos confidenciales no deben ...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F43-C3",
+      "claim": "Información bajo deber de confidencialidad:** Códigos éticos profesionales (como el código de IABC) exigen la protección estricta de la información confidencial corporativa [4].",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "ea19c0ed-88be-4eff-8870-54c8217fa513",
+          "source_title": "IABC - Code of Ethics for Professional Communicators",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F43",
+          "excerpt_short": "Información bajo deber de confidencialidad:** Códigos éticos profesionales (como el código de IABC) exigen la protección estricta de la información confidencial corporativa [4]....",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F43-C4",
+      "claim": "AlphaSense Enterprise Intelligence** declara mantener el aislamiento completo de red y cifrado FIPS 140-2 en tránsito y reposo para evitar que la información propietaria salga del entorno del cliente [2].",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "0103956c-7952-4ebc-bc74-db2a18cddc7c",
+          "source_title": "AlphaSense - Enterprise Intelligence Documentation",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F43",
+          "excerpt_short": "AlphaSense Enterprise Intelligence** declara mantener el aislamiento completo de red y cifrado FIPS 140-2 en tránsito y reposo para evitar que la información propietaria salga del ...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F43-C5",
+      "claim": "La identificación algorítmica interna de una **contradicción real** (por ejemplo, pasivos laborales contingentes o litigios no reportados) registrada en bases de datos del sistema genera una alta sensibilidad legal, ya que esos registros podrían quedar sujetos a exhibición judicial (*discovery* en j",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4cc2b683-2a00-429f-8117-63824505752b",
+          "source_title": "Dhuliawala et al. (2023) - Chain-of-Verification (CoVe)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F43",
+          "excerpt_short": "La identificación algorítmica interna de una **contradicción real** (por ejemplo, pasivos laborales contingentes o litigios no reportados) registrada en bases de datos del sistema ...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F43-C6",
+      "claim": "Establecer políticas de gobierno de datos con **permisos de acceso diferenciados** y arquitecturas en la nube con *Bring Your Own Key* (BYOK) / *Bring Your Own Bucket* (BYOB), asegurando que los hallazgos de brechas de cumplimiento jamás se envíen a APIs externas sin aislamiento de red [6, 7].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F43",
+          "excerpt_short": "Establecer políticas de gobierno de datos con **permisos de acceso diferenciados** y arquitecturas en la nube con *Bring Your Own Key* (BYOK) / *Bring Your Own Bucket* (BYOB), aseg...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de medios y reguladores",
+      "Documentación corporativa interna y memorias CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "CCO / Dircom",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Extracción y normalización de afirmaciones",
+      "Resolución de entidades y contraste temporal",
+      "Evaluación de coherencia fáctica y generación de brief"
+    ],
+    "states": [
+      "ENTRADA_RECIBIDA",
+      "ENTIDADES_CANONICALIZADAS",
+      "CONTRASTE_EJECUTADO",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Evaluación estructurada y respuesta citada para P06-F43"
+    ],
+    "exceptions": [
+      "Ausencia de señal externa verificable o desfase temporal en el corte documental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_P06_CORP",
+      "type": "organizacion",
+      "name": "Corporación Emisora CMF",
+      "aliases": [
+        "Empresa Reportante"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_REG",
+      "type": "organizacion",
+      "name": "CMF / SERNAC / SMA",
+      "aliases": [
+        "Regulador Chileno"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_BRIDGE",
+      "type": "producto",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "BRIDGE Platform"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_P06_CORP",
+      "predicate": "sujeto_a_fiscalizacion_de",
+      "object_id": "ENT_P06_REG",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P06-F43-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporación en el pipeline del módulo para sustentar decisiones ejecutivas en P06-F43.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

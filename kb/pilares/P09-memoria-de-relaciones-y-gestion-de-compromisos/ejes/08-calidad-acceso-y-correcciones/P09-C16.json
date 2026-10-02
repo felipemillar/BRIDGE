@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-C16",
+  "pilar": "P09",
+  "eje": "Calidad, acceso y correcciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué sigue sin prueba sobre calidad, acceso y correcciones, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Brecha sin Prueba: El corpus no documenta la tasa de resistencia al cambio cultural y omisión voluntaria de registro por parte de ejecutivos y gerentes territoriales sénior al implementar un SRM estricto con auditoría de lectura (Read Audit Trail) y dueño único verificable, existiendo incertidumbre sobre qué porcentaje de las reuniones delicadas continuará manteniéndose deliberadamente fuera del sistema (gestión en la sombra o WhatsApp privado). Fuentes Sustituidas: Todas las fuentes fallidas identificadas en el catálogo (Darzin, SustaiNet, URLs rotas de INDH, duplicados web de OCDE y PRSA) fueron completamente regularizadas mediante sus sustitutos canónicos verificados (Boréalis, Tractivity, Kancha, SEA Chile, OECD PDF Oficial y Prowly). Validación Mínima Requerida: Ejecutar una auditoría de gobernanza al término de los primeros 6 meses de despliegue de BRIDGE en una faena piloto, comparando el número de reuniones registradas en el sistema contra las agendas públicas de InfoLobby y los informes de gastos de viaje y representación de los ejecutivos, cuantificando la brecha de subreporte para diseñar planes de incentivo y refuerzo de políticas de compliance.",
+  "findings": [
+    {
+      "claim_id": "P09-C16-C1",
+      "claim": "La tasa de subreporte voluntario de interacciones delicadas fuera del sistema (shadow communications) carece de datos consolidados en el corpus; todas las fuentes fallidas quedaron regularizadas con sustitutos canónicos; se requiere auditoría de conciliación de gastos y agendas.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "contrast_quality_access_corrections_gaps",
+      "evidence": [
+        {
+          "source_title": "P09_PENDING_SOURCES_RESOLUTION",
+          "source_id": "dcb397bc-d659-44fc-af6b-e394801f12a9",
+          "locator": "Sección 'Certificación Final de Resolución de Fuentes Fallidas'",
+          "retrieved_at": null,
+          "excerpt_short": "El 100% de las anomalías de fuentes del Pilar P09 fueron resueltas y sustituidas por documentación primaria robusta, cerrando la brecha de evidencia técnica para la producción de BRIDGE.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_GAPS_AND_VALIDATION",
+          "source_id": "33944e01-6a0f-46f1-bfa3-19224f1c8d72",
+          "locator": "Sección 'Gaps en Adopción Organizacional y Subreporte'",
+          "retrieved_at": null,
+          "excerpt_short": "Incertidumbre: El riesgo de que los gerentes eludan el sistema usando canales privados informales para eludir la rendición de cuentas requiere auditorías periódicas de conciliación.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la resolución de fuentes y los planes de validación de adopción.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.92,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registros de reuniones en BRIDGE",
+      "Declaraciones de viajes y gastos en ERP",
+      "Publicaciones en InfoLobby"
+    ],
+    "actors": [
+      "Auditor Interno de Compliance",
+      "Oficial de Integridad",
+      "Gerente de Personas"
+    ],
+    "steps": [
+      "Cruce algorítmico entre rendiciones de gastos de terreno y actas de reuniones",
+      "Detección de viajes o comidas de trabajo sin interacción registrada en BRIDGE",
+      "Cálculo de la tasa de subreporte",
+      "Ajuste de incentivos corporativos y sanciones disciplinarias"
+    ],
+    "states": [
+      "Cruce Ejecutado",
+      "Brecha de Subreporte Medida",
+      "Plan de Adopción Ajustado"
+    ],
+    "outputs": [
+      "Informe semestral de efectividad y cobertura de la memoria institucional"
+    ],
+    "exceptions": [
+      "Reuniones estrictamente privadas o personales justificadas quedan excluidas del cruce"
+    ]
+  },
+  "entities": [
+    "Subreporte (Shadow Communications)",
+    "Conciliación de Gastos ERP",
+    "P09_PENDING_SOURCES_RESOLUTION",
+    "P09_GAPS_AND_VALIDATION",
+    "InfoLobby"
+  ],
+  "relations": [
+    {
+      "from": "Gastos de Terreno ERP",
+      "to": "Registros BRIDGE",
+      "type": "CROSS_REFERENCED_AGAINST"
+    },
+    {
+      "from": "Tasa de Subreporte",
+      "to": "Políticas de Compliance",
+      "type": "TRIGGERS_POLICY_ADJUSTMENT"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Confianza ciega en la digitación voluntaria vs Auditoría cruzada de consistencia",
+      "diferencia": "La confianza ciega perpetúa zonas oscuras en las relaciones; la auditoría cruzada garantiza que toda gestión de interés público sea registrada en la memoria corporativa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "audit_frequency": "Semestral (2 veces al año)",
+    "target_reporting_completeness": "> 95% de interacciones relevantes registradas"
+  },
+  "bridge_implications": "Diseñar en BRIDGE un conector de conciliación con el sistema de rendición de gastos para facilitar la auditoría de completitud.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

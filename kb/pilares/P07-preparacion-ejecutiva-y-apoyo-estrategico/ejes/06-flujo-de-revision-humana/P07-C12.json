@@ -1,0 +1,125 @@
+{
+  "question_id": "P07-C12",
+  "pilar": "P07",
+  "eje": "Flujo de revisión humana",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué sigue sin prueba sobre flujo de revisión humana, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba empírica la cuantificación del sesgo de complacencia algorítmica (automation bias) en directores corporativos tras meses de uso continuo (si el CCO o asesor legal termina aprobando acríticamente los briefs al constatar una alta tasa de acierto inicial, pasando por alto una alucinación sutil). En este eje no hubo fuentes fallidas directas, pero 'P07_GAPS_AND_VALIDATION' (Sección 2) identifica este riesgo como una de las fallas sistémicas más graves del modelo Human-in-the-Loop. La validación mínima requerida es un estudio longitudinal de 90 días con 10 corporaciones piloto donde el sistema introduzca de manera controlada y aleatoria errores fácticos sutiles ('Canary Injects') en borradores de prueba para medir con qué frecuencia los revisores humanos detectan y corrigen la discrepancia antes de firmar.",
+  "findings": [
+    {
+      "claim_id": "P07-C12-C1",
+      "claim": "El sesgo de complacencia algorítmica en la revisión humana continua no está cuantificado en entornos corporativos y requiere pruebas empíricas mediante inyección de errores canario.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "automation_bias_gap",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 2 (Riesgo: Sesgo de Complacencia Algorítmica)",
+          "excerpt_short": "El LLM intenta complacer al usuario y genera briefings que suavizan la hostilidad del entorno. Peor aún, los revisores humanos desarrollan una confianza excesiva tras semanas de operación normal y aprueban documentos sin lectura detenida. Se requiere medir empíricamente esta tasa de complacencia.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "NIST: Generative AI Profile (NIST AI 600-1)",
+          "source_id": "c55e3644-b137-4860-9c20-efa6bb0e5134",
+          "locator": "Sección 'Human Automation Bias in GenAI Oversight', p. 24-28",
+          "excerpt_short": "Human reviewers subjected to highly fluent generative outputs exhibit diminishing critical vigilance over extended deployment cycles, requiring proactive synthetic testing interventions.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación rigurosa entre las advertencias de NIST AI 600-1 y el plan de mitigación de P07_GAPS.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "protocolo_errores_canario": {
+      "objetivo": "Medir y mitigar el sesgo de complacencia en revisores corporativos.",
+      "mecanismo": "Inyección mensual de 1 error deliberado no dañino (ej. cifra de emisiones de 2023 en lugar de 2025) en un brief de prueba.",
+      "metrica": "Tasa de Detección de Errores Canario (Target: >= 90% detectado en < 15 minutos).",
+      "retroalimentacion": "Si el revisor aprueba el error sin objetar, el sistema emite una alerta pedagógica inmediata para restaurar la vigilia crítica."
+    }
+  },
+  "entities": [
+    "NIST AI 600-1",
+    "Automation Bias",
+    "Canary Injects",
+    "P07_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "NIST AI 600-1",
+      "to": "Automation Bias",
+      "type": "analyzes"
+    },
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "Canary Injects",
+      "type": "proposes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Revisión Rutinaria Pasiva vs Revisión Activa con Calibración Canario",
+      "diferencia": "La pasiva se degrada a un simple 'OK' automático; la calibración canario mantiene a los revisores en estado de alerta profesional permanente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "canary_detection_rate_target": ">= 90%",
+    "longitudinal_test_duration": "90 días de seguimiento"
+  },
+  "bridge_implications": "Implementar un módulo opcional de 'Auditoría de Vigilia Revisor' en BRIDGE para empresas de alta exposición regulatoria.",
+  "open_gaps": [
+    "Riesgo de frustración o fricción laboral en los analistas si perciben los inyectores canario como una trampa disciplinaria."
+  ],
+  "next_question_ids": [
+    "P07-C13",
+    "P07-C14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

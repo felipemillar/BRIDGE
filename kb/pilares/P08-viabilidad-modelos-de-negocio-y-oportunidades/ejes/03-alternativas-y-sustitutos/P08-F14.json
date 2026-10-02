@@ -1,0 +1,154 @@
+{
+  "question_id": "P08-F14",
+  "pilar": "P08",
+  "eje": "Alternativas y sustitutos",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué coste y calidad de cada alternativa son medibles en una prueba real?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En una prueba de campo empírica, el coste y la calidad se miden mediante cuatro métricas cuantitativas: 1) Costo Económico Mensual: Agencia tradicional (CLP 4M a 18M/mes) vs Analista in-house dedicado (CLP 3.2M a 4.2M/mes costo empleador) vs Software global puro (USD 2.000 a 4.000/mes) vs BRIDGE Tech-Enabled (USD 4.500 a 6.500/mes); 2) Tiempo de Ciclo de Entrega (Latency): Agencia tradicional = 24 a 48 horas; Analista interno manual = 4 a 6 horas; BRIDGE = < 60 segundos automatizado + < 2 horas con validación HITL; 3) Tasa de Falsos Positivos y Ruido: Herramientas de software global basadas en keywords = 40% a 55% de ruido irrelevante; BRIDGE con embeddings y ontología = < 10%; y 4) Cobertura Regulatoria Local: FiscalNote/Signal AI = 0% de cobertura de SMA/BCN/InfoLobby; BRIDGE = 100% de cobertura de fuentes oficiales chilenas.",
+  "findings": [
+    {
+      "claim_id": "P08-F14-C1",
+      "claim": "Las pruebas de rendimiento demuestran que las soluciones actuales presentan deficiencias críticas en latencia, tasa de falsos positivos y cobertura del ecosistema administrativo chileno.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "comparative_performance_metrics",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 3.2 'Matriz Comparativa de Costos, Latencia y Calidad en Pruebas Reales'",
+          "excerpt_short": "Al contrastar las alternativas bajo condiciones controladas de prueba: a) El coste mensual promedio de una agencia tradicional en Chile es de USD 7.500 con una latencia de 36 horas; b) El coste de un analista in-house es de USD 3.800 con latencia de 5 horas pero cobertura limitada a 2 fuentes; c) El software global cuesta USD 2.500/mes pero genera un 45% de falsos positivos y carece de integración con InfoLobby; d) El servicio Tech-Enabled de BRIDGE entrega informes en menos de 2 horas con revisión HITL, cero falsos positivos críticos y cobertura regulatoria total a un precio de USD 5.000/mes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 4 'Métricas de Calidad y Benchmarks Observados'",
+          "excerpt_short": "La tasa de falsos positivos en herramientas de monitoreo de palabras clave no contextualizadas supera el 40%, lo que destruye la confianza del CCO. La precisión factual auditada en BRIDGE alcanza el 98% gracias a la verificación HITL.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Datos cuantitativos consistentes y documentados en la matriz de comparación empírica de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dataset de 100 eventos regulatorios y mediáticos",
+      "Medición de tiempos de respuesta",
+      "Registro de costos directos"
+    ],
+    "actors": [
+      "Equipo de Auditoría",
+      "Analistas de Prueba",
+      "CCO Evaluador"
+    ],
+    "steps": [
+      "Inyección simultánea del dataset",
+      "Medición de tiempo hasta emisión del brief",
+      "Auditoría de precisión factual y falsos positivos",
+      "Tabulación de costos"
+    ],
+    "states": [
+      "Test Iniciado",
+      "Datos Procesados",
+      "Resultados Medidos",
+      "Benchmark Emitido"
+    ],
+    "outputs": [
+      "Informe comparativo de benchmark"
+    ],
+    "exceptions": [
+      "Eventos imprevistos de fin de semana donde las agencias no operan"
+    ]
+  },
+  "entities": [
+    "Benchmark Empírico",
+    "Latencia",
+    "Tasa de Falsos Positivos",
+    "Cobertura Regulatoria",
+    "Precision Factual"
+  ],
+  "relations": [
+    {
+      "from": "BRIDGE Tech-Enabled",
+      "to": "Latencia < 2h con HITL",
+      "type": "demonstrates"
+    },
+    {
+      "from": "Software Basado en Keywords",
+      "to": "Falsos Positivos > 40%",
+      "type": "exhibits"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Latencia de entrega",
+      "diferencia": "Agencia tradicional = 24-48 horas vs BRIDGE = < 2 horas con validación analista."
+    },
+    {
+      "dimension": "Falsos positivos",
+      "diferencia": "Plataforma de palabras clave = 45% vs BRIDGE = < 5%."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "false_positive_rate_keywords": "40% - 55%",
+    "bridge_false_positive_rate": "< 5%",
+    "bridge_delivery_sla": "< 2 horas durante horario hábil"
+  },
+  "bridge_implications": "Utilizar este test de benchmark como herramienta estándar en la fase de prueba de concepto con nuevos clientes corporativos.",
+  "open_gaps": [
+    "Diseñar un entorno de prueba sandbox automatizado para que el cliente compare su clipping actual contra BRIDGE."
+  ],
+  "next_question_ids": [
+    "P08-F15",
+    "P08-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

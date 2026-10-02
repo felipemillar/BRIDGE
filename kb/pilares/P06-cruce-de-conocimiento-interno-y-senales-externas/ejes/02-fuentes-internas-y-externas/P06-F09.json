@@ -1,0 +1,386 @@
+{
+  "question_id": "P06-F09",
+  "pilar": "P06",
+  "eje": "Fuentes internas y externas",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Cómo preservar el origen de cada dato al crear una respuesta combinada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "[P06-F09] ¿Cómo preservar el origen de cada dato al crear una respuesta combinada? Verificación en Cadena (CoVe - *Dhuliawala et al., 2023*):** Demuestra empíricamente que reducir alucinaciones requiere formular preguntas de verificación deliberadas y responderlas de forma independiente antes de componer la respuesta final [15, 33].",
+  "findings": [
+    {
+      "claim_id": "P06-F09-C1",
+      "claim": "[P06-F09] ¿Cómo preservar el origen de cada dato al crear una respuesta combinada?",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F09",
+          "excerpt_short": "[P06-F09] ¿Cómo preservar el origen de cada dato al crear una respuesta combinada?...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F09-C2",
+      "claim": "Verificación en Cadena (CoVe - *Dhuliawala et al., 2023*):** Demuestra empíricamente que reducir alucinaciones requiere formular preguntas de verificación deliberadas y responderlas de forma independiente antes de componer la respuesta final [15, 33].",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4cc2b683-2a00-429f-8117-63824505752b",
+          "source_title": "Dhuliawala et al. (2023) - Chain-of-Verification (CoVe)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F09",
+          "excerpt_short": "Verificación en Cadena (CoVe - *Dhuliawala et al., 2023*):** Demuestra empíricamente que reducir alucinaciones requiere formular preguntas de verificación deliberadas y responderla...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F09-C3",
+      "claim": "Mecanismos de Autoconciencia y Abstención (SABER - *Zhu et al., 2026*):** Formaliza el problema como una decisión alineada con el hecho de referencia (*ground-truth*), evaluando de forma independiente la corrección de la ruta paramétrica (PK) y la ruta contextual (CK) [34, 35]. Esto genera un espaci",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "32c4f737-2aea-40b3-8b5f-17c79383351c",
+          "source_title": "SABER (2026) - Trust or Abstain? Self-Aware RAG",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F09",
+          "excerpt_short": "Mecanismos de Autoconciencia y Abstención (SABER - *Zhu et al., 2026*):** Formaliza el problema como una decisión alineada con el hecho de referencia (*ground-truth*), evaluando de...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F09-C4",
+      "claim": "Palantir Foundry:** Declara registrar automáticamente un \"linaje dinámico de decisiones\" (*dynamic lineage*) que fluye a través de los datos, la lógica, las acciones y las aplicaciones, aplicando políticas de seguridad a nivel de fila y columna en tiempo de ejecución [12, 41].",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "98f72019-62a8-4781-a211-2ce2cccaf4eb",
+          "source_title": "Palantir Foundry - Why Create an Ontology: Decision-Centric System",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F09",
+          "excerpt_short": "Palantir Foundry:** Declara registrar automáticamente un \"linaje dinámico de decisiones\" (*dynamic lineage*) que fluye a través de los datos, la lógica, las acciones y las aplicaci...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F09-C5",
+      "claim": "Si una respuesta combinada sintetiza datos sin preservar las etiquetas de origen y alcance (\\\\([t_{\\text{start}}, t_{\\text{end}}]\\\\) y jerarquía legal de la filial), el sistema corre el riesgo de atribuir responsabilidades operativas caducadas o ajenas, invalidando el valor probatorio de la vocería ",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F09",
+          "excerpt_short": "Si una respuesta combinada sintetiza datos sin preservar las etiquetas de origen y alcance (\\\\([t_{\\text{start}}, t_{\\text{end}}]\\\\) y jerarquía legal de la filial), el sistema cor...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F09-C6",
+      "claim": "Pipeline de Verificación NLI y Bucle Humano (Fases 4, 5 y 6 del Flujo P06):**",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F09",
+          "excerpt_short": "Pipeline de Verificación NLI y Bucle Humano (Fases 4, 5 y 6 del Flujo P06):**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F09-C7",
+      "claim": "Recuperación de fragmentos mediante Bi-Encoder (**Sentence-BERT**) y re-clasificación con Cross-Encoder NLI (**DeBERTa-v3**) [15, 16].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F09",
+          "excerpt_short": "Recuperación de fragmentos mediante Bi-Encoder (**Sentence-BERT**) y re-clasificación con Cross-Encoder NLI (**DeBERTa-v3**) [15, 16]....",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de medios y reguladores",
+      "Documentación corporativa interna y memorias CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "CCO / Dircom",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Extracción y normalización de afirmaciones",
+      "Resolución de entidades y contraste temporal",
+      "Evaluación de coherencia fáctica y generación de brief"
+    ],
+    "states": [
+      "ENTRADA_RECIBIDA",
+      "ENTIDADES_CANONICALIZADAS",
+      "CONTRASTE_EJECUTADO",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Evaluación estructurada y respuesta citada para P06-F09"
+    ],
+    "exceptions": [
+      "Ausencia de señal externa verificable o desfase temporal en el corte documental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_P06_CORP",
+      "type": "organizacion",
+      "name": "Corporación Emisora CMF",
+      "aliases": [
+        "Empresa Reportante"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_REG",
+      "type": "organizacion",
+      "name": "CMF / SERNAC / SMA",
+      "aliases": [
+        "Regulador Chileno"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_BRIDGE",
+      "type": "producto",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "BRIDGE Platform"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_P06_CORP",
+      "predicate": "sujeto_a_fiscalizacion_de",
+      "object_id": "ENT_P06_REG",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P06-F09-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporación en el pipeline del módulo para sustentar decisiones ejecutivas en P06-F09.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Contradicciones y documentos correctivos aplicables",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    },
+    {
+      "gap": "Límites de SABER y Benchmarks (Documento correctivo: `P06_QUALITY_ADDENDUM`):**",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

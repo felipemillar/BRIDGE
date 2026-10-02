@@ -1,0 +1,145 @@
+{
+  "question_id": "P09-F47",
+  "pilar": "P09",
+  "eje": "Calidad, acceso y correcciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre calidad, acceso y correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos normativos y de seguridad relativos a calidad, acceso y correcciones están respaldados por: 1) P09_VERIFICATION_CORRECTIONS (2026): Establece la prevalencia jerárquica rectora, las reglas de protección de datos personales de la Ley 21.719, la inmutabilidad de la máquina de estados y el límite de asesoría legal; 2) Tractivity (2024, 'Top 10 Secure Stakeholder Tools'): Respalda el control de accesos por roles (RBAC/ABAC), el registro inmutable de lecturas (read audit trail) y el patrón fail-closed; 3) Boréalis SRM (2024, 'The Proving Problem'): Documenta las pruebas de completitud estructural y la exigencia de hashes criptográficos en expedientes probatorios; 4) AccountAbility AA1000SES (2015-2024): Fija los estándares de rigurosidad, inclusividad y respondabilidad en el involucramiento de grupos de interés; y 5) P09_OECD_SCOPE_CORRECTION (2026): Ratifica la naturaleza complementaria y no vinculante del informe de la OCDE.",
+  "findings": [
+    {
+      "claim_id": "P09-F47-C1",
+      "claim": "El marco de calidad, seguridad y correcciones se fundamenta en las rectificaciones canónicas de P09, los estándares de seguridad de Tractivity, la doctrina de pruebas de Boréalis y el estándar global AA1000SES de AccountAbility.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_quality_access_corrections",
+      "evidence": [
+        {
+          "source_title": "AccountAbility: AA1000 Stakeholder Engagement Standard (AA1000SES)",
+          "source_id": "cddb1ad1-e88f-463e-bc4d-a2ef585c7a20",
+          "locator": "Section 4 'Principles of Inclusivity, Materiality and Responsiveness', p. 12-16",
+          "retrieved_at": null,
+          "excerpt_short": "Adherence to AA1000SES requires organizations to demonstrate comprehensive, accurate, and responsive engagement processes that are open to independent verification and audit.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R5 'Integridad Probatoria y Deduplicación'",
+          "retrieved_at": null,
+          "excerpt_short": "La validez probatoria de todo el sistema se cimienta en la correspondencia unívoca entre la cita, el texto sustantivo original y el hash del documento fuente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada entre normas internacionales de aseguramiento (AA1000SES) y el documento canónico de rectificación de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes P09",
+      "Norma AA1000SES",
+      "Directivas de seguridad"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "Especialista en Seguridad de la Información"
+    ],
+    "steps": [
+      "Verificación de citas textuales y locators",
+      "Cotejo de estándares de integridad",
+      "Consolidación de referencias"
+    ],
+    "states": [
+      "Fuentes Verificadas",
+      "Citas Aprobadas",
+      "Trazabilidad Completa"
+    ],
+    "outputs": [
+      "Matriz probatoria del Eje 8"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "AccountAbility AA1000SES",
+    "P09_VERIFICATION_CORRECTIONS",
+    "Tractivity",
+    "Boréalis",
+    "P09_OECD_SCOPE_CORRECTION"
+  ],
+  "relations": [
+    {
+      "from": "AA1000SES",
+      "to": "Involucramiento Social",
+      "type": "ESTABLISHES_QUALITY_PRINCIPLES_FOR"
+    },
+    {
+      "from": "P09_VERIFICATION_CORRECTIONS",
+      "to": "Sistema BRIDGE",
+      "type": "SETS_CANONICAL_PREVALENCE_OVER"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Autodeclaración de cumplimiento vs Certificación bajo AA1000SES",
+      "diferencia": "La autodeclaración carece de credibilidad ante ONGs y reguladores; el estándar AA1000SES exige evidencia verificable por terceros independientes."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "international_standards_cited": "1 estándar de aseguramiento global (AA1000SES)",
+    "rectification_precedence_rate": "100%"
+  },
+  "bridge_implications": "Alinear los reportes de auditoría de BRIDGE con los principios de inclusividad y materialidad de AA1000SES.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F48",
+    "P09-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

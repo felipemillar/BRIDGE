@@ -1,0 +1,138 @@
+{
+  "question_id": "P07-F38",
+  "pilar": "P07",
+  "eje": "Viabilidad comercial en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Cómo considerar lenguaje, contexto político y sensibilidad territorial sin estereotipos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se consideran implementando filtros semánticos y reglas de neutralidad analítica: 1) Eliminación de sesgos paternalistas o ideologizados (prohibición de calificar a los actores locales como 'manipulados por terceros' o 'ignorantes técnicos'); 2) Caracterización fáctica de las contrapartes (mapeo objetivo de sus peticiones históricas, acuerdos previos cumplidos o pendientes y dirigentes electos formalmente); 3) Reconocimiento formal de la gobernanza local (relación entre municipios, gobernaciones regionales, delegaciones presidenciales y consejos comunales); 4) Protocolos de respeto indígena (denominación rigurosa de pueblos originarios según ley 19.253 y Convenio 169 OIT); y 5) Enfoque en compromisos auditables evitando promesas paternalistas de inversión que erosionen la autonomía de las comunidades.",
+  "findings": [
+    {
+      "claim_id": "P07-F38-C1",
+      "claim": "El análisis de sensibilidad territorial debe basarse en antecedentes documentales y respeto institucional a los derechos de las comunidades, erradicando estereotipos complacientes o peyorativos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "territorial_sensitivity_without_bias",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 5 y Sección 7",
+          "excerpt_short": "Calibración del Tono y Neutralidad Territorial: Prohibido utilizar eufemismos paternalistas o descalificar la legítima oposición comunitaria como 'ideologizada'. El sistema debe describir con frialdad analítica las demandas históricas de la cuenca, los convenios OIT aplicables y los compromisos de sustentabilidad asumidos por la empresa.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Merco: Monitor Empresarial de Reputación Corporativa Chile",
+          "source_id": "05a5003a-bce7-4d55-ae56-c4a3a30c169c",
+          "locator": "Informe Metodológico Chile, p. 12-16",
+          "excerpt_short": "La reputación corporativa en Chile se construye sobre la consistencia ética y la licencia social en las regiones donde operan las empresas. Los juicios de stakeholders locales castigan severamente el desdén centralista y las promesas incumplidas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación directa entre los estudios reputacionales de Merco Chile y las directrices de neutralidad del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "filtros_neutralidad_territorial": [
+      {
+        "filtro": "Anti-Paternalismo",
+        "regla": "Sustituir 'ayuda asistencial' por 'compromisos de inversión social y desarrollo compartido'."
+      },
+      {
+        "filtro": "Anti-Estigmatización",
+        "regla": "Describir reclamos vecinales como 'demandas comunitarias de fiscalización ambiental' en lugar de 'conflictos hostiles'."
+      },
+      {
+        "filtro": "Pueblos Originarios",
+        "regla": "Utilizar nomenclatura oficial (Pueblo Atacameño / Lickanantay) y citar resoluciones de la Corporación Nacional de Desarrollo Indígena (CONADI)."
+      },
+      {
+        "filtro": "Cero Centralismo",
+        "regla": "Priorizar vocerías regionales y medios locales sobre el enfoque exclusivo en prensa de Santiago."
+      }
+    ]
+  },
+  "entities": [
+    "Merco Chile",
+    "CONADI",
+    "Convenio 169 OIT",
+    "Licencia Social",
+    "Neutralidad Analítica"
+  ],
+  "relations": [
+    {
+      "from": "Filtros de Neutralidad",
+      "to": "Briefing Comunitario",
+      "type": "governs"
+    },
+    {
+      "from": "Merco Chile",
+      "to": "Licencia Social",
+      "type": "evaluates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque Tradicional Asistencialista vs Enfoque de Derechos BRIDGE",
+      "diferencia": "El asistencialismo ve a la comunidad como beneficiaria pasiva; BRIDGE la modela como un stakeholder fáctico con poder de veto y legitimidad jurídica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "stereotype_detection_rate": "100% de términos sesgados bloqueados por el linter de lenguaje",
+    "local_media_inclusion_share": ">= 30% de fuentes informativas de origen regional"
+  },
+  "bridge_implications": "Implementar un linter de lenguaje corporativo en BRIDGE que detecte y corrija expresiones centralistas o paternalistas en los briefs.",
+  "open_gaps": [
+    "Monitoreo de medios hiperlocales (radios comunitarias de frecuencia modulada sin archivo web)."
+  ],
+  "next_question_ids": [
+    "P07-F39",
+    "P07-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

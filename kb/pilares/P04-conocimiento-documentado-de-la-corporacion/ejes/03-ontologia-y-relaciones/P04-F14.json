@@ -1,0 +1,146 @@
+{
+  "question_id": "P04-F14",
+  "pilar": "P04",
+  "eje": "Ontología y relaciones",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué casos exigen separar matriz, filial, proyecto, instalación y vocero?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La separación estricta entre matriz, filial, proyecto, instalación y vocero es mandatoria en tres casos operacionales críticos: 1) Controversias Regulatorias y Ambientales: los permisos (e.g. Resoluciones de Calificación Ambiental - RCA en Chile ante la SMA o el SEIA) y los cargos por incumplimiento recaen sobre una instalación específica o filial titular de la faena, no sobre la matriz holding; atribuir erróneamente una infracción a la matriz distorsiona la materialidad financiera; 2) Responsabilidad Legal y Declaraciones de Mercado (Ley 18.045 / CMF): un Hecho Esencial emitido por una filial abierta no obliga a las demás filiales no consolidadas; y 3) Autoridad de Vocería y Caducidad de Cargos: las declaraciones pasadas de un ejecutivo solo tienen validez institucional durante el período exacto de su mandato (`corp:validTenure`); atribuir a la empresa dichos actuales de un ex-vocero o confundir opiniones personales con la postura de la filial local genera graves riesgos reputacionales.",
+  "findings": [
+    {
+      "claim_id": "P04-F14-C1",
+      "claim": "La separación entre matriz, filial, faena y vocero es indispensable para evitar confusiones de titularidad jurídica ante reguladores ambientales (SMA) y el mercado de valores (CMF Ley 18.045).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Gobierno Corporativo y Regulatorio"
+      },
+      "evidence": [
+        {
+          "source_id": "0a2c0fce-8216-4357-b046-e19d5a7b3243",
+          "source_title": "EDM Council: Financial Industry Business Ontology (FIBO)",
+          "original_url": "https://spec.edmcouncil.org/fibo/",
+          "locator": "FIBO Corporate Governance and Business Entities Module",
+          "excerpt_short": "Distinguishes LegalEntity, Subsidiary, UltimateParentCompany, Facility, and SignatoryRole to ensure precise legal obligation attribution.",
+          "source_date": "2024-03-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.2: Ontología Corporativa",
+          "excerpt_short": "org:Organization: filiales, RUT/LEI. corp:FacilityProject: faenas y divisiones. corp:PersonSpokesperson: período de acreditación y cargo formal.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Normativa corporativa FIBO y estándares de atribución jurídica en el corpus P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta o noticia sobre incidente en una instalación",
+      "Base de entidades corporativas"
+    ],
+    "actors": [
+      "Entity Disambiguator",
+      "Corporate Hierarchy Engine"
+    ],
+    "steps": [
+      "Identificación de la instalación física",
+      "Trazado de titularidad de la filial operadora",
+      "Verificación de la relación con la matriz",
+      "Validación de vocero acreditado"
+    ],
+    "states": [
+      "Ambiguous_Entity",
+      "Hierarchy_Resolved",
+      "Attribution_Established"
+    ],
+    "outputs": [
+      "Atribución jurídica exacta de la faena, titular y vocería autorizada"
+    ],
+    "exceptions": [
+      "Faena compartida en Joint Venture con múltiples socios matrices"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_LEGAL_HIERARCHY",
+      "type": "ontologia",
+      "name": "Jerarquía Jurídico-Operacional Corporativa",
+      "aliases": [
+        "Corporate Legal and Operational Hierarchy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LEGAL_HIERARCHY",
+      "predicate": "desacopla_responsabilidades_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F14-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de granularidad",
+      "Tratamiento corporativo plano": "Agrupa todas las noticias bajo la marca matriz, imputándole multas de filiales remotas.",
+      "Desacoplamiento ontológico": "Distingue si el hecho corresponde a la matriz, a una filial específica o a una faena en JV."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe alertar si un usuario intenta formular una respuesta corporativa asignando a la matriz responsabilidades operacionales exclusivas de una filial.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

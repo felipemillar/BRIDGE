@@ -1,0 +1,153 @@
+{
+  "question_id": "P10-C09",
+  "pilar": "P10",
+  "eje": "Estados, versiones y auditoría",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre estados, versiones y auditoría, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia esencial se centraba en el tratamiento de errores publicados: Síntesis internas preliminares asumían la práctica informal de 'edición silenciosa' (stealth editing), corrigiendo la errata directamente en la página web institucional sin dejar constancia visible; por el contrario, los estándares éticos internacionales de COPE y las políticas de información pública (Shire of Serpentine Jarrahdale) prohíben el borrado clandestino de registros históricos. Conforme a P10_VERIFICATION_CORRECTIONS (f043631e), que rige con prevalencia canónica estricta, prevalece la versión de COPE y Broadsight: El borrado silencioso está prohibido por arquitectura; cuando una afirmación publicada resulta errónea, el documento histórico original se preserva íntegro con marca de agua indeleble de 'RETRACTED' o 'OBSOLETE', se publica una Fe de Erratas v2.0 formal con justificación tipificada, y ambas versiones quedan enlazadas bidireccionalmente mediante URLs canónicas persistentes en el libro de auditoría.",
+  "findings": [
+    {
+      "claim_id": "P10-C09-C1",
+      "claim": "Conforme a P10_VERIFICATION_CORRECTIONS y las directrices COPE, prevalece la prohibición absoluta de alteración silenciosa, exigiendo el mantenimiento del registro histórico con marca de agua y fe de erratas vinculada bidireccionalmente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "audit_and_correction_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Prevalencia Canónica: Prohibición de Silent Editing'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica: Ningún mensaje en PUBLISHED_LIVE puede modificarse clandestinamente. Rige estándar COPE: preservación del original con marca de agua de retractación y fe de erratas enlazada bidireccionalmente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "COPE: Committee on Publication Ethics - Retraction & Correction Guidelines",
+          "source_id": "d0f9e6c9-5476-410e-886f-4bbb38556d95",
+          "locator": "Section 'Guidance for Retracting and Correcting Published Content'",
+          "retrieved_at": null,
+          "excerpt_short": "The original publication must not simply be removed; it must be retained, clearly watermarked as retracted, and bi-directionally linked to the retraction notice.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución normativa indiscutible entre el estándar ético COPE y las correcciones canónicas de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Reporte de error en comunicado publicado",
+      "Borrador de fe de erratas",
+      "Directiva COPE"
+    ],
+    "actors": [
+      "Auditor de Ética",
+      "Motor de Versionado BRIDGE",
+      "Oficial de Prensa"
+    ],
+    "steps": [
+      "Recepción del requerimiento de rectificación",
+      "Bloqueo de sobrescritura destructiva sobre el comunicado original",
+      "Inserción de banner visible y marca de agua 'MODIFICADO / RETRACTED'",
+      "Publicación de la Fe de Erratas oficial v2.0",
+      "Creación de enlaces canónicos cruzados en la base de datos",
+      "Registro de la transacción en el libro inmutable de auditoría"
+    ],
+    "states": [
+      "ERROR_FLAGGED",
+      "WATERMARK_APPLIED",
+      "ERRATUM_PUBLISHED",
+      "LINKS_SEALED"
+    ],
+    "outputs": [
+      "Registro corregido bajo estándar de máxima transparencia internacional"
+    ],
+    "exceptions": [
+      "Si la corrección involucra datos personales protegidos por la Ley 19.628, se anonimizan los datos sensibles en el documento preservado"
+    ]
+  },
+  "entities": [
+    "COPE Guidelines",
+    "Fe de Erratas",
+    "Enlace Bidireccional",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "Edición Silenciosa",
+      "type": "PROHIBITS_EXPLICITLY"
+    },
+    {
+      "from": "Fe de Erratas",
+      "to": "Mensaje Original",
+      "type": "LINKS_BIDIRECTIONALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Borrado encubierto en página web vs Estándar COPE de retractación",
+      "diferencia": "El borrado encubierto destruye la credibilidad y expone a capturas de pantalla humillantes en redes; la retractación COPE exhibe un compromiso inquebrantable con la integridad factual."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Edición silenciosa vs Retractación transparente",
+      "resolution": "Prevalece la prohibición de edición silenciosa; rige la retractación formal con enlaces bidireccionales."
+    }
+  ],
+  "metrics_and_denominators": {
+    "stealth_editing_violations": "0 eventos de modificación sin registro de auditoría"
+  },
+  "bridge_implications": "Garantiza que BRIDGE proporcione una sala de prensa digital que supere las auditorías éticas de los reguladores más exigentes del mundo.",
+  "open_gaps": [
+    "Automatización de metadatos Schema.org para señalizar correcciones ante indexadores de noticias de Google."
+  ],
+  "next_question_ids": [
+    "P10-C10",
+    "P10-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

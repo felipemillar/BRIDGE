@@ -1,0 +1,158 @@
+{
+  "question_id": "P11-F05",
+  "pilar": "P11",
+  "eje": "Inventario y clasificación de datos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre inventario y clasificación de datos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos, taxonomías y requisitos sobre inventario y clasificación se sustentan en un cuerpo riguroso de fuentes normativas y técnicas primarias: 1) Legislación Chilena de Protección de Datos y Ciberseguridad: BCN Ley N° 21.719 (promulgada 2024, vacatio legis vigente diferida a fines de 2026), que fija las categorías de datos personales y sensibles y la creación de la Agencia de Datos; BCN Ley N° 19.628 (1999, marco transitorio vigente); y BCN Ley N° 21.663 Ley Marco de Ciberseguridad (2024), que exige trazabilidad de activos y seguridad en redes del Estado y privados; 2) Estándares de Seguridad Federales y de Control de Acceso: NIST SP 800-53 Rev. 5 (Control RA-2 sobre categorización de seguridad) y NIST SP 800-162 (definición de atributos de objeto y ABAC); 3) Marcos Globales de Cumplimiento en la Nube y Vectores: Cloud Security Alliance CCM v4 (Dominio DSP-01 sobre gobierno de datos), AICPA SOC 2 (Criterios de Confidencialidad y Privacidad) y OWASP GenAI Top 10 2025 (LLM06 y LLM08 sobre fugas de información en vectores y RAG); y 4) Rectificación Canónica: P11_VERIFICATION_CORRECTIONS (49d7882a) y P11_2026_LAW_AND_PROVIDER_CORRECTION (0716e04e).",
+  "findings": [
+    {
+      "claim_id": "P11-F05-C1",
+      "claim": "La taxonomía y reglas de inventario están respaldadas convergentemente por el derecho positivo chileno (Leyes 21.719, 19.628, 21.663), estándares internacionales de ciberseguridad (NIST SP 800-53, CSA CCM v4) y guías especializadas de IA generativa (OWASP GenAI 2025).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_base_inventory_and_classification",
+      "evidence": [
+        {
+          "source_title": "P11_SOURCE_INDEX",
+          "source_id": "4608d794-4538-48e8-94fb-da95fb84e1e4",
+          "locator": "Sección 'Cluster 1: Marcos Legales Chilenos y Clasificación'",
+          "retrieved_at": null,
+          "excerpt_short": "Mapeo exhaustivo de fuentes de inventario: BCN Ley 21.719, BCN Ley 19.628, BCN Ley 21.663, NIST SP 800-53 r5, CSA CCM v4, OWASP GenAI 2025.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.663 Ley Marco de Ciberseguridad e Infraestructura Crítica",
+          "source_id": "ee032cb3-abe5-4440-948f-815a9b4fbe78",
+          "locator": "Artículos 3 y 9 'Obligaciones Generales de Seguridad y Registro'",
+          "retrieved_at": null,
+          "excerpt_short": "Las instituciones y operadores de importancia vital deben mantener un inventario actualizado de sus activos de información y aplicar medidas de segregación y trazabilidad efectiva.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Límites de Aplicabilidad Legal'",
+          "retrieved_at": null,
+          "excerpt_short": "La Ley 21.719 de Chile está en vacatio legis (vigencia diferida a fines de 2026); la Ley 19.628 es la norma transitoria. El GDPR y el EU AI Act no son legislación universal chilena.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de los documentos normativos oficiales e incorporación de las rectificaciones canónicas vigentes.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes catalogadas en fuentes/P11.json",
+      "Citas textuales verificadas"
+    ],
+    "actors": [
+      "Auditor Epistemológico",
+      "Investigador BRIDGE"
+    ],
+    "steps": [
+      "Cotejo de postulados operacionales contra textos legales y fichas NIST",
+      "Verificación de vigencia y vacatio legis de las leyes chilenas",
+      "Descarte de fuentes no sustantivas (WIPO Lex)",
+      "Consolidación en el índice de evidencia de P11"
+    ],
+    "states": [
+      "SOURCES_VERIFIED",
+      "LEGAL_STATUS_CONFIRMED",
+      "EPISTEMIC_GROUNDING_SEALED"
+    ],
+    "outputs": [
+      "Base de sustento probatorio irrefutable para la gobernanza de inventario"
+    ],
+    "exceptions": [
+      "Ninguna; las fuentes documentan textualmente las materias analizadas"
+    ]
+  },
+  "entities": [
+    "Ley 21.663",
+    "Ley 21.719",
+    "NIST SP 800-53",
+    "P11_VERIFICATION_CORRECTIONS",
+    "P11_SOURCE_INDEX"
+  ],
+  "relations": [
+    {
+      "from": "Ley 21.663",
+      "to": "Inventario de Activos",
+      "type": "MANDATES_LEGAL_OBLIGATION"
+    },
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "Vacatio Legis Ley 21.719",
+      "type": "DELIMITS_TIMING"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citar regulaciones sin verificar su fecha de entrada en vigencia vs Precisión de vacatio legis",
+      "diferencia": "Citar normas sin conocer su vacatio legis expone a la empresa al ridículo jurídico; señalar la vigencia transitoria de la Ley 19.628 y la futura Ley 21.719 demuestra maestría jurídica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "statutory_citation_accuracy": "100% de normas citadas con número de ley y estatus de vigencia exacto"
+  },
+  "bridge_implications": "Garantiza que la arquitectura de seguridad y clasificación de BRIDGE responda exactamente al marco jurídico chileno vigente y al diferido a fines de 2026.",
+  "open_gaps": [
+    "Monitoreo de la publicación del reglamento orgánico de la futura Agencia de Protección de Datos de Chile."
+  ],
+  "next_question_ids": [
+    "P11-F06",
+    "P11-F07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

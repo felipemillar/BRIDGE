@@ -1,0 +1,174 @@
+{
+  "question_id": "P02-F25",
+  "pilar": "P02",
+  "eje": "Conocimiento interno y cruce de fuentes",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué prueban AlphaSense, Contify, Glean, Elium, Jalios y otros sobre búsqueda interna y señales externas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Prueban la viabilidad técnica y las fronteras arquitectónicas entre la búsqueda semántica en repositorios internos corporativos y el cruce con señales externas estructuradas: 1) AlphaSense (AlphaSense Inc.): demuestra la potencia del RAG financiero/estratégico cruzando transcripciones de conferencias de resultados, filings ante la SEC (10-K, 10-Q), informes de analistas de Wall Street y noticias globales con documentos internos privados del cliente (SharePoint, Box, PDFs), con resúmenes citados al párrafo exacto; 2) Contify: demuestra la agregación continua de señales de mercado y competidores (noticias, webs regulatorias, licitaciones) con distribución estructurada en intranets, Slack y CRMs; 3) Glean: demuestra el estándar de oro en búsqueda empresarial interna (Enterprise Search) y asistente generativo sobre más de 100 conectores SaaS (Google Workspace, M365, Slack, Jira) con estricto respeto a las listas de control de acceso (ACL) de la empresa; 4) Elium y Jalios: demuestran la curación manual y estructuración colaborativa de conocimiento interno (wikis, intranet digital workplace), pero carecen de motores autónomos de ingesta de señales públicas y regulatorias en tiempo real.",
+  "findings": [
+    {
+      "claim_id": "P02-F25-C1",
+      "claim": "Los motores de búsqueda empresarial (Glean) resuelven la indexación interna exhaustiva con permisos nativos pero son ciegos al monitoreo reputacional externo especializado, mientras que plataformas de inteligencia de mercado (AlphaSense) integran fuentes externas financieras y documentos privados pero no cubren el flujo de vocería ni relacionamiento comunitario.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "AlphaSense, Glean, Contify"
+      },
+      "evidence": [
+        {
+          "source_id": "53d0cefb-66f0-4c74-afd5-f18f7eec9d23",
+          "source_title": "AlphaSense Market and Competitive Intelligence Platform",
+          "original_url": "https://www.alpha-sense.com/platform/",
+          "locator": "Platform Overview: External Content + Internal Content Integration",
+          "excerpt_short": "AlphaSense combines external premium content (broker research, SEC filings, global news) with internal company knowledge to deliver AI-driven market intelligence.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:36:00-03:00"
+        },
+        {
+          "source_id": "9cc4ccaf-1cc2-4e99-a496-b062204c7d08",
+          "source_title": "Glean Enterprise Search and Knowledge Assistant",
+          "original_url": "https://www.glean.com/product/enterprise-search",
+          "locator": "Core Capabilities: 100+ Connectors and Permissions Enforcement",
+          "excerpt_short": "Glean indexes internal enterprise applications while enforcing real-time permissions and source attribution for generative answers.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:36:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de fichas técnicas oficiales y evaluaciones independientes de analistas (Forrester Wave).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorios documentales corporativos (SharePoint, M365)",
+      "Transcripciones de analistas y filings regulatorios",
+      "Feeds RSS y webs públicas"
+    ],
+    "actors": [
+      "Analista de Estrategia Corporativa",
+      "Gerente de Inteligencia de Mercado",
+      "Director de Comunicaciones"
+    ],
+    "steps": [
+      "Indexación de repositorios internos vía conectores OAuth/SAML",
+      "Ingesta y normalización de documentos públicos externos",
+      "Procesamiento de embeddings y vectorización",
+      "Consulta semántica multi-fuente con verificación de ACL"
+    ],
+    "states": [
+      "Documento_Ingestado",
+      "Vectorizado",
+      "Permisos_Validados",
+      "Respuesta_Citada"
+    ],
+    "outputs": [
+      "Síntesis ejecutiva de inteligencia con citas verificables a nivel de párrafo"
+    ],
+    "exceptions": [
+      "Falla de sincronización de permisos que bloquea el acceso a documentos corporativos confidenciales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ALPHASENSE",
+      "type": "inteligencia_financiera",
+      "name": "AlphaSense Inc.",
+      "aliases": [
+        "AlphaSense"
+      ]
+    },
+    {
+      "entity_id": "ENT_GLEAN",
+      "type": "enterprise_search",
+      "name": "Glean Technologies Inc.",
+      "aliases": [
+        "Glean"
+      ]
+    },
+    {
+      "entity_id": "ENT_CONTIFY",
+      "type": "market_intelligence",
+      "name": "Contify",
+      "aliases": [
+        "Contify M&CI"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ALPHASENSE",
+      "predicate": "integra_contenido_interno_y",
+      "object_id": "Filings_Financieros_SEC",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F25-C1"
+    },
+    {
+      "subject_id": "ENT_GLEAN",
+      "predicate": "especializado_en_busqueda",
+      "object_id": "Repositorios_Internos_SaaS",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F25-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Búsqueda Interna Empresarial (Glean) vs Inteligencia Semántica Externa/Interna (AlphaSense)",
+      "Búsqueda Interna Empresarial": "Cobertura exhaustiva de más de 100 herramientas internas, resolución estricta de permisos de usuario, sin taxonomía reputacional.",
+      "Inteligencia Semántica Externa/Interna": "Cobertura profunda de filings públicos y análisis de mercado, cruce con PDFs internos, orientada a analistas financieros."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "BRIDGE debe incorporar conectores de conocimiento interno con control de permisos nativo y cruce bidireccional con alertas externas de prensa.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F26",
+    "P02-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:36:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

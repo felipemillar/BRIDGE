@@ -1,0 +1,145 @@
+{
+  "question_id": "P04-F15",
+  "pilar": "P04",
+  "eje": "Ontología y relaciones",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Cómo se evita que un grafo convierta una relación inferida en hecho comprobado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para evitar que un grafo de conocimiento promueva una relación inferida (inducida por algoritmos o modelos de lenguaje) al estatus de hecho comprobado, se aplican tres salvaguardas arquitectónicas estrictas: 1) Tipificación Epistémica de Aristas (Edge Properties / Named Graphs): toda arista en el grafo posee una propiedad obligatoria `epistemic_status: 'hecho_documentado'` o `epistemic_status: 'relacion_inferida'`; 2) Linaje Causal Obligatorio (`prov:wasGeneratedBy`): las aristas inferidas deben registrar el ID del modelo/algoritmo extractor, el prompt y el puntaje de confianza probabilística (`confidence_score < 1.0`), mientras que los hechos documentados enlazan a un hash de fragmento inmutable (`hash_sha256`); y 3) Barrera de Recuperación en Generación: el motor de razonamiento RAG tiene prohibido inyectar relaciones inferidas en respuestas de vocería oficial a menos que vayan explícitamente etiquetadas para el directivo como 'Hipótesis analítica no confirmada en documentos oficiales' (Pan et al., 2024; Hogan et al., 2021).",
+  "findings": [
+    {
+      "claim_id": "P04-F15-C1",
+      "claim": "La segregación estricta entre hechos documentados y aristas inferidas mediante metadatos de procedencia (Named Graphs / RDF*) previene la propagación de alucinaciones relacionales en el grafo corporativo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Investigación en Knowledge Graphs y LLMs"
+      },
+      "evidence": [
+        {
+          "source_id": "4d415120-9c32-462c-94bf-3a067c98d10e",
+          "source_title": "Unifying LLMs and Knowledge Graphs: A Roadmap (Pan et al., 2024)",
+          "original_url": "https://arxiv.org/abs/2306.08302",
+          "locator": "Sección 4.2: KG-enhanced LLM Reasoning and Factuality",
+          "excerpt_short": "Differentiates symbolic factual knowledge from neural inferred edges, requiring provenance tagging to prevent hallucination transfer into KG reasoning.",
+          "source_date": "2024-01-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "a857b376-bc84-4f17-9936-6502fa6dae3b",
+          "source_title": "Knowledge Graphs: Survey and Foundations (Hogan et al., 2021)",
+          "original_url": "https://arxiv.org/abs/2003.02320",
+          "locator": "Sección 3: Semantics and Deductive Knowledge",
+          "excerpt_short": "Discusses reification, named graphs, and modal truths in KGs to prevent non-monotonic inference errors.",
+          "source_date": "2021-02-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fundamentación teórica rigurosa en encuestas de referencia de Grafos y LLMs.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Arista extraída por LLM o pipeline de NLP"
+    ],
+    "actors": [
+      "Relation Validator",
+      "Epistemic Classifier",
+      "Graph Store"
+    ],
+    "steps": [
+      "Verificación de concordancia directa con texto original",
+      "Asignación de epistemic_status",
+      "Rechazo de aristas sin sustento directo para el subgrafo de hechos"
+    ],
+    "states": [
+      "Candidate_Edge",
+      "Classified_Inferred",
+      "Committed_With_Confidence"
+    ],
+    "outputs": [
+      "Subgrafo segregado donde las inferencias no contaminan los hechos comprobados"
+    ],
+    "exceptions": [
+      "Arista con alta confianza probabilística pero contradicha por documento oficial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_EDGE_EPISTEMICS",
+      "type": "mecanismo_seguridad",
+      "name": "Control Epistémico de Aristas en Grafos",
+      "aliases": [
+        "Edge Epistemic Guardrail"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_EDGE_EPISTEMICS",
+      "predicate": "previene_alucinaciones_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Comportamiento del grafo",
+      "Grafo no tipado": "Trata una correlación estadística o inferencia del LLM como un hecho idéntico a un balance auditado.",
+      "Grafo epistémicamente tipado": "Mantiene barrera infranqueable entre relaciones comprobadas y conjeturas inferidas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe aplicar este filtro para que ninguna inferencia sea presentada como hecho consumado en una minuta para Directorio.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "question_id": "P11-C15",
+  "pilar": "P11",
+  "eje": "Jurisdicciones y rectificaciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre jurisdicciones y rectificaciones, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal sobre jurisdicciones y rectificaciones abarca tres puntos críticos: 1) Estatus de WIPO Lex: El dossier inicial y la síntesis P11_PENDING_SOURCES_RESOLUTION citaban la ficha de WIPO Lex (4caa2cda) como la fuente de respaldo para la LGPD brasileña; 2) Estatus de la LGPD: El dossier ignoraba la actualización legislativa de 2026; y 3) Estatus de normativas extranjeras: Las versiones previas sugerían que el GDPR y el EU AI Act tenían aplicación jurídica obligatoria general sobre cualquier empresa en Chile. Las directrices canónicas rectoras `P11_VERIFICATION_CORRECTIONS` (49d7882a) y `P11_2026_LAW_AND_PROVIDER_CORRECTION` (0716e04e) resuelven este conflicto con fuerza de prevalencia absoluta: a) WIPO Lex (4caa2cda) queda formalmente clasificada y descartada como directorio navegacional no sustantivo, prohibiéndose su cita como evidencia sustantiva de la LGPD; b) Rige en su lugar la Lei Nº 13.709 oficial consolidada y actualizada por la Lei Nº 15.352 de 25 de febrero de 2026, obtenida directamente de fuentes parlamentarias de la Câmara dos Deputados y Presidência da República; c) Se ratifica que la Ley 21.719 en Chile se encuentra bajo vacatio legis de 24 meses (hacia fines de 2026), rigiendo transitoriamente la Ley 19.628 de 1999 y la Ley 21.663 de Ciberseguridad con su plazo de 3 horas; d) Se establece categóricamente que el GDPR y el EU AI Act son marcos de derecho comparado que no constituyen legislación universal en Chile salvo extraterritorialidad manifiesta comprobada; y e) Prevalecen en todo aspecto las rectificaciones canónicas de 49d7882a y 0716e04e sobre el dossier.",
+  "findings": [
+    {
+      "claim_id": "P11-C15-C1",
+      "claim": "Existe discrepancia en fuentes de LGPD y vigencia de leyes: prevalece canónicamente P11_VERIFICATION_CORRECTIONS y P11_2026_LAW_AND_PROVIDER_CORRECTION descalificando WIPO Lex como no sustantiva, adoptando la Lei 15.352/2026, delimitando la vacatio legis de la Ley 21.719 y deslindando el GDPR del derecho chileno.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "jurisdictional_discrepancy_and_canonical_precedence",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Prevalencia Jerárquica y Regla de Resolución de Conflictos'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia rectora: Descarte formal de WIPO Lex (4caa2cda) como directorio no sustantivo. Ley 21.719 en vacatio legis de 24 meses; Ley 19.628 vigente supletoria; GDPR no universal en Chile.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'Prevalencia Canónica sobre LGPD y Proveedores'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia sobre LGPD respaldada por Lei 13.709 actualizada a Lei 15.352 de 25/02/2026 en Câmara dos Deputados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Câmara dos Deputados: Lei Nº 15.352/2026 (Altera a LGPD)",
+          "source_id": "ea76a1ee-ec7a-4180-8d2a-716758dd60c7",
+          "locator": "Texto Original Publicado 25/02/2026",
+          "retrieved_at": null,
+          "excerpt_short": "Altera a Lei nº 13.709, de 14 de agosto de 2018 (LGPD).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución normativa incontrovertible respaldada por las fuentes legislativas oficiales y la doctrina rectora del proyecto.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Citas previas a WIPO Lex",
+      "Textos de la Câmara dos Deputados",
+      "Síntesis rectoras canónicas"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "Oficial Legal",
+      "Servicio de Validación Documental"
+    ],
+    "steps": [
+      "Purga de toda cita a WIPO Lex (4caa2cda) en la base de datos de respuestas de BRIDGE",
+      "Reemplazo sistemático por la cita a la Lei 15.352/2026 y texto consolidado de la Câmara dos Deputados",
+      "Corrección del estado de vigencia de la Ley 21.719 fijándolo formalmente en 'vacatio legis de 24 meses'",
+      "Ratificación de la Ley 19.628 y Ley 21.663 como marco vinculante presente en Chile",
+      "Validación de que ninguna respuesta infrinja la prevalencia canónica de 49d7882a y 0716e04e"
+    ],
+    "states": [
+      "WIPO_LEX_PURGED",
+      "LEI_15352_BOUND",
+      "VACATIO_LEGIS_ALIGNED",
+      "CANONICAL_CONSISTENCY_LOCKED"
+    ],
+    "outputs": [
+      "Base de conocimiento jurídicamente pura y armonizada con los más altos estándares de rigor"
+    ],
+    "exceptions": [
+      "Cualquier intento de reintroducir WIPO Lex o atribuir vigencia inmediata plena a la Ley 21.719 es rechazado por el linter"
+    ]
+  },
+  "entities": [
+    "WIPO Lex (descartada)",
+    "Lei Nº 15.352/2026",
+    "Câmara dos Deputados",
+    "P11_VERIFICATION_CORRECTIONS",
+    "P11_2026_LAW_AND_PROVIDER_CORRECTION"
+  ],
+  "relations": [
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "WIPO Lex (descartada)",
+      "type": "DISQUALIFIES_AS_NON_SUBSTANTIVE"
+    },
+    {
+      "from": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+      "to": "Lei Nº 15.352/2026",
+      "type": "ESTABLISHES_AS_CANONICAL_SOURCE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citar WIPO Lex vs Citar la publicación oficial de la Câmara dos Deputados de Brasil",
+      "diferencia": "WIPO Lex era un directorio secundario con enlaces caídos; la publicación oficial de la Câmara dos Deputados confiere certeza jurídica plena respecto a la ley vigente en 2026."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Fuente Oficial de LGPD Brasileña",
+      "dossier_claim": "WIPO Lex (4caa2cda)",
+      "canonical_resolution": "Descalificada como no sustantiva; rigen Lei 13.709 y Lei 15.352/2026 vía Câmara dos Deputados."
+    },
+    {
+      "topic": "Vigencia de Ley 21.719 en Chile",
+      "dossier_claim": "Vigente de forma inmediata",
+      "canonical_resolution": "En vacatio legis de 24 meses hacia fines de 2026; rige Ley 19.628 y Ley 21.663."
+    }
+  ],
+  "metrics_and_denominators": {
+    "disqualified_source_citation_count": "0",
+    "statutory_accuracy_rate": "1.0"
+  },
+  "bridge_implications": "Garantiza que BRIDGE cuente con una postura regulatoria inexpugnable ante las autoridades de protección de datos de Chile y Brasil.",
+  "open_gaps": [
+    "Monitoreo de resoluciones sancionatorias de la ANPD brasileña bajo la nueva redacción de la Lei 15.352."
+  ],
+  "next_question_ids": [
+    "P11-C16",
+    "P11-F01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

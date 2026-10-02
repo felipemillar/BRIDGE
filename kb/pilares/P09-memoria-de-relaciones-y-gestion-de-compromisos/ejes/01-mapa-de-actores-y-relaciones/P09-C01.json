@@ -1,0 +1,152 @@
+{
+  "question_id": "P09-C01",
+  "pilar": "P09",
+  "eje": "Mapa de actores y relaciones",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre mapa de actores y relaciones, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: En las síntesis internas preliminares se sugería recopilar perfiles psicológicos informales, afiliaciones partidarias privadas y dinámicas familiares de los dirigentes comunitarios para 'mejorar la negociación'. Las fuentes normativas (Ley 21.719 de Chile) y los estándares de gobernanza prohíben taxativamente el almacenamiento de datos sensibles íntimos. Versión Prevalente: Conforme a la Rectificación R1 de `P09_VERIFICATION_CORRECTIONS` (`f7d21328`), prevalece la prohibición absoluta de almacenar datos sensibles o inferencias de vida privada. El mapa de actores en BRIDGE se circunscribe exclusivamente a atributos de rol formal, representatividad estatutaria, afiliación comunitaria pública y registros de personería jurídica ante el Estado.",
+  "findings": [
+    {
+      "claim_id": "P09-C01-C1",
+      "claim": "P09_VERIFICATION_CORRECTIONS rectifica las síntesis previas eliminando cualquier intento de almacenar perfiles psicológicos o datos sensibles, consagrando la estricta sujeción a la Ley 21.719.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "contrast_stakeholder_mapping_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R1 'Eliminación de Perfilamiento Íntimo'",
+          "retrieved_at": null,
+          "excerpt_short": "Se revoca cualquier mención previa sobre captura de 'sensibilidades privadas' o 'afinidad política'. El sistema debe restringirse a atributos profesionales e institucionales para cumplir plenamente con la Ley 21.719.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 20.730 que Regula el Lobby y las Gestiones de Intereses Particulares",
+          "source_id": "f6fa26bd-ba44-4b03-bbed-ad4d4296f20f",
+          "locator": "Artículos 5 y 8",
+          "retrieved_at": null,
+          "excerpt_short": "Los registros de audiencias individualizan a los participantes en razón del cargo, función o personería invocada, sin indagar en aspectos ajenos al interés representado.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia canónica explícita de P09_VERIFICATION_CORRECTIONS sobre documentos preliminares.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Textos de síntesis preliminares",
+      "Dictamen de auditoría canónica",
+      "Ley 21.719"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "Oficial de Protección de Datos",
+      "Arquitecto de BRIDGE"
+    ],
+    "steps": [
+      "Detección de discrepancia en catálogo de atributos de actores",
+      "Eliminación de campos de perfilamiento sensible del schema",
+      "Fijación de la regla canónica prevalente"
+    ],
+    "states": [
+      "Discrepancia Analizada",
+      "Rectificación Canónica Aplicada",
+      "Schema Blindado"
+    ],
+    "outputs": [
+      "Schema `stakeholders` depurado sin campos sensibles"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P09_VERIFICATION_CORRECTIONS",
+    "Ley 21.719",
+    "Perfilamiento Sensible Prohibido",
+    "Ley 20.730",
+    "BRIDGE"
+  ],
+  "relations": [
+    {
+      "from": "P09_VERIFICATION_CORRECTIONS",
+      "to": "Perfilamiento Sensible",
+      "type": "PROHIBITS"
+    },
+    {
+      "from": "BRIDGE",
+      "to": "Ley 21.719",
+      "type": "COMPLIES_STRICTLY_WITH"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Perfilamiento informal sin compliance vs Catálogo institucional regulado",
+      "diferencia": "El perfilamiento informal expone a multas millonarias por violación de privacidad; el catálogo institucional regulado protege la legitimidad corporativa."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "Síntesis preliminar P09_RESEARCH_DOSSIER: Sugería capturar notas sobre personalidad e inclinaciones personales.",
+      "claim_b": "P09_VERIFICATION_CORRECTIONS Rectificación R1: Prohíbe tajantemente datos sensibles privados.",
+      "resolution": "Prevalece canónicamente P09_VERIFICATION_CORRECTIONS en virtud de la regla de jerarquía del mandato."
+    }
+  ],
+  "metrics_and_denominators": {
+    "discrepancies_resolved_count": "1 discrepancia mayor resuelta",
+    "compliance_alignment_rate": "100% con Ley 21.719"
+  },
+  "bridge_implications": "Bloquear en el frontend de BRIDGE cualquier campo de texto libre etiquetado como 'datos personales' o 'perfil informal'.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C02",
+    "P09-F07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

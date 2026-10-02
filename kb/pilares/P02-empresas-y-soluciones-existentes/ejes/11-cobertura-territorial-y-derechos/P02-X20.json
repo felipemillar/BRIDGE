@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X20",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Cobertura territorial y derechos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar cobertura territorial y derechos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo de datos con las siguientes especificaciones: 1) Variables: Código de territorio (`country_iso`, `region_id`), organismo de derechos de autor (`copyright_agency_id`), estatus de licencia (`licencia_vigente`, `requiere_canon`, `dominio_publico`), límite de retención temporal (`max_retention_days`), permiso de almacenamiento de texto completo (`full_text_allowed_bool`), tipo de residencia de datos requerida (`local_data_residency_required_bool`), y nivel de soberanía de cifrado (`byok_supported_bool`); 2) Categorías: Fuentes abiertas sin canon (Diario Oficial, resoluciones públicas), Medios bajo régimen de derechos de autor (prensa, broadcast), y Documentos internos de infraestructura crítica (expedientes confidenciales); 3) Relaciones: `Medio_Noticioso -> Administrado_Por -> Sociedad_Derechos`, `Cliente -> Exige_Residencia_En -> Pais_Soberano`, `Documento -> Expira_En_Base_De_Datos_Tras -> Dias_Limite`; 4) Condiciones de frontera: Regla algorítmica de purga automática que elimina el texto íntegro de notas de prensa transcurridos 30 días, conservando exclusivamente los metadatos, resúmenes y vector embeddings derivados.",
+  "findings": [
+    {
+      "claim_id": "P02-X20-C1",
+      "claim": "La gobernanza técnica de derechos territoriales exige incorporar reglas de expiración automática de textos protegidos por copyright y esquemas de cifrado soberano por jurisdicción.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Datos Legales"
+      },
+      "evidence": [
+        {
+          "source_id": "5556e455-7c2c-458c-bcad-e0910d9ccc4e",
+          "source_title": "P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1",
+          "original_url": null,
+          "locator": "Data Governance Schema for Territorial Rights",
+          "excerpt_short": "Schema enforcing automatic document purging for copyrighted media texts and local cryptographic key management per regulatory jurisdiction.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación arquitectónica de cumplimiento normativo.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Esquema de gobernanza de derechos",
+      "Tabla de aranceles de entidades de copyright",
+      "Políticas de purga de datos"
+    ],
+    "actors": [
+      "Administrador de Base de Datos",
+      "Oficial de Seguridad"
+    ],
+    "steps": [
+      "Asignación de banderas de copyright en la ingesta",
+      "Programación de tareas cron de purga de textos completos",
+      "Verificación de residencia de datos por tenant"
+    ],
+    "states": [
+      "Metadatos_Asignados",
+      "Purga_Programada",
+      "Cumplimiento_Auditado"
+    ],
+    "outputs": [
+      "Base de datos conforme a regulaciones territoriales de derechos"
+    ],
+    "exceptions": [
+      "Clientes con acuerdos directos de licencia perpetua con medios específicos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODELO_DERECHOS",
+      "type": "modelo_datos",
+      "name": "Esquema Estructurado Derechos y Soberanía Territorial",
+      "aliases": [
+        "Territorial Rights Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODELO_DERECHOS",
+      "predicate": "aplica_purga_a",
+      "object_id": "Textos_Protegidos_30_Dias",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X20-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo Estructurado de Derechos vs Almacenamiento Indiscriminado",
+      "Modelo Estructurado": "Purga automática, minimización de datos, mitigación de riesgos legales.",
+      "Almacenamiento Indiscriminado": "Acumulación de gigabytes de textos ajenos protegidos; contingencia legal latente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe programar su base de datos vectorial para almacenar embeddings y resúmenes sin retener el texto original protegido más allá del plazo legal.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:52:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

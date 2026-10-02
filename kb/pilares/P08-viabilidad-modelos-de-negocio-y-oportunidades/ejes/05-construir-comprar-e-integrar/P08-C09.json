@@ -1,0 +1,155 @@
+{
+  "question_id": "P08-C09",
+  "pilar": "P08",
+  "eje": "Construir, comprar e integrar",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre construir, comprar e integrar, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radica en la conveniencia de desarrollar infraestructura de IA propietaria frente a integrar servicios administrados: Las síntesis preliminares del Research Dossier contemplaban el entrenamiento de modelos de lenguaje propietarios y la construcción de un motor vectorial propio para no depender de proveedores externos. En contraste, las fuentes de ingeniería de Google Cloud, Microsoft Azure y el P08_QUALITY_ADDENDUM demuestran que entrenar LLMs locales en una startup destruye el flujo de caja (exigiendo millones de dólares en GPUs) y genera obsolescencia acelerada. Prevalece la regla del QUALITY_ADDENDUM: la estrategia oficial es el desacoplamiento pragmático: comprar y consumir cómputo fundacional (Google Vertex AI / Azure OpenAI) bajo contrato enterprise con Zero Data Retention, y enfocar el 100% de la ingeniería propia en los conectores institucionales chilenos (BCN, SMA, InfoLobby) y el grafo ontológico corporativo.",
+  "findings": [
+    {
+      "claim_id": "P08-C09-C1",
+      "claim": "Conforme al P08_QUALITY_ADDENDUM, se descarta el desarrollo in-house de modelos fundacionales de IA y se consagra la integración de APIs cloud certificadas, concentrando los recursos en conectores locales propietarios.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "tech_architecture_reconciliation",
+      "evidence": [
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 6 'Compuertas de Decisión Técnica: Make vs Buy'",
+          "retrieved_at": null,
+          "excerpt_short": "Precedencia arquitectónica canónica: Se veta cualquier iniciativa de preentrenamiento o fine-tuning mayor de modelos de lenguaje fundacionales en BRIDGE. Los LLMs son comodities de escala masiva provistos por Google y Microsoft. El valor propietario y defendible de la empresa radica en: a) La ingeniería inversa de portales y APIs del Estado chileno (BCN, SMA, InfoLobby); b) El grafo de conocimiento relacional; y c) La consola de verificación HITL.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Google Cloud Vertex AI: Generative AI Data Governance & Enterprise Privacy",
+          "source_id": "99ed7566-0ecf-45dd-b475-8b81c1429419",
+          "locator": "Enterprise Architecture Guide 'Build vs Buy for Regulated Industries', p. 1-4",
+          "retrieved_at": null,
+          "excerpt_short": "Enterprise clients achieve faster time to market and maintain SOC 2 compliance by orchestrating managed foundational APIs rather than maintaining specialized machine learning infrastructure.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las mejores prácticas de Google Cloud y el mandato del QUALITY_ADDENDUM de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Propuesta de LLM propio",
+      "Costos de infraestructura GPU",
+      "QUALITY_ADDENDUM P08"
+    ],
+    "actors": [
+      "CTO",
+      "Lead Researcher",
+      "Auditor Técnico"
+    ],
+    "steps": [
+      "Detección de propuesta de desarrollo de LLM propio",
+      "Aplicación de precedencia de QUALITY_ADDENDUM",
+      "Fijación de arquitectura modular basada en APIs administradas"
+    ],
+    "states": [
+      "Discusión Técnica",
+      "Veto de LLM Propio",
+      "Arquitectura API Ratificada"
+    ],
+    "outputs": [
+      "Lineamientos oficiales de ingeniería de BRIDGE"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P08_QUALITY_ADDENDUM",
+    "Google Cloud Vertex AI",
+    "Microsoft Azure OpenAI",
+    "Conectores Propietarios",
+    "Grafo Ontológico"
+  ],
+  "relations": [
+    {
+      "from": "QUALITY_ADDENDUM",
+      "to": "Entrenamiento de LLM Propio",
+      "type": "vetoes"
+    },
+    {
+      "from": "Ingeniería BRIDGE",
+      "to": "Conectores Locales BCN/SMA/InfoLobby",
+      "type": "focuses_on"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Desarrollar LLM propio vs Consumir APIs empresariales",
+      "diferencia": "El LLM propio cuesta USD 2M y 12 meses de trabajo con alto riesgo de obsolescencia; las APIs empresariales cuestan USD 80/mes/cliente y permiten operar en 30 días con seguridad certificada."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P08-F25-C1",
+        "P08-C09-C1"
+      ],
+      "difference": "Discrepancia entre la ambición inicial de crear modelos propios y la realidad de la comoditización del cómputo.",
+      "resolution": "resuelta",
+      "reason": "El QUALITY_ADDENDUM formaliza el consumo de APIs administradas como la única estrategia eficiente de capital."
+    }
+  ],
+  "metrics_and_denominators": {
+    "time_to_market_advantage": "Reducción de 12 meses a 4 semanas para puesta en marcha operativa"
+  },
+  "bridge_implications": "Concentrar a todo el equipo de desarrollo en los conectores chilenos, la ontología y la interfaz del analista HITL.",
+  "open_gaps": [
+    "Monitorear periódicamente los precios de tokens de Gemini y GPT para capturar rebajas automáticas."
+  ],
+  "next_question_ids": [
+    "P08-C10",
+    "P08-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

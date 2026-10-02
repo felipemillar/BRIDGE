@@ -1,0 +1,158 @@
+{
+  "question_id": "P10-F23",
+  "pilar": "P10",
+  "eje": "RACI, DACI y cadena de aprobación",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre rACI, DACI y cadena de aprobación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos operacionales, normativos y técnicos sobre cadenas de aprobación y matrices RACI/DACI se sustentan en un cuerpo riguroso de fuentes documentadas: 1) Responsabilidad fiduciaria indelegable y obligatoriedad legal de veracidad: Ley 18.045 de Mercado de Valores de Chile (Art. 9 y 10, promulgada 1981, actualizada) y Norma de Carácter General NCG 30 de la CMF, estableciendo la responsabilidad penal y administrativa de directores y gerentes generales sobre revelaciones; 2) Segregación técnica de funciones y sistemas de registro: Broadsight 'System of Record for Corporate Communications' (2024-2025) y 'Product Workflow and Communications Knowledge', documentando la separación arquitectónica entre Driver, Approver y Publisher; 3) Escalamiento por ausencia y flujos multinivel: Sprinklr 'Unified Platform Release & Approval Workflows' y Presspage 'Content Approval Workflow and Newsroom FAQ' (2024), detallando reglas de contingencia y registros de auditoría; y 4) Gobernanza de riesgos en crisis: ISO 31000:2018 (PECB Guidelines, Cláusula 5.4.2) y City of Oshawa 'Corporate Communications Policy', que fija la autoridad exclusiva de vocería y delegación en el administrador general.",
+  "findings": [
+    {
+      "claim_id": "P10-F23-C1",
+      "claim": "La gobernanza de aprobación está respaldada convergentemente por el derecho corporativo chileno (Ley 18.045 / NCG 30), normas internacionales de riesgo (ISO 31000) y especificaciones técnicas de software enterprise (Broadsight, Sprinklr, Presspage).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_base_approval_chains",
+      "evidence": [
+        {
+          "source_title": "P10_SOURCE_INDEX: Indice Maestro de Fuentes, Auditoria y Jerarquia",
+          "source_id": "1c52f005-30d5-4877-9b75-31f0785411ca",
+          "locator": "Sección 'Cluster 3: Flujos de Aprobación, Gobernanza y Plataformas'",
+          "retrieved_at": null,
+          "excerpt_short": "Mapeo exhaustivo de fuentes: Broadsight (arquitectura de registro), Sprinklr (escalamiento y tiers), Presspage (flujo editorial y noticias), BCN Ley 18.045 (responsabilidad legal).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Auditability and Workflow Governance'",
+          "retrieved_at": null,
+          "excerpt_short": "Enterprise communications governance requires a permanent audit trail establishing who contributed, who reviewed, and who gave ultimate authorization before transmission.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "City of Oshawa: Corporate Communications Policy (Spokespersons & Approval)",
+          "source_id": "b634cc27-b43f-4d8d-849c-fdb9b0cfebe8",
+          "locator": "Section 'Departmental Review and Emergency Delegation'",
+          "retrieved_at": null,
+          "excerpt_short": "All public releases must undergo departmental sign-off prior to release. In emergency circumstances, approval authority concentrates in the City Manager.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Trazabilidad documental completa y validada en fuentes primarias activas.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes catalogadas en fuentes/P10.json",
+      "Citas textuales verificadas"
+    ],
+    "actors": [
+      "Auditor Documental",
+      "Investigador BRIDGE"
+    ],
+    "steps": [
+      "Cotejo de afirmaciones contra pasajes originales",
+      "Verificación de vigencia jurídica y técnica",
+      "Descarte de fuentes fallidas o con pantallas anti-bot",
+      "Consolidación en matriz de procedencia"
+    ],
+    "states": [
+      "SOURCES_INDEXED",
+      "EVIDENCE_MAPPED",
+      "CONFIRMED_ACCURACY"
+    ],
+    "outputs": [
+      "Registro de sustento epistemológico y bibliográfico"
+    ],
+    "exceptions": [
+      "Ninguna; las fuentes documentan directamente los preceptos expuestos"
+    ]
+  },
+  "entities": [
+    "Ley 18.045",
+    "ISO 31000",
+    "City of Oshawa Policy",
+    "Broadsight",
+    "P10_SOURCE_INDEX"
+  ],
+  "relations": [
+    {
+      "from": "Ley 18.045",
+      "to": "Aprobación Colegiada",
+      "type": "MANDATES_BY_LAW"
+    },
+    {
+      "from": "Broadsight",
+      "to": "Segregación de Funciones",
+      "type": "IMPLEMENTS_TECHNICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Afirmaciones de manual de PR sin citar vs Base documental verificada",
+      "diferencia": "Los manuales de relaciones públicas tradicionales dan consejos abstractos; la base documental combina obligaciones penales de la ley de valores con arquitectura de software."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "substantive_quote_density": "100% de afirmaciones soportadas por citas directas y UUIDs canónicos"
+  },
+  "bridge_implications": "Garantiza que la base de conocimiento de BRIDGE no dependa de suposiciones de diseño, sino de normas legales y arquitecturas enterprise probadas.",
+  "open_gaps": [
+    "Ampliación de jurisprudencia sancionatoria de la CMF en materias de divulgación tardía para ilustrar casos extremos."
+  ],
+  "next_question_ids": [
+    "P10-F24",
+    "P10-F25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

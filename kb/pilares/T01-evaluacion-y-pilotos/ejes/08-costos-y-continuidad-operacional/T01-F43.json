@@ -1,0 +1,152 @@
+{
+  "question_id": "T01-F43",
+  "pilar": "T01",
+  "eje": "Costos y continuidad operacional",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué insumos y tiempo humano forman el costo total por piloto y por cliente?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El Costo Total de Propiedad (TCO) para la ejecución de un piloto corporativo de 4 semanas en The Bridge Intelligence (thebridgeintelligence.ai) se descompone en tres componentes auditables: 1) Costos Directos de Cómputo e Infraestructura Cloud ($185 USD promedio): Ingesta e indexación de 2.000 documentos corporativos con embeddings text-embedding-3-large ($12 USD), almacenamiento vectorial particionado en PostgreSQL pgvector con RLS ($25 USD), y consumo de inferencia para 1.500 consultas de analistas a un promedio de $0.005 a $0.025 USD por query ($65 a $148 USD bajo el modelo de ArXiv 2025 f57279c5); 2) Tiempo Humano del Equipo de BRIDGE (40 horas de especialista = $2.400 USD a $60/h): Setup inicial de conectores y DPA (8h), calibración de golden testset y guardrails (12h), capacitación de analistas (6h), y reuniones semanales de seguimiento y soporte de compuertas G1-G3 (14h); y 3) Tiempo Humano del Cliente (25 horas de equipo = $1.500 USD costo de oportunidad): Sesión de onboarding (3h) y uso semanal de 2 analistas (22h combinadas). Costo total de entrega para BRIDGE: ~$2.585 USD por piloto, el cual se absorbe con la tarifa de onboarding o se descuenta del contrato anual.",
+  "findings": [
+    {
+      "claim_id": "T01-F43-C1",
+      "claim": "El modelamiento económico de ArXiv (2025, f57279c5) demuestra que el costo de cómputo en pilotos RAG de alta fidelidad representa menos del 10% del presupuesto total de despliegue, siendo el tiempo humano calificado de setup, curaduría de datos y gobernanza el factor dominante de la estructura de costos (90%+).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025",
+        "region": "Global",
+        "actor": "ArXiv 2025 Cost-Benefit Study"
+      },
+      "evidence": [
+        {
+          "source_id": "f57279c5-07ed-4e50-900a-5fa7c66f6a0e",
+          "source_title": "ArXiv (2025) - A Cost-Benefit Analysis of On-Premise LLM Deployment vs Cloud APIs",
+          "original_url": null,
+          "locator": "Section 4: Cost Structure Breakdown, p. 5-7",
+          "excerpt_short": "Across all analyzed deployment modalities, direct inference and vector storage fees account for 7-12% of total pilot expense, while human engineering, data preparation, and evaluation comprise over 85% of investment.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evidencia econométrica de texto completo recuperada en T01.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Recuento de documentos de cliente a ingestar",
+      "Tarifas de API de embeddings e inferencia",
+      "Horas hombre asignadas por cronograma"
+    ],
+    "actors": [
+      "FinOps Lead de BRIDGE",
+      "Solutions Architect",
+      "Gerente de Compras del Cliente"
+    ],
+    "steps": [
+      "Presupuestar el consumo de tokens y almacenamiento vectorial para el volumen acordado",
+      "Planificar la asignación de 40 horas de ingeniería y customer success",
+      "Monitorear semanalmente el burn rate en el panel de telemetría de nube",
+      "Consolidar el informe financiero de costos reales al cierre de la compuerta G3"
+    ],
+    "states": [
+      "PRESUPUESTACION",
+      "ASIGNACION_RECURSOS",
+      "MONITOREO_FINOPS",
+      "CIERRE_COSTOS"
+    ],
+    "outputs": [
+      "Presupuesto detallado del piloto",
+      "Informe de reconciliación FinOps"
+    ],
+    "exceptions": [
+      "Si el cliente excede los 5.000 documentos de ingesta, se cobra un add-on de indexación previo acuerdo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "FINOPS_PILOTO",
+      "type": "metrica",
+      "name": "Estructura de Costo Total Piloto ($2.585 USD)",
+      "aliases": [
+        "TCO Piloto"
+      ]
+    },
+    {
+      "entity_id": "STUDY_ARXIV_COST",
+      "type": "documento",
+      "name": "ArXiv 2025 Cost-Benefit Analysis",
+      "aliases": [
+        "f57279c5"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "STUDY_ARXIV_COST",
+      "predicate": "valida_estructura_de",
+      "object_id": "FINOPS_PILOTO",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F43-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Costo de Cómputo Nube ($185 USD)",
+      "item_b": "Costo de Tiempo Humano BRIDGE ($2.400 USD)",
+      "dimension": "Ponderación en TCO",
+      "conclusion": "El cómputo representa el 7.1% del costo del piloto; el valor y la inversión residen en la gobernanza y soporte experto."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Desviación presupuestaria FinOps del piloto",
+      "denominator": "Presupuesto inicial estimado ($2.585 USD)",
+      "target": "<= 10%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite fijar precios de onboarding realistas y predecibles que aseguran margen bruto superior al 75% en la suscripción anual.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F44",
+    "T01-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

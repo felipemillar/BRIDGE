@@ -1,0 +1,140 @@
+{
+  "question_id": "T01-X03",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Diseño estadístico y tamaño de muestra",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Cómo evitar seleccionar solo casos fáciles o provenientes de un único sector?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para prevenir el sesgo de selección y evitar la trampa de evaluar a The Bridge Intelligence únicamente en casos triviales o monopolizados por una sola industria, se aplica una Matriz de Estratificación Cruzada Bidimensional (conforme a ALCE / Gao et al. 2023, SummEval / Fabbri et al. 2021 y T01_QUALITY_ADDENDUM): 1) Dimensión 1: Complejidad Epistémica (3 estratos con cuotas fijas): 40% Casos Fácticos Estándar (documento único unívoco), 35% Casos Complejos Multi-Documento (requieren contrastar 3 o más fuentes distantes en el tiempo), y 25% Casos Adversariales y de Conflicto (fuentes discrepantes, prensa vs CMF, o preguntas con premisas falsas según SABER / Zhu et al. 2026); 2) Dimensión 2: Diversidad Sectorial Obligatoria: La suite de prueba debe distribuir sus casos en al menos cuatro industrias reguladas heterogéneas: Minería y Recursos Naturales (RCA y comunidades, 30%), Banca y Servicios Financieros (CMF y Basilea III, 25%), Energía e Infraestructura (licitaciones y tarifas, 25%), y Retail / Telecomunicaciones (protección al consumidor y datos personales Ley 21.719, 20%).",
+  "findings": [
+    {
+      "claim_id": "T01-X03-C1",
+      "claim": "SummEval (Fabbri et al. 2021) y ALCE (Gao et al. 2023) demuestran que los benchmarks de evaluación que no imponen estratificación forzada por dificultad y por dominio sufren de un sesgo optimista de hasta 25 puntos porcentuales, fracasando estrepitosamente al trasladarse a producción.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2023",
+        "region": "Global",
+        "actor": "Fabbri et al. & Gao et al."
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 2: Benchmark Stratification Principles",
+          "excerpt_short": "To prevent cherry-picking, benchmark construction must enforce stratified sampling across text length, source difficulty, and topic domains.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio metodológico fundamental documentado en literatura científica.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Banco maestro de 300 consultas potenciales",
+      "Matriz de cuotas por complejidad y sector"
+    ],
+    "actors": [
+      "QA Test Designer",
+      "Auditor de Muestreo"
+    ],
+    "steps": [
+      "Clasificar cada consulta candidata según complejidad (1, 2, 3) y sector industrial (A, B, C, D)",
+      "Muestrear aleatoriamente dentro de cada celda de la matriz hasta llenar las cuotas porcentuales fijas",
+      "Verificar que ninguna industria supere el 30% del testset total",
+      "Congelar el Golden Dataset estratificado con firma SHA-256"
+    ],
+    "states": [
+      "CLASIFICACION_CASOS",
+      "MUESTREO_POR_CUOTAS",
+      "VERIFICACION_EQUILIBRIO",
+      "TESTSET_ESTRATIFICADO_CONGELADO"
+    ],
+    "outputs": [
+      "Golden Testset Estratificado Bidimensional de 200 Casos"
+    ],
+    "exceptions": [
+      "Si un sector carece de suficientes casos complejos, se recurre a la generación sintética guiada por ARES"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "MATRIZ_ESTRATIFICADA",
+      "type": "documento",
+      "name": "Matriz de Estratificación Bidimensional",
+      "aliases": [
+        "Balanced Benchmark Matrix"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "MATRIZ_ESTRATIFICADA",
+      "predicate": "evita_sesgo_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Muestreo por Conveniencia (Casos Fáciles)",
+      "item_b": "Muestreo Estratificado Forzado (BRIDGE)",
+      "dimension": "Validez externa",
+      "conclusion": "La conveniencia produce métricas infladas que caen en producción; la estratificación forzada garantiza resiliencia en casos reales extremos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Índice de diversidad sectorial de Shannon en el testset",
+      "denominator": "Distribución sobre 4 sectores",
+      "target": ">= 0.95 (máximo equilibrio)"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Demuestra a clientes de minería, banca y energía que el software fue rigurosamente probado en su vertical específico.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

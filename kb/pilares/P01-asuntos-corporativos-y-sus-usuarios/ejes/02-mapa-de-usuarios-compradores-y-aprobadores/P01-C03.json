@@ -1,0 +1,178 @@
+{
+  "question_id": "P01-C03",
+  "pilar": "P01",
+  "eje": "Mapa de usuarios, compradores y aprobadores",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre mapa de usuarios, compradores y aprobadores, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia radica en que las fuentes gremiales tradicionales (Dircom, PRSA, IABC, LCM) asumen que el CCO o Dircom es el decisor único y autosuficiente para adquirir herramientas de software, mientras que la síntesis interna B2B demuestra que la decisión está rígidamente fragmentada en una tríada donde el CCO es solo el Usuario/Comprador y el CISO y Fiscal Legal actúan como Aprobadores con poder de veto vinculante. Prevalece la versión de separación estricta de roles con veto vinculante de CISO y Legal (Hipótesis HT-3), ya que omitir los requisitos de seguridad y cumplimiento normativo conduce al bloqueo inmediato del software en la etapa de homologación.",
+  "findings": [
+    {
+      "claim_id": "P01-C03-C1",
+      "claim": "Las fuentes gremiales de comunicación asumen un comprador monolítico (el Dircom), omitiendo las exigencias de ciberseguridad y riesgo normativo; en contraste, la síntesis B2B corporativa demuestra que el CISO y el Fiscal Legal ejercen poder de veto vinculante e insoslayable sobre herramientas de IA corporativa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "C-Suite B2B"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7: Discrepancias en el Mapa de Decisión B2B",
+          "excerpt_short": "Discrepancia entre la visión monolítica gremial y la realidad B2B tripartita con veto vinculante del CISO y Fiscal Legal.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:09:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C03-C2",
+      "claim": "Prevalece la versión de la tríada B2B con veto vinculante de CISO y Legal (HT-3): el CISO veta por riesgo de fuga de datos o uso de LLMs públicos de terceros, y el Fiscal Legal veta por responsabilidad administrativa o penal ante alucinaciones que afecten la Ley 20.730 o normativas CMF.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Gobernanza Corporativa B2B"
+      },
+      "evidence": [
+        {
+          "source_id": "059b0334-329a-41a0-8dd9-44d7ea87aeca",
+          "source_title": "P01_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 4: Hipótesis de Trabajo HT-3 y Veto Técnico",
+          "excerpt_short": "Prevalencia de la hipótesis HT-3: CISO y Legal como aprobadores críticos con capacidad de bloqueo unilateral.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:09:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Hipótesis de diseño B2B corroborada en el corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Propuesta de valor para el CCO",
+      "Requisitos de seguridad ISO/SOC2 del CISO",
+      "Matriz de cumplimiento de Fiscalía"
+    ],
+    "actors": [
+      "Usuario (CCO)",
+      "Comprador (CEO/CFO)",
+      "Aprobador Técnico (CISO)",
+      "Aprobador Normativo (Fiscal Legal)"
+    ],
+    "steps": [
+      "Demostración de eficiencia a CCO",
+      "Presentación de arquitectura privada a CISO",
+      "Revisión de no-fuga y compliance con Fiscal",
+      "Aprobación mancomunada"
+    ],
+    "states": [
+      "Prospecto_Monolítico_Rechazado",
+      "Estructura_Tripartita_Activada",
+      "CISO_Aprobado",
+      "Venta_B2B_Cerrada"
+    ],
+    "outputs": [
+      "Acuerdo de nivel de servicio B2B",
+      "Certificado de cumplimiento VPC"
+    ],
+    "exceptions": [
+      "Intento de venta directa al CCO ignorando el circuito de homologación de ciberseguridad"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_VETO_VINCULANTE_CISO",
+      "type": "mecanismo_control",
+      "name": "Veto Vinculante de CISO y Fiscal Legal",
+      "aliases": [
+        "Poder de Bloqueo B2B"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_VETO_VINCULANTE_CISO",
+      "predicate": "determina_exito_de",
+      "object_id": "Adopción_Tecnología_IA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C03-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Visión Gremial Tradicional vs Síntesis B2B Corregida",
+      "Visión Gremial (PRSA/Dircom/LCM)": "El CCO decide y compra solo; la evaluación se limita a usabilidad y precio.",
+      "Síntesis B2B Corregida (P01 Prevaleciente)": "Estructura tripartita rígida: CCO usuario, CEO comprador, y CISO/Legal aprobadores con potestad de veto vinculante."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gobernanza",
+      "implication": "Construir los paquetes de venta y documentación técnica de BRIDGE dirigidos explícitamente a levantar las objeciones del CISO y Fiscal Legal.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-C04",
+    "P01-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:09:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

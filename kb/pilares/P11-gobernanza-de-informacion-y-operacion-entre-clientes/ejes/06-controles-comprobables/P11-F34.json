@@ -1,0 +1,169 @@
+{
+  "question_id": "P11-F34",
+  "pilar": "P11",
+  "eje": "Controles comprobables",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar controles comprobables de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar controles de seguridad comprobables de forma estructurada exige un modelo de datos formal fundamentado en los catálogos estandarizados de NIST SP 800-53 Rev. 5, AICPA SOC 2 y Cloud Security Alliance (CCM v4), compuesto por seis entidades principales: 1) `ControlDef`: Define el control técnico o procedimental (`control_id`, `family` [AC, SC, AU, IR], `framework` [SOC2, ISO27001, NIST], `title`, `description`, `control_type` [preventive, detective, corrective]); 2) `ControlImplementation`: Modela la implementación técnica real en el sistema (`impl_id`, `control_id`, `component` [PostgreSQL, Qdrant, Redis, KMS], `technical_mechanism` [RLS, CMK_envelope, WORM_lock], `code_reference` [git_commit_hash, file_path], `is_automated`); 3) `TelemetryAssertion`: Especifica la prueba reproducible que valida el control (`assertion_id`, `impl_id`, `test_type` [ci_cd_test, dynamic_pentest, synthetic_probe], `test_script_path`, `expected_outcome` [403_forbidden, 0_records, recall_0], `frequency` [per_commit, daily, continuous]); 4) `AuditEvidence`: Almacena la evidencia auditable inmutable (`evidence_id`, `assertion_id`, `execution_timestamp`, `status` [pass, fail], `raw_log_uri`, `sha256_hash`, `signoff_operator`); 5) `AttestationReport`: Modela los informes formales de terceros (`report_id`, `framework`, `report_type` [SOC2_Type2, ISO_Certificate, Pentest_Report], `auditor_firm`, `period_start`, `period_end`, `opinion` [unqualified, qualified], `attachment_uri`); y 6) `TenantSecurityProfile`: Registra la postura de seguridad y excepciones contratadas por cada cliente (`tenant_id`, `cmk_key_arn`, `data_retention_days`, `audit_log_target_arn`, `pilot_mode_active`). Las relaciones clave imponen que todo `ControlImplementation` debe contar con al menos una `TelemetryAssertion` automatizada y que ninguna `AuditEvidence` pueda ser alterada tras su registro.",
+  "findings": [
+    {
+      "claim_id": "P11-F34-C1",
+      "claim": "El modelo relacional estructurado para controles comprobables integra definiciones normativas (NIST/SOC2), implementaciones técnicas en código, aserciones automatizadas de prueba, evidencias firmadas y atestaciones de terceros.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_verifiable_controls",
+      "evidence": [
+        {
+          "source_title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations",
+          "source_id": "24c7952c-3d6a-417c-8e7d-746065c9ca20",
+          "locator": "Section 'Control Structure, Baselines, and Assessment Specifications'",
+          "retrieved_at": null,
+          "excerpt_short": "Each control definition consists of control identifier, name, control statement, supplemental guidance, control enhancements, references, and assessment objectives to enable structured validation.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AICPA: System and Organization Controls (SOC 2) Trust Services Criteria",
+          "source_id": "11c7c827-b3a4-4207-925a-f5bac2493a7b",
+          "locator": "Appendix B 'Structure of Trust Services Criteria and Related Controls'",
+          "retrieved_at": null,
+          "excerpt_short": "Trust Services Criteria require documenting control objectives, specific control activities, operating effectiveness tests, and auditor results in structured matrices.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 9 'Modelo de Datos para Auditoría y Controles'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de auditoría: ControlDef, ControlImplementation, TelemetryAssertion, AuditEvidence, AttestationReport. Vinculación estricta entre control normativo, código ejecutable y evidencia inmutable.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño conforme a las estructuras estandarizadas de taxonomía de controles de seguridad de la información.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de código",
+      "Pipeline de pruebas CI/CD",
+      "Informes de auditores externos"
+    ],
+    "actors": [
+      "Motor de Gobierno de BRIDGE",
+      "Servicio de Telemetría",
+      "Auditor de Cumplimiento"
+    ],
+    "steps": [
+      "Registro de controles normativos en la entidad 'ControlDef'",
+      "Mapeo de componentes y mecanismos de código en 'ControlImplementation'",
+      "Ejecución automatizada de pruebas asociadas a 'TelemetryAssertion'",
+      "Captura de salida, generación de hash criptográfico y almacenamiento de 'AuditEvidence' en log WORM",
+      "Generación de reportes de cumplimiento en tiempo real para clientes y auditores"
+    ],
+    "states": [
+      "CONTROL_MAPPED",
+      "ASSERTION_SCHEDULED",
+      "TEST_EXECUTED",
+      "EVIDENCE_SEALED"
+    ],
+    "outputs": [
+      "Esquema estructurado consultable mediante SQL/GraphQL que demuestra la postura de seguridad operativa"
+    ],
+    "exceptions": [
+      "Si falla una aserción automatizada, se genera automáticamente un ticket de incidente en 'IncidentRecord' con severidad proporcional al control afectado"
+    ]
+  },
+  "entities": [
+    "ControlDef",
+    "ControlImplementation",
+    "TelemetryAssertion",
+    "AuditEvidence",
+    "AttestationReport",
+    "TenantSecurityProfile"
+  ],
+  "relations": [
+    {
+      "from": "ControlImplementation",
+      "to": "ControlDef",
+      "type": "IMPLEMENTS"
+    },
+    {
+      "from": "TelemetryAssertion",
+      "to": "ControlImplementation",
+      "type": "VERIFIES"
+    },
+    {
+      "from": "AuditEvidence",
+      "to": "TelemetryAssertion",
+      "type": "RECORDS_RESULT_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Matrices estáticas en hojas de cálculo vs Modelo estructurado de controles en base de datos",
+      "diferencia": "Las hojas de cálculo se desactualizan y permiten manipulación manual; el modelo estructurado captura telemetría continua e inmutable ligada a eventos reales del sistema."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "automated_control_coverage": "100% de controles técnicos respaldados por aserciones ejecutables",
+    "evidence_tamper_evidence_rate": "100% de registros con hash criptográfico SHA-256 verificado"
+  },
+  "bridge_implications": "Proporciona la base de datos relacional interna que alimenta el 'Panel de Confianza y Auditoría' accesible por los administradores de seguridad de cada cliente.",
+  "open_gaps": [
+    "Integración nativa con herramientas de GRC (Governance, Risk, and Compliance) enterprise como ServiceNow o OneTrust."
+  ],
+  "next_question_ids": [
+    "P11-F35",
+    "P11-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

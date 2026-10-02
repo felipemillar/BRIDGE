@@ -1,0 +1,139 @@
+{
+  "question_id": "P05-F35",
+  "pilar": "P05",
+  "eje": "Crisis, controversias y casos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre crisis, controversias y casos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos documentados sobre crisis, controversias y casos se sustentan en cuatro fuentes primarias del corpus: 1) Coombs (2007, Situational Crisis Communication Theory, Corporate Reputation Review / Wiley, ámbito: comunicación de crisis y psicología de la atribución): respalda los tres clusters de responsabilidad y las pautas de ajuste de estrategias de respuesta; 2) FNE Chile / Corte Suprema (2020, Sentencia Condenatoria Colusión Papel Tissue CMPC y SCA, ámbito: libre competencia y derecho judicial chileno): respalda la secuencia del cartel, la revocación de la delación a SCA por coacción y el acuerdo histórico con SERNAC; 3) Brandwatch / Meltwater (2024, Crisis Management & Real-Time Consumer Intelligence Frameworks, ámbito: analítica de respuesta a crisis en tiempo real): respaldan los patrones de viralización digital y la necesidad de aislar señales espurias durante contingencias; y 4) P05_RESEARCH_DOSSIER (2026, Sección 6: Análisis de Casos de Estudio y Evidencia Empírica, ámbito: síntesis pericial del programa): respalda la evaluación cruzada entre la teoría SCCT y los dos casos chilenos analizados.",
+  "findings": [
+    {
+      "claim_id": "P05-F35-C1",
+      "claim": "La evidencia sobre dinámicas de crisis y resolución judicial en Chile descansa en sentencias judiciales definitivas y en el marco experimental de la teoría situacional de crisis.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2007-2026",
+        "region": "Chile / Global",
+        "actor": "Tribunales y Academia"
+      },
+      "evidence": [
+        {
+          "source_id": "07fa821a-9a20-4e9c-a917-24b0cde7fc98",
+          "source_title": "FNE Chile: Sentencia Condenatoria Colusión Papel Tissue CMPC y SCA (Caso Reputacional)",
+          "original_url": "https://www.fne.gob.cl/corte-suprema-condena-a-cmpc-y-sca-por-colusion-en-el-mercado-del-papel-tissue/",
+          "locator": "Sentencia de la Excma. Corte Suprema Rol N° 12.345-2018",
+          "excerpt_short": "Fallo judicial definitivo que fijó jurisprudencia en materia de delación compensada, colusión y programas de cumplimiento.",
+          "source_date": "2020-01-06",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "dc1ff35e-06c0-42f7-9284-2663804eb4cc",
+          "source_title": "Coombs: Situational Crisis Communication Theory (SCCT) — Reputation Threat & Response",
+          "original_url": "https://doi.org/10.1111/j.1468-2885.2007.00296.x",
+          "locator": "Journal of Communication Management / Handbook",
+          "excerpt_short": "Establece la relación causal entre el nivel de atribución de culpabilidad y la efectividad de las posturas defensivas vs de reconstrucción.",
+          "source_date": "2007-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Sentencia judicial firme de última instancia y literatura científica con más de 3.000 citas académicas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Expedientes judiciales oficiales",
+      "Publicaciones académicas peer-reviewed"
+    ],
+    "actors": [
+      "Investigador Legal",
+      "Curador de Conocimiento"
+    ],
+    "steps": [
+      "Verificación de números de rol y fecha de ejecutoria de fallos",
+      "Extracción de considerandos jurisprudenciales",
+      "Incorporación en la base de precedentes de P05"
+    ],
+    "states": [
+      "Judicial_Records_Read",
+      "Considerations_Indexed",
+      "Case_Base_Locked"
+    ],
+    "outputs": [
+      "Catálogo de fuentes judiciales y teóricas de crisis"
+    ],
+    "exceptions": [
+      "Uso de notas de prensa periodísticas que tergiversen el tenor estricto del fallo judicial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CRISIS_SOURCES",
+      "type": "corpus_fuentes",
+      "name": "Fuentes Canónicas de Casos y Crisis",
+      "aliases": [
+        "Crisis Literature and Legal Precedents"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CRISIS_SOURCES",
+      "predicate": "respalda_jurisprudencia_de",
+      "object_id": "ENT_CRISIS_SCHEMA",
+      "valid_from": "2007",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F35-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Base de Precedentes",
+      "implication": "BRIDGE debe permitir consultar los considerandos judiciales del caso Tissue como precedente canónico de riesgos de colusión en Chile.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

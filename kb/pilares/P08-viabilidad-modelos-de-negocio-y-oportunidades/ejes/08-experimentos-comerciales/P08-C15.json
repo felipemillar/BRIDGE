@@ -1,0 +1,156 @@
+{
+  "question_id": "P08-C15",
+  "pilar": "P08",
+  "eje": "Experimentos comerciales",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre experimentos comerciales, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia fundamental radica en la exigencia de pago durante los pilotos iniciales: Las versiones preliminares del Research Dossier proponían ofrecer pilotos gratuitos de 3 meses ('Free Trials') para 'eliminar la fricción de entrada y ganar tracción rápida'. En oposición radical, la literatura corporativa de compras (McKinsey, CCS) y el P08_QUALITY_ADDENDUM prohíben taxativamente los pilotos gratuitos, demostrando empíricamente que las grandes empresas no valoran ni usan lo que no pagan, y que los pilotos gratuitos arrojan falsos positivos de satisfacción que luego colapsan al exigir pago. Prevalece la regla del QUALITY_ADDENDUM: todo piloto debe ser remunerado obligatoriamente a una cuota de compromiso mínima de USD 2.500/mes (~CLP 2.400.000/mes) o estar respaldado por una Carta de Intención vinculante con penalidad.",
+  "findings": [
+    {
+      "claim_id": "P08-C15-C1",
+      "claim": "Conforme al P08_QUALITY_ADDENDUM y las mejores prácticas de procurement de la CCS, se prohíben los pilotos gratuitos y se establece como regla inmutable el piloto pagado de 60 días para validar el compromiso real.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "pilot_pricing_reconciliation",
+      "evidence": [
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 9 'Protocolo de Validación de Mercado y Regla Anti-Free Trials'",
+          "retrieved_at": null,
+          "excerpt_short": "Precedencia canónica obligatoria: Queda estrictamente prohibido realizar pilotos gratuitos. La entrega de software o servicios sin cobro distorsiona la conducta del usuario corporativo y genera una falsa ilusión de validación. La regla de validación de BRIDGE exige cobrar una tarifa mínima de compromiso de USD 2.500 mensuales por 60 días. Si la empresa no está dispuesta a pagar esa suma, no tiene un problema urgente que justifique su atención.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Cámara de Comercio de Santiago: Comités de Asuntos Corporativos e IA Empresarial",
+          "source_id": "be654fcc-5a18-4ae6-85e2-ee12b9cf479e",
+          "locator": "Mejores Prácticas de Innovación Corporativa, p. 22-25",
+          "retrieved_at": null,
+          "excerpt_short": "Los proyectos de innovación que se inician bajo modalidades gratuitas presentan una tasa de cancelación superior al 80% al momento de requerir presupuesto, frente a una tasa de conversión del 65% en aquellos pilotos que involucraron un pago inicial de prueba.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estudios de la CCS y el mandato editorial del QUALITY_ADDENDUM en P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dossier preliminar (pilotos gratuitos)",
+      "Estudios CCS",
+      "P08_QUALITY_ADDENDUM"
+    ],
+    "actors": [
+      "Director Comercial",
+      "CFO",
+      "Auditor Metodológico"
+    ],
+    "steps": [
+      "Eliminación formal de la opción de 'piloto gratis' en la política comercial",
+      "Fijación del tarifario de prueba en USD 2.500/mes",
+      "Comunicación al equipo de ventas"
+    ],
+    "states": [
+      "Piloto Gratis Propuesto",
+      "Veto Aplicado",
+      "Piloto Pagado Consagrado"
+    ],
+    "outputs": [
+      "Política comercial oficial de pilotos de BRIDGE"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P08_QUALITY_ADDENDUM",
+    "Cámara de Comercio de Santiago",
+    "Zero Free Trials",
+    "Tarifa de Compromiso (USD 2.5K)",
+    "Conversión 65%"
+  ],
+  "relations": [
+    {
+      "from": "QUALITY_ADDENDUM",
+      "to": "Pilotos Gratuitos",
+      "type": "prohibits"
+    },
+    {
+      "from": "Piloto Pagado (USD 2.5K)",
+      "to": "Compromiso de Cliente (Skin in the Game)",
+      "type": "guarantees"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Piloto gratuito vs Piloto remunerado a USD 2.500/mes",
+      "diferencia": "El piloto gratis es ignorado por la gerencia y cancelado al final; el piloto pagado moviliza al CCO, asigna contrapartes internas y convierte a contrato anual en > 60% de los casos."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P08-F43-C1",
+        "P08-C15-C1"
+      ],
+      "difference": "Discrepancia entre la táctica de adquisición fácil sin cobro y la exigencia de validación con dinero real.",
+      "resolution": "resuelta",
+      "reason": "El QUALITY_ADDENDUM establece la prohibición de pilotos gratuitos como principio de salud financiera."
+    }
+  ],
+  "metrics_and_denominators": {
+    "minimum_pilot_fee": "USD 2.500 mensuales por 60 días",
+    "paid_pilot_conversion_benchmark": "65% según datos de la CCS"
+  },
+  "bridge_implications": "Entrenar al equipo comercial para defender con firmeza el cobro de USD 2.500/mes del piloto como garantía de dedicación y calidad.",
+  "open_gaps": [
+    "Verificar si las empresas mineras exigen que el piloto se descuente de la primera cuota del contrato anual (acuerdo habitual en procurement)."
+  ],
+  "next_question_ids": [
+    "P08-C16",
+    "P09-F01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

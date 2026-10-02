@@ -1,0 +1,178 @@
+{
+  "question_id": "P01-C08",
+  "pilar": "P01",
+  "eje": "Reuniones y decisiones críticas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué sigue sin prueba sobre reuniones y decisiones críticas, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba: 1) los criterios técnicos de objeción que imponen los CISOs y Fiscales de grandes empresas chilenas para autorizar la ingesta de actas confidenciales en herramientas analíticas; 2) la consistencia fáctica real entre minutas preparatorias internas y lo declarado en audiencias de la Ley de Lobby; 3) la disposición a pagar y preferencia por VPC on-premise en empresas del IPSA. Fuentes fallidas: OECD Corporate Governance (bloqueo scripts) y Page Society Pacesetter (Cloudflare WAF). Fuentes parciales: Ley 20.730 y CMF NCG 461 son parciales al limitarse al reporte administrativo ex-post sin registrar la preparación directiva interna. Validación mínima: Fase 3 del plan de investigación: prueba de concepto técnica con un panel evaluador tripartito (CCO, CISO y Fiscal Legal) para evaluar la arquitectura VPC.",
+  "findings": [
+    {
+      "claim_id": "P01-C08-C1",
+      "claim": "Los repositorios regulatorios oficiales de la CMF y la plataforma de Ley de Lobby son fuentes parciales de información, dado que se restringen a la declaración administrativa pública ex-post y no documentan la trastienda de deliberación, preparación de minutas y alineamiento de voceros.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "CMF e InfoLobby"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Evaluación de Fuentes Parciales y Vacíos de Trastienda Directiva",
+          "excerpt_short": "Las fuentes oficiales regulan el registro externo pero omiten el flujo interno de preparación.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:13:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Naturaleza jurídica y documental de los portales regulatorios.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C08-C2",
+      "claim": "La hipótesis de poder de veto del CISO y Fiscal Legal (HT-3) establece que la adopción de herramientas para preparar reuniones críticas depende de ofrecer despliegues en nube privada (VPC) con cifrado en reposo y garantía de no uso de datos para reentrenamiento de modelos.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "CISOs y Fiscalías Legales"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección: Fase 3 del Plan de Validación - Panel Tripartito CCO, CISO, Legal",
+          "excerpt_short": "La viabilidad B2B requiere sortear el veto de seguridad y cumplimiento mediante arquitectura VPC.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:13:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Formulación de arquitectura en el plan de validación de P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Requisitos de ciberseguridad corporativa",
+      "Arquitectura VPC propuesta",
+      "Políticas de retención de datos"
+    ],
+    "actors": [
+      "CCO (Comprador)",
+      "CISO (Aprobador Seguridad)",
+      "Fiscal Legal (Aprobador Compliance)"
+    ],
+    "steps": [
+      "Presentación de prototipo",
+      "Revisión técnica de encriptación",
+      "Auditoría de cumplimiento legal",
+      "Dictamen de aprobación o veto"
+    ],
+    "states": [
+      "Revision_Iniciada",
+      "Observaciones_Emitidas",
+      "Dictamen_VPC_Aprobado"
+    ],
+    "outputs": [
+      "Matriz de Viabilidad de Seguridad y Compras B2B"
+    ],
+    "exceptions": [
+      "Veto definitivo por exigencia de almacenamiento local on-premise estricto"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PANEL_TRIPARTITO",
+      "type": "proceso_adopcion_b2b",
+      "name": "Panel Evaluador Tripartito (CCO, CISO, Fiscal Legal)",
+      "aliases": [
+        "Comité de Adopción Tecnológica"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PANEL_TRIPARTITO",
+      "predicate": "condiciona_adopcion_de",
+      "object_id": "BRIDGE_Executive_Assistant",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C08-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo B2C/SaaS Abierto vs Requerimientos B2B Hiper-Regulados",
+      "Modelo SaaS Genérico": "Suscripción directa por tarjeta de crédito usada por el Dircom en nube pública.",
+      "Requerimiento Corporativo": "Aprobación de CISO/Legal, tenant aislado VPC, acuerdos de confidencialidad y no reentrenamiento."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Diseñar la ingesta de documentos reservados con opciones de aislamiento en VPC privada para neutralizar el veto de CISO y Legal.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    "Requisitos técnicos formales de encriptación exigidos por CISOs del sector financiero y minero en Chile para ingesta de documentos confidenciales.",
+    "Consistencia documental entre minutas preparatorias y transcripciones de audiencias de lobby en ministerios clave."
+  ],
+  "next_question_ids": [
+    "P01-C09",
+    "P01-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:13:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

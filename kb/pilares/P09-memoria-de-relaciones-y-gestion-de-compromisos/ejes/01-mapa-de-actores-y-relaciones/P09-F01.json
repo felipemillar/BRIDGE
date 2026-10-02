@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-F01",
+  "pilar": "P09",
+  "eje": "Mapa de actores y relaciones",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué tipos de persona, organización, comunidad y autoridad requiere la memoria de relaciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La memoria institucional de relaciones requiere modelar cuatro tipologías ontológicas exhaustivas de actores: 1) Personas Individuales (Stakeholders): Dirigentes vecinales, voceros comunitarios, periodistas, parlamentarios, analistas de mercado y líderes de opinión, registrando datos de contacto profesional, rol y filiación formal sin almacenar datos sensibles íntimos (salud, religión, orientación o ideología privada); 2) Organizaciones Colectivas: Comunidades indígenas (GHPPI bajo Convenio 169 OIT), juntas de vecinos, uniones comunales, gremios empresariales (CPC, SOFOFA, SONAMI), ONGs ambientales y sindicatos de trabajadores; 3) Autoridades y Reguladores Públicos: Sujetos pasivos de la Ley 20.730 de Lobby (ministros, subsecretarios, directores de servicios, alcaldes, concejales, cores), fiscalizadores de la SMA, evaluadores del SEA y jueces de Tribunales Ambientales; y 4) Medios de Comunicación y Agencias: Líneas editoriales, editores sectoriales y periodistas de investigación.",
+  "findings": [
+    {
+      "claim_id": "P09-F01-C1",
+      "claim": "La memoria de relaciones exige una categorización ontológica cuatripartita que diferencia a personas naturales de sus organizaciones, entidades regulatorias y medios de prensa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "stakeholder_typology",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades y Relaciones (ERD)'",
+          "retrieved_at": null,
+          "excerpt_short": "El modelo relacional formaliza cuatro tipos de actores: Entity_Org (comunidades indígenas, juntas de vecinos, gremios, agencias estatales), Entity_Person (interlocutores individuales con rol explícito), Entity_Authority (sujetos pasivos de lobby y fiscalizadores) y Entity_Media (medios y periodistas). Se prohíbe taxativamente almacenar o inferir atributos sensibles personales protegidos por la Ley 21.719.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "IFC (World Bank): Stakeholder Engagement Good Practice Handbook",
+          "source_id": "834c36d4-8df0-4bb5-ae51-24f05ba97467",
+          "locator": "Chapter 2 'Stakeholder Identification and Analysis', p. 14-18",
+          "retrieved_at": null,
+          "excerpt_short": "Effective engagement requires identifying distinct stakeholder categories: directly affected communities, local authorities, vulnerable or indigenous groups, civil society organizations, and external opinion influencers.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares de la IFC y la ontología relacional de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Padrón de autoridades InfoLobby",
+      "Catastro de organizaciones comunitarias",
+      "Directorio de medios"
+    ],
+    "actors": [
+      "Relacionador Comunitario",
+      "Analista de Asuntos Públicos",
+      "Lead de Compliance"
+    ],
+    "steps": [
+      "Alta de entidad en catálogo",
+      "Asignación de categoría y jurisdicción territorial",
+      "Enlace a personas naturales con su cargo formal",
+      "Validación contra Ley 21.719"
+    ],
+    "states": [
+      "Actor Registrado",
+      "Perfil Validado",
+      "Vínculo Activo"
+    ],
+    "outputs": [
+      "Ficha de actor normalizada en grafo"
+    ],
+    "exceptions": [
+      "Personas que actúan simultáneamente como dirigentes vecinales y candidatos políticos locales señaladas con doble etiqueta"
+    ]
+  },
+  "entities": [
+    "Stakeholder",
+    "Organización Colectiva",
+    "Sujeto Pasivo Lobby",
+    "IFC World Bank",
+    "Ley 21.719",
+    "Convenio 169 OIT"
+  ],
+  "relations": [
+    {
+      "from": "Stakeholder Individual",
+      "to": "Organización Colectiva",
+      "type": "represents_or_belongs_to"
+    },
+    {
+      "from": "Sujeto Pasivo",
+      "to": "Ley 20.730",
+      "type": "governed_by"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "CRM comercial de ventas vs SRM de asuntos corporativos",
+      "diferencia": "El CRM de ventas gestiona leads y oportunidades monetarias; el SRM gestiona actores colectivos, derechos indígenas, potestades públicas y compromisos no transaccionales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "stakeholder_categories_count": "4 macro-categorías (Personas, Organizaciones, Autoridades, Medios)",
+    "sensitive_data_protection_standard": "0 campos de religión, salud o vida privada"
+  },
+  "bridge_implications": "Diseñar el módulo 'Relacionar' de BRIDGE con formularios estructurados que impidan la digitación de datos íntimos personales.",
+  "open_gaps": [
+    "Verificar el protocolo de actualización de cargos tras elecciones municipales y parlamentarias en Chile."
+  ],
+  "next_question_ids": [
+    "P09-F02",
+    "P09-F03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

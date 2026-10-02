@@ -1,0 +1,149 @@
+{
+  "question_id": "P03-F13",
+  "pilar": "P03",
+  "eje": "Redes sociales y comunidades",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué plataformas permiten acceso oficial a contenido público y en qué condiciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El acceso oficial a contenido público en redes sociales opera bajo regímenes fragmentados y altamente diferenciados: 1) AT Protocol / Bluesky: ofrece acceso 100% abierto y gratuito en tiempo real mediante streaming WebSockets (Jetstream firehose) en formato JSON, sin barreras contractuales ni cuotas de pago; 2) Reddit Data API: provee acceso oficial mediante autenticación OAuth con un límite de 100 consultas por minuto por client_id para uso estándar, requiriendo contratos bilaterales para mayores volúmenes y prohibiendo el entrenamiento de modelos sin licencia; 3) Telegram Bot API: permite monitoreo de canales y grupos públicos mediante el protocolo getUpdates y webhooks, sujeto a límites de llamadas por segundo y privacidad de canales cerrados; 4) X (Twitter) API v2: comercializa acceso empresarial bajo la modalidad 'Contact Sales' (acuerdos bilaterales a medida) con límites de lectura (típicamente hasta 3M de posts en tiers intermedios) y transición en 2026 hacia modelos basados en consumo de créditos; y 5) Meta y TikTok: sus APIs de datos globales (Meta Content Library y TikTok Research API) están contractualmente restringidas a investigadores académicos afiliados a universidades acreditadas, estando terminantemente prohibido su uso para fines comerciales o de asuntos corporativos, forzando a las empresas a recurrir a APIs comerciales limitadas (Display/Commercial Content APIs) o agregadores de terceros.",
+  "findings": [
+    {
+      "claim_id": "P03-F13-C1",
+      "claim": "El acceso a redes sociales está fragmentado: Bluesky ofrece un firehose abierto; Reddit y Telegram proveen APIs oficiales con límites de tasa; X opera con contratos Enterprise a la medida; y Meta Content Library y TikTok Research prohíben contractualmente el uso para asuntos corporativos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Plataformas Sociales P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.1 y 2.5: Condiciones de Acceso a APIs",
+          "excerpt_short": "Meta Content Library... el acceso está restringido de forma vinculante a investigadores científicos afiliados a instituciones académicas... El uso corporativo está formal y contractualmente prohibido.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        },
+        {
+          "source_id": "619b1b25-eb9d-4be2-8efb-4fbb9db7519e",
+          "source_title": "AT Protocol / Bluesky Streaming Data & Jetstream Firehose Architecture",
+          "original_url": "https://atproto.com/guides/streaming-data",
+          "locator": "Jetstream Architecture - Real-time Consumption",
+          "excerpt_short": "Jetstream is an open WebSocket service that streams public commits from the AT Protocol network, converting raw CBOR into lightweight JSON.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de documentación técnica oficial de desarrolladores y la adenda de calidad.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Endpoints de APIs de redes",
+      "Credenciales OAuth Reddit",
+      "Tokens Telegram Bot",
+      "WebSocket Jetstream Bluesky"
+    ],
+    "actors": [
+      "Social Stream Collector",
+      "Rate Limit Governor"
+    ],
+    "steps": [
+      "Autenticación de cliente",
+      "Apertura de socket/polling",
+      "Control de tasa (100 req/min en Reddit)",
+      "Ingesta de posts públicos"
+    ],
+    "states": [
+      "Authenticated",
+      "Stream_Active",
+      "Rate_Limit_Enforced"
+    ],
+    "outputs": [
+      "Eventos sociales normalizados en JSON"
+    ],
+    "exceptions": [
+      "Revocación de cuotas o bloqueo de IP por exceso de tasa"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SOCIAL_PLATFORMS",
+      "type": "plataformas_sociales",
+      "name": "Ecosistema de Plataformas Sociales Oficiales",
+      "aliases": [
+        "Official Social Platforms"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SOCIAL_PLATFORMS",
+      "predicate": "provee_datos_publicos_a",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo de apertura de datos",
+      "Bluesky (AT Protocol)": "Streaming abierto, gratuito, sin autorización previa.",
+      "Reddit": "API freemium con cuota de 100 req/min y contrato enterprise.",
+      "Meta Content Library": "Restringido exclusivamente a investigación académica acreditada; prohibido para empresas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Descartar Meta Content Library de la arquitectura de BRIDGE y construir conectores para Bluesky Jetstream, Telegram y Reddit.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

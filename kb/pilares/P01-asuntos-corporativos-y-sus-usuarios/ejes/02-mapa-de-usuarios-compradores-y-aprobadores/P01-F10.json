@@ -1,0 +1,296 @@
+{
+  "question_id": "P01-F10",
+  "pilar": "P01",
+  "eje": "Mapa de usuarios, compradores y aprobadores",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar mapa de usuarios, compradores y aprobadores de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del mapa B2B se define mediante 5 variables (jerarquía C-Suite, rol funcional B2B, horizonte temporal, métricas de éxito JTBD y potestad de veto), 3 categorías de roles (Usuario, Comprador y Aprobador), relaciones de fricción operativa y veto unilateral, y condiciones de trazabilidad con citas y despliegue privado VPC sin re-entrenamiento público.",
+  "findings": [
+    {
+      "claim_id": "P01-F10-C1",
+      "claim": "El mapa de adopción B2B se estructura en tres categorías funcionales no coincidentes: Usuario (CCO, Asuntos Públicos, Prensa, ESG), Comprador (CEO, CCO / VP Asuntos Corporativos) y Aprobador técnico (CISO, Fiscal Legal, CFO).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / América Latina",
+        "actor": "Organizaciones Corporativas B2B"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7: Mapa de Usuarios, Compradores y Aprobadores",
+          "excerpt_short": "El Usuario: CCO, Asuntos Públicos... El Comprador: CEO, CCO... El Aprobador: CISO, Fiscal Legal, Compliance.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier consolidado del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F10-C2",
+      "claim": "El CISO y el Fiscal Legal operan como aprobadores obligatorios dotados de potestad de veto unilateral sobre herramientas de inteligencia basada en IA que ingieran información corporativa sensible.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Global / B2B SaaS",
+        "actor": "CISO / Compliance"
+      },
+      "evidence": [
+        {
+          "source_id": "059b0334-329a-41a0-8dd9-44d7ea87aeca",
+          "source_title": "P01_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 4, HT-3 (Hipótesis de Trabajo 3)",
+          "excerpt_short": "CISO y Legal actúan como aprobadores críticos con poder de veto si se vulnera la privacidad o confidencialidad de la información corporativa.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Formulada formalmente como Hipótesis de Trabajo HT-3 en el mapa de evidencia del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F10-C3",
+      "claim": "El CCO reporta directamente al CEO en el 53,6% de los casos y participa de forma permanente en el Comité Ejecutivo en el 33% de las organizaciones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025",
+        "region": "España / Benchmark Habla Hispana",
+        "actor": "Dircoms y C-Suite"
+      },
+      "evidence": [
+        {
+          "source_id": "11566961-aace-42d0-bdcc-6b9171cecded",
+          "source_title": "Dircom - El Estado de la Comunicación en España (ECE 2025): Reporte al CEO y Comité Ejecutivo",
+          "original_url": "https://www.dircom.org/actualidad/mas-de-la-mitad-de-los-dircoms-en-espana-reporta-al-maximo-ejecutivo-de-su-organizacion/",
+          "locator": "Reporte de resultados ECE 2025",
+          "excerpt_short": "Más de la mitad de los dircoms reportan al CEO (53,6%) y uno de cada tres está en el comité ejecutivo (33%).",
+          "source_date": "2025-09-25",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estudio empírico ECE 2025 de Dircom España.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F10-C4",
+      "claim": "Las condiciones no negociables para la representación estructurada exigen trazabilidad con citas directas al repositorio corporativo y aislamiento de datos en nube privada (VPC) sin re-entrenamiento público.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / B2B",
+        "actor": "Arquitectura de Software"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7: Requerimientos de Seguridad y Privacidad",
+          "excerpt_short": "Aislamiento VPC y prohibición de reutilizar prompts o documentos corporativos para entrenamiento de modelos públicos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Condición arquitectónica documentada en el dossier.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Perfiles funcionales B2B",
+      "Matriz de objeciones de seguridad",
+      "Políticas de gobernanza corporativa"
+    ],
+    "actors": [
+      "Usuario (CCO / Asuntos Públicos)",
+      "Comprador (CEO)",
+      "Aprobador (CISO / Fiscal Legal)"
+    ],
+    "steps": [
+      "Mapeo de necesidades de usuario",
+      "Evaluación de ROI y valor reputacional",
+      "Auditoría de ciberseguridad y compliance",
+      "Decisión colegiada de adquisición"
+    ],
+    "states": [
+      "Prospecto",
+      "Demostración_Usuario",
+      "Evaluación_CISO_Legal",
+      "Veto_Técnico",
+      "Aprobado"
+    ],
+    "outputs": [
+      "Matriz de roles B2B",
+      "Protocolo de objeciones técnicas",
+      "Configuración de entorno seguro VPC"
+    ],
+    "exceptions": [
+      "Veto de CISO por riesgo de fuga de datos hacia LLMs públicos",
+      "Falta de justificación de ROI reputacional ante el CEO"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CISO",
+      "type": "rol",
+      "name": "Chief Information Security Officer (CISO)",
+      "aliases": [
+        "Oficial de Seguridad de la Información"
+      ]
+    },
+    {
+      "entity_id": "ENT_LEGAL_COMPLIANCE",
+      "type": "rol",
+      "name": "Fiscal Legal / Compliance Officer",
+      "aliases": [
+        "Fiscal Corporativo",
+        "Oficial de Cumplimiento"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CISO",
+      "predicate": "ejerce_potestad_de_veto_sobre",
+      "object_id": "Adopción_Tecnología_IA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F10-C2"
+    },
+    {
+      "subject_id": "ENT_CCO",
+      "predicate": "reporta_jerarquicamente_a",
+      "object_id": "ENT_CEO",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F10-C3"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Rol B2B en la Decisión",
+      "Usuario": "Exige velocidad analítica, minutas ejecutivas y trazabilidad con citas a fuentes internas.",
+      "Comprador": "Busca mitigar riesgos reputacionales y proteger la licencia social con relato unificado.",
+      "Aprobador": "Exige aislamiento estricto en nube privada VPC, cifrado y cumplimiento normativo estricto."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Porcentaje de CCOs que reportan directamente al CEO",
+      "value": "53.6%",
+      "denominator": "Total de directivos de comunicación encuestados en ECE 2025 (España)",
+      "source_claim_id": "P01-F10-C3"
+    },
+    {
+      "metric": "Porcentaje de CCOs que integran el Comité Ejecutivo",
+      "value": "33%",
+      "denominator": "Total de directivos de comunicación encuestados en ECE 2025 (España)",
+      "source_claim_id": "P01-F10-C3"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporar trazabilidad documental obligatoria con citas exactas para satisfacer al Usuario y al Fiscal Legal.",
+      "status": "evidencia"
+    },
+    {
+      "module": "Gobernanza",
+      "implication": "Desplegar BRIDGE en arquitectura VPC aislada para neutralizar el veto del CISO.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "sin_evidencia sobre matrices formales de objeciones técnicas de CISOs en América Latina ante herramientas de IA corporativa.",
+      "minimum_validation": "Entrevistas a 5 CISOs de empresas reguladas e IPSA en Chile.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "P01-F11",
+    "P01-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:37:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

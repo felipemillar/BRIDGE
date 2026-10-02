@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F03",
+  "pilar": "P10",
+  "eje": "Origen de solicitudes y señales",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Cómo se asigna prioridad sin mezclar rumor, hecho confirmado y obligación formal?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La priorización y triaje de solicitudes opera bajo una matriz epistemológica y jurídica en tres cuadrantes independientes, evitando que la urgencia de un rumor eclipse una obligación legal imperativa: 1) Cuadrante A: Obligación Formal / Legal (Prioridad Máxima Absoluta): Requerimientos de la CMF (Hechos Esenciales Ley 18.045 / NCG 30), oficios de la SMA, requerimientos judiciales o consultas vinculantes de la SEC; poseen SLA legal estricto (incluso < 2 horas) y su incumplimiento acarrea multas pecuniarias o sanciones penales; 2) Cuadrante B: Hecho Operacional Confirmado (Prioridad Alta): Incidentes reales verificados internamente (accidentes de faena, derrames, paralizaciones sindicales o retrasos en obras comprometidas); se procesan con hechos fácticos de P04 y SLA de contención de 45 a 90 minutos; y 3) Cuadrante C: Rumor o Especulación en Redes (Prioridad Media/Baja con Monitoreo): Afirmaciones sin sustento probatorio o publicaciones en blogs no verificados; se clasifican como 'Especulación No Confirmada', activando escucha activa (P06) y prohibiendo emitir desmentidos precipitados que amplifiquen artificialmente la desinformación.",
+  "findings": [
+    {
+      "claim_id": "P10-F03-C1",
+      "claim": "El triaje separa taxativamente obligaciones formales legales (prioridad máxima con SLA legal), hechos operacionales confirmados (prioridad alta) y rumores no verificados (monitoreo sin amplificación artificial).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "triage_and_prioritization_matrix",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Flujo de Trabajo Integral (Fase 2: Triaje y Asignación de Responsabilidad)'",
+          "retrieved_at": null,
+          "excerpt_short": "Evaluación de criticidad (Baja, Media, Alta, Crisis Crítica). Asignación de Response Leader y fijación de SLA de respuesta: desde 15 minutos en crisis operacional hasta 24-48 horas en consultas rutinarias. Las obligaciones bursátiles prevalecen sobre el ruido de redes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 18.045 de Mercado de Valores (Hechos Esenciales y Reservados)",
+          "source_id": "737c1e8d-4a41-4178-8259-fd4d44800419",
+          "locator": "Artículos 9 y 10",
+          "retrieved_at": null,
+          "excerpt_short": "Las entidades inscritas en el Registro de Valores deberán divulgar en forma veraz, suficiente y oportuna todo hecho o información esencial respecto de ellas mismas y de sus negocios, tan pronto como el hecho ocurra o llegue a su conocimiento.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la Ley 18.045 y la matriz de triaje del dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales entrantes",
+      "Tipo de emisor",
+      "Nivel de confirmación interna"
+    ],
+    "actors": [
+      "Jefe de Triaje",
+      "Abogado de Mercado de Valores",
+      "Motor de Reglas BRIDGE"
+    ],
+    "steps": [
+      "Cotejo contra catálogo de emisores regulados",
+      "Evaluación de evidencia interna disponible",
+      "Asignación de cuadrante epistemológico (A, B o C)",
+      "Asignación de SLA y semáforo de riesgo"
+    ],
+    "states": [
+      "Señal Recibida",
+      "Cuadrante Asignado",
+      "Prioridad y SLA Fijados"
+    ],
+    "outputs": [
+      "Ficha de triaje con semáforo y responsable"
+    ],
+    "exceptions": [
+      "Rumores que afecten la cotización bursátil son elevados de inmediato al Cuadrante A para evaluar desmentido formal"
+    ]
+  },
+  "entities": [
+    "Matriz de Triaje",
+    "Ley 18.045",
+    "Hecho Esencial",
+    "Rumor vs Hecho Confirmado",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Obligación CMF",
+      "to": "Prioridad Máxima Absoluta",
+      "type": "CLASSIFIED_AS"
+    },
+    {
+      "from": "Rumor de Redes",
+      "to": "Monitoreo Pasivo",
+      "type": "ROUTED_TO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Reaccionar histéricamente a cualquier tweet vs Triaje por severidad jurídica",
+      "diferencia": "Reaccionar a cada tweet desgasta al equipo y da visibilidad a trolls; el triaje por severidad enfoca los recursos en riesgos fiduciarios y operacionales reales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "triage_quadrants_count": "3 cuadrantes (Legal Obligatorio, Fáctico Operacional, Rumor Externo)",
+    "statutory_sla_cmf": "< 2 horas tras confirmación de hecho esencial"
+  },
+  "bridge_implications": "Programar en BRIDGE un algoritmo de triaje que asigne automáticamente prioridad 'Crítica Legal' a cualquier requerimiento de CMF, SMA o Tribunales.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F04",
+    "P10-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "question_id": "P11-F15",
+  "pilar": "P11",
+  "eje": "Matriz dato, actor, acción y permiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué bitácora permite responder quién accedió a qué y por qué?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La trazabilidad y rendición de cuentas en BRIDGE se sustenta en un Registro de Auditoría Inmutable (Immutable Audit Ledger) estructurado bajo las directrices del NIST SP 800-92 y la Ley 21.663 (Art. 9): 1) Modelo de Registro Append-Only: Almacenado en tablas de base de datos protegidas con reglas WORM (Write Once, Read Many) y disparadores que bloquean cualquier sentencia `UPDATE` o `DELETE`, garantizando no repudio; 2) Tupla Estructurada de Acceso: Cada evento registra obligatoriamente 11 atributos forenses (`timestamp_utc` con sincronización NTP, `user_id`, `tenant_id`, `user_role`, `action_type`: [READ, QUERY_RAG, EXPORT, SIGN_OFF], `resource_id`, `classification_tier`: [D1-D5], `purpose_code`: [ROUTINE_OPS, LEGAL_DEFENSE, CRISIS_MGMT, AUDIT], `session_ip_address`, `user_agent`, y `record_hash_sha256`); 3) Sellado Criptográfico Encadenado: Cada registro incorpora el hash del registro anterior (cadena criptográfica de bloques), permitiendo a auditores externos detectar al instante cualquier alteración retroactiva o borrado de filas en el historial.",
+  "findings": [
+    {
+      "claim_id": "P11-F15-C1",
+      "claim": "La bitácora de accesos opera bajo arquitectura append-only WORM con sellado criptográfico encadenado conforme a NIST SP 800-92 y la Ley 21.663, registrando usuario, recurso, clasificación, propósito y hash inmutable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "immutable_audit_logging",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 4 'Trazabilidad Forense y Logs de Auditoría'",
+          "retrieved_at": null,
+          "excerpt_short": "Bitácora WORM inmutable: Registro append-only conforme a NIST SP 800-92. Tupla de 11 campos forenses incluyendo propósito declarado y hash SHA-256 encadenado. Cumplimiento de Art. 9 Ley 21.663.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-92: Guide to Computer Security Log Management",
+          "source_id": "27014545-10f4-49ba-8581-7a0388687f59",
+          "locator": "Section 4.2 'Log Protection and Integrity'",
+          "retrieved_at": null,
+          "excerpt_short": "Organizations must protect audit logs from unauthorized access, modification, and deletion through write-once media, cryptographic hashing, and centralized log servers.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.663 Ley Marco de Ciberseguridad e Infraestructura Crítica",
+          "source_id": "ee032cb3-abe5-4440-948f-815a9b4fbe78",
+          "locator": "Artículo 9 'Obligación de Trazabilidad e Historial'",
+          "retrieved_at": null,
+          "excerpt_short": "Los obligados deberán conservar los registros de eventos e incidentes cibernéticos por el plazo mínimo fijado reglamentariamente, garantizando su integridad y no alterabilidad para investigaciones periciales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los requerimientos legales del Art. 9 de la Ley 21.663 de Chile, el estándar federal NIST SP 800-92 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evento de acceso o consulta en el sistema",
+      "Atributos del contexto de sesión",
+      "Hash del log precedente"
+    ],
+    "actors": [
+      "Interceptor de Auditoría BRIDGE",
+      "Motor de Sellado Hash",
+      "Base de Datos WORM",
+      "Auditor Forense"
+    ],
+    "steps": [
+      "Captura asíncrona no bloqueante de los metadatos del evento en la capa de API",
+      "Formateo de la tupla de 11 atributos forenses",
+      "Cálculo del hash SHA-256 combinando los metadatos con el hash del registro previo",
+      "Inserción inmutable en la tabla de logs de auditoría",
+      "Replicación del log hacia un almacenamiento en frío inalterable (S3 Object Lock / WORM)",
+      "Disponibilidad inmediata para consultas de auditoría interna y forense"
+    ],
+    "states": [
+      "EVENT_OCCURRED",
+      "TUPLE_FORMATTED",
+      "HASH_CHAINED",
+      "LOG_COMMITTED_WORM"
+    ],
+    "outputs": [
+      "Registro de auditoría persistido e incorruptible"
+    ],
+    "exceptions": [
+      "Si el subsistema de auditoría no responde o se llena el disco, el sistema opera en fail-closed bloqueando accesos confidenciales"
+    ]
+  },
+  "entities": [
+    "NIST SP 800-92",
+    "Ley 21.663 Art. 9",
+    "WORM Storage",
+    "SHA-256 Chaining",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Evento de Acceso",
+      "to": "Bitácora WORM",
+      "type": "PERSISTED_INTO"
+    },
+    {
+      "from": "Ley 21.663",
+      "to": "Obligación de Registro",
+      "type": "MANDATES_COMPLIANCE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Logs de texto volátiles y editables vs Bitácora WORM encadenada",
+      "diferencia": "Los logs volátiles son borrados por atacantes para cubrir sus huellas; la bitácora WORM encadenada expone de inmediato cualquier intento de alteración y posee validez pericial plena."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "audit_trail_tamper_evidence_rate": "100% de alteraciones o eliminaciones detectadas inmediatamente",
+    "audit_write_latency_ms": "< 10 milisegundos para persistir el log de auditoría asíncrono"
+  },
+  "bridge_implications": "Permite a BRIDGE responder con precisión forense a requerimientos judiciales, investigaciones de la CMF o peritajes del CSIRT Nacional ante incidentes.",
+  "open_gaps": [
+    "Integración nativa con sistemas SIEM corporativos (e.g., Splunk, IBM QRadar, Microsoft Sentinel) vía syslog TLS."
+  ],
+  "next_question_ids": [
+    "P11-F16",
+    "P11-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-F19",
+  "pilar": "P09",
+  "eje": "Ciclo de vida y seguimiento",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué estados y transiciones cubren propuesta, acuerdo, ejecución, verificación y cierre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El ciclo de vida del compromiso se gobierna mediante una máquina de estados finita con 8 estados y transiciones reglamentadas: 1) `PROPUESTO`: Iniciativa planteada en reunión o solicitud vecinal pendiente de análisis de viabilidad técnica y presupuestaria; 2) `APROBADO_ASIGNADO`: Compromiso formalizado, visado por gerencia y asignado a un único responsable con fecha límite; 3) `EN_EJECUCION`: Actividades operativas en desarrollo con reporte periódico de hitos intermedios; 4) `EN_VERIFICACION`: Obras o acciones finalizadas por el ejecutor, en proceso de validación probatoria técnica y social; 5) `CUMPLIDO_CERRADO`: Evidencia probatoria aprobada por la jefatura y contraparte, ticket archivado con sello de tiempo inmutable; 6) `RENEGOCIADO`: Modificación acordada de plazo, alcance o presupuesto que congela la versión original y crea la v2 vinculada; 7) `INCUMPLIDO_VENCIDO`: Fecha límite superada sin evidencia de cumplimiento, activando alerta roja y comité de contingencia; y 8) `CANCELADO`: Desestimación formal justificada por mutuo acuerdo o fuerza mayor documentada, requiriendo acta explicativa comunitaria.",
+  "findings": [
+    {
+      "claim_id": "P09-F19-C1",
+      "claim": "La máquina finita de 8 estados estandarizada rige todas las transiciones del ciclo de vida, prohibiendo saltos arbitrarios o cierres sin fase de verificación probatoria previa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "finite_state_machine_commitments",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Máquina de Estados Finita del Compromiso (FSM)'",
+          "retrieved_at": null,
+          "excerpt_short": "El ciclo de vida se rige por la FSM canónica: PROPUESTO -> APROBADO_ASIGNADO -> EN_EJECUCION -> EN_VERIFICACION -> CUMPLIDO_CERRADO. Transiciones de excepción: RENEGOCIADO, INCUMPLIDO_VENCIDO y CANCELADO. Está prohibido pasar de EN_EJECUCION a CUMPLIDO_CERRADO sin transitar por EN_VERIFICACION.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: Stakeholder Commitment Tracking — A Complete Guide to Registration",
+          "source_id": "a5e60b84-dff6-493b-9241-19fb1044d36f",
+          "locator": "Section 'The 5 Mandatory Lifecycle Stages of a Corporate Promise', p. 12-16",
+          "retrieved_at": null,
+          "excerpt_short": "A robust commitment governance system prevents premature closure by inserting a mandatory verification gate where evidence is peer-reviewed before the commitment can be marked completed.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Tractivity y la arquitectura FSM del dossier de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evento de cambio de estado",
+      "Evidencia adjunta",
+      "ID de usuario solicitante"
+    ],
+    "actors": [
+      "Dueño del Compromiso",
+      "Jefe de Asuntos Corporativos",
+      "Motor de Workflow BRIDGE"
+    ],
+    "steps": [
+      "Verificación de prerequisitos de la transición",
+      "Comprobación de permisos de usuario",
+      "Actualización del estado en la base de datos",
+      "Registro de evento en audit log append-only",
+      "Disparo de notificaciones webhook"
+    ],
+    "states": [
+      "Transición Solicitada",
+      "Validación de Reglas OK",
+      "Estado Actualizado"
+    ],
+    "outputs": [
+      "Compromiso en nuevo estado con timestamp inmutable"
+    ],
+    "exceptions": [
+      "Intentos de marcar CUMPLIDO_CERRADO sin evidencia adjunta devuelven error HTTP 422 Unprocessable Entity"
+    ]
+  },
+  "entities": [
+    "Máquina de Estados Finita (FSM)",
+    "Tractivity SRM",
+    "P09_RESEARCH_DOSSIER",
+    "Regla de Verificación Previa",
+    "Audit Log"
+  ],
+  "relations": [
+    {
+      "from": "EN_EJECUCION",
+      "to": "EN_VERIFICACION",
+      "type": "TRANSITIONS_TO"
+    },
+    {
+      "from": "EN_VERIFICACION",
+      "to": "CUMPLIDO_CERRADO",
+      "type": "REQUIRES_EVIDENCE_VALIDATION"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Checklist estático vs Máquina de estados FSM",
+      "diferencia": "El checklist estático permite marcar tareas como listas sin prueba; la FSM exige validación por roles independientes y evidencia indexada."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "total_canonical_states": "8 estados canónicos",
+    "forbidden_transitions_count": "Todas las transiciones no contempladas explícitamente en la FSM están bloqueadas"
+  },
+  "bridge_implications": "Implementar la máquina de estados en el backend con una biblioteca de FSM (e.g., Python `transitions` o lógica declarativa en FastAPI).",
+  "open_gaps": [
+    "Definir si se permite reactivar un compromiso CANCELADO mediante un proceso formal de reapertura."
+  ],
+  "next_question_ids": [
+    "P09-F20",
+    "P09-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

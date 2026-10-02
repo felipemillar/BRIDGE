@@ -1,0 +1,146 @@
+{
+  "question_id": "P04-F19",
+  "pilar": "P04",
+  "eje": "Versiones y temporalidad",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué diferencia hay entre fecha del hecho, fecha de publicación y fecha de incorporación al sistema?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La gestión rigurosa de memoria corporativa desacopla tres dimensiones temporales independientes: 1) Fecha del Hecho (Event Time / Valid Time): momento físico en que ocurrió el suceso, se ejecutó la medición o rigió el ejercicio contable (e.g. año operativo 2024 o fecha exacta de un incidente operacional); 2) Fecha de Publicación (Publication / Assertion Time): momento formal en que la corporación aprobó y divulgó el artefacto ante el regulador o el público general (e.g. 28 de marzo de 2025 al depositar la memoria en la CMF); y 3) Fecha de Incorporación al Sistema (Transaction / Ingestion Time): marca temporal inmutable en que el documento fue procesado, vectorizado e indexado en la base de datos de inteligencia (e.g. 1 de abril de 2025 a las 10:15 UTC). Confundir estas fechas destruye la trazabilidad jurídica y provoca graves anacronismos en la preparación de voceros.",
+  "findings": [
+    {
+      "claim_id": "P04-F19-C1",
+      "claim": "El modelo bitemporal estricto distingue la ocurrencia del hecho (Valid Time), la emisión oficial del documento (Publication Time) y su indexación tecnológica (Transaction Time) para evitar anacronismos en litigios y vocería.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Datos Temporales"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.3: Trazabilidad Bitemporal y Linaje W3C PROV-O",
+          "excerpt_short": "El sistema modela la dimensión temporal bajo una estructura bitemporal: Tiempo de Validez (período en que rigió en la realidad) vs Tiempo de Transacción (momento exacto en que fue publicado, indexado o modificado).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "d1f9b36e-6fd4-411a-8e8a-da15aa5ed9b8",
+          "source_title": "W3C DCAT-3: Data Catalog Vocabulary Version 3",
+          "original_url": "https://www.w3.org/TR/vocab-dcat-3/",
+          "locator": "Temporal Properties and Coverage",
+          "excerpt_short": "Distinguishes dcterms:temporal (validity period of coverage) from dcterms:issued (formal publication date) and dcterms:modified.",
+          "source_date": "2024-05-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fundamentación en W3C DCAT-3 y especificación bitemporal del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento corporativo crudo",
+      "Metadatos regulatorios y de ingesta"
+    ],
+    "actors": [
+      "Temporal Parser",
+      "Bitemporal Store",
+      "Metadata Indexer"
+    ],
+    "steps": [
+      "Extracción de fecha del hecho",
+      "Captura de fecha de depósito CMF",
+      "Generación de timestamp de transacción UTC"
+    ],
+    "states": [
+      "Raw",
+      "Temporally_Annotated",
+      "Indexed_Bitemporal"
+    ],
+    "outputs": [
+      "Registro documental con 3 dimensiones temporales independientes"
+    ],
+    "exceptions": [
+      "Documentos sin fecha de publicación explícita"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BITEMPORAL_MODEL",
+      "type": "modelo_temporal",
+      "name": "Modelo Bitemporal Corporativo",
+      "aliases": [
+        "Corporate Bitemporal Data Model"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BITEMPORAL_MODEL",
+      "predicate": "gobierna_fechas_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F19-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Manejo temporal",
+      "Sistema monotemporal (fecha de archivo)": "Usa la fecha de guardado en disco, perdiendo el año al que corresponden las cifras.",
+      "Sistema bitemporal formal": "Separa cuándo ocurrió, cuándo se hizo público y cuándo lo aprendió el sistema."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe almacenar siempre las tres fechas para permitir consultas retrospectivas y defensas legales exactas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F20"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

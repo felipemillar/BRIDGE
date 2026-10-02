@@ -1,0 +1,162 @@
+{
+  "question_id": "P02-F11",
+  "pilar": "P02",
+  "eje": "Competidores cercanos a los cuatro módulos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre competidores cercanos a los cuatro módulos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cada hecho está respaldado por especificaciones técnicas oficiales de los proveedores indexadas en P02 con fechas y pasajes exactos: 1) Broadsight: broadsight.ca/solutions/issues-management/ (1.351 tokens, 2025-2026, Norteamérica/UK), pasaje clave: 'System of Record for Corporate Communications... coordinate stories and statements with source records'; 2) Entual: entual.io/faq (2.719 tokens, 2025-2026, Europa), pasaje clave: 'Entual works exclusively with public external sources... continuous ingestion from government registries'; 3) AlphaSense: alpha-sense.com/solutions/market-intelligence-platform/ (13.268 tokens, Q2 2025, Global), pasaje clave: 'Leader by independent research... search internal enterprise content (SharePoint, Drive, Box) with cited paragraphs'; 4) Signal AI: signal-ai.com/products-services/reputation/ (3.666 tokens, abril 2026, Global), pasaje clave: 'AIQ processes 5.5M+ daily documents in 80+ languages... Memo belongs to Signal AI as of April 20, 2026'; 5) Burson / WPP: bursonglobal.com/newsroom/limbik/ (2.719 tokens, 12 agosto 2026, Global), pasaje clave: 'Burson acquired cognitive AI company Limbik... Decipher Tech Suite models audience believability'; 6) Borealis: boreal-is.com/modules/stakeholder-engagement/ (2.500+ tokens, 2025-2026, Global), pasaje clave: 'Managing grievances, land access, and community commitments'; 7) Litoralpress: litoralpress.cl/ (5.531 tokens, 2025-2026, Chile), pasaje clave: 'Monitoreo de prensa escrita nacional y regional, TV y radioemisoras locales con boletines matutinos'.",
+  "findings": [
+    {
+      "claim_id": "P02-F11-C1",
+      "claim": "El análisis de capacidades y vacíos de los competidores más cercanos se sustenta en documentación técnica primaria y especificaciones funcionales públicas de los proveedores capturadas en el cuaderno P02 entre 2024 y 2026.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global / Chile",
+        "actor": "Proveedores de Software Evaluados"
+      },
+      "evidence": [
+        {
+          "source_id": "bc46f4e1-79fa-4fca-86f0-6192709c7b7f",
+          "source_title": "Broadsight System of Record for Corporate Communications and Issues Management",
+          "original_url": "https://broadsight.ca/solutions/issues-management/",
+          "locator": "Especificación de Issues Management y System of Record",
+          "excerpt_short": "System of Record for Corporate Communications and Issues Management. Coordinate web stories, speeches, social content with source records.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        },
+        {
+          "source_id": "ef06bb22-25b6-40e4-aa2f-29b2c1b71892",
+          "source_title": "Entual Platform FAQ Data Sources and Capabilities",
+          "original_url": "https://www.entual.io/faq",
+          "locator": "FAQ: Data Sources and Internal Content",
+          "excerpt_short": "Entual works exclusively with public external sources, continuous ingestion from government registries and media.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        },
+        {
+          "source_id": "2fd3bc2b-f4aa-4236-ba6d-2527a3b36aef",
+          "source_title": "Litoralpress Chile Monitoreo de Medios e Inteligencia de Prensa",
+          "original_url": "https://www.litoralpress.cl/",
+          "locator": "Cobertura Nacional y Regional en Chile",
+          "excerpt_short": "Monitoreo de prensa escrita nacional y regional, TV y radioemisoras locales en Chile.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de especificaciones funcionales en las fuentes primarias indexadas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "URLs oficiales de proveedores",
+      "Documentación técnica descargada",
+      "Tabla de metadatos de fuentes"
+    ],
+    "actors": [
+      "Analista Epistémico",
+      "Sistema de Auditoría"
+    ],
+    "steps": [
+      "Verificación de autenticidad de portal",
+      "Extracción de citas y localizadores",
+      "Contraste con fe de erratas",
+      "Publicación en el manifiesto P02"
+    ],
+    "states": [
+      "Portal_Auditado",
+      "Texto_Extraido",
+      "Trazabilidad_Aprobada"
+    ],
+    "outputs": [
+      "Cuadro de Trazabilidad de Competidores Cercanos"
+    ],
+    "exceptions": [
+      "Páginas comerciales modificadas durante el estudio (se referencia copia estática indexada)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "TRAZABILIDAD_COMPETIDORES",
+      "type": "artefacto_auditoria",
+      "name": "Registro de Trazabilidad de Competidores Cercanos P02",
+      "aliases": [
+        "Competitor Evidence Table"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "TRAZABILIDAD_COMPETIDORES",
+      "predicate": "valida_especificaciones_de",
+      "object_id": "Competidores_4_Modulos",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F11-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Afirmación Secundaria vs Verificación en FAQ Primaria",
+      "Afirmación Secundaria": "Asumir que Entual puede indexar documentos privados del cliente.",
+      "Verificación Primaria (FAQ Entual)": "Entual declara explícitamente que solo ingesta información pública abierta."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Mantener registro estricto de las especificaciones de la competencia para guiar la ingeniería inversa y el posicionamiento de producto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F12",
+    "P02-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:28:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

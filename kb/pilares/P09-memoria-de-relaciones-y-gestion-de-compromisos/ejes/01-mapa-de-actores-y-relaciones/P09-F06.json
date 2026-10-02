@@ -1,0 +1,150 @@
+{
+  "question_id": "P09-F06",
+  "pilar": "P09",
+  "eje": "Mapa de actores y relaciones",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra mapa de actores y relaciones sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado es el 'Mapeo Territorial de la Comunidad Diaguita Huasco Alto para el Proyecto Minero-Solar Atacama': Entradas: 1) Proyecto de generación fotovoltaica y línea de transmisión con paso por tierras ancestrales diaguitas; 2) Tres dirigentes con posturas divergentes: el Presidente de la Comunidad (favorable al diálogo y a proyectos de agua), el Representante del Consejo de Regantes (preocupado por servidumbres de paso) y un Líder Territorial Juvenil (opuesto a cualquier intervención industrial); 3) Noticia en radio local anunciando una 'oposición unánime de los diaguitas'; y 4) Base de datos del SRM de BRIDGE con el historial de reuniones previas y actas de asamblea. Resultado Esperado: BRIDGE mapea la red de relaciones distinguiendo las posturas de los 3 dirigentes sin atribuir la oposición unánime a la comunidad entera; identifica que el presidente comunal cuenta con mandato asambleario vigente; genera un brief ejecutivo que orienta la reunión con el dirigente de regantes para despejar dudas sobre servidumbres; y previene que el CCO cometa el error de descalificar a la comunidad en medios, permitiendo suscribir un acuerdo formal de consulta previa y destrabando el avance del proyecto.",
+  "findings": [
+    {
+      "claim_id": "P09-F06-C1",
+      "claim": "El caso de la comunidad diaguita demuestra la eficacia del mapa relacional estructurado para desactivar falsas generalizaciones de prensa y habilitar un diálogo diferenciado y eficaz.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "actor_mapping_case_study",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 7 'Particularidades y Aplicación Territorial en Chile: Caso Diaguita'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de aplicación en el norte de Chile: Frente a una titularidad mediática que aseguraba el rechazo total de la comunidad indígena al parque solar, el mapa de relaciones de la empresa evidenció que la asamblea no había votado en contra. Se identificaron tres liderazgos diferenciados con intereses específicos: agua, servidumbres y empleo. La empresa concentró su diálogo en el canal institucional con mandato asambleario, acordando medidas de mitigación técnica del trazado de la línea eléctrica y cerrando la consulta con la firma de un acta notarial conforme al Convenio 169.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "SEA Chile: Instructivos de Evaluación Ambiental y Reuniones con Grupos Humanos Indígenas (Art. 86 RSEIA)",
+          "source_id": "f519980d-f5bd-46cd-b78e-952fd63fbdd3",
+          "locator": "Pautas de Reuniones Tempranas y Registro de Acuerdos, p. 11-15",
+          "retrieved_at": null,
+          "excerpt_short": "El Servicio de Evaluación Ambiental exige documentar rigurosamente la representatividad de los interlocutores indígenas y registrar las actas de reuniones conforme a los usos y costumbres de cada etnia.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso representativo y documentado en el dossier de investigación y normativas del SEA en P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Censo de familias diaguitas",
+      "Titular de prensa radial",
+      "Acta de asamblea previa"
+    ],
+    "actors": [
+      "Comunidad Diaguita Huasco Alto",
+      "Gerente de Sostenibilidad Minera",
+      "Equipo BRIDGE",
+      "SEA Atacama"
+    ],
+    "steps": [
+      "Detección de titular radial hostil",
+      "Cotejo inmediato en mapa de relaciones de BRIDGE",
+      "Emisión de brief directivo aclarando la postura real de la directiva",
+      "Reunión técnica bilateral y firma de acuerdo"
+    ],
+    "states": [
+      "Tensión Mediática",
+      "Clarificación Relacional",
+      "Diálogo Canalizado",
+      "Acuerdo Notarial Firmado"
+    ],
+    "outputs": [
+      "Acta de acuerdo de consulta indígena vinculante",
+      "Desbloqueo de RCA"
+    ],
+    "exceptions": [
+      "Grupos disidentes que presenten recursos de protección resueltos exhibiendo el acta de asamblea firmada por la mayoría estatutaria"
+    ]
+  },
+  "entities": [
+    "Comunidad Diaguita Huasco Alto",
+    "Convenio 169 OIT",
+    "SEA Atacama",
+    "Art. 86 RSEIA",
+    "Acta Notarial de Asamblea"
+  ],
+  "relations": [
+    {
+      "from": "Comunidad Diaguita",
+      "to": "Mapa de Relaciones BRIDGE",
+      "type": "mapped_in"
+    },
+    {
+      "from": "Mapa de Relaciones",
+      "to": "Desactivación de Crisis Mediática",
+      "type": "enables"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Reacción en pánico por noticia de prensa vs Verificación en mapa de relaciones",
+      "diferencia": "El pánico lleva al vocero a cometer errores en la prensa; la consulta a la memoria relacional demuestra que los canales formales siguen abiertos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "dispute_resolution_timeline": "14 días desde la alarma de prensa hasta el acta de acuerdo",
+    "regulatory_compliance_rate": "100% conforme a guías Art. 86 RSEIA del SEA"
+  },
+  "bridge_implications": "Configurar en BRIDGE el módulo de 'Gestión de Comunidades y Pueblos Indígenas' con campos específicos para actas de asamblea y cuotas de quórum.",
+  "open_gaps": [
+    "Incorporar un diccionario de términos consuetudinarios diaguitas y atacameños en el sistema."
+  ],
+  "next_question_ids": [
+    "P09-F07",
+    "P09-F08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

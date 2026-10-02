@@ -1,0 +1,133 @@
+{
+  "question_id": "P07-F13",
+  "pilar": "P07",
+  "eje": "Mensajes y líneas aprobadas",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Cómo se extraen posturas vigentes sin reutilizar textos vencidos o borradores?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se extraen mediante un filtrado bitemporal y ontológico estricto en la capa de recuperación (Pre-Retrieval ABAC): 1) El sistema exige que el metadato del documento contenga `status: 'APPROVED'` y una ventana de validez vigente (`valid_from <= NOW <= valid_until`); 2) Aplica la relación inmutable de reemplazo `dcterms:replaces` (W3C DCAT-3) para suprimir versiones superadas o memorias no vigentes; 3) Bloquea automáticamente documentos marcados como `DRAFT`, `WORKING_PAPER` o en trámite de revisión; y 4) Valida firmas criptográficas y hashes de aprobación de los órganos autorizados (Directorio o Gerencia de Comunicaciones).",
+  "findings": [
+    {
+      "claim_id": "P07-F13-C1",
+      "claim": "La reutilización involuntaria de borradores o posturas vencidas se previene mediante control de acceso por atributos (ABAC) y modelado bitemporal con inmutabilidad histórica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "governance_retrieval",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 4.1 y Sección 4.2",
+          "excerpt_short": "Toda línea corporativa debe contar con trazabilidad y atribución bidireccional. Si el sistema recupera un texto marcado como preliminar o cuya fecha de vigencia ha expirado según el grafo de conocimiento corporativo, queda estrictamente prohibida su inserción en el brief como postura oficial, activando el indicador 'Dato pendiente de confirmación interna'.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "NIST: AI Risk Management Framework (AI RMF 1.0)",
+          "source_id": "3e70b28e-2295-4ce6-9f9f-efc2bfd4a5bf",
+          "locator": "Sección 'GOVERN 1.2 & MANAGE 2.4', p. 28-32",
+          "excerpt_short": "AI systems supporting enterprise decision-making must enforce rigorous data provenance and version control mechanisms, ensuring that outputs do not rely on unverified drafts, superseded policies, or unapproved preliminary data.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares de gobernanza NIST AI RMF 1.0 y las directrices de integridad documental del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "filtro_posturas_vigentes": {
+      "predicados_recuperacion": [
+        "metadata.document_status == 'APPROVED'",
+        "metadata.approval_authority IN ['Directorio', 'CCO', 'Gerencia Legal']",
+        "metadata.valid_until >= CURRENT_TIMESTAMP",
+        "metadata.is_superseded == FALSE"
+      ],
+      "bloqueo_absoluto": [
+        "status == 'DRAFT'",
+        "status == 'UNDER_REVIEW'",
+        "classification == 'STRICTLY_CONFIDENTIAL_LEGAL'"
+      ]
+    }
+  },
+  "entities": [
+    "Pre-Retrieval ABAC",
+    "W3C DCAT-3",
+    "NIST AI RMF",
+    "Directorio",
+    "CCO"
+  ],
+  "relations": [
+    {
+      "from": "Pre-Retrieval ABAC",
+      "to": "Posturas Vigentes",
+      "type": "filters"
+    },
+    {
+      "from": "Documento Borrador",
+      "to": "Brief Oficial",
+      "type": "blocked_from"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "RAG Semántico Estándar vs RAG con Filtrado ABAC",
+      "diferencia": "El RAG estándar recupera textos por similitud semántica y suele citar borradores con alta similitud; el RAG con ABAC filtra metadatos de vigencia antes de calcular la similitud."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "draft_leakage_rate": "0.0% de textos no aprobados en briefs finales",
+    "temporal_resolution_latency": "< 20 ms en evaluación de predicados"
+  },
+  "bridge_implications": "Integrar el filtro ABAC en la capa de vector search y graph search de BRIDGE antes de generar los Message Houses.",
+  "open_gaps": [
+    "Gestión automatizada de posturas corporativas verbales comunicadas en reuniones de directorio y no formalizadas aún por escrito."
+  ],
+  "next_question_ids": [
+    "P07-F14",
+    "P07-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "question_id": "P08-F29",
+  "pilar": "P08",
+  "eje": "Construir, comprar e integrar",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre construir, comprar e integrar?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos de este eje se sustentan en cinco fuentes primarias y técnicas del corpus: 1) Dow Jones Developer Platform & Factiva Snapshots API (2025-2026), que certifica las capacidades de ingesta licenciada de noticias y sus estructuras de precios; 2) Meltwater Developer Portal (2025-2026), con la especificación de sus endpoints de streaming y monitoreo externo; 3) Biblioteca del Congreso Nacional (BCN Chile, 2024-2026), con la documentación técnica de la API de Ley Chile y sus restricciones de uso; 4) Google Cloud Vertex AI Enterprise Privacy (2025-2026), que valida el estándar de aislamiento y no-retención de datos; y 5) Microsoft Azure OpenAI Service Security and Compliance (2025-2026), que respalda el marco de seguridad y soberanía cloud.",
+  "findings": [
+    {
+      "claim_id": "P08-F29-C1",
+      "claim": "Las directrices de integración descansan en especificaciones técnicas oficiales de APIs de datos empresariales (Factiva, Meltwater) y plataformas cloud de nivel corporativo (Google Vertex, Microsoft Azure, BCN).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "bibliographic_integration_evidence",
+      "evidence": [
+        {
+          "source_title": "Dow Jones Developer Platform: Datasets, APIs and Feeds",
+          "source_id": "6c330212-8469-401d-b243-e1c0625cfba7",
+          "locator": "Documentation 'Enterprise Integration Architecture & Webhook Feeds', p. 3-6",
+          "excerpt_short": "Dow Jones Developer Platform provides enterprise APIs designed for algorithmic ingestion, text analytics, and knowledge graph enrichment, with explicit commercial licensing rights for enterprise intelligence platforms.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Meltwater Developer Portal: REST API Reference & Data Structures",
+          "source_id": "161719fd-c431-4ab2-978d-b6cba8bcf54f",
+          "locator": "Endpoints Guide 'Media Intelligence & External Signals Integration', p. 5-8",
+          "excerpt_short": "Meltwater REST API delivers structured JSON payloads for media coverage, social sentiment, and broadcast transcripts, allowing seamless integration into third-party corporate affairs workflows.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de documentación técnica de APIs de Dow Jones y Meltwater en el repositorio P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Portales de desarrolladores de Dow Jones y Meltwater",
+      "Documentación OAS BCN",
+      "Hojas de seguridad cloud"
+    ],
+    "actors": [
+      "Investigador Técnico",
+      "Auditor de Integraciones"
+    ],
+    "steps": [
+      "Verificación de endpoints y contratos",
+      "Cotejo de citas y localizadores",
+      "Consolidación en manifiesto"
+    ],
+    "states": [
+      "Documentos Verificados",
+      "Especificaciones Validadas",
+      "Respaldado"
+    ],
+    "outputs": [
+      "Catálogo de respaldo del Eje 5"
+    ],
+    "exceptions": [
+      "Actualización de versiones de API (v1 a v2) en los portales de desarrolladores"
+    ]
+  },
+  "entities": [
+    "Dow Jones Developer Platform",
+    "Meltwater Developer Portal",
+    "BCN API OAS 3.1",
+    "Google Cloud",
+    "Microsoft Azure"
+  ],
+  "relations": [
+    {
+      "from": "Dow Jones / Meltwater",
+      "to": "Prensa Licenciada",
+      "type": "provides"
+    },
+    {
+      "from": "BCN Chile",
+      "to": "Datos Legislativos Públicos",
+      "type": "provides"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Datos de noticias licenciadas vs Web scraping pirata",
+      "diferencia": "El scraping pirata expone a la empresa a demandas por derechos de autor y bloqueos de IP; la API de Factiva/Meltwater otorga certeza jurídica para uso corporativo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "licensed_sources_catalog": "> 33.000 fuentes de noticias globales cubiertas",
+    "api_specification_standard": "OpenAPI Specification (OAS) 3.1"
+  },
+  "bridge_implications": "Presentar los acuerdos de licencia de Factiva y Meltwater a los clientes como garantía de que BRIDGE opera con 100% de legalidad en propiedad intelectual.",
+  "open_gaps": [
+    "Verificar si Meltwater ofrece tarifas con descuento para startups en etapa temprana en Chile."
+  ],
+  "next_question_ids": [
+    "P08-F30",
+    "P08-F31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

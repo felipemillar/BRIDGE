@@ -1,0 +1,188 @@
+{
+  "question_id": "T01-F19",
+  "pilar": "T01",
+  "eje": "Rúbricas humanas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué dimensiones evalúan especialistas en asuntos corporativos para cada módulo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los especialistas en asuntos corporativos evalúan los cuatro módulos de The Bridge Intelligence (thebridgeintelligence.ai) a través de rúbricas multidimensionales adaptadas a cada naturaleza funcional: 1) Módulo Saber: Fidelidad factual (Consistency / Factual Alignment), exhaustividad de recuperación y precisión de atribución de citas primarias (SummEval / Fabbri et al. 2021); 2) Módulo Escuchar: Relevancia estratégica, capacidad de discriminación señal/ruido, y detección temprana de actores críticos antes de la amplificación pública; 3) Módulo Hablar: Coherencia discursiva, adecuación de tono a la audiencia (Social IQa / Sap et al. 2019), ausencia absoluta de contradicciones institucionales y apego a la verdad corporativa (Principio 1 de Arthur W. Page: 'Tell the truth'); y 4) Módulo Relacionar: Identificación precisa de compromisos vigentes, trazabilidad de contrapartes y cumplimiento normativo (Principio 2 de Page: 'Prove it with action').",
+  "findings": [
+    {
+      "claim_id": "T01-F19-C1",
+      "claim": "SummEval (Fabbri et al. 2021) estandariza cuatro dimensiones clave para la evaluación humana de textos generados y sintetizados: consistencia factual (absence of hallucinations), coherencia estructural, relevancia de la información seleccionada y fluidez lingüística.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021",
+        "region": "Global",
+        "actor": "Fabbri et al. / SummEval Benchmark"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 2: Benchmark Design & Dimensions, p. 2-3",
+          "excerpt_short": "We collect human judgments across four key criteria: coherence, consistency, fluency, and relevance, providing a rigorous standard for model evaluation.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto completo del paper verificado (35.612 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F19-C2",
+      "claim": "Los Principios Page de la Arthur W. Page Society dictan que la comunicación corporativa debe evaluarse por la verdad verificable de sus declaraciones ('Tell the truth') y por la consistencia entre los compromisos asumidos y los actos operacionales comprobables ('Prove it with action').",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Arthur W. Page Society"
+      },
+      "evidence": [
+        {
+          "source_id": "f45d1506-e90b-474f-813b-6846b15de6cc",
+          "source_title": "Arthur W. Page Society - The Page Principles of Corporate Public Relations",
+          "original_url": null,
+          "locator": "Principles 1 & 2",
+          "excerpt_short": "1. Tell the truth. Let the public know what's even when it's hard. 2. Prove it with action. 90% of good PR is doing the right thing, 10% is talking about it.",
+          "source_date": "2021",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fuente autoritativa institucional en relaciones corporativas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Textos y análisis generados por los 4 módulos de BRIDGE",
+      "Rúbrica Likert de 5 puntos",
+      "Pauta de evaluación ciega"
+    ],
+    "actors": [
+      "Panel de 3 Directores de Asuntos Corporativos independientes",
+      "Coordinador de QA"
+    ],
+    "steps": [
+      "Distribuir muestras anónimas generadas por BRIDGE y controles manuales",
+      "Evaluar Saber en consistencia fáctica y relevancia",
+      "Evaluar Escuchar en pertinencia estratégica de señales",
+      "Evaluar Hablar en adecuación de tono y verdad factual",
+      "Evaluar Relacionar en trazabilidad de compromisos"
+    ],
+    "states": [
+      "DISTRIBUCION_MUESTRAS",
+      "EVALUACION_PANEL",
+      "CALCULO_DIMENSIONAL",
+      "REPORTE_RUBRICAS"
+    ],
+    "outputs": [
+      "Matriz de puntajes por dimensión (escala 1.0 a 5.0)",
+      "Identificación de gaps cualitativos"
+    ],
+    "exceptions": [
+      "Si un entregable obtiene un puntaje < 3.0 en consistencia fáctica, se detiene la evaluación del caso por riesgo regulatorio"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "PAGE_SOCIETY",
+      "type": "organizacion",
+      "name": "Arthur W. Page Society",
+      "aliases": [
+        "Page Principles"
+      ]
+    },
+    {
+      "entity_id": "SUMMEVAL_DIMENSIONS",
+      "type": "documento",
+      "name": "Dimensiones SummEval",
+      "aliases": [
+        "Consistency, Coherence, Relevance, Fluency"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "PAGE_SOCIETY",
+      "predicate": "define_principios_para",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2021",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F19-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Evaluación Módulo Saber",
+      "item_b": "Evaluación Módulo Hablar",
+      "dimension": "Criterio rector",
+      "conclusion": "Saber exige consistencia documental estricta (grounding); Hablar exige coherencia discursiva, tono estratégico y apego a compromisos previos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Promedio rúbrica en dimensión consistencia",
+      "denominator": "Total casos auditados por humanos",
+      "target": ">= 4.5 / 5.0"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "La interfaz de BRIDGE debe mostrar a los directores el desglose de evaluación por dimensión para empoderar la toma de decisión.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F20",
+    "T01-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

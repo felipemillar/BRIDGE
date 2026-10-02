@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-C16",
+  "pilar": "P02",
+  "eje": "Posicionamiento y alianzas",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre posicionamiento y alianzas, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la viabilidad económica y comercial del empaquetamiento integral ('bundling') de los cuatro módulos frente a la preferencia de las corporaciones por contratar herramientas de nicho ('unbundled best-of-breed'): 1) Brecha: No existe evidencia de que un director de asuntos corporativos esté dispuesto a consolidar en un solo proveedor su presupuesto de monitoreo de prensa, su CRM legislativo, su software de gestión comunitaria y su motor de búsqueda interno; 2) Fuentes parciales: Los reportes de analistas (Forrester, Gartner) muestran consolidación en marketing y ciberseguridad, pero no aportan datos concluyentes para el vertical de asuntos públicos; 3) Validación mínima: Conducir un estudio de disposición a pagar (Willingness to Pay) y entrevistas estructuradas sobre Costo Total de Propiedad (TCO) con 20 directores de asuntos corporativos de empresas líderes en Chile, evaluando si prefieren un contrato único consolidado o mantener contratos independientes con Litoralpress, Quorum, Borealis y Glean.",
+  "findings": [
+    {
+      "claim_id": "P02-C16-C1",
+      "claim": "La preferencia comercial corporativa por una suite unificada (bundling) frente a soluciones de nicho especializadas (best-of-breed) en asuntos corporativos permanece como una hipótesis no validada en el mercado latinoamericano.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / América Latina",
+        "actor": "Mercado Corporativo"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Commercial Bundling vs Best-of-Breed Preference Gap",
+          "excerpt_short": "Enterprise procurement dynamics in corporate affairs show historical preference for unbundled specialized tools; unified suite willingness-to-pay remains unproven.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:46:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de vacíos de mercado en el atlas de validación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario de TCO y disposición a pagar",
+      "Panel de 20 directores de asuntos corporativos",
+      "Estructura de precios propuesta"
+    ],
+    "actors": [
+      "Director Comercial",
+      "Auditor de Mercado"
+    ],
+    "steps": [
+      "Ejecución de entrevistas en profundidad",
+      "Modelación de elasticidad de demanda",
+      "Cálculo del ahorro percibido por consolidación"
+    ],
+    "states": [
+      "Entrevistas_Realizadas",
+      "Datos_Tabulados",
+      "Disposicion_Medida"
+    ],
+    "outputs": [
+      "Estudio de viabilidad comercial del modelo bundled"
+    ],
+    "exceptions": [
+      "Directores que no tienen visibilidad del presupuesto completo al estar fragmentado entre distintas gerencias"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTUDIO_BUNDLING",
+      "type": "estudio_mercado",
+      "name": "Estudio de Disposición a Pagar por Suite Unificada",
+      "aliases": [
+        "Bundling TCO Study"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESTUDIO_BUNDLING",
+      "predicate": "valida_viabilidad_comercial_de",
+      "object_id": "Modelo_Negocio_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C16-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Hipótesis de Bundling vs Hipótesis de Unbundling",
+      "Hipótesis de Bundling": "La empresa ahorra dinero y gana eficiencia teniendo un solo software y una sola factura.",
+      "Hipótesis de Unbundling": "Cada área (prensa, comunidades, legal) defiende su herramienta favorita y rechaza una plataforma unificada impuesta."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe ofrecer una arquitectura modular que permita a los clientes contratar módulos individuales antes de dar el salto a la suite completa.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_BUNDLING_PREFERENCE",
+      "description": "Falta de prueba sobre preferencia corporativa por suite integrada vs nicho",
+      "action": "Ejecutar estudio de WTP con 20 DirComs"
+    }
+  ],
+  "next_question_ids": [
+    "P02-X01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:46:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

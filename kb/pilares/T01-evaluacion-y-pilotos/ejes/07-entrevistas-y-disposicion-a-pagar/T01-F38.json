@@ -1,0 +1,200 @@
+{
+  "question_id": "T01-F38",
+  "pilar": "T01",
+  "eje": "Entrevistas y disposición a pagar",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué pregunta o prueba comercial revela presupuesto real y proceso de compra?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para revelar presupuesto real y proceso de compra corporativo, The Bridge Intelligence utiliza dos pruebas metodológicas de rigor empírico: 1) Metodología Van Westendorp Price Sensitivity Meter (PSM / Van Westendorp 1976, SurveyMonkey b62914e1): Se aplican las cuatro preguntas canónicas a los sponsors económicos: ¿A qué precio BRIDGE es tan costoso que ni lo consideraría?; ¿A qué precio es costoso pero aún lo compraría?; ¿A qué precio es una ganga excepcional?; y ¿A qué precio es tan barato que dudaría de su seguridad y calidad?; y 2) Prueba Comercial Ácida de Compromiso Presupuestario (Cooper Stage-Gate G3): En la Semana 4 del piloto, se solicita al cliente la firma de una Carta de Intención de Compra (LOI - Letter of Intent) o la asignación formal de una partida presupuestaria específica ('Purchase Order Pre-authorization'). Si el cliente elogia el software pero se rehúsa a involucrar a Compras o a identificar el centro de costos, se diagnostica complacencia y la compuerta comercial se declara Fallida (Kill).",
+  "findings": [
+    {
+      "claim_id": "T01-F38-C1",
+      "claim": "El método Van Westendorp Price Sensitivity Meter (Van Westendorp 1976; SurveyMonkey b62914e1) permite trazar las curvas de 'Demasiado Barato', 'Barato', 'Caro' y 'Demasiado Caro', determinando el Rango de Precios Aceptables (Acceptable Price Range) y el Punto Óptimo de Precio (OPP) para suscripciones SaaS corporativas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1976-2026",
+        "region": "Global",
+        "actor": "Van Westendorp & SurveyMonkey"
+      },
+      "evidence": [
+        {
+          "source_id": "6f83ad5e-474a-4e5a-b90f-89bc5cdc62f5",
+          "source_title": "Van Westendorp (1976) - Price Sensitivity Meter (PSM) Methodology",
+          "original_url": null,
+          "locator": "The 4 Canonical Pricing Questions",
+          "excerpt_short": "The PSM method asks four distinct questions regarding price perception: too cheap, cheap/bargain, expensive, and too expensive, mapping consumer price thresholds.",
+          "source_date": "1976",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "b62914e1-de40-490c-ae09-d229aaf7f384",
+          "source_title": "SurveyMonkey - How To Use The Van Westendorp Price Sensitivity Meter",
+          "original_url": null,
+          "locator": "Corporate SaaS Pricing Implementation",
+          "excerpt_short": "Plotting cumulative distributions identifies the Point of Marginal Cheapness, Point of Marginal Expensiveness, and Indifference Price Point, establishing valid budget bands.",
+          "source_date": "2024",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Metodología estándar global de pricing y disposición a pagar.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F38-C2",
+      "claim": "Cooper (2016-2025) señala que el único indicador irrefutable de viabilidad comercial en la compuerta Gate 3 es la disposición del cliente a comprometer recursos financieros formales o iniciar la homologación en el portal de proveedores, pues los elogios verbales no correlacionan con la compra efectiva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025",
+        "region": "Global",
+        "actor": "Cooper Stage-Gate"
+      },
+      "evidence": [
+        {
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & Agile Integration",
+          "original_url": null,
+          "locator": "Gate 3: Commercial Validation Criteria",
+          "excerpt_short": "Passing Gate 3 requires formal budget identification, procurement alignment, or pre-orders. Verbal enthusiasm without financial commitment is treated as a failed gate.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Regla de validación comercial en Stage-Gate.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Respuestas a las 4 preguntas de Van Westendorp de tomadores de decisión",
+      "Solicitud de Carta de Intención (LOI)"
+    ],
+    "actors": [
+      "Director Comercial de BRIDGE",
+      "Chief Financial Officer / Gerente de Compras del Cliente"
+    ],
+    "steps": [
+      "Aplicar el cuestionario PSM de Van Westendorp en la reunión de evaluación intermedia",
+      "Trazar las curvas de sensibilidad y calcular el Rango de Precios Aceptables",
+      "Presentar la propuesta formal de suscripción anual dentro del rango aceptable",
+      "Exigir el inicio del proceso de registro como proveedor y asignación de orden de compra"
+    ],
+    "states": [
+      "ENTREVISTA_PSM",
+      "CALCULO_OPP",
+      "PROPUESTA_COMERCIAL",
+      "VALIDACION_GATE_3"
+    ],
+    "outputs": [
+      "Gráfico de Sensibilidad de Precios Van Westendorp",
+      "Dictamen de Compuerta Comercial G3"
+    ],
+    "exceptions": [
+      "Si el precio 'demasiado barato' supera el costo marginal de BRIDGE, se descarta el cliente por incompatibilidad de mercado"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "VAN_WESTENDORP_PSM",
+      "type": "metrica",
+      "name": "Van Westendorp Price Sensitivity Meter",
+      "aliases": [
+        "PSM 1976"
+      ]
+    },
+    {
+      "entity_id": "COMPUERTA_G3_STAGE_GATE",
+      "type": "evento",
+      "name": "Compuerta Comercial Gate 3",
+      "aliases": [
+        "Go/Kill Comercial"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "VAN_WESTENDORP_PSM",
+      "predicate": "fija_precio_para",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F38-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Pregunta de Encuesta Ordinaria ('¿Le parece caro?')",
+      "item_b": "Test Van Westendorp (4 Preguntas Cruzadas)",
+      "dimension": "Rigor diagnóstico",
+      "conclusion": "La pregunta ordinaria induce sesgo de queja; Van Westendorp cruza umbrales psicológicos de calidad y valor."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de conversión de pilotos a orden de compra",
+      "denominator": "Total pilotos que superaron compuerta G2",
+      "target": ">= 60%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite fijar precios de suscripción en el rango óptimo ($3.000 a $8.000 USD/mes según volumen) con total respaldo de mercado.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F39",
+    "T01-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

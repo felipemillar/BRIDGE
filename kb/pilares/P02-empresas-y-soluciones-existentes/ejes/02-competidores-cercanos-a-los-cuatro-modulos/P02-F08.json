@@ -1,0 +1,209 @@
+{
+  "question_id": "P02-F08",
+  "pilar": "P02",
+  "eje": "Competidores cercanos a los cuatro módulos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué capacidad exacta está documentada para cada módulo y cuál solo es mensaje comercial?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La evidencia técnica separa rigurosamente capacidad probada de marketing comercial: 1) Módulo Saber: Capacidad documentada: AlphaSense (RAG con citación a párrafos y conectores a SharePoint, Drive, Box), Glean (búsqueda neuronal con respeto de RBAC/Okta), Hebbia (extracción matricial sobre PDFs extensos) y Broadsight (repositorio estructurado de issues y Q&A). Mensaje comercial no probado: promesas de 'Zero Hallucination sin esfuerzo' o suites como Meltwater/Brandwatch prometiendo 'visibilidad 360°' cuando son ciegas a archivos internos; 2) Módulo Escuchar: Capacidad documentada: Meltwater (+300k fuentes, APIs a BigQuery/Snowflake), Signal AI (grafo AIQ de 5,5M docs/día), Dataminr First Alert (alertas físicas de crisis en minutos), Litoralpress (prensa, TV y radios regionales en Chile con boletín matutino) y Cyabra/Blackbird (detección de bots/desinformación). Mensaje comercial no probado: 'predicción matemática de crisis de reputación' y análisis de sentimiento 100% infalible en español local; 3) Módulo Hablar: Capacidad documentada: Broadsight (control de versiones de posturas y portavoces asignados), PRophet (predicción de interés periodístico de notas de prensa), Burson Decipher/Limbik (simulación cognitiva de audiencias) y Onclusive (PR Attribution a tráfico web). Mensaje comercial no probado: 'garantía de coherencia automática en 50.000 empleados con un clic' o auto-publicación desatendida; 4) Módulo Relacionar: Capacidad documentada: Borealis/Irth (registro georreferenciado de compromisos comunitarios, convenios y reclamos mineros), Consultation Manager/Open Point (CRM de partes interesadas y consultas públicas), Quorum y FiscalNote (seguimiento legislativo en EE.UU./UE). Mensaje comercial no probado: 'predicción regulatoria global' (carecen de integración técnica con Ley de Lobby chilena o tribunales ambientales en LatAm).",
+  "findings": [
+    {
+      "claim_id": "P02-F08-C1",
+      "claim": "En el módulo Saber, AlphaSense y Glean cuentan con documentación técnica de conectores a repositorios internos y citación a párrafos, mientras que las suites de monitoreo mediático (Meltwater, Cision) son incapaces de indexar archivos corporativos privados pese a sus mensajes publicitarios de visión 360°.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Proveedores RAG vs Suites de Escucha"
+      },
+      "evidence": [
+        {
+          "source_id": "53d0cefb-66f0-4c74-afd5-f18f7eec9d23",
+          "source_title": "AlphaSense Market and Competitive Intelligence Platform",
+          "original_url": "https://www.alpha-sense.com/solutions/market-intelligence-platform/",
+          "locator": "Enterprise Search & Internal Content Integration",
+          "excerpt_short": "Securely search internal content across SharePoint, Google Drive, Box, and OneDrive with cited sources.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        },
+        {
+          "source_id": "1f9d6fc8-3c21-4523-803f-c4c81af0228e",
+          "source_title": "Meltwater Platform Integrations and APIs",
+          "original_url": "https://www.meltwater.com/en/platform/integrations-api",
+          "locator": "Integrations Overview",
+          "excerpt_short": "APIs enable export of media intelligence to BI systems, but do not provide ingestion of internal private enterprise files.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica cruzada entre documentación de producto de AlphaSense y Meltwater.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P02-F08-C2",
+      "claim": "En el módulo Relacionar, las suites anglosajonas Quorum y FiscalNote carecen de integración documentada con la Ley de Lobby chilena (Ley 20.730), tramitación del Congreso Nacional o resoluciones ambientales en Latinoamérica, limitándose su cobertura a EE. UU. y la UE.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / EE. UU.",
+        "actor": "Quorum / FiscalNote"
+      },
+      "evidence": [
+        {
+          "source_id": "f0e5491c-be5a-405e-8178-dc1875be20d0",
+          "source_title": "FiscalNote PolicyNote Platform Overview",
+          "original_url": "https://fiscalnote.com/",
+          "locator": "Coverage: US Federal, State and EU Regulatory Tracking",
+          "excerpt_short": "Core coverage focuses on US Congress, 50 US states, and European Union institutions.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación oficial de cobertura geográfica y regulatoria de FiscalNote.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Especificaciones de producto",
+      "Manuales de API",
+      "Portales de clientes"
+    ],
+    "actors": [
+      "Ingeniero Evaluador",
+      "Vendor de Software",
+      "Cliente Enterprise"
+    ],
+    "steps": [
+      "Cotejo de mensaje comercial vs documentación técnica",
+      "Verificación de conectores reales",
+      "Identificación de brechas de funcionalidad",
+      "Asignación de nivel epistémico (HTD vs AC)"
+    ],
+    "states": [
+      "Declaracion_Comercial_Analizada",
+      "Verificacion_Tecnica_Completada",
+      "Brecha_Documentada"
+    ],
+    "outputs": [
+      "Matriz de Capacidades Reales vs Promesas Comerciales"
+    ],
+    "exceptions": [
+      "Funcionalidades en beta cerrada sin documentación pública disponible"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ALPHASENSE",
+      "type": "competidor_saber",
+      "name": "AlphaSense Inc.",
+      "aliases": [
+        "Market Intelligence Leader"
+      ]
+    },
+    {
+      "entity_id": "ENT_MELTWATER",
+      "type": "competidor_escuchar",
+      "name": "Meltwater Group",
+      "aliases": [
+        "Media Intelligence Suite"
+      ]
+    },
+    {
+      "entity_id": "ENT_BOREALIS",
+      "type": "competidor_relacionar",
+      "name": "Borealis / Irth Solutions",
+      "aliases": [
+        "Stakeholder Engagement Software"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ALPHASENSE",
+      "predicate": "posee_capacidad_tecnica_en",
+      "object_id": "Modulo_Saber_RAG",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F08-C1"
+    },
+    {
+      "subject_id": "ENT_MELTWATER",
+      "predicate": "carece_de_capacidad_en",
+      "object_id": "Modulo_Saber_Interno",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F08-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Promesa de Cobertura 360° vs Realidad de Ingesta",
+      "Promesa Publicitaria (Meltwater/Cision)": "Visibilidad integral y control total de la reputación corporativa.",
+      "Realidad Técnica": "Ceguera absoluta respecto a actas de directorio, RCA y documentos confidenciales internos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Diferenciar a BRIDGE integrando conectores bidireccionales con SharePoint y Google Drive con respeto de RBAC, atacando la ceguera interna de las suites de escucha.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F09",
+    "P02-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:28:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

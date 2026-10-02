@@ -1,0 +1,135 @@
+{
+  "question_id": "P02-X30",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Certeza comercial y madurez",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra certeza comercial y madurez sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso de prueba concreto y verificable: 'Ronda de evaluación técnica a ciegas para la licitación de software de asuntos corporativos en una empresa sanitaria chilena'. Entradas: 1) Requerimiento del pliego de licitación: la empresa sanitaria exige una suite con: a) Monitoreo de medios locales y radiales; b) Flujo de aprobación de vocerías y respuestas oficiales a la Superintendencia de Servicios Sanitarios (SISS); c) Bitácora de quejas de juntas de vecinos por bajas de presión; 2) Postulantes admitidos a demo: Postulante 1 (Meltwater), Postulante 2 (Broadsight), Postulante 3 (Litoralpress) y Postulante 4 (The Bridge Intelligence como propuesta de diseño); 3) Cuestionario de prueba: Las 5 preguntas de demo de P02. Evaluación de las Demostraciones: a) Meltwater demuestra OPD en escucha web y redes, pero falla en radio comunitaria de provincia y carece de módulo de vocería legal y de quejas vecinales; b) Broadsight demuestra DTI de excelencia en aprobación de Q&A corporativo y vocería (Hablar), pero declara que no monitorea prensa ni gestiona comunidades en terreno; c) Litoralpress demuestra OPD en captura y audio de radios comunales en toda la región de la sanitaria, pero declara que no gestiona flujos de vocería ni actúa como CRM de reclamos; d) The Bridge demuestra arquitectura conceptual perfecta de los 4 módulos, pero el auditor epistémico la califica como 'hipótesis de diseño sin producto operativo en producción'. Resultado esperado del caso: La comisión de licitación declara que ningún proveedor cubre el pliego completo de forma unificada; adjudica un contrato dual a Litoralpress (datos de radio) y Broadsight (flujo de vocería), confirmando de forma empírica la fragmentación del mercado y validando la tesis de desarrollo de BRIDGE.",
+  "findings": [
+    {
+      "claim_id": "P02-X30-C1",
+      "claim": "La aplicación práctica del protocolo de auditoría técnica a un proceso de licitación demuestra que las corporaciones se ven forzadas a contratar múltiples proveedores incompatibles debido a la inexistencia de una suite unificada en el mercado real.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Caso Operativo Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "b5217662-c6f0-4529-8282-f5d17339b7fa",
+          "source_title": "P02_GLOBAL_MARKET_MAP_V1",
+          "original_url": null,
+          "locator": "Use Case: Blind Procurement Evaluation in Public Utilities",
+          "excerpt_short": "Simulated procurement reveals forced multi-vendor contracting: utilities must procure separate broadcast monitoring and PR workflow tools due to the absence of unified offerings.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:54:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de trabajo operacional documentado y replicable.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Pliego de requerimientos de la sanitaria",
+      "Demostraciones en vivo de los 4 postulantes",
+      "Matriz de certeza comercial"
+    ],
+    "actors": [
+      "Comisión Evaluadora de Licitación",
+      "Gerente de Comunicaciones",
+      "Auditor de Software"
+    ],
+    "steps": [
+      "Ejecución de las 5 preguntas de demo",
+      "Calificación por módulo funcional",
+      "Dictamen de adjudicación compartida obligada"
+    ],
+    "states": [
+      "Pliego_Publicado",
+      "Demos_Calificadas",
+      "Fallo_Emitido"
+    ],
+    "outputs": [
+      "Informe de adjudicación que evidencia la falla de mercado actual"
+    ],
+    "exceptions": [
+      "Consorcio temporal entre dos proveedores para postular conjuntamente a la licitación"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_LICITACION_SANITARIA",
+      "type": "caso_prueba",
+      "name": "Caso Prueba Licitación Sanitaria Chilena",
+      "aliases": [
+        "Caso Sanitaria P02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_LICITACION_SANITARIA",
+      "predicate": "evidencia_fragmentacion_mercado",
+      "object_id": "Mercado_Software_Chile",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X30-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Resultado Real de Licitación vs Deseo del Cliente",
+      "Deseo del Cliente": "Comprar un solo software que resuelva prensa, reguladores, quejas y vocería en un solo pago.",
+      "Resultado Real de Licitación": "Obligado a contratar a Litoralpress + Broadsight + gestión manual en Excel para reclamos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Este caso es el argumento central de venta de BRIDGE para clientes regulados en Chile y América Latina.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:54:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "question_id": "P05-F46",
+  "pilar": "P05",
+  "eje": "Decisiones de producto y evaluación",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar decisiones de producto y evaluación de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar decisiones de producto y evaluación de forma estructurada exige las siguientes especificaciones técnicas: 1) Variables formales: `decision_id`, `issue_id`, `brief_type` (Alerta_Ejecutiva, Memo_Comite_Crisis, Matriz_Actores), `epistemic_confidence_score` (Bajo, Medio, Alto), `bias_warning_tags` (Sesgo_Redes_Sociales, Desfase_Temporal, Sesgo_Notoriedad), `prescribed_action` (Monitoreo_Pasivo, Verificacion_Interna_Hechos, Dialogo_Privado_Regulador, Comunicado_Publico, Abstencion_Estrategica), `abstention_flags` (Rumor_Sin_Traccion, Hechos_No_Verificados, Reserva_Judicial, Atributo_Sensible_Detectado), `human_eval_rating` (1 a 5), `analyst_user_id`, `timestamp`; 2) Categorías: Tipo de producto de inteligencia (Brief_Informativo, Recomendacion_Prescriptiva, Simulacion_Escenario); 3) Relaciones formales: `informa_sobre_tema` (Brief -> TemaMaterial), `prescribe_postura_para` (Decision -> CrisisSCCT), `auditada_por_analista` (Decision -> UsuarioExperto); 4) Condiciones de consistencia lógica: Todo producto prescriptivo que recomiende una disculpa pública o compensación debe estar validado con el rol del Consejero Legal; el sistema debe registrar en bitácora inmutable cada decisión en que se activó la compuerta de abstención.",
+  "findings": [
+    {
+      "claim_id": "P05-F46-C1",
+      "claim": "El modelado estructurado de decisiones de producto requiere capturar metadatos de gobernanza, condiciones de abstención algorítmica y calificaciones de evaluación humana continua.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Software BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7: Especificaciones Funcionales para la Futura Aplicación",
+          "excerpt_short": "Estructura de motor de decisiones: brechas reputacionales, salience de Mitchell, ciclo de vida de temas y filtros éticos integrados.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en la arquitectura funcional y requerimientos técnicos definidos para BRIDGE.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Eventos del entorno",
+      "Políticas internas de vocería",
+      "Registros de feedback de analistas"
+    ],
+    "actors": [
+      "Arquitecto de Solución",
+      "Analista de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Definición de tablas relacionales de decisiones de producto",
+      "Configuración de triggers de abstención",
+      "Almacenamiento de evaluaciones humanas de calidad"
+    ],
+    "states": [
+      "Schema_Configured",
+      "Decision_Logged",
+      "Feedback_Captured"
+    ],
+    "outputs": [
+      "Registro auditable de decisiones de producto de inteligencia"
+    ],
+    "exceptions": [
+      "Desactivación manual no autorizada de las compuertas de abstención estratégica"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRODUCT_DECISION_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Decisiones de Producto",
+      "aliases": [
+        "Product Decision Data Model"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRODUCT_DECISION_SCHEMA",
+      "predicate": "gobierna_comportamiento_de",
+      "object_id": "ENT_EXECUTIVE_BRIEF_UI",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F46-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Motor de Gobernanza",
+      "implication": "BRIDGE debe persistir en su base de datos relacional cada recomendación generada junto con los metadatos de las banderas de abstención y la aprobación del analista humano.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

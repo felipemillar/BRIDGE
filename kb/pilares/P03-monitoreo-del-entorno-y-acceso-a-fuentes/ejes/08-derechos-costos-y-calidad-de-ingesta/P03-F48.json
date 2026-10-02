@@ -1,0 +1,137 @@
+{
+  "question_id": "P03-F48",
+  "pilar": "P03",
+  "eje": "Derechos, costos y calidad de ingesta",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra derechos, costos y calidad de ingesta sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso: Auditoría de cumplimiento jurídico y calidad métrica de un pipeline de ingesta para una empresa forestal en el sur de Chile. Entradas: 1) Captura de 1.000 artículos de prensa regional mediante RSS y scraping de portales abiertos; 2) Verificación automática de directivas `robots.txt` y metaetiquetas de opt-out (Art. 4 Directiva UE): 120 medios tienen etiquetas de opt-out de TDM; 3) Análisis de derechos: el sistema purga el texto completo de esos 120 medios y almacena únicamente snippets breves con citas textuales y atribución explícita bajo el Art. 38 de la Ley 17.336; 4) Medición sobre panel de auditoría de 50 eventos reales ocurridos en la Región de la Araucanía: el pipeline capturó 46 de los 50 eventos (Recall del 92%); y 5) Telemetría de tasa de fallos: 15 de 1.000 llamadas fallaron por timeout (Tasa de fallo del 1.5%). Resultado esperado: El sistema emite un 'Certificado de Cumplimiento de Ingesta' que valida la cobertura real del 92%, certifica el riesgo legal nulo por respeto estricto a las excepciones de propiedad intelectual y genera un reporte de telemetría con denominadores auditados sin duplicados espurios.",
+  "findings": [
+    {
+      "claim_id": "P03-F48-C1",
+      "claim": "Un caso estructurado de calidad y gobernanza de ingesta valida un 92% de cobertura sobre eventos auditados mientras purga automáticamente textos completos ante directivas de opt-out de derechos de autor.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Región de la Araucanía)",
+        "actor": "Caso Calidad Ingesta P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.4: Directiva (UE) 2019/790 y Ley 17.336",
+          "excerpt_short": "Si un medio de prensa... ha reservado sus derechos, la minería comercial no está amparada... almacenando snippets efímeros y metadatos analíticos sin redistribuir el texto íntegro.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los modelos operativos documentados del mapa de evidencia y la adenda de calidad.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "1.000 artículos capturados",
+      "Panel de 50 eventos reales",
+      "Validador de robots.txt"
+    ],
+    "actors": [
+      "Opt-Out Filter",
+      "Coverage Auditor",
+      "Compliance Engine"
+    ],
+    "steps": [
+      "Detección de opt-outs",
+      "Purga de texto completo a snippets",
+      "Cálculo de Recall (46/50 = 92%)",
+      "Emisión de certificado"
+    ],
+    "states": [
+      "Raw_Ingest",
+      "Compliance_Filtered",
+      "Audited_Certificate_Issued"
+    ],
+    "outputs": [
+      "Certificado de Cumplimiento de Ingesta con 92% de cobertura y 1.5% de fallos"
+    ],
+    "exceptions": [
+      "Medios que cambian sus directivas de robots.txt a mitad del mes"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_AUDITORIA_INGESTA",
+      "type": "caso_de_uso",
+      "name": "Caso Demostrativo Auditoría de Ingesta Araucanía",
+      "aliases": [
+        "Ingest Audit Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_AUDITORIA_INGESTA",
+      "predicate": "valida_gobernanza_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F48-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Cobertura Real en Caso Araucanía",
+      "numerator": "46 eventos capturados",
+      "denominator": "50 eventos reales en panel de control humano",
+      "context": "Evaluación empírica de cobertura de prensa y radio en la Araucanía"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar un filtro de opt-out automatizado en BRIDGE que degrade el almacenamiento a snippets cuando se detecte reserva de derechos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

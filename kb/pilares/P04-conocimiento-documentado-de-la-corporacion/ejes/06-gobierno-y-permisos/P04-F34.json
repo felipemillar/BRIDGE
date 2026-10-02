@@ -1,0 +1,144 @@
+{
+  "question_id": "P04-F34",
+  "pilar": "P04",
+  "eje": "Gobierno y permisos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar gobierno y permisos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar de forma estructurada gobierno y permisos exige: 1) Variables de sujeto y objeto ABAC (`user_role`, `user_department`, `user_clearance_level`, `resource_security_classification`: Público, Interno, Confidencial, Embargo; `embargo_timestamp`); 2) Categorías de acción autorizada (`permitted_actions`: Crear, Aprobar, Modificar, Consultar, Exportar, Retirar); 3) Relaciones de gobernanza (`hasOwnerRole`, `governedByBoard`, `isRestrictedToDepartment`, `hasSignatoryAgent`); y 4) Condiciones imperativas (Condición 1: todo documento clasificado como 'Bajo Embargo' debe contener un `embargo_timestamp` futuro y quedar estrictamente bloqueado para usuarios sin credencial especial; Condición 2: ninguna exportación puede incluir fragmentos confidenciales si el solicitante carece del nivel de acreditación requerido; Condición 3: todo cambio de estatus de seguridad debe ser registrado con la identidad del directivo que lo autorizó).",
+  "findings": [
+    {
+      "claim_id": "P04-F34-C1",
+      "claim": "El modelado de permisos corporativos requiere esquemas ABAC formales basados en NIST SP 800-162 con reglas determinísticas para el manejo de embargos y segregación de funciones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Seguridad Corporativa"
+      },
+      "evidence": [
+        {
+          "source_id": "75fa90f9-9906-48ee-84f1-83b117ea6ae6",
+          "source_title": "NIST SP 800-162: Attribute Based Access Control (ABAC)",
+          "original_url": "https://csrc.nist.gov/pubs/sp/800/162/upd2/final",
+          "locator": "Sección 3.2: ABAC Rule Specifications",
+          "excerpt_short": "Defines access control rules as boolean predicates over subject, object, action, and environment attributes.",
+          "source_date": "2014-01-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3.1: access_control schema y Sección 4: Fase 5",
+          "excerpt_short": "access_control properties: classification [Público, Uso Interno, Confidencial, Bajo Embargo], embargo_until. Control de acceso evaluado antes de la recuperación.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar formal de referencia y schema de seguridad documentado en el dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de políticas ABAC en lenguaje formal"
+    ],
+    "actors": [
+      "Policy Administrator",
+      "ABAC Rule Compiler"
+    ],
+    "steps": [
+      "Compilación de reglas ABAC",
+      "Mapeo a filtros de base de datos",
+      "Validación de cobertura de políticas"
+    ],
+    "states": [
+      "Draft_Policy",
+      "Compiled_Rules",
+      "Enforced_In_Production"
+    ],
+    "outputs": [
+      "Motor de evaluación de políticas de acceso compilado para tiempo de ejecución"
+    ],
+    "exceptions": [
+      "Conflicto entre regla de embargo temporal y rol directivo de emergencia"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ABAC_POLICY_SCHEMA",
+      "type": "schema_seguridad",
+      "name": "Esquema de Políticas de Acceso ABAC",
+      "aliases": [
+        "Corporate ABAC Policy Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ABAC_POLICY_SCHEMA",
+      "predicate": "restringe_operaciones_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F34-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Flexibilidad de permisos",
+      "Control basado en listas de acceso simples (ACL)": "Estático; no maneja conceptos como embargos temporales ni condiciones contextuales.",
+      "Control basado en atributos (ABAC)": "Dinámico; libera automáticamente documentos al vencer su timestamp de embargo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe gobernar todos sus servicios bajo este esquema ABAC para asegurar cumplimiento de seguridad a nivel de empresa regulada.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

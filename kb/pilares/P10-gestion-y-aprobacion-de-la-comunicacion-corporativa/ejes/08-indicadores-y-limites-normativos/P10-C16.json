@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-C16",
+  "pilar": "P10",
+  "eje": "Indicadores y límites normativos",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué sigue sin prueba sobre indicadores y límites normativos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "1) Lo que sigue sin prueba empírica suficiente es la cuantificación econométrica del retorno sobre la inversión (ROI) y ahorro en primas de seguros corporativos (D&O / pólizas ambientales) derivado de la adopción de los Principios de Barcelona 3.0 de AMEC frente a métricas tradicionales; 2) Fuentes fallidas o parciales: La fuente eCFR (source_id 8858106c) falló rotundamente al capturar una pantalla de bloqueo anti-bot CAPTCHA de Cloudflare, careciendo de texto sustantivo, lo cual fue corregido sustituyéndola canónicamente por Cornell LII (b689098d) para la Rule 10b-5; además, los textos de AMEC (8702eaf4, b79a534f) son parciales al enfocarse en teoría de medición de PR sin aportar modelos actuariales de reducción de riesgo financiero; y 3) Validación mínima para resolver la incertidumbre: Realizar un estudio econométrico retrospectivo de panel sobre 40 empresas corporativas en Chile (2021-2025), correlacionando la sustitución de AVE por KPIs de proceso AMEC con la tasa de litigiosidad, el número de investigaciones abiertas por la CMF y la variación en el costo de sus pólizas de responsabilidad de directores (D&O).",
+  "findings": [
+    {
+      "claim_id": "P10-C16-C1",
+      "claim": "El impacto financiero directo de AMEC 3.0 sobre costos de litigios y seguros carece de estudios econométricos actuariales; eCFR falló por pantalla anti-bot y fue sustituida por Cornell LII, requiriéndose un estudio de panel corporativo.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "kpis_financial_impact_gaps",
+      "evidence": [
+        {
+          "source_title": "P10_GAPS_AND_VALIDATION: Vacios, Hipotesis y Validacion",
+          "source_id": "1bdee7c1-95df-4848-ba8e-74ff3eaca685",
+          "locator": "Sección 'Brechas en Impacto Actuarial y Fuentes Fallidas'",
+          "retrieved_at": null,
+          "excerpt_short": "Vacío en impacto financiero de AMEC: Falta correlación demostrada con costos de pólizas D&O. Fuente fallida eCFR: Bloqueada por CAPTCHA, sustituida canónicamente por Cornell LII (b689098d).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Cornell LII: 17 CFR § 240.10b-5 - Employment of Manipulative and Deceptive Devices",
+          "source_id": "b689098d-8595-4f11-9e01-293b0e194a96",
+          "locator": "Sustituto Canónico Oficial",
+          "retrieved_at": null,
+          "excerpt_short": "Fuente auténtica y comprobada de la norma contra el fraude bursátil que reemplaza canónicamente a la extracción defectuosa de eCFR.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa del fallo de eCFR, adopción de Cornell LII y concordancia con P10_GAPS_AND_VALIDATION.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos de gobernanza de 40 empresas chilenas",
+      "Registros sancionatorios CMF / SMA",
+      "Primas históricas de seguros D&O"
+    ],
+    "actors": [
+      "Econometrista de Riesgo",
+      "Auditor de Seguros",
+      "Investigador BRIDGE"
+    ],
+    "steps": [
+      "Construcción de panel de datos longitudinal 2021-2025",
+      "Estimación de modelo de diferencias en diferencias (DiD)",
+      "Evaluación del impacto del descarte de AVE y uso de KPIs rigurosos en la reducción de multas regulatorias",
+      "Cálculo del ahorro estimado en primas de seguro",
+      "Publicación de white paper actuarial de gobernanza"
+    ],
+    "states": [
+      "PANEL_ASSEMBLED",
+      "REGRESSION_RUN",
+      "SAVINGS_QUANTIFIED",
+      "WHITE_PAPER_PUBLISHED"
+    ],
+    "outputs": [
+      "Evidencia empírica del retorno financiero de la gobernanza de comunicaciones"
+    ],
+    "exceptions": [
+      "Empresas con incidentes catastróficos fortuitos no imputables a comunicación se controlan mediante variables dummy"
+    ]
+  },
+  "entities": [
+    "Cornell LII",
+    "eCFR Invalidation",
+    "AMEC ROI",
+    "Seguros D&O",
+    "P10_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Cornell LII",
+      "to": "eCFR Fallida",
+      "type": "REPLACES_CANONICALLY"
+    },
+    {
+      "from": "Estudio Econométrico",
+      "to": "Incertidumbre de ROI",
+      "type": "RESOLVES_EMPIRICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Argumentos abstractos de relaciones públicas vs Demostración actuarial de reducción de riesgos",
+      "diferencia": "Los argumentos abstractos son desestimados por los CFOs; la demostración actuarial convence a las direcciones de finanzas de invertir en BRIDGE."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "econometric_confidence_interval": "Target p-value < 0.05 en correlación entre gobernanza y reducción de primas D&O"
+  },
+  "bridge_implications": "Permite construir una propuesta de valor económico cuantitativa irrebatible para la venta institucional de BRIDGE ante Directorios y Gerencias de Finanzas.",
+  "open_gaps": [
+    "Acceso a datos agregados de reaseguradoras globales (e.g., Munich Re, Swiss Re)."
+  ],
+  "next_question_ids": [
+    "P11-F01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "question_id": "P04-F29",
+  "pilar": "P04",
+  "eje": "Ingesta y extracción",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre ingesta y extracción?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos sobre ingesta y extracción de memorias corporativas se fundamentan en tres fuentes académicas y técnicas principales: 1) Gao et al. (diciembre 2023, arXiv:2312.10997), que sistematiza las limitaciones del chunking tradicional y demuestra las ventajas del pre-retrieval jerárquico y estructurado; 2) Ni et al. (agosto 2023, arXiv:2308.06597), que analiza el estado del arte de NLP para reportes ESG, destacando los riesgos de mala extracción de tablas financieras y matrices de sostenibilidad; y 3) P04_GAPS_AND_VALIDATION (30 de septiembre de 2026, Secciones 2 y 4), que fija los umbrales de precisión estructural (≥ 98%) y el protocolo de auditoría de ingesta sobre 15 memorias CMF.",
+  "findings": [
+    {
+      "claim_id": "P04-F29-C1",
+      "claim": "La literatura especializada en NLP financiero y encuestas de RAG avala la superioridad de los métodos jerárquicos y la necesidad de validación estructural en la ingesta.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Internacional",
+        "actor": "Gao et al. / Ni et al."
+      },
+      "evidence": [
+        {
+          "source_id": "93cd6e04-48bd-4b62-b39f-6784d75351da",
+          "source_title": "RAG for Large Language Models: A Survey (Gao et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2312.10997",
+          "locator": "Sección 2.1: Advanced RAG Components",
+          "excerpt_short": "Examines chunking optimization, metadata enrichment, and multi-modal pre-retrieval techniques.",
+          "source_date": "2023-12-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "3d5b1ad5-73ef-4a53-aaa0-a1ff3f4c5043",
+          "source_title": "NLP for ESG and Corporate Disclosures: A Survey (Ni et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2308.06597",
+          "locator": "Sección 2 and 3: Corporate Disclosure Analysis",
+          "excerpt_short": "Surveys challenges in text parsing, multi-page table alignment, and ESG claim extraction.",
+          "source_date": "2023-08-11",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa con la literatura académica indexada en el corpus P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus de fuentes académicas de ingesta P04"
+    ],
+    "actors": [
+      "Literature Reviewer",
+      "Pipeline Designer"
+    ],
+    "steps": [
+      "Extracción de directrices técnicas de Gao et al. y Ni et al.",
+      "Integración en parámetros de configuración del parser"
+    ],
+    "states": [
+      "Reviewed",
+      "Parameters_Calibrated"
+    ],
+    "outputs": [
+      "Configuración optimizada del pipeline de ingesta"
+    ],
+    "exceptions": [
+      "Nuevas arquitecturas de parsing multimodal no contempladas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_INGESTION_RESEARCH",
+      "type": "corpus",
+      "name": "Literatura Científica de Ingesta RAG y ESG",
+      "aliases": [
+        "RAG Ingestion Academic Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_INGESTION_RESEARCH",
+      "predicate": "valida_tecnologia_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F29-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fundamentación técnica",
+      "Heurísticas empíricas arbitrarias": "Ajustes de chunking por ensayo y error sin base teórica.",
+      "Parámetros respaldados en literatura": "Adopción de tamaños y métodos validados en benchmarks internacionales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe calibrar sus pipelines de ingesta siguiendo los hallazgos empíricos de Gao et al. y Ni et al.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

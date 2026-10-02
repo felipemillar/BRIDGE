@@ -1,0 +1,157 @@
+{
+  "question_id": "P11-F18",
+  "pilar": "P11",
+  "eje": "Matriz dato, actor, acción y permiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra matriz dato, actor, acción y permiso sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto: Intento de Acceso No Autorizado y Bloqueo de Descarga de Minuta Confidencial de M&A por Consultor Externo de Agencia de Medios (Faena Centinela). Entradas: 1) Activo documental: 'Borrador Estratégico de Valoración y Litigios de Faena Centinela' clasificado como D3 Confidencial Estratégico por el Fiscal Legal; 2) Actor solicitante: Rodrigo Martínez, consultor de la agencia externa de comunicaciones mediáticas (Rol A3 Consultor Agencia Externa); 3) Acción intentada: Descarga del archivo PDF completo vía endpoint `/api/documents/export-pdf` y consulta paralela en el chat RAG para resumir pasajes financieros; 4) Propósito declarado en sesión: 'Preparación de comunicado de prensa de fin de año'. Proceso: El PEP intercepta ambas solicitudes; consulta al motor ABAC; evalúa que el rol A3 tiene denegación explícita para la clase D3 (`A3 + D3 = DENY`) y para la acción `EXPORT`; bloquea de inmediato la descarga arrojando código HTTP 403 Forbidden; suprime el documento D3 de la búsqueda vectorial en Qdrant impidiendo que participe en la respuesta del LLM; el interceptor de auditoría genera automáticamente un registro WORM append-only capturando timestamp UTC, user_id, IP de la agencia, acción intentada, clasificación D3 y el hash SHA-256 encadenado. Resultado Esperado: El consultor externo no puede descargar el archivo ni extraer sus datos financieros en el chat; el Fiscal Corporativo recibe una notificación de alta prioridad en su panel de compliance alertando del intento de acceso a D3 por parte de un proveedor externo; la bitácora inmutable acredita fehacientemente que la información reservada nunca salió del perímetro seguro de la empresa.",
+  "findings": [
+    {
+      "claim_id": "P11-F18-C1",
+      "claim": "El caso operacionaliza la denegación estricta de acceso y exportación de un activo D3 intentada por un consultor externo (A3), demostrando el bloqueo en el PEP, el filtrado en el RAG y la persistencia en el log WORM encadenado.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_abac_enforcement",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 1 'Escenario de Referencia: Control de Acceso a Consultores Externos'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de consultor externo intentando exportar D3: Bloqueo en PEP -> Exclusión en búsqueda vectorial -> Denegación HTTP 403 -> Registro WORM de intento no autorizado -> Alerta a Compliance.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-162: Guide to Attribute Based Access Control (ABAC) Definition and Considerations",
+          "source_id": "2a88e293-2b53-4430-8dca-26e545448a9f",
+          "locator": "Section 3.2 'Enforcement Mechanisms'",
+          "retrieved_at": null,
+          "excerpt_short": "The PEP enforces the decision by denying access to the requested target object when policy rules fail to satisfy subject and object attribute constraints.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los mecanismos de aplicación de políticas del estándar NIST SP 800-162 y el caso modelado en el dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento D3 de valoración de faena",
+      "Petición de descarga de consultor A3",
+      "Reglas ABAC compiladas en OPA"
+    ],
+    "actors": [
+      "Consultor de Agencia (A3)",
+      "PEP de API BRIDGE",
+      "Motor ABAC / OPA",
+      "Bitácora WORM",
+      "Fiscal Legal"
+    ],
+    "steps": [
+      "Consultor A3 hace clic en 'Exportar PDF'",
+      "PEP intercepta la llamada y extrae atributos de sujeto y objeto",
+      "Evaluación de regla: A3 + D3 + EXPORT = DENY",
+      "Bloqueo inmediato de la llamada con respuesta HTTP 403",
+      "Generación de tupla forense en la tabla de auditoría WORM",
+      "Cálculo de hash SHA-256 encadenado y persistencia en frío",
+      "Disparo de webhook de alerta al equipo de Compliance"
+    ],
+    "states": [
+      "REQUEST_SUBMITTED",
+      "POLICY_EVALUATED_DENY",
+      "EXPORT_BLOCKED",
+      "WORM_LOG_RECORDED",
+      "COMPLIANCE_ALERTED"
+    ],
+    "outputs": [
+      "Mensaje de acceso denegado en pantalla del consultor",
+      "Registro inmutable de auditoría forense",
+      "Alerta remitida al Fiscal Corporativo"
+    ],
+    "exceptions": [
+      "Si el consultor intenta 3 peticiones denegadas sucesivas en 5 minutos, su cuenta se suspende automáticamente"
+    ]
+  },
+  "entities": [
+    "Faena Centinela",
+    "Consultor A3",
+    "D3 Confidencial Estratégico",
+    "HTTP 403 Forbidden",
+    "Bitácora WORM",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Consultor A3",
+      "to": "PEP BRIDGE",
+      "type": "BLOCKED_BY"
+    },
+    {
+      "from": "Intento No Autorizado",
+      "to": "Bitácora WORM",
+      "type": "CHRONICLED_INTO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Compartir carpetas de Google Drive con agencias vs Acceso gobernado por ABAC en BRIDGE",
+      "diferencia": "Google Drive permite a los consultores descargar y reenviar archivos confidenciales a competidores; BRIDGE bloquea físicamente la exportación y registra cada intento fallido."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "unauthorized_download_prevention_rate": "100% de descargas de D3 bloqueadas a consultores externos",
+    "security_incident_alert_latency_seconds": "< 5 segundos para notificar al Fiscal de un intento no autorizado"
+  },
+  "bridge_implications": "Demuestra a las compañías mineras e industriales que BRIDGE protege sus mayores secretos corporativos incluso frente a la colaboración con agencias externas contratadas.",
+  "open_gaps": [
+    "Protocolos de revocación automática del contrato marco con agencias que incurran en intentos reiterados de exfiltración."
+  ],
+  "next_question_ids": [
+    "P11-F19",
+    "P11-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

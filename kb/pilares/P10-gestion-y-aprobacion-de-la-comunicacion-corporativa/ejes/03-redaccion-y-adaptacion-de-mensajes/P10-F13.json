@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F13",
+  "pilar": "P10",
+  "eje": "Redacción y adaptación de mensajes",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué elementos de una postura aprobada deben preservarse al adaptar canal o audiencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Al adaptar una postura institucional aprobada (v1.0) a distintos canales (newswires de prensa, redes sociales como LinkedIn/X, comunicados internos para colaboradores, minutas para autoridades o declaraciones ante comunidades), deben preservarse obligatoriamente e inalterados 5 elementos nucleares: 1) Cifras Cuantitativas y Fechas Clave: Ninguna cifra (montos de inversión, porcentajes de reducción de emisiones, fechas de entrega o plazos fatales) puede ser redondeada o alterada respecto a lo certificado por el SME/Legal; 2) Encuadre Legal y Responsabilidades Declaradas: No se pueden añadir compromisos no aprobados ni asumir culpas no peritadas; 3) Advertencias de Incertidumbre y Safe Harbor: En revelaciones financieras o proyectos futuros, las cláusulas de riesgo bursátil no pueden omitirse por razones de espacio; 4) Líneas Rojas y Afirmaciones Prohibidas: Lo catalogado como 'no mencionable' permanece estrictamente vetado en todos los canales; y 5) Terminología Oficial Aprobada: Uso estricto de los nombres canónicos de proyectos, sustancias químicas y áreas geográficas.",
+  "findings": [
+    {
+      "claim_id": "P10-F13-C1",
+      "claim": "La adaptación multicanal permite modular el tono y la extensión sintáctica, pero exige la preservación estricta e inalterada de cifras certificadas, encuadre de responsabilidad, safe harbor y líneas rojas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "cross_channel_message_preservation",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Flujo de Trabajo Integral (Fase 8: Adaptación Multicanal y Staging)'",
+          "retrieved_at": null,
+          "excerpt_short": "Transformación controlada del mensaje aprobado a formatos específicos: comunicado para newswire, guion para vocero radial/TV, comunicado interno, post en LinkedIn/X y reporte a regulador. Las cifras, líneas rojas y el encuadre legal no pueden alterarse en ninguna adaptación.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "PR Council: Ethical Standards and Guidelines for Generative AI",
+          "source_id": "493c8ec0-08c7-4b4a-81c4-c95a7734bfe1",
+          "locator": "Section 'Maintaining Message Integrity Across Fragmented Channels', p. 5-8",
+          "retrieved_at": null,
+          "excerpt_short": "When adapting core messaging across diverse digital platforms, communicators must ensure that factual integrity, disclaimers, and fundamental corporate commitments remain uncompromised by formatting constraints.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares éticos del PR Council y el dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Mensaje maestro aprobado (v1.0)",
+      "Catálogo de canales destino",
+      "Límites de caracteres"
+    ],
+    "actors": [
+      "Redactor Especialista",
+      "Operador de Canal",
+      "Motor de Guardrails BRIDGE"
+    ],
+    "steps": [
+      "Generación de adaptaciones por canal",
+      "Cotejo algorítmico contra el Shared Fact Record",
+      "Verificación de presencia de disclaimers obligatorios",
+      "Habilitación de botón de staging"
+    ],
+    "states": [
+      "Mensaje Maestro Aprobado",
+      "Adaptaciones Generadas",
+      "Guardrails Superados"
+    ],
+    "outputs": [
+      "Paquete multicanal listo para publicación"
+    ],
+    "exceptions": [
+      "Canales con límite estricto de caracteres (e.g., X / SMS) deben incluir un enlace obligatorio al comunicado completo donde residen los disclaimers"
+    ]
+  },
+  "entities": [
+    "Adaptación Multicanal",
+    "Guardrails de Mensaje",
+    "PR Council Guidelines",
+    "Shared Fact Record",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Mensaje Maestro v1.0",
+      "to": "Adaptación Multicanal",
+      "type": "DERIVES_INTO"
+    },
+    {
+      "from": "Adaptación Multicanal",
+      "to": "Líneas Rojas",
+      "type": "MUST_RESPECT"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Redactor improvisando tweets vs Adaptación gobernada desde mensaje maestro",
+      "diferencia": "El redactor libre tuitea frases que contradicen a la gerencia legal; la adaptación gobernada asegura que cada post mantenga el blindaje institucional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cross_channel_consistency_index": "> 95% de similitud semántica en afirmaciones",
+    "forbidden_omissions_count": "0 omisiones de cláusulas safe harbor admitidas"
+  },
+  "bridge_implications": "Crear en BRIDGE la función 'Omnichannel Message Derivative' con comprobador automático de coherencia semántica.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F14",
+    "P10-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

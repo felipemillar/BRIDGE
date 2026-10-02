@@ -1,0 +1,165 @@
+{
+  "question_id": "P10-F32",
+  "pilar": "P10",
+  "eje": "Reglas para automatizar o abstenerse",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué señales obligan a abstenerse y pedir consejo legal o técnico?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El sistema y el equipo corporativo deben aplicar una regla estricta de abstención comunicacional ('No Comment' o Silencio Estratégico) ante la presencia de 5 banderas rojas críticas: 1) Litigio Activo o Investigación Judicial/Penal en Curso: Riesgo inminente de desacato, alteración de prueba o autoincriminación corporativa; 2) Rumores No Fundamentados o Especulaciones Sensacionalistas: Casos donde emitir una declaración valida la premisa espuria, amplifica artificialmente el tema (Efecto Streisand) o distrae recursos; 3) Asuntos Bursátiles Sujetos a Deber de Reserva: Negociaciones de M&A, contratos en curso o hitos financieros no consumados según Art. 10 Ley 18.045 y SEC Reg FD, donde hablar de forma asimétrica acarrea sanciones penales; 4) Incertidumbre Fáctica de Causa Raíz: Incidentes técnicos, fallas de planta o derrames donde los peritos de ingeniería aún no emiten un informe concluyente; y 5) Datos Confidenciales de Terceros o Datos Personales: Información protegida por acuerdos de confidencialidad (NDA), secretos comerciales o leyes de protección de datos (Ley 19.628 / GDPR). En todos estos casos, la postura autorizada es un 'Holding Statement' neutral de reserva o la abstención total debidamente fundada ante el Comité Ejecutivo.",
+  "findings": [
+    {
+      "claim_id": "P10-F32-C1",
+      "claim": "La disciplina de abstención comunicacional es un deber ético y legal ante procesos judiciales, falta de certeza pericial, secreto bursátil o especulación difamatoria, requiriendo consulta jurídica formal antes de cualquier pronunciamiento.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "abstention_and_no_comment_signals",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 4 'Reglas de Decisión: Automatizar, Revisar, Abstenerse (No Comment)'",
+          "retrieved_at": null,
+          "excerpt_short": "5 banderas rojas obligatorias de abstención: 1. Litigio o investigación penal activa; 2. Rumor sin tracción mediática comprobada; 3. Información bursátil no pública con deber de reserva; 4. Incertidumbre fáctica absoluta sobre causas operacionales; 5. Datos personales de trabajadores.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "PRSA: Code of Ethics and Professional Standards",
+          "source_id": "13ceba58-340a-43ab-b46a-6a7fb9211c8d",
+          "locator": "Provisions of Conduct: 'Safeguarding Confidences' & 'Free Flow of Information'",
+          "retrieved_at": null,
+          "excerpt_short": "A member shall safeguard the confidences of present and former clients and employees, refraining from disseminating privileged information or commenting inappropriately on active legal disputes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "IABC: Code of Ethics for Professional Communicators",
+          "source_id": "aacc4b05-6f25-41aa-b6db-25462489f7fe",
+          "locator": "Article 3 & 4 'Confidentiality and Legal Compliance'",
+          "retrieved_at": null,
+          "excerpt_short": "Professional communicators uphold the principles of confidentiality and will not disclose sensitive organizational information unless legally obligated and authorized by formal counsel.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los códigos deontológicos de PRSA e IABC y las directrices operacionales de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta de prensa o requerimiento externo",
+      "Matriz de banderas rojas de abstención",
+      "Estado del Shared Fact Record"
+    ],
+    "actors": [
+      "Oficial de Prensa",
+      "Legal Counsel",
+      "Comité de Comunicaciones"
+    ],
+    "steps": [
+      "Ingreso de la solicitud externa al módulo de triaje",
+      "Cotejo semántico automático contra la lista de materias reservadas o litigios activos",
+      "Detección de bandera roja: El sistema marca el ticket con etiqueta 'RESTRICTED_ABSTAIN'",
+      "Bloqueo inmediato de generación de borradores de respuesta externa",
+      "Ruteo automático de consulta urgente a la Gerencia Legal y Asesoría Técnica",
+      "Si Legal ratifica la abstención: Habilitación exclusiva del texto oficial de 'No Comment fundado' / Reserva legal"
+    ],
+    "states": [
+      "INQUIRY_INGESTED",
+      "FLAG_DETECTED",
+      "LEGAL_CONSULTATION",
+      "ABSTENTION_ENFORCED"
+    ],
+    "outputs": [
+      "Dictamen legal de abstención",
+      "Holding statement de reserva autorizado"
+    ],
+    "exceptions": [
+      "Si la autoridad fiscalizadora emite una orden de informar bajo apercibimiento legal, la abstención cede ante el requerimiento formal"
+    ]
+  },
+  "entities": [
+    "Banderas Rojas",
+    "No Comment",
+    "PRSA Code of Ethics",
+    "IABC Code of Ethics",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Litigio Activo",
+      "to": "Abstención Comunicacional",
+      "type": "TRIGGERS_MANDATORY_SILENCE"
+    },
+    {
+      "from": "Solicitud Restringida",
+      "to": "Legal Counsel",
+      "type": "ESCALATES_FOR_CLEARANCE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Compulsión por responder a todo vs Silencio estratégico fundado",
+      "diferencia": "La compulsión de responder por vanidad corporativa expone secretos comerciales y compromete litigios; el silencio estratégico fundado protege el valor corporativo y la posición judicial de la empresa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "abstention_rule_adherence": "100% de tickets con banderas rojas escalados a Legal sin declaraciones improvisadas",
+    "legal_escalation_turnaround_hours": "Tiempo en horas para recibir dictamen legal ante requerimiento con bandera roja"
+  },
+  "bridge_implications": "BRIDGE debe incluir un clasificador de temas prohibidos o restringidos que alerte a los analistas cuando una consulta verse sobre litigios, secretos de planta o personas protegidas.",
+  "open_gaps": [
+    "Capacitación continua de voceros para no romper el silencio estratégico ante el acoso periodístico callejero (ambush interviews)."
+  ],
+  "next_question_ids": [
+    "P10-F33",
+    "P10-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "question_id": "P06-F27",
+  "pilar": "P06",
+  "eje": "Arquitectura de procesamiento",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué registros permiten reproducir una conclusión después de actualizar las fuentes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "[P06-F27] Registros que permiten reproducir una conclusión tras actualizar las fuentes Para garantizar auditabilidad, trazabilidad y reproducibilidad cuando el corpus de fuentes internas o externas se actualiza, el corpus especifica los siguientes **registros y artefactos de trazabilidad** [1, 21-23]:",
+  "findings": [
+    {
+      "claim_id": "P06-F27-C1",
+      "claim": "[P06-F27] Registros que permiten reproducir una conclusión tras actualizar las fuentes",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F27",
+          "excerpt_short": "[P06-F27] Registros que permiten reproducir una conclusión tras actualizar las fuentes...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F27-C2",
+      "claim": "Para garantizar auditabilidad, trazabilidad y reproducibilidad cuando el corpus de fuentes internas o externas se actualiza, el corpus especifica los siguientes **registros y artefactos de trazabilidad** [1, 21-23]:",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F27",
+          "excerpt_short": "Para garantizar auditabilidad, trazabilidad y reproducibilidad cuando el corpus de fuentes internas o externas se actualiza, el corpus especifica los siguientes **registros y artef...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F27-C3",
+      "claim": "Log de la Matriz Afirmación-Evidencia (*Claim-Evidence Matrix Log*):**",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F27",
+          "excerpt_short": "Log de la Matriz Afirmación-Evidencia (*Claim-Evidence Matrix Log*):**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F27-C4",
+      "claim": "Signal AI:* Indexación de más de 2.600 millones de documentos anuales en 226 mercados y 120 idiomas [32, 33].",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "622d9c7c-2cdd-46f4-bd8d-10f8e8b26cee",
+          "source_title": "Signal AI - Risk Intelligence Platform & AIQ Engine",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F27",
+          "excerpt_short": "Signal AI:* Indexación de más de 2.600 millones de documentos anuales en 226 mercados y 120 idiomas [32, 33]....",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F27-C5",
+      "claim": "Registros de auditoría de agentes (AIP / Palantir) que almacenan la telemetría detallada de ejecución, marcadores de seguridad de datos (*data markings*), versiones de prompts, semillas de muestreo multi-traza (\\\\(K=3\\\\)), vectores de *self-prior* e hid-states condicionales \\\\(\\ell_p, \\ell_c\\\\) util",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "98f72019-62a8-4781-a211-2ce2cccaf4eb",
+          "source_title": "Palantir Foundry - Why Create an Ontology: Decision-Centric System",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F27",
+          "excerpt_short": "Registros de auditoría de agentes (AIP / Palantir) que almacenan la telemetría detallada de ejecución, marcadores de seguridad de datos (*data markings*), versiones de prompts, sem...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F27-C6",
+      "claim": "Registro de Citas Bidireccionales Navegables:**",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F27",
+          "excerpt_short": "Registro de Citas Bidireccionales Navegables:**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F27-C7",
+      "claim": "El Flujo Conceptual de Procesamiento en 6 Fases [1].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F27",
+          "excerpt_short": "El Flujo Conceptual de Procesamiento en 6 Fases [1]....",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F27-C8",
+      "claim": "La Matriz Afirmación-Evidencia (*Claim-Evidence Matrix*) de 12 campos [21].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F27",
+          "excerpt_short": "La Matriz Afirmación-Evidencia (*Claim-Evidence Matrix*) de 12 campos [21]....",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de medios y reguladores",
+      "Documentación corporativa interna y memorias CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "CCO / Dircom",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Extracción y normalización de afirmaciones",
+      "Resolución de entidades y contraste temporal",
+      "Evaluación de coherencia fáctica y generación de brief"
+    ],
+    "states": [
+      "ENTRADA_RECIBIDA",
+      "ENTIDADES_CANONICALIZADAS",
+      "CONTRASTE_EJECUTADO",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Evaluación estructurada y respuesta citada para P06-F27"
+    ],
+    "exceptions": [
+      "Ausencia de señal externa verificable o desfase temporal en el corte documental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_P06_CORP",
+      "type": "organizacion",
+      "name": "Corporación Emisora CMF",
+      "aliases": [
+        "Empresa Reportante"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_REG",
+      "type": "organizacion",
+      "name": "CMF / SERNAC / SMA",
+      "aliases": [
+        "Regulador Chileno"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_BRIDGE",
+      "type": "producto",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "BRIDGE Platform"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_P06_CORP",
+      "predicate": "sujeto_a_fiscalizacion_de",
+      "object_id": "ENT_P06_REG",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P06-F27-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporación en el pipeline del módulo para sustentar decisiones ejecutivas en P06-F27.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "💡 **¿Próximo paso sugerido?**",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    },
+    {
+      "gap": "Podríamos profundizar en el **Protocolo de Validación Empírica en Terreno (Shadow Running)** ajustado a la normativa chilena CMF NCG 461 y diseñar la plantilla del **Dashboard de Asuntos Corporativos para el Bucle Humano (Fase 6)**.",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "question_id": "P08-F25",
+  "pilar": "P08",
+  "eje": "Construir, comprar e integrar",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué componentes tienen proveedores maduros y cuáles requieren desarrollo propio?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis de arquitectura del corpus divide los componentes con nitidez técnica: 1) Comprar / Integrar (Proveedores Maduros): Inferencia de modelos fundacionales (Google Cloud Vertex AI con Gemini 1.5 Flash/Pro y Microsoft Azure OpenAI con GPT-4o); bases de datos vectoriales y relacionales administradas (PostgreSQL con pgvector en Google Cloud SQL / Supabase); servicios de streaming de noticias licenciadas (Dow Jones Factiva Snapshots API y Meltwater REST API); y autenticación corporativa (Auth0 / Microsoft Entra ID con SAML/SSO); 2) Construir Propio (Diferenciador Propietario): Conectores especializados y parsers del ecosistema público chileno (API BCN Ley Chile OAS 3.1, portal InfoLobby Ley 20.730, repositorio SNIFA de la SMA, Hechos Esenciales de la CMF); grafo de conocimiento corporativo que cruza compromisos internos con actores; motor de generación de briefs ejecutivos estructurados; y la consola de revisión y certificación humana (HITL Workbench).",
+  "findings": [
+    {
+      "claim_id": "P08-F25-C1",
+      "claim": "La ventaja competitiva y la eficiencia de capital de BRIDGE radican en no reinventar modelos fundacionales ni bases vectoriales, concentrando el desarrollo propio en la ontología regulatoria local y el motor de cruce interno.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "build_vs_buy_architecture",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 5.1 'Matriz de Decisiones: Construir, Comprar e Integrar'",
+          "excerpt_short": "La estrategia técnica óptima es la integración pragmática de infraestructura commodity y el desarrollo propietario de los activos de dominio: Se compra la capacidad de cómputo LLM a Google Vertex y Azure OpenAI bajo contratos de retención cero; se contrata el acceso a prensa licenciada vía Factiva Snapshots o Meltwater; pero se construye internamente el 100% de la lógica de negocio: los conectores institucionales chilenos (BCN, SMA, InfoLobby), la ontología de compromisos corporativos y la consola de auditoría HITL.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Dow Jones Factiva: Snapshots API & Licensed Archive Endpoints",
+          "source_id": "53fe5f23-e07f-42c9-a489-9fc8ffa729eb",
+          "locator": "Technical Specifications 'Factiva Snapshots for Enterprise AI', p. 2-5",
+          "excerpt_short": "The Snapshots API provides high-volume, copyright-cleared access to over 33,000 global news sources and regulatory feeds, eliminating the legal liability of unstructured web scraping for enterprise intelligence applications.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las especificaciones técnicas de Factiva y la arquitectura modular de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evaluación de proveedores cloud",
+      "Requisitos de conectores locales",
+      "Presupuesto de ingeniería"
+    ],
+    "actors": [
+      "Chief Technology Officer (CTO)",
+      "Lead Data Engineer",
+      "Vendor Management Lead"
+    ],
+    "steps": [
+      "Suscripción de contratos API con Google/Microsoft/Dow Jones",
+      "Desarrollo de scrapers y parsers BCN/SMA/InfoLobby",
+      "Integración en backend modular",
+      "Pruebas de estrés y despliegue"
+    ],
+    "states": [
+      "Evaluación",
+      "Integración de Comprados",
+      "Desarrollo de Propietarios",
+      "Arquitectura Operativa"
+    ],
+    "outputs": [
+      "Plataforma integrada con propiedad intelectual en conectores y ontología"
+    ],
+    "exceptions": [
+      "Caída de API de proveedor externo mitigada por arquitectura de contingencia multi-cloud"
+    ]
+  },
+  "entities": [
+    "Google Cloud Vertex AI",
+    "Microsoft Azure OpenAI",
+    "Factiva Snapshots",
+    "Meltwater",
+    "BCN Ley Chile",
+    "InfoLobby",
+    "SMA SNIFA"
+  ],
+  "relations": [
+    {
+      "from": "Infraestructura Base",
+      "to": "Google Vertex / Azure / Factiva",
+      "type": "buys_from"
+    },
+    {
+      "from": "Diferenciación Local",
+      "to": "Conectores BCN / SMA / Ontología Propia",
+      "type": "builds_in_house"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Entrenar LLM propio vs Consumir APIs empresariales",
+      "diferencia": "Entrenar un LLM propio cuesta millones de dólares y queda obsoleto en meses; consumir APIs de Google/Azure traslada el costo de I+D a las big tech y reduce el costo variable a < USD 30/mes por cliente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "proprietary_code_focus": "> 80% del código dedicado a conectores locales, ontología e interfaz HITL",
+    "infrastructure_setup_time": "< 30 días mediante uso de APIs maduras"
+  },
+  "bridge_implications": "Preservar como secreto comercial y propiedad intelectual crítica el grafo ontológico chileno y los parsers de información pública institucional.",
+  "open_gaps": [
+    "Verificar la estabilidad de la API Ley Chile de la BCN bajo cargas concurrentes intensivas."
+  ],
+  "next_question_ids": [
+    "P08-F26",
+    "P08-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

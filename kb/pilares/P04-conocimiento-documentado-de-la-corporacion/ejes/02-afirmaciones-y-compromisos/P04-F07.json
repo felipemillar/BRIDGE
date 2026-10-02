@@ -1,0 +1,135 @@
+{
+  "question_id": "P04-F07",
+  "pilar": "P04",
+  "eje": "Afirmaciones y compromisos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Cómo se registra una afirmación corporativa con cifra, fecha, alcance, fuente y responsable?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Una afirmación corporativa con valor cuantitativo se registra mediante la 'Ficha Canónica de Compromiso Corporativo' (Corporate Commitment Data Sheet) estructurada en JSON-Schema. El registro captura obligatoriamente: 1) Cifra y unidad métrica en un objeto `baseline` o `target` con valor numérico flotante (`target_value`), unidad estandarizada (`unit`: e.g. 'l/s', 'tCO2e', '%') y tipo de métrica (`metric_type`: Reducción Absoluta, Intensidad o Cobertura); 2) Temporalidad estricta (`baseline_year`, `target_year` e hitos intermedios `interim_milestones`); 3) Alcance geográfico y operacional (`issuing_entity`: filial o división operativa; `geographical_scope`: faena o región); 4) Trazabilidad de origen documental inmutable (`source_traceability`: título del documento, tipo documental, año de edición, número exacto de página, cita textual literal entrecomillada y hash criptográfico SHA-256 del PDF original); y 5) Gobernanza y responsable institucional (`governance`: rol ejecutor responsable `accountable_role`, órgano colegiado aprobador `approving_body` y fecha formal de aprobación `approval_date`).",
+  "findings": [
+    {
+      "claim_id": "P04-F07-C1",
+      "claim": "El registro fáctico de una afirmación corporativa cuantitativa exige un esquema formal que desacople la cifra y la unidad de la narrativa, vinculándola a un rol responsable, un horizonte temporal y un hash de página inmutable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Gestión de Datos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3: Ficha Estructurada de Compromiso Corporativo",
+          "excerpt_short": "Schema CorporateCommitmentDataSheet: properties baseline (year, value, unit), target (target_year, target_value, metric_type), governance (accountable_role, approving_body, approval_date) y source_traceability (page_number, exact_quote, hash_sha256).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación JSON-Schema formalizada en el entregable central del dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Párrafo o tabla con afirmación corporativa",
+      "Metadatos del documento fuente"
+    ],
+    "actors": [
+      "Commitment Parser",
+      "Fact Extractor",
+      "Audit Registry"
+    ],
+    "steps": [
+      "Extracción de entidades numéricas y unidades",
+      "Identificación de rol responsable",
+      "Vinculación de hash de página",
+      "Serialización en schema canónico"
+    ],
+    "states": [
+      "Raw_Text",
+      "Extracted_Fields",
+      "Validated_Commitment_Record"
+    ],
+    "outputs": [
+      "Instancia JSON de la Ficha Canónica de Compromiso"
+    ],
+    "exceptions": [
+      "Afirmación cuantitativa sin unidad métrica o sin fecha base identificable"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_COMMITMENT_DATASHEET",
+      "type": "schema",
+      "name": "Ficha Canónica de Compromiso Corporativo",
+      "aliases": [
+        "Corporate Commitment Data Sheet"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_COMMITMENT_DATASHEET",
+      "predicate": "estructura_registro_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F07-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo de registro",
+      "Texto libre en PDF": "Cifras incrustadas en párrafos narrativos sujetas a ambigüedad y pérdida de contexto.",
+      "Ficha Canónica Estructurada": "Parámetros numéricos tipados, unidades normalizadas y trazabilidad de auditoría SHA-256."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe parsear y almacenar toda afirmación de vocería bajo la Ficha Canónica para permitir auditorías algorítmicas instantáneas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "question_id": "P11-C16",
+  "pilar": "P11",
+  "eje": "Jurisdicciones y rectificaciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué sigue sin prueba sobre jurisdicciones y rectificaciones, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el ámbito de jurisdicciones y rectificaciones normativas: 1) Lo que sigue sin prueba jurídica concluyente: El criterio interpretativo vinculante que adoptará la futura Agencia de Protección de Datos Personales de Chile respecto de la calificación jurídica de los embeddings vectoriales (si constituyen o no 'datos personales seudonimizados' bajo el artículo 2 de la Ley 21.719) y si la técnica de Crypto-shredding (destrucción irreversible de la clave DEK en KMS sin sobreescritura física de cada sector) satisface el estándar legal de 'bloqueo y cancelación definitiva' exigido por la ley; 2) Fuente que falló o es parcial: La Ley N° 21.719 al encontrarse en vacatio legis legal de 24 meses carece actualmente de reglamentos ejecutivos, circulares interpretativas o resoluciones de la Agencia (cuya directiva aún no ha sido nombrada) que resuelvan expresamente el estatus de las bases vectoriales; y 3) Validación mínima que resolvería la incertidumbre: Adoptar el principio precautorio de máxima exigencia técnica: a) Tratar todo vector derivado de documentos con datos personales como si fuese un dato personal protegido bajo la Ley 21.719 y la Ley 19.628; b) Implementar doble mecanismo de borrado: Crypto-shredding criptográfico en KMS complementado con purga física forzada de vectores en Qdrant; y c) Someter formalmente una consulta jurídica no vinculante (o dictamen letrado previo) ante la autoridad competente una vez que la Agencia de Protección de Datos inicie sus funciones formales hacia fines de 2026.",
+  "findings": [
+    {
+      "claim_id": "P11-C16-C1",
+      "claim": "Sigue sin prueba jurídica el criterio de la futura Agencia chilena sobre el estatus de los embeddings y la validez legal del Crypto-shredding; la Ley 21.719 es parcial por su vacatio legis sin reglamentos; y la validación mínima impone una estrategia precautoria de doble borrado y consulta formal a la autoridad al iniciar sus funciones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "jurisdictional_open_gaps_and_validation",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Gaps Críticos y Calibración Epistémica'",
+          "retrieved_at": null,
+          "excerpt_short": "El estatus de los embeddings y del crypto-shredding bajo la Ley 21.719 constituye una incertidumbre jurídica no resuelta por la vacatio legis. Se exige aplicar principio precautorio de máxima contención técnica.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Artículo 2 y Disposiciones Transitorias",
+          "retrieved_at": null,
+          "excerpt_short": "Definiciones de datos personales y entrada en vigencia diferida a 24 meses para la dictación de reglamentos complementarios.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evaluación prudente y altamente informada de los tiempos y procedimientos del derecho público y regulatorio chileno.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Texto de la Ley 21.719",
+      "Doctrina de protección de datos",
+      "Mecanismo de Crypto-shredding de BRIDGE"
+    ],
+    "actors": [
+      "Comité de Privacidad de BRIDGE",
+      "Asesor Jurídico Externo",
+      "Futura Agencia de Protección de Datos"
+    ],
+    "steps": [
+      "Clasificación conservadora de todo índice vectorial que contenga nombres o cargos como dato personal indirecto",
+      "Aplicación del doble estándar de purga: destrucción de clave DEK en KMS y comando de borrado síncrono en Qdrant",
+      "Redacción del dossier de consulta jurídica para la Agencia de Protección de Datos",
+      "Presentación de la consulta una vez instalada formalmente la Agencia en Santiago de Chile",
+      "Ajuste de los procedimientos operativos según el pronunciamiento vinculante que emita la autoridad"
+    ],
+    "states": [
+      "PRECAUTIONARY_POLICY_ACTIVE",
+      "DUAL_PURGE_ENFORCED",
+      "REGULATORY_FILING_PREPARED",
+      "AGENCY_RULING_AWAITED"
+    ],
+    "outputs": [
+      "Estrategia técnica blindada que no depende de interpretaciones laxas y resistirá cualquier resolución futura del regulador"
+    ],
+    "exceptions": [
+      "Si la autoridad dictamina que el Crypto-shredding por sí solo es insuficiente, el mecanismo de purga física forzada ya implementado garantiza el cumplimiento inmediato"
+    ]
+  },
+  "entities": [
+    "Futura Agencia de Protección de Datos",
+    "Ley N° 21.719 Vacatio Legis",
+    "Crypto-shredding",
+    "Qdrant Hard Purge",
+    "P11_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "Principio Precautorio",
+      "type": "MANDATES_APPLICATION_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir que un vector no es un dato personal vs Tratarlo precautoriamente como dato protegido",
+      "diferencia": "Asumir que no es dato personal crea un riesgo de multa millonaria futura si la Agencia opina lo contrario; tratarlo precautoriamente garantiza cumplimiento continuo sin importar el dictamen."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "precautionary_compliance_level": "Máximo estándar de la industria",
+    "regulatory_consultation_readiness": "100%"
+  },
+  "bridge_implications": "Convierte la incertidumbre regulatoria en un activo de solvencia técnica, demostrando a los clientes que BRIDGE está preparado para los escenarios regulatorios más exigentes.",
+  "open_gaps": [
+    "Instalación formal y designación del Consejo Directivo de la Agencia de Protección de Datos en Chile."
+  ],
+  "next_question_ids": [
+    "P11-F01",
+    "T01-F01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

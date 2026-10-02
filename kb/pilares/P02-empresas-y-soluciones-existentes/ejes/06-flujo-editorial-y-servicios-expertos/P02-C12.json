@@ -1,0 +1,141 @@
+{
+  "question_id": "P02-C12",
+  "pilar": "P02",
+  "eje": "Flujo editorial y servicios expertos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre flujo editorial y servicios expertos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la adopción real y la eficacia legal de los asistentes de IA generativa para la redacción desatendida o semi-desatendida de declaraciones de crisis corporativas: 1) Brecha: Aunque herramientas como Broadsight AI Assistant, Contrlr o PRophet afirman generar 'mensajes de contingencia alineados con la postura de la empresa en segundos', ningún cliente corporativo regulado ha aportado evidencia de emitir declaraciones a la prensa redactadas enteramente por IA sin una revisión humana exhaustiva de abogados y directores; 2) Fuentes parciales: Los proveedores presentan demos sintéticas en condiciones ideales, pero omiten casos reales de gestión de crisis bajo litigio activo donde una palabra equívoca genera responsabilidad civil o penal para la compañía; 3) Validación mínima: Diseñar un experimento a ciegas con 30 directores de asuntos legales y corporativos, presentando holding statements redactados por IA versus redactados por comités de crisis humanos ante 5 escenarios de contingencia extrema (e.g. fatalidad laboral, derrame químico, fraude financiero), evaluando aceptabilidad legal y riesgo percibido.",
+  "findings": [
+    {
+      "claim_id": "P02-C12-C1",
+      "claim": "No existe evidencia documentada de que las grandes corporaciones confíen la redacción final de declaraciones públicas de crisis a motores de IA sin un proceso riguroso de aprobación y firma humana.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Broadsight, Contrlr, PRophet"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "AI Crisis Drafting Adoption and Legal Liability Gap",
+          "excerpt_short": "Corporate legal counsel strictly requires human-in-the-loop review; zero documented adoption of unverified autonomous AI message generation in high-liability crisis scenarios.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:46:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de marcos de gobernanza y responsabilidad legal corporativa.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Casos de crisis sintéticos de alta responsabilidad",
+      "Borradores generados por IA",
+      "Borradores redactados por humanos",
+      "Criterios de evaluación legal"
+    ],
+    "actors": [
+      "Auditor de Riesgo Legal",
+      "Comité de 30 Abogados Corporativos"
+    ],
+    "steps": [
+      "Presentación a ciegas de declaraciones",
+      "Puntuación de riesgo de litigio y ambigüedad",
+      "Análisis comparativo de fallas semánticas"
+    ],
+    "states": [
+      "Casos_Preparados",
+      "Evaluacion_Ciega_Completada",
+      "Riesgos_Cuantificados"
+    ],
+    "outputs": [
+      "Estudio de aceptabilidad legal de redacción de crisis por IA"
+    ],
+    "exceptions": [
+      "Divergencias irreconciliables entre el criterio legal (cero exposición) y el criterio comunicacional (empatía pública)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTUDIO_ACEPTABILIDAD_IA",
+      "type": "estudio_validacion",
+      "name": "Estudio de Aceptabilidad Legal de Declaraciones por IA",
+      "aliases": [
+        "Legal AI Adoption Study"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESTUDIO_ACEPTABILIDAD_IA",
+      "predicate": "determina_limites_de",
+      "object_id": "Modulo_Hablar_Autonomo",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C12-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Promesa de Generación de Crisis por IA vs Realidad de Gobernanza Legal",
+      "Promesa de Generación por IA": "'La IA redacta comunicados perfectos y los envía a los medios automáticamente'.",
+      "Realidad de Gobernanza Legal": "Los abogados jamás permitirán que un texto no revisado manualmente salga a la luz pública."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "BRIDGE debe diseñar su módulo Hablar como un 'asistente aumentativo' con firmas humanas obligatorias, nunca como un publicador autónomo desatendido.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_AI_CRISIS_ADOPTION",
+      "description": "Falta de prueba de adopción de IA en crisis sin revisión legal",
+      "action": "Ejecutar estudio a ciegas con abogados"
+    }
+  ],
+  "next_question_ids": [
+    "P02-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:46:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

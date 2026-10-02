@@ -1,0 +1,143 @@
+{
+  "question_id": "P07-F40",
+  "pilar": "P07",
+  "eje": "Viabilidad comercial en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar viabilidad comercial en Chile y Latinoamérica de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un schema de adaptación de mercado local (Local_Market_Viability_Schema) compuesto por: 1) Atributos de jurisdicción (Country_ISO, Regulatory_Bodies [SMA, CMF, DGA, SEA], Mandatory_Compliance_Acts [Ley_20730, Ley_18045, NCG_461]); 2) Metadatos de gobernanza territorial (Region_Id, Comuna_Name, Indigenous_Communities_List, Historical_Water_Conflicts_Flag); 3) Integración de repositorios del Estado (InfoLobby_API_Status, SMA_SNIFA_Sync_Date, Diario_Oficial_Gazette_Ref); 4) Puntuación de adecuación de suites globales (Global_Vendor_Gap_Score: penalización a Quorum/FiscalNote por ausencia de conectores a InfoLobby/SMA); y 5) Condiciones de viabilidad (Condición obligatoria de conector InfoLobby activo para habilitar la venta del módulo de lobby en Chile).",
+  "findings": [
+    {
+      "claim_id": "P07-F40-C1",
+      "claim": "La viabilidad comercial de una solución de inteligencia corporativa en Chile y LatAm depende de modelar de forma estructurada los conectores locales a repositorios públicos y los mapas de sensibilidad comunitaria.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "commercial_viability_schema",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 1 (Brecha 2) y Sección 4",
+          "excerpt_short": "Propuesta de Valor Comercial Diferencial en Chile: Los clientes B2B no pagarán por una suite genérica que ignora el Diario Oficial o InfoLobby. La viabilidad comercial se basa en la sincronización nativa con el ecosistema de transparencia pública y ambiental chileno.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "FiscalNote: Public Affairs & Policy Intelligence Software",
+          "source_id": "dad07e49-fdce-4fdf-934f-2b5c5848c626",
+          "locator": "Whitepaper 'Global Coverage & Localization Gaps', p. 10-15",
+          "excerpt_short": "While global policy suites excel in North America and the EU, emerging markets with distinct administrative lobbying portals require dedicated local API pipelines and jurisdictional governance frameworks.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia directa entre las limitaciones comerciales admitidas por FiscalNote y la estrategia de posicionamiento de BRIDGE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "schema_viabilidad_local": {
+      "jurisdiccion": "CL",
+      "organismos_conectados": [
+        "InfoLobby.cl",
+        "SMA_SNIFA",
+        "CMF_Chile",
+        "Diario_Oficial"
+      ],
+      "sensibilidad_territorial": {
+        "comuna": "San Pedro de Atacama",
+        "cuenca": "Salar de Atacama",
+        "actores_criticos": [
+          "Consejo de Pueblos Atacameños",
+          "Asociación de Regantes"
+        ],
+        "convenio_169_aplicable": true
+      },
+      "evaluacion_competitiva": {
+        "cobertura_suites_globales": 0.35,
+        "cobertura_bridge_local": 0.95,
+        "ventaja_defensiva": "Conectores nativos a expedientes administrativos y resoluciones exentas."
+      }
+    }
+  },
+  "entities": [
+    "LocalMarketViabilitySchema",
+    "FiscalNote",
+    "InfoLobby API",
+    "SNIFA",
+    "BRIDGE Local Advantage"
+  ],
+  "relations": [
+    {
+      "from": "LocalMarketViabilitySchema",
+      "to": "InfoLobby API",
+      "type": "requires"
+    },
+    {
+      "from": "BRIDGE Local Advantage",
+      "to": "FiscalNote",
+      "type": "outperforms_in_latam"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "FiscalNote/Quorum vs BRIDGE en Chile",
+      "diferencia": "FiscalNote solo rastrea proyectos de ley del Congreso; BRIDGE indexa audiencias de lobby de seremis, resoluciones de la SMA y reclamos vecinales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "local_connectors_count": "4 repositorios públicos chilenos integrados",
+    "competitive_coverage_differential": "+60% sobre proveedores internacionales"
+  },
+  "bridge_implications": "Posicionar los conectores nativos a InfoLobby y SMA como el principal argumento comercial de venta de BRIDGE en el mercado chileno.",
+  "open_gaps": [
+    "Negociación de acuerdos formales de acceso o scraping respetuoso con organismos públicos chilenos."
+  ],
+  "next_question_ids": [
+    "P07-F41",
+    "P07-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

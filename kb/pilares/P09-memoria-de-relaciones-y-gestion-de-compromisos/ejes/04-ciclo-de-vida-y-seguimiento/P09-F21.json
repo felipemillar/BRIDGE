@@ -1,0 +1,150 @@
+{
+  "question_id": "P09-F21",
+  "pilar": "P09",
+  "eje": "Ciclo de vida y seguimiento",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Cómo se registra un cambio de alcance o renegociación sin borrar el compromiso original?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La integridad de la memoria institucional y la defensa jurídica exigen un modelo de inmutabilidad append-only para los cambios de alcance: 1) Prohibición de Borrado o Sobrescritura: Queda taxativamente inhabilitada la edición destructiva de registros en base de datos; 2) Congelamiento de Versión Original: El compromiso original (v1) pasa irrevocablemente al estado `RENEGOCIADO`, congelando sus campos originales (alcance, presupuesto y plazo pactado originalmente); 3) Creación de Versión Sucesor (v2): Se instancia una nueva Ficha de Compromiso (v2) que referencia al ID original mediante la relación `supersedes_commitment_id`; 4) Vinculación al Acta Modificatoria: La v2 exige como requisito sine qua non el enlace a la nueva interacción o adenda firmada con la contraparte; y 5) Trazabilidad en Línea de Tiempo: En la interfaz visual de BRIDGE, se despliega el árbol genealógico del compromiso, permitiendo ver la promesa inicial, las razones formales del cambio y el nuevo pacto acordado.",
+  "findings": [
+    {
+      "claim_id": "P09-F21-C1",
+      "claim": "El versionado inmutable de compromisos congela la versión original en estado RENEGOCIADO y crea una versión v2 sucesora enlazada al acta formal de renegociación, impidiendo la manipulación retroactiva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "immutable_commitment_versioning",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo de Gestión en 6 Fases (Protocolo de Versionamiento)'",
+          "retrieved_at": null,
+          "excerpt_short": "Protocolo de Versionamiento: Queda estrictamente vedado el UPDATE destructivo de fechas o alcances. Un compromiso modificado transita a RENEGOCIADO y engendra un hijo (v2) con puntero al padre, registrando en audit log: autor, motivo justificado, acta bilateral y nuevo plazo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: The Proving Problem — Why DIY AI Can't Prove Compliance (Commitment Tracking)",
+          "source_id": "27ce9bc8-70cf-4dc0-ac19-d8787d3bccd6",
+          "locator": "Section 'Auditability and Change Tracking in Stakeholder Relations', p. 19-23",
+          "retrieved_at": null,
+          "excerpt_short": "Modifying commitments without preserving the full audit trail of who authorized the change and why destroys legal defensibility during disputes with regulatory agencies or indigenous communities.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Boréalis y las reglas de inmutabilidad del dossier de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Petición de renegociación",
+      "Acta de acuerdo bilateral firmada",
+      "Justificación técnica"
+    ],
+    "actors": [
+      "Dueño del Compromiso",
+      "Líder de Asuntos Comunitarios",
+      "Contraparte Social / Dirigente"
+    ],
+    "steps": [
+      "Apertura de proceso de renegociación en BRIDGE",
+      "Carga del acta firmada con el nuevo acuerdo",
+      "Transición de v1 a RENEGOCIADO",
+      "Creación de v2 con nuevos parámetros temporales y de alcance",
+      "Generación de arista SUPERSEDES en el grafo"
+    ],
+    "states": [
+      "Renegociación Iniciada",
+      "Acta Verificada",
+      "v1 Congelada",
+      "v2 Activa"
+    ],
+    "outputs": [
+      "Compromiso v1 (RENEGOCIADO)",
+      "Compromiso v2 (APROBADO_ASIGNADO)"
+    ],
+    "exceptions": [
+      "Intentos de cambiar fecha límite sin adjuntar documento o acta devuelven bloqueo de seguridad"
+    ]
+  },
+  "entities": [
+    "Versionado Inmutable",
+    "Boréalis SRM",
+    "P09_RESEARCH_DOSSIER",
+    "SUPERSEDES",
+    "Audit Trail Append-Only"
+  ],
+  "relations": [
+    {
+      "from": "Compromiso v2",
+      "to": "Compromiso v1",
+      "type": "SUPERSEDES"
+    },
+    {
+      "from": "Compromiso v2",
+      "to": "Acta Bilateral",
+      "type": "JUSTIFIED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Sobrescribir celdas en Excel vs Versionado inmutable en grafo",
+      "diferencia": "Sobrescribir en Excel borra la historia y crea acusaciones de engaño; el versionado inmutable demuestra buena fe y acuerdos transparentes."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "data_loss_rate_on_updates": "0% (modelo append-only)",
+    "versioning_depth": "Ilimitada (árbol completo de versiones preservado)"
+  },
+  "bridge_implications": "Implementar un componente visual 'Línea de Tiempo del Compromiso' en la interfaz de BRIDGE que muestre el historial de revisiones con sus actas.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F22",
+    "P09-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

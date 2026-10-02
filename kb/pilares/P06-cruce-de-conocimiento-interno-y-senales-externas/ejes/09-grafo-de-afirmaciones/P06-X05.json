@@ -1,0 +1,137 @@
+{
+  "question_id": "P06-X05",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Grafo de afirmaciones",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre grafo de afirmaciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos, arquitecturas y esquemas sobre el grafo de afirmaciones se sustentan en las siguientes fuentes canónicas verificadas en el corpus: 1) Li et al. (2025, ArXiv:2508.01680; 'T-GRAG: Dynamic GraphRAG for Temporal Conflicts', Agosto 2025): Secciones 1, 3 y 4, demostrando el modelado de grafos temporales dinámicos con bordes tipados de soporte, conflicto y modificación sin borrado destructivo; 2) Edge et al. (2024, ArXiv:2404.16130; 'GraphRAG: Query-Focused Summarization', Abril 2024): Metodología de clustering jerárquico de entidades y extracción comunitaria de afirmaciones corporativas; 3) Palantir Foundry Documentation (2024; 'Why Create an Ontology', Mayo 2024): Marco industrial de ontología centrada en decisiones, uniendo datos transaccionales, entidades organizacionales y compromisos; y 4) Thorne et al. (2018, ArXiv:1803.05355; 'FEVER: Fact Extraction & VERification', Marzo 2018): Formulación formal de relaciones triádicas (Supports, Refutes, Not Enough Info) con evidencia verificable.",
+  "findings": [
+    {
+      "claim_id": "P06-X05-C1",
+      "claim": "La fundamentación teórica y técnica del grafo de afirmaciones descansa en cuatro fuentes primarias complementarias de literatura científica y arquitectura industrial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2018-2025",
+        "region": "Global",
+        "actor": "Literatura Científica y Sistemas Industriales"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": "https://arxiv.org/pdf/2508.01680",
+          "locator": "Section 1 & References",
+          "excerpt_short": "T-GRAG introduces dynamic temporal graph retrieval to resolve evolving and conflicting knowledge across multi-hop reasoning tasks.",
+          "source_date": "2025-08-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "4a4a5417-6cca-4af2-b946-893e515614c9",
+          "source_title": "Edge et al. (2024) - GraphRAG: Query-Focused Summarization",
+          "original_url": "https://arxiv.org/abs/2404.16130",
+          "locator": "Section 2: Graph Construction from Unstructured Text",
+          "excerpt_short": "GraphRAG extracts entity graphs and claims from raw corpora, generating community summaries for holistic synthesis.",
+          "source_date": "2024-04-24",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fuentes primarias de texto completo y publicaciones autoritativas en el corpus de P06.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus bibliográfico indexado"
+    ],
+    "actors": [
+      "Auditor Metodológico",
+      "Documentalista"
+    ],
+    "steps": [
+      "Verificación de autores, fechas y DOI/ArXiv ID",
+      "Comprobación de correspondencia textual de extractos",
+      "Mapeo a afirmaciones del pilar"
+    ],
+    "states": [
+      "Verified",
+      "Cataloged"
+    ],
+    "outputs": [
+      "Matriz bibliográfica de respaldo"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BIBLIO_GRAPH",
+      "type": "corpus_bibliografico",
+      "name": "Corpus Científico de Grafos Corporativos",
+      "aliases": [
+        "Scientific Basis P06"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BIBLIO_GRAPH",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2024-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X05-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Proporciona respaldo científico irrebatible a la arquitectura técnica de la plataforma.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

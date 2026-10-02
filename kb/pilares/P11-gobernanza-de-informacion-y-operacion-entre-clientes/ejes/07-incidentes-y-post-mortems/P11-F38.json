@@ -1,0 +1,167 @@
+{
+  "question_id": "P11-F38",
+  "pilar": "P11",
+  "eje": "Incidentes y post-mortems",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué secuencia de contención, comunicación y aprendizaje correspondería a cada fallo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Ante la materialización o detección de un fallo de seguridad, BRIDGE activa un Playbook de Respuesta a Incidentes estrictamente gobernado por el marco NIST SP 800-61 Rev. 3 y alineado con los plazos legales de Chile (Ley 21.663 de Ciberseguridad y Ley 21.719 de Protección de Datos Personales en vacatio legis), estructurado en cinco fases rigurosas: 1) Detección y Triage Inmediato (T+0 a T+5m): Clasificación de severidad (SEV-1 Crítica a SEV-4 Leve); 2) Contención Inmediata Automatizada (T+5m a T+15m): Para fuga de datos o compromiso de tenant, aislamiento instantáneo mediante revocación de sesión en Redis, degradación del rol en PostgreSQL y, de ser requerido, destrucción criptográfica (Crypto-shredding) de la DEK en KMS, dejando los activos inaccesibles; para prompt injection, bloqueo del conector de entrada; 3) Notificación y Comunicación Legal (T+15m a T+3h / T+72h): En caso de incidentes con impacto significativo en la seguridad de redes y sistemas, notificación obligatoria en un plazo máximo de 3 horas al CSIRT Nacional conforme al artículo 24 de la Ley N° 21.663; notificación formal al CISO del cliente corporativo afectado en menos de 4 horas vía canal cifrado de emergencia; y notificación a la Agencia de Protección de Datos Personales en menos de 72 horas (según los estándares de la Ley 21.719 y GDPR); 4) Erradicación y Recuperación (T+1h a T+24h): Despliegue de hotfix en código, purga de índices vectoriales contaminados, restauración desde snapshots inmutables verificados y ejecución de tests de regresión; y 5) Actividad Post-Incidente y Aprendizaje (T+24h a T+72h): Elaboración de un Post-Mortem Blameless, incorporación de la falla como vector de prueba unitario automatizado en CI/CD y actualización del registro de riesgos corporativos.",
+  "findings": [
+    {
+      "claim_id": "P11-F38-C1",
+      "claim": "La respuesta a incidentes en BRIDGE sigue el ciclo NIST SP 800-61 Rev. 3 con contención automatizada en minutos, notificación al CSIRT Nacional en 3 horas bajo la Ley 21.663, notificación a clientes y a la autoridad de datos en 72 horas bajo la Ley 21.719, y post-mortem blameless.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "incident_response_playbook_and_legal_deadlines",
+      "evidence": [
+        {
+          "source_title": "NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management",
+          "source_id": "1a1681bf-4024-4cbf-ab85-af3903a784ff",
+          "locator": "Section 3 'Incident Handling Lifecycle: Preparation, Detection, Containment, Eradication, Post-Incident'",
+          "retrieved_at": null,
+          "excerpt_short": "Incident handling must establish defined workflows for rapid containment to limit damage, forensic preservation, mandatory reporting to authorities, and structured post-incident lessons learned.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.663 Ley Marco de Ciberseguridad e Infraestructura Crítica",
+          "source_id": "ee032cb3-abe5-4440-948f-815a9b4fbe78",
+          "locator": "Artículo 24 'Deber de Notificación de Incidentes de Ciberseguridad'",
+          "retrieved_at": null,
+          "excerpt_short": "Las instituciones y operadores deberán notificar al CSIRT Nacional los ciberataques e incidentes de ciberseguridad que puedan tener efectos significativos en el plazo máximo de tres horas contado desde su toma de conocimiento.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Artículo 15 (Notificación de Vulneraciones de Seguridad)",
+          "retrieved_at": null,
+          "excerpt_short": "El responsable deberá notificar a la Agencia y a los titulares afectados toda vulneración a las medidas de seguridad que ocasione la destrucción, pérdida o alteración no autorizada de datos personales en el plazo de 72 horas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Articulación exacta de los plazos legales obligatorios de la legislación chilena vigente (Ley 21.663), futura aplicable (Ley 21.719) y estándares federales NIST.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alerta del CitationScrubber o SIEM",
+      "Reporte de vulnerabilidad",
+      "Notificación de usuario"
+    ],
+    "actors": [
+      "Comandante de Incidente",
+      "Equipo de Ciberseguridad",
+      "Oficial de Enlace CSIRT",
+      "DPO"
+    ],
+    "steps": [
+      "T+0m: Detección y activación del canal de crisis cifrado (Signal / canal seguro fuera de banda)",
+      "T+5m: Ejecución de contención técnica (aislamiento de sesión, corte de conector o revocación de clave DEK)",
+      "T+15m: Preservación de registros WORM y congelamiento del estado del contenedor para análisis forense",
+      "T+1h: Evaluación de impacto significativo y despacho de reporte preliminar al CSIRT Nacional (dentro del plazo de 3 horas)",
+      "T+2h: Envío de comunicación oficial al CISO del cliente con medidas de mitigación adoptadas",
+      "T+24h: Despliegue de parche correctivo y verificación en ambiente de staging",
+      "T+72h: Notificación formal a la Agencia de Protección de Datos (si hubo afectación de PII D4) y entrega del Post-Mortem Blameless"
+    ],
+    "states": [
+      "INCIDENT_TRIGGERED",
+      "CONTAINMENT_LOCKED",
+      "AUTHORITIES_NOTIFIED",
+      "REMEDIATED_AND_REVIEWED"
+    ],
+    "outputs": [
+      "Incidente contenido, obligaciones regulatorias satisfechas y parche desplegado con test de regresión"
+    ],
+    "exceptions": [
+      "Si el incidente afecta servicios esenciales o infraestructura crítica de un cliente, se convoca de inmediato al Comité Ejecutivo"
+    ]
+  },
+  "entities": [
+    "NIST SP 800-61 Rev. 3",
+    "CSIRT Nacional",
+    "Ley N° 21.663",
+    "Ley N° 21.719",
+    "Post-Mortem Blameless"
+  ],
+  "relations": [
+    {
+      "from": "Incidente Significativo",
+      "to": "CSIRT Nacional",
+      "type": "NOTIFIED_WITHIN_3_HOURS"
+    },
+    {
+      "from": "Post-Mortem Blameless",
+      "to": "Pipeline CI/CD",
+      "type": "ADDS_REGRESSION_TEST_TO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Ocultamiento informal del error vs Notificación reglada y post-mortem transparente",
+      "diferencia": "Ocultar el incidente acarrea multas millonarias bajo la Ley 21.663/21.719 y pérdida de confianza; la notificación reglada y contención rápida demuestra madurez de gobernanza enterprise."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "csirt_notification_compliance_rate": "100% de notificaciones despachadas en menos de 3 horas",
+    "automated_containment_execution_time": "< 5 minutos desde la detección",
+    "blameless_postmortem_delivery_time": "< 72 horas hábiles"
+  },
+  "bridge_implications": "Otorga certeza jurídica y operativa a los clientes de que BRIDGE no improvisa ante fallos, sino que responde con rigor militar y cumplimiento normativo estricto.",
+  "open_gaps": [
+    "Simulacro conjunto periódico (Tabletop Exercise) coordinado con los equipos de seguridad de los clientes."
+  ],
+  "next_question_ids": [
+    "P11-F39",
+    "P11-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

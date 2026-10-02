@@ -1,0 +1,179 @@
+{
+  "question_id": "P01-C14",
+  "pilar": "P01",
+  "eje": "Usuarios de asuntos corporativos en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué sigue sin prueba sobre usuarios de asuntos corporativos en Chile y Latinoamérica, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba: 1) métricas temporales auditadas sobre horas-hombre en preparación de minutas ejecutivas en Chile (la meta 'de 4h a 15 min' es la hipótesis HT-2); 2) estudios longitudinales revisados por pares sobre el impacto de la IA en la preservación de la licencia social para operar; 3) auditorías de consistencia fáctica entre minutas preparatorias y transcripciones de audiencias de lobby. Fuentes fallidas: Gartner (Future of Communications y Gartner for Communications), Global Alliance GCF Release, Gregory & Willis 2019, Page Society (Pacesetter y Corporate Character), OECD Corporate Governance (todas por bloqueo técnico/paywall). Fuentes parciales: Asociaciones profesionales globales (ignoran el poder de veto de CISO/Legal) y consultoras comerciales (promesas no auditadas de AI Lighthouses). Validación mínima: Fase 1 (15 entrevistas cualitativas con Dircoms de sectores regulados en Chile) y Fase 2 (shadowing cronometrado durante preparación de comités de crisis o audiencias de lobby).",
+  "findings": [
+    {
+      "claim_id": "P01-C14-C1",
+      "claim": "Las fuentes originales internacionales sobre usuarios y adopción tecnológica sufren de parcialidad analítica al centrarse exclusivamente en la figura del comunicador, omitiendo los requerimientos técnicos y de seguridad que imponen las áreas de ciberseguridad (CISO) y cumplimiento legal en grandes corporaciones de Chile y la región.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "América Latina",
+        "actor": "Comités de Ciberseguridad y Compliance"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Evaluación de Fuentes Parciales y Vacíos de Gobernanza B2B",
+          "excerpt_short": "Las fuentes tradicionales omiten los criterios de veto de CISO y Legal/Compliance.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:17:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evaluación metodológica de vacíos de investigación en el cuaderno P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C14-C2",
+      "claim": "Para cerrar los vacíos sobre tiempos reales y fricciones del usuario chileno, se requiere ejecutar la Fase 1 (15 entrevistas cualitativas exploratorias con CCOs de minería, energía, retail y banca) y la Fase 2 (shadowing con cronómetro en tiempo real de un comité de crisis o preparación de audiencia).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Equipo Investigador BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Fase 1 y Fase 2 del Protocolo de Validación en Terreno",
+          "excerpt_short": "Fase 1: 15 entrevistas con CCOs; Fase 2: shadowing cronometrado durante preparación de comités.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:17:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Protocolo de campo estructurado en los entregables de investigación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Muestra intencional de 15 empresas chilenas",
+      "Pauta de entrevista semiestructurada",
+      "Herramienta de cronometraje"
+    ],
+    "actors": [
+      "Investigador de Campo",
+      "CCO Entrevistado",
+      "Jefe de Prensa"
+    ],
+    "steps": [
+      "Contacto y firma de NDA",
+      "Entrevista en profundidad sobre flujos diarios",
+      "Observación de preparación de minuta",
+      "Codificación de transcripciones"
+    ],
+    "states": [
+      "Contacto_Iniciado",
+      "Entrevista_Realizada",
+      "Flujo_Observado",
+      "Datos_Codificados"
+    ],
+    "outputs": [
+      "Informe de Hallazgos Empíricos de Usuarios en Chile"
+    ],
+    "exceptions": [
+      "Negativa de participar en el estudio por políticas de secreto corporativo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTUDIO_USUARIOS_CHILE",
+      "type": "estudio_empirico",
+      "name": "Estudio Empírico de Usuarios de Asuntos Corporativos en Chile",
+      "aliases": [
+        "Validación de Campo Fase 1 y 2"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESTUDIO_USUARIOS_CHILE",
+      "predicate": "valida_necesidades_de",
+      "object_id": "ENT_USUARIO_CHILENO",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C14-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Literatura Teórica vs Protocolo de Investigación Empírica",
+      "Literatura Disponible": "Monitores globales de percepción sin trazabilidad a flujos de trabajo de software.",
+      "Protocolo de Investigación": "Medición empírica in situ de tiempos, herramientas y repositorios consultados por usuarios reales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Ajustar las interfaces y el lenguaje de BRIDGE al léxico institucional chileno (Lobby, RCA, CMF, audiencias) en lugar de terminología genérica anglosajona.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    "Medición cuantitativa auditada de horas de trabajo invertidas por equipos chilenos en responder oficios de la CMF y requerimientos territoriales.",
+    "Estudios comparativos de daño reputacional entre empresas con preparación manual y empresas asistidas por software de inteligencia."
+  ],
+  "next_question_ids": [
+    "P01-C15",
+    "P01-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:17:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "question_id": "P10-C02",
+  "pilar": "P10",
+  "eje": "Origen de solicitudes y señales",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué sigue sin prueba sobre origen de solicitudes y señales, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "1) Lo que sigue sin prueba empírica suficiente es la efectividad de los filtros automáticos de desinformación frente a deepfakes de audio y video de voceros en tiempo real (amenaza emergente de crisis sintética); 2) Fuentes que fallaron o resultaron parciales: La fuente original CIPR/IPR (source_id 2c38c545) falló por error de extracción y fue sustituida canónicamente por CIPR AI Guides (0f644aa9); asimismo, el análisis de Doxa Comunicación (1c243f37) es cualitativo y describe el fenómeno mediático en España sin modelar SLAs algorítmicos para Latinoamérica; y 3) Validación mínima para resolver la incertidumbre: Conducir un test de estrés empírico inyectando 50 consultas híbridas (incluyendo audio clonado de ejecutivos y noticias falsas generadas por LLMs) en el módulo de triaje de BRIDGE para calibrar la tasa de falsos positivos en la detección de banderas rojas y medir el tiempo de respuesta del equipo humano de verificación.",
+  "findings": [
+    {
+      "claim_id": "P10-C02-C1",
+      "claim": "La detección de deepfakes y desinformación sintética en la ingesta sigue careciendo de benchmarks empíricos concluyentes; la fuente CIPR original falló y requiere validación mediante pruebas de estrés sintéticas.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "intake_gaps_and_stress_testing",
+      "evidence": [
+        {
+          "source_title": "P10_GAPS_AND_VALIDATION: Vacios, Hipotesis y Validacion",
+          "source_id": "1bdee7c1-95df-4848-ba8e-74ff3eaca685",
+          "locator": "Sección 'Brechas en Detección de Desinformación Sintética'",
+          "retrieved_at": null,
+          "excerpt_short": "Vacío crítico: Los sistemas de escucha no distinguen de forma determinista entre audio clonado y filtraciones reales. Protocolo de validación: Test de estrés con muestras sintéticas controladas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Doxa Comunicacion (2026): Desinformacion y Credibilidad",
+          "source_id": "1c243f37-4eb4-4e80-857a-1002f3b2103e",
+          "locator": "Sección 'El impacto de la IA generativa en la velocidad del desmentido'",
+          "retrieved_at": null,
+          "excerpt_short": "La desinformación sintética se propaga a velocidades que superan los ciclos tradicionales de desmentido, exigiendo verificación de autenticidad en la fuente de origen.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación precisa de vacíos tecnológicos y metodológicos documentados en las fuentes internas y académicas.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Set de prueba de 50 consultas sintéticas/deepfakes",
+      "Algoritmo de triaje de BRIDGE"
+    ],
+    "actors": [
+      "Equipo de Red Teaming",
+      "Auditor de Triaje",
+      "Especialista Forense de Audio"
+    ],
+    "steps": [
+      "Inyección controlada de consultas anómalas en el buzón de prueba",
+      "Medición de banderas rojas disparadas correctamente",
+      "Cálculo de falsos negativos (deepfakes no detectados)",
+      "Ajuste de parámetros del detector de anomalías de BRIDGE"
+    ],
+    "states": [
+      "TEST_DESIGNED",
+      "INJECTION_EXECUTED",
+      "ACCURACY_MEASURED",
+      "FILTERS_CALIBRATED"
+    ],
+    "outputs": [
+      "Informe de calibración de triaje ante desinformación sintética"
+    ],
+    "exceptions": [
+      "Consultas con sospecha de fraude financiero se derivan de inmediato a la Unidad de Delitos Informáticos"
+    ]
+  },
+  "entities": [
+    "Deepfakes",
+    "Doxa Comunicación",
+    "Red Teaming",
+    "P10_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Deepfakes",
+      "to": "Módulo de Triaje",
+      "type": "TESTS_RESILIENCE"
+    },
+    {
+      "from": "Test de Estrés",
+      "to": "Incertidumbre",
+      "type": "RESOLVES_EMPIRICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir invulnerabilidad teórica vs Ejecutar pruebas de penetración comunicacional",
+      "diferencia": "La invulnerabilidad teórica colapsa en la primera crisis con deepfakes; las pruebas de estrés entrenan al sistema para neutralizar ataques antes de su masificación."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "synthetic_inquiry_detection_accuracy": "Target > 90% de desinformación sintética detectada en triaje"
+  },
+  "bridge_implications": "Establece la hoja de ruta de innovación para incorporar clasificadores de autenticidad multimedia en futuras versiones de BRIDGE.",
+  "open_gaps": [
+    "Disponibilidad de firmas criptográficas C2PA en la prensa tradicional chilena."
+  ],
+  "next_question_ids": [
+    "P10-C03",
+    "P10-C04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

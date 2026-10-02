@@ -1,0 +1,167 @@
+{
+  "question_id": "P11-F26",
+  "pilar": "P11",
+  "eje": "Proveedores y procesamiento externo",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué cláusulas, regiones de procesamiento y condiciones de entrenamiento aparecen en términos directos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los contratos de servicios y acuerdos de procesamiento de datos de los proveedores enterprise directos estipulan con claridad: 1) Cláusula de No Entrenamiento (No-Training Commitment): OpenAI Services Agreement (Sección 4.2, versión 01-01-2026 oficial en PDF) establece textualmente que OpenAI no utilizará el contenido del cliente (Customer Content) para desarrollar o mejorar sus servicios salvo consentimiento expreso; idénticas cláusulas se verifican en AWS Bedrock Data Protection, Google Cloud Vertex AI y Anthropic Commercial Terms (Sección 3); 2) Rol Contractual de Encargado (Processor / Data Processor): El OpenAI Data Processing Addendum (DPA oficial PDF) define formalmente a OpenAI como 'Processor' respecto del tratamiento de datos por cuenta del cliente (Controller); 3) Regiones de Procesamiento: Para modelos avanzados de frontera (Claude 3.5, GPT-4o, Gemini 1.5 Pro), el procesamiento en tiempo real se ejecuta en centros de datos ubicados en Estados Unidos (us-east-1, us-central1) y Europa, con opción de residencia de datos en reposo en São Paulo (Brasil / sa-east-1); y 4) Salvaguarda Canónica (P11_2026_LAW_AND_PROVIDER_CORRECTION): Las cláusulas contractuales son compromisos legales con alcance definido por pedido, pero no prueban por sí solas aislamiento operativo, segregación física de tenencia ni ausencia de bugs en multi-tenant, exigiendo capas adicionales de cifrado local en BRIDGE.",
+  "findings": [
+    {
+      "claim_id": "P11-F26-C1",
+      "claim": "Los contratos enterprise de OpenAI, AWS Bedrock, Vertex AI y Anthropic garantizan que los datos de clientes no se usan para entrenamiento y definen su rol como procesadores, aunque conforme a la corrección canónica estas cláusulas no sustituyen los controles técnicos de aislamiento.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "cloud_provider_contractual_terms",
+      "evidence": [
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'OpenAI y Cláusulas Contractuales'",
+          "retrieved_at": null,
+          "excerpt_short": "Services Agreement (Sec. 4.2): OpenAI no usa Customer Content para entrenar modelos. DPA describe a OpenAI como processor. Estas son condiciones contractuales; no prueban por sí solas segregación efectiva entre clientes ni ausencia operacional de fuga.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "OpenAI: OpenAI Services Agreement (Effective Jan 1, 2026) Official PDF",
+          "source_id": "8d9a7ceb-b830-4a59-93f3-7701c2bd4685",
+          "locator": "Section 4.2 'Customer Content and Model Training'",
+          "retrieved_at": null,
+          "excerpt_short": "We do not use Customer Content that you provide to or receive from the Services to develop or improve our Services, unless you explicitly opt in or agree otherwise in an applicable order.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Anthropic: Commercial Terms of Service and Data Processing Architecture",
+          "source_id": "43c7c201-91b9-4004-938e-ea1e37d172bd",
+          "locator": "Section 3 'Data Privacy and Model Training Exclusions'",
+          "retrieved_at": null,
+          "excerpt_short": "Anthropic does not train foundation models on Customer Data submitted via our commercial application programming interfaces (APIs).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual directa de los PDFs oficiales de OpenAI Services Agreement, Anthropic Commercial Terms y la fe de erratas canónica rectora.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Términos de servicio enterprise de proveedores",
+      "Matriz de configuración de endpoints",
+      "Fe de erratas rectora"
+    ],
+    "actors": [
+      "Fiscal Corporativo",
+      "Arquitecto Cloud BRIDGE",
+      "Auditor de Contratos"
+    ],
+    "steps": [
+      "Revisión de acuerdos enterprise firmados con OpenAI, AWS y Google",
+      "Activación de las banderas de opt-out de entrenamiento en todas las cuentas corporativas",
+      "Configuración de enrutamiento a regiones autorizadas (us-east-1 / sa-east-1)",
+      "Incorporación de Cláusulas Contractuales Tipo (SCC) para transferencias internacionales",
+      "Registro de las condiciones contractuales en el dossier de cumplimiento"
+    ],
+    "states": [
+      "TERMS_INSPECTED",
+      "OPT_OUT_FLAGS_LOCKED",
+      "REGIONAL_ROUTING_SET",
+      "DPA_EXECUTED"
+    ],
+    "outputs": [
+      "Configuración cloud verificada con compromisos contractuales vigentes"
+    ],
+    "exceptions": [
+      "Cuentas gratuitas o APIs públicas que no permitan el opt-out formal de entrenamiento están estrictamente vetadas en BRIDGE"
+    ]
+  },
+  "entities": [
+    "OpenAI Services Agreement",
+    "Anthropic Terms",
+    "AWS Bedrock",
+    "No-Training Clause",
+    "P11_2026_LAW_AND_PROVIDER_CORRECTION"
+  ],
+  "relations": [
+    {
+      "from": "OpenAI Services Agreement",
+      "to": "No-Training Clause",
+      "type": "STIPULATES_EXPLICITLY"
+    },
+    {
+      "from": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+      "to": "Garantías Contractuales",
+      "type": "QUALIFIES_LIMITS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Usar la web pública de ChatGPT vs Contratos enterprise B2B con opt-out",
+      "diferencia": "La web pública utiliza las conversaciones para entrenar futuros modelos; los contratos enterprise B2B prohíben por escrito el entrenamiento y confinan el tratamiento a la inferencia efímera."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Garantía absoluta de privacidad vs Cláusulas contractuales",
+      "resolution": "Conforme a P11_2026_LAW_AND_PROVIDER_CORRECTION, las cláusulas no constituyen por sí solas prueba técnica de ausencia de fuga; se exige aislamiento técnico local."
+    }
+  ],
+  "metrics_and_denominators": {
+    "enterprise_tier_contract_coverage": "100% de proveedores cloud operando bajo contratos enterprise B2B con cláusula de no entrenamiento"
+  },
+  "bridge_implications": "Otorga respaldo legal y tranquilidad fiduciaria al Directorio respecto a la protección de sus derechos de propiedad intelectual y secretos corporativos.",
+  "open_gaps": [
+    "Monitoreo de posibles cambios unilaterales en los términos de servicio de los proveedores cloud de IA."
+  ],
+  "next_question_ids": [
+    "P11-F27",
+    "P11-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

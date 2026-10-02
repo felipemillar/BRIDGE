@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F16",
+  "pilar": "P10",
+  "eje": "Redacción y adaptación de mensajes",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar redacción y adaptación de mensajes de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la redacción y adaptación exige: 1) Entidad de Mensaje Corporativo: `Entity_CorporateMessage` con atributos (message_id, request_id, version [semver string e.g. '1.0.0'], status [drafting, under_review, approved_staged], core_narrative_text, mandatory_disclaimers_json, hash_sha256); 2) Entidad de Adaptación por Canal: `Entity_ChannelAdaptation` con atributos (adaptation_id, message_id, channel_type [press_release, internal_intranet, linkedin_post, regulator_filing], adapted_text, character_count, compliance_verified_flag); 3) Relaciones Grafo: `DERIVED_FROM_CORE_MESSAGE`, `USES_SHARED_FACT`, `VALIDATED_AGAINST_GUARDRAILS`; 4) Condiciones de Integridad: Restricción que exige que toda adaptación conserve el 100% de las citas y cifras del mensaje maestro, prohibición de transitar a `approved_staged` sin firma humana (Four-Eyes Principle), y bloqueo de derivaciones a canales masivos si el mensaje maestro está en estado `under_amendment`.",
+  "findings": [
+    {
+      "claim_id": "P10-F16-C1",
+      "claim": "El esquema de redacción formaliza tablas para mensajes maestros versionados y adaptaciones por canal vinculadas por relaciones de grafo, con restricciones de integridad criptográfica y validación humana obligatoria.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_message_drafting",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 4 'Máquina de Estados y Control de Versiones' y Sección 8 'Comparativa de Plataformas'",
+          "retrieved_at": null,
+          "excerpt_short": "El modelo relacional estructura Entity_CorporateMessage y Entity_ChannelAdaptation. Cada versión aprobada genera un hash SHA-256 inmutable y vincula a sus derivados por canal bajo integridad referencial.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "ContentGrip: Practical PR Workflow - Staging, Embargoes, and Distribution (2026)",
+          "source_id": "4b3bd2de-e375-4ca4-a494-8adce9b0d5a5",
+          "locator": "Section 'Data Modeling of Multichannel PR Releases', p. 12-16",
+          "retrieved_at": null,
+          "excerpt_short": "A robust PR database structure links the master release to individual channel adaptations, tracking which version was distributed to which wire or social platform.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre ContentGrip y el esquema de datos del dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Modelo relacional SQL",
+      "Esquemas Pydantic de mensaje y adaptación",
+      "Catálogo de canales"
+    ],
+    "actors": [
+      "Arquitecto de Software BRIDGE",
+      "Base de Datos PostgreSQL",
+      "Servicio de Hashing Criptográfico"
+    ],
+    "steps": [
+      "Diseño de modelos de base de datos",
+      "Creación de índices por versión y solicitud",
+      "Configuración de claves foráneas con eliminación restringida (RESTRICT)",
+      "Tests automatizados de consistencia"
+    ],
+    "states": [
+      "Esquema Implementado",
+      "Migración Ejecutada",
+      "Validaciones Activas"
+    ],
+    "outputs": [
+      "Tablas `corporate_messages` y `channel_adaptations` en PostgreSQL"
+    ],
+    "exceptions": [
+      "Intentos de alterar el texto de un mensaje con status 'approved_staged' son abortados por trigger inmutable"
+    ]
+  },
+  "entities": [
+    "Entity_CorporateMessage",
+    "Entity_ChannelAdaptation",
+    "ContentGrip",
+    "Pydantic Schema",
+    "PostgreSQL"
+  ],
+  "relations": [
+    {
+      "from": "Entity_ChannelAdaptation",
+      "to": "Entity_CorporateMessage",
+      "type": "ADAPTED_FROM"
+    },
+    {
+      "from": "Entity_CorporateMessage",
+      "to": "Entity_SharedFactRecord",
+      "type": "REFERENCES_FACT"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Archivos sueltos en carpetas de red vs Esquema relacional con llaves foráneas",
+      "diferencia": "Los archivos sueltos desincronizan versiones entre canales; el esquema relacional garantiza que actualizar el mensaje maestro actualice todas sus piezas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "channel_types_supported": "5 canales principales (Newswire, Social, Internal, Regulatory, Community)",
+    "versioning_granularity": "SemVer (Major.Minor.Patch)"
+  },
+  "bridge_implications": "Crear las tablas correspondientes en PostgreSQL y exponer endpoints REST en FastAPI para la gestión multicanal.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F17",
+    "P10-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

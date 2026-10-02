@@ -1,0 +1,137 @@
+{
+  "question_id": "P03-F11",
+  "pilar": "P03",
+  "eje": "Acceso a prensa y web abierta",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre acceso a prensa y web abierta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los respaldos documentales comprenden: 1) Estructura y agrupamiento de noticias: Event Registry Developer Documentation (2026, sección 'Events and Clustering'), que detalla la unión de artículos por identificador semántico común; 2) Latencia y alcance multilingüe: GDELT 2.0 Documentation (2015-2026), que acredita actualización en intervalos de 15 minutos en más de 100 idiomas; 3) Límites de redistribución comercial: Dow Jones Factiva Developer Guide (2026), que establece las restricciones contractuales de reproducción de artículos íntegros; 4) Límites jurídicos de minería de datos: Directiva UE 2019/790 (Art. 4, reservas legibles por máquina) y jurisprudencia hiQ Labs v. LinkedIn Corp. (9° Circuito de EE.UU., 2022); y 5) Marco legal chileno: Ley 17.336 sobre Propiedad Intelectual de Chile (texto refundido BCN, 2026), que delimita el derecho de cita y evidencia la ausencia de excepción explícita de TDM comercial.",
+  "findings": [
+    {
+      "claim_id": "P03-F11-C1",
+      "claim": "Los hechos de acceso a prensa abierta y sindicada están respaldados de forma cruzada por especificaciones de APIs de eventos, documentación comercial de Factiva, jurisprudencia internacional y la ley chilena de propiedad intelectual.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2015-2026",
+        "region": "Chile / EE.UU. / UE",
+        "actor": "Corpus Canónico P03"
+      },
+      "evidence": [
+        {
+          "source_id": "6c028245-44ec-4fb2-9fac-1a31b0618291",
+          "source_title": "Biblioteca del Congreso Nacional - Ley 17.336 de Propiedad Intelectual de Chile",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=28933",
+          "locator": "Artículos 38 y 71: Excepciones al Derecho de Autor",
+          "excerpt_short": "Es lícita la reproducción de breves fragmentos de obras protegidas con fines de crítica o ilustración... sin perjuicio de mencionar la fuente y autor.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:05:00-03:00"
+        },
+        {
+          "source_id": "c1d4d3e2-d64c-49c9-9c54-cfcd11a97967",
+          "source_title": "Event Registry & NewsAPI.ai Developer Documentation",
+          "original_url": "https://www.newsapi.ai/documentation/examples",
+          "locator": "Event Registry Documentation - Concept Search",
+          "excerpt_short": "Concepts identify entities and topics across languages, linking related news items into aggregated events.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:05:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de artículos de ley y especificaciones de APIs.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de citas de prensa"
+    ],
+    "actors": [
+      "Legal Verifier"
+    ],
+    "steps": [
+      "Cotejo de artículos legales",
+      "Revisión de términos de servicio",
+      "Certificación de respaldos"
+    ],
+    "states": [
+      "Raw_Citations",
+      "Verified_Legal_Text",
+      "Approved_References"
+    ],
+    "outputs": [
+      "Catálogo de fuentes primarias auditado"
+    ],
+    "exceptions": [
+      "Cambios legislativos en tramitación sobre derechos digitales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRESS_EVIDENCE_CORPUS",
+      "type": "corpus_documental",
+      "name": "Corpus de Evidencia de Prensa P03",
+      "aliases": [
+        "Press Evidence Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRESS_EVIDENCE_CORPUS",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "Eje_Prensa_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F11-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Incorporar comprobación automática de citas de fuentes legales en la memoria institucional de BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:05:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

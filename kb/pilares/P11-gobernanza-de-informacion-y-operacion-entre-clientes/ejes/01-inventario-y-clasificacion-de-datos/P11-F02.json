@@ -1,0 +1,164 @@
+{
+  "question_id": "P11-F02",
+  "pilar": "P11",
+  "eje": "Inventario y clasificación de datos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Quién es dueño y responsable de cada conjunto de documentos y señales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La gobernanza de datos en BRIDGE estructura la responsabilidad bajo el principio de 'Dueño Único Identificable' (Single Point of Accountability), deslindando tres roles jerárquicos: 1) Dueño del Dato (Data Owner): La persona natural corporativa (con cargo, nombre y correo) titular del proceso de negocio que origina el activo; el Gerente de Sostenibilidad es dueño de los informes ESG (D2/D3); el Fiscal Corporativo es dueño de las posturas de litigios y Hechos Esenciales (D3); el Gerente de Operaciones es dueño de las fichas de planta y emisiones (D2); y el Director de Asuntos Corporativos es dueño de las declaraciones de prensa y minutas de voceros (D1/D2); 2) Custodio Técnico del Dato (Data Custodian): El Administrador del Tenant y el equipo de TI/Seguridad de BRIDGE, responsables de aplicar el aislamiento criptográfico, backups y políticas de retención; y 3) Delegado de Protección de Datos (DPO / Data Protection Officer): Conforme a la Ley 21.719 y estándares ISO/IEC 42001, supervisa la licitud del tratamiento de datos personales (D4), responde a requerimientos de la Agencia de Protección de Datos y fiscaliza el cumplimiento de los derechos ARCO-P.",
+  "findings": [
+    {
+      "claim_id": "P11-F02-C1",
+      "claim": "La propiedad y custodia de la información exige definir un Data Owner específico para cada proceso de negocio, un Data Custodian para la infraestructura técnica y un DPO para la observancia de la Ley 21.719 e ISO 42001.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "data_ownership_and_roles",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 2.1 'Taxonomía de Datos y Actores (Dueño Único)'",
+          "retrieved_at": null,
+          "excerpt_short": "Principio de Dueño Único: Cada conjunto documental tiene un Data Owner específico con nombre y cargo corporativo. Data Custodian: Administrador técnico del tenant. DPO: Oficial de protección de datos personales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Cloud Security Alliance: Cloud Controls Matrix (CCM v4) and Shared Responsibility",
+          "source_id": "f6cdbafa-a8d6-4918-97f5-a8d6bf03341b",
+          "locator": "Domain DSP-01 'Data Governance and Ownership'",
+          "retrieved_at": null,
+          "excerpt_short": "Roles and responsibilities for data owners, custodians, and users must be defined, documented, and communicated to enforce accountability throughout the data lifecycle.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "ISO/IEC 42001:2023 Artificial Intelligence Management System Overview and Compliance",
+          "source_id": "daeac719-715f-4bb8-afc2-64f91af5f072",
+          "locator": "Clause 5.3 'Organizational Roles, Responsibilities, and Authorities'",
+          "retrieved_at": null,
+          "excerpt_short": "Top management shall ensure that the responsibilities and authorities for relevant roles in the AI management system are assigned and communicated within the organization.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los marcos de control de CSA CCM v4, la norma internacional ISO/IEC 42001 y las especificaciones del dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registro de nuevo activo documental",
+      "Catálogo de cargos de la organización",
+      "Matriz de propiedad de datos"
+    ],
+    "actors": [
+      "Data Owner Designado",
+      "Data Custodian (TI)",
+      "Oficial de Protección de Datos (DPO)"
+    ],
+    "steps": [
+      "Creación de la colección o carga del archivo",
+      "Obligación en UI de seleccionar un Data Owner (campo obligatorio, no admite nulos ni comités genéricos)",
+      "Notificación automática al Data Owner confirmando la asunción de custodia",
+      "Registro del DPO como auditor supervisor si el archivo contiene D4",
+      "Persistencia de la tupla de propiedad en el catálogo de metadatos"
+    ],
+    "states": [
+      "ASSET_REGISTERED",
+      "OWNER_ASSIGNED",
+      "ACCOUNTABILITY_CONFIRMED",
+      "AUDIT_TIED"
+    ],
+    "outputs": [
+      "Documento vinculado a un dueño corporativo auditable"
+    ],
+    "exceptions": [
+      "La salida de un Data Owner de la compañía dispara un flujo obligatorio de reasignación de custodia en menos de 10 días hábiles"
+    ]
+  },
+  "entities": [
+    "Data Owner",
+    "Data Custodian",
+    "Data Protection Officer",
+    "CSA CCM v4",
+    "ISO/IEC 42001",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Activo Documental",
+      "to": "Data Owner",
+      "type": "OWNED_BY"
+    },
+    {
+      "from": "Data Custodian",
+      "to": "Infraestructura",
+      "type": "MANAGES_TECHNICAL_SECURITY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Propiedad difusa a nombre de 'Gerencia General' vs Data Owner nominal",
+      "diferencia": "La propiedad difusa genera evasión de responsabilidades ante incidentes; el Data Owner nominal responde directamente ante fiscalizadores y comités de auditoría."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "data_assets_with_named_owner": "100% de activos documentales con persona natural asignada como Data Owner",
+    "owner_reassignment_latency_days": "Tiempo promedio en días para reasignar propiedad tras rotación laboral"
+  },
+  "bridge_implications": "BRIDGE debe impedir la persistencia de documentos en base de datos si el campo `data_owner_user_id` está vacío.",
+  "open_gaps": [
+    "Sincronización automática de reasignación de dueños vía integración con Active Directory / Workday."
+  ],
+  "next_question_ids": [
+    "P11-F03",
+    "P11-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

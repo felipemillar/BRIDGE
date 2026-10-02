@@ -1,0 +1,149 @@
+{
+  "question_id": "P09-F36",
+  "pilar": "P09",
+  "eje": "Registros públicos y obligaciones",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra registros públicos y obligaciones sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto Documentado: 'Registro de Audiencia de Lobby y Trazabilidad de Compromiso RCA de Ruido con la Ilustre Municipalidad de Colina'. Entradas: 1) Acto: Audiencia formal de lobby solicitada por el Gerente de Asuntos Públicos de la faena ante la Alcaldesa de Colina y el Director de Obras Municipales (DOM); 2) Fecha y Modalidad: 14 de enero de 2025, 11:00 h, presencial en Sala de Concejo Municipal; 3) Materia: Avance de las obras del baipás vial comprometido en la RCA N° 450/2021 y medidas de mitigación de emisiones acústicas nocturnas; 4) Compromiso Asumido: 'Instalación de barreras acústicas modulares en sector Las Canteras antes del 28 de febrero de 2025' (ID COMP-2025-0012); 5) Registro Público: Publicación de la audiencia en InfoLobby el 2 de febrero de 2025 conforme al Art. 8 de la Ley 20.730. Resultado Esperado: 1) Enlace automático en BRIDGE entre la reunión interna INT-2025-0015 y la URL oficial de la audiencia en InfoLobby; 2) Vinculación del compromiso COMP-2025-0012 con el Considerando 8.3 de la RCA N° 450/2021; 3) Carga del informe de monitoreo acústico decibelimétrico antes de la fecha límite; y 4) Carga del comprobante de ingreso del reporte al portal SSA de la SMA, cerrando el compromiso con trazabilidad 360° ante cualquier fiscalización municipal o ambiental.",
+  "findings": [
+    {
+      "claim_id": "P09-F36-C1",
+      "claim": "El caso documentado ilustra la reconciliación entre la audiencia de lobby pública (Ley 20.730), el compromiso derivado de la RCA y el reporte de cumplimiento en el SSA de la SMA.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "concrete_case_public_registries",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo de Gestión en 6 Fases (Caso de Reconciliación Regulatoria)'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de Cumplimiento Regulatorio: Audiencia municipal formal genera compromiso vinculado a RCA. La audiencia se concilia con el registro InfoLobby y la evidencia de ejecución se envía al SSA de la SMA, blindando a la empresa ante denuncias ciudadanas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "SMA Chile: Resolución Exenta N° 223 (2015) — Instrucciones sobre Plan de Seguimiento y SSA",
+          "source_id": "3e3feb1b-c98d-471f-9ee0-a4ff77c50390",
+          "locator": "Título IV 'Comprobantes de Ingreso y Cierre de Expedientes'",
+          "retrieved_at": null,
+          "excerpt_short": "El comprobante electrónico emitido por el sistema SSA al cargar el informe de monitoreo constituye el medio de prueba formal del titular para acreditar cumplimiento oportuno ante la SMA.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación rigurosa de las especificaciones del dossier y de la normativa SMA sin elementos ficticios.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Acta interna de audiencia",
+      "URL pública InfoLobby",
+      "Informe de ensayo sonométrico"
+    ],
+    "actors": [
+      "Gerente de Asuntos Públicos",
+      "Jefe de Medio Ambiente",
+      "Oficial de Cumplimiento"
+    ],
+    "steps": [
+      "Registro de la audiencia interna en BRIDGE",
+      "Copia del identificador público de InfoLobby",
+      "Asociación al código de compromiso RCA",
+      "Subida de informe acústico al SSA",
+      "Adjunto de comprobante de ingreso al ticket de BRIDGE"
+    ],
+    "states": [
+      "Audiencia Registrada",
+      "Lobby Sincronizado",
+      "Evidencia SSA Cargada",
+      "Cierre Regulatorio Aprobado"
+    ],
+    "outputs": [
+      "Ficha de compromiso COMP-2025-0012 en estado CUMPLIDO_CERRADO con trazabilidad legal completa"
+    ],
+    "exceptions": [
+      "Retrasos en la publicación de InfoLobby por parte del municipio se documentan con captura de pantalla de la solicitud"
+    ]
+  },
+  "entities": [
+    "Audiencia de Lobby",
+    "Ley 20.730",
+    "RCA N° 450/2021",
+    "SSA SMA",
+    "Ilustre Municipalidad de Colina"
+  ],
+  "relations": [
+    {
+      "from": "INT-2025-0015",
+      "to": "InfoLobby",
+      "type": "SYNCHRONIZED_WITH"
+    },
+    {
+      "from": "COMP-2025-0012",
+      "to": "RCA N° 450/2021",
+      "type": "DERIVED_FROM"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Reunión secreta informal vs Audiencia transparente auditada",
+      "diferencia": "La reunión informal puede generar acusaciones de cohecho o lobby ilegal; la audiencia transparente en InfoLobby garantiza probidad y certeza."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "infolobby_sync_sla": "Máximo 10 días tras la realización de la reunión",
+    "regulatory_evidence_type": "Comprobante electrónico de ingreso SSA SMA"
+  },
+  "bridge_implications": "Crear un validador que verifique la estructura de los enlaces de InfoLobby antes de guardarlos en el registro.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F37",
+    "P09-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

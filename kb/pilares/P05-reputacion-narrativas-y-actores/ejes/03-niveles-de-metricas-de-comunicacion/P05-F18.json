@@ -1,0 +1,147 @@
+{
+  "question_id": "P05-F18",
+  "pilar": "P05",
+  "eje": "Niveles de métricas de comunicación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra niveles de métricas de comunicación sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado en el corpus que ilustra los cinco niveles de métricas de comunicación es el proceso de relacionamiento y tramitación ambiental de un proyecto de inversión en Chile regulado bajo el Sistema de Evaluación de Impacto Ambiental (SEIA) y Participación Ciudadana (PAC): 1) Entradas del Sistema: a) Insumos y Actividades (Nivel 1 Outputs): Emisión de 15 comunicados corporativos, realización de 8 talleres comunitarios abiertos y publicación de un sitio web informativo sobre el proyecto; b) Alcance (Nivel 2 Exposure): 45.000 visualizaciones en la plataforma informativa y 12 apariciones en radios y prensa provincial; c) Recepción (Nivel 3 Out-takes): 850 asistentes directos a los talleres, 120 preguntas formuladas en el período de consulta pública reglada del SEA y retención promedio de 4 minutos en las fichas técnicas del proyecto; d) Cambio de Actitud / Percepción (Nivel 4 Outcomes): Estudio de percepción local estructurado demuestra que el porcentaje de vecinos que perciben 'Riesgo Crítico de Contaminación Hídrica' desciende del 68% al 24% tras la explicación técnica del sistema de recirculación de aguas, elevando la confianza en la empresa del 30% al 62%; 2) Proceso y Resultado Observado (Nivel 5 Impacto Organizacional): Ingreso de la Adenda Ambiental al SEIA sin observaciones no resueltas por las comunidades, firma de un convenio de monitoreo participativo de aguas y emisión favorable de la Resolución de Calificación Ambiental (RCA) sin recursos contenciosos en los Tribunales Ambientales. El resultado esperado demuestra empíricamente cómo el éxito no radica en las 12 apariciones en radio (output), sino en la ausencia de litigios y obtención de la RCA (impacto organizacional).",
+  "findings": [
+    {
+      "claim_id": "P05-F18-C1",
+      "claim": "La aplicación integral de los niveles AMEC en proyectos regulados en Chile demuestra que las actividades de difusión solo adquieren valor cuando se traducen en acuerdos de legitimidad y viabilidad operacional verificable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile",
+        "actor": "SEIA / SEA / Comunidades Locales"
+      },
+      "evidence": [
+        {
+          "source_id": "af4cb260-c2b6-4a33-a9cf-111fbf67fdbe",
+          "source_title": "SEA Chile: Guías sobre Participación Ciudadana (PAC) en el SEIA",
+          "original_url": "https://www.sea.gob.cl/guias-y-criterios",
+          "locator": "Guía de Participación Ciudadana Temprana en el SEIA",
+          "excerpt_short": "El diálogo temprano y la entrega transparente de información técnica reduce observaciones fundadas, previene litigios ambientales y fortalece la legitimidad social del titular del proyecto.",
+          "source_date": "2023-11-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3.1: Nivel 5: Impacto Organizacional",
+          "excerpt_short": "Indicadores de impacto en territorio: Obtención formal de la RCA sin impugnaciones judiciales; ausencia de huelgas o cortes de ruta; firma de convenios de desarrollo local.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso ilustrativo representativo del estándar regulatorio y metodológico de la evaluación ambiental y de asuntos corporativos en Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Actas de talleres PAC",
+      "Encuesta de percepción territorial",
+      "Expediente del SEA"
+    ],
+    "actors": [
+      "Titular del Proyecto",
+      "Comunidad Territorial",
+      "Servicio de Evaluación Ambiental"
+    ],
+    "steps": [
+      "Ejecución de actividades de relacionamiento",
+      "Medición de cambios en dudas comunitarias",
+      "Obtención y defensa de la RCA"
+    ],
+    "states": [
+      "PAC_Initiated",
+      "Perception_Shifted",
+      "RCA_Approved"
+    ],
+    "outputs": [
+      "Proyecto con RCA vigente y licencia social comunitaria activa"
+    ],
+    "exceptions": [
+      "Reclamos de ilegalidad interpuestos ante el Tribunal Ambiental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_AMEC_PAC_CASE",
+      "type": "caso_analitico",
+      "name": "Caso Aplicado AMEC en PAC del SEIA",
+      "aliases": [
+        "AMEC Framework SEIA Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_AMEC_PAC_CASE",
+      "predicate": "valida_cadena_causal_de",
+      "object_id": "ENT_AMEC_TAXONOMY",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F18-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Criterio de éxito",
+      "Visión comunicacional errónea": "Publicamos 15 comunicados y salimos en 12 radios (100% éxito de difusión).",
+      "Visión estratégica AMEC": "Se redujo el temor comunitario en 44 puntos y se obtuvo la RCA sin judicialización (100% éxito organizacional)."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Módulo de Proyectos Territoriales",
+      "implication": "BRIDGE debe permitir registrar hitos de tramitación ambiental como variables de impacto organizacional asociadas a los esfuerzos de relacionamiento corporativo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

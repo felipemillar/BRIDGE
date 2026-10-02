@@ -1,0 +1,167 @@
+{
+  "question_id": "P02-F32",
+  "pilar": "P02",
+  "eje": "Flujo editorial y servicios expertos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué parte es software, qué parte servicio humano y qué parte es una hoja de ruta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La descomposición rigurosa del mercado de comunicaciones corporativas muestra: 1) Software comercial operativo (SaaS listo para producción): Broadsight (gestión de temas críticos, repositorio de Q&A, flujos de aprobación con pistas de auditoría), Prezly (distribución de comunicados y CRM de medios), Contrlr (asistente de redacción por IA), y plataformas de listening como Meltwater/Cision; 2) Servicio humano intensivo (Consultoría experta): Agencias globales (FGS Global, Burson, Brunswick, Edelman) y firmas boutique (Entual B.V.), donde la estrategia ante crisis, la evaluación de riesgos políticos, el cabildeo directo y el juicio de contexto son ejecutados por consultores sénior, representando más del 80% del valor entregado; 3) Hoja de ruta (Roadmap / Promesa no implementada): Agentes autónomos de IA que orquesten respuestas de crisis completas sin supervisión humana, sistemas capaces de negociar o responder automáticamente a periodistas, y suites SaaS totalmente integradas que resuelvan nativamente los cuatro módulos (Saber, Escuchar, Hablar, Relacionar).",
+  "findings": [
+    {
+      "claim_id": "P02-F32-C1",
+      "claim": "El mercado actual se divide entre herramientas SaaS puntuales de flujo editorial (Broadsight) y servicios profesionales de asesoría estratégica humana (FGS Global, Burson), siendo la suite autónoma integral de asuntos corporativos una hipótesis no disponible comercialmente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Ecosistema Corporate Affairs"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata & Precedence: Software vs Professional Services Classification",
+          "excerpt_short": "Distinguishes between independent software vendors (Broadsight, Prezly) and human consulting services (Entual, FGS Global, Burson) to avoid inflating software market claims.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        },
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Analysis: Human Expertise vs Software Automation",
+          "excerpt_short": "Strategic narrative creation and high-stakes crisis response remain dominated by human consulting, while software provides workflow orchestration.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Precedencia de errata y contraste entre manuales de producto y portafolios de agencias.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Problema reputacional complejo",
+      "Recursos tecnológicos disponibles",
+      "Equipo de asesores estratégicos"
+    ],
+    "actors": [
+      "Comité Ejecutivo",
+      "Agencia Asesora Externa",
+      "Administrador de Plataforma SaaS"
+    ],
+    "steps": [
+      "Deliberación estratégica humana de postura",
+      "Parametrización de mensajes clave en el software",
+      "Ejecución de flujos de aprobación y monitoreo telemétrico"
+    ],
+    "states": [
+      "Estrategia_Definida",
+      "Mensajes_Ingresados_Software",
+      "Aprobacion_Registrada"
+    ],
+    "outputs": [
+      "Ecosistema balanceado de juicio humano asistido por rigor de software"
+    ],
+    "exceptions": [
+      "Tentativa de sustituir el juicio legal o estratégico sénior por generación automática no supervisada"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_FGS_GLOBAL",
+      "type": "agencia_estrategica",
+      "name": "FGS Global",
+      "aliases": [
+        "FGS"
+      ]
+    },
+    {
+      "entity_id": "ENT_BURSON",
+      "type": "agencia_estrategica",
+      "name": "Burson Global",
+      "aliases": [
+        "Burson",
+        "Burson-Marsteller"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_FGS_GLOBAL",
+      "predicate": "entrega_valor_principalmente_como",
+      "object_id": "Servicio_Consultoria_Humana",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F32-C1"
+    },
+    {
+      "subject_id": "ENT_BROADSIGHT",
+      "predicate": "entrega_valor_principalmente_como",
+      "object_id": "Software_SaaS_Puro",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F32-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Software SaaS (Broadsight) vs Consultoría Humana (FGS Global/Burson)",
+      "Software SaaS": "Estructura repetible, auditoría digital, control de versiones, costos de licencia fijos.",
+      "Consultoría Humana": "Lectura política matizada, negociación entre accionistas, gestión de crisis no tipificadas, honorarios por hora/retainer."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "BRIDGE debe posicionarse como el software que potencia al equipo interno y a sus agencias, sin pretender sustituir el juicio humano de alto nivel.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F33",
+    "P02-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:38:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

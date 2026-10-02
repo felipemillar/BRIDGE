@@ -1,0 +1,152 @@
+{
+  "question_id": "P10-C05",
+  "pilar": "P10",
+  "eje": "Redacción y adaptación de mensajes",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre redacción y adaptación de mensajes, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia central radica en el grado de libertad del redactor al adaptar textos para redes sociales y medios digitales: Síntesis preliminares planteaban que los redactores podían abreviar o parafrasear libremente afirmaciones para hacerlas atractivas y virales en LinkedIn o X; por el contrario, los estándares éticos del PR Council, CIPR y la Arthur W. Page Society exigen que ninguna adaptación de formato sacrifique la integridad factual, los disclaimers regulatorios o las líneas rojas institucionales. Conforme a P10_VERIFICATION_CORRECTIONS (f043631e), que rige canónicamente, prevalece la postura del PR Council y Page Society: La adaptación multicanal permite modular el tono y la extensión sintáctica, pero impone invariantes algorítmicos absolutos sobre cifras, fechas, encuadre de responsabilidad y safe harbor; si el límite de caracteres del canal impide incluir las advertencias de riesgo, es mandatorio insertar un enlace canónico persistente al texto completo certificado.",
+  "findings": [
+    {
+      "claim_id": "P10-C05-C1",
+      "claim": "Conforme a P10_VERIFICATION_CORRECTIONS, prevalece la preservación estricta e inmutable de cifras y disclaimers sobre la libertad de reformulación para viralidad en canales digitales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "drafting_adaptation_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Invariantes de Redacción y Adaptación Multicanal'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica: La adaptación de formato no autoriza la alteración de datos fácticos ni la omisión de safe harbors. Las cifras y líneas rojas son inmutables entre canales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Arthur W. Page Society: The Page Principles",
+          "source_id": "405cc287-6f42-46a2-b04d-dd7fa51c16a1",
+          "locator": "Principle 1 'Tell the Truth'",
+          "retrieved_at": null,
+          "excerpt_short": "Let the public know what is happening with honesty and clarity. Do not allow marketing spin or channel adaptation to dilute or obscure corporate realities.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los principios de la Page Society y el mandato de rectificación canónica.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Mensaje central aprobado",
+      "Borrador adaptado para red social",
+      "Guardrails de texto"
+    ],
+    "actors": [
+      "Redactor Digital",
+      "Linter Semántico BRIDGE",
+      "Editor Jefe"
+    ],
+    "steps": [
+      "Análisis de entidades y afirmaciones en la derivada propuesta",
+      "Cotejo automático contra el mensaje maestro aprobado",
+      "Alerta si se detecta omisión de advertencias de incertidumbre en declaraciones financieras",
+      "Exigencia de inserción de enlace canónico si el texto excede los caracteres permitidos",
+      "Aprobación final de la derivada condicionada a la invariabilidad de las cifras"
+    ],
+    "states": [
+      "DERIVATIVE_DRAFTED",
+      "INVARIANTS_SCANNED",
+      "CANONICAL_LINK_INSERTED",
+      "DERIVATIVE_VALIDATED"
+    ],
+    "outputs": [
+      "Publicación digital aprobada y protegida"
+    ],
+    "exceptions": [
+      "Posts de carácter meramente protocolar o festivo sin afirmaciones factuales no requieren disclaimers legales"
+    ]
+  },
+  "entities": [
+    "Page Principles",
+    "Invariantes de Redacción",
+    "Enlace Canónico",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "Parafraseo Libre",
+      "type": "CONSTRAINS_STRICTLY"
+    },
+    {
+      "from": "Adaptación Multicanal",
+      "to": "Líneas Rojas",
+      "type": "MUST_PRESERVE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Redactor libre buscando clics vs Adaptación sujeta a invariantes de seguridad",
+      "diferencia": "El redactor libre comete deslices que generan juicios civiles; la adaptación sujeta a invariantes asegura que cada post digital mantenga el blindaje corporativo."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Libertad de parafraseo vs Invariabilidad de cifras",
+      "resolution": "Prevalece la invariabilidad de cifras, fechas, líneas rojas y disclaimers en todos los canales."
+    }
+  ],
+  "metrics_and_denominators": {
+    "channel_semantic_drift_rate": "0% de alteración numérica o legal en derivadas respecto al mensaje maestro"
+  },
+  "bridge_implications": "BRIDGE debe incorporar un analizador de diffs semánticos que impida guardar cambios en publicaciones derivadas que alteren cifras del mensaje maestro.",
+  "open_gaps": [
+    "Monitoreo de la indexación de enlaces canónicos en plataformas de microblogging que acortan URLs automáticamente."
+  ],
+  "next_question_ids": [
+    "P10-C06",
+    "P10-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

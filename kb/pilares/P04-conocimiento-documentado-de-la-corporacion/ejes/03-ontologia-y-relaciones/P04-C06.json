@@ -1,0 +1,151 @@
+{
+  "question_id": "P04-C06",
+  "pilar": "P04",
+  "eje": "Ontología y relaciones",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué sigue sin prueba sobre ontología y relaciones, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Vacío e Incertidumbre: Falta una ontología de dominio abierta y validada empíricamente para el ecosistema societario y regulatorio chileno, que interopere nativamente entre el RUT corporativo de la CMF, las Resoluciones de Calificación Ambiental (RCA) del SEIA/SMA y los registros de concesiones mineras y de agua. Fuente Parcial: EDM Council FIBO (2024) ofrece la estructura ontológica financiera global pero está completamente desacoplada de la terminología administrativa y legal chilena. Validación Mínima Requerida: Construir un subgrafo piloto con las 10 mayores empresas del IPSA en minería y energía, mapeando sus matrices, filiales, faenas y RCA históricas para comprobar que el grafo resuelve consultas de responsabilidad ambiental y de mercado sin colisiones semánticas.",
+  "findings": [
+    {
+      "claim_id": "P04-C06-C1",
+      "claim": "Existe una ausencia de ontologías de dominio públicas adaptadas a la gobernanza societaria y regulatoria chilena (CMF / SMA), debiendo ser suplida por extensiones locales sobre FIBO.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Modelado Semántico P04"
+      },
+      "evidence": [
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2: Escasez de Corpora Públicos Anotados en Español y Contexto Latinoamericano",
+          "excerpt_short": "Hay un vacío agudo de conjuntos de datos y ontologías de prueba para memorias corporativas en español reguladas bajo CMF Chile NCG 461.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "0a2c0fce-8216-4357-b046-e19d5a7b3243",
+          "source_title": "EDM Council: Financial Industry Business Ontology (FIBO)",
+          "original_url": "https://spec.edmcouncil.org/fibo/",
+          "locator": "FIBO Business Entities Module",
+          "excerpt_short": "Focuses on US and European regulatory identifiers (LEI, SEC CIK), lacking native alignment with Chilean RUT or SMA environmental resolutions.",
+          "source_date": "2024-03-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío ontológico regional explícitamente fundamentado en P04_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ontología base FIBO",
+      "Estructura societaria y regulatoria CMF/SMA"
+    ],
+    "actors": [
+      "Ontology Localization Worker",
+      "Chilean Domain Expert"
+    ],
+    "steps": [
+      "Extensión de clases FIBO con prefijo cmf: y sma:",
+      "Validación con datos reales del IPSA",
+      "Publicación de schema de extensión"
+    ],
+    "states": [
+      "Gap_Identified",
+      "Extension_Designed",
+      "Pilot_Validated"
+    ],
+    "outputs": [
+      "Extensión ontológica localizada para corporaciones en Chile"
+    ],
+    "exceptions": [
+      "Cambios en el formato de registro de resoluciones ambientales en la SMA"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GAP_CHILE_ONTOLOGY",
+      "type": "vacio_epistemico",
+      "name": "Vacío de Ontología Corporativa Localizada para Chile",
+      "aliases": [
+        "Chilean Corporate Ontology Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GAP_CHILE_ONTOLOGY",
+      "predicate": "limita_modelado_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C06-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Alcance ontológico",
+      "FIBO estándar": "Mapea filiales con códigos de la SEC (EE.UU.) y bancos centrales globales.",
+      "Extensión chilena requerida": "Mapea RUTs, actas de directorio CMF y resoluciones de calificación ambiental (RCA)."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe desarrollar esta extensión localizada de FIBO para ofrecer valor diferencial a empresas chilenas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP-P04-03",
+      "description": "Falta de una ontología formal pública que vincule entidades societarias chilenas (RUT/CMF) con resoluciones ambientales (RCA/SMA).",
+      "missing_information": "Vocabulario RDF formalizado con prefijos y restricciones SHACL para corporaciones en Chile."
+    }
+  ],
+  "next_question_ids": [
+    "P04-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "question_id": "P09-F11",
+  "pilar": "P09",
+  "eje": "Historial de interacción",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre historial de interacción?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos normativos y metodológicos relativos al historial de interacción están respaldados por: 1) Ley N° 20.730 de Lobby (BCN Chile, 2014, Arts. 5, 8 y 9) y su Reglamento Dto 71 SEGPRES: Obligación de registrar audiencias de sujetos pasivos con individualización de requirentes, materias tratadas y acuerdos; 2) P09_RESEARCH_DOSSIER (2026, Sección 2 y 3): Define los atributos mínimos del log de interacción, el flujo en 6 fases y la inmutabilidad de minutas; 3) Boréalis SRM Whitepaper (2024, Sección 4): Demuestra la necesidad de registrar interacciones estructuradas para auditar el cumplimiento social y evitar multas regulatorias; 4) Consultation Manager (2024): Metodología de 'Closing the Loop' mediante el registro exhaustivo de contactos y compromisos; y 5) RiuNet (2023, Cap. 4): Evidencia la prevención de la amnesia institucional y la pérdida de capital relacional mediante registros históricos estandarizados.",
+  "findings": [
+    {
+      "claim_id": "P09-F11-C1",
+      "claim": "El diseño del historial de interacción está fundado en la legislación chilena de lobby (Ley 20.730), la literatura especializada de SRM (Boréalis, Consultation Manager) y la teoría de prevención de amnesia corporativa (RiuNet).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_interaction_history",
+      "evidence": [
+        {
+          "source_title": "BCN Chile: Ley N° 20.730 que Regula el Lobby y las Gestiones de Intereses Particulares",
+          "source_id": "f6fa26bd-ba44-4b03-bbed-ad4d4296f20f",
+          "locator": "Artículos 5, 8 y 9",
+          "retrieved_at": null,
+          "excerpt_short": "Los registros públicos de audiencias deberán contener: individualización de las personas que asistieron, entidad u organización representada, individualización de los sujetos pasivos que participaron, materia tratada y fecha, hora y lugar en que se celebró la audiencia.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Consultation Manager: The Stakeholder Management White Paper — Closing the Loop",
+          "source_id": "f4738bca-135f-4710-a7e7-ccbd1b4d88d1",
+          "locator": "Section 'Interaction History as a Defensible Asset', p. 7-11",
+          "retrieved_at": null,
+          "excerpt_short": "Maintaining defensible consultation and engagement records protects organizations from project delays, legal challenges, and stakeholder disengagement.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada entre la ley pública chilena y estándares internacionales de SRM.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus P09 catalogado",
+      "Textos normativos BCN",
+      "Manuales SRM"
+    ],
+    "actors": [
+      "Investigador de Asuntos Corporativos",
+      "Auditor de Cumplimiento Legal"
+    ],
+    "steps": [
+      "Mapeo de citas normativas contra atributos del modelo de datos",
+      "Validación de pertinencia temporal y territorial",
+      "Consolidación de matriz de fuentes"
+    ],
+    "states": [
+      "Fuentes Catalogadas",
+      "Citas Cotejadas",
+      "Matriz Probatoria Aprobada"
+    ],
+    "outputs": [
+      "Matriz de trazabilidad probatoria del Eje 2"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "Ley 20.730",
+    "Consultation Manager",
+    "Boréalis SRM",
+    "RiuNet",
+    "BCN Chile"
+  ],
+  "relations": [
+    {
+      "from": "Ley 20.730",
+      "to": "Historial de Interacción",
+      "type": "mandates_public_record_of"
+    },
+    {
+      "from": "Consultation Manager",
+      "to": "Historial de Interacción",
+      "type": "establishes_best_practices_for"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cita jurídica nacional vs Cita tecnológica",
+      "diferencia": "La Ley 20.730 fija el mandato obligatorio público; el SRM aporta la arquitectura tecnológica para registrarlo internamente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "canonical_sources_count": "5 fuentes principales",
+    "citation_verification_rate": "100% verificadas con UUID y texto exacto"
+  },
+  "bridge_implications": "Garantizar que los campos del módulo de reuniones correspondan exactamente a los requeridos por la plataforma InfoLobby para exportación directa.",
+  "open_gaps": [
+    "Ninguno identificado en este eje."
+  ],
+  "next_question_ids": [
+    "P09-F12",
+    "P09-F13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

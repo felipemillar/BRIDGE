@@ -1,0 +1,145 @@
+{
+  "question_id": "P09-F38",
+  "pilar": "P09",
+  "eje": "Herramientas existentes",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué parte es CRM, análisis de feedback o servicio de implementación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El ecosistema de gestión de relaciones descompone sus ofertas en tres capas marcadamente diferenciadas: 1) Capa CRM / SRM (Software Core): Plataforma transaccional de registro (System of Record) que administra el directorio de actores, el log inmutable de reuniones, el motor de compromisos con máquina de estados y las pistas de auditoría; 2) Capa de Análisis de Feedback e Inteligencia: Módulos analíticos que procesan el sentimiento no automatizado, clasifican quejas bajo el Principio 31, generan árboles de temas (issues) y calculan métricas de salience y riesgo territorial; y 3) Capa de Servicios de Implementación y Consultoría: Servicios profesionales humanos prestados por consultoras socioterritoriales o agencias de comunicaciones (e.g., levantamiento inicial de línea base comunitaria, facilitación de mesas de diálogo en terreno, saneamiento y migración de planillas históricas, y mediación de conflictos), los cuales NO son software pero resultan indispensables para el éxito de la adopción de la herramienta.",
+  "findings": [
+    {
+      "claim_id": "P09-F38-C1",
+      "claim": "El mercado distingue con claridad entre el software transaccional de registro (CRM/SRM), los motores analíticos de evaluación de feedback y los servicios profesionales de consultoría territorial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "crm_vs_analytics_vs_services_delineation",
+      "evidence": [
+        {
+          "source_title": "Tractivity: What's The Difference Between CRM and SRM?",
+          "source_id": "8b347889-c8d7-450f-8a1f-41996e0385c4",
+          "locator": "Section 'Deconstructing the Stakeholder Software Stack', p. 4-9",
+          "retrieved_at": null,
+          "excerpt_short": "A standard CRM tracks transactions and pipeline revenue. An SRM software tracks relationships, multi-party interests, and non-commercial promises. Around this core sits feedback analytics and human change management consulting.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 4 'Taxonomía Funcional del Mercado'",
+          "retrieved_at": null,
+          "excerpt_short": "Es imperativo no confundir el software con el servicio: el SRM provee la estructura inmutable y la máquina de estados; las agencias de asuntos públicos operan el sistema y facilitan los encuentros comunitarios.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Tractivity y la taxonomía del dossier de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de alcance de contratación",
+      "Pliegos de licitación"
+    ],
+    "actors": [
+      "Gerente de Compras",
+      "Director de Asuntos Corporativos",
+      "Proveedor SRM"
+    ],
+    "steps": [
+      "Separación de costos de licenciamiento SaaS (software) de horas de consultoría (servicios)",
+      "Asignación de roles internos de operación",
+      "Definición de KPIs de adopción"
+    ],
+    "states": [
+      "Licitación Diseñada",
+      "Contrato SaaS Aprobado",
+      "Consultoría Desplegada"
+    ],
+    "outputs": [
+      "Estructura de costos y gobernanza de la plataforma"
+    ],
+    "exceptions": [
+      "Contratos que mezclan licenciamiento y consultoría sin desglosar entregables son rechazados por finanzas"
+    ]
+  },
+  "entities": [
+    "CRM vs SRM",
+    "Tractivity",
+    "System of Record",
+    "Feedback Analytics",
+    "Servicios de Consultoría"
+  ],
+  "relations": [
+    {
+      "from": "SRM Software",
+      "to": "System of Record",
+      "type": "ACTS_AS"
+    },
+    {
+      "from": "Agencia Consultora",
+      "to": "SRM Software",
+      "type": "OPERATES_AND_ENRICHES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Vender software como solución mágica vs Integrar software con consultoría experta",
+      "diferencia": "El software sin adopción humana se convierte en repositorio vacío; la consultoría sin software pierde la memoria al expirar el contrato."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "software_vs_services_cost_ratio": "Típicamente 40% software SaaS / 60% servicios de onboarding el año 1",
+    "time_to_first_auditable_record": "< 14 días desde instalación"
+  },
+  "bridge_implications": "Diseñar BRIDGE para facilitar la adopción autónoma reduciendo la dependencia excesiva de costosas consultorías de implementación.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F39",
+    "P09-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "question_id": "P07-F03",
+  "pilar": "P07",
+  "eje": "Objetivo del brief ejecutivo",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Cómo cambia el brief para CEO, CCO, vocero técnico y responsable territorial?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El brief se modulariza dinámicamente según el rol: 1) CEO: Foco en visión macroestratégica, impacto en valoración corporativa, gobernanza corporativa (principios OCDE) y mensaje institucional global; 2) CCO: Foco en dinámica de medios, encuadre narrativo (framing), stakeholders clave, riesgos de reputación y orquestación del flujo de aprobación; 3) Vocero Técnico: Foco en parámetros operacionales exactos, datos de emisiones/extracción de agua, expedientes de fiscalización SMA y citas rigurosas a informes de ingeniería; 4) Responsable Territorial: Foco en comunidades locales, historial de peticiones vecinales, dirigentes comunitarios, acuerdos de inversión social y sensibilidades culturales o territoriales.",
+  "findings": [
+    {
+      "claim_id": "P07-F03-C1",
+      "claim": "Los diferentes perfiles ejecutivos requieren briefs diferenciados por nivel de abstracción técnica, marco legal de responsabilidad y contexto de interacción.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "role_based_customization",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 1 y Sección 2.2",
+          "excerpt_short": "La preparación ejecutiva no es genérica: el CEO requiere mensajes de alto nivel vinculados a gobernanza y creación de valor; el CCO necesita el mapa de actores y el encuadre mediático; el vocero técnico requiere datos operativos no rebatibles para no errar en cifras de ingeniería ante fiscalizadores; y el gerente territorial precisa el tejido de relaciones locales y compromisos sociales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Page Society: The CCO as Pacesetter",
+          "source_id": "51ff5cf1-7ab6-47a2-b087-5630a04a287e",
+          "locator": "Capítulo 'Segmenting Executive Engagement', p. 22-26",
+          "excerpt_short": "Customizing intelligence by executive persona ensures that spokespersons stay within their legitimate domain of authority, preventing technical overreach by generalists or policy misstatements by technical experts.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Consenso en la literatura de liderazgo corporativo (Page Society) y reflejado en los roles modelados en BRIDGE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_roles": {
+      "CEO": {
+        "foco": "Estrategia macro, gobernanza, impacto en mercado y reputación corporativa global",
+        "riesgo_critico": "Declaraciones involuntarias sobre hechos materiales reservados (Ley 18.045)"
+      },
+      "CCO": {
+        "foco": "Encuadre narrativo, gestión de agenda de medios, coordinación HITL y blindaje reputacional",
+        "riesgo_critico": "Inconsistencias con vocerías anteriores o contradicción entre áreas"
+      },
+      "Vocero_Tecnico": {
+        "foco": "Parámetros técnicos, normativas ambientales, datos operacionales y peritajes",
+        "riesgo_critico": "Falta de precisión en cifras que configure incumplimiento ante la SMA"
+      },
+      "Responsable_Territorial": {
+        "foco": "Relaciones comunitarias, líderes sociales, compromisos locales y consulta indígena",
+        "riesgo_critico": "Desconocimiento de acuerdos previos con comunidades que detone protestas"
+      }
+    }
+  },
+  "entities": [
+    "CEO",
+    "CCO",
+    "Vocero Técnico",
+    "Gerente Territorial",
+    "SMA",
+    "Comunidades Locales"
+  ],
+  "relations": [
+    {
+      "from": "Brief Dinámico",
+      "to": "Perfil de Usuario",
+      "type": "adapts_to"
+    },
+    {
+      "from": "Vocero Técnico",
+      "to": "SMA",
+      "type": "reports_technical_data_to"
+    },
+    {
+      "from": "Responsable Territorial",
+      "to": "Comunidad",
+      "type": "maintains_dialogue_with"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "CEO vs Vocero Técnico",
+      "diferencia": "El CEO comunica compromiso ético e institucional; el técnico detalla metros cúbicos por segundo o ppm sin desviarse a opiniones políticas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "role_coverage": "4 perfiles canónicos implementados",
+    "customization_latency": "< 2 segundos en generación de vista adaptada"
+  },
+  "bridge_implications": "El motor de generación de briefs de BRIDGE debe incluir un selector de rol con filtros de visibilidad de datos y restricciones de discurso.",
+  "open_gaps": [
+    "Gestión de voceros mixtos en conferencias conjuntas donde participan simultáneamente CEO y vocero técnico."
+  ],
+  "next_question_ids": [
+    "P07-F04",
+    "P07-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T04:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

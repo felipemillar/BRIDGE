@@ -1,0 +1,154 @@
+{
+  "question_id": "P02-F41",
+  "pilar": "P02",
+  "eje": "Mapa mundial y diferencias regionales",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre mapa mundial y diferencias regionales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos están respaldados por fuentes primarias documentales del cuaderno P02: 1) Litoralpress: respaldado por 'Litoralpress Media Intelligence and News Monitoring Platform' (2026), que detalla su infraestructura de captura de radioemisoras en las 16 regiones de Chile y prensa provincial; 2) Adenda Regional: respaldado por 'P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1' (2026), que documenta la distribución geográfica de los 70 proveedores y analiza la brecha entre cobertura comercial declarada y verdad de terreno; 3) Atlas de Empresas: respaldado por 'P02_GLOBAL_COMPANY_ATLAS_V1' (2026), que mapea las sedes y jurisdicciones principales de los vendors; 4) Borealis: respaldado por 'Borealis Irth Solutions Stakeholder Engagement Platform' (2026), demostrando su despliegue en faenas mineras de Chile; 5) Errata y precedencia: '00_P02_GLOBAL_READ_ME_AND_ERRATA', que fija las reglas de deduplicación geográfica.",
+  "findings": [
+    {
+      "claim_id": "P02-F41-C1",
+      "claim": "El respaldo documental de las diferencias regionales se sustenta en el cruce entre los expedientes de proveedores locales (Litoralpress), el atlas geográfico global y la adenda regional de integración.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Fuentes primarias P02"
+      },
+      "evidence": [
+        {
+          "source_id": "2fd3bc2b-f4aa-4236-ba6d-2527a3b36aef",
+          "source_title": "Litoralpress Chile Monitoreo de Medios e Inteligencia de Prensa",
+          "original_url": "https://www.litoralpress.cl",
+          "locator": "Regional Infrastructure and Coverage Specifications",
+          "excerpt_short": "Certified local Chilean coverage across 16 administrative regions covering radio, local press, television and online publications.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:40:00-03:00"
+        },
+        {
+          "source_id": "5556e455-7c2c-458c-bcad-e0910d9ccc4e",
+          "source_title": "P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1",
+          "original_url": null,
+          "locator": "Regional Addendum: Empirical Vendor Geography",
+          "excerpt_short": "Comprehensive empirical audit of vendor presence, language capabilities, and regulatory compliance per geographic region.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación exhaustiva de catálogos y especificaciones técnicas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documentos del cuaderno P02",
+      "Manifiesto de fuentes fuentes/P02.json"
+    ],
+    "actors": [
+      "Auditor de Fuentes",
+      "Analista de Investigación"
+    ],
+    "steps": [
+      "Verificación de concordancia de citas",
+      "Chequeo de fechas de publicación",
+      "Validación de IDs de fuentes",
+      "Auditoría de consistencia de fragmentos"
+    ],
+    "states": [
+      "Fuentes_Identificadas",
+      "Localizadores_Comprobados",
+      "Auditoria_Completada"
+    ],
+    "outputs": [
+      "Registro de trazabilidad para el eje de mapa mundial"
+    ],
+    "exceptions": [
+      "Diferencias en nombres de entidades consolidadas bajo la regla de precedencia"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_FUENTE_LITORAL",
+      "type": "documento_fuente",
+      "name": "Litoralpress Documentation",
+      "aliases": [
+        "Litoralpress Source"
+      ]
+    },
+    {
+      "entity_id": "ENT_FUENTE_ADDENDUM",
+      "type": "documento_fuente",
+      "name": "Regional Addendum V1",
+      "aliases": [
+        "Addendum V1"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_FUENTE_LITORAL",
+      "predicate": "valida_hecho",
+      "object_id": "Cobertura_Radios_Chile",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F41-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respaldo Local (Litoralpress) vs Respaldo Sintético (Addendum V1)",
+      "Respaldo Local": "Detalle técnico de infraestructura de telecomunicaciones y captura de medios en Chile.",
+      "Respaldo Sintético": "Consolidación macro analítica de la distribución global de la oferta de software."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "La evidencia respalda la necesidad de estructurar capas de datos regionales diferenciadas en la arquitectura de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

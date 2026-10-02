@@ -1,0 +1,149 @@
+{
+  "question_id": "P04-F44",
+  "pilar": "P04",
+  "eje": "Evaluación de calidad documental",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Cómo se evalúan respuestas sobre compromisos con un conjunto de casos de referencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La evaluación de respuestas sobre compromisos corporativos se ejecuta contra un 'Gold Standard Evaluation Dataset' compuesto por 250 casos de prueba reales de asuntos corporativos (preguntas de prensa económica, inversionistas, ONGs socioambientales y requerimientos CMF). La evaluación aplica un protocolo automatizado y ciego en 3 niveles: 1) Nivel Atómico con FActScore (Min et al., 2023): descomposición de la respuesta generada en proposiciones individuales y verificación de que el 100% de las cifras, unidades y fechas coincidan con el caso de referencia; 2) Nivel de Fidelidad RAGAS (Es et al., 2023): cálculo automatizado de Faithfulness (≥ 0.95) y Answer Relevance (≥ 0.90); y 3) Panel Ciego de Especialistas (Human-in-the-Loop): muestreo aleatorio del 10% de las respuestas evaluadas por un panel independiente de abogados corporativos y directores de comunicaciones, quienes auditan el tono, la precisión de vocería y el cumplimiento de las restricciones de confidencialidad.",
+  "findings": [
+    {
+      "claim_id": "P04-F44-C1",
+      "claim": "La validación de respuestas sobre compromisos corporativos requiere una suite de 250 casos de referencia evaluados algorítmicamente mediante FActScore y RAGAS, complementada con auditoría humana ciega.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global",
+        "actor": "Protocolo de Evaluación Empírica"
+      },
+      "evidence": [
+        {
+          "source_id": "bb0b173a-5888-4c00-9392-9768bed7824c",
+          "source_title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision (Min et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2305.14251",
+          "locator": "Sección 2 and 3: Atomic Fact Decomposition and Scoring",
+          "excerpt_short": "Breaks down generated responses into atomic factual statements and evaluates the percentage of atoms supported by reliable reference knowledge sources.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Protocolo de Calificación Continua (Benchmark Suite)",
+          "excerpt_short": "Gold Standard Dataset: 250 consultas reales de Asuntos Corporativos evaluadas mediante RAGAS y FActScore, complementadas con muestreo ciego por panel humano.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Metodología FActScore de Stanford/UW y protocolo formal de evaluación del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Gold Standard Dataset (250 preguntas, contextos y respuestas de referencia)",
+      "Motor BRIDGE bajo prueba"
+    ],
+    "actors": [
+      "Automated Benchmark Runner",
+      "FActScore Evaluator",
+      "RAGAS Scorer",
+      "Human Panelist"
+    ],
+    "steps": [
+      "Ejecución por lotes de las 250 consultas",
+      "Descomposición y cálculo de FActScore y RAGAS",
+      "Muestreo ciego para panel humano",
+      "Consolidación de reporte de conformidad"
+    ],
+    "states": [
+      "Benchmark_Running",
+      "Metrics_Computed",
+      "Human_Reviewed",
+      "Benchmark_Passed"
+    ],
+    "outputs": [
+      "Informe formal de conformidad y precisión factual del sistema"
+    ],
+    "exceptions": [
+      "Respuesta con alta fidelidad RAGAS pero tono inadecuado detectado por panel humano"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GOLD_STANDARD_SUITE",
+      "type": "benchmark",
+      "name": "Suite de Referencia Gold Standard (250 Casos)",
+      "aliases": [
+        "Corporate Benchmark Suite"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GOLD_STANDARD_SUITE",
+      "predicate": "certifica_calidad_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F44-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Rigor de validación",
+      "Pruebas informales cualitativas": "Preguntas al azar sin métricas repetibles ni cobertura de casos borde.",
+      "Suite Gold Standard sistemática": "250 casos medidos numéricamente con FActScore y RAGAS en cada despliegue."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe automatizar la ejecución de esta suite en su pipeline de CI/CD antes de autorizar cualquier cambio de modelo o prompts.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

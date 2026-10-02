@@ -1,0 +1,178 @@
+{
+  "question_id": "P01-C06",
+  "pilar": "P01",
+  "eje": "Trabajos por hacer y momentos de presión",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué sigue sin prueba sobre trabajos por hacer y momentos de presión, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba: 1) la medición auditada con cronómetro del tiempo real invertido en confeccionar dossiers de crisis (la meta 'de 4h a 15 min' es la hipótesis HT-2); 2) estudios empíricos longitudinales sobre el impacto de la IA en la preservación de la Licencia Social. Fuentes fallidas: Gartner (Future of Communications y Gartner for Communications), Global Alliance GCF Release, Gregory & Willis 2019, Page Society (Pacesetter y Corporate Character) y OECD Corporate Governance, todas por paywall, Cloudflare o WAF. Las fuentes comerciales son parciales al carecer de metodología abierta. Validación mínima: Fase 1 (15 entrevistas cualitativas con Dircoms) y Fase 2 (shadowing cronometrado en vivo durante la preparación de un comité de crisis).",
+  "findings": [
+    {
+      "claim_id": "P01-C06-C1",
+      "claim": "Siete fuentes del corpus P01 fallaron por barreras perimetrales técnicas y paywalls (Gartner x2, Global Alliance GCF Release, Gregory & Willis 2019, Page Society x2, OECD), lo que obligó a sustituirlas por literatura empírica de acceso abierto (ECM, Dircom ECE 2025, McKinsey 2025 y CMF NCG 461).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría de Manifiesto P01"
+      },
+      "evidence": [
+        {
+          "source_id": "c38be049-1c9b-48f8-b188-20b4dd67e87d",
+          "source_title": "P01_SOURCE_INDEX",
+          "original_url": null,
+          "locator": "Tabla: Registro de Fuentes Fallidas Técnicamente y Fuentes Sustitutas",
+          "excerpt_short": "Identificación de 7 fuentes fallidas por paywalls y WAF, y delimitación de fuentes comerciales parciales.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:13:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación exhaustiva del índice de fuentes del cuaderno P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C06-C2",
+      "claim": "La afirmación de que un software de asistencia ejecutiva reduce el tiempo de preparación de minutas de 4 horas a 15 minutos carece de respaldo empírico en la literatura y constituye una hipótesis de diseño (HT-2) sujeta a validación experimental.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Equipo BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección: Vacíos de Prueba y Fase 2 del Plan de Validación",
+          "excerpt_short": "La reducción de 4h a 15m es una hipótesis de trabajo HT-2 que requiere validación mediante shadowing.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:13:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Hipótesis analítica pendiente de validación empírica en terreno.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Protocolo de shadowing",
+      "Cronómetro",
+      "Muestra de 15 CCOs"
+    ],
+    "actors": [
+      "Investigador",
+      "CCO Entrevistado",
+      "Equipo Operativo"
+    ],
+    "steps": [
+      "Diseño de guía de entrevista",
+      "Entrevistas en profundidad (Fase 1)",
+      "Observación no participante de crisis simulada (Fase 2)",
+      "Tabulación de tiempos"
+    ],
+    "states": [
+      "Protocolo_Aprobado",
+      "Campo_En_Ejecucion",
+      "Datos_Tabulados"
+    ],
+    "outputs": [
+      "Matriz de Tiempos Reales de Preparación y Puntos de Dolor"
+    ],
+    "exceptions": [
+      "Confidencialidad corporativa que impida presenciar comités de crisis en vivo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PROTOCOLO_VALIDACION",
+      "type": "metodologia_investigacion",
+      "name": "Protocolo de Validación Empírica en 3 Fases",
+      "aliases": [
+        "Gaps & Validation Plan"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PROTOCOLO_VALIDACION",
+      "predicate": "resuelve_incertidumbre_de",
+      "object_id": "Hipotesis_HT2_Tiempo_Briefing",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C06-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Promesa de Ahorro de Tiempo vs Evidencia Disponible",
+      "Afirmación Teórica / Comercial": "Reducción de 4 horas a 15 minutos en la confección de dossiers ejecutivos.",
+      "Evidencia Empírica Disponible": "Cero mediciones cuantitativas auditadas en fuentes abiertas; catalogado como HT-2."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Incorporar telemetría de tiempos de uso y revisión de minutas en los pilotos de BRIDGE para contrastar la hipótesis HT-2.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    "Medición cuantitativa auditada de horas-hombre invertidas en la elaboración de dossiers de crisis en empresas de Chile y Latinoamérica.",
+    "Impacto medible en reputación derivado del uso de herramientas de IA generativa en asuntos corporativos."
+  ],
+  "next_question_ids": [
+    "P01-C07",
+    "P01-C08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:13:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

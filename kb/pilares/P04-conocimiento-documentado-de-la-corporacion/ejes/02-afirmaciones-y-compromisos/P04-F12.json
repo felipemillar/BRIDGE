@@ -1,0 +1,135 @@
+{
+  "question_id": "P04-F12",
+  "pilar": "P04",
+  "eje": "Afirmaciones y compromisos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra afirmaciones y compromisos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Canónico: Seguimiento del compromiso ambiental 'Reducción de extracción de agua continental en operaciones mineras' (ID: COM-ENV-2023-089). Entradas documentadas: 1) Declaración original en Memoria 2023: Reducción del 40% al 2030 respecto a la línea base 2021 (1.250 l/s), meta objetivo 750 l/s, meta intermedia 2025 de 1.050 l/s, aprobada por Comité de Sostenibilidad; 2) Reporte intermedio en Memoria 2025 (pág. 84): Caudal promedio alcanzado de 1.040 l/s (avance del 42% vs meta final, superando el hito intermedio); 3) Dictamen de aseguramiento independiente: Deloitte Auditores SpA bajo norma ISAE 3000 con nivel de seguridad 'Limitada'. Resultado esperado en el sistema: 1) El compromiso se mantiene en `status: 'Activo / En Curso'`; 2) Se registra automáticamente un nuevo `reported_outcome` para 2025; 3) Se vincula la relación `isAssuredBy: Deloitte_ISAE3000`; y 4) Ante una consulta de prensa sobre cumplimiento hídrico, el sistema responde: 'La empresa reportó para 2025 un consumo de 1.040 l/s, cumpliendo con holgura su hito intermedio (1.050 l/s), con aseguramiento externo independiente bajo ISAE 3000 (Memoria 2025, p. 84)'.",
+  "findings": [
+    {
+      "claim_id": "P04-F12-C1",
+      "claim": "El caso empírico de transición hídrica ejemplifica la captura estructurada de año base, metas intermedias, avances auditados bajo ISAE 3000 y generación de minutas de vocería con citas precisas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Chile (Región de Antofagasta)",
+        "actor": "Minera Cordillera Andina"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3.2: Ejemplo Concreto: Compromiso de Transición Hídrica",
+          "excerpt_short": "commitment_id COM-ENV-2023-089: baseline 2021 (1250 l/s), target 2030 (750 l/s), milestone 2025 (1050 l/s), outcome 2025 (1040 l/s), assurance Deloitte ISAE 3000.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso exhaustivo completamente desarrollado y consistente en el dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ficha COM-ENV-2023-089",
+      "Fragmento p. 84 Memoria 2025",
+      "Dictamen ISAE 3000"
+    ],
+    "actors": [
+      "Commitment Tracker",
+      "Assurance Validator",
+      "Briefing Generator"
+    ],
+    "steps": [
+      "Verificación de concordancia métrica",
+      "Validación de firma auditora",
+      "Generación de minuta de vocería fundada"
+    ],
+    "states": [
+      "Tracking",
+      "Outcome_Verified",
+      "Briefing_Ready"
+    ],
+    "outputs": [
+      "Minuta de prensa y vocería 100% trazable a página y dictamen"
+    ],
+    "exceptions": [
+      "Diferencia en metodología de medición de caudal entre períodos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_WATER_COMMITMENT_CASE",
+      "type": "caso_empirico",
+      "name": "Caso de Transición Hídrica COM-ENV-2023-089",
+      "aliases": [
+        "Water Transition Commitment Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_WATER_COMMITMENT_CASE",
+      "predicate": "valida_seguimiento_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F12-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Resultado de vocería",
+      "Respuesta no estructurada": "Respuesta vaga afirmando que 'la empresa cuida el agua y avanza según lo planeado'.",
+      "Respuesta fundada estructurada": "Cita exacta de 1.040 l/s logrados vs 1.050 l/s de hito intermedio, con mención de auditor Deloitte bajo ISAE 3000."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe sintetizar minutas de este tipo exacto para dotar a los directivos de defensas factuales inexpugnables ante escrutinio público.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

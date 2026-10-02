@@ -1,0 +1,127 @@
+{
+  "question_id": "P07-C08",
+  "pilar": "P07",
+  "eje": "Simulación y práctica de vocería",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué sigue sin prueba sobre simulación y práctica de vocería, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba concluyente la transferencia de aprendizaje (learning transfer) desde un simulador de texto con LLM hacia una rueda de prensa hostil en el mundo real (si practicar con un chat adversarial mejora objetivamente el desempeño ante un enjambre de periodistas con micrófonos y cámaras). En este eje no hubo fuentes fallidas directas, pero 'ArXiv:2404.11446' (Open-Ended Wargames with LLMs) reconoce explícitamente como limitación que sus resultados se circunscriben a entornos puramente textuales y no capturan la dinámica corporal humana. La validación mínima requerida es un ensayo clínico de comunicaciones con 20 voceros divididos en grupo de control (sin práctica) y grupo experimental (práctica con simulador LLM de BRIDGE), sometidos a una conferencia de prensa de crisis simulada ante periodistas reales en estudio de televisión, evaluando desempeño mediante jueces ciegos con la rúbrica AMEC.",
+  "findings": [
+    {
+      "claim_id": "P07-C08-C1",
+      "claim": "La transferencia de habilidades desde simuladores textuales de IA hacia situaciones físicas de alta presión mediática no ha sido validada mediante estudios controlados con evaluadores ciegos.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "learning_transfer_validation",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 1 (Brecha 3) y Sección 4",
+          "excerpt_short": "Fase 3 de Validación Empírica: Simulación de Crisis en Vivo. Para validar si la práctica con el LLM realmente prepara al vocero, se requiere un ensayo de campo con periodistas de investigación reales en un estudio de televisión. Se medirá si los directivos entrenados con BRIDGE cometen menos errores de vocería que los no entrenados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "ArXiv: Open-Ended Wargames with Large Language Models (Tabletop & Simulations)",
+          "source_id": "07c18a0c-d503-4a4d-ab67-1f5151b04d7c",
+          "locator": "Sección 'Future Work and Real-World Transfer', p. 11-13",
+          "excerpt_short": "Bridging the gap between text-based simulation and embodied real-world execution requires dedicated transfer studies involving human participants under physical constraints.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Reconocimiento explícito del límite de transferencia en el paper de ArXiv y formulación del protocolo en P07_GAPS.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "protocolo_transferencia_aprendizaje": {
+      "diseno": "Ensayo controlado aleatorizado (RCT) con 20 ejecutivos corporativos.",
+      "grupo_control": "10 ejecutivos preparados con dosier tradicional de prensa.",
+      "grupo_experimental": "10 ejecutivos entrenados con 3 rondas de inyectores adversariales en BRIDGE.",
+      "prueba_estres": "Rueda de prensa de 15 minutos en estudio de televisión con 5 periodistas hostiles reales.",
+      "evaluacion": "Panel de 3 jueces expertos ciegos aplicando la rúbrica AMEC de efectividad y disciplina discursiva."
+    }
+  },
+  "entities": [
+    "ArXiv:2404.11446",
+    "P07_GAPS_AND_VALIDATION",
+    "AMEC Framework",
+    "Learning Transfer",
+    "RCT"
+  ],
+  "relations": [
+    {
+      "from": "ArXiv:2404.11446",
+      "to": "Learning Transfer",
+      "type": "identifies_limitation_in"
+    },
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "RCT",
+      "type": "designs_protocol_for"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Práctica en Pantalla vs Desempeño Ante Cámaras",
+      "diferencia": "En pantalla el ejecutivo tiene tiempo de pensar; ante cámaras los reflectores y el asedio físico activan respuestas involuntarias de lucha o huida."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "validation_cohort_size": "20 directivos corporativos",
+    "blind_judges_panel": "3 evaluadores independientes acreditados por AMEC"
+  },
+  "bridge_implications": "Posicionar el simulador de BRIDGE como un complemento del media training presencial y liderar la ejecución de este estudio empírico en la industria chilena.",
+  "open_gaps": [
+    "Costo de arriendo de estudios de televisión y honorarios de periodistas de investigación para el experimento."
+  ],
+  "next_question_ids": [
+    "P07-C09",
+    "P07-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-X07",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Diseño estadístico y tamaño de muestra",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre diseño estadístico y tamaño de muestra, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en diseño estadístico: 1) Discrepancia: Las notas iniciales sugerían que un muestreo informal de 20 consultas seleccionadas ad-hoc por el equipo comercial bastaba para 'validar el funcionamiento' de la plataforma antes del lanzamiento; 2) Versión que Prevalece: Según ARES (bff33bd6), ALCE (e1a0171b) y T01_QUALITY_ADDENDUM (45782049), prevalece la obligatoriedad de un diseño estadístico formal con potencia a priori (1 - beta >= 0.80), tamaño muestral mínimo de n >= 300 claims estratificados, y reporte de intervalos de confianza al 95% corregidos por PPI o bootstrap. Queda terminantemente prohibido certificar el desempeño del sistema con muestras no probabilísticas o inferiores al poder mínimo establecido.",
+  "findings": [
+    {
+      "claim_id": "T01-X07-C1",
+      "claim": "T01_QUALITY_ADDENDUM invalida formalmente cualquier certificación de producto basada en muestras pequeñas no probabilísticas (< 300 claims), subordinando la validación técnica a las garantías de poder estadístico del marco ARES.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 9: Potencia Estadística y Muestras Mínimas",
+          "excerpt_short": "No se admiten pruebas con 20 preguntas informales. Prevalecen los requisitos de potencia estadística con n >= 300 claims evaluados bajo diseño estratificado.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma metodológica canónica interna de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Planes informales antiguos de prueba comercial",
+      "Estándar de potencia estadística ARES/ALCE"
+    ],
+    "actors": [
+      "Auditor de QA",
+      "ML Scientist"
+    ],
+    "steps": [
+      "Identificar pruebas que utilizaban muestras inferiores a 300 claims",
+      "Rechazar certificaciones que carezcan de cálculo de potencia",
+      "Actualizar la suite de pruebas a n=640 claims con estratificación obligatoria",
+      "Formalizar los requisitos estadísticos en la política de compuertas"
+    ],
+    "states": [
+      "REVISION_PLANES",
+      "DESCARTE_MUESTRAS_INSUFICIENTES",
+      "AMPLIACION_TESTSET",
+      "CERTIFICACION_POTENCIA"
+    ],
+    "outputs": [
+      "Política Canónica de Muestreo y Potencia Estadística"
+    ],
+    "exceptions": [
+      "Ningún piloto puede pasar a etapa comercial si su testset no alcanza el poder estadístico del 80%"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "POLITICA_POTENCIA_ESTADISTICA",
+      "type": "documento",
+      "name": "Política de Potencia y Muestreo BRIDGE",
+      "aliases": [
+        "Power & Sample Size Policy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "POLITICA_POTENCIA_ESTADISTICA",
+      "predicate": "reemplaza_a",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X07-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Muestra Informal (20 queries)",
+      "item_b": "Muestra con Potencia Estadística (n>=300 claims)",
+      "dimension": "Capacidad de generalización",
+      "conclusion": "La muestra informal es estadísticamente ciega y genera falsos positivos; la muestra de n>=300 claims garantiza que el error estándar sea menor al 2%."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de experimentos de certificación con potencia calculada",
+      "denominator": "Total experimentos conducidos",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Elimina el riesgo de certificar un producto que falle aleatoriamente tras el lanzamiento comercial.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

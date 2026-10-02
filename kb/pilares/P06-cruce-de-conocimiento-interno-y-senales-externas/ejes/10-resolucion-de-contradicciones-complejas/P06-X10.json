@@ -1,0 +1,145 @@
+{
+  "question_id": "P06-X10",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Resolución de contradicciones complejas",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Cómo distinguir retractación oficial, corrección editorial y nueva política corporativa?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La diferenciación entre retractación oficial, corrección editorial y nueva política corporativa se establece mediante una taxonomía tripartita gobernada por la procedencia formal y la solemnidad del acto corporativo (P06_QUALITY_ADDENDUM, Sección 2.3; Arthur W. Page Society; IABC Code of Ethics): 1) Retractación Oficial (Retraction / Fe de Erratas Regulatoria): Acto formal emitido a través del mismo canal y con igual solemnidad que el documento original (ej. rectificación de Hecho Esencial en la CMF o comunicado público firmado por el CEO), reconociendo un error material previo y dejando sin efecto el dato anterior; 2) Corrección Editorial (Editorial Amendment / Errata Tipográfica): Modificación menor de texto o formato en un sitio web o reporte corporativo (ej. corrección de un error de imprenta en una cifra o nombre) que no altera la postura sustantiva ni el compromiso de fondo de la organización; 3) Nueva Política Corporativa (Policy Evolution / Superseding Milestone): Acto prospectivo emanado del Directorio o alta gerencia (ej. aprobación de nuevo Plan Estratégico o Política de Sustentabilidad) que fija nuevos lineamientos a futuro sin implicar que la postura pasada fuera errónea o inválida en su propio momento histórico. La plataforma exige vincular cada categoría a su correspondiente documento probatorio inmutable.",
+  "findings": [
+    {
+      "claim_id": "P06-X10-C1",
+      "claim": "La taxonomía de cambios corporativos clasifica las mutaciones de texto en retractación, corrección editorial o nueva política según solemnidad jurídica y retroactividad.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Secretaría General y Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 2.3: Taxonomía de Mutaciones Corporativas y Fe de Erratas",
+          "excerpt_short": "Debe distinguirse con rigor la corrección de una errata material, la retractación jurídica formal ante reguladores y la actualización estratégica de una política corporativa prospectiva.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "7cd9051b-dbba-48eb-878c-a17631e47d3d",
+          "source_title": "Arthur W. Page Society - The Page Principles",
+          "original_url": "https://page.org/who-we-are/page-principles/",
+          "locator": "Principle 1: Tell the Truth & Transparency",
+          "excerpt_short": "Transparency requires prompt, honest correction when errors occur, distinguishing administrative rectifications from fundamental corporate pivots.",
+          "source_date": "2024-01-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco ético y corporativo alineado con Page Society y la gobernanza de reportes corporativos.",
+      "epistemic_status_original": "taxonomia_operacional_gobernanza",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento modificatorio",
+      "Documento original preexistente"
+    ],
+    "actors": [
+      "Secretaría General",
+      "Director de Comunicaciones",
+      "Clasificador Semántico de Mutaciones"
+    ],
+    "steps": [
+      "Análisis de solemnidad y canal del documento",
+      "Detección de cláusulas de derogación o rectificación explícita",
+      "Clasificación en una de las tres categorías",
+      "Anotación en el grafo de conocimiento"
+    ],
+    "states": [
+      "Mutation_Detected",
+      "Solemnity_Analyzed",
+      "Classified",
+      "Graph_Updated"
+    ],
+    "outputs": [
+      "Registro de mutación corporativa categorizado"
+    ],
+    "exceptions": [
+      "Modificación clandestina sin fe de erratas que dispara alerta de riesgo de compliance"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "TAXONOMIA_MUTACION",
+      "type": "marco_gobernanza",
+      "name": "Taxonomía de Mutaciones Corporativas",
+      "aliases": [
+        "Corporate Change Typology"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "TAXONOMIA_MUTACION",
+      "predicate": "clasifica_estados_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X10-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Permite redactar respuestas ejecutivas impecables que explican transparentemente por qué cambió una cifra sin admitir culpa indebida.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "question_id": "P06-X21",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Seguridad en recuperación combinada",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre seguridad en recuperación combinada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La seguridad en recuperación combinada se sustenta en las siguientes fuentes verificadas del corpus: 1) Palantir Technologies (2024; 'Palantir AIP: Architecture Overview & Context Engineering', Junio 2024): Documentación oficial de arquitectura industrial, Secciones sobre Context Engineering, Granular Access Controls y Multi-Tenant Isolation; 2) P06_QUALITY_ADDENDUM (2026, Síntesis Interna, Septiembre 2026): Sección 4, estableciendo las reglas mandatorias de protección de hechos esenciales reservados CMF, descarte de inyección cruzada y alerta ciega; 3) Manifiesto de Seguridad Multi-Tenant P11 (2026): Directrices canónicas de aislamiento determinista en PostgreSQL 18 RLS, namespaces particionados y cifrado en reposo AES-256; y 4) CMF Chile (NCG 30 y NCG 461): Marco regulatorio que tipifica el uso indebido de información privilegiada y los deberes de reserva corporativa.",
+  "findings": [
+    {
+      "claim_id": "P06-X21-C1",
+      "claim": "Los controles de ciberseguridad en cruce de datos se fundamentan en la arquitectura de Palantir AIP, directrices del Addendum y normativa bursátil de la CMF.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Arquitectura de Software y Regulación"
+      },
+      "evidence": [
+        {
+          "source_id": "5168f7d7-3499-40e3-afc8-c6b216843f19",
+          "source_title": "Palantir AIP - Architecture Overview & Context Engineering",
+          "original_url": "https://palantir.com/docs/foundry/architecture-center/aip-architecture/",
+          "locator": "Foundry Architecture Center: Core Tenets",
+          "excerpt_short": "Palantir AIP enforces enterprise-grade security, ensuring that dynamic LLM context retrieval never circumvents underlying platform access rights.",
+          "source_date": "2024-06-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fuente autoritativa industrial y coherencia total con la normativa corporativa de P06.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus bibliográfico indexado"
+    ],
+    "actors": [
+      "Auditor de Seguridad"
+    ],
+    "steps": [
+      "Verificación de concordancia técnica",
+      "Mapeo a afirmaciones del pilar"
+    ],
+    "states": [
+      "Verified"
+    ],
+    "outputs": [
+      "Trazabilidad bibliográfica de ciberseguridad"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BIBLIO_SEC",
+      "type": "corpus_bibliografico",
+      "name": "Corpus de Ciberseguridad y Aislamiento",
+      "aliases": [
+        "Security Sources P06"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BIBLIO_SEC",
+      "predicate": "respalda_arquitectura_de",
+      "object_id": "ENT_ABAC_GATE",
+      "valid_from": "2024-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X21-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Certifica que las capacidades de seguridad de BRIDGE corresponden a estándares comprobados de misión crítica.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

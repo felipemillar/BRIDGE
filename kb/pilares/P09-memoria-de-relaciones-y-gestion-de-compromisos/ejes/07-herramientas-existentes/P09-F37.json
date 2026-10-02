@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F37",
+  "pilar": "P09",
+  "eje": "Herramientas existentes",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué capacidades de Open Point, Simply Stakeholders, Borealis u otros cubren el flujo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis comparativo de las 10 plataformas especializadas en SRM (Stakeholder Relationship Management) identifica capacidades clave que cubren distintos tramos del flujo de memoria y compromisos: 1) Boréalis SRM: Plataforma líder global en proyectos extractivos e infraestructura; ofrece módulos robustos de gestión de compromisos auditables, mapeo de tierras y derechos superficiales, gestión de quejas bajo Principio 31 y trazabilidad regulatoria estricta con bloqueo de cierre sin evidencia probatoria; 2) Simply Stakeholders: Destaca en el seguimiento de compromisos con enfoque en 'Closing the Loop', automatización de alertas por criticidad, integración con buzones de correo y análisis relacional con encuestas de pulso; 3) Tractivity: Sobresale en organizaciones gubernamentales y obras públicas, con un motor estricto de descomposición de compromisos en hitos, gestión de escalamientos y cumplimiento de normativas de transparencia; 4) Consultation Manager: Diseñado para consultas públicas ciudadanas y proyectos de infraestructura urbana con captura masiva de feedback comunitario; 5) Quorum: Especializado en asuntos públicos y legislativos (seguimiento de proyectos de ley y mapeo de parlamentarios/lobbistas), pero débil en territorio; y 6) Prowly / Guideflow: Herramientas PR CRM especializadas exclusivamente en relacionamiento con periodistas y medios de comunicación.",
+  "findings": [
+    {
+      "claim_id": "P09-F37-C1",
+      "claim": "Boréalis, Simply Stakeholders y Tractivity lideran la gestión de compromisos auditables y quejas en industrias complejas, mientras que Quorum se especializa en asuntos legislativos y Prowly en relaciones con medios.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "srm_software_landscape_capabilities",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 4 'Matriz Comparativa de 10 Soluciones SRM y Herramientas del Mercado'",
+          "retrieved_at": null,
+          "excerpt_short": "Comparativa de soluciones: Boréalis destaca por su módulo de auditoría de compromisos y compliance minero/energético; Simply Stakeholders por su agilidad en cerrar el ciclo con la comunidad; Tractivity por su seguridad para entidades públicas; Quorum por su monitoreo legislativo; y Prowly por su foco exclusivo en media relations.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: Stakeholder Management Software & Platform Overview",
+          "source_id": "00e3a352-4041-49c9-9a6d-cb89e793343b",
+          "locator": "Section 'Features and Functional Architecture', p. 3-8",
+          "retrieved_at": null,
+          "excerpt_short": "Boréalis provides dedicated modules for stakeholder engagement, social baseline data, land management, grievance redress mechanisms, and legal/voluntary commitment tracking.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las características técnicas de Boréalis y la matriz del dossier de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de requerimientos corporativos",
+      "Dossier de comparación de software SRM",
+      "Especificaciones de API"
+    ],
+    "actors": [
+      "Comité de Selección de Software",
+      "Lead Architect BRIDGE",
+      "Gerente de Sustentabilidad"
+    ],
+    "steps": [
+      "Evaluación de brechas funcionales de herramientas existentes",
+      "Mapeo de requerimientos contra arquitectura modular de BRIDGE",
+      "Definición de integraciones nativas y capacidades propias"
+    ],
+    "states": [
+      "Mercado Benchmarkeado",
+      "Brechas Identificadas",
+      "Arquitectura Diferenciada"
+    ],
+    "outputs": [
+      "Matriz de posicionamiento funcional de BRIDGE frente a SRMs globales"
+    ],
+    "exceptions": [
+      "Herramientas de CRM generalista (Salesforce, HubSpot) son descartadas para gestión comunitaria de terreno por falta de modelos territoriales y probatorios"
+    ]
+  },
+  "entities": [
+    "Boréalis SRM",
+    "Simply Stakeholders",
+    "Tractivity",
+    "Quorum",
+    "Prowly",
+    "P09_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Boréalis SRM",
+      "to": "Cumplimiento Regulatorio",
+      "type": "SPECIALIZES_IN"
+    },
+    {
+      "from": "Quorum",
+      "to": "Monitoreo Legislativo",
+      "type": "SPECIALIZES_IN"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Boréalis (Heavy Industry) vs Quorum (Legislative Affairs)",
+      "diferencia": "Boréalis gestiona comunidades locales, RCA y quejas de faena; Quorum gestiona proyectos de ley, votaciones parlamentarias y lobbistas en el Congreso."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "solutions_benchmarked_count": "10 soluciones SRM analizadas",
+    "core_srm_capabilities_count": "6 capacidades críticas (actores, interacciones, compromisos, quejas, territorio, auditoría)"
+  },
+  "bridge_implications": "Posicionar a BRIDGE como una plataforma integrada que unifica la trazabilidad territorial de Boréalis con la agilidad de alertas de Simply Stakeholders y la inteligencia regulatoria chilena.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F38",
+    "P09-F39"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

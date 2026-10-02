@@ -1,0 +1,149 @@
+{
+  "question_id": "T01-X01",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Diseño estadístico y tamaño de muestra",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué unidad de análisis y tamaño de muestra necesita cada experimento?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para asegurar significancia estadística y poder analítico (1 - beta >= 0.80 con alfa = 0.05), The Bridge Intelligence define unidades de análisis y tamaños de muestra desacoplados según el tipo de experimento: 1) Experimento de Fidelidad y Citación RAG (Unidad: Proposición Atómica / Claim fáctico): Tamaño de muestra de n >= 300 afirmaciones evaluadas (obtenidas a partir de 60 a 80 consultas corporativas representativas), permitiendo estimar Citation Precision con un margen de error <= +-3.5% (metodología ALCE / Gao et al. 2023); 2) Experimento de Calibración ARES con Inferencia Potenciada por Predicción (PPI / Saad-Falcon et al. 2023): Requiere una muestra dorada humana de n = 150 a 300 casos anotados combinada con una muestra sintética no rotulada de N = 2.000 casos para generar intervalos de confianza válidos; 3) Experimento de Detección de Conflictos SABER (Unidad: Par Consulta-Conflicto): Muestra mínima de n = 100 escenarios contradictorios estratificados; y 4) Experimento de Adopción y Ahorro Humano (Unidad: Tarea Corporativa Completa): Muestra de n >= 40 tareas completas distribuidas entre al menos 6 analistas en 2 organizaciones independientes.",
+  "findings": [
+    {
+      "claim_id": "T01-X01-C1",
+      "claim": "El marco ARES (Saad-Falcon et al. 2023) demuestra mediante la teoría de Prediction-Powered Inference (PPI) que una muestra humana reducida de 150 a 300 anotaciones de alta fidelidad, combinada estadísticamente con predicciones de clasificadores de ML sobre miles de casos no etiquetados, entrega garantías estadísticas idénticas a una auditoría humana completa con intervalos de confianza estrechos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-11",
+        "region": "Global",
+        "actor": "Saad-Falcon et al. / Stanford University"
+      },
+      "evidence": [
+        {
+          "source_id": "bff33bd6-afbc-4544-b611-640f2023a150",
+          "source_title": "Saad-Falcon et al. (2023) — ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+          "original_url": "https://arxiv.org/pdf/2311.09476.pdf",
+          "locator": "Section 3: Statistical Guarantees with PPI, p. 4-6",
+          "excerpt_short": "Using Prediction-Powered Inference (PPI), ARES requires only a small annotated set of 150-300 datapoints to establish confidence intervals with formal statistical guarantees across large-scale RAG deployments.",
+          "source_date": "2023-11-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fundamento matemático de inferencia estadística en ARES PDF (20.305 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cálculo de poder estadístico a priori (alfa=0.05, beta=0.20)",
+      "Corpus de prueba y banco de consultas"
+    ],
+    "actors": [
+      "Bioestadístico / ML Statistician de BRIDGE",
+      "Auditor de QA"
+    ],
+    "steps": [
+      "Fijar la unidad de análisis según el objetivo (claim, consulta, tarea)",
+      "Calcular el tamaño de muestra requerido mediante fórmulas de proporciones y diferencias de medias",
+      "Extraer la muestra mediante muestreo estratificado proporcional",
+      "Verificar que la muestra alcance el poder estadístico mínimo antes de iniciar la prueba"
+    ],
+    "states": [
+      "DEFINICION_UNIDAD",
+      "CALCULO_N",
+      "MUESTREO_ESTRATIFICADO",
+      "PODER_CONFIRMADO"
+    ],
+    "outputs": [
+      "Plan de Muestreo Estadístico T01-X01",
+      "Ficha técnica de tamaño muestral"
+    ],
+    "exceptions": [
+      "Si la muestra de claims es menor a 200, los intervalos de confianza superan +-5% y la compuerta G1 no puede certificarse"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "PPI_INFERENCE",
+      "type": "metrica",
+      "name": "Prediction-Powered Inference (PPI)",
+      "aliases": [
+        "ARES Statistical Guarantees"
+      ]
+    },
+    {
+      "entity_id": "MUESTRA_CANONICA_ARES",
+      "type": "experimento",
+      "name": "Muestra Canónica n=300 Claims",
+      "aliases": [
+        "Power Calculation 0.80"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "PPI_INFERENCE",
+      "predicate": "valida_muestra_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X01-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Unidad Consulta (Query)",
+      "item_b": "Unidad Afirmación Atómica (Claim)",
+      "dimension": "Sensibilidad estadística",
+      "conclusion": "Evaluar a nivel de query oculta alucinaciones parciales dentro de respuestas largas; evaluar a nivel de claim descompone cada hecho con rigor quirúrgico."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Poder estadístico formal de la muestra (1 - beta)",
+      "denominator": "Cálculo de potencia a priori",
+      "target": ">= 0.80"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite auditar el sistema con rigor científico equiparable a ensayos clínicos o auditorías financieras.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

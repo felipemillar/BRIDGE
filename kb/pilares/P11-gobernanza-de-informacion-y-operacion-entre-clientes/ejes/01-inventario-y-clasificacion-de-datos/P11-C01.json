@@ -1,0 +1,163 @@
+{
+  "question_id": "P11-C01",
+  "pilar": "P11",
+  "eje": "Inventario y clasificación de datos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre inventario y clasificación de datos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal entre las síntesis preliminares (P11_RESEARCH_DOSSIER) y las fuentes normativas originales radica en el estatus y exigibilidad de las categorías de datos: el dossier inicial articulaba una taxonomía homogénea D1 a D5 asumiendo que los estándares del GDPR europeo y de la Ley 21.719 en Chile eran plenamente vinculantes de forma directa e inmediata, tratando los secretos comerciales contractuales (D3/D5) como si estuviesen gobernados por leyes de protección de datos personales. Las fuentes primarias (Diario Oficial de Chile, Ley 19.628, Ley 21.719) y la síntesis canónica rectora `P11_VERIFICATION_CORRECTIONS` (49d7882a) demuestran que: 1) La Ley 21.719 se encuentra bajo una vacatio legis estricta de 24 meses (entrada en vigencia hacia fines de 2026), rigiendo interinamente la Ley 19.628 de 1999; 2) Los hechos reservados (D3) y secretos comerciales (D5) se gobiernan por la Ley 18.045 de Mercado de Valores (Art. 10), la Ley 20.730 de Lobby y el Código Penal/civil, con régimen de responsabilidades disímil al de datos personales; y 3) Conforme a la regla de prevalencia rectora explícita de P11_VERIFICATION_CORRECTIONS, prevalece la versión corregida que deslinda con precisión la vacatio legis chilena y restringe las obligaciones de privacidad al régimen de datos personales (D4).",
+  "findings": [
+    {
+      "claim_id": "P11-C01-C1",
+      "claim": "Existe discrepancia en el estatus temporal y normativo de la taxonomía: el dossier asumía vigencia inmediata de la Ley 21.719 y GDPR, pero prevalece canónicamente P11_VERIFICATION_CORRECTIONS que reconoce la vacatio legis de 24 meses y la separación jurídica entre secretos corporativos y datos personales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "taxonomy_governance_discrepancy_and_precedence",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Deslinde Jurisdiccional y Prevalencia Normativa'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia rectora: Ley 21.719 se encuentra en vacatio legis de 24 meses; Ley 19.628 rige el período intermedio. Secretos corporativos y reservas financieras obedecen a la Ley 18.045 y acuerdos privados, no a las leyes de datos personales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Disposiciones Transitorias Art. 1",
+          "retrieved_at": null,
+          "excerpt_short": "Esta ley entrará en vigencia veinticuatro meses después de su publicación en el Diario Oficial.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 1 'Taxonomía de Datos y Jerarquía de Sensibilidad'",
+          "retrieved_at": null,
+          "excerpt_short": "Taxonomía de D1 a D5 integrada bajo gobernanza unificada.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución explícita del conflicto normativo mediante la regla de prevalencia rectora de P11_VERIFICATION_CORRECTIONS.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Texto del dossier inicial",
+      "Texto oficial de la Ley 21.719",
+      "Directiva de prevalencia canónica"
+    ],
+    "actors": [
+      "Auditor Canónico de BRIDGE",
+      "Oficial Legal",
+      "Arquitecto de Datos"
+    ],
+    "steps": [
+      "Identificación de la asunción de vigencia inmediata de la Ley 21.719 en el dossier",
+      "Cotejo con el artículo transitorio que fija la vacatio legis de 24 meses",
+      "Aplicación de la regla de jerarquía de P11_VERIFICATION_CORRECTIONS",
+      "Reclasificación de la exigibilidad legal: cumplimiento preventivo de Ley 21.719 y cumplimiento obligatorio de Ley 19.628 y Ley 18.045",
+      "Actualización del catálogo taxonómico en el motor de políticas"
+    ],
+    "states": [
+      "DISCREPANCY_IDENTIFIED",
+      "RULE_OF_PRECEDENCE_APPLIED",
+      "TAXONOMY_RECONCILED"
+    ],
+    "outputs": [
+      "Taxonomía calibrada jurídicamente con total apego al ordenamiento legal chileno vigente"
+    ],
+    "exceptions": [
+      "Ninguna. La prevalencia canónica es incondicional"
+    ]
+  },
+  "entities": [
+    "P11_VERIFICATION_CORRECTIONS",
+    "Ley N° 21.719",
+    "Ley N° 19.628",
+    "Ley N° 18.045",
+    "Taxonomía D1-D5"
+  ],
+  "relations": [
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "P11_RESEARCH_DOSSIER",
+      "type": "RECTIFIES_TAXONOMY_SCOPE_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir vigencia plena inmediata vs Calibrar vacatio legis formal de 24 meses",
+      "diferencia": "Asumir vigencia inmediata distorsiona los contratos y exigencias de los clientes; calibrar la vacatio legis demuestra precisión jurídica y permite una adopción gradual ordenada."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Vigencia de Ley 21.719",
+      "dossier_claim": "Vigente como marco directo",
+      "canonical_resolution": "En vacatio legis de 24 meses hacia fines de 2026; rige Ley 19.628 supletoria."
+    }
+  ],
+  "metrics_and_denominators": {
+    "canonical_reconciliation_accuracy": "100%",
+    "statutory_alignment_rate": "1.0"
+  },
+  "bridge_implications": "Evita litigios contractuales y asegura que los compromisos de BRIDGE se adecuen con rigor a la cronología de las leyes chilenas.",
+  "open_gaps": [
+    "Monitoreo de proyectos de ley que pudieran modificar el plazo transitorio de la Ley 21.719."
+  ],
+  "next_question_ids": [
+    "P11-C02",
+    "P11-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

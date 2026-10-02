@@ -1,0 +1,153 @@
+{
+  "question_id": "P05-C13",
+  "pilar": "P05",
+  "eje": "Doble materialidad y regulación",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre doble materialidad y regulación, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia doctrinal en el ámbito ESG contrapone el enfoque anglosajón tradicional de 'Materialidad Financiera Simple' (respaldado históricamente por SASB y adoptado por los estándares ISSB / IFRS S1 y S2), el cual exige reportar únicamente aquellos factores ambientales o sociales que impacten de forma directa y mensurable el valor bursátil o los flujos de caja de la firma (Outside-In), frente al enfoque europeo y latinoamericano de 'Doble Materialidad' consagrado en las directivas de EFRAG ESRS (IG 1 2024), GRI Standards y la NCG 461 de la CMF de Chile. Las síntesis canónicas internas (P05_EVIDENCE_MAP Tensión 3 y P05_RESEARCH_DOSSIER Sección 4.3) demuestran que limitar la gestión a la materialidad financiera genera un 'punto ciego catastrófico': los impactos de la empresa sobre el ecosistema y las comunidades (Inside-Out) que son desatendidos por no considerarse 'financieramente materiales' hoy, mutan en pocos meses hacia paralizaciones de obras, demandas colectivas y multas de la SMA, destruyendo el valor de la empresa. De acuerdo con las correcciones del mandato, prevalece de forma categórica el principio de Doble Materialidad disyuntiva: un asunto es material si cumple con la dimensión de impacto social/ambiental O con la dimensión financiera, debiendo ser gestionado obligatoriamente por la gerencia de asuntos corporativos.",
+  "findings": [
+    {
+      "claim_id": "P05-C13-C1",
+      "claim": "Prevalece el enfoque de Doble Materialidad de EFRAG y la CMF NCG 461, proscribiendo el sesgo de materialidad exclusivamente financiera que invisibiliza impactos territoriales y comunitarios críticos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Chile / Europa",
+        "actor": "Supervisión Financiera y ESG"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2: Matriz de Tensiones Epistemológicas, Tensión 3",
+          "excerpt_short": "Implementar Doble Materialidad. Permite a los directores de asuntos corporativos gestionar tanto el riesgo de capital como el riesgo de legitimidad comunitaria y regulatoria. Nivel de confianza MUY ALTO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "432f26cd-3292-4459-8239-eef44bcf1527",
+          "source_title": "EFRAG: Implementation Guidance 1 (IG 1) Materiality Assessment for ESRS",
+          "original_url": "https://www.efrag.org/",
+          "locator": "Sección 3: Double Materiality Framework",
+          "excerpt_short": "Double materiality is the cornerstone of corporate sustainability reporting, requiring identification of severe impacts on society regardless of immediate financial translation.",
+          "source_date": "2024-05-31",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución normativa expresa consagrada en la directiva CSRD europea y adoptada en la NCG 461 de la CMF.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Informes de impacto social",
+      "Modelos de valuación financiera corporativa"
+    ],
+    "actors": [
+      "Comité de Sostenibilidad",
+      "Gerente de Finanzas",
+      "Director de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Evaluación independiente de impacto y finanzas",
+      "Aplicación de regla disyuntiva EFRAG",
+      "Inclusión obligatoria en la agenda del directorio"
+    ],
+    "states": [
+      "Single_Materiality_Challenged",
+      "Double_Materiality_Approved",
+      "Reporting_Aligned"
+    ],
+    "outputs": [
+      "Inventario de temas materiales conforme al estándar de doble materialidad"
+    ],
+    "exceptions": [
+      "Intentos de la gerencia financiera de desestimar denuncias de afectación a glaciares o agua por falta de impacto contable en el trimestre"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DOUBLE_MATERIALITY_PREVALENCE",
+      "type": "regla_regulatoria",
+      "name": "Prevalencia de la Doble Materialidad Disyuntiva",
+      "aliases": [
+        "Double Materiality Primacy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DOUBLE_MATERIALITY_PREVALENCE",
+      "predicate": "estructura_analisis_de",
+      "object_id": "ENT_MATERIALITY_SCHEMA",
+      "valid_from": "2021",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de gestión de riesgos",
+      "Materialidad Financiera Simple": "Ignora el impacto en la comunidad hasta que estalla el litigio.",
+      "Doble Materialidad": "Identifica y mitiga el impacto en la comunidad desde su origen, previniendo el litigio antes de que destruya el valor financiero."
+    }
+  ],
+  "contradictions": [
+    {
+      "issue": "Materialidad financiera simple vs doble materialidad",
+      "source_a": "Estándares tradicionales anglosajones (ISSB simple)",
+      "source_b": "EFRAG ESRS IG 1 / CMF NCG 461 / P05_EVIDENCE_MAP",
+      "resolution": "Prevalece la Doble Materialidad: un tema es material por su impacto social/ecológico o por sus riesgos financieros."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Motor de Materialidad",
+      "implication": "BRIDGE debe implementar la regla disyuntiva de EFRAG en su base de datos para impedir que se filtren o descarten impactos comunitarios graves.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-C14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

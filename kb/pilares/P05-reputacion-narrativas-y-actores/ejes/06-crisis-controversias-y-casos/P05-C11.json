@@ -1,0 +1,153 @@
+{
+  "question_id": "P05-C11",
+  "pilar": "P05",
+  "eje": "Crisis, controversias y casos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre crisis, controversias y casos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia esencial en la gestión de crisis corporativas contrapone la práctica legalista tradicional de defensa litigiosa (estrategia de negación, minimización de culpa y dilación judicial, representada por la postura histórica de SCA en el caso Tissue) frente a la Teoría Situacional de la Comunicación de Crisis (SCCT de Coombs 2007) y las directrices éticas de la Arthur W. Page Society. Abogados defensores tradicionales aconsejan no admitir responsabilidad para evitar contingencias indemnizatorias. Sin embargo, las síntesis canónicas internas (P05_RESEARCH_DOSSIER Sección 6 y P05_EVIDENCE_MAP Eje 6) y la jurisprudencia condenatoria de la Corte Suprema demuestran que, ante crisis del cluster Prevenible/Intencional (como la colusión o el fraude ambiental doloso), la negación o justificación produce el peor resultado posible: revoca beneficios procesales de delación compensada, impone multas máximas y colapsa la reputación de forma irreversible. Prevalece la regla científica de P05: en crisis prevenibles con alta atribución de culpabilidad, la única estrategia eficaz para restaurar la viabilidad institucional es la asunción temprana de responsabilidad, la compensación material directa y la reforma profunda y verificable de la gobernanza corporativa.",
+  "findings": [
+    {
+      "claim_id": "P05-C11-C1",
+      "claim": "Prevalece la prescripción de la teoría SCCT de Coombs confirmada por la Corte Suprema de Chile: las estrategias de negación en crisis dolosas agravan la sanción judicial y aceleran la destrucción del capital reputacional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2007-2026",
+        "region": "Chile / Global",
+        "actor": "Teoría SCCT y Jurisprudencia Chilena"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 1: Eje 6, Hallazgo 6.1 (Teoría SCCT de Coombs)",
+          "excerpt_short": "Regla cardinal: Emplear estrategias de negación o minimización frente a crisis prevenibles con alta atribución de culpa amplifica el daño reputacional de forma irreversible. Nivel de confianza MUY ALTO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "07fa821a-9a20-4e9c-a917-24b0cde7fc98",
+          "source_title": "FNE Chile: Sentencia Condenatoria Colusión Papel Tissue CMPC y SCA (Caso Reputacional)",
+          "original_url": "https://www.fne.gob.cl/corte-suprema-condena-a-cmpc-y-sca-por-colusion-en-el-mercado-del-papel-tissue/",
+          "locator": "Sentencia Corte Suprema, Pronunciamiento sobre Coacción de SCA",
+          "excerpt_short": "La Corte desestimó la exención a SCA por considerar que no acreditó coacción insuperable, sancionando su postura litigiosa con la multa más alta del cartel.",
+          "source_date": "2020-01-06",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Comprobación judicial ejecutoriada en Chile articulada con el estándar científico global de Coombs.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evaluación de responsabilidad en el incidente",
+      "Evidencias probatorias disponibles"
+    ],
+    "actors": [
+      "Comité de Crisis",
+      "Consejero General",
+      "Director de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Diagnóstico de cluster bajo SCCT (Víctima, Accidental o Prevenible)",
+      "Bloqueo de estrategias defensivas de negación si la atribución es dolosa",
+      "Prescripción de protocolo de reconstrucción, disculpa y compensación"
+    ],
+    "states": [
+      "Incident_Evaluated",
+      "Blame_Determined",
+      "Rebuild_Strategy_Enforced"
+    ],
+    "outputs": [
+      "Estrategia institucional de respuesta a crisis alineada con SCCT"
+    ],
+    "exceptions": [
+      "Incidentes donde la empresa es víctima de sabotaje externo acreditado pericialmente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SCCT_PREVALENCE",
+      "type": "regla_prescriptiva",
+      "name": "Prevalencia de Estrategias de Reconstrucción SCCT",
+      "aliases": [
+        "SCCT Rebuild Primacy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SCCT_PREVALENCE",
+      "predicate": "gobierna_postura_en",
+      "object_id": "ENT_CRISIS_SCHEMA",
+      "valid_from": "2007",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C11-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Resultado de la estrategia de respuesta",
+      "Enfoque Litigioso de Negación": "Aumenta la indignación ciudadana, acarrea multas máximas y destruye la marca.",
+      "Enfoque de Reconstrucción SCCT": "Contiene la pérdida de clientes, permite acuerdos de compensación y viabiliza la continuidad operativa."
+    }
+  ],
+  "contradictions": [
+    {
+      "issue": "Postura de negación en crisis culposas",
+      "source_a": "Asesoría legal litigiosa tradicional",
+      "source_b": "SCCT de Coombs / Sentencia Corte Suprema Tissue",
+      "resolution": "Prevalece Coombs y la Corte Suprema: la negación ante faltas dolosas acreditadas agrava irreversiblemente el daño."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Simulador de Crisis",
+      "implication": "BRIDGE debe mostrar al Comité Ejecutivo el contraste CMPC vs SCA cuando debatan entre una postura de disculpa transparente o una defensa de justificación.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "question_id": "P02-X06",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Adquisiciones y estructura de grupos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra adquisiciones y estructura de grupos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso de prueba concreto y verificable: 'Evaluación de conflicto de interés en la contratación de agencia estratégica y suite tecnológica por parte de una empresa en proceso de OPA'. Entradas: 1) Empresa objetivo chilena en proceso de OPA que necesita contratar asesoría de crisis y una suite de monitoreo de reputación; 2) Propuesta A: FGS Global para la asesoría estratégica; 3) Propuesta B: CisionOne / Brandwatch para la escucha de medios; 4) Propuesta C: Burson Global con su herramienta Burson Decipher (potenciada por Limbik); 5) Registro societario del oferente de la OPA: fondo competidor participado minoritariamente por WPP plc. Proceso: El Oficial de Cumplimiento consulta la base estructurada de grupos; a) Verifica que FGS Global fue vendida por WPP a KKR el 3 de diciembre de 2024 (SEC Form 6-K), por lo que FGS es plenamente independiente de WPP y no presenta conflicto; b) Verifica que Burson Global continúa siendo propiedad al 100% de WPP, existiendo potencial conflicto de información con el oferente de la OPA; c) Verifica que Brandwatch pertenece a Platinum Equity sin vínculos con WPP. Resultado esperado: Adopción del dictamen de cumplimiento: se aprueba la contratación de FGS Global y Brandwatch, y se rechaza la contratación de Burson Global por riesgo de filtración de información corporativa privilegiada a través del holding común.",
+  "findings": [
+    {
+      "claim_id": "P02-X06-C1",
+      "claim": "El conocimiento exacto de las fechas de cierre y las matrices de propiedad de las agencias permite a los comités de compliance corporativo prevenir filtraciones de información privilegiada y conflictos de interés en operaciones de fusiones y adquisiciones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Caso Operativo Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 2: Practical Application of Ownership Verification in Compliance",
+          "excerpt_short": "Accurate group attribution resolves corporate governance conflicts regarding agency independence and shared holding liabilities.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:48:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de trabajo operacional documentado y replicable.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Nómina de proveedores postulantes",
+      "Estructura accionaria de la contraparte en la OPA",
+      "Árbol de propiedad corporativa verificado"
+    ],
+    "actors": [
+      "Oficial de Cumplimiento (Compliance Officer)",
+      "Secretario del Directorio",
+      "Director de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Cruce de participaciones societarias",
+      "Identificación de control por holdings compartidos",
+      "Emisión de dictamen de compatibilidad legal"
+    ],
+    "states": [
+      "Proveedores_Postulados",
+      "Cruce_Accionario_Ejecutado",
+      "Dictamen_Emitido"
+    ],
+    "outputs": [
+      "Dictamen de autorización de contratación libre de conflictos de interés"
+    ],
+    "exceptions": [
+      "Estructuras de fideicomiso ciego que impiden trazar de inmediato al beneficiario final"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_COMPLIANCE_OPA",
+      "type": "caso_prueba",
+      "name": "Caso Prueba Compliance M&A y Conflicto Holdings",
+      "aliases": [
+        "Caso Compliance P02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_COMPLIANCE_OPA",
+      "predicate": "resuelto_mediante",
+      "object_id": "Verificacion_Societaria_FGS_KKR",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X06-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Decisión con Datos Desactualizados vs Decisión con Datos Auditados",
+      "Decisión con Datos Desactualizados": "Habría vetado erróneamente a FGS creyendo que seguía en WPP, perdiendo a la mejor agencia para la defensa.",
+      "Decisión con Datos Auditados": "Contrata a FGS sabiendo con certeza documental que pertenece a KKR desde dic-2024."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Este caso demuestra la utilidad práctica inmediata del módulo de relaciones corporativas de BRIDGE para la alta dirección.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:48:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

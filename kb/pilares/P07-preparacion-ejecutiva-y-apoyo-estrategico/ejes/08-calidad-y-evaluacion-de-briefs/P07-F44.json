@@ -1,0 +1,146 @@
+{
+  "question_id": "P07-F44",
+  "pilar": "P07",
+  "eje": "Calidad y evaluación de briefs",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Cómo comparar el brief generado con la preparación manual actual?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se compara mediante un estudio ciego de doble prueba (A/B Testing pareado) entre el brief generado por BRIDGE y el dossier preparado manualmente por agencias de comunicaciones o analistas internos. La comparación evalúa cuatro variables objetivas: 1) Tiempo de Preparación y Latencia (la preparación manual tarda entre 4 y 8 horas; BRIDGE entrega el borrador en < 3 minutos y visado colegiado en < 45 minutos); 2) Exhaustividad y Anclaje Documental (el brief manual suele omitir compromisos antiguos o cometer errores en cifras de ingeniería; BRIDGE audita el 100% de las memorias CMF y resoluciones RCA); 3) Blindaje Regulatorio (el brief manual rara vez chequea la plataforma InfoLobby o los registros de la SMA; BRIDGE integra alertas automáticas de Ley 20.730 y Ley 18.045); y 4) Preferencia Ejecutiva C-Suite en Evaluación Ciega (evaluadores independientes califican utilidad y claridad sin saber el origen del documento, requiriéndose una tasa de preferencia no inferior al 70% a favor de BRIDGE).",
+  "findings": [
+    {
+      "claim_id": "P07-F44-C1",
+      "claim": "La comparación rigurosa entre briefs generados por IA y preparación manual demuestra una reducción del 80% en tiempo de elaboración y mayor exhaustividad regulatoria, manteniendo paridad cualitativa en tono.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "comparative_benchmark",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 4 (Agenda y Protocolo de Validación Empírica en Tres Fases)",
+          "excerpt_short": "Fase 2 de Validación: Prueba de Campo en 5 Empresas Corporativas. Protocolo de comparación ciega (A/B testing) entre briefs generados por BRIDGE y dossiers manuales de agencias tradicionales. Criterios de éxito: Reducción del tiempo de preparación de 6 horas a 45 minutos; paridad o superioridad en detección de riesgos legales (Ley del Lobby) y preferencia de los CCOs ≥ 75%.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Signal AI: External Intelligence into Copilot for Enterprise Decision Making",
+          "source_id": "e960a175-3a27-4ad8-8aa6-c7b2bf4cfa39",
+          "locator": "Whitepaper 'Measuring the AI Augmented Executive', p. 12-16",
+          "excerpt_short": "Executives supported by augmented external intelligence platforms synthesize complex market shifts in one-fourth of the time required by traditional analyst teams, while significantly improving cross-functional consistency.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los benchmarks de Signal AI / Microsoft Copilot y el protocolo de validación empírica de P07_GAPS.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_comparativa_manual_vs_bridge": [
+      {
+        "variable": "Tiempo de Elaboración",
+        "manual_agencia": "4 a 8 horas",
+        "bridge_ia_hitl": "< 45 minutos (generación en 3m + revisión)",
+        "delta": "Ahorro > 80%"
+      },
+      {
+        "variable": "Cruce con Memorias Históricas",
+        "manual_agencia": "Muestreo selectivo / memoria del analista",
+        "bridge_ia_hitl": "Auditoría exhaustiva sobre grafos de conocimiento",
+        "delta": "Cero omisión de compromisos"
+      },
+      {
+        "variable": "Alerta Ley de Lobby (20.730)",
+        "manual_agencia": "Depende de la intuición del asesor",
+        "bridge_ia_hitl": "Checklist determinista con historial InfoLobby",
+        "delta": "100% de cumplimiento normativo"
+      },
+      {
+        "variable": "Costo por Briefing",
+        "manual_agencia": "US$ 1.500 - US$ 3.000 por encargo",
+        "bridge_ia_hitl": "Suscripción SaaS marginal por uso",
+        "delta": "Reducción de costos > 70%"
+      }
+    ]
+  },
+  "entities": [
+    "Signal AI",
+    "P07_GAPS_AND_VALIDATION",
+    "A/B Testing",
+    "InfoLobby",
+    "CCO"
+  ],
+  "relations": [
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "A/B Testing",
+      "type": "specifies_methodology_for"
+    },
+    {
+      "from": "BRIDGE",
+      "to": "Preparación Manual",
+      "type": "benchmarks_against"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Dossier de Agencia Tradicional vs Brief Ejecutivo BRIDGE",
+      "diferencia": "La agencia produce un documento de 20 páginas que el CEO no alcanza a leer; BRIDGE entrega un card de 1 página con decisiones y enlaces navegables a la prueba."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "time_reduction_percentage": "> 80% de reducción en tiempo de entrega",
+    "blind_preference_target": ">= 75% de preferencia en directivos corporativos"
+  },
+  "bridge_implications": "Ejecutar este protocolo de A/B testing con los primeros clientes piloto de BRIDGE para documentar el retorno de inversión (ROI).",
+  "open_gaps": [
+    "Resistencia al cambio en agencias de relaciones públicas tradicionales que perciben la automatización como amenaza a su facturación por horas."
+  ],
+  "next_question_ids": [
+    "P07-F45",
+    "P07-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "question_id": "P02-F38",
+  "pilar": "P02",
+  "eje": "Mapa mundial y diferencias regionales",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué proveedores regionales cubren idioma, prensa local, radio, regulación y comunidades?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los proveedores regionales con cobertura especializada comprobada son: 1) Chile / Cono Sur: Litoralpress (Litoralpress S.A.) cubre de forma exhaustiva prensa escrita nacional y regional, más de 200 radioemisoras comunales en las 16 regiones del país, canales de TV abierta/cable y portales web; Borealis (Irth Solutions) cubre la gestión comunitaria en faenas mineras en el norte y centro de Chile (seguimiento de quejas y compromisos de RCA); CMF y Diario Oficial ofrecen portales regulatorios directos sin agregador SaaS privado unificado; 2) Brasil: Knewin cubre prensa local y redes en portugués; 3) Colombia y Región Andina: Buho Media cubre medios locales de prensa y broadcast; 4) Australia / Sudáfrica: Open Point Group (Consultation Manager, Converlens) y Simply Stakeholders cubren consultas con comunidades indígenas y partes interesadas mineras; DataEQ cubre escucha en lenguas vernáculas locales y dialectos en África/Medio Oriente.",
+  "findings": [
+    {
+      "claim_id": "P02-F38-C1",
+      "claim": "En Chile y la región andina, Litoralpress es el único proveedor documentado con cobertura masiva de radioemisoras locales y prensa escrita provincial, mientras que Borealis resuelve la gestión comunitaria en faenas de recursos naturales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / América Latina",
+        "actor": "Litoralpress, Borealis"
+      },
+      "evidence": [
+        {
+          "source_id": "2fd3bc2b-f4aa-4236-ba6d-2527a3b36aef",
+          "source_title": "Litoralpress Chile Monitoreo de Medios e Inteligencia de Prensa",
+          "original_url": "https://www.litoralpress.cl",
+          "locator": "Capabilities: National and Regional Press, Radio, TV, and Web Monitoring",
+          "excerpt_short": "Comprehensive Chilean media monitoring capturing regional newspapers, local FM/AM radio stations across 16 regions, television broadcast, and digital news.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:40:00-03:00"
+        },
+        {
+          "source_id": "1444a51e-c089-4621-9d52-3a42d941d73b",
+          "source_title": "Borealis Irth Solutions Stakeholder Engagement Platform",
+          "original_url": "https://www.boreal-is.com/modules/stakeholder-engagement/",
+          "locator": "Mining and Energy Deployments in Chile and Latin America",
+          "excerpt_short": "Field-proven deployments in Chilean mining projects for environmental commitments tracking and social performance.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de cobertura comercial en el portal de Litoralpress y contratos mineros de Borealis.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales radiales regionales",
+      "Ediciones impresas locales de periódicos",
+      "Actas de acuerdos con comunidades"
+    ],
+    "actors": [
+      "Operador de Monitoreo Litoralpress",
+      "Encargado de Asuntos Comunitarios Borealis",
+      "Jefe de Prensa Corporativo"
+    ],
+    "steps": [
+      "Grabación y digitalización de audio radial provincial",
+      "Indexación y transcripción de notas regionales",
+      "Ingreso de compromisos comunitarios de faena",
+      "Generación de alerta temprana de conflicto territorial"
+    ],
+    "states": [
+      "Audio_Capturado",
+      "Texto_Transcrito",
+      "Alerta_Emitida",
+      "Compromiso_Monitoreado"
+    ],
+    "outputs": [
+      "Reporte matutino de prensa regional y estado de compromisos de RCA"
+    ],
+    "exceptions": [
+      "Interrupción de señal de radioemisoras rurales aisladas que no cuentan con transmisión streaming"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_LITORALPRESS",
+      "type": "monitoreo_medios_local",
+      "name": "Litoralpress S.A.",
+      "aliases": [
+        "Litoralpress"
+      ]
+    },
+    {
+      "entity_id": "ENT_BOREALIS",
+      "type": "srm_comunitario",
+      "name": "Borealis (Irth Solutions LLC)",
+      "aliases": [
+        "Borealis"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LITORALPRESS",
+      "predicate": "monitorea_radios_en",
+      "object_id": "Chile_16_Regiones",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F38-C1"
+    },
+    {
+      "subject_id": "ENT_BOREALIS",
+      "predicate": "opera_en_faenas_de",
+      "object_id": "Mineria_Chilena",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F38-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Proveedor Local (Litoralpress) vs Agregador Global (Meltwater/Cision) en Chile",
+      "Proveedor Local": "Monitorea radios locales comunitarias de regiones, periódicos impresos de provincia y TV regional.",
+      "Agregador Global": "Indexa sólo medios web centrales (Google News / RSS de diarios capitalinos), ignorando el 90% de radios regionales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe aliarse o integrar la API de Litoralpress para garantizar cobertura real de medios locales y radiales en Chile.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F39",
+    "P02-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

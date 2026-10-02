@@ -1,0 +1,143 @@
+{
+  "question_id": "T01-F28",
+  "pilar": "T01",
+  "eje": "Métricas y denominadores",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar métricas y denominadores de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de métricas y denominadores requiere un esquema relacional estricto compuesto por: 1) Entidad Definición_Métrica: Identificador unívoco, nombre técnico (Citation Precision, Ragas Faithfulness, Latencia p95), categoría (exactitud, eficiencia, costo, seguridad), fórmula matemática explícita, y unidad de medida (porcentaje, segundos, USD); 2) Entidad Denominador: Definición operativa del conjunto universo, tipo de entidad contada (afirmaciones atómicas, consultas, eventos críticos), y regla de inclusión/exclusión; 3) Entidad Medición_Instancia: ID de ejecución, timestamp, valor del numerador, valor del denominador, valor resultante, y hash de trazabilidad del testset; 4) Relaciones de Jerarquía: Vinculación entre métricas de actividad (outputs) y métricas de impacto organizacional (outcomes) según el marco AMEC; y 5) Condiciones de Integridad: Validación de que el numerador sea estrictamente menor o igual al denominador en ratios acotados [0, 1] y prohibición de valores calculados sobre denominadores vacíos (división por cero).",
+  "findings": [
+    {
+      "claim_id": "T01-F28-C1",
+      "claim": "El marco Integrated Evaluation Framework de AMEC exige que las métricas estructuradas se organicen en taxonomías jerárquicas que vinculan Inputs, Activities, Outputs, Outtakes, Outcomes e Impact, evitando tratar las métricas de actividad tecnológica como si fueran resultados de negocio.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "AMEC Global"
+      },
+      "evidence": [
+        {
+          "source_id": "f7ad452c-58e4-47a4-81ba-7248495038a3",
+          "source_title": "AMEC - Integrated Evaluation Framework for Public Relations & Corporate Affairs",
+          "original_url": null,
+          "locator": "Taxonomy & Step-by-Step Architecture, p. 1-4",
+          "excerpt_short": "The Integrated Evaluation Framework organizes measurement into an explicit taxonomy from organizational inputs to final business impact, mandating clear definitions for each metric and denominator.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar marco de evaluación AMEC de relaciones públicas y asuntos corporativos.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de JSON-Schema de Métricas",
+      "Logs de telemetría y pruebas"
+    ],
+    "actors": [
+      "Arquitecto de Datos",
+      "Auditor de FinOps y QA"
+    ],
+    "steps": [
+      "Definir el diccionario estructurado de métricas con fórmulas y denominadores",
+      "Ingestar datos de pruebas y calcular ratios con verificación de límites matemáticos",
+      "Mapear cada métrica a la taxonomía AMEC (output vs outcome)",
+      "Generar reporte de telemetría normalizado"
+    ],
+    "states": [
+      "DEFINICION_TAXONOMIA",
+      "INGESTA_MEDICIONES",
+      "VALIDACION_INTEGRIDAD",
+      "REPORTE_NORMALIZADO"
+    ],
+    "outputs": [
+      "Catálogo relacional de métricas de The Bridge Intelligence",
+      "Tablas de telemetría interoperables"
+    ],
+    "exceptions": [
+      "Si un registro presenta un ratio > 1.0 en métricas porcentuales, se detiene la ingesta por corrupción de datos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "AMEC_FRAMEWORK",
+      "type": "documento",
+      "name": "AMEC Integrated Evaluation Framework",
+      "aliases": [
+        "f7ad452c"
+      ]
+    },
+    {
+      "entity_id": "SCHEMA_METRICAS",
+      "type": "documento",
+      "name": "Esquema Estructurado de Métricas BRIDGE",
+      "aliases": [
+        "Metrics Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "AMEC_FRAMEWORK",
+      "predicate": "estructura_taxonomia_de",
+      "object_id": "SCHEMA_METRICAS",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F28-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Integridad relacional del esquema de métricas",
+      "denominator": "Total métricas registradas en el sistema",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite auditar de forma automatizada y continua el rendimiento técnico y económico de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F29",
+    "T01-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "question_id": "P06-X18",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Seguridad en recuperación combinada",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Cómo ofrecer una alerta útil sin revelar la existencia o contenido de un documento protegido?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Ofrecer una alerta útil preservando la confidencialidad absoluta de documentos protegidos se resuelve mediante el patrón de 'Notificación Ciega de Escalabilidad' (*Blind Escalation Token*) implementado en sistemas de alta seguridad (Palantir AIP; P06_QUALITY_ADDENDUM, Sección 4.2): 1) Detección en Segundo Plano Desacoplado: El motor de monitoreo de señales externas evalúa el cruce completo (incluso contra documentos D4/D5) en un entorno de ejecución seguro con permisos de superusuario (`system_context_evaluator`); 2) Alerta General Descontextualizada para el Analista No Autorizado: El analista recibe una alerta genérica que dice: 'La noticia X contiene afirmaciones de alta sensibilidad corporativa que colisionan con materias bajo custodia especial. El incidente ha sido derivado automáticamente al Administrador de Asuntos Corporativos y Legal'; 3) Enrutamiento Privado al Custodio Calificado: El Administrador Legal recibe simultáneamente un ticket seguro con el enlace exacto al Hecho Reservado CMF y la noticia pública, permitiendo activar la estrategia de defensa legal sin que el analista común se entere de que existe una OPA, demanda o investigación en curso.",
+  "findings": [
+    {
+      "claim_id": "P06-X18-C1",
+      "claim": "El patrón de Blind Escalation Token notifica la necesidad de revisión sin revelar la existencia, título ni contenido de documentos bajo sigilo legal.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "Arquitectura de Seguridad Corporativa"
+      },
+      "evidence": [
+        {
+          "source_id": "5168f7d7-3499-40e3-afc8-c6b216843f19",
+          "source_title": "Palantir AIP - Architecture Overview & Context Engineering",
+          "original_url": "https://palantir.com/docs/foundry/architecture-center/aip-architecture/",
+          "locator": "Security Design: Zero-Knowledge Routing and Escalation",
+          "excerpt_short": "Blind escalation tokens allow automated workflows to alert supervisors of sensitive discrepancies without leaking metadata or entity labels to restricted downstream operators.",
+          "source_date": "2024-06-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 4.2: Mecanismo de Alerta Ciega y Blind Escalation",
+          "excerpt_short": "La plataforma debe impedir la inferencia por omisión. Una alerta ciega escala el caso al custodio de la información sin divulgar indicios sobre la materia protegida.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Patrón formal documentado en la arquitectura de Palantir AIP y adoptado en el Addendum de Calidad.",
+      "epistemic_status_original": "patron_diseno_ciberseguridad",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Noticia externa",
+      "Conflicto con documento D4/D5",
+      "Perfil del receptor"
+    ],
+    "actors": [
+      "Motor de Escalabilidad Ciega",
+      "Analista General",
+      "Director Legal"
+    ],
+    "steps": [
+      "Detección de colisión confidencial en backend seguro",
+      "Generación de token de escalamiento ciego",
+      "Envío de alerta abstracta a analista",
+      "Envío de expediente completo a Director Legal"
+    ],
+    "states": [
+      "Confidential_Collision_Detected",
+      "Token_Generated",
+      "Dual_Routed"
+    ],
+    "outputs": [
+      "Alerta ciega al analista",
+      "Expediente completo al director legal"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BLIND_ESCALATION",
+      "type": "patron_seguridad",
+      "name": "Patrón Blind Escalation Token",
+      "aliases": [
+        "Alerta Ciega Desacoplada"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BLIND_ESCALATION",
+      "predicate": "mitiga_fuga_en",
+      "object_id": "ENT_ABAC_GATE",
+      "valid_from": "2024-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X18-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Protege las filtraciones bursátiles y de hechos esenciales en empresas cotizadas en bolsa (Ley 18.045).",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "question_id": "P11-F22",
+  "pilar": "P11",
+  "eje": "Ciclo de vida y retención",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar ciclo de vida y retención de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del ciclo de vida, retención y sanitización exige modelar: 1) Entidad RetentionSchedule (schedule_id, data_classification: [D1, D2, D3, D4, D5], retention_period_months, retention_type: [STATUTORY_MANDATORY, OPERATIONAL_PROPOSED], legal_authority_source: [LEY_20730, CODIGO_COMERCIO, LEY_21719, LEY_21663, INTERNAL_POLICY], auto_purge_enabled: boolean); 2) Entidad PurgeCertificate (certificate_id, resource_id, tenant_id, purged_at_utc, purge_method: [CRYPTOGRAPHIC_ERASE_NIST_800_88, CLEAR, OVERWRITE], dek_id_destroyed, vector_points_deleted_count, cache_keys_evicted_count, verified_recall_score: 0.0, dpo_digital_signature); 3) Entidad LegalHoldRecord (hold_id, resource_id, case_reference_id, applied_by_user_id, applied_at, reason_summary, status: [ACTIVE, RELEASED]); 4) Relaciones de Grafo (SUBJECT_TO_RETENTION, BLOCKED_BY_LEGAL_HOLD, CERTIFIED_BY_PURGE); y 5) Condiciones de Seguridad Invariables (if (legal_hold_status == 'ACTIVE') -> auto_purge_blocked == true, if (classification == 'D4' and retention_expired) -> enforce_crypto_shredding(), verified_recall_score == 0.0).",
+  "findings": [
+    {
+      "claim_id": "P11-F22-C1",
+      "claim": "El ciclo de vida y retención requiere entidades estructuradas para calendarios de retención, certificados de purga, registros de Legal Hold y condiciones booleanas que bloqueen la purga de evidencias en litigio.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_lifecycle_schema",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 4.3 'Modelo de Datos de Retención y Certificación de Purga'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de esquema: RetentionSchedule, PurgeCertificate, LegalHold. Restricción nuclear: Todo activo con LegalHold activo tiene suspendida de forma inmutable la purga automática.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Cloud Security Alliance: Cloud Controls Matrix (CCM v4) and Shared Responsibility",
+          "source_id": "f6cdbafa-a8d6-4918-97f5-a8d6bf03341b",
+          "locator": "Domain DSP-07 'Data Sanitization and Disposal Records'",
+          "retrieved_at": null,
+          "excerpt_short": "Maintain structured records of sanitized information assets, documenting the method, date, identifier, and verification results to provide defensible evidence of compliance.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño relacional consistente con los estándares de control documental de CSA CCM v4 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de calendarios de retención",
+      "Identificadores de documentos",
+      "Eventos de litigio (Legal Hold)"
+    ],
+    "actors": [
+      "Administrador de Cumplimiento",
+      "Motor de Ciclo de Vida BRIDGE",
+      "Base de Datos"
+    ],
+    "steps": [
+      "Persistencia de los calendarios de retención vinculados a cada clasificación",
+      "Cálculo automático de fechas fatales en la tabla `data_assets`",
+      "Bloqueo inmediato de purga si se inserta un registro en `legal_holds`",
+      "Generación de tupla inmutable en `purge_certificates` al culminar la destrucción criptográfica",
+      "Exposición de API para descarga de certificados por auditores"
+    ],
+    "states": [
+      "SCHEDULES_CONFIGURED",
+      "EXPIRATION_CALCULATED",
+      "LEGAL_HOLD_CHECKED",
+      "PURGE_CERTIFIED"
+    ],
+    "outputs": [
+      "Estructura de datos persistida que gobierna la retención"
+    ],
+    "exceptions": [
+      "La alteración manual de la fecha de purga en base de datos genera alerta inmediata de integridad"
+    ]
+  },
+  "entities": [
+    "RetentionSchedule",
+    "PurgeCertificate",
+    "LegalHoldRecord",
+    "CSA CCM v4",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "LegalHoldRecord",
+      "to": "DataAsset",
+      "type": "FREEZES_PURGE"
+    },
+    {
+      "from": "PurgeCertificate",
+      "to": "DataAsset",
+      "type": "EVIDENCES_DESTRUCTION"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Script bash informal de borrado cron vs Esquema estructurado con Legal Hold",
+      "diferencia": "El script informal borra evidencias judiciales generando desacatos millonarios; el esquema estructurado respeta los Legal Holds y documenta la purga con certificados forenses."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "purge_certificate_completeness": "100% de purgas respaldadas por un PurgeCertificate inmutable",
+    "legal_hold_enforcement_pass_rate": "100% de activos bajo Legal Hold preservados sin alteración"
+  },
+  "bridge_implications": "Dota a BRIDGE de un módulo de e-Discovery y retención de clase mundial exigible por corporaciones que transan en bolsa.",
+  "open_gaps": [
+    "Integración con plataformas corporativas de e-Discovery (e.g., Relativity, Exterro)."
+  ],
+  "next_question_ids": [
+    "P11-F23",
+    "P11-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

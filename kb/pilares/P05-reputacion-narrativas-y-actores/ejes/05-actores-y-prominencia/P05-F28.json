@@ -1,0 +1,139 @@
+{
+  "question_id": "P05-F28",
+  "pilar": "P05",
+  "eje": "Actores y prominencia",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar actores y prominencia de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar actores y prominencia de forma estructurada exige las siguientes especificaciones técnicas: 1) Variables formales: `actor_id`, `legal_name`, `entity_type` (Persona_Juridica, Autoridad_Fiscalizadora, Gremio_Empresarial, Sindicato, Comunidad_Indigena_Constituida, ONG), `power_attribute` (diccionario con tipo: Coercitivo, Utilitario, Normativo; booleano: true/false; fundamento auditable), `legitimacy_attribute` (booleano: true/false; marco legal que lo sustenta: e.g. Convenio 169 OIT, Ley 18.045), `urgency_attribute` (booleano: true/false; criticidad temporal), `salience_class` (Dormant, Discretionary, Demanding, Dominant, Dangerous, Dependent, Definitive), `slo_level` (Withdrawn, Acceptance, Approval, CoOwnership), `jurisdiction_region`, `valid_time_interval`; 2) Categorías: Tipo de vinculación institucional (Territorial, Financiero, Regulatorio, Laboral, Comercial); 3) Relaciones formales: `participa_en_tramitacion` (Actor -> Expediente), `mantiene_alianza_con` (Actor_A -> Actor_B), `plantea_reclamo_contra` (Actor -> Empresa), `adquiere_atributo` (Actor -> Atributo_P_L_U); 4) Condiciones de integridad: Prohibición expresa de atributos individuales de personas naturales (salud, credo, etnia individual); toda asignación de `salience_class = Definitive` debe enlazar un documento verificable que respalde los tres atributos simultáneamente; y todo cambio de clase debe registrar fecha y causa del hito en el registro histórico.",
+  "findings": [
+    {
+      "claim_id": "P05-F28-C1",
+      "claim": "El esquema estructurado de actores corporativos requiere modelar atributos dinámicos de prominencia, niveles de licencia social y salvaguardas estrictas de privacidad institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Software BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7.1: Módulo 2: Clasificador Dinámico de Prominencia de Actores",
+          "excerpt_short": "Taggea a cada actor externo según atributos observados: Poder (P), Legitimidad (L) y Urgencia (U), alertando transiciones hacia 'Definitivo'.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "bdea4496-e0aa-4433-91e6-80026bbef2c1",
+          "source_title": "Quorum: Stakeholder Management CRM & Policy Intelligence Platform",
+          "original_url": "https://www.quorum.us/platform/stakeholder-management/",
+          "locator": "Sección: Mapping & Tracking Stakeholder Relationships",
+          "excerpt_short": "Structured CRM schemas track institutional profiles, legislative votes, meeting histories, and engagement tiers across regulatory jurisdictions.",
+          "source_date": "2024-05-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en los mejores estándares de plataformas de CRM de asuntos públicos y modelos teóricos de prominencia.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ontología de actores institucionales",
+      "Expedientes de audiencias públicas Ley 20.730"
+    ],
+    "actors": [
+      "Administrador de Plataforma",
+      "Analista de Asuntos Regulatorios"
+    ],
+    "steps": [
+      "Diseño de tablas de entidades de actores",
+      "Configuración de validaciones de integridad referencial",
+      "Indexación en base de grafos"
+    ],
+    "states": [
+      "Actor_Schema_Designed",
+      "Constraints_Configured",
+      "Database_Migrated"
+    ],
+    "outputs": [
+      "Esquema estructurado de actores en la base de datos de BRIDGE"
+    ],
+    "exceptions": [
+      "Ingesta de datos que violen las restricciones de atributos individuales sensibles"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ACTOR_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Actores y Prominencia",
+      "aliases": [
+        "Stakeholder Graph Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ACTOR_SCHEMA",
+      "predicate": "normaliza_entidades_de",
+      "object_id": "ENT_MITCHELL_SALIENCE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F28-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Base de Datos de Actores",
+      "implication": "BRIDGE debe implementar tablas específicas para actores jurídicos e instituciones públicas, asegurando que las relaciones de influencia estén respaldadas por evidencias formales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

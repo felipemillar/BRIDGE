@@ -1,0 +1,386 @@
+{
+  "question_id": "P06-F40",
+  "pilar": "P06",
+  "eje": "Evaluación con casos de referencia",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar evaluación con casos de referencia de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "[P06-F40] Variables, categorías, relaciones y condiciones para representar la evaluación con casos de referencia de forma estructurada La representación estructurada de casos de referencia en la literatura y síntesis del corpus exige descomponer el problema de verificación en componentes parametrizados [1-4]:",
+  "findings": [
+    {
+      "claim_id": "P06-F40-C1",
+      "claim": "[P06-F40] Variables, categorías, relaciones y condiciones para representar la evaluación con casos de referencia de forma estructurada",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F40",
+          "excerpt_short": "[P06-F40] Variables, categorías, relaciones y condiciones para representar la evaluación con casos de referencia de forma estructurada...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F40-C2",
+      "claim": "La representación estructurada de casos de referencia en la literatura y síntesis del corpus exige descomponer el problema de verificación en componentes parametrizados [1-4]:",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F40",
+          "excerpt_short": "La representación estructurada de casos de referencia en la literatura y síntesis del corpus exige descomponer el problema de verificación en componentes parametrizados [1-4]:...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F40-C3",
+      "claim": "Marco de Decisión de 4 Celdas (\\\\(C_{ab}\\\\)) en SABER [3, 5]:**",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "32c4f737-2aea-40b3-8b5f-17c79383351c",
+          "source_title": "SABER (2026) - Trust or Abstain? Self-Aware RAG",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F40",
+          "excerpt_short": "Marco de Decisión de 4 Celdas (\\\\(C_{ab}\\\\)) en SABER [3, 5]:**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F40-C4",
+      "claim": "Signal AI (AIQ) y Dataminr Pulse [23-27]:** Declaran estructurar señales de riesgo mediante taxonomías continuas que asignan puntajes de impacto, probabilidad, trayectoria y horizonte temporal, trazando cada puntuación hacia su fuente original [25-27].",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "622d9c7c-2cdd-46f4-bd8d-10f8e8b26cee",
+          "source_title": "Signal AI - Risk Intelligence Platform & AIQ Engine",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F40",
+          "excerpt_short": "Signal AI (AIQ) y Dataminr Pulse [23-27]:** Declaran estructurar señales de riesgo mediante taxonomías continuas que asignan puntajes de impacto, probabilidad, trayectoria y horizo...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F40-C5",
+      "claim": "Los benchmarks académicos tradicionales (FEVER, ConFiQA, TriviaQA) evalúan hechos binarios e incontrovertibles sobre texto general o Wikipedia [28]. No representan de forma nativa las sutilezas de la comunicación corporativa (ambigüedad estratégica permisible, cláusulas de advertencia *safe harbor* ",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "e9a21c25-7298-43fb-aa5e-153957fb1850",
+          "source_title": "Thorne et al. (2018) - FEVER: Fact Extraction & VERification",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F40",
+          "excerpt_short": "Los benchmarks académicos tradicionales (FEVER, ConFiQA, TriviaQA) evalúan hechos binarios e incontrovertibles sobre texto general o Wikipedia [28]. No representan de forma nativa ...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F40-C6",
+      "claim": "Estructura de 12 Campos de la Matriz Afirmación-Evidencia [2]:** `ID_Afirmacion`, `Fuente_Interna`, `Fecha_Compromiso`, `Alcance_Declarado`, `Compromiso_Texto`, `Senal_Externa_Fuente`, `Fecha_Senal`, `Entidad_Resolucion`, `Tipologia_Discrepancia`, `Nivel_Confianza`, `Nivel_Riesgo_Reputacional` y `Ac",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F40",
+          "excerpt_short": "Estructura de 12 Campos de la Matriz Afirmación-Evidencia [2]:** `ID_Afirmacion`, `Fuente_Interna`, `Fecha_Compromiso`, `Alcance_Declarado`, `Compromiso_Texto`, `Senal_Externa_Fuen...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F40-C7",
+      "claim": "Taxonomía Epistémica de Discrepancias (4 Categorías) [29]:**",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F40",
+          "excerpt_short": "Taxonomía Epistémica de Discrepancias (4 Categorías) [29]:**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de medios y reguladores",
+      "Documentación corporativa interna y memorias CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "CCO / Dircom",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Extracción y normalización de afirmaciones",
+      "Resolución de entidades y contraste temporal",
+      "Evaluación de coherencia fáctica y generación de brief"
+    ],
+    "states": [
+      "ENTRADA_RECIBIDA",
+      "ENTIDADES_CANONICALIZADAS",
+      "CONTRASTE_EJECUTADO",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Evaluación estructurada y respuesta citada para P06-F40"
+    ],
+    "exceptions": [
+      "Ausencia de señal externa verificable o desfase temporal en el corte documental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_P06_CORP",
+      "type": "organizacion",
+      "name": "Corporación Emisora CMF",
+      "aliases": [
+        "Empresa Reportante"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_REG",
+      "type": "organizacion",
+      "name": "CMF / SERNAC / SMA",
+      "aliases": [
+        "Regulador Chileno"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_BRIDGE",
+      "type": "producto",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "BRIDGE Platform"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_P06_CORP",
+      "predicate": "sujeto_a_fiscalizacion_de",
+      "object_id": "ENT_P06_REG",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P06-F40-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporación en el pipeline del módulo para sustentar decisiones ejecutivas en P06-F40.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "[P06-F41] Fuentes originales, pasajes, fechas y ámbitos sobre evaluación con casos de referencia",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    },
+    {
+      "gap": "| Hecho / Elemento de Evaluación | Fuente Original Identificable | Localizador / Pasaje Clave | Fecha / Versión | Ámbito de Aplicación |",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

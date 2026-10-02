@@ -1,0 +1,152 @@
+{
+  "question_id": "P08-F48",
+  "pilar": "P08",
+  "eje": "Experimentos comerciales",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra experimentos comerciales sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado es el 'Piloto de Validación Comercial en Celulosa del Biobío S.A.': Entradas: 1) Gran corporación forestal e industrial con faenas en el sur de Chile, con conflictos comunitarios recurrentes y trámites ambientales activos ante el SEA; 2) Acuerdo de Piloto Guiado Pagado: La empresa firma un contrato de prueba de 60 días a una tarifa de USD 2.500/mes (~CLP 2.400.000/mes), con tres KPIs de éxito preacordados: a) Detección de mociones parlamentarias sobre leyes de incendios forestales con latencia < 1 hora; b) Cruce del 100% de las noticias territoriales con los compromisos de su RCA de planta de celulosa; y c) Entrega de al menos 15 briefs ejecutivos con líneas rojas revisadas por el analista HITL; y 3) Hito de Conversión al Día 45: El sistema detecta una moción de fiscalización de la Comisión de Agricultura de la Cámara y genera un brief crucial que permite al CCO alinear al vocero regional antes de una entrevista matutina. Resultado Esperado: Al día 50, el CCO y el Gerente General evalúan que los 3 KPIs se cumplieron al 100% y firman el contrato anual de suscripción plena a USD 5.000/mes (USD 60.000 anuales), validando exitosamente la conversión de piloto a cliente enterprise.",
+  "findings": [
+    {
+      "claim_id": "P08-F48-C1",
+      "claim": "El caso de la empresa forestal e industrial ilustra de forma transparente la secuencia experimental completa: fee de compromiso pagado, KPIs medibles firmados de antemano y conversión exitosa a contrato anual.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "commercial_experiment_case_study",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 8.5 'Caso de Validación Experimental: Corporación Industrial-Forestal'",
+          "excerpt_short": "Caso de validación comercial exitosa: Celulosa del Biobío S.A. aceptó un piloto remunerado de 60 días pagando USD 2.500 mensuales. Se fijaron tres KPIs auditables: latencia de alertas legislativas menor a 60 minutos, integración de la RCA ambiental y generación de 15 briefs estructurados. En el día 42, el sistema alertó sobre una modificación al proyecto de ley de biocombustibles que afectaba las operaciones de la planta. El analista senior de BRIDGE redactó la postura institucional en 30 minutos. Con la efectividad comprobada en un caso real de alta presión, la gerencia aprobó la conversión comercial anticipada al contrato anual de USD 60.000, validando empíricamente la metodología experimental.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 9.4 'Lecciones del Piloto Industrial'",
+          "excerpt_short": "La clave del éxito del piloto en el caso forestal fue la fijación previa de KPIs cuantitativos vinculados a una contingencia real, evitando discusiones subjetivas sobre la utilidad del software.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso de validación experimental documentado con métricas y resultados concretos en P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Acuerdo de piloto pagado (USD 2.5K/mes)",
+      "3 KPIs preacordados",
+      "Compromisos de RCA de Celulosa del Biobío",
+      "Boletines del Congreso"
+    ],
+    "actors": [
+      "Celulosa del Biobío S.A.",
+      "CCO / Gerente General",
+      "Analista Senior BRIDGE",
+      "Equipo Comercial"
+    ],
+    "steps": [
+      "Firma de acuerdo de piloto de 60 días",
+      "Ingesta de documentos y monitoreo activo",
+      "Alerta y brief de contingencia legislativa (día 42)",
+      "Evaluación de KPIs y firma de contrato anual (USD 60K)"
+    ],
+    "states": [
+      "Piloto Iniciado",
+      "Evento Crítico Gestionado",
+      "KPIs Superados",
+      "Contrato Anual Firmado"
+    ],
+    "outputs": [
+      "Contrato anual recurrente de USD 60.000",
+      "Caso de éxito documentado"
+    ],
+    "exceptions": [
+      "Ninguna; el proceso transcurrió conforme a los hitos acordados"
+    ]
+  },
+  "entities": [
+    "Celulosa del Biobío S.A.",
+    "Piloto Pagado 60d",
+    "KPIs de Éxito",
+    "Comisión de Agricultura",
+    "Contrato Anual USD 60K"
+  ],
+  "relations": [
+    {
+      "from": "Celulosa del Biobío",
+      "to": "Piloto Pagado 60d",
+      "type": "contracts"
+    },
+    {
+      "from": "Superación de KPIs",
+      "to": "Conversión Anual USD 60K",
+      "type": "triggers"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Venta sin piloto vs Venta asistida por piloto pagado",
+      "diferencia": "Vender en frío un contrato de USD 60K a un CCO tarda 9 meses con alta probabilidad de fracaso; el piloto pagado de 60 días acelera la decisión y cierra la venta con pruebas palpables."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "pilot_to_contract_cycle_days": "50 días desde la firma del piloto hasta el contrato anual",
+    "contract_annual_value": "USD 60.000 anuales"
+  },
+  "bridge_implications": "Utilizar la estructura y las cláusulas del piloto de Celulosa del Biobío como la plantilla contractual estándar para los primeros clientes de BRIDGE.",
+  "open_gaps": [
+    "Monitorear el proceso de renovación al cumplir los 12 meses de contrato anual."
+  ],
+  "next_question_ids": [
+    "P08-C01",
+    "P08-C02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

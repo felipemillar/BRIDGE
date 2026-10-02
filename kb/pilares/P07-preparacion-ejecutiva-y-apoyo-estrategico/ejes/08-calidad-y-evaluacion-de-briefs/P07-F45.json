@@ -1,0 +1,142 @@
+{
+  "question_id": "P07-F45",
+  "pilar": "P07",
+  "eje": "Calidad y evaluación de briefs",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué fallo crítico invalida un brief aunque ahorre tiempo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Invalida de inmediato un brief cualquier fallo crítico que comprometa la veracidad fáctica, la legalidad corporativa o la responsabilidad fiduciaria de la empresa, sin importar la rapidez de su generación: 1) Alucinación de cifras cuantitativas clave (inventar porcentajes de emisiones, consumos de agua o utilidades financieras no auditadas); 2) Filtración de Información No Pública o Hechos Reservados (vulneración de los Arts. 9, 10 y 164 de la Ley 18.045 de Mercado de Valores); 3) Omisión de la calificación de Ley del Lobby (llevar a un directivo a una audiencia sin advertir el deber de registro bajo la Ley 20.730); 4) Asunción imprudente de culpabilidad corporativa (admitir responsabilidades legales o ambientales en disputas abiertas sin peritaje técnico oficial); y 5) Incoherencia flagrante con lo reportado en la Memoria CMF NCG 461 o resoluciones RCA, lo que configuraría greenwashing o falsedad ante el regulador.",
+  "findings": [
+    {
+      "claim_id": "P07-F45-C1",
+      "claim": "Los fallos críticos de alucinación numérica, violación de reserva bursátil u omisión de la ley de lobby invalidan absolutamente el brief y acarrean responsabilidad corporativa inexcusable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "fatal_flaws_taxonomy",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 2 (Limitaciones Operativas, Tecnológicas y Riesgos de Responsabilidad)",
+          "excerpt_short": "Riesgos que invalidan el sistema: Alucinación de cifras críticas (sanción penal por falsedad ante el regulador); Filtración de Información Privilegiada MNPI (violación de Ley 18.045 y multas CMF); Incumplimiento de Ley de Lobby (investigación administrativa por lobby encubierto); y Sesgo de complacencia algorítmica. La presencia de cualquiera de estos fallos destruye todo el valor del ahorro de tiempo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "PR Council: Ethical Standards and Guidelines for Generative AI",
+          "source_id": "f377819a-f643-4b8b-8c72-e531bd9d01ca",
+          "locator": "Sección 'Systemic Failure Modes and Liability', p. 11-13",
+          "excerpt_short": "Speed is never a defense against material error. Releasing false data or misleading regulatory filings created by AI constitutes gross negligence and destroys executive credibility.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los marcos de riesgo de PR Council y la tabla de fallos críticos de P07_GAPS.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "taxonomia_fallos_criticos": [
+      {
+        "fallo": "Alucinación de Métrica Operativa",
+        "consecuencia": "Multas de la SMA y daño irreversible de credibilidad pública.",
+        "regla": "Bloqueo total si la cifra carece de documento con hash comprobable."
+      },
+      {
+        "fallo": "Revelación de Hecho Reservado",
+        "consecuencia": "Infracción a Ley 18.045, sanciones penales y suspensión bursátil.",
+        "regla": "Guardrail bursátil con cuarentena automática."
+      },
+      {
+        "fallo": "Omisión de Ley de Lobby (20.730)",
+        "consecuencia": "Imputación de lobby opaco por Contraloría / CGR.",
+        "regla": "Checklist vinculante obligatorio antes de liberar el brief."
+      },
+      {
+        "fallo": "Admisión Prematura de Responsabilidad",
+        "consecuencia": "Perjuicio procesal irreparable en tribunales ambientales o civiles.",
+        "regla": "Uso estricto de Holding Statements bajo SCCT."
+      }
+    ]
+  },
+  "entities": [
+    "Zero-Tolerance Hallucination Gate",
+    "Ley 18.045",
+    "Ley 20.730",
+    "SMA SNIFA",
+    "PR Council"
+  ],
+  "relations": [
+    {
+      "from": "Fallo Crítico",
+      "to": "Brief Ejecutivo",
+      "type": "invalidates"
+    },
+    {
+      "from": "Zero-Tolerance Gate",
+      "to": "Alucinación de Cifras",
+      "type": "blocks"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Error Menor de Redacción vs Fallo Crítico Fáctico/Legal",
+      "diferencia": "El error de redacción es cosmético; el fallo crítico expone a los directores a sanciones penales e investigaciones de la CMF y la SMA."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "critical_failure_tolerance": "0.0% (Tolerancia Cero)",
+    "fatal_flaw_detection_recall": "100% de captura por guardrails de seguridad"
+  },
+  "bridge_implications": "Programar guardrails deterministas de parada de emergencia (Kill Switches) en BRIDGE que aborten la generación si se detecta cualquiera de estos 5 fallos.",
+  "open_gaps": [
+    "Auditoría de ciberseguridad sobre la infraestructura de almacenamiento de borradores para impedir exfiltraciones antes de la revisión humana."
+  ],
+  "next_question_ids": [
+    "P07-F46",
+    "P07-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

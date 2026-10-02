@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-C10",
+  "pilar": "P10",
+  "eje": "Estados, versiones y auditoría",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué sigue sin prueba sobre estados, versiones y auditoría, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "1) Lo que sigue sin prueba empírica suficiente es la preservación de integridad de auditoría y no repudio sobre activos multimedia generados por IA (videos explicativos sintéticos, audios clonados) a lo largo de ciclos de archivo de más de 10 años frente a la obsolescencia criptográfica; 2) Fuentes fallidas o parciales: La fuente Shire of Serpentine Jarrahdale (a3ef8553) es parcial al estructurar políticas para material impreso y comunicados PDF convencionales sin considerar sistemas de sellado temporal descentralizado ni hashes para grandes volúmenes multimedia; y 3) Validación mínima para resolver la incertidumbre: Ejecutar una auditoría criptográfica automatizada sobre un repositorio de prueba de 500 activos multimedia corporativos firmados con SHA-256 y marcas de tiempo RFC 3161, validando la detectabilidad inmediata de cualquier alteración de un solo bit en los metadatos y comprobando la rapidez de reconstrucción del historial de versiones.",
+  "findings": [
+    {
+      "claim_id": "P10-C10-C1",
+      "claim": "La preservación a largo plazo de la integridad de auditoría sobre activos multimedia corporativos carece de pruebas empíricas de campo; la política de Shire es parcial a documentos impresos, requiriéndose una auditoría criptográfica sobre repositorios de prueba.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "multimedia_audit_integrity_gaps",
+      "evidence": [
+        {
+          "source_title": "P10_GAPS_AND_VALIDATION: Vacios, Hipotesis y Validacion",
+          "source_id": "1bdee7c1-95df-4848-ba8e-74ff3eaca685",
+          "locator": "Sección 'Brechas en Sellado Temporal y Auditoría Multimedia'",
+          "retrieved_at": null,
+          "excerpt_short": "Vacío en auditoría de largo plazo: Falta validación experimental de integridad de activos multimedia corporativos firmados criptográficamente. Validación requerida: Auditoría forense con hashing SHA-256.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Shire of Serpentine Jarrahdale: Media Policy and Correction Protocols",
+          "source_id": "a3ef8553-4116-436c-85a1-12b91be54b0d",
+          "locator": "Section 'Public Record Preservation Limitations'",
+          "retrieved_at": null,
+          "excerpt_short": "Guidelines focus on written media statements; advanced cryptographic integrity for dynamic audiovisual files is not addressed.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación precisa de los límites de las fuentes de políticas públicas y sustento en P10_GAPS_AND_VALIDATION.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de 500 activos multimedia corporativos",
+      "Firmas criptográficas SHA-256",
+      "Herramienta de verificación RFC 3161"
+    ],
+    "actors": [
+      "Auditor Criptográfico",
+      "Ingeniero de Infraestructura BRIDGE",
+      "Custodio Documental"
+    ],
+    "steps": [
+      "Cálculo masivo de hashes sobre el repositorio de prueba",
+      "Inyección deliberada de corrupción en 5 archivos (alteración de 1 bit)",
+      "Ejecución del linter de integridad de BRIDGE",
+      "Comprobación de que el 100% de los archivos corruptos sean detectados y aislados",
+      "Emisión de informe de validación técnica de no repudio"
+    ],
+    "states": [
+      "ARCHIVE_INGESTED",
+      "CORRUPTION_INJECTED",
+      "INTEGRITY_SCAN_RUN",
+      "ANOMALIES_ISOLATED"
+    ],
+    "outputs": [
+      "Certificado de resiliencia del motor de auditoría multimedia"
+    ],
+    "exceptions": [
+      "Archivos con hashes no coincidentes son bloqueados para distribución pública de forma preventiva"
+    ]
+  },
+  "entities": [
+    "Sellado Temporal RFC 3161",
+    "Auditoría Forense",
+    "Shire of Serpentine Jarrahdale",
+    "P10_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Activo Multimedia",
+      "to": "Hash SHA-256",
+      "type": "SEALED_WITH"
+    },
+    {
+      "from": "Auditoría Forense",
+      "to": "Incertidumbre",
+      "type": "RESOLVES_EMPIRICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Almacenamiento simple en carpetas compartidas vs Sellado criptográfico inmutable",
+      "diferencia": "Las carpetas compartidas permiten manipulación inadvertida o maliciosa; el sellado criptográfico garantiza valor probatorio pleno en tribunales de justicia."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cryptographic_corruption_detection_rate": "100% de manipulaciones deliberadas detectadas"
+  },
+  "bridge_implications": "Permite asegurar a los clientes corporativos que sus archivos históricos de audio y video están blindados contra acusaciones de manipulación.",
+  "open_gaps": [
+    "Transición hacia algoritmos criptográficos post-cuánticos para preservación documental a 30 años."
+  ],
+  "next_question_ids": [
+    "P10-C11",
+    "P10-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "question_id": "P02-F24",
+  "pilar": "P02",
+  "eje": "Asuntos públicos y memoria de actores",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra asuntos públicos y memoria de actores sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto se ilustra mediante una contingencia de asuntos públicos en la Región de Antofagasta: 1) Contexto: una dirigenta vecinal y un diputado emiten declaraciones en una radioemisora regional acusando a la minera de 'incumplir el acuerdo de mitigación de polvo ambiental pactado en la mesa de diálogo de 2024 y violar la RCA'; 2) Entradas reales del sistema: Entrada 1 (Escuchar): alerta matutina de Litoralpress (transcripción OCR/audio a las 07:15 AM); Entrada 2 (Saber - Grafo Bipartito/RAG): Convenio Social 2024 Cláusula 4.2 indexado desde Borealis/Open Point ('instalación de 4 humidificadores completada en dic 2024 con recepción de obra firmada') y Hoja de postura aprobada en Broadsight con la RCA; Entrada 3 (Relacionar): ficha del diputado y la dirigenta en el CRM de Simply Stakeholders/Quorum registrando la última audiencia de Ley de Lobby del 10 marzo 2026; 3) Procesamiento paso a paso: a las 07:16 AM el motor cruza la alerta radial con el Convenio Social 2024; a las 07:18 AM detecta que la acusación es falsa al constatar que los 4 equipos están 100% operativos; a las 07:20 AM valida la postura oficial y al portavoz en Broadsight; 4) Resultado esperado (Executive Brief a las 07:30 AM en el móvil del Gerente General y CCO): Diagnóstico de controversia; Evidencia interna verificada con cita exacta a Cláusula 4.2 e Informe Técnico N° 84 pág. 12; Cuestionario de contingencia con 2 preguntas y respuestas difíciles asistidas para la prensa; Historial del diputado en Ley de Lobby con sign-off completo de Legal y CCO.",
+  "findings": [
+    {
+      "claim_id": "P02-F24-C1",
+      "claim": "El caso concreto demuestra que articular el CRM de actores territoriales con el registro de compromisos y la postura aprobada permite neutralizar acusaciones públicas infundadas antes de las 07:30 AM con respaldo documental inatacable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Chile (Antofagasta)",
+        "actor": "Caso Operativo Asuntos Públicos"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Sección: Caso Operativo de Asuntos Públicos y Memoria de Actores",
+          "excerpt_short": "Demostración de cruce entre alerta radial, convenio social en CRM y posturas oficiales aprobadas.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:34:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Escenario empírico completamente documentado en el dossier analítico de P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alerta radial de Litoralpress (07:15 AM)",
+      "Cláusula 4.2 Convenio Social 2024 en Borealis",
+      "Postura aprobada de emisiones en Broadsight",
+      "Ficha de diputado y audiencia Ley de Lobby"
+    ],
+    "actors": [
+      "Gerente General",
+      "CCO",
+      "Fiscal Legal",
+      "Diputado Regional"
+    ],
+    "steps": [
+      "Paso 1: Captura de cuña radial por Litoralpress (07:15 AM)",
+      "Paso 2: Enlace bitemporal con Convenio 2024 y verificación de cumplimiento (07:18 AM)",
+      "Paso 3: Verificación de gobernanza de vocería en Broadsight (07:20 AM)",
+      "Paso 4: Generación de Executive Brief con Q&A asistido y citas (07:25 AM)",
+      "Paso 5: Validación móvil del CCO y Fiscal Legal (07:30 AM)",
+      "Paso 6: Contacto directo fidedigno con la radio y la autoridad (07:35 AM)"
+    ],
+    "states": [
+      "Acusacion_Detectada",
+      "Verificacion_Documental_OK",
+      "Executive_Brief_Generado",
+      "Respuesta_Enviada"
+    ],
+    "outputs": [
+      "Executive Brief de Asuntos Públicos con cita a informe técnico y registro de Ley de Lobby"
+    ],
+    "exceptions": [
+      "Detección de falla operativa en los equipos (activa plan de mitigación inmediata en terreno)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_ASUNTOS_PUB_ANTOFAGASTA",
+      "type": "escenario_operativo",
+      "name": "Caso de Asuntos Públicos en Antofagasta",
+      "aliases": [
+        "Simulación de Respuesta ante Diputado"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_ASUNTOS_PUB_ANTOFAGASTA",
+      "predicate": "valida_flujo_de",
+      "object_id": "Modulo_Relacionar_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F24-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta Improvisada vs Respuesta Basada en Memoria de Actores",
+      "Respuesta Improvisada": "El vocero niega la acusación sin pruebas o promete investigar, sembrando dudas en el medio.",
+      "Respuesta BRIDGE": "A las 07:30 AM el vocero entrega el número de informe técnico y cita la última reunión de lobby con el diputado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Relacionar",
+      "implication": "Conectar el historial de audiencias de Ley de Lobby directamente con las fichas de los parlamentarios en BRIDGE para enriquecer los briefings de vocería.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F25",
+    "P02-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:34:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

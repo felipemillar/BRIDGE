@@ -1,0 +1,136 @@
+{
+  "question_id": "P04-F06",
+  "pilar": "P04",
+  "eje": "Inventario de documentos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra inventario de documentos corporativos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Canónico: Ingesta e inventario de la 'Memoria Anual Integrada 2025' de un emisor chileno supervisado por la CMF. Entradas: Archivo PDF de 240 páginas; Metadatos: Título 'Memoria Integrada 2025', Emisor 'Minera Cordillera Andina S.A.', Fecha de depósito CMF '2026-03-28', Órgano de Aprobación 'Directorio (Acta N° 452)', Clasificación de seguridad 'Público', Hash SHA-256 'e3b0c442...'. Proceso en el sistema: 1) Registro en catálogo DCAT-3 (`corp:DocumentArtifact`); 2) Asignación de relaciones PROV-O (`prov:wasAttributedTo org:MineraCordillera`, `prov:wasApprovedBy org:Directorio`); 3) Anotación de superación temporal (`dcterms:replaces DOC-MEM-2024`); 4) Segmentación layout-aware preservando tablas de emisiones y recursos hídricos. Resultado esperado: La memoria queda disponible en el inventario como SSOT vigente para el ejercicio 2025; la memoria 2024 pasa automáticamente a estado 'Contexto Histórico' con bandera de superación; y cualquier consulta directiva sobre metas actuales recupera prioritariamente los datos de la versión 2025 con cita trazable a página y párrafo.",
+  "findings": [
+    {
+      "claim_id": "P04-F06-C1",
+      "claim": "El caso empírico de registro de la Memoria Anual Integrada demuestra cómo el inventario ontológico resuelve la atribución, el reemplazo histórico de versiones y la recuperación precisa de compromisos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Caso Minera Cordillera Andina"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3.2: Ejemplo Concreto de Compromiso Corporativo",
+          "excerpt_short": "Ejemplo basado en Memoria Integrada 2025: document_type: Memoria Anual CMF NCG 461, page_number: 84, hash_sha256, access_control: Público.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso de referencia formalmente modelado en el dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "PDF Memoria 2025",
+      "Acta Directorio N° 452",
+      "Ficha de depósito CMF"
+    ],
+    "actors": [
+      "Ingestion Pipeline",
+      "Provenance Builder",
+      "Catalog Manager"
+    ],
+    "steps": [
+      "Cálculo de hash",
+      "Creación de tripleta prov:wasApprovedBy",
+      "Marcado de dcterms:replaces sobre Memoria 2024",
+      "Publicación en el índice"
+    ],
+    "states": [
+      "Uploaded",
+      "Processed",
+      "SSOT_Current"
+    ],
+    "outputs": [
+      "Memoria 2025 registrada como SSOT; Memoria 2024 reclasificada como Histórico"
+    ],
+    "exceptions": [
+      "Discrepancia entre fecha de aprobación y fecha de depósito"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASE_ANNUAL_REPORT_2025",
+      "type": "caso_empirico",
+      "name": "Caso Registro Memoria Anual Integrada 2025",
+      "aliases": [
+        "Annual Report Ingestion Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASE_ANNUAL_REPORT_2025",
+      "predicate": "valida_operacion_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F06-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Comportamiento del sistema",
+      "Antes de la ingesta": "La Memoria 2024 era la SSOT activa para cifras de sostenibilidad.",
+      "Después de la ingesta": "La Memoria 2025 asume como SSOT activa y la 2024 queda como contexto histórico trazable."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe ejecutar automáticamente este flujo ante cada nuevo depósito de memoria anual para actualizar el grafo corporativo sin intervención manual.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

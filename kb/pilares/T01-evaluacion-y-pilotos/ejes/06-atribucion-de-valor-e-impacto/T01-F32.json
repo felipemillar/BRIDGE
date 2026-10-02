@@ -1,0 +1,188 @@
+{
+  "question_id": "T01-F32",
+  "pilar": "T01",
+  "eje": "Atribución de valor e impacto",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué factores externos impiden atribuir un cambio reputacional al software?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La reputación corporativa es un constructo social multifactorial y endógeno sobre el cual inciden variables exógenas masivas que invalidan cualquier reclamo de causalidad unívoca por parte del software: 1) Desempeño Operacional Real: Derrames ambientales, fallas operacionales de planta, huelgas laborales o accidentes que destruyen la reputación con independencia de la calidad del comunicado generado (Principio 2 de Page Society); 2) Macroeconomía y Ciclo Político: Variaciones en la percepción ciudadana causadas por crisis económicas, inflación, polarización política o cambio de reguladores sectoriales; 3) Sesgos y Agendas Editoriales de Medios Masivos: Dinámicas periodísticas exógenas y cobertura mediática no controlable por los analistas corporativos; y 4) Hechos de Competidores y Sector: Crisis sistémicas que 'contaminan' a toda una industria (ej. banca, minería, salmonicultura). La única función del software es habilitar una respuesta más rápida, fidedigna y coordinada ante estos eventos.",
+  "findings": [
+    {
+      "claim_id": "T01-F32-C1",
+      "claim": "Los principios AMEC Barcelona 3.0 (Principio 5 y 6) señalan explícitamente que la reputación corporativa no puede medirse de forma aislada sin controlar por factores exógenos y variables confusoras (confounding factors), ya que los eventos operacionales y el clima político dominan estadísticamente sobre las herramientas de comunicación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "AMEC Global"
+      },
+      "evidence": [
+        {
+          "source_id": "92dfdc7c-83e6-4439-b476-56af1da92d1b",
+          "source_title": "AMEC - Barcelona Principles 3.0 for Communications Measurement and Evaluation",
+          "original_url": null,
+          "locator": "Principle 5 & 6: Holistic Context and Confounding Variables",
+          "excerpt_short": "Measurement must isolate contextual variables, recognizing that broader organizational performance, market conditions, and external crises exert primary control over stakeholder perceptions.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio estándar internacional AMEC verificado.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F32-C2",
+      "claim": "T01_QUALITY_ADDENDUM prohíbe formalmente a The Bridge Intelligence presentar correlaciones temporales de sentimiento en redes sociales como prueba de impacto causal de sus módulos de IA.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 6: Prohibición de Afirmaciones Causales No Demostradas",
+          "excerpt_short": "El software no 'mejora la reputación'; el software entrega inteligencia y reduce tiempos de redacción y error factual. La reputación la construye o destruye la conducta operacional de la empresa.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Límite deontológico canónico interno de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Reportes de reputación corporativa externa (Merco, Cadem)",
+      "Métricas operacionales de BRIDGE"
+    ],
+    "actors": [
+      "Equipo Comercial",
+      "Auditor de Cumplimiento Deontológico"
+    ],
+    "steps": [
+      "Identificar variables exógenas concurrentes durante el período de prueba",
+      "Descartar atribución causal directa de fluctuaciones de sentimiento público al software",
+      "Alinear la propuesta de valor con métricas operativas directamente controlables (horas ahorradas, latencia, citas fácticas)",
+      "Incluir cláusula de delimitación causal en el contrato de servicio"
+    ],
+    "states": [
+      "IDENTIFICACION_CONFUSORAS",
+      "DESCARTE_CAUSALIDAD",
+      "DELIMITACION_PROPUESTA",
+      "CONTRATO_BLINDADO"
+    ],
+    "outputs": [
+      "Cláusula contractual de delimitación de impacto reputacional",
+      "Informe honesto de resultados"
+    ],
+    "exceptions": [
+      "Cualquier material promocional que alegue 'BRIDGE aumentó en 15% la reputación de la empresa X' es vetado inmediatamente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "VARIABLES_CONFUSORAS",
+      "type": "riesgo",
+      "name": "Factores Exógenos y Confounding Variables",
+      "aliases": [
+        "Crisis operacionales, macroeconomía"
+      ]
+    },
+    {
+      "entity_id": "CLAUSULA_DELIMITACION",
+      "type": "documento",
+      "name": "Cláusula de Delimitación Causal BRIDGE",
+      "aliases": [
+        "Non-Causal Disclaimer"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "VARIABLES_CONFUSORAS",
+      "predicate": "impiden_atribucion_a",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F32-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Impacto Reivindicable",
+      "item_b": "Impacto No Reivindicable",
+      "dimension": "Límite de atribución",
+      "conclusion": "Es reivindicable la reducción del tiempo de respuesta y la precisión de citas; no es reivindicable el cambio en el puntaje de reputación de la empresa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de cumplimiento de no-atribución causal en materiales",
+      "denominator": "Total presentaciones a clientes y memorandos",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Posiciona a BRIDGE como una solución seria, técnica y éticamente irreprochable ante directores generales y comités de auditoría.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F33",
+    "T01-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

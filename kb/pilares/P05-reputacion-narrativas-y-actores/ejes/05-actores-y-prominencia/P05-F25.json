@@ -1,0 +1,147 @@
+{
+  "question_id": "P05-F25",
+  "pilar": "P05",
+  "eje": "Actores y prominencia",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué criterios documentados ayudan a priorizar actores por legitimidad, poder, urgencia e influencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus fundamenta la priorización rigurosa de actores en el Modelo de Prominencia de Mitchell, Agle y Wood (1997 / Umbrex 2024) y en el estándar de relacionamiento AA1000SES (2015). La prominencia (stakeholder salience) se determina evaluando la presencia simultánea de tres atributos dinámicos: 1) Poder: Capacidad del actor de imponer su voluntad mediante recursos coercitivos (fuerza física, litigios judiciales, sanciones de fiscalizadores), utilitarios (financiamiento, acceso a capital, decisiones de compra) o normativos/simbólicos (autoridad moral, prestigio ante la opinión pública); 2) Legitimidad: Validez percibida y anclaje de sus demandas o reclamos en estructuras normativas, leyes vigentes (e.g. Convenio 169 OIT) o valores éticos compartidos; 3) Urgencia: Grado en que sus reclamos exigen atención inmediata por su sensibilidad temporal o por el daño crítico que generaría su postergación. La combinación de estos atributos define 7 clases tipológicas ordenadas por prioridad: a) Actores Latentes (1 atributo: Dormidos con solo Poder; Discrecionales con solo Legitimidad; Demandantes con solo Urgencia); b) Actores Expectantes (2 atributos: Dominantes con Poder y Legitimidad como los fiscalizadores SMA/CMF; Peligrosos con Poder y Urgencia que pueden recurrir a vías de hecho; Dependientes con Legitimidad y Urgencia como comunidades afectadas sin recursos propios); y c) Actores Definitivos (3 atributos: reúnen Poder, Legitimidad y Urgencia), quienes ostentan la máxima prioridad ejecutiva para la alta dirección corporativa.",
+  "findings": [
+    {
+      "claim_id": "P05-F25-C1",
+      "claim": "La priorización de partes interesadas no debe basarse en intuiciones jerárquicas sino en el modelo dinámico de prominencia tipificado por la conjunción de poder, legitimidad y urgencia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1997-2026",
+        "region": "Global",
+        "actor": "Gestión Estratégica de Stakeholders"
+      },
+      "evidence": [
+        {
+          "source_id": "6bddf8be-2799-4e7b-b32f-cbc9b34d6e0c",
+          "source_title": "Umbrex: Mitchell-Agle-Wood Stakeholder Salience Model Guide",
+          "original_url": "https://umbrex.com/resources/stakeholder-salience-model/",
+          "locator": "Sección: The Seven Classes of Stakeholders",
+          "excerpt_short": "Stakeholder salience is determined by power, legitimacy, and urgency. Definitive stakeholders possess all three attributes and demand immediate executive attention.",
+          "source_date": "2024-02-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 1: Eje 4, Hallazgo 4.1 (Modelo de Prominencia de Mitchell, Agle y Wood)",
+          "excerpt_short": "Clasifica a los actores en Latentes (Dormido, Discrecional, Demandante), Expectantes (Dominante, Peligroso, Dependiente) y Definitivo (P+L+U). Nivel de confianza MUY ALTO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco fundacional de la teoría de stakeholders con amplia validación en gestión corporativa global.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Directorio de actores territoriales e institucionales",
+      "Registro de interacciones de lobby",
+      "Expedientes de reclamos formales"
+    ],
+    "actors": [
+      "Gerente de Relacionamiento Comunitario",
+      "Director de Asuntos Públicos",
+      "Asesor Jurídico"
+    ],
+    "steps": [
+      "Calificación booleana de atributos P, L y U para cada actor",
+      "Asignación de la clase de prominencia correspondiente",
+      "Mapeo en diagrama de Venn interactivo"
+    ],
+    "states": [
+      "Actors_Inventoried",
+      "Attributes_Assigned",
+      "Salience_Tier_Calculated"
+    ],
+    "outputs": [
+      "Matriz de Prominencia de Stakeholders con alertas de atención prioritaria"
+    ],
+    "exceptions": [
+      "Actor latente que adquiere urgencia crítica en un período inferior a 24 horas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MITCHELL_SALIENCE",
+      "type": "modelo_analitico",
+      "name": "Modelo de Prominencia de Mitchell, Agle y Wood",
+      "aliases": [
+        "Stakeholder Salience Framework"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MITCHELL_SALIENCE",
+      "predicate": "prioriza_relacionamiento_con",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "1997",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F25-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de priorización",
+      "Mapeo de Poder-Interés Tradicional": "Ignora la legitimidad moral o jurídica y subestima a comunidades vulnerables sin poder económico.",
+      "Modelo de Prominencia (Mitchell et al.)": "Incorpora explícitamente la legitimidad y la urgencia, anticipando alianzas que convierten a actores dependientes en definitivos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Mapeador de Stakeholders",
+      "implication": "BRIDGE debe calcular la prominencia dinámica de cada actor externo mediante el triplete booleano (Poder, Legitimidad, Urgencia), alertando cuando un actor transita a clase Definitiva.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F26"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

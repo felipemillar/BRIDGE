@@ -1,0 +1,146 @@
+{
+  "question_id": "P10-F09",
+  "pilar": "P10",
+  "eje": "Verificación de hechos y cifras",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Cómo se documenta que una afirmación quedó pendiente o no puede publicarse?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cuando una afirmación, cifra o compromiso no puede ser verificado fehacientemente o queda vetado por restricciones legales/estratégicas, el sistema implementa un protocolo estricto de exclusión documentada en tres pasos: 1) Registro en el Catálogo de Afirmaciones Bloqueadas / Pendientes: Se ingresa el texto vetado en la sección 'Líneas Rojas y Afirmaciones Prohibidas' del expediente, asignándole el estado `FACT_CHECK_FAILED` o `LEGAL_HOLD_PENDING`; 2) Justificación Formal Obligatoria: El revisor técnico o legal debe consignar explícitamente el motivo de la exclusión (e.g., 'Cifra de inversión no aprobada por Directorio', 'Causa judicial bajo reserva según Art. 182 del Código Procesal Penal', 'Muestras de agua pendientes de informe de laboratorio acreditado'); y 3) Inclusión en el Paquete de Briefing para Voceros: El sistema inserta automáticamente una alerta visible en el guion del portavoz oficial: 'NO MENCIONAR: Afirmación en verificación. Ante consultas directas, declarar: Estamos levantando los antecedentes técnicos y los informaremos formalmente en cuanto concluya el peritaje oficial'.",
+  "findings": [
+    {
+      "claim_id": "P10-F09-C1",
+      "claim": "Toda afirmación no comprobada o vetada debe registrarse formalmente con justificación legal/técnica y generar una alerta explícita en el briefing del vocero para impedir su divulgación accidental.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "unverified_claims_documentation_protocol",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Flujo de Trabajo Integral (Fase 7: Briefing a Voceros Oficiales)'",
+          "retrieved_at": null,
+          "excerpt_short": "El Spokesperson Briefing Package contiene el mensaje central aprobado, líneas rojas (lo que no se debe decir), Q&A de contingencia y datos de contexto. Toda afirmación rechazada en la revisión tripartita pasa a las líneas rojas con justificación expresa.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "NDAA: Media Relations Essentials Guide for Designated Spokespersons (2024-2025)",
+          "source_id": "6223c06e-5859-47b9-a328-6add1f04c388",
+          "locator": "Section 'Managing Off-Limits Information and Pending Facts', p. 18-22",
+          "retrieved_at": null,
+          "excerpt_short": "Spokespersons must be provided with clear boundaries detailing which facts remain unconfirmed and why they cannot be discussed publicly, avoiding speculation that compromises organizational integrity.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las guías de la NDAA y el dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Texto de afirmación rechazada",
+      "Dictamen de objeción de Legal o SME"
+    ],
+    "actors": [
+      "Revisor Legal",
+      "Experto Técnico",
+      "Jefe de Redacción BRIDGE"
+    ],
+    "steps": [
+      "Marcado de la afirmación como rechazada en la interfaz",
+      "Ingreso del motivo normativo o técnico",
+      "Inyección automática en la sección 'Líneas Rojas' del briefing",
+      "Bloqueo de su uso en comunicados oficiales"
+    ],
+    "states": [
+      "Afirmación Vetada",
+      "Motivo Registrado",
+      "Línea Roja Activa"
+    ],
+    "outputs": [
+      "Registro de afirmaciones bloqueadas en el expediente"
+    ],
+    "exceptions": [
+      "Si la afirmación vetada es posteriormente certificada por laboratorio, el SME puede levantar el bloqueo mediante un cambio de versión"
+    ]
+  },
+  "entities": [
+    "Líneas Rojas",
+    "NDAA Media Relations",
+    "P10_RESEARCH_DOSSIER",
+    "LEGAL_HOLD_PENDING",
+    "Briefing de Vocería"
+  ],
+  "relations": [
+    {
+      "from": "Afirmación No Verificada",
+      "to": "Líneas Rojas",
+      "type": "INCORPORATED_INTO"
+    },
+    {
+      "from": "Líneas Rojas",
+      "to": "Vocero Oficial",
+      "type": "RESTRICTS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Decir verbalmente 'no hables de eso' vs Registro formal de líneas rojas en el sistema",
+      "diferencia": "La instrucción verbal se olvida en la tensión de la entrevista; la línea roja registrada formalmente provee una respuesta segura ensayada."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "unverified_claim_tracking": "100% de afirmaciones rechazadas auditadas en el log",
+    "spokesperson_adherence_rate": "Tolerancia de desvío < 5%"
+  },
+  "bridge_implications": "Incorporar en el componente `SpokespersonBrief` de BRIDGE un bloque destacado en rojo: 'Temas Prohibidos / Pendientes de Verificación'.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F10",
+    "P10-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

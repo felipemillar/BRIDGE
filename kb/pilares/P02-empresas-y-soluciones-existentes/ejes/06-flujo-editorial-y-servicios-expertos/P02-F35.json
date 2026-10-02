@@ -1,0 +1,154 @@
+{
+  "question_id": "P02-F35",
+  "pilar": "P02",
+  "eje": "Flujo editorial y servicios expertos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre flujo editorial y servicios expertos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos están respaldados por fuentes primarias verificadas del cuaderno P02: 1) Broadsight: respaldado por 'Broadsight System of Record for Corporate Communications and Issues Management' (2026), 'Broadsight Product Workflow and Communications Knowledge Management' (2026) y 'Broadsight AI Communications Workflow Assistant' (2026), que detallan la gestión de temas críticos, los flujos de aprobación y el repositorio de Q&A; 2) Prezly: respaldado por 'Prezly PR Software Newsrooms and Stakeholder CRM' (2026), detallando las capacidades de distribución de notas de prensa y salas de medios; 3) Entual: respaldado por 'Entual Platform FAQ Data Sources and Capabilities' (2026) y 'Entual Platform Stakeholder & Corporate Communications Intelligence' (2026), documentando su naturaleza de servicio de consultoría humana sobre fuentes abiertas en Países Bajos; 4) Contrlr: respaldado por 'Contrlr AI PR and Corporate Reputation Platform' (2026); 5) Errata y precedencia: '00_P02_GLOBAL_READ_ME_AND_ERRATA', que fija la exclusión de agencias de consultoría del conteo de proveedores de software.",
+  "findings": [
+    {
+      "claim_id": "P02-F35-C1",
+      "claim": "El respaldo documental del eje de flujo editorial se fundamenta en las especificaciones funcionales de Broadsight y Prezly y en la errata de precedencia que desglosa software de consultoría.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Fuentes primarias P02"
+      },
+      "evidence": [
+        {
+          "source_id": "bc46f4e1-79fa-4fca-86f0-6192709c7b7f",
+          "source_title": "Broadsight System of Record for Corporate Communications and Issues Management",
+          "original_url": "https://www.broadsight.com/solutions/issues-management/",
+          "locator": "Platform Specifications and Use Cases",
+          "excerpt_short": "Primary documentation validating issues repository, executive briefing cards, and multi-tier approval mechanisms.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        },
+        {
+          "source_id": "ef06bb22-25b6-40e4-aa2f-29b2c1b71892",
+          "source_title": "Entual Platform FAQ Data Sources and Capabilities",
+          "original_url": "https://www.entual.com/faq",
+          "locator": "FAQ: Data Ingestion and Advisory Model",
+          "excerpt_short": "Documents reliance on publicly accessible sources and specialized human intelligence analysts without internal enterprise connectors.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación documental directa en el manifiesto P02.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes primarias P02",
+      "Manifiesto auditado de fuentes"
+    ],
+    "actors": [
+      "Auditor de Fuentes",
+      "Analista de Investigación"
+    ],
+    "steps": [
+      "Comprobación de URL original y localizador",
+      "Verificación de texto sustantivo",
+      "Mapeo de fecha de publicación",
+      "Confirmación de ausencia de alucinación"
+    ],
+    "states": [
+      "Documento_Revisado",
+      "Cita_Verificada",
+      "Evidencia_Certificada"
+    ],
+    "outputs": [
+      "Índice de trazabilidad documental para el eje de flujo editorial"
+    ],
+    "exceptions": [
+      "Documentos de proveedores con URLs cambiadas que son auditados mediante el contenido archivado en el cuaderno"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BROADSIGHT_SOURCE",
+      "type": "documento_fuente",
+      "name": "Broadsight System of Record Documentation",
+      "aliases": [
+        "Broadsight Doc"
+      ]
+    },
+    {
+      "entity_id": "ENT_ENTUAL_SOURCE",
+      "type": "documento_fuente",
+      "name": "Entual Platform FAQ",
+      "aliases": [
+        "Entual FAQ"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BROADSIGHT_SOURCE",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "P02-F31",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F35-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Naturaleza de Fuentes: Broadsight vs Entual",
+      "Broadsight": "Manuales de software empresarial para orquestación de flujos de trabajo internos.",
+      "Entual": "Fichas de servicio de consultoría e inteligencia con analistas humanos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "La evidencia confirma la existencia de software operativo maduro para la gestión de Q&A corporativos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:38:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

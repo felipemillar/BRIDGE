@@ -1,0 +1,126 @@
+{
+  "question_id": "P06-X20",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Seguridad en recuperación combinada",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar seguridad en recuperación combinada de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la seguridad en recuperación combinada exige modelar: 1) Variables de control de acceso: `user_id`, `tenant_id`, `security_clearance` (D1_Publico, D2_Uso_Interno, D3_Confidencial, D4_Restringido_CMF, D5_Secreto_Industrial), `active_roles` (Viewer, Analyst, CCO, Legal_Counsel), `allowed_topic_tags`; 2) Variables de documento: `document_id`, `classification_level`, `retention_policy_id`, `encryption_key_arn`, `acl_whitelist_groups`; 3) Relaciones de seguridad: `HAS_ACCESS_TO(user, document_classification)`, `EXCLUDED_FROM_CONTEXT(document, query_execution_id)`, `ESCALATED_VIA_TOKEN(security_event, designated_custodian)`; 4) Condiciones inmutables: Regla de Privilegio Mínimo (denegar por defecto si `classification_level > user_clearance`), aislamiento físico o lógico en base de datos con particionado por `tenant_id`, y sellado inmutable en ledger de auditoría para cada documento interno inyectado en el prompt de un LLM.",
+  "findings": [
+    {
+      "claim_id": "P06-X20-C1",
+      "claim": "El modelo estructurado de seguridad combina taxonomía de clasificación de datos D1..D5 con reglas deterministas de privilegios y auditoría inmutable de prompts.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "Gobernanza de Información y Ciberseguridad"
+      },
+      "evidence": [
+        {
+          "source_id": "5168f7d7-3499-40e3-afc8-c6b216843f19",
+          "source_title": "Palantir AIP - Architecture Overview & Context Engineering",
+          "original_url": "https://palantir.com/docs/foundry/architecture-center/aip-architecture/",
+          "locator": "Security Architecture: Relational ACL Schemas",
+          "excerpt_short": "Access control policies map user credentials against object-level security markings, strictly evaluating rights prior to graph traversal or vector search indexing.",
+          "source_date": "2024-06-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación arquitectónica alineada con los marcos de defensa en profundidad corporativa.",
+      "epistemic_status_original": "diseno_de_datos_formal",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Esquema relacional de usuarios y documentos"
+    ],
+    "actors": [
+      "Oficial de Seguridad de la Información (CISO)",
+      "Desarrollador de Base de Datos"
+    ],
+    "steps": [
+      "Definición de tablas ACL y RLS",
+      "Configuración de directivas de cifrado envelope",
+      "Integración con Identity Provider (SAML/OAuth2)"
+    ],
+    "states": [
+      "Configured",
+      "Enforced"
+    ],
+    "outputs": [
+      "Esquema de seguridad relacional operativo"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SEC_SCHEMA",
+      "type": "modelo_datos_seguridad",
+      "name": "Esquema Estructurado de Seguridad RAG",
+      "aliases": [
+        "RAG Security Model"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SEC_SCHEMA",
+      "predicate": "gobierna_accesos_en",
+      "object_id": "ENT_ABAC_GATE",
+      "valid_from": "2024-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X20-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Cumple los requisitos más exigentes de auditoría SOC 2 Type II y Ley 21.719 en Chile.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

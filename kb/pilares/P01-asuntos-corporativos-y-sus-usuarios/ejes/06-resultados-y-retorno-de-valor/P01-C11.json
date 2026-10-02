@@ -1,0 +1,203 @@
+{
+  "question_id": "P01-C11",
+  "pilar": "P01",
+  "eje": "Resultados y retorno de valor",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre resultados y retorno de valor, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en la naturaleza del ROI: las fuentes internacionales empíricas y profesionales (Global Alliance GCF, Dircom ECE 2025, Public Affairs Council) definen el valor mediante activos intangibles, confianza, legitimidad social, reporte directo al CEO (54,4%) y presencia en Comité Ejecutivo (32,3%), admitiendo la dificultad de aislar un retorno financiero unitario directo. En contraste, las síntesis internas iniciales (P01_RESEARCH_DOSSIER) proponen métricas operativas duras: reducción de tiempo de 4h a 15 min, 80% menos tiempo de búsqueda y 90% de acierto en preguntas difíciles. Prevalencia editorial: Prevalecen las fuentes empíricas originales para el valor estratégico de la profesión (el ROI es de legitimidad, gobernanza y confianza de largo plazo); y prevalece la corrección editorial de P01_GAPS_AND_VALIDATION, la cual reclasifica la promesa cuantitativa de '4 horas a 15 minutos' como Hipótesis de Trabajo (HT-2) no demostrada empíricamente en el corpus previo.",
+  "findings": [
+    {
+      "claim_id": "P01-C11-C1",
+      "claim": "Las fuentes originales y estándares globales (Global Alliance GCF, Dircom ECE 2025 y Public Affairs Council) demuestran que el retorno de valor en asuntos corporativos reside en la preservación de intangibles estratégicos (reputación, confianza, licencia social) y en la influencia en el C-Suite (54,4% de reporte directo al CEO), reconociendo que no existe un ROI financiero lineal de corto plazo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2025",
+        "region": "Europa / Global",
+        "actor": "Directores de Comunicación y C-Suite"
+      },
+      "evidence": [
+        {
+          "source_id": "11566961-aace-42d0-bdcc-6b9171cecded",
+          "source_title": "Dircom - El Estado de la Comunicación en España (ECE 2025): Reporte al CEO y Comité Ejecutivo",
+          "original_url": "https://www.dircom.org/actualidad/mas-de-la-mitad-de-los-dircoms-en-espana-reporta-al-maximo-ejecutivo-de-su-organizacion/",
+          "locator": "Capítulo: Posición en el organigrama y valoración de la dirección",
+          "excerpt_short": "54,4% reporte al CEO y 32,3% en Comité Ejecutivo; 3 de cada 4 CEOs valoran con nota alta la función.",
+          "source_date": "2025-09-25",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        },
+        {
+          "source_id": "e74a5c14-926b-401a-8441-cc77b5b3e677",
+          "source_title": "Global Alliance & Corporate Excellence - The Global PR and Communication Model",
+          "original_url": "https://www.corporateexcellence.org/recurso/the-global-pr-and-communication-model/e464cce1-872f-4ad4-9dfa-c5ee6942918e",
+          "locator": "Bloque 5: Connecting Intelligence & Intangible Asset Metrics",
+          "excerpt_short": "Medición de valor basada en confianza, reputación y capital relacional intangible.",
+          "source_date": "2021",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de estándares globales empíricos y modelos académicos consolidados.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C11-C2",
+      "claim": "El documento correctivo P01_GAPS_AND_VALIDATION corrige las afirmaciones de retorno de P01_RESEARCH_DOSSIER, estableciendo que la promesa de ahorro de tiempo ('de 4 horas a 15 minutos') es una Hipótesis de Trabajo (HT-2) / Afirmación Comercial, y que la métrica observable principal debe ser la anulación de desajustes fácticos en vocerías de alto impacto.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Auditoría BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Reclasificación Epistémica de Métricas de Retorno Operacional",
+          "excerpt_short": "La reducción de 4h a 15m es una hipótesis HT-2 sujeta a prueba de campo.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Regla de corrección editorial interna fijada en los documentos metodológicos de P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Horas de trabajo operativo",
+      "Costos de consultoría externa",
+      "Incidentes de contradicción"
+    ],
+    "actors": [
+      "Dircom",
+      "CEO",
+      "CFO",
+      "Consultoras Externas"
+    ],
+    "steps": [
+      "Medición de línea base de tiempos",
+      "Implementación de herramienta de asistencia",
+      "Cálculo de horas liberadas para estrategia",
+      "Auditoría de consistencia de mensajes"
+    ],
+    "states": [
+      "Linea_Base_Registrada",
+      "Herramienta_Desplegada",
+      "Retorno_Medido"
+    ],
+    "outputs": [
+      "Reporte de Retorno de Valor: Eficiencia Operativa y Capital Reputacional"
+    ],
+    "exceptions": [
+      "Dificultad de aislar el valor del software de variables macroeconómicas o políticas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODELO_RETORNO_VALOR",
+      "type": "modelo_gestion",
+      "name": "Modelo de Retorno de Valor en Asuntos Corporativos",
+      "aliases": [
+        "Intangible Asset Valuation & Efficiency"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODELO_RETORNO_VALOR",
+      "predicate": "combina_metricas_de",
+      "object_id": "Eficiencia_Horas_y_Reputacion_Merco",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C11-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "ROI Financiero Transaccional vs Creación de Confianza Estratégica",
+      "Enfoque Transaccional Tradicional": "Intento forzado de medir retorno publicitario equivalente (VPE/AVE), ampliamente desacreditado.",
+      "Enfoque Estratégico Prevaleciente": "Protección de la licencia social, acceso al CEO y ahorro medible de tiempo en elaboración de minutas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric_name": "Tasa de Reporte Directo al CEO",
+      "value": 54.4,
+      "unit": "porcentaje",
+      "denominator": "Total de directores de comunicación encuestados en España (Dircom ECE 2025)",
+      "evidence_claim_id": "P01-C11-C1"
+    },
+    {
+      "metric_name": "Presencia en Comité Ejecutivo",
+      "value": 32.3,
+      "unit": "porcentaje",
+      "denominator": "Total de directores de comunicación encuestados en España (Dircom ECE 2025)",
+      "evidence_claim_id": "P01-C11-C1"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Posicionar el valor de BRIDGE ante el C-Suite como una salvaguarda de consistencia institucional y ahorro de tiempo crítico, evitando el esquema desacreditado de valor publicitario.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-C12",
+    "P01-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

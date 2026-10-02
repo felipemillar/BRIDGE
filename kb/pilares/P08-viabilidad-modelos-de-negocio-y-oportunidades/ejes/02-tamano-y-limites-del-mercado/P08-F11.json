@@ -1,0 +1,144 @@
+{
+  "question_id": "P08-F11",
+  "pilar": "P08",
+  "eje": "Tamaño y límites del mercado",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre tamaño y límites del mercado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El dimensionamiento y los límites del mercado se sustentan en cuatro fuentes primarias del corpus: 1) Comisión para el Mercado Financiero (CMF Chile, 2024-2026), con la nómina oficial de emisores de valores y sociedades anónimas reguladas; 2) Michael Page Chile (2025-2026), que detalla las dotaciones y estructuras salariales de los equipos de asuntos corporativos en más de 140 empresas; 3) FiscalNote Inc. y Quorum (2025-2026), que proporcionan datos contractuales reales de suscripciones y exclusiones en el mercado de software regulatorio; y 4) Cámara de Comercio de Santiago (CCS, 2025-2026), cuyos reportes de gobernanza e IA empresarial confirman el tamaño de los comités de sostenibilidad y asuntos públicos en las principales compañías del país.",
+  "findings": [
+    {
+      "claim_id": "P08-F11-C1",
+      "claim": "Los límites de mercado y volúmenes de clientes se basan en registros regulatorios oficiales de la CMF y estudios salariales y gremiales locales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "bibliographic_market_evidence",
+      "evidence": [
+        {
+          "source_title": "CMF Chile: Hechos Esenciales y Divulgación de Información al Mercado Financiero",
+          "source_id": "3afc11c2-56db-41bc-8e22-e6fbaafcc7de",
+          "locator": "Sección 'Registro de Emisores de Valores y Sociedades Supervisadas'",
+          "excerpt_short": "El registro de emisores supervisados por la Comisión comprende aproximadamente 350 entidades activas sujetas a obligaciones continuas de reporte, gobierno corporativo y divulgación de información esencial.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Cámara de Comercio de Santiago: Comités de Asuntos Corporativos e IA Empresarial",
+          "source_id": "be654fcc-5a18-4ae6-85e2-ee12b9cf479e",
+          "locator": "Informe Anual 'Adopción Tecnológica en Grandes Empresas Chilenas', p. 14-17",
+          "excerpt_short": "Las grandes empresas asociadas reportan comités formales de gestión reputacional y regulatoria, concentrándose la demanda de herramientas avanzadas en el 40% superior de las corporaciones con mayor exposición pública.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada entre los reportes de la CMF y la CCS.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memorias CMF",
+      "Informes gremiales CCS",
+      "Estudios PageGroup"
+    ],
+    "actors": [
+      "Investigador Antigravity",
+      "Auditor de Manifiesto"
+    ],
+    "steps": [
+      "Verificación de registros de emisores",
+      "Validación cruzada de dotaciones",
+      "Comprobación de fechas de vigencia"
+    ],
+    "states": [
+      "Datos Registrados",
+      "Verificación Completa",
+      "Respaldado"
+    ],
+    "outputs": [
+      "Catálogo de respaldo del Eje 2"
+    ],
+    "exceptions": [
+      "Variaciones por desliste o privatización de emisores CMF"
+    ]
+  },
+  "entities": [
+    "CMF Chile",
+    "Cámara de Comercio de Santiago",
+    "Michael Page",
+    "FiscalNote"
+  ],
+  "relations": [
+    {
+      "from": "CMF Registro",
+      "to": "Universo TAM Chile",
+      "type": "defines"
+    },
+    {
+      "from": "CCS Informe",
+      "to": "Segmentación SAM",
+      "type": "substantiates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Datos censales oficiales vs Estimaciones de consultoras informales",
+      "diferencia": "La CMF provee el padrón legal exacto de empresas obligadas a reportar, eliminando conjeturas sobre el tamaño del mercado corporativo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cmf_issuers_count": "Aprox. 350 entidades activas",
+    "ccs_active_committees_percentage": "40% de grandes corporaciones con comités estructurados"
+  },
+  "bridge_implications": "Mantener actualizado el inventario de emisores de la CMF como la lista maestra de prospección comercial de BRIDGE.",
+  "open_gaps": [
+    "Integrar el catastro de filiales chilenas de multinacionales que no transan en bolsa local pero reportan en el extranjero."
+  ],
+  "next_question_ids": [
+    "P08-F12",
+    "P08-F13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

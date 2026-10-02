@@ -1,0 +1,148 @@
+{
+  "question_id": "P10-F12",
+  "pilar": "P10",
+  "eje": "Verificación de hechos y cifras",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra verificación de hechos y cifras sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto Documentado: 'Verificación y Certificación de Cifras de Emisiones de Alcance 1 y 2 para el Reporte de Sostenibilidad Anual bajo NCG 461'. Entradas: 1) Afirmación en Borrador: 'Durante 2025 redujimos nuestras emisiones de GEI en un 18,4% respecto a la línea base 2020'; 2) Proceso de Verificación Fáctica en BRIDGE: El sistema ejecuta un cotejo automatizado contra el expediente P04-ENV-2025-09 y el informe de verificación independiente emitido por la firma auditora externa (PwC/KPMG); 3) Detección de Discrepancia: El peritaje técnico arroja que la reducción verificada fue de 16,8%, y que el 1,6% adicional corresponde a proyectos de compensación no consolidados; 4) Acción de Corrección Fáctica: El SME de Medio Ambiente y el Abogado de Cumplimiento ajustan el texto a 'reducción directa verificada de 16,8% en faena, complementada por 1,6% en bonos de carbono certificados'; 5) Blindaje Legal: El Asesor Legal incorpora el disclaimer estándar de Safe Harbor bajo SEC Rule 10b-5 y la advertencia metodológica exigida por la CMF NCG 461. Resultado Esperado: Aprobación formal del dato en el Shared Fact Record SFR-2026-0045, publicación sin objeciones en el newsroom y cero requerimientos de aclaración de la CMF o SERNAC por inconsistencia de datos.",
+  "findings": [
+    {
+      "claim_id": "P10-F12-C1",
+      "claim": "El caso documentado ilustra el control de calidad fáctico: detección de discrepancia en cifra de emisiones antes de publicar, corrección conforme a peritaje técnico de P04 y blindaje regulatorio bajo CMF NCG 461 y SEC Rule 10b-5.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "concrete_case_fact_checking",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 6 'Escenarios Sintéticos Detallados (Escenario A: Reporte Integrado de Sostenibilidad)'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de Reporte Integrado: El sistema valida que las cifras de intensidad de carbono coincidan exactamente con el informe de verificación independiente de la firma auditora antes de autorizar el despacho a la CMF y newswires.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "CMF Chile: Norma de Caracter General NCG 461 (Sostenibilidad y ESG)",
+          "source_id": "4e9fe39f-638d-4f54-9a74-cb7e5ee26377",
+          "locator": "Sección II 'Métricas de Emisiones y Gobernanza Climática'",
+          "retrieved_at": null,
+          "excerpt_short": "Las entidades deberán reportar los indicadores de emisiones de gases de efecto invernadero (Alcance 1, 2 y 3) indicando la metodología empleada y si la información ha sido objeto de verificación independiente por terceros.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de los requerimientos de la NCG 461 de la CMF y del dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Texto del borrador de sostenibilidad",
+      "Informe de verificación de GEI de auditor externo",
+      "Esquema NCG 461 CMF"
+    ],
+    "actors": [
+      "Gerente de Sustentabilidad",
+      "Auditor Independiente",
+      "Oficial Legal CMF"
+    ],
+    "steps": [
+      "Cruce de cifras del borrador vs informe auditor",
+      "Ajuste de redacción al porcentaje exacto verificado",
+      "Visación legal de Safe Harbor",
+      "Aprobación de la versión final v1.0"
+    ],
+    "states": [
+      "Discrepancia Detectada",
+      "Cifra Corregida",
+      "Safe Harbor Añadido",
+      "Cierre Aprobado"
+    ],
+    "outputs": [
+      "Reporte de sostenibilidad con datos blindados"
+    ],
+    "exceptions": [
+      "Si la firma auditora no hubiese entregado el informe final, la cifra habría sido sustituida por una cláusula de información en proceso"
+    ]
+  },
+  "entities": [
+    "Caso NCG 461",
+    "Emisiones Alcance 1 y 2",
+    "CMF Chile",
+    "SEC Rule 10b-5",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Reporte Anual",
+      "to": "CMF NCG 461",
+      "type": "REGULATED_BY"
+    },
+    {
+      "from": "Cifra de GEI",
+      "to": "Informe Auditor",
+      "type": "VERIFIED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Redondear cifras por impacto publicitario vs Reportar dato verificado exacto",
+      "diferencia": "Redondear hacia arriba constituye greenwashing punible por SERNAC y CMF; reportar el dato exacto auditable protege la reputación institucional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "discrepancy_resolved": "De 18,4% a 16,8% (desglose transparente)",
+    "safe_harbor_inclusion": "100% obligatorio para declaraciones hacia el futuro"
+  },
+  "bridge_implications": "Integrar un módulo de auditoría de métricas ESG en BRIDGE que impida la publicación de cifras que difieran de los informes de aseguramiento externo.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F13",
+    "P10-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "question_id": "P07-F20",
+  "pilar": "P07",
+  "eje": "Simulación y práctica de vocería",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué retroalimentación útil se puede ofrecer sobre evidencia, claridad y prudencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El sistema ofrece un reporte analítico tridimensional tras cada sesión de práctica: 1) Eje Evidencia: Mide la exactitud de las cifras citadas frente a los reportes auditados, detecta datos inventados o erróneos y penaliza la falta de anclaje probatorio en las respuestas; 2) Eje Claridad: Mide la duración de los soundbites (tiempo ideal: 15 a 25 segundos), la ausencia de jerga técnica incomprensible para la ciudadanía y la efectividad de los conectores de Bridging para retornar al Message House; 3) Eje Prudencia: Evalúa la neutralización de trampas retóricas, la contención emocional ante agresiones verbales, la ausencia de compromisos no autorizados y el resguardo estricto de secretos comerciales o información privilegiada regulada por la Ley 18.045.",
+  "findings": [
+    {
+      "claim_id": "P07-F20-C1",
+      "claim": "La retroalimentación estructurada en los ejes de Evidencia, Claridad y Prudencia permite calibrar objetivamente la efectividad y el riesgo legal del portavoz corporativo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "spokesperson_feedback_matrix",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 7 (Criterios de Calidad, Utilidad y Trazabilidad)",
+          "excerpt_short": "La evaluación del vocero se basa en la tríada de rigor: Evidencia (¿usó las cifras oficiales o improvisó datos?), Claridad (¿fue conciso y transmitió el pilar del Message House sin enredarse en tecnicismos?) y Prudencia (¿evitó caer en la premisa culposa del entrevistador y protegió hechos reservados bajo Ley 18.045?).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Comms Manoeuvres: Media Training for CEOs (Bridging, Flagging, Hooking)",
+          "source_id": "234523c8-725c-4d7c-be22-086db78823a0",
+          "locator": "Capítulo 'Post-Interview Debrief', p. 28-34",
+          "excerpt_short": "A debrief that simply says 'you did well' is useless. Spokespersons require precise diagnostic feedback on soundbite discipline, factual adherence, and whether their bridging maneuvers appeared seamless or clumsy.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia directa entre las mejores prácticas de media training y la matriz de evaluación del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "rubrica_debrief_tripartita": {
+      "Dimension_Evidencia": {
+        "indicadores": [
+          "Exactitud de cifras vs balances auditados",
+          "Citas a fuentes institucionales reconocidas (DGA, SMA, CMF)",
+          "Penalización por datos no corroborados (-20 pts)."
+        ]
+      },
+      "Dimension_Claridad": {
+        "indicadores": [
+          "Extensión del soundbite (óptimo 15-25 segundos)",
+          "Transición de Bridging limpia sin titubeos",
+          "Uso de marcadores de Flagging ('Lo central es...')."
+        ]
+      },
+      "Dimension_Prudencia": {
+        "indicadores": [
+          "Rechazo sereno de premisas falsas",
+          "Cero filtración de información confidencial",
+          "Tono empático sin asumir responsabilidades prematuras."
+        ]
+      }
+    }
+  },
+  "entities": [
+    "Tríada de Rigor",
+    "Comms Manoeuvres",
+    "Soundbite Discipline",
+    "Ley 18.045"
+  ],
+  "relations": [
+    {
+      "from": "Tríada de Rigor",
+      "to": "Sesión de Simulación",
+      "type": "evaluates"
+    },
+    {
+      "from": "Retroalimentación BRIDGE",
+      "to": "Portavoz",
+      "type": "coaches"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Feedback Subjetivo de Consultor vs Feedback Multidimensional BRIDGE",
+      "diferencia": "El feedback subjetivo depende de la simpatía del asesor; el de BRIDGE audita cada segundo de transcripción contra documentos y normativas legales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "feedback_generation_latency": "< 5 segundos tras finalizar la sesión",
+    "scoring_scale": "0 a 100 puntos por dimensión"
+  },
+  "bridge_implications": "Implementar un cuadro de mando post-simulación en BRIDGE que desglose el rendimiento del vocero en las tres barras de Evidencia, Claridad y Prudencia.",
+  "open_gaps": [
+    "Detección de muletillas verbales y tiempos de silencio prolongados en el stream de audio."
+  ],
+  "next_question_ids": [
+    "P07-F21",
+    "P07-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

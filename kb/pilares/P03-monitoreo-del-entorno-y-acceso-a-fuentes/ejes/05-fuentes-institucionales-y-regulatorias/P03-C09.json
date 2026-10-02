@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C09",
+  "pilar": "P03",
+  "eje": "Fuentes institucionales y regulatorias",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre fuentes institucionales y regulatorias, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radicaba en que las notas preliminares agrupaban acríticamente herramientas de investigación académica (Meta Content Library y TikTok Research API) junto con APIs oficiales gubernamentales (SEC EDGAR, CMF y ChileCompra), como si fueran fuentes utilizables indistintamente en una arquitectura comercial de asuntos corporativos. Prevalece la rectificación formal de la P03_QUALITY_ADDENDUM (Sección 2.5): los términos de servicio de Meta Content Library y TikTok Research API prohíben de forma vinculante el uso corporativo o comercial, restringiéndose exclusivamente a investigadores afiliados a universidades acreditadas mediante consorcios como ICPSR. Asimismo, se establecen las cuotas técnicas de rigor: SEC EDGAR impone un límite estricto de 10 req/s por IP con declaración obligatoria de User-Agent con correo de contacto, y ChileCompra requiere autenticación por tickets con límites de concurrencia diaria, rigiendo la obligatoriedad de diseñar la arquitectura únicamente sobre fuentes con elegibilidad comercial asegurada.",
+  "findings": [
+    {
+      "claim_id": "P03-C09-C1",
+      "claim": "Prevalece la rectificación de la adenda de calidad P03 que descarta el uso corporativo de Meta Content Library y TikTok Research API por prohibición contractual expresa, delimitando las cuotas y requisitos técnicos de SEC EDGAR y ChileCompra.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / EE.UU.",
+        "actor": "Auditoría Regulatoria P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.5: Diferenciación Estricta de Cuotas y Condiciones de Elegibilidad",
+          "excerpt_short": "Meta Content Library... el uso corporativo o para toma de decisiones empresariales de Asuntos Corporativos está formal y contractualmente prohibido... TikTok Research API restringe credenciales a investigadores académicos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación vinculante según la regla de precedencia editorial del pilar.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Términos de servicio de APIs",
+      "Directiva de elegibilidad corporativa"
+    ],
+    "actors": [
+      "Compliance Officer",
+      "Architecture Gatekeeper"
+    ],
+    "steps": [
+      "Verificación de cláusulas de elegibilidad",
+      "Exclusión de APIs académicas",
+      "Configuración de cuotas en APIs oficiales"
+    ],
+    "states": [
+      "APIs_Audited",
+      "Academic_APIs_Excluded",
+      "Official_Connectors_Configured"
+    ],
+    "outputs": [
+      "Pipeline regulatorio blindado contra infracciones contractuales"
+    ],
+    "exceptions": [
+      "Convenios bilaterales directos con proveedores de datos comerciales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RECTIFICACION_APIS_REGULATORIAS",
+      "type": "rectificacion_editorial",
+      "name": "Rectificación de Elegibilidad de APIs Regulatorias",
+      "aliases": [
+        "Regulatory API Eligibility Rectification"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RECTIFICACION_APIS_REGULATORIAS",
+      "predicate": "depura_catalogo_de",
+      "object_id": "Eje_Regulatorio_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Elegibilidad en Asuntos Corporativos",
+      "Meta Content Library / TikTok Research": "Inutilizables: prohibición expresa en contratos y términos de servicio.",
+      "SEC EDGAR / CMF / ChileCompra": "Utilizables: APIs oficiales de datos públicos con límites técnicos de tasa."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Uso corporativo de Meta Content Library y TikTok Research API",
+      "initial_claim": "Meta Content Library y TikTok Research son canales viables para la escucha corporativa.",
+      "corrected_claim": "Ambas plataformas prohíben de forma terminante el uso corporativo en sus términos de servicio.",
+      "resolution": "Prevalece la P03_QUALITY_ADDENDUM por regla de precedencia editorial."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Excluir formalmente Meta Content Library de la arquitectura de producción de BRIDGE para garantizar cumplimiento normativo absoluto.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "question_id": "P10-F39",
+  "pilar": "P10",
+  "eje": "Canales y escenarios",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Cómo mantener coherencia sin enviar el mismo texto a audiencias distintas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La coherencia sin redundancia textual se logra desacoplando la 'Columna Vertebral Semántica' (Shared Semantic Backbone) del 'Registro Retórico de Canal': 1) Registro Unificado de Hechos (Shared Fact Record): Todas las versiones se alimentan de las mismas entidades, cifras certificadas, fechas y líneas rojas inmutables; 2) Modulación Semántica Controlada: Se adapta el nivel de detalle técnico, la extensión y el tono emocional según la audiencia (e.g., los ingenieros reciben tablas de concentración en partes por millón; los vecinos reciben explicaciones sobre la inocuidad para el agua potable y los cultivos; los inversionistas reciben el análisis de costo de remediación); 3) Verificación Algorítmica de No-Contradicción: Motores semánticos de guardrails comparan las afirmaciones de cada derivada contra el mensaje maestro aprobado, alertando si una versión sugiere negligencia mientras otra afirma caso fortuito; y 4) Principio de la Verdad Institucional Única (Page Principles: 'Tell the Truth'): Lo que se afirme a puerta cerrada ante la autoridad debe ser estrictamente consistente con lo que se declare en el newswire de prensa y en el boletín sindical.",
+  "findings": [
+    {
+      "claim_id": "P10-F39-C1",
+      "claim": "Mantener la coherencia multicanal sin enviar textos idénticos requiere compartir la misma base factual y líneas rojas del Shared Fact Record, aplicando modulación de tono y verificación algorítmica de no contradicción.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "cross_channel_coherence_architecture",
+      "evidence": [
+        {
+          "source_title": "Arthur W. Page Society: The Page Principles",
+          "source_id": "405cc287-6f42-46a2-b04d-dd7fa51c16a1",
+          "locator": "Principle 1 'Tell the Truth' & Principle 2 'Prove it with Action'",
+          "retrieved_at": null,
+          "excerpt_short": "Public relations must present the character of the enterprise as a unified whole. Speaking with different voices or offering contradictory accounts to different publics destroys corporate credibility.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Fase 8: Adaptación Multicanal y Guardrails de Consistencia'",
+          "retrieved_at": null,
+          "excerpt_short": "Coherencia sin duplicación: todas las variantes derivan del mensaje maestro v1.0. Las cifras numéricas y las líneas rojas son inmutables; lo que varía es la extensión sintáctica y el tono contextual.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "ContentGrip: Practical PR Workflow - Staging, Embargoes and Multi-Channel Distribution",
+          "source_id": "4b3bd2de-e375-4ca4-a494-8adce9b0d5a5",
+          "locator": "Section 'Maintaining Narrative Alignment Across Digital Outlets'",
+          "retrieved_at": null,
+          "excerpt_short": "Narrative alignment relies on shared foundational message pillars, allowing creative adaptation for LinkedIn or internal memos without departing from core approved statements.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los principios rectores de la Arthur W. Page Society y las especificaciones de flujo de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Mensaje Maestro Aprobado v1.0",
+      "Reglas de adaptación por canal",
+      "Matriz de líneas rojas"
+    ],
+    "actors": [
+      "Redactor de Derivadas",
+      "Motor de Guardrails BRIDGE",
+      "Jefe de Prensa"
+    ],
+    "steps": [
+      "Extracción de las afirmaciones nucleares del mensaje maestro",
+      "Redacción de las adaptaciones específicas por canal",
+      "Ejecución de prueba de similitud semántica y consistencia lógica",
+      "Detección y bloqueo de cualquier contradicción de afirmaciones",
+      "Aprobación del paquete coherente multicanal"
+    ],
+    "states": [
+      "MASTER_EXTRACTED",
+      "VARIANTS_GENERATED",
+      "CONSISTENCY_CHECKED",
+      "PACK_APPROVED"
+    ],
+    "outputs": [
+      "Set multicanal coherente, diferenciado y seguro"
+    ],
+    "exceptions": [
+      "Si un canal requiere omitir un disclaimer obligatorio por falta de espacio, se exige enlace permanente al documento maestro"
+    ]
+  },
+  "entities": [
+    "Page Principles",
+    "Shared Semantic Backbone",
+    "Guardrails Semánticos",
+    "ContentGrip",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Mensaje Maestro",
+      "to": "Variantes de Canal",
+      "type": "ENFORCES_FACTUAL_ALIGNMENT"
+    },
+    {
+      "from": "Guardrails Semánticos",
+      "to": "Variantes de Canal",
+      "type": "SCANS_FOR_CONTRADICTIONS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Versiones desconectadas escritas por áreas separadas vs Derivación gobernada",
+      "diferencia": "Las versiones desconectadas se contradicen ante la opinión pública; la derivación gobernada garantiza una sola verdad institucional modulada para cada público."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cross_channel_contradiction_rate": "0% de contradicciones lógicas entre comunicados externos e internos",
+    "factual_anchor_retention_rate": "100% de cifras del SFR preservadas sin alteración"
+  },
+  "bridge_implications": "BRIDGE debe calcular embeddings semánticos para comparar simultáneamente los textos de todos los canales antes de permitir su publicación programada.",
+  "open_gaps": [
+    "Medición de recepción de coherencia en audiencias híbridas que consumen tanto medios como redes sociales."
+  ],
+  "next_question_ids": [
+    "P10-F40",
+    "P10-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

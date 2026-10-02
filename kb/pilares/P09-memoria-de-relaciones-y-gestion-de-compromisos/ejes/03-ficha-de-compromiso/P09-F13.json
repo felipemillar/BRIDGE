@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-F13",
+  "pilar": "P09",
+  "eje": "Ficha de compromiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué campos identifican promesa, responsable, beneficiario, plazo, evidencia y estado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La Ficha de Compromiso (Entity_Commitment) requiere 14 atributos nucleares estandarizados: 1) ID único inmutable (e.g., COMP-2025-089); 2) Título y descripción operativa SMART (específica, medible, alcanzable, relevante y temporal); 3) Tipología de compromiso (voluntario comunitario, exigencia de RCA, acuerdo de mesa de diálogo, o medida de mitigación); 4) Dueño interno responsable (1 sola persona natural con cargo y correo, sin responsabilidades colectivas diluidas); 5) Beneficiario directo (persona natural o entidad colectiva destinataria); 6) Fecha de adquisición del compromiso; 7) Fecha límite improrrogable (deadline) e hitos intermedios; 8) Presupuesto estimado/asignado y centro de costos; 9) Estado del compromiso (PROPUESTO, APROBADO_ASIGNADO, EN_EJECUCION, EN_VERIFICACION, CUMPLIDO_CERRADO, RENEGOCIADO, INCUMPLIDO_VENCIDO, CANCELADO); 10) Nivel de criticidad o salience (Bajo, Medio, Alto, Crítico); 11) Tipo de evidencia requerida para el cierre (acta firmada, comprobante SMA SSA, factura de obra, informe técnico); 12) Enlace probatorio al expediente digital; 13) Historial de auditoría inmutable; y 14) Tags territoriales y de faena.",
+  "findings": [
+    {
+      "claim_id": "P09-F13-C1",
+      "claim": "La ficha de compromiso exige un único responsable corporativo individual, fecha de vencimiento fija, evidencia probatoria tipificada y estado según la máquina finita de 8 estados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "commitment_record_schema",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Diccionario de Datos: Ficha de Compromiso (Entity_Commitment)'",
+          "retrieved_at": null,
+          "excerpt_short": "Regla cardinal: Un compromiso debe tener exactamente UN dueño interno responsable (single point of accountability). Se prohíben asignaciones genéricas a 'Gerencia de Sustentabilidad' o 'Equipo de Operaciones'. Requiere fecha límite, tipología de evidencia y estado canónico.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: The Proving Problem — Why DIY AI Can't Prove Compliance (Commitment Tracking)",
+          "source_id": "27ce9bc8-70cf-4dc0-ac19-d8787d3bccd6",
+          "locator": "Section 'Core Attributes of an Auditable Commitment', p. 11-15",
+          "retrieved_at": null,
+          "excerpt_short": "To survive an environmental audit or community grievance, each commitment must prove who promised what, to whom, by when, under what authority, and what concrete document proves fulfillment.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Boréalis SRM y las especificaciones normativas del dossier de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Acta de reunión",
+      "Resolución de Calificación Ambiental",
+      "Mesa de diálogo comunitaria"
+    ],
+    "actors": [
+      "Dueño del Compromiso",
+      "Gestor de Asuntos Corporativos",
+      "Auditor de Sustentabilidad"
+    ],
+    "steps": [
+      "Extracción de la promesa del acta",
+      "Completitud de los 14 campos obligatorios",
+      "Asignación unívoca al responsable",
+      "Aceptación formal del responsable en plataforma"
+    ],
+    "states": [
+      "Propuesto",
+      "Asignado",
+      "Aceptado",
+      "En Seguimiento"
+    ],
+    "outputs": [
+      "Ficha de compromiso activa en BRIDGE"
+    ],
+    "exceptions": [
+      "Compromisos de montos sobre USD 50.000 requieren visación de la Gerencia de Finanzas antes de pasar a APROBADO"
+    ]
+  },
+  "entities": [
+    "Entity_Commitment",
+    "Dueño Único (Single Point of Accountability)",
+    "Boréalis SRM",
+    "Máquina de Estados",
+    "Evidencia Probatoria"
+  ],
+  "relations": [
+    {
+      "from": "Entity_Commitment",
+      "to": "Entity_User",
+      "type": "assigned_to_single_owner"
+    },
+    {
+      "from": "Entity_Commitment",
+      "to": "Entity_Evidence",
+      "type": "verified_by"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Compromiso en planilla Excel vs Ficha de compromiso gobernada",
+      "diferencia": "La planilla carece de validación de dueño único, historización inmutable de cambios y verificación documental."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "commitment_schema_fields": "14 campos obligatorios",
+    "owner_cardinality": "Exactamente 1 persona natural responsable"
+  },
+  "bridge_implications": "Crear el componente `CommitmentCard` en la interfaz de BRIDGE con validación estricta de formulario (bloquear guardado si el dueño es un departamento o grupo).",
+  "open_gaps": [
+    "Definir el flujo de reasignación cuando el dueño del compromiso renuncia a la empresa."
+  ],
+  "next_question_ids": [
+    "P09-F14",
+    "P09-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

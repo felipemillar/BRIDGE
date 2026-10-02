@@ -1,0 +1,191 @@
+{
+  "question_id": "P02-F04",
+  "pilar": "P02",
+  "eje": "Universo comercial y deduplicación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar universo comercial y deduplicación de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un esquema relacional normalizado con las siguientes especificaciones: 1) Variables de entidad: ID_Proveedor (PROV-001 a PROV-070), Entidad_Legal, Grupo_Corporativo, Marca_Producto, Sede_HQ (con flag de verificación), Cobertura_Comercial, Categoria_Primaria (1 a 7), Relacion_Competitiva (Directo, Parcial, Sustituto, Complemento), Modelo_Operativo (SaaS, Híbrido, Consultoría), URL_Primaria, Módulos Saber/Escuchar/Hablar/Relacionar (con niveles OPD/FD/DTI/POR/ND), Limitaciones_Observadas y Confianza_Epistémica; 2) Siete Categorías Funcionales: (1) Media Monitoring & Social Listening (24 prov, 34,3%), (2) Public Affairs & Stakeholder CRM (11 prov, 15,7%), (3) Enterprise Search, RAG & Knowledge (6 prov, 8,6%), (4) PR Workflow & Governance (10 prov, 14,3%), (5) Medición de Reputación y Confianza (5 prov, 7,1%), (6) Agencias y Consultoras Estratégicas (10 prov, 14,3%), (7) Narrative & Disinformation Intelligence (4 prov, 5,7%); 3) Cuatro Condiciones de Deduplicación: Condición 1 (Control de Propiedad: si Marca_A pertenece a Grupo_Y, consolidar en 1 registro con matriz Grupo_Y); Condición 2 (Identidad Legal: si RazónSocial_A = RazónSocial_B, unificar fila); Condición 3 (Exclusión de No Comerciales: si Tipo in {Asociación, Estándar, Sujeto de Estudio}, excluir de N_comm=70); Condición 4 (Independencia Operativa: si vínculo es meramente comercial o de liderazgo compartido sin fusión accionaria formal, preservar registros separados).",
+  "findings": [
+    {
+      "claim_id": "P02-F04-C1",
+      "claim": "El universo de los 70 proveedores independientes se distribuye de forma exhaustiva en 7 categorías funcionales de mercado, donde el monitoreo de medios concentra el 34,3% (24 proveedores), seguido de asuntos públicos con el 15,7% (11 proveedores) y agencias con el 14,3% (10 proveedores).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Taxonomía de Mercado P02"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Distribución por Categorías Funcionales del Mercado",
+          "excerpt_short": "Segmentación en 7 categorías funcionales totalizando el 100% de los 70 proveedores.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Conteo auditado en el atlas reconciliado de P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P02-F04-C2",
+      "claim": "La escala epistémica obligatoria para calificar la presencia de cada uno de los 4 módulos de BRIDGE en los proveedores se divide en OPD (Oferta Pública), FD (Declarada en Marketing), DTI (Técnica Identificada), POR (Prueba Realizada = Ninguna) y ND (No Documentado).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Escala de Calificación P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Definición Formal de la Escala OPD / FD / DTI / POR / ND",
+          "excerpt_short": "Definición estandarizada de los 5 niveles de evidencia técnica para cada módulo.",
+          "source_date": "2026-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Regla metodológica canónica del mandato.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo en bruto de empresas",
+      "Reglas formales de deduplicación",
+      "Categorías funcionales 1 a 7"
+    ],
+    "actors": [
+      "Motor de Normalización",
+      "Auditor de Datos",
+      "Base de Entidades"
+    ],
+    "steps": [
+      "Extracción de atributos",
+      "Evaluación de condiciones 1 a 4",
+      "Asignación de categoría 1 a 7",
+      "Calificación de módulos en escala OPD/FD/DTI/POR/ND",
+      "Generación de registro normalizado"
+    ],
+    "states": [
+      "Dato_Bruto",
+      "Condiciones_Aplicadas",
+      "Registro_Normalizado_Valido"
+    ],
+    "outputs": [
+      "Ficha estructurada de proveedor comercial"
+    ],
+    "exceptions": [
+      "Proveedores con sedes jurídicas dudosas (flag de verificación activo)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SCH_ATLAS_EMPRESAS",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado del Atlas de Empresas P02",
+      "aliases": [
+        "Data Model P02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SCH_ATLAS_EMPRESAS",
+      "predicate": "normaliza",
+      "object_id": "Catálogo_70_Proveedores",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F04-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Representación Informal vs Estructura Normalizada",
+      "Listado Informal": "Texto libre con descripciones comerciales y mezcla de marcas filiales.",
+      "Estructura Normalizada": "Tabla relacional con 16 atributos tipados, escala epistémica y reglas booleanas de deduplicación."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric_name": "Distribución Categoría 1: Media Monitoring",
+      "value": 34.3,
+      "unit": "porcentaje",
+      "denominator": "70 proveedores independientes (24 empresas)",
+      "evidence_claim_id": "P02-F04-C1"
+    },
+    {
+      "metric_name": "Distribución Categoría 2: Public Affairs & CRM",
+      "value": 15.7,
+      "unit": "porcentaje",
+      "denominator": "70 proveedores independientes (11 empresas)",
+      "evidence_claim_id": "P02-F04-C1"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Adoptar el esquema estructurado de 16 atributos como ontología base en la base de entidades corporativas de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F05",
+    "P02-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

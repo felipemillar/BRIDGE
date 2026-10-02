@@ -1,0 +1,147 @@
+{
+  "question_id": "P03-F33",
+  "pilar": "P03",
+  "eje": "Desambiguación y análisis de señales",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué límites tienen sentimiento automático, clasificación narrativa y detección de desinformación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis automático presenta 3 limitaciones metodológicas y técnicas infranqueables sin supervisión humana: 1) Fracaso del sentimiento tripolar genérico (Positivo/Negativo/Neutro): no detecta ironía ni sarcasmo, confunde el tono crítico de una investigación seria con un ataque reputacional, e ignora la postura política estratégica (ej. un medio puede reportar con tono adverso una regulación que estratégicamente beneficia a la compañía); 2) Límites de modelos base en español local (BETO): pre-entrenado en un corpus enciclopédico general (Cañete et al. 2020), no comprende de forma nativa modismos locales chilenos de coyuntura ni terminología regulatoria compleja, siendo una HIPÓTESIS OPERATIVA no demostrada que requiera fine-tuning local supervisado; y 3) Falacia de equivalencia en desinformación: la sincronía temporal de publicaciones (Pacheco et al. 2020) y la actividad de bots (Sayyadiharikandeh et al. 2020) no son sinónimos de falsedad ni engaño (se usan en ONGs y alertas públicas); calificar un contenido de 'desinformación' exige evaluar las técnicas DISARM y realizar comprobación de hechos (fact-checking) por analistas humanos.",
+  "findings": [
+    {
+      "claim_id": "P03-F33-C1",
+      "claim": "El sentimiento automático tripolar es disfuncional para asuntos corporativos, BETO carece de validación empírica para ironía regulatoria chilena sin fine-tuning, y los patrones de sincronía de red no equivalen por sí mismos a desinformación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Chile / Global",
+        "actor": "Auditoría Metodológica P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.2 y 2.3: BETO y Desacoplamiento Estricto",
+          "excerpt_short": "BETO... pre-entrenado sobre un corpus general... La afirmación de que comprende modismos chilenos complejos o posturas regulatorias es estrictamente una HIPÓTESIS OPERATIVA... La coordinación temporal ocurre legítimamente en campañas ciudadanas... no demuestra en absoluto la falsedad del mensaje.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        },
+        {
+          "source_id": "5eaa5b99-624c-4877-87be-66c339c7b6d4",
+          "source_title": "AMEC Barcelona Principles 3.0 & Integrated Evaluation Framework",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principle 2: Outcome Measurement",
+          "excerpt_short": "Simple automated tone scoring often obscures strategic comprehension and stakeholder intent.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de la adenda de calidad, principios AMEC y papers fundacionales.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Texto de señal analizada",
+      "Scores de sentimiento automático",
+      "Patrón de coordinación de red"
+    ],
+    "actors": [
+      "Human-in-the-Loop Analyst",
+      "Stance Evaluator",
+      "DISARM TTP Mapper"
+    ],
+    "steps": [
+      "Descarte de etiqueta tripolar cruda",
+      "Evaluación de postura estratégica",
+      "Auditoría humana de intencionalidad"
+    ],
+    "states": [
+      "Raw_Sentiment_Flagged",
+      "Calibrated_By_Stance",
+      "Analyst_Validated"
+    ],
+    "outputs": [
+      "Evaluación reputacional calibrada y fundamentada epistémicamente"
+    ],
+    "exceptions": [
+      "Sobrecarga de alertas durante crisis de alto volumen de publicaciones"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_NLP_LIMITATIONS",
+      "type": "marco_metodologico",
+      "name": "Límites Epistémicos de NLP y Sentimiento",
+      "aliases": [
+        "NLP Epistemic Limitations"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_NLP_LIMITATIONS",
+      "predicate": "impone_restricciones_a",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F33-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de evaluación discursiva",
+      "Sentimiento Automático Tradicional": "Polaridad superficial +/-/neutral asignada por modelo opaco.",
+      "Análisis de Postura y Riesgo (Stance)": "Evaluación de atribución de responsabilidad, impacto operacional y postura ideológica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Reemplazar métricas de polaridad por análisis de postura (stance analysis) y exigir revisión humana supervisada para catalogar ataques de desinformación.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

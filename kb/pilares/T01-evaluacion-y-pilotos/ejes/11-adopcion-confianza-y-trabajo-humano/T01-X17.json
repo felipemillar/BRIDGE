@@ -1,0 +1,168 @@
+{
+  "question_id": "T01-X17",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Adopción, confianza y trabajo humano",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Cómo observar si el profesional verifica citas y corrige el sistema o lo acepta sin revisar?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para diagnosticar si el profesional ejerce una revisión humana efectiva (Human-in-the-Loop crítico) o incurre en 'complacencia automatizada' (Rubber-Stamping ciego), The Bridge Intelligence captura telemetría conductual y de interfaz de usuario de alta resolución: 1) Tasa de Inspección de Citas (Citation Click-Through Rate - CTR): Monitoreo de aperturas de modales o paneles laterales de verificación de fragmentos fuente originales por respuesta consultada (meta saludable: 35% a 60%; si es < 10% indica complacencia ciega, si es > 85% indica desconfianza patológica por alucinaciones previas); 2) Tiempo de Residencia en Verificación (Dwell Time per Citation): Segundos cronometrados que el analista permanece leyendo el fragmento fuente antes de aprobar o exportar el texto (umbral mínimo biológicamente realista: >= 4.0 segundos por cita para lectura humana); 3) Ratio de Modificación Textual (Edit Distance / Diff Ratio): Porcentaje de tokens alterados o refinados por el analista en el borrador final (meta: 15% a 30% de aporte estilístico y contextual humano); y 4) Pruebas de Inserción de Citas Trampa (Honeypot Citations): Inserción aleatoria y controlada en entornos de entrenamiento de una cita deliberadamente rota o inexacta para comprobar si el analista la detecta y corrige.",
+  "findings": [
+    {
+      "claim_id": "T01-X17-C1",
+      "claim": "SummEval (Fabbri et al. 2021) y T01_QUALITY_ADDENDUM demuestran que los evaluadores humanos tienden a aceptar de forma acrítica los textos generados por LLMs cuando las respuestas presentan alta fluidez superficial, haciendo obligatoria la captura de métricas objetivas de tiempo de inspección y edición para probar control humano genuino.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Fabbri et al. & T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 2: Annotator Fatigue and Verification Latency",
+          "excerpt_short": "Superficial linguistic fluency frequently masks factual errors unless evaluators actively spend measurable dwell time cross-referencing source context.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 11: Auditoría de Complacencia Humana",
+          "excerpt_short": "Un piloto donde el analista aprueba borradores en menos de 5 segundos sin abrir los enlaces de cita no acredita control humano. Se exige telemetría de dwell time para validar la compuerta G2.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evidencia científica y de gobernanza canónica sobre supervisión humana.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Trazas de clics y dwell time en visor de citas de BRIDGE",
+      "Diffs entre borrador generado y versión aprobada"
+    ],
+    "actors": [
+      "Frontend Telemetry Engine",
+      "Líder de Customer Success",
+      "Director de Cumplimiento"
+    ],
+    "steps": [
+      "Capturar eventos de click en chips de citas [1], [2] en el frontend",
+      "Medir el dwell time en milisegundos sobre el modal de evidencia",
+      "Calcular la distancia de Levenshtein entre borrador propuesto y texto exportado",
+      "Generar índice semanal de 'Supervisión Crítica Efectiva' por analista"
+    ],
+    "states": [
+      "TELEMETRIA_CAPTURA",
+      "COMPUTO_DWELL_TIME",
+      "CALCULO_DIFF",
+      "INDICE_SUPERVISION_EMITIDO"
+    ],
+    "outputs": [
+      "Reporte Semanal de Supervisión y Complacencia Humana"
+    ],
+    "exceptions": [
+      "Si un analista presenta dwell time < 1.0s en el 90% de sus consultas, el sistema emite una alerta pedagógica de complacencia"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "TELEMETRIA_SUPERVISION",
+      "type": "metrica",
+      "name": "Índice de Supervisión Crítica Efectiva",
+      "aliases": [
+        "Effective Human Oversight Index"
+      ]
+    },
+    {
+      "entity_id": "COMPLACENCIA_AUTOMATIZADA",
+      "type": "riesgo",
+      "name": "Complacencia Automatizada (Rubber-Stamping)",
+      "aliases": [
+        "Automation Bias"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "TELEMETRIA_SUPERVISION",
+      "predicate": "mitiga_riesgo_de",
+      "object_id": "COMPLACENCIA_AUTOMATIZADA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X17-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Revisión Nominal (< 5 segundos sin clics)",
+      "item_b": "Revisión Crítica Efectiva (> 30s con inspección de citas)",
+      "dimension": "Validez jurídica del control",
+      "conclusion": "La revisión nominal expone a la empresa a responsabilidad civil directa; la revisión crítica efectiva acredita debida diligencia operacional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de consultas con inspección activa de citas",
+      "denominator": "Total respuestas generadas en el piloto",
+      "target": "35% a 60%"
+    },
+    {
+      "metric": "Dwell time promedio por cita abierta",
+      "denominator": "Muestreo de eventos de inspección",
+      "target": ">= 4.0 segundos"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite demostrar ante reguladores y tribunales que el software es un asistente y que la decisión permanece bajo control humano real.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

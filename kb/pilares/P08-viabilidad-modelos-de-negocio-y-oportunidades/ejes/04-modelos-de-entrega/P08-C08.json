@@ -1,0 +1,148 @@
+{
+  "question_id": "P08-C08",
+  "pilar": "P08",
+  "eje": "Modelos de entrega",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué sigue sin prueba sobre modelos de entrega, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la capacidad de escalar la dotación de analistas HITL manteniendo un estándar homogéneo de calidad y juicio estratégico sin que se produzca una rotación excesiva o agotamiento (burnout) durante crisis simultáneas de múltiples clientes. Respecto a fuentes del corpus, fallaron las fuentes beb8de0b-183f-4bd0-ad64-84c4a89a215f y ebd50500-eeb5-4e3d-9b24-99e5d2ef79fa (ambas de OpenAI Enterprise sobre privacidad y arquitectura de seguridad), las cuales presentaron enlaces rotos o inaccesibles; fueron sustituidas canónicamente por la documentación oficial enterprise de Microsoft Azure OpenAI (1c53dc20-55e2-40fa-bb33-4aef71148406) y Google Cloud Vertex AI (99ed7566-0ecf-45dd-b475-8b81c1429419). La validación mínima requerida es ejecutar una prueba de simulación de estrés operativo (Stress Test) de 48 horas donde 1 analista senior deba validar briefs simultáneos para 4 empresas simuladas bajo contingencias regulatorias concurrentes.",
+  "findings": [
+    {
+      "claim_id": "P08-C08-C1",
+      "claim": "El límite de resistencia cognitiva y carga laboral del analista HITL bajo contingencias concurrentes es un vacío operacional abierto que debe validarse mediante pruebas de estrés simuladas.",
+      "epistemic_status": "inferencia",
+      "scope": "hitl_scalability_stress_gap",
+      "evidence": [
+        {
+          "source_title": "P08_GAPS_AND_VALIDATION",
+          "source_id": "b37bbf38-9c0d-4dc9-bf01-ac0b24ed0bd4",
+          "locator": "Sección 4 'Vacíos de Información Críticos: Eje 4'",
+          "excerpt_short": "No se dispone de mediciones empíricas sobre el tiempo de degradación de la atención del analista humano cuando atiende a 4 clientes enfrentados a crisis regulatorias en el mismo día. Este punto crítico define el verdadero límite de escala del modelo Tech-Enabled.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "fuentes/P08.json: Manifiesto de Fuentes",
+          "source_id": "beb8de0b-183f-4bd0-ad64-84c4a89a215f",
+          "locator": "Registro de Estado de Fuentes OpenAI",
+          "excerpt_short": "Fuentes beb8de0b y ebd50500 de OpenAI Enterprise catalogadas como fallida_o_bloqueada. Sustituidas canónicamente por Azure OpenAI (1c53dc20) y Google Cloud Vertex AI (99ed7566).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "fallida",
+          "relationship": "apoya",
+          "text_status_original": "texto_sustantivo",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío documentado en P08 y sustitución canónica de fuentes de OpenAI formalizada en el manifiesto.",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "fuente_no_sustantiva",
+          "confianza_numerica_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Simulación de 4 crisis simultáneas",
+      "Pauta de evaluación de fatiga cognitiva",
+      "Métricas de tiempo de respuesta"
+    ],
+    "actors": [
+      "Analista de Pruebas",
+      "Supervisor de Calidad",
+      "Lead Architect"
+    ],
+    "steps": [
+      "Inyección simultánea de 4 eventos críticos en faenas y prensa",
+      "Medición de tiempos de validación de briefs",
+      "Auditoría de errores cometidos por fatiga",
+      "Calibración del límite de ratio analista/cliente"
+    ],
+    "states": [
+      "Test Diseñado",
+      "Simulación en Curso",
+      "Carga Máxima Evaluada"
+    ],
+    "outputs": [
+      "Informe de capacidad máxima y límites de turno del analista HITL"
+    ],
+    "exceptions": [
+      "Activación de protocolo de desborde hacia analista de guardia de respaldo"
+    ]
+  },
+  "entities": [
+    "P08_GAPS_AND_VALIDATION",
+    "beb8de0b-183f-4bd0-ad64-84c4a89a215f",
+    "ebd50500-eeb5-4e3d-9b24-99e5d2ef79fa",
+    "Microsoft Azure OpenAI",
+    "Google Cloud Vertex AI",
+    "Stress Test HITL"
+  ],
+  "relations": [
+    {
+      "from": "Fuentes OpenAI Fallidas",
+      "to": "Azure / Google Cloud Vertex",
+      "type": "substituted_by"
+    },
+    {
+      "from": "Stress Test HITL",
+      "to": "Límite Real Ratio 1:4",
+      "type": "determines"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cálculo teórico de capacidad vs Prueba de estrés de fatiga",
+      "diferencia": "En la teoría 1 analista atiende a 4 clientes con holgura; en una crisis simultánea real se requiere verificar si el tiempo de respuesta se degrada más allá del SLA de 2 horas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "stress_test_duration": "48 horas continuas de simulación",
+    "max_concurrent_crises_per_analyst": "Máximo 2 crisis simultáneas agudas antes de desborde a respaldo"
+  },
+  "bridge_implications": "Diseñar un algoritmo de balanceo de carga en la cola HITL que redistribuya tareas automáticamente si un analista tiene más de una cuenta en crisis activa.",
+  "open_gaps": [
+    "Definir el costo de mantener un analista senior de guardia en retén pasivo para contingencias nocturnas."
+  ],
+  "next_question_ids": [
+    "P08-C09",
+    "P08-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

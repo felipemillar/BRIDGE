@@ -1,0 +1,133 @@
+{
+  "question_id": "P02-X13",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Proximidad funcional verificable",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre proximidad funcional verificable?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos están respaldados por el conjunto de fuentes primarias técnicas y documentos de reconciliación de P02: 1) Mapa de Mercado Global: respaldado por 'P02_GLOBAL_MARKET_MAP_V1' (2026), que formaliza la matriz funcional de los cuatro módulos y evalúa la cobertura de cada competidor; 2) Deep Dives Competitivos: respaldado por 'P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1' (2026), que detalla los benchmarks de los cuatro arquetipos (Broadsight, Entual, Contify, Open Point); 3) Atlas de Reconciliación: respaldado por 'P02_GLOBAL_ATLAS_RECONCILIATION_V1' (2026), que certifica que ninguna plataforma comercial disponible cubre los cuatro módulos de forma nativa; 4) Manuales oficiales de producto: respaldado por las fichas técnicas individuales de Broadsight, Prezly, Contify y Open Point.",
+  "findings": [
+    {
+      "claim_id": "P02-X13-C1",
+      "claim": "El respaldo documental de proximidad funcional combina el análisis matricial de mercado con las especificaciones técnicas primarias de los manuales de producto de los proveedores evaluados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Fuentes primarias P02"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Functional Evidence and Vendor Architecture Synthesis",
+          "excerpt_short": "Synthesis cross-referencing primary product documentation to establish verified functional boundaries across all examined market solutions.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el corpus documental del cuaderno P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Citas documentales de manuales y atlas",
+      "Manifiesto auditado de fuentes"
+    ],
+    "actors": [
+      "Auditor de Fuentes",
+      "Analista de Investigación"
+    ],
+    "steps": [
+      "Verificación de concordancia de afirmaciones funcionales",
+      "Chequeo de localizadores y extractos",
+      "Control de integridad referencial"
+    ],
+    "states": [
+      "Fuentes_Revisadas",
+      "Citas_Verificadas",
+      "Trazabilidad_Aprobada"
+    ],
+    "outputs": [
+      "Índice de evidencia primaria para el eje de proximidad funcional"
+    ],
+    "exceptions": [
+      "Funcionalidades beta anunciadas que se excluyen de la evaluación por falta de disponibilidad general"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DEEP_DIVES_V1",
+      "type": "documento_sintesis",
+      "name": "Global Competitor Deep Dives V1",
+      "aliases": [
+        "Deep Dives V1"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DEEP_DIVES_V1",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "P02-X09_a_P02-X12",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respaldo Técnico (Deep Dives) vs Material Comercial de Ventas",
+      "Respaldo Técnico": "Inspecciona APIs, modelos de datos y flujos de trabajo reales.",
+      "Material Comercial": "Utiliza lenguaje genérico y adjetivos promocionales sin sustento verificable."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La evidencia técnica respalda inequívocamente la necesidad de una solución integrada en el mercado.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

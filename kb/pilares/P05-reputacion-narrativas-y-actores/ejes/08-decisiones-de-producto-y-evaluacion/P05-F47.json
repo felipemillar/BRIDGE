@@ -1,0 +1,139 @@
+{
+  "question_id": "P05-F47",
+  "pilar": "P05",
+  "eje": "Decisiones de producto y evaluación",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre decisiones de producto y evaluación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos documentados sobre decisiones de producto y evaluación descansan en cuatro fuentes primarias del corpus: 1) Arthur W. Page Society: The Page Principles (2023, Corporate Character & Trust, ámbito: ética de dirección corporativa): respalda los principios de autenticidad, escucha de la empresa completa y subordinación de la comunicación a la verificación de hechos internos; 2) W. Timothy Coombs: Situational Crisis Communication Theory (2007, Corporate Reputation Review, ámbito: psicología y gestión de crisis): respalda la regla prescriptiva de selección de posturas y abstención de justificaciones defensivas en crisis prevenibles; 3) Cision (2024, Executive Briefings & Strategic Media Insights, ámbito: consultoría de analítica ejecutiva): respalda la estructura de diseño de resúmenes de inteligencia con advertencias explícitas de sesgos e intervalos de confianza; y 4) P05_GAPS_AND_VALIDATION / P05_RESEARCH_DOSSIER (2026, ámbito: diseño de plataforma de investigación): respaldan el protocolo de evaluación empírica con analistas humanos, el banco de backtesting y las salvaguardas éticas de privacidad.",
+  "findings": [
+    {
+      "claim_id": "P05-F47-C1",
+      "claim": "Los lineamientos de diseño de producto y evaluación se apoyan en los códigos deontológicos de la Page Society, la teoría SCCT de Coombs y las mejores prácticas de inteligencia ejecutiva de Cision.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2007-2026",
+        "region": "Global",
+        "actor": "Estándares Profesionales de Asuntos Públicos"
+      },
+      "evidence": [
+        {
+          "source_id": "4a704f39-0f78-4e44-8b03-b9922d00ed6b",
+          "source_title": "Arthur W. Page Society: The Page Principles for Corporate Character & Trust",
+          "original_url": "https://page.org/who-we-are/page-principles/",
+          "locator": "Declaración Completa de los 7 Principios",
+          "excerpt_short": "Tell the truth, prove it with action, listen to the stakeholder, manage for tomorrow, conduct public relations as if the whole company depends on it.",
+          "source_date": "2023-01-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "ac368278-a8b8-4d46-b16f-8e90e2055046",
+          "source_title": "Cision: Executive Briefings & Strategic Media Insights for Corporate Affairs",
+          "original_url": "https://www.cision.com/solutions/insights-analysis/",
+          "locator": "Guía de Buenas Prácticas en Inteligencia Ejecutiva",
+          "excerpt_short": "Emphasizes the necessity of framing media insights to support decision-making while mitigating overconfidence in automated sentiment scores.",
+          "source_date": "2024-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en publicaciones oficiales de asociaciones globales y consultoras líderes de la industria.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Publicaciones normativas de la Page Society",
+      "Manuales técnicos de Cision"
+    ],
+    "actors": [
+      "Curador Metodológico",
+      "Especialista en Ética de Inteligencia Artificial"
+    ],
+    "steps": [
+      "Verificación de concordancia de directrices deontológicas",
+      "Extracción de citas y reglas operativas",
+      "Registro en base de fuentes de gobernanza de P05"
+    ],
+    "states": [
+      "Standards_Reviewed",
+      "Rules_Formalized",
+      "Registry_Updated"
+    ],
+    "outputs": [
+      "Catálogo de fuentes deontológicas y de producto"
+    ],
+    "exceptions": [
+      "Conflictos entre velocidad de respuesta comercial y rigor de verificación interna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GOVERNANCE_SOURCES_P05",
+      "type": "corpus_fuentes",
+      "name": "Fuentes de Gobernanza y Ética de Producto",
+      "aliases": [
+        "Product Governance Sources"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GOVERNANCE_SOURCES_P05",
+      "predicate": "respalda_reglas_de",
+      "object_id": "ENT_PRODUCT_DECISION_SCHEMA",
+      "valid_from": "2007",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F47-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Código de Ética Embebido",
+      "implication": "BRIDGE debe incorporar en sus términos de uso y documentación de arquitectura la adhesión explícita a los Principios de Page.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

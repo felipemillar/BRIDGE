@@ -1,0 +1,150 @@
+{
+  "question_id": "P02-X09",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Proximidad funcional verificable",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué proveedores cubren tres o más módulos en una misma oferta documentada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La evaluación técnica exhaustiva de los 70 proveedores comerciales demuestra que NINGÚN proveedor cubre los cuatro módulos de forma nativa, y solo un número muy reducido declara o roza tres módulos bajo esquemas fragmentados: 1) Cision Ltd. (CisionOne + Brandwatch + PR Newswire): cubre fuertemente 'Escuchar' (monitoreo de medios y redes sociales), cubre parcialmente 'Hablar' (distribución de notas de prensa sindicadas vía PR Newswire), y aduce cubrir 'Saber' mediante su archivo histórico de notas indexadas; sin embargo, carece totalmente de 'Relacionar' territorial o legislativo (no gestiona compromisos de faena ni Ley de Lobby) y sus plataformas operan con bases de datos segregadas; 2) Meltwater N.V.: cubre 'Escuchar' (monitoreo de prensa y redes), 'Hablar' (distribución de comunicados) y asistentes de resumen documental ('Saber'), pero carece de 'Relacionar' (sin CRM comunitario ni seguimiento regulatorio de faenas); 3) Onclusive: similarmente cubre Escuchar, distribución de comunicados y medición de impacto, sin capacidades de relacionamiento territorial; 4) Conclusión técnica: la proximidad funcional a tres módulos se logra mediante empaquetamiento comercial de compras corporativas inconexas, sin un modelo relacional unificado en el backend.",
+  "findings": [
+    {
+      "claim_id": "P02-X09-C1",
+      "claim": "Ningún proveedor comercial independiente integra nativamente los cuatro módulos, y las escasas suites que alcanzan tres módulos (Cision, Meltwater) lo hacen mediante agregación de herramientas adquiridas sin un grafo de datos unificado ni cobertura de licenciamiento social territorial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Cision, Meltwater, Onclusive"
+      },
+      "evidence": [
+        {
+          "source_id": "b5217662-c6f0-4529-8282-f5d17339b7fa",
+          "source_title": "P02_GLOBAL_MARKET_MAP_V1",
+          "original_url": null,
+          "locator": "Section 4: Cross-Module Functional Matrix",
+          "excerpt_short": "No commercial platform satisfies the full 4-module architecture. The highest density is observed in listening suites bundling press release distribution, completely omitting community stakeholder engagement.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Auditoría matricial de funcionalidades nativas documentadas en el catálogo de proveedores.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo funcional de 70 vendors",
+      "Matriz de 4 módulos (Saber, Escuchar, Hablar, Relacionar)"
+    ],
+    "actors": [
+      "Auditor de Arquitectura",
+      "Director de Evaluación Competitiva"
+    ],
+    "steps": [
+      "Calificación binaria de cobertura nativa por módulo",
+      "Conteo de módulos por vendor",
+      "Identificación de brechas estructurales en suites líderes"
+    ],
+    "states": [
+      "Catalogo_Analizado",
+      "Cobertura_Calculada",
+      "Veredicto_Sintetizado"
+    ],
+    "outputs": [
+      "Matriz de proximidad funcional verificable del mercado"
+    ],
+    "exceptions": [
+      "Vendors que ofrecen módulos ausentes mediante alianzas de reventa de terceros"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CISION_GROUP",
+      "type": "suite_comercial",
+      "name": "Cision Ltd. (Platinum Equity)",
+      "aliases": [
+        "CisionOne",
+        "Brandwatch"
+      ]
+    },
+    {
+      "entity_id": "ENT_MELTWATER_GROUP",
+      "type": "suite_comercial",
+      "name": "Meltwater N.V.",
+      "aliases": [
+        "Meltwater Suite"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CISION_GROUP",
+      "predicate": "cubre_parcialmente_maximo",
+      "object_id": "Tres_Modulos_Sin_Relacionar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X09-C1"
+    },
+    {
+      "subject_id": "ENT_MELTWATER_GROUP",
+      "predicate": "cubre_parcialmente_maximo",
+      "object_id": "Tres_Modulos_Sin_Relacionar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Promesa de Cobertura Total vs Realidad de 3 Módulos Inconexos",
+      "Promesa de Cobertura Total": "'Solución 360 para todas las comunicaciones de la empresa'.",
+      "Realidad de 3 Módulos": "No gestiona los compromisos de las faenas mineras, ni las quejas vecinales, ni la Ley de Lobby."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La ausencia de suites nativas de 4 módulos en los líderes mundiales valida el espacio de innovación radical para BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

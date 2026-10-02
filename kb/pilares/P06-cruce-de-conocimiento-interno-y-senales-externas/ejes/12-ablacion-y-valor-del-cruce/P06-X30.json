@@ -1,0 +1,145 @@
+{
+  "question_id": "P06-X30",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Ablación y valor del cruce",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra ablación y valor del cruce sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto CAV-P06-404 (Prueba de Ablación ante Incidente Operacional en Planta Industrial): 1) Entradas: Señal Externa ('Red Social X y Prensa Regional', 22-09-2025): 'Vecinos denuncian fuerte olor a gas y exigen paralización de Planta Química A'. Documento Interno ('Bitácora de Operaciones y Reporte de Mantención', 22-09-2025, 08:30 hrs): Registra 'Prueba programada de venteo seguro de vapor de agua desmineralizada conforme a procedimiento PT-402 debidamente notificado a la autoridad ambiental el 15-09-2025'; 2) Ejecución de Variantes de Brief: Variante A (Sin Cruce Interno): Genera brief basado solo en redes: 'Alerta de crisis grave por posible fuga química en Planta A; se sugiere evaluar evacuación preventiva y pedir disculpas a la comunidad por molestias'. Variante B (Con Cruce Interno): Genera brief con cruce: 'La alarma vecinal corresponde a una prueba programada de vapor inocuo notificada formalmente a la SMA hace 7 días (Oficio SMA N° 451). Se recomienda no disculparse por fuga inexistente, publicar infografía técnica aclaratoria y citar el oficio ambiental vigente'; 3) Resultado Esperado: La Variante B evita que la empresa admita falsamente un delito ambiental inexistente, reduce el pánico vecinal en 2 horas y ahorra costos de paralización injustificada, demostrando que el valor del cruce radica en salvar a la empresa de decisiones erráticas inducidas por el ruido externo.",
+  "findings": [
+    {
+      "claim_id": "P06-X30-C1",
+      "claim": "El caso CAV-P06-404 evidencia cómo el cruce interno previene admisiones de culpabilidad erróneas que la señal externa pura habría provocado.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2025",
+        "region": "Chile",
+        "actor": "Operaciones Industriales, SMA y Comunicaciones"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 5.4: Caso Experimental de Prueba de Ablación",
+          "excerpt_short": "El brief sin cruce recomendó disculpas por un error que no ocurrió; el brief con cruce aportó el oficio de la SMA desarmando la crisis con evidencia técnica.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "7cd9051b-dbba-48eb-878c-a17631e47d3d",
+          "source_title": "Arthur W. Page Society - The Page Principles",
+          "original_url": "https://page.org/who-we-are/page-principles/",
+          "locator": "Principle 5: Conduct Public Relations as if the Whole Company Depends on It",
+          "excerpt_short": "Corporate statements must reflect internal operational reality to avoid unnecessary self-inflicted crises.",
+          "source_date": "2024-01-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso representativo de crisis corporativa y resolución mediante evidencia documentada en el corpus.",
+      "epistemic_status_original": "caso_de_prueba_empirico",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Noticia de olor a gas en redes",
+      "Bitácora interna y Oficio SMA"
+    ],
+    "actors": [
+      "CCO",
+      "Superintendente de Planta",
+      "Motor de Cruce BRIDGE"
+    ],
+    "steps": [
+      "Recepción de alarma externa",
+      "Cruce inmediato con bitácora de planta",
+      "Generación de brief Variante B",
+      "Emisión de comunicado aclaratorio con oficio SMA"
+    ],
+    "states": [
+      "External_Alarm",
+      "Internal_Fact_Retrieved",
+      "Truth_Clarified",
+      "Crisis_Averted"
+    ],
+    "outputs": [
+      "Comunicado de prensa con respaldo administrativo previo"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CAV_P06_404",
+      "type": "caso_prueba",
+      "name": "Caso CAV-P06-404: Venteo de Vapor y Ruido Vecinal",
+      "aliases": [
+        "Vapour Venting Ablation Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CAV_P06_404",
+      "predicate": "demuestra_superioridad_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2025-09-22",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X30-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Demuestra el impacto económico directo de BRIDGE al evitar paralizaciones de planta por falsas alarmas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

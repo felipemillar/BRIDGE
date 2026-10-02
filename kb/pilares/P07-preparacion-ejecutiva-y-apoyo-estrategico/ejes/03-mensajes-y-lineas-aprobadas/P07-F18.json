@@ -1,0 +1,117 @@
+{
+  "question_id": "P07-F18",
+  "pilar": "P07",
+  "eje": "Mensajes y líneas aprobadas",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra mensajes y líneas aprobadas sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso documentado en el Dossier P07 ilustra la definición de líneas aprobadas para Minera Los Salares S.A. ante la discusión legislativa del Royalty Minero y la tributación corporativa. Entradas: 1) Presión externa: Debate parlamentario y declaraciones de congresistas acusando ganancias excesivas y baja tributación; 2) Datos corporativos auditados: Pago de US$ 140 millones en impuestos en Chile durante el año 2025 (Balance Financiero auditado por EY) y nómina de 4.200 trabajadores con 78% de residencia en la región; 3) Restricción de secreto de mercado: Negociaciones confidenciales en curso con sindicatos y análisis reservados del Directorio sobre el retorno de nuevos proyectos (protegidos bajo Ley 18.045). Resultado esperado: Ficha de Línea Aprobada MSG-TAX-001: Texto autorizado ('Minera Los Salares pagó US$ 140M en impuestos en 2025 y emplea a 4.200 personas con 78% de empleo regional; buscamos certezas para proyectar estas fuentes laborales'); Vocero permitido: Exclusivamente Gerente General y CCO; Canal autorizado: Comisión del Senado y entrevistas en prensa escrita; Bloqueo explícito: Prohibición de improvisar cifras sobre utilidades proyectadas o amenazar con despidos futuros sin visado del Directorio.",
+  "findings": [
+    {
+      "claim_id": "P07-F18-C1",
+      "claim": "La definición estructurada de mensajes aprobados previene la divulgación involuntaria de información confidencial sujeta a la Ley de Mercado de Valores mientras suministra argumentos sólidos y auditables al vocero.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "tax_messaging_case",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 6 (Plantilla 3: Caso Royalty e Impuestos)",
+          "excerpt_short": "Guion validado ante acusación de extorsión tributaria: Desmarque sereno respetando la soberanía legislativa de Chile; Puente a datos auditados de la empresa ('pagamos más de US$ 140 millones en impuestos y empleamos a 4.200 trabajadores, de los cuales el 78% vive en la región'); Cierre positivo buscando certeza para el empleo. Mensaje blindado frente a filtraciones de hechos reservados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso representativo y documentado en la Plantilla 3 del Dossier técnico P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "caso_royalty_minero": {
+      "contexto": "Discusión en Comisión de Minería y Energía del Senado sobre impacto de tasas impositivas.",
+      "datos_verificados": [
+        "Impuestos pagados 2025: US$ 140M (auditado balance EY).",
+        "Dotación laboral: 4.200 empleados directos e indirectos.",
+        "Empleo regional: 78% con residencia en la Región de Antofagasta."
+      ],
+      "linea_roja_legal": "No revelar cifras de flujos de caja futuros no depositados en la CMF ni emitir amenazas de cese de operaciones.",
+      "soundbite_autorizado": "'Chile tiene un marco soberano que respetamos; nuestra contribución es de US$ 140 millones anuales en impuestos y 4.200 puestos de trabajo con 78% regional, y trabajamos por mantener esa estabilidad a 30 años plazo.'"
+    }
+  },
+  "entities": [
+    "Minera Los Salares S.A.",
+    "Comisión de Minería del Senado",
+    "Ley 18.045",
+    "EY Audit",
+    "CMF"
+  ],
+  "relations": [
+    {
+      "from": "Minera Los Salares",
+      "to": "Senado de Chile",
+      "type": "presents_testimony_to"
+    },
+    {
+      "from": "Línea Aprobada MSG-TAX-001",
+      "to": "Balance Financiero EY",
+      "type": "anchored_in"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Declaración Espontánea vs Línea Aprobada",
+      "diferencia": "Una declaración espontánea amenazando con despidos detona multas de la CMF y rechazo político masivo; la línea aprobada posiciona el aporte regional objetivo y la vocación de largo plazo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "tax_figure_audited": "US$ 140M verificados en Memoria CMF",
+    "regional_employment_share": "78% auditado en balances laborales"
+  },
+  "bridge_implications": "Utilizar este caso para demostrar cómo BRIDGE protege el cumplimiento regulatorio bursátil de las corporaciones chilenas.",
+  "open_gaps": [
+    "Integración de alertas en tiempo real ante declaraciones de otros gremios mineros (SONAMI / Consejo Minero)."
+  ],
+  "next_question_ids": [
+    "P07-F19",
+    "P07-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

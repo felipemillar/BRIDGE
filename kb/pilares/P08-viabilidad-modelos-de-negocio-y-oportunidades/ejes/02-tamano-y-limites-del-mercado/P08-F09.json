@@ -1,0 +1,151 @@
+{
+  "question_id": "P08-F09",
+  "pilar": "P08",
+  "eje": "Tamaño y límites del mercado",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Cómo construir rangos de mercado sin asumir cuotas o precios no observados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para evitar especulaciones y supuestos arbitrarios, el corpus instruye triangular tres anclas de precios y costos empíricamente observadas en el mercado chileno y regional: 1) El costo de sustitución directa del retainer de agencias de asuntos corporativos tradicionales en Chile (CLP 4.000.000 a CLP 12.000.000 mensuales observados en LLYC, Azerta, Imaginaccion); 2) El costo de nómina de analistas internos de asuntos corporativos (CLP 3.200.000 a CLP 4.200.000 costo empresa mensual según Michael Page 2026); y 3) Los precios de licencias de software especializado global (ACVs de USD 15.000 a USD 50.000 anuales observados en FiscalNote, Quorum y Signal AI). A partir de estas anclas, se define el rango de precio realista de BRIDGE en USD 4.500 a USD 6.500 mensuales (~CLP 4.3M a CLP 6.2M/mes).",
+  "findings": [
+    {
+      "claim_id": "P08-F09-C1",
+      "claim": "Los rangos de precios de BRIDGE se sustentan en la triangulación de datos empíricos de retainers de agencias chilenas, costos salariales de analistas y suscripciones de software global.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "pricing_and_market_anchors",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 2.3 'Metodología de Triangulación de Precios Observados'",
+          "excerpt_short": "Para no depender de supuestos teóricos de disposición de pago, se fijan tres anclas reales de mercado: Ancla 1: El retainer de agencia tradicional en Chile (CLP 4M a 12M/mes); Ancla 2: El costo de contratación de un analista senior de asuntos corporativos (CLP 3.2M a 4.2M/mes costo total empleador); Ancla 3: La licencia anual de software puro internacional (FiscalNote/Quorum a USD 25K-40K/año). El precio de USD 4.500 a USD 6.500/mes se posiciona exactamente en el punto donde el cliente obtiene una plataforma superior al software puro más la capacidad de análisis de un equipo humano especializado, a un costo inferior al de una agencia tradicional.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "FiscalNote: PolicyNote API Pricing & Platform Overview",
+          "source_id": "d08b9b01-d8b1-4bc2-b343-db901273b643",
+          "locator": "Sección 'Enterprise Contracts & Add-On Modules', p. 3-5",
+          "excerpt_short": "Enterprise subscriptions range from $24,000 to $65,000 annually depending on seat count, jurisdiction monitoring depth, and custom alerts delivery.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Triangulación matemática sólida basada en datos reales de sueldos en Chile, retainers de agencias y contratos de FiscalNote.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Estudio de sueldos Michael Page",
+      "Tarifarios de agencias de comunicación corporativa",
+      "Cotizaciones enterprise de FiscalNote/Quorum"
+    ],
+    "actors": [
+      "Director Financiero",
+      "Especialista en Pricing B2B",
+      "Comité de Estrategia"
+    ],
+    "steps": [
+      "Recolección de benchmarks de costos",
+      "Definición de bandas de precios mínima, media y alta",
+      "Validación contra márgenes de contribución"
+    ],
+    "states": [
+      "Benchmark Recopilado",
+      "Bandas Calculadas",
+      "Rango Validado"
+    ],
+    "outputs": [
+      "Estructura de precios defensible ante compradores corporativos"
+    ],
+    "exceptions": [
+      "Descuentos de hasta 15% por pago anual anticipado"
+    ]
+  },
+  "entities": [
+    "LLYC",
+    "FiscalNote",
+    "Michael Page",
+    "Azerta",
+    "Pricing Triangulado"
+  ],
+  "relations": [
+    {
+      "from": "Retainer Agencia Tradicional",
+      "to": "Techo de Precio (CLP 12M/mes)",
+      "type": "establishes"
+    },
+    {
+      "from": "Costo Analista Interno",
+      "to": "Suelo de Valor (CLP 3.5M/mes)",
+      "type": "establishes"
+    },
+    {
+      "from": "BRIDGE Pricing",
+      "to": "Punto Óptimo (CLP 4.5M - 6.2M/mes)",
+      "type": "targets"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Tarificación por hora de consultoría vs Tarifa plana Tech-Enabled",
+      "diferencia": "La agencia factura horas adicionales impredecibles; BRIDGE ofrece predictibilidad mensual con SLA garantizado y plataforma continua."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "agency_retainer_range_chile": "CLP 4.000.000 - CLP 12.000.000/mes (~USD 4.200 - USD 12.500)",
+    "bridge_price_range": "USD 4.500 - USD 6.500/mes (~CLP 4.300.000 - CLP 6.200.000)"
+  },
+  "bridge_implications": "Presentar siempre la propuesta económica de BRIDGE en comparación directa con el costo de contratar 1 analista interno + 1 suscripción de software extranjero.",
+  "open_gaps": [
+    "Monitorear ajustes en las tarifas de LLYC y Burson tras la consolidación de nuevos holdings."
+  ],
+  "next_question_ids": [
+    "P08-F10",
+    "P08-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

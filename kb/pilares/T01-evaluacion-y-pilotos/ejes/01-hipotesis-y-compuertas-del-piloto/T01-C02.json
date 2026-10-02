@@ -1,0 +1,141 @@
+{
+  "question_id": "T01-C02",
+  "pilar": "T01",
+  "eje": "Hipótesis y compuertas del piloto",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre hipótesis y compuertas del piloto, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica suficiente en el corpus la tasa de supervivencia de las compuertas Stage-Gate en organizaciones corporativas con alta rotación de personal o resistencia sindical manifiesta al uso de herramientas de IA: 1) Vacío Identificado: No existen registros longitudinales que demuestren si la compuerta G2 (adopción semanal WAP >= 70%) se sostiene tras 6 meses de uso cuando concluye el incentivo inicial del piloto; 2) Fuente Fallida / Parcial: La fuente 'bridgestudio.mx' (e315f267) falló por no pertenecer al producto, y los papers de ArXiv no cubren dinámicas laborales chilenas; y 3) Validación Mínima Necesaria: Ejecutar un estudio de seguimiento a 180 días en al menos 2 clientes corporativos con muestreo bi-semanal de WAP y medición de fricción sindical o de comités de empresa.",
+  "findings": [
+    {
+      "claim_id": "T01-C02-C1",
+      "claim": "El corpus documental de T01 no contiene datos empíricos de retención de largo plazo (> 6 meses) post-piloto en empresas de Latinoamérica, existiendo incertidumbre sobre el decaimiento de uso una vez retirado el acompañamiento intensivo de customer success.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / LatAm",
+        "actor": "The Bridge Intelligence"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 2: Limitaciones Temporales del Piloto",
+          "excerpt_short": "Los pilotos estándar cubren 4 a 6 semanas; la persistencia del cambio de comportamiento organizacional a 6 y 12 meses permanece como hipótesis abierta.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Vacío empírico explícitamente reconocido en el addendum metodológico.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Protocolo experimental longitudinal a 180 días",
+      "Cohorte de 2 clientes corporativos post-G3"
+    ],
+    "actors": [
+      "Líder de Customer Success",
+      "Investigador Organizacional"
+    ],
+    "steps": [
+      "Diseñar protocolo de medición pasiva de telemetría a 6 meses",
+      "Monitorear WAP sin intervención de consultoría",
+      "Aplicar encuestas breves de carga de trabajo cada 60 días",
+      "Comparar la tasa de retención frente al umbral del 70%"
+    ],
+    "states": [
+      "DISEÑO_LONGITUDINAL",
+      "SEGUIMIENTO_PASIVO",
+      "EVALUACION_180_DIAS",
+      "CIERRE_VACIO"
+    ],
+    "outputs": [
+      "Reporte de Adopción Longitudinal a 180 Días"
+    ],
+    "exceptions": [
+      "Si el WAP decae por debajo del 50%, se activa plan de re-capacitación y análisis de causa raíz"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "VACIO_LONGITUDINAL_G2",
+      "type": "riesgo",
+      "name": "Vacío de Retención Longitudinal G2",
+      "aliases": [
+        "Long-Term Churn Risk"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "VACIO_LONGITUDINAL_G2",
+      "predicate": "requiere_estudio_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C02-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de retención WAP a 180 días",
+      "denominator": "Total licencias activas al cierre de G3",
+      "target": ">= 65%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Obliga a diseñar programas de customer success continuo para asegurar la renovación anual de licencias.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Comportamiento de adopción y retención de analistas corporativos a 180 días post-piloto en Chile",
+      "minimum_validation": "Estudio longitudinal en 2 clientes con telemetría desatendida y análisis de retención de cohortes",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "T01-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

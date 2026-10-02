@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-C05",
+  "pilar": "T01",
+  "eje": "Casos de prueba y conjunto de referencia",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre casos de prueba y conjunto de referencia, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en casos de prueba y golden dataset: 1) Discrepancia: El inventario original de fuentes contenía páginas breves de abstract (/abs/) de ArXiv que omitían detalles experimentales, metodologías de cálculo y anexos técnicos, lo cual inducía a síntesis incompletas; 2) Versión que Prevalece: Según T01_VERIFICATION_CORRECTIONS (f5a15f9d), prevalecen de forma absoluta los 9 documentos PDF de texto completo de ArXiv rescatados y catalogados (Ragas 01d6cab0, ALCE e1a0171b, SummEval 9df1af53, SelfCheckGPT c103d2e1, FreshLLMs 142a9e37, NeMo Guardrails dee0924c, ARES bff33bd6, Social IQa 45cf111e y Llama Guard d19f3dcf), que totalizan 246.956 tokens de evidencia experimental. Toda evaluación de citas y diseño de casos debe fundamentarse en los PDFs y no en las fichas de abstract.",
+  "findings": [
+    {
+      "claim_id": "T01-C05-C1",
+      "claim": "T01_VERIFICATION_CORRECTIONS resuelve la discrepancia de completitud documental al validar formalmente los 9 PDFs de texto completo de ArXiv, otorgándoles supremacía jerárquica sobre cualquier resumen previo o ficha parcial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_VERIFICATION_CORRECTIONS"
+      },
+      "evidence": [
+        {
+          "source_id": "f5a15f9d-310f-4bfc-ae19-70ff8cc2bdcf",
+          "source_title": "T01_VERIFICATION_CORRECTIONS: Reconciliación de Tareas y Evidencia Canónica",
+          "original_url": null,
+          "locator": "Sección 1: Convalidación de Textos Completos ArXiv",
+          "excerpt_short": "Los 9 PDFs completos constituyen la base empírica autorizada del cuaderno T01 y sustituyen a las fichas breves /abs/.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma rectora de jerarquía de fuentes en T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fichas breves /abs/ obsoletas",
+      "9 PDFs de texto completo ArXiv"
+    ],
+    "actors": [
+      "Auditor Antigravity",
+      "Ingeniero de Evaluación de QA"
+    ],
+    "steps": [
+      "Identificar citas a las fuentes /abs/ en borradores antiguos",
+      "Sustituir la referencia por el UUID del PDF de texto completo correspondiente",
+      "Extraer localizadores precisos de página del PDF",
+      "Verificar que ninguna respuesta mantenga texto_status = 'resumen_parcial' cuando existe PDF"
+    ],
+    "states": [
+      "DETECCION_CITAS_PARCIALES",
+      "SUSTITUCION_PDF",
+      "EXTRACCION_LOCALIZADOR",
+      "CONFORMIDAD_ALCANZADA"
+    ],
+    "outputs": [
+      "Matriz de Citas de Texto Completo T01"
+    ],
+    "exceptions": [
+      "Ninguna respuesta de T01 puede basarse en la ficha /abs/ habiendo PDF de texto completo disponible"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "PDFS_ARXIV_T01",
+      "type": "documento",
+      "name": "9 PDFs de Texto Completo ArXiv",
+      "aliases": [
+        "246.956 tokens de evidencia"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "PDFS_ARXIV_T01",
+      "predicate": "sustituyen_a",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C05-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Fichas /abs/ de ArXiv",
+      "item_b": "PDFs de Texto Completo",
+      "dimension": "Profundidad empírica",
+      "conclusion": "Los abstracts carecen de las fórmulas de Ragas y ALCE; los PDFs permiten reproducir las métricas con precisión matemática."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de utilización de PDFs de texto completo",
+      "denominator": "9 fuentes ArXiv con PDF recuperado",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Asegura la máxima nota de calidad en la auditoría estratificada del cuaderno final T01.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-C06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

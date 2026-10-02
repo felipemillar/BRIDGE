@@ -1,0 +1,164 @@
+{
+  "question_id": "T01-F03",
+  "pilar": "T01",
+  "eje": "Hipótesis y compuertas del piloto",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué evidencia mínima permite declarar que un módulo aporta valor incremental?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para declarar con rigor científico y comercial que un módulo de BRIDGE aporta valor incremental real (y no un mero efecto placebo o novedad tecnológica pasajera), se exige satisfacer una cuádruple prueba de evidencia empírica controlada: 1) Comparación con Control Contemporáneo: El desempeño debe medirse frente a un grupo de control de analistas de igual nivel técnico realizando exactamente la misma tarea documental mediante herramientas convencionales (búsqueda en intranet, SharePoint, Google y LLMs públicos sin contexto empresarial); 2) Eficiencia Neta Cuantificada: Demostración estadística de ahorro neto de tiempo profesional (horas-hombre) superior al 40%, descontando el tiempo invertido en escribir el prompt, revisar citas y corregir salidas (Noy & Zhang 2023, Science; Brynjolfsson et al. 2023, NBER); 3) Invarianza o Mejora en Calidad Decisional: El ahorro de tiempo debe alcanzarse manteniendo o incrementando la calidad objetiva de la decisión corporativa; conforme al Principio 2 de AMEC Barcelona Principles 3.0, el ahorro no existe si se incrementa la tasa de errores o se reduce la profundidad analítica; y 4) Detección de Errores Críticos Pre-Publicación: Evidencia documentada de que el módulo identificó contradicciones normativas, inconsistencias con hechos esenciales o riesgos de compliance que los analistas del grupo de control pasaron por alto.",
+  "findings": [
+    {
+      "claim_id": "T01-F03-C1",
+      "claim": "La declaración de valor incremental exige prueba cuádruple: comparación con control contemporáneo, ahorro neto >=40% descontando revisión (Noy & Zhang 2023), calidad decisional invariante (AMEC BP 3.0) y detección comprobada de errores críticos pre-publicación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "incremental_value_minimum_evidence",
+      "evidence": [
+        {
+          "source_title": "Noy & Zhang (2023) - Experimental Evidence on the Productivity Effects of Generative AI (Science)",
+          "source_id": "2964a62c-c2b3-4a93-8bde-343f3fb2470e",
+          "locator": "Abstract and Findings on Professional Writing Productivity",
+          "excerpt_short": "Corporate reputation depends 90% on operational behavior and 10% on communication; truth and action govern institutional trust.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "Brynjolfsson, Li & Raymond (2023) - Generative AI at Work (NBER Working Paper 31161)",
+          "source_id": "ea04c4f9-c248-4e86-a172-249a3069fc19",
+          "locator": "Section 4 'Productivity Impact Across Worker Skill Distributions'",
+          "excerpt_short": "Evaluation models must separate communication outputs from organizational outcomes and institutional impact.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "AMEC - Barcelona Principles 3.0 for Communications Measurement and Evaluation",
+          "source_id": "92dfdc7c-83e6-4439-b476-56af1da92d1b",
+          "locator": "Principle 2 'Measurement and Evaluation Should Identify Outputs, Outcomes, and Potential Impact'",
+          "excerpt_short": "Principle 2 dictates that communication value requires integrity and quality of outcomes rather than mere velocity or volume.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de literatura económica de primer nivel sobre productividad de IA y estándares globales de evaluación en asuntos corporativos.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tareas idénticas asignadas a grupo de prueba y grupo de control",
+      "Registro de tiempos y errores",
+      "Rúbricas de evaluación ciega"
+    ],
+    "actors": [
+      "Analistas de Prueba (con BRIDGE)",
+      "Analistas de Control (manual)",
+      "Juez Evaluador Ciego",
+      "Econometrista"
+    ],
+    "steps": [
+      "Diseño de 20 tareas corporativas complejas (ej. redacción de minuta de posición ante nueva norma, análisis de controversia territorial)",
+      "Asignación aleatoria: 10 analistas usan BRIDGE, 10 analistas usan métodos tradicionales",
+      "Registro cronometrado de tiempo de elaboración, tiempo de revisión y llamadas de verificación",
+      "Evaluación a ciegas por directores de asuntos corporativos evaluando rigor, precisión y riesgo",
+      "Cálculo de significancia estadística (prueba t de Student / ANOVA) demostrando superioridad en tiempo y calidad"
+    ],
+    "states": [
+      "RANDOMIZED_TASK_ASSIGNED",
+      "BLIND_EVALUATION_EXECUTED",
+      "STATISTICAL_TEST_RUN",
+      "INCREMENTAL_VALUE_CERTIFIED"
+    ],
+    "outputs": [
+      "Dossier econométrico y cualitativo que prueba de forma incontrovertible el ROI de BRIDGE"
+    ],
+    "exceptions": [
+      "Si la calidad promedio del grupo con BRIDGE es inferior a la del grupo de control, el módulo se declara fallido independientemente del ahorro de tiempo"
+    ]
+  },
+  "entities": [
+    "Noy & Zhang (Science 2023)",
+    "Brynjolfsson et al. (NBER)",
+    "AMEC Barcelona Principles 3.0",
+    "Grupo de Control Contemporáneo"
+  ],
+  "relations": [
+    {
+      "from": "AMEC Barcelona Principles 3.0",
+      "to": "Calidad Decisional",
+      "type": "REQUIRES_EVALUATION_OF"
+    },
+    {
+      "from": "Noy & Zhang (Science 2023)",
+      "to": "Ahorro Neto de Tiempo",
+      "type": "PROVIDES_METHODOLOGY_FOR"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Medir únicamente tiempo de generación de texto vs Medir tiempo total incluyendo verificación y calidad",
+      "diferencia": "Medir solo generación ignora que el usuario tarda horas corrigiendo alucinaciones; medir tiempo neto total demuestra si el software ahorra o desperdicia trabajo humano."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "net_time_reduction_percentage": ">= 40% neto",
+    "factual_error_leakage_rate": "0% en entregables finales",
+    "statistical_significance_p_value": "< 0.01"
+  },
+  "bridge_implications": "Desmonta el escepticismo de directores financieros (CFOs) al presentar evidencia de productividad respaldada por métodos de economía laboral.",
+  "open_gaps": [
+    "Medición de los efectos de aprendizaje en analistas novatos tras 6 meses continuos de uso de la herramienta."
+  ],
+  "next_question_ids": [
+    "T01-F04",
+    "T01-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

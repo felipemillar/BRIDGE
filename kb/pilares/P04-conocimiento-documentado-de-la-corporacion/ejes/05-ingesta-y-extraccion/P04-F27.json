@@ -1,0 +1,147 @@
+{
+  "question_id": "P04-F27",
+  "pilar": "P04",
+  "eje": "Ingesta y extracción",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Cómo detectar errores de OCR, tablas incompletas y referencias cruzadas rotas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La detección de anomalías e inconsistencias en la ingesta se realiza mediante una triple batería de validadores algorítmicos: 1) Auditor de Paridad Tabular (Table Structure Auditor): comprueba que cada fila de una tabla contenga exactamente el mismo número de celdas que la fila de encabezados y que las celdas numéricas contengan valores parseables con sus separadores decimales coherentes; 2) Verificador de Sumas de Control (Checksum & Balance Validator): para tablas financieras o balances de emisiones ESG, verifica que la suma de componentes coincida con la cifra total reportada en la fila 'Total' (tolerando redondeos menores a 0,5%); y 3) Detector de Referencias Cruzadas Huérfanas (Orphan Reference Detector): rastrea todas las marcas de nota al pie (e.g. `[1]`, `*`, `(a)`) e hipervínculos internos, alertando si el texto de la nota no fue capturado en la misma página o en el anexo final. Cualquier fragmento con fallas críticas queda retenido en estado 'Cuarentena para Revisión Humana'.",
+  "findings": [
+    {
+      "claim_id": "P04-F27-C1",
+      "claim": "La ingesta documental robusta requiere validadores automatizados de paridad de celdas, sumas de control aritméticas y resolución de notas al pie para retener en cuarentena los errores de extracción.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Control de Calidad de Ingesta"
+      },
+      "evidence": [
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2: Limitaciones Metodológicas y Agenda de Validación (Etapa 2)",
+          "excerpt_short": "Fragilidad en extracción automatizada de tablas complejas en PDF: requiere prueba piloto de ingesta de 15 memorias NCG 461 con criterio de éxito de precisión estructural ≥ 98% y cero omisión de notas al pie.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "3d5b1ad5-73ef-4a53-aaa0-a1ff3f4c5043",
+          "source_title": "NLP for ESG and Corporate Disclosures: A Survey (Ni et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2308.06597",
+          "locator": "Sección 3: Information Extraction from Corporate Reports",
+          "excerpt_short": "Addresses formatting errors, misaligned table cells, and numerical discrepancies that propagate into downstream ESG assessment models.",
+          "source_date": "2023-08-11",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evidencia académica Ni et al. y protocolo de validación empírica en P04_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tablas y notas extraídas del documento"
+    ],
+    "actors": [
+      "Integrity Validator",
+      "Arithmetic Verifier",
+      "Quarantine Worker"
+    ],
+    "steps": [
+      "Verificación de paridad de columnas",
+      "Comprobación de sumatorias",
+      "Resolución de notas al pie",
+      "Marcado de paso o envío a cuarentena"
+    ],
+    "states": [
+      "Extracted",
+      "Auditing_Integrity",
+      "Quarantined",
+      "Approved_For_Indexing"
+    ],
+    "outputs": [
+      "Reporte de anomalías de ingesta y fragmentos certificados para indexación"
+    ],
+    "exceptions": [
+      "Tablas con notas de pie en anexos de páginas finales del documento"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_INGESTION_GUARD",
+      "type": "mecanismo_calidad",
+      "name": "Validador de Integridad de Ingesta Tabular",
+      "aliases": [
+        "Ingestion Quality Guardrail"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_INGESTION_GUARD",
+      "predicate": "filtra_errores_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F27-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Control de fallas",
+      "Ingesta sin validación": "Indexa tablas rotas que provocan alucinaciones numéricas en respuestas directivas.",
+      "Ingesta con validación de paridad": "Detecta la falla en tiempo de carga e impide que datos corruptos lleguen a producción."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe activar este validador para bloquear la indexación de tablas rotas y alertar al equipo de TI documental.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

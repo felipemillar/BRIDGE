@@ -1,0 +1,140 @@
+{
+  "question_id": "P05-C08",
+  "pilar": "P05",
+  "eje": "Narrativas y temas emergentes",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué sigue sin prueba sobre narrativas y temas emergentes, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis de gaps documentado en P05_GAPS_AND_VALIDATION Sección 1 y 3 establece: 1) Lo que sigue sin prueba formal: La estandarización matemática universal de los parámetros del modelo epidemiológico SIR de Shiller (tasa de contagio beta, tasa de recuperación gamma y número de reproducción básica R0) aplicados a las narrativas corporativas. No existen benchmarks normalizados que definan el valor umbral exacto en que una historia pasará indefectiblemente de un foro especializado a forzar la intervención de una comisión parlamentaria; 2) Qué fuente es parcial o falló: Fallan las plataformas de analítica digital comercial (Signal AI, Meltwater) al proveer indicadores propietarios cerrados de 'virulencia' o 'impacto' sin transparentar las fórmulas matemáticas ni permitir la calibración con variables institucionales del marco chileno; 3) Validación mínima que resolvería la incertidumbre: Conducir un estudio de validación retrospectiva (backtesting) sobre un corpus histórico de 50 casos de controversias socioambientales y de libre competencia en Chile en los últimos 10 años, midiendo la correlación entre la velocidad de propagación intercanal y la posterior presentación de mociones legislativas o formulación de cargos de superintendencias, calibrando umbrales empíricos de R0 específicos para el entorno institucional local.",
+  "findings": [
+    {
+      "claim_id": "P05-C08-C1",
+      "claim": "La cuantificación matemática precisa de la tasa de contagio narrativo R0 en asuntos públicos carece de benchmarks estandarizados, requiriendo validación mediante backtesting en series históricas locales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Modelación de Economía Narrativa"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1: Falta de Benchmarks Estandarizados de Resonancia Narrativa",
+          "excerpt_short": "No existen unidades de medida consensuadas para cuantificar la virulencia o mutación de un frame. Pregunta abierta: variables matemáticas mínimas para el Índice de Riesgo de Contagio Narrativo.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío científico formalmente documentado en el dossier de gaps de P05.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Series históricas de cobertura de controversias",
+      "Fechas de hitos parlamentarios y regulatorios"
+    ],
+    "actors": [
+      "Científico de Datos",
+      "Modelador Econométrico"
+    ],
+    "steps": [
+      "Ajuste de curvas de difusión SIR sobre casos históricos",
+      "Cálculo de parámetros beta y gamma para el ecosistema chileno",
+      "Definición de rangos de alerta de R0"
+    ],
+    "states": [
+      "Historical_Data_Fitted",
+      "Parameters_Calibrated",
+      "Empirical_Thresholds_Set"
+    ],
+    "outputs": [
+      "Módulo de Alerta Temprana de R0 Narrativo calibrado"
+    ],
+    "exceptions": [
+      "Controversias impulsadas artificialmente por granjas de bots con decaimiento instantáneo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_R0_STANDARDIZATION_GAP",
+      "type": "vacio_metodologico",
+      "name": "Brecha de Calibración Matemática de R0 Narrativo",
+      "aliases": [
+        "Narrative R0 Benchmark Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_R0_STANDARDIZATION_GAP",
+      "predicate": "limita_cuantificacion_de",
+      "object_id": "ENT_SHILLER_SIR",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C08-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de modelado de virulencia",
+      "Herramientas Comerciales": "Puntaje opaco de 'Engagement Score' sin fundamento epidemiológico.",
+      "Modelo Calibrado BRIDGE": "Cálculo de R0 basado en la velocidad de salto entre canales periféricos y medios regulados con umbral empírico auditado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Calculador de R0",
+      "implication": "BRIDGE debe acompañar todo indicador de virulencia narrativa con la indicación de que se trata de una estimación epidemiológica modelada y no de una certeza determinista.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_R0_BENCHMARK",
+      "description": "Ausencia de estándares cuantitativos universales para calibrar la tasa de reproducción R0 en narrativas corporativas.",
+      "severity": "media",
+      "status": "documentado"
+    }
+  ],
+  "next_question_ids": [
+    "P05-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

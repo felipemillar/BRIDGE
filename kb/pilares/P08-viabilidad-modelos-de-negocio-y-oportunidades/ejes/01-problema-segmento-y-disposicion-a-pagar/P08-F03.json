@@ -1,0 +1,148 @@
+{
+  "question_id": "P08-F03",
+  "pilar": "P08",
+  "eje": "Problema, segmento y disposición a pagar",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué segmento inicial reúne urgencia, acceso a datos y capacidad de adopción?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El segmento inicial óptimo (Beachhead Market) está compuesto por las Grandes Empresas de Sectores Regulados con Exposición Territorial y Ambiental en Chile: Gran Minería (cobre y litio), Energía e Infraestructura Crítica, y Banca / Servicios Financieros bajo supervisión de la CMF. Este segmento combina: 1) Urgencia crítica (fiscalizaciones continuas de la SMA, tramitación de permisos SEIA, escrutinio de comunidades e InfoLobby); 2) Acceso estructurado a datos corporativos (memorias CMF NCG 461, compromisos de RCA, reportes de sostenibilidad); y 3) Capacidad financiera de pago (presupuestos de asuntos corporativos y legales de USD 500K a USD 5M anuales).",
+  "findings": [
+    {
+      "claim_id": "P08-F03-C1",
+      "claim": "Las corporaciones mineras, energéticas y bancarias representan el segmento con mayor propensión de pago y menor fricción de datos para una plataforma de inteligencia estratégica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "beachhead_market_segmentation",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 1.3 'Definición del Segmento de Entrada (Beachhead Market)'",
+          "excerpt_short": "El segmento prioritario en Chile y la región andina está constituido por empresas del IPSA con alta exposición territorial y regulatoria: minería del cobre y litio, generación/transmisión eléctrica, utilities sanitarias y banca. Este grupo cuenta con tres atributos indispensables: a) Alta urgencia derivada de la permisología ambiental y conflictividad territorial; b) Datos documentados disponibles (RCAs del SEA, reportes CMF NCG 461); y c) Capacidad de absorber contratos de USD 4.500 a USD 6.500 mensuales sin objeción presupuestaria si mitiga un riesgo mayor.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "LLYC: Tendencias y Modelos de Servicio en Asuntos Públicos y Corporativos",
+          "source_id": "dad4edf1-de3c-4f06-ac79-9f0c42435a98",
+          "locator": "Capítulo 2 'Sectores con mayor demanda de inteligencia estratégica', p. 12-16",
+          "excerpt_short": "En el mercado latinoamericano, la inversión en consultoría estratégica y asuntos corporativos está traccionada fundamentalmente por los sectores extractivos, energéticos y financieros, donde el escrutinio social y los marcos regulatorios estrictos exigen un control milimétrico del relato y de los compromisos adquiridos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evidencia corroborada entre el análisis de mercado de LLYC y el Dossier P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catastro de empresas IPSA / Gran Minería",
+      "Evaluación de proyectos en SEIA",
+      "Presupuesto anual de Asuntos Corporativos"
+    ],
+    "actors": [
+      "Gerente de Asuntos Corporativos Minero/Energético",
+      "Director de Asuntos Públicos",
+      "Socio Consultor de BRIDGE"
+    ],
+    "steps": [
+      "Identificación de empresas con proyectos en fase de aprobación ambiental o conflicto comunitario",
+      "Presentación de diagnóstico de asimetría informativa",
+      "Oferta de piloto pagado de 3 meses"
+    ],
+    "states": [
+      "Target Identificado",
+      "Contacto Ejecutivo",
+      "Diagnóstico Presentado",
+      "Piloto Activo"
+    ],
+    "outputs": [
+      "Contrato recurrente de Tech-Enabled Service"
+    ],
+    "exceptions": [
+      "Empresas multinacionales con compras centralizadas en Houston o Londres que demoran 12 meses"
+    ]
+  },
+  "entities": [
+    "Gran Minería",
+    "Sector Eléctrico",
+    "Banca CMF",
+    "SEA",
+    "IPSA",
+    "LLYC"
+  ],
+  "relations": [
+    {
+      "from": "Gran Minería / Energía",
+      "to": "Beachhead Market",
+      "type": "qualifies_as"
+    },
+    {
+      "from": "Exposición Regulatoria SMA",
+      "to": "Urgencia de Adopción",
+      "type": "drives"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Retail/Consumo masivo vs Gran Minería/Energía",
+      "diferencia": "El consumo masivo enfoca su gasto en marketing y publicidad masiva; la minería y energía enfocan su gasto en licencia social, asuntos públicos y cumplimiento legal."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "target_pool_chile": "40 a 60 grandes corporaciones de primera línea",
+    "average_acv_potential": "USD 54.000 a USD 78.000 anuales por cliente"
+  },
+  "bridge_implications": "Enfocar los esfuerzos comerciales y los conectores iniciales (SMA SNIFA, SEIA, BCN, InfoLobby) en las necesidades específicas de minería, energía e infraestructura.",
+  "open_gaps": [
+    "Medir la permeabilidad de medianas mineras y empresas de transmisión eléctrica locales."
+  ],
+  "next_question_ids": [
+    "P08-F04",
+    "P08-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

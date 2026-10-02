@@ -1,0 +1,135 @@
+{
+  "question_id": "P02-F23",
+  "pilar": "P02",
+  "eje": "Asuntos públicos y memoria de actores",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre asuntos públicos y memoria de actores?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cada hecho está respaldado por fuentes oficiales del cuaderno P02 con fechas y pasajes exactos: 1) Quorum: quorum.us/solutions/legislative-tracking/ (software de asuntos públicos y CRM de lobby en EE. UU./UE/UK, evidencia 2025-2026); 2) FiscalNote: fiscalnote.com/ y reportes SEC NYSE:NOTE (PolicyNote y modelos predictivos de aprobación de leyes en EE. UU./UE, evidencia 2025-2026); 3) Open Point Group: openpoint.com/products/stakeholder-relationship-management/ (Consultation Manager y adquisición de Converlens en julio 2024 para análisis de feedback comunitario con IA); 4) Simply Stakeholders / Darzin: simplystakeholders.com/stakeholder-management-software/ (matriz de influencia, NLP y Commitments Tracking, misma entidad legal que Darzin Software Pty Ltd); 5) Borealis / Irth Solutions: boreal-is.com/modules/stakeholder-engagement/ (adquirida por Irth Solutions/Blackstone, +20 años en desempeño social, quejas y compromisos mineros en Chile/Perú/Canadá); 6) Fechas canónicas de M&A y fe de erratas: Burson adquirió Limbik el 12 agosto 2026; Memo pertenece a Signal AI desde 20 abril 2026; WPP vendió FGS Global a KKR el 3 dic 2024 (SEC Form 6-K); Hootsuite adquirió Talkwalker en abril 2024; Onclusive fundada en enero 2022 por STG; corte de auditoría: 30 sept / 1 oct 2026.",
+  "findings": [
+    {
+      "claim_id": "P02-F23-C1",
+      "claim": "Los antecedentes técnicos y societarios de las plataformas de asuntos públicos y memoria de actores se encuentran respaldados por especificaciones oficiales vigentes a septiembre/octubre de 2026 y confirmados en la fe de erratas del pilar.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global / Chile",
+        "actor": "Auditoría de Manifiesto P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Sección: Registro de Fuentes de Asuntos Públicos y M&A",
+          "excerpt_short": "Verificación y rectificación de fechas de M&A y especificaciones técnicas de proveedores de asuntos públicos.",
+          "source_date": "2026-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:34:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de los documentos canónicos en el repositorio de P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Enlaces oficiales",
+      "Tokens indexados",
+      "Fechas de adquisición corporativa"
+    ],
+    "actors": [
+      "Auditor Documental",
+      "Registro de Fuentes"
+    ],
+    "steps": [
+      "Cotejo de identificadores",
+      "Verificación de filings corporativos",
+      "Consolidación de pasajes clave"
+    ],
+    "states": [
+      "Fuente_Revisada",
+      "Pasaje_Validado",
+      "Indice_Completado"
+    ],
+    "outputs": [
+      "Cuadro de Trazabilidad de Asuntos Públicos P02"
+    ],
+    "exceptions": [
+      "Modificación de URLs de productos comerciales (se mantiene copia estática en corpus)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "REG_FUENTES_ASUNTOS_PUB",
+      "type": "registro_documental",
+      "name": "Registro de Fuentes de Asuntos Públicos P02",
+      "aliases": [
+        "Public Affairs Sources Index"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "REG_FUENTES_ASUNTOS_PUB",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "Eje_Asuntos_Publicos_P02",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F23-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Trazabilidad Documental vs Declaraciones Promocionales",
+      "Declaración Promocional": "Afirmar que una plataforma cubre regulación en todo el mundo sin respaldar fuentes.",
+      "Trazabilidad Documental": "Verificar en manuales de FiscalNote y Quorum que su cobertura comprobada se restringe a EE. UU. y la UE."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Mantener localizadores exactos para cada competidor evaluado en los entregables finales de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F24",
+    "P02-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:34:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

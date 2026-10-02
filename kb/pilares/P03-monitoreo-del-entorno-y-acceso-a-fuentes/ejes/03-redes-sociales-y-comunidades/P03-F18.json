@@ -1,0 +1,129 @@
+{
+  "question_id": "P03-F18",
+  "pilar": "P03",
+  "eje": "Redes sociales y comunidades",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra redes sociales y comunidades sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso: Monitoreo de una campaña digital y comunitaria contra una planta de desalinización en el norte de Chile. Entradas: 1) Stream de publicaciones en Bluesky capturado por el WebSocket de Jetstream con hashtags contra el proyecto; 2) Mensajes públicos en un canal de Telegram de defensa ambiental comunal convocando a marcha vecinal; 3) Hilo de discusión en el subreddit r/chile en Reddit discutiendo el impacto en la fauna marina; y 4) Análisis de sincronía temporal de 15 cuentas que publican el mismo enlace en un lapso de 8 segundos. Resultado esperado: El sistema genera una ficha de incidente social `INC_DESALINADORA_01`, clasifica las publicaciones como 'Tensión Comunitaria Ambiental', calcula un coeficiente de coordinación temporal alto para las 15 cuentas (marcando 'Anomalía de Coordinación Temporal' pero sin tildarlas de 'desinformación falsa' en cumplimiento de la Adenda P03), y alerta al equipo de asuntos corporativos sobre la convocatoria de marcha 48 horas antes de su realización física.",
+  "findings": [
+    {
+      "claim_id": "P03-F18-C1",
+      "claim": "Un caso de monitoreo comunitario riguroso combina Bluesky Jetstream, canales públicos de Telegram y foros de Reddit, detectando sincronía temporal sin emitir juicios infundados de falsedad discursiva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Zona Norte)",
+        "actor": "Caso Redes P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.3: Coordinación es Estructura de Red, no Juicio de Veracidad",
+          "excerpt_short": "La coordinación temporal ocurre legítimamente en... campañas de activismo ciudadano y defensa ambiental de ONGs... Un sistema debe reportar anomalías pero nunca etiquetarlas automáticamente como falsas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los principios operacionales de la adenda de calidad P03.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Jetstream Feed",
+      "Canal Público Telegram",
+      "Reddit r/chile",
+      "Analizador de Sincronía"
+    ],
+    "actors": [
+      "Community Listener",
+      "Temporal Co-action Detector"
+    ],
+    "steps": [
+      "Ingesta multicanal",
+      "Detección de sincronía temporal",
+      "Clasificación de riesgo de marcha"
+    ],
+    "states": [
+      "Signals_Ingested",
+      "Coordinated_Accounts_Flagged",
+      "Incident_Dispatched"
+    ],
+    "outputs": [
+      "Ficha de Incidente Comunitario con alerta de convocatoria a marcha"
+    ],
+    "exceptions": [
+      "Falsos positivos de sincronía por compartición masiva de noticias urgentes"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_DESALINADORA",
+      "type": "caso_de_uso",
+      "name": "Caso Demostrativo Monitoreo Comunitario Desalinadora",
+      "aliases": [
+        "Desalination Community Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_DESALINADORA",
+      "predicate": "ejemplifica_deteccion_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F18-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Incorporar detectores de coordinación temporal que respeten la legitimidad de campañas ciudadanas sin sesgos de censura.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

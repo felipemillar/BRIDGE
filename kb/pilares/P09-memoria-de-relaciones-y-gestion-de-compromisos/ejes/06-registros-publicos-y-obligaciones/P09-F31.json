@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-F31",
+  "pilar": "P09",
+  "eje": "Registros públicos y obligaciones",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué fuentes de lobby, evaluación ambiental y cumplimiento aportan contexto en Chile?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el contexto chileno, la memoria de relaciones se alimenta e interactúa con tres fuentes de registros públicos oficiales: 1) Plataforma InfoLobby (Ley N° 20.730 y Dto 71 SEGPRES): Registro público obligatorio de audiencias, viajes y donativos gestionado por el Consejo para la Transparencia (CPLT), individualizando sujetos pasivos (autoridades), lobbistas o gestores de intereses y materias tratadas; 2) Sistema e-SEIA del SEA: Plataforma de tramitación de Declaraciones (DIA) y Estudios de Impacto Ambiental (EIA), que contiene actas de participación ciudadana (PAC), reuniones con GHPPI y las Resoluciones de Calificación Ambiental (RCA) con sus compromisos ambientales exigibles; 3) Sistema SNIFA y SSA de la SMA (Res. Ex. N° 844/2012 y 223/2015): Sistema Nacional de Información de Fiscalización Ambiental y Sistema de Seguimiento Ambiental, donde los titulares reportan el cumplimiento de compromisos RCA, planes de monitoreo, descargas y fiscalizaciones; y 4) Como fuente comparativa no vinculante, el informe OECD 2024 ('The Regulation of Lobbying and Influence in Chile'), que provee benchmarks internacionales de integridad sin constituir derecho positivo chileno.",
+  "findings": [
+    {
+      "claim_id": "P09-F31-C1",
+      "claim": "Los tres registros públicos primarios en Chile son InfoLobby (Ley 20.730), e-SEIA (SEA) y SNIFA/SSA (SMA), complementados por análisis comparativos de la OCDE.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "chilean_public_registries_context",
+      "evidence": [
+        {
+          "source_title": "P09_OECD_SCOPE_CORRECTION",
+          "source_id": "42eb25f9-bb90-49b6-82d5-32220b2e6f7c",
+          "locator": "Sección 'Delimitación del Alcance del Informe OECD 2024'",
+          "retrieved_at": null,
+          "excerpt_short": "El informe de la OCDE 'The Regulation of Lobbying and Influence in Chile (2024)' constituye un estudio comparativo y diagnóstico de recomendaciones de política pública. No constituye norma vinculante en Chile. Las fuentes normativas vinculantes son la Ley 20.730, la Ley 19.300 y la Ley Orgánica de la SMA.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 20.730 que Regula el Lobby y las Gestiones de Intereses Particulares",
+          "source_id": "f6fa26bd-ba44-4b03-bbed-ad4d4296f20f",
+          "locator": "Artículos 3, 5 y 8",
+          "retrieved_at": null,
+          "excerpt_short": "La publicidad de las audiencias y reuniones sostenidas por sujetos pasivos con lobbistas y gestores de intereses se efectuará a través de sitios electrónicos institucionales y la plataforma central InfoLobby.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de la corrección canónica de alcance de la OCDE y la ley positiva chilena.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registros descargados de InfoLobby",
+      "Expedientes e-SEIA",
+      "Reportes SSA SMA"
+    ],
+    "actors": [
+      "Analista de Asuntos Públicos",
+      "Encargado de Cumplimiento",
+      "Scraper / Integrador API BRIDGE"
+    ],
+    "steps": [
+      "Extracción periódica de registros públicos",
+      "Cruce por RUT o nombre de empresa titular",
+      "Indexación en grafo relacional corporativo",
+      "Alerta sobre nuevas publicaciones o fiscalizaciones"
+    ],
+    "states": [
+      "Registro Público Detectado",
+      "Datos Cruzados",
+      "Contexto Integrado"
+    ],
+    "outputs": [
+      "Visor consolidado de obligaciones públicas en BRIDGE"
+    ],
+    "exceptions": [
+      "Discrepancias entre las fechas de InfoLobby y la agenda interna se marcan para revisión humana"
+    ]
+  },
+  "entities": [
+    "InfoLobby",
+    "e-SEIA",
+    "SNIFA SMA",
+    "SSA SMA",
+    "Ley 20.730",
+    "OECD 2024"
+  ],
+  "relations": [
+    {
+      "from": "InfoLobby",
+      "to": "Ley 20.730",
+      "type": "OPERATED_UNDER"
+    },
+    {
+      "from": "SSA SMA",
+      "to": "Res. Ex. 223/2015",
+      "type": "GOVERNED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Informe consultivo OCDE vs Ley de Lobby 20.730",
+      "diferencia": "El informe OCDE analiza vacíos y sugiere mejoras; la Ley 20.730 es la norma vigente imperativa con sanciones administrativas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "binding_public_platforms_count": "3 plataformas vinculantes (InfoLobby, e-SEIA, SNIFA/SSA)",
+    "benchmark_non_binding_reports": "1 informe internacional (OECD 2024)"
+  },
+  "bridge_implications": "Implementar conectores de ingesta estructurada para los datasets abiertos de InfoLobby y el SNIFA.",
+  "open_gaps": [
+    "Verificar la periodicidad de actualización de los volcados CSV abiertos de InfoLobby."
+  ],
+  "next_question_ids": [
+    "P09-F32",
+    "P09-F33"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

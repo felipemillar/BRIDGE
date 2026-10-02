@@ -1,0 +1,156 @@
+{
+  "question_id": "T01-F27",
+  "pilar": "T01",
+  "eje": "Métricas y denominadores",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué métricas del corpus no son comparables por diferencias de muestra o contexto?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el corpus de evaluación y literatura científica de T01 existen métricas que no pueden compararse de forma directa o acrítica debido a profundas asimetrías de contexto, muestra y diseño experimental: 1) Tasa de Acierto en Preguntas Generales vs Preguntas Corporativas Especializadas: Benchmarks académicos como FreshQA (Vu et al. 2023) o ALCE (Gao et al. 2023) evalúan cultura general, biografías y Wikipedia pública (donde modelos comerciales alcanzan 70-80%), lo cual no es comparable con la recuperación sobre hechos esenciales, memorias y balances regulados por la CMF donde el costo de la ambigüedad es asimétrico; 2) Latencia en Modelos Cloud API vs On-Premise: Las cifras de latencia de APIs externas (OpenAI/Anthropic) varían por congestión global de red y colas de inferencia compartidas, siendo incomparables con servidores dedicados o hardware local on-premise (ArXiv 2025 f57279c5); 3) Métricas de Síntesis en Noticias vs Informes Legales: SummEval (Fabbri et al. 2021) mide compresión de artículos periodísticos breves de CNN/DailyMail, mientras que los informes de The Bridge Intelligence sintetizan expedientes regulatorios y matrices de compromisos de cientos de páginas; y 4) Reputación Perfilada en Redes Sociales vs Juicio Corporativo Formal (Social IQa / Sap et al. 2019).",
+  "findings": [
+    {
+      "claim_id": "T01-F27-C1",
+      "claim": "El estudio FreshLLMs (Vu et al. 2023) y la auditoría T01_QUALITY_ADDENDUM advierten que las tasas de precisión reportadas en benchmarks de preguntas abiertas estándar sobreestiman drásticamente el desempeño en dominios cerrados corporativos, por lo que comparar scores brutos entre ambos contextos constituye un grave error de extrapolación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global",
+        "actor": "Vu et al. & T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "142a9e37-de1d-438a-9ec4-96dfb18dbb09",
+          "source_title": "Vu et al. (2023) — FreshLLMs: Refreshing Large Language Models with Search Engine Augmentation",
+          "original_url": "https://arxiv.org/pdf/2310.03214.pdf",
+          "locator": "Section 4: Analysis and Limitations, p. 6-7",
+          "excerpt_short": "Performance on open-domain web search queries does not directly translate to specialized institutional domains with constrained corpora and zero-tolerance for factual error.",
+          "source_date": "2023-10-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 5: Regla de Incomparabilidad de Contextos",
+          "excerpt_short": "Queda terminantemente prohibido equiparar métricas de benchmarks abiertos (Wikipedia/CNN) con el rendimiento exigido a BRIDGE en el análisis de información reservada y regulatoria.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Consenso metodológico explícito entre literatura científica y documento rector.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Reportes de benchmarks externos",
+      "Resultados internos de pruebas de BRIDGE"
+    ],
+    "actors": [
+      "Analista de Benchmarking de BRIDGE",
+      "Director de Producto"
+    ],
+    "steps": [
+      "Identificar la procedencia de la muestra y el contexto de cada métrica externa",
+      "Clasificar si la comparación es intra-dominio o inter-dominio",
+      "Descartar comparaciones cruzadas no homogéneas (ej. Wikipedia vs CMF)",
+      "Establecer líneas base contemporáneas controladas sobre el mismo corpus corporativo"
+    ],
+    "states": [
+      "ANALISIS_PROCEDENCIA",
+      "CLASIFICACION_HOMOGENEIDAD",
+      "DESCARTE_INCOMPARABLES",
+      "LINEA_BASE_ESTABLECIDA"
+    ],
+    "outputs": [
+      "Matriz de comparabilidad metodológica",
+      "Reporte de limitaciones de benchmarking"
+    ],
+    "exceptions": [
+      "Si un material de marketing corporativo cita scores académicos de Wikipedia como prueba de exactitud legal, se rechaza por infracción de gobernanza"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "REGLA_INCOMPARABILIDAD",
+      "type": "documento",
+      "name": "Protocolo de Incomparabilidad de Muestras",
+      "aliases": [
+        "Cross-Domain Benchmarking Guardrail"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "REGLA_INCOMPARABILIDAD",
+      "predicate": "prohibe_equiparar",
+      "object_id": "FRESHQA_BENCHMARK",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F27-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Benchmark Abierto (FreshQA)",
+      "item_b": "Benchmark Corporativo BRIDGE",
+      "dimension": "Tolerancia al error",
+      "conclusion": "FreshQA tolera aproximaciones o imprecisiones menores; BRIDGE opera bajo tolerancia cero en datos normativos y financieros."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de comparaciones no válidas detectadas y corregidas",
+      "denominator": "Total comparaciones formuladas en reportes de producto",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Protege la credibilidad comercial e institucional de BRIDGE al basar sus pruebas en evaluaciones contextuales rigurosas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F28",
+    "T01-F29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

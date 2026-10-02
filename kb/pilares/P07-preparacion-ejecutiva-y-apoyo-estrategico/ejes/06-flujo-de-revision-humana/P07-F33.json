@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-F33",
+  "pilar": "P07",
+  "eje": "Flujo de revisión humana",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué latencia de revisión es aceptable en operación normal y en crisis?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los acuerdos de nivel de servicio (SLA) de latencia se definen según el régimen operativo: 1) En Operación Normal (Briefing matinal de directorio, preparación de reunión de lobby programada o entrevista acordada): La latencia aceptable para la revisión colegiada es de 2 a 4 horas (la IA genera el borrador a las 05:30 AM, los revisores técnicos y legales visan entre 06:00 y 07:30 AM, y el brief consolidado se entrega al directivo a las 07:45 AM); 2) En Gabinete de Crisis / Ruptura de Emergencia (accidente operacional, derrame o viralización hostil desatada): La latencia máxima tolerable para emitir un Holding Statement y las 3 líneas defensivas principales es de 15 a 20 minutos; y 3) Durante Entrevista en Vivo: Cero latencia de generación (el vocero opera con tarjetas mentales de mensajes previamente asimiladas en el entrenamiento de simulación).",
+  "findings": [
+    {
+      "claim_id": "P07-F33-C1",
+      "claim": "Los SLAs de revisión humana deben desacoplarse radicalmente entre la rutina de inteligencia matinal (2-4 horas) y la respuesta urgente a crisis virales (máximo 15-20 minutos).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "latency_slas",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 1 y Sección 6 (Plantilla 1 y Plantilla 4)",
+          "excerpt_short": "Ventana de Entrega Matinal: Generación a las 05:30 AM, validación CCO/Legal entre 06:30 y 07:30 AM, lectura por el Directorio a las 08:00 AM. En eventos de crisis: El Holding Statement debe despacharse en un plazo no mayor a 15-20 minutos desde la confirmación del inyector para evitar el vacío informativo que ocupan narrativas hostiles.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Meltwater: Social Media Crisis Response & GenAI Lens",
+          "source_id": "857ce823-64c6-403b-a6c6-4e3f97041f88",
+          "locator": "Capítulo 'The Golden Hour of Crisis Comms', p. 14-17",
+          "excerpt_short": "In the digital sphere, the traditional golden hour has collapsed to twenty minutes. Failing to release an authorized initial statement within this timeframe exponentially accelerates viral misinformation and shareholder anxiety.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los benchmarks de respuesta a crisis de Meltwater y los flujos operacionales del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "slas_latencia_revision": {
+      "Regimen_Normal_Matinal": {
+        "generacion_ia": "05:30 AM (tiempo cómputo < 3 minutos)",
+        "revision_humana_colegiada": "06:00 - 07:30 AM (90 minutos ventana)",
+        "despacho_ejecutivo": "07:45 AM (lectura en 3 minutos)"
+      },
+      "Regimen_Crisis_Emergencia": {
+        "alerta_disparador": "T+0",
+        "borrador_holding_statement": "T+3 minutos (IA basada en plantillas)",
+        "aprobacion_express_legal_cco": "T+15 minutos",
+        "emision_publica": "T+20 minutos (límite crítico)"
+      }
+    }
+  },
+  "entities": [
+    "Meltwater",
+    "Holding Statement",
+    "Golden Hour",
+    "SLA de Latencia"
+  ],
+  "relations": [
+    {
+      "from": "Régimen Operativo",
+      "to": "SLA de Latencia",
+      "type": "dictates"
+    },
+    {
+      "from": "Holding Statement",
+      "to": "Vacío Informativo",
+      "type": "suppresses"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Revisión Tradicional de Gabinete vs Flujo Express BRIDGE",
+      "diferencia": "El gabinete tradicional demora 4 horas en emitir un comunicado; BRIDGE provee borradores pre-aprobados en 3 minutos, reduciendo la emisión a menos de 20 minutos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "crisis_response_target": "< 20 minutos desde confirmación del incidente",
+    "routine_review_window": "< 120 minutos en operación diaria"
+  },
+  "bridge_implications": "Implementar un modo de 'Alerta Roja / Crisis Express' en BRIDGE con notificaciones push prioritarias y aprobación en 1 clic para CCO y Legal.",
+  "open_gaps": [
+    "Riesgo de aprobación apresurada sin lectura detallada cuando se opera bajo la presión del SLA de 15 minutos."
+  ],
+  "next_question_ids": [
+    "P07-F34",
+    "P07-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

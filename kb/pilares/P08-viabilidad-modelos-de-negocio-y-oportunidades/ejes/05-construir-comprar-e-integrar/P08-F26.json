@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F26",
+  "pilar": "P08",
+  "eje": "Construir, comprar e integrar",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué dependencia de licencia, proveedor o API crea cada elección?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cada elección arquitectónica genera dependencias y riesgos específicos que el corpus mitiga contractualmente: 1) Dependencia de Proveedores de LLM (Google / Microsoft): Crea riesgo de variación de precios, cambios de deprecación de modelos y caídas de servicio. Se mitiga mediante una capa de abstracción agnóstica (LiteLLM) que permite conmutar entre Gemini 1.5 Pro y GPT-4o en segundos sin tocar la lógica de negocio; 2) Dependencia de Agregadores de Prensa (Factiva / Meltwater): Impone costos fijos de USD 1.200 a USD 2.500 mensuales y restricciones de redistribución de texto completo. Se mitiga entregando exclusivamente citas breves, resúmenes y localizadores, cumpliendo con el 'fair use' y las directrices de derechos de autor; y 3) Dependencia de Fuentes Públicas Chilenas (BCN, CMF, InfoLobby): Genera vulnerabilidad ante caídas de portales gubernamentales o cambios de HTML. Se mitiga mediante una arquitectura de caching distribuido, colas asíncronas de reintento y normalizadores elásticos de esquema.",
+  "findings": [
+    {
+      "claim_id": "P08-F26-C1",
+      "claim": "Las dependencias de proveedores externos se gestionan mediante diseño multi-proveedor desacoplado, almacenamiento en caché local y respeto estricto a las licencias de propiedad intelectual.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "vendor_dependency_management",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 5.2 'Análisis de Riesgos de Dependencia de Proveedores y Mitigación'",
+          "excerpt_short": "Para evitar el bloqueo de proveedor (vendor lock-in), la arquitectura de BRIDGE desacopla la capa de inferencia de la lógica de dominio. Si Google Cloud o Azure modifican sus políticas o sufren una indisponibilidad prolongada, el router conmuta automáticamente al proveedor secundario. Respecto a los datos de noticias, el cumplimiento de la propiedad intelectual se garantiza almacenando solo metadatos, resúmenes analíticos y extractos justificados, sin redistribuir el cuerpo completo del artículo sin licencia.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Condiciones de Uso y Cuotas de la API Ley Chile para Desarrolladores",
+          "source_id": "1bece919-6c70-4f4a-a6cb-77b66d1b66f8",
+          "locator": "Términos de Servicio y Límites de Tasa 'Rate Limits & Cache Policies', p. 1-3",
+          "excerpt_short": "Developers accessing Ley Chile endpoints must respect rate limits (maximum 60 requests per minute) and implement local caching mechanisms to ensure platform resilience without overloading legislative servers.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de las políticas de uso de la BCN y la estrategia de mitigación multi-cloud en P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Límites de tasa de APIs",
+      "Términos de servicio de proveedores",
+      "Monitoreo de estado de endpoints"
+    ],
+    "actors": [
+      "API Gateway",
+      "Router de Conmutación (Fallback)",
+      "Data Engineer"
+    ],
+    "steps": [
+      "Verificación continua de disponibilidad de endpoints",
+      "Detección de latencia anómala o error 5xx",
+      "Conmutación automática a proveedor de respaldo",
+      "Registro en bitácora de contingencias"
+    ],
+    "states": [
+      "Operación Normal",
+      "Degradación Detectada",
+      "Conmutación Activa",
+      "Recuperado"
+    ],
+    "outputs": [
+      "Continuidad operacional con uptime > 99.5%"
+    ],
+    "exceptions": [
+      "Caída simultánea de redes globales que active modo de consulta offline de respaldo"
+    ]
+  },
+  "entities": [
+    "Vendor Lock-In",
+    "LiteLLM Router",
+    "API Gateway",
+    "BCN Rate Limits",
+    "Fair Use",
+    "Caching Distribuido"
+  ],
+  "relations": [
+    {
+      "from": "Riesgo de Dependencia LLM",
+      "to": "Router Multi-Cloud",
+      "type": "mitigated_by"
+    },
+    {
+      "from": "Rate Limits BCN",
+      "to": "Caché Local de Leyes",
+      "type": "managed_by"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Arquitectura atada a un único LLM vs Arquitectura desacoplada multi-cloud",
+      "diferencia": "Atarse a un único modelo deja a la empresa rehén de subidas de tarifas; la arquitectura agnóstica permite optimizar costos y negociar con proveedores."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "failover_switching_time": "< 5 segundos para conmutar entre Google y Azure",
+    "bcn_rate_limit_compliance": "< 60 peticiones/minuto mediante cola regulada"
+  },
+  "bridge_implications": "Implementar desde el día 1 la capa de abstracción agnóstica para llamadas a LLMs en el backend de BRIDGE.",
+  "open_gaps": [
+    "Negociar acuerdos de nivel de servicio (SLA) con soporte enterprise directo en Google Cloud Chile."
+  ],
+  "next_question_ids": [
+    "P08-F27",
+    "P08-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

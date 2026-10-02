@@ -1,0 +1,144 @@
+{
+  "question_id": "P11-C10",
+  "pilar": "P11",
+  "eje": "Proveedores y procesamiento externo",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué sigue sin prueba sobre proveedores y procesamiento externo, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el procesamiento externo con proveedores cloud: 1) Lo que sigue sin prueba empírica: El cumplimiento efectivo y continuo de la política de 'Zero Retention' en la memoria volátil y cachés intermedias de inferencia de los proveedores de LLMs (ej. AWS Bedrock, Azure OpenAI, Vertex AI) durante contingencias de red, picos de carga o ejecuciones con logging activado por defecto en la nube; 2) Fuente que falló o es parcial: La documentación técnica de AWS Bedrock, Google Vertex AI y OpenAI describe políticas contractuales y controles de acceso, pero no proporciona a los clientes telemetría forense en tiempo real ni acceso a los registros de depuración de bajo nivel de los clústeres de servidores de GPU; y 3) Validación mínima que resolvería la incertidumbre: Desplegar un programa continuo de 'Canary Honeytokens' (inyección periódica de tokens sintéticos con identificadores monitorizables en prompts de prueba enviados a las APIs de los proveedores) combinado con escaneos de búsqueda pública y telemetría de monitoreo durante 90 días para comprobar que ningún honeytoken sea retenido, indexado o retornado en respuestas de otros usuarios.",
+  "findings": [
+    {
+      "claim_id": "P11-C10-C1",
+      "claim": "Sigue sin prueba la ausencia de retención en memoria volátil de proveedores cloud durante fallas; la documentación de proveedores es parcial al no brindar telemetría forense directa; y la validación mínima consiste en inyección de Canary Honeytokens con monitoreo a 90 días.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "provider_processing_open_gaps_and_validation",
+      "evidence": [
+        {
+          "source_title": "OWASP GenAI: Top 10 for Large Language Model Applications 2025",
+          "source_id": "83d92341-65c3-4adf-877a-8cf4b4cd29f2",
+          "locator": "Item LLM02: Sensitive Information Disclosure and Third-Party Pipelines",
+          "retrieved_at": null,
+          "excerpt_short": "Organizations lack direct visibility into model hosting environments. Monitoring data leakage across third-party inference APIs requires active probing and canary data techniques.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'Gaps en Proveedores Cloud'",
+          "retrieved_at": null,
+          "excerpt_short": "La ausencia total de retención volátil en proveedores no es directamente auditable por el cliente. Se requiere prueba de canarios sintéticos y monitoreo continuo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Planteamiento lúcido de un problema estructural en computación en la nube pública y solución práctica estandarizada.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Canary Honeytokens sintéticos",
+      "Llamadas periódicas a APIs de LLM",
+      "Motores de monitoreo de fugas"
+    ],
+    "actors": [
+      "Canary Dispatcher",
+      "Agente de Pruebas",
+      "SIEM de Monitoreo"
+    ],
+    "steps": [
+      "Generación de 50 identificadores únicos sintéticos (honeytokens) con formato característico",
+      "Inyección de honeytokens en prompts de prueba enviados a AWS Bedrock, Vertex AI y OpenAI",
+      "Monitoreo automatizado de repositorios públicos, logs y respuestas de pruebas cruzadas",
+      "Evaluación periódica cada 30 días: detección de 0 coincidencias de honeytokens",
+      "Certificación trimestral de no-retención observable en proveedores externos"
+    ],
+    "states": [
+      "HONEYTOKENS_INJECTED",
+      "INGESTION_PROBED",
+      "EGRESS_MONITORED_90_DAYS",
+      "INTEGRITY_VERIFIED"
+    ],
+    "outputs": [
+      "Evidencia empírica de no-retención de datos por parte de proveedores de nube"
+    ],
+    "exceptions": [
+      "Si un honeytoken es detectado fuera del entorno controlado, se revoca inmediatamente la API key y se activa el protocolo SEV-1"
+    ]
+  },
+  "entities": [
+    "Canary Honeytokens",
+    "OWASP GenAI LLM02",
+    "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+    "AWS Bedrock",
+    "Vertex AI"
+  ],
+  "relations": [
+    {
+      "from": "Canary Honeytokens",
+      "to": "Proveedores Cloud de IA",
+      "type": "PROBES_VOLATILE_RETENTION_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Confiar pasivamente en el contrato del proveedor vs Probar activamente con honeytokens sintéticos",
+      "diferencia": "Confiar pasivamente deja a la empresa a ciegas ante violaciones del contrato; probar con honeytokens provee detección temprana y evidencia irrefutable."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "honeytoken_exfiltration_rate": "0.00%",
+    "continuous_canary_probe_interval_hours": "Cada 24 horas"
+  },
+  "bridge_implications": "Permite demostrar a los clientes más escépticos que BRIDGE vigila activamente el comportamiento de los proveedores de IA.",
+  "open_gaps": [
+    "Automatización de escaneo en buscadores públicos de patrones de honeytokens específicos."
+  ],
+  "next_question_ids": [
+    "P11-C11",
+    "P11-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

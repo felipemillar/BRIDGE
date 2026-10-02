@@ -1,0 +1,182 @@
+{
+  "question_id": "P01-C02",
+  "pilar": "P01",
+  "eje": "Mandato y fronteras de asuntos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué sigue sin prueba sobre mandato y fronteras de asuntos corporativos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Siguen sin prueba 3 vacíos críticos: 1) métricas temporales auditadas de horas-hombre en preparación directiva (la reducción de 4h a 15m es HT-2); 2) estudios longitudinales sobre el impacto de IA en la Licencia Social; y 3) consistencia empírica entre minutas internas y actas de InfoLobby en Chile. Siete fuentes fallaron por bloqueos técnicos/paywall (Gartner x2, Global Alliance GCF Release, Gregory & Willis 2019, Page Society x2, OECD) y las fuentes comerciales son parciales al no publicar datos brutos. La validación mínima requerida es un estudio empírico en 3 fases: 15 entrevistas cualitativas (Fase 1), shadowing con cronometraje en tiempo real (Fase 2) y PoC trilateral en VPC (Fase 3).",
+  "findings": [
+    {
+      "claim_id": "P01-C02-C1",
+      "claim": "En el inventario de P01, 7 fuentes originales fallaron por bloqueos técnicos, Cloudflare, WAF o HTTP 403 (Gartner Future of Communications, Gartner for Communication Leaders, Global Alliance GCF Release, Gregory & Willis 2019 en ResearchGate, Page Society The CCO as Pacesetter, Page Society Corporate Character, y OECD Corporate Governance), mientras que las fuentes de consultoras son parciales al omitir metodologías reproducibles.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría de Fuentes del Corpus P01"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Auditoría de Fuentes Fallidas y Fuentes Parciales",
+          "excerpt_short": "Identificación de 7 fuentes fallidas por paywalls y WAF, y delimitación de fuentes comerciales parciales.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:09:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Registro exhaustivo de auditoría en el manifiesto P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C02-C2",
+      "claim": "La validación mínima para resolver la incertidumbre epistemológica consiste en un protocolo de campo en 3 fases: 15 entrevistas cualitativas exploratorias, shadowing de preparación cronometrado en tiempo real y despliegue de una PoC en VPC ante un panel de CCOs, CISOs y Fiscales Legales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Protocolo Metodológico"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección: Protocolo de Validación Mínima Requerida",
+          "excerpt_short": "Protocolo de 3 fases para resolver la incertidumbre empírica sobre tiempos, SLO y trazabilidad en lobby.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:09:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño metodológico formal en el corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registro de fuentes fallidas",
+      "Matriz de Knowledge Gaps",
+      "Protocolo de validación en 3 fases"
+    ],
+    "actors": [
+      "Auditor Epistemológico",
+      "Investigador de Campo",
+      "Panel Trilateral CCO-CISO-Legal"
+    ],
+    "steps": [
+      "Aislamiento de fuentes fallidas y parciales",
+      "Ejecución de entrevistas y shadowing",
+      "Medición de tiempos reales",
+      "Cierre de brechas empíricas"
+    ],
+    "states": [
+      "Fuentes_Auditadas",
+      "Vacíos_Aislados",
+      "Validación_Ejecutada",
+      "Incertidumbre_Resuelta"
+    ],
+    "outputs": [
+      "Reporte de validación de gaps",
+      "Base de datos de tiempos auditados"
+    ],
+    "exceptions": [
+      "Imposibilidad de acceder a fuentes corporativas primarias por acuerdos de confidencialidad estrictos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_FUENTES_FALLIDAS_P01",
+      "type": "registro_auditoria",
+      "name": "Registro de 7 Fuentes Fallidas en P01",
+      "aliases": [
+        "Paywalls y Bloqueos Técnicos P01"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_FUENTES_FALLIDAS_P01",
+      "predicate": "limita_alcance_de",
+      "object_id": "Literatura_Global",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C02-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Validación",
+      "implication": "Ejecutar la validación mínima de 3 fases para generar evidencia empírica propietaria no dependiente de fuentes con paywall.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "sin_evidencia sobre mediciones cuantitativas auditadas de horas invertidas en briefings en la literatura pública previa.",
+      "minimum_validation": "Shadowing cronometrado a 10 equipos directivos en Santiago.",
+      "priority": "alta"
+    },
+    {
+      "gap": "sin_evidencia sobre impacto longitudinal de IA en Licencia Social.",
+      "minimum_validation": "Estudio multianual de faenas extractivas con asistentes asistidos.",
+      "priority": "media"
+    }
+  ],
+  "next_question_ids": [
+    "P01-C03",
+    "P01-C04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:09:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "question_id": "T01-F40",
+  "pilar": "T01",
+  "eje": "Entrevistas y disposición a pagar",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar entrevistas y disposición a pagar de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de las entrevistas y la disposición a pagar exige un modelo de datos relacional compuesto por: 1) Entidad Entrevistado: Identificador anónimo, rol funcional (Sponsor Económico, Usuario Clave, Compras/Procurement), departamento corporativo y nivel de experiencia; 2) Entidad Respuesta_Van_Westendorp: ID de entrevista, valores numéricos en moneda local y USD para los 4 umbrales de precio (Demasiado Barato, Barato, Caro, Demasiado Caro); 3) Entidad Proceso_Compra: Centro de costos asignado, ciclo de pago estimado (30, 60, 90 días), requisitos de homologación de proveedores y firma de DPA; 4) Entidad Observación_Uso: Eventos de telemetría apareados (queries realizadas, citas clickeadas, borradores guardados); y 5) Condiciones de Integridad: Validación matemática estricta de que Precio_Demasiado_Barato < Precio_Barato <= Precio_Caro < Precio_Demasiado_Caro para cada encuestado, descartando cuestionarios con inconsistencias lógicas.",
+  "findings": [
+    {
+      "claim_id": "T01-F40-C1",
+      "claim": "La metodología Van Westendorp (SurveyMonkey b62914e1) exige que los datos de pricing estructurado cumplan la condición de monotonicidad estricta entre las cuatro respuestas de cada individuo, invalidando automáticamente respuestas donde el precio 'demasiado caro' resulte inferior al precio 'barato'.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024",
+        "region": "Global",
+        "actor": "SurveyMonkey PSM Guide"
+      },
+      "evidence": [
+        {
+          "source_id": "b62914e1-de40-490c-ae09-d229aaf7f384",
+          "source_title": "SurveyMonkey - How To Use The Van Westendorp Price Sensitivity Meter",
+          "original_url": null,
+          "locator": "Data Cleaning & Validation Rules",
+          "excerpt_short": "Responses must satisfy the strict logical condition: Too Cheap < Cheap <= Expensive < Too Expensive. Inverted price points must be purged prior to analysis.",
+          "source_date": "2024",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Regla formal de limpieza y validación de datos en encuestas PSM.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de JSON Schema de Entrevistas y WTP",
+      "Formularios de entrevista comercial"
+    ],
+    "actors": [
+      "Analista de Operaciones Comerciales",
+      "Sistema CRM de Piloto"
+    ],
+    "steps": [
+      "Capturar respuestas de pricing y verificar la condición de monotonicidad",
+      "Registrar metadatos del tomador de decisión y del proceso de compras",
+      "Almacenar eventos de telemetría del usuario para calcular Say/Do Ratio",
+      "Generar dataset estructurado JSONL para curvas acumuladas de Van Westendorp"
+    ],
+    "states": [
+      "CAPTURA_FORMULARIO",
+      "VALIDACION_MONOTONICIDAD",
+      "INTEGRACION_TELEMETRIA",
+      "DATASET_LISTO"
+    ],
+    "outputs": [
+      "Dataset validado de sensibilidad de precios",
+      "Matriz de preparación de compras"
+    ],
+    "exceptions": [
+      "Si una respuesta viola la monotonicidad de precios, se solicita clarificación inmediata al entrevistado o se purga del cálculo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SCHEMA_ENTREVISTAS_WTP",
+      "type": "documento",
+      "name": "Esquema Estructurado de Entrevistas y WTP",
+      "aliases": [
+        "Pricing & Interview Schema"
+      ]
+    },
+    {
+      "entity_id": "MONOTONICIDAD_PRECIOS",
+      "type": "metrica",
+      "name": "Regla de Monotonicidad Van Westendorp",
+      "aliases": [
+        "Strict Price Ordering"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SCHEMA_ENTREVISTAS_WTP",
+      "predicate": "exige",
+      "object_id": "MONOTONICIDAD_PRECIOS",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F40-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de respuestas PSM válidas y monótonas",
+      "denominator": "Total encuestas aplicadas a tomadores de decisión",
+      "target": ">= 90%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite construir curvas econométricas profesionales de elasticidad de demanda para la ronda de financiamiento de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F41",
+    "T01-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

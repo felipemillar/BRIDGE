@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-F30",
+  "pilar": "P07",
+  "eje": "Apoyo estratégico y límites",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra apoyo estratégico y límites sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso documentado en el Dossier P07 ilustra la detección y bloqueo preventivo de información reservada durante la preparación del CEO de Minera Los Salares S.A. para una entrevista económica sobre proyecciones del ejercicio. Entradas: 1) Consulta externa: Petición de periodista de Diario Financiero sobre planes de inversión y posible adquisición de pertenencias mineras vecinas; 2) Documento interno ingresado: Acta preliminar de sesión de Directorio confidencial que analiza una oferta vinculante de compra por US$ 85M no divulgada al mercado; 3) Marco regulatorio: Artículos 9, 10 y 164 de la Ley 18.045 de Mercado de Valores. Resultado esperado: Activación inmediata del guardrail de Secreto Bursátil: a) El sistema bloquea automáticamente cualquier sugerencia de mención a la adquisición; b) Emite una Alerta de Elevación Crítica ('Información Material No Pública - Riesgo Ley 18.045'); c) Enruta el ticket de forma confidencial al Fiscal Corporativo y Gerente de Finanzas; d) Proporciona al CEO un guion de abstención legalmente blindado ('Nuestra política corporativa es no referirnos a especulaciones de mercado o negociaciones en curso; informamos oportunamente de todo hecho material a través de la CMF'); y e) Evita una investigación de la CMF por uso o revelación indebida de información privilegiada.",
+  "findings": [
+    {
+      "claim_id": "P07-F30-C1",
+      "claim": "Los guardrails de gobernanza impiden que un asistente de IA divulgue información reservada de mercado o sugiera declaraciones que configuren infracciones bursátiles.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "insider_information_case",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 4.1 (Filtro de Información Privilegiada y Confidencialidad)",
+          "excerpt_short": "Caso de protección fiduciaria: Cuando el análisis de contexto identifica discusiones reservadas de Directorio (ej. M&A o negociaciones no públicas), el sistema activa el guardrail de la Ley 18.045. Bloquea la inclusión de la cifra en el briefing del vocero, alerta a la Gerencia Legal y provee la fórmula estándar de abstención bursátil.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 18.045 de Mercado de Valores (Hechos Esenciales)",
+          "source_id": "0326c7d0-15d0-4e6f-a8e5-7852570ec65f",
+          "locator": "Artículo 164 y 165",
+          "excerpt_short": "Se prohíbe a las personas que posean información privilegiada utilizarla en beneficio propio o de terceros, ni comunicarla a terceros antes de su divulgación oficial al mercado a través de la CMF.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso canónico de cumplimiento legal corporativo documentado en el Dossier P07 y respaldado por la Ley 18.045.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "caso_filtro_informacion_privilegiada": {
+      "solicitud_externa": "Pregunta de Diario Financiero sobre adquisición de yacimiento contiguo.",
+      "dato_detectado_en_faena": "Acta confidencial de Directorio sobre oferta de US$ 85M.",
+      "accion_algoritmica_bridge": [
+        "Paso 1: Detección de entidad confidencial y clasificación como 'Información No Pública'.",
+        "Paso 2: Bloqueo de texto en el brief del CEO (marca de agua roja de confidencialidad).",
+        "Paso 3: Notificación de elevación a bandeja de entrada del Fiscal Corporativo.",
+        "Paso 4: Inserción de fórmula de abstención bursátil: 'No comentamos especulaciones; canalizamos hechos esenciales mediante CMF'."
+      ],
+      "resultado": "Cero filtración de hechos reservados y cumplimiento total de la normativa bursátil."
+    }
+  },
+  "entities": [
+    "Diario Financiero",
+    "CEO",
+    "Fiscal Corporativo",
+    "Ley 18.045",
+    "CMF",
+    "Minera Los Salares"
+  ],
+  "relations": [
+    {
+      "from": "Guardrail Bursátil",
+      "to": "Acta Confidencial",
+      "type": "quarantines"
+    },
+    {
+      "from": "CEO",
+      "to": "Diario Financiero",
+      "type": "delivers_safe_abstention_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta Improvisada del CEO vs Respuesta Filtrada por BRIDGE",
+      "diferencia": "Una respuesta improvisada insinuando la compra genera oscilaciones irregulares en la cotización y sumarios de la CMF; la respuesta filtrada protege la transacción y el secreto fiduciario."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "insider_trading_risk_mitigation": "100% de filtrado en textos bajo reserva",
+    "escalation_speed": "< 1 segundo en bloqueo de generación"
+  },
+  "bridge_implications": "Implementar este caso como prueba unitaria obligatoria en la batería de tests de seguridad de BRIDGE.",
+  "open_gaps": [
+    "Detección de lenguaje en clave o eufemismos utilizados por ejecutivos para referirse a negociaciones reservadas."
+  ],
+  "next_question_ids": [
+    "P07-F31",
+    "P07-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

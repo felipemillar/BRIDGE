@@ -1,0 +1,146 @@
+{
+  "question_id": "P03-C14",
+  "pilar": "P03",
+  "eje": "Alertas útiles y latencia",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué sigue sin prueba sobre alertas útiles y latencia, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la tasa real de adopción, fatiga informativa y utilidad subjetiva de las alertas directivas cuando el sistema opera en condiciones de producción empresarial continua: 1) Brecha: Se carece de estudios longitudinales que midan el porcentaje de alertas que efectivamente desencadenaron una acción directiva frente a las ignoradas; 2) Fuente fallida/parcial: Las métricas de apertura de correos publicitadas por suites comerciales miden interacción superficial pero no acción de gobierno; 3) Validación mínima: Ejecutar la Etapa 4 del protocolo empírico de P03 ('Piloto de Campo con Responsables de Asuntos Corporativos'), desplegando el sistema durante 30 días con 5 directores de asuntos corporativos en Chile, midiendo la frecuencia de alertas críticas (meta: <= 3 alertas de Nivel 3 o 4 por semana), la tasa de feedback explícito (meta: > 85% clasificadas como 'Útiles y Accionables', equivalente a un Signal-to-Noise Ratio SNR >= 7.5 dB) y cero omisiones de eventos regulatorios mayores.",
+  "findings": [
+    {
+      "claim_id": "P03-C14-C1",
+      "claim": "Sigue sin prueba la utilidad directiva real y la tasa de fatiga en operaciones continuas, requiriendo un piloto de campo de 30 días con 5 gerentes de asuntos corporativos (SNR >= 7.5 dB, <= 3 alertas críticas/semana).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Protocolo de Validación P03"
+      },
+      "evidence": [
+        {
+          "source_id": "443e6667-3d26-48ad-b56a-bb825e9ea387",
+          "source_title": "P03_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 4: Etapa 4 - Piloto de Campo con Responsables de Asuntos Corporativos",
+          "excerpt_short": "Desplegar el sistema en un piloto cerrado de 30 días con 5 gerentes... Criterio: Ratio de alertas útiles superior al 85% (SNR >= 7.5 dB) y cero omisiones de eventos regulatorios mayores.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del protocolo formal de piloto de campo en P03_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "5 directores de asuntos corporativos",
+      "Sistema P03 en piloto de 30 días"
+    ],
+    "actors": [
+      "Field Pilot Coordinator",
+      "Feedback Telemetry Logger"
+    ],
+    "steps": [
+      "Despliegue de piloto 30 días",
+      "Registro diario de feedback",
+      "Cálculo de SNR y tasa de fatiga"
+    ],
+    "states": [
+      "Pilot_Launched",
+      "Feedback_Collected",
+      "SNR_Benchmarked_Above_7_5dB"
+    ],
+    "outputs": [
+      "Informe de validación directiva de alertas en entorno corporativo real"
+    ],
+    "exceptions": [
+      "Semana con múltiples crisis concurrentes que distorsione el promedio de alertas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PILOTO_CAMPO_DIRECTORES",
+      "type": "piloto_validacion",
+      "name": "Piloto de Campo con Directores de Asuntos Corporativos",
+      "aliases": [
+        "Field Pilot Corporate Affairs"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PILOTO_CAMPO_DIRECTORES",
+      "predicate": "resuelve_incertidumbre_de",
+      "object_id": "Eje_Alertas_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C14-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Signal-to-Noise Ratio (SNR) Directivo",
+      "numerator": "Alertas evaluadas como 'Útiles y Accionables'",
+      "denominator": "Total de alertas despachadas a los 5 directores",
+      "context": "Meta de validación: Ratio >= 85% (SNR >= 7.5 dB)"
+    },
+    {
+      "metric": "Frecuencia Semanal de Alertas Críticas",
+      "numerator": "Alertas Nivel 3 y 4 despachadas",
+      "denominator": "Semanas de operación del piloto",
+      "context": "Meta de fatiga: <= 3 alertas críticas semanales por directivo"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Condicionar la entrega comercial de BRIDGE a superar la auditoría de SNR >= 7.5 dB en el piloto con clientes reales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_P03_FIELD_PILOT_SNR",
+      "description": "Falta de medición longitudinal de utilidad y fatiga en directores reales",
+      "action": "Ejecutar Etapa 4 del protocolo empírico durante 30 días con 5 directores"
+    }
+  ],
+  "next_question_ids": [
+    "P03-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

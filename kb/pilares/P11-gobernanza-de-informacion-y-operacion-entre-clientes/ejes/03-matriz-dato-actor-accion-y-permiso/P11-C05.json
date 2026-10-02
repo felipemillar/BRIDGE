@@ -1,0 +1,153 @@
+{
+  "question_id": "P11-C05",
+  "pilar": "P11",
+  "eje": "Matriz dato, actor, acción y permiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre matriz dato, actor, acción y permiso, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia esencial en la matriz de acceso se centra en el dinamismo y desacoplamiento de la autorización: el dossier inicial (`P11_RESEARCH_DOSSIER`) planteaba una matriz RBAC (Role-Based Access Control) estática vinculada a perfiles fijos (ej. Director, Analista, Operador) evaluados una sola vez durante el inicio de sesión. La fuente primaria fundamental NIST SP 800-162 y la síntesis rectora canónica `P11_VERIFICATION_CORRECTIONS` (49d7882a) rectifican este esquema: 1) El control de acceso basado exclusivamente en roles (RBAC estático) es insuficiente para sistemas agénticos de IA generativa, donde un usuario autorizado para leer un documento no debe necesariamente autorizar al agente a enviar ese contenido a un LLM externo si el contexto ambiental o la clasificación es D3/D5; 2) NIST SP 800-162 exige un modelo ABAC (Attribute-Based Access Control) formal con desacoplamiento entre el Policy Decision Point (PDP) y el Policy Enforcement Point (PEP), evaluando simultáneamente atributos de sujeto, objeto, acción y entorno; y 3) Prevalece la versión de `P11_VERIFICATION_CORRECTIONS` y NIST SP 800-162, consagrando la obligatoriedad de evaluar políticas ABAC dinámicamente en cada invocación de tools y en cada chunk textual procesado.",
+  "findings": [
+    {
+      "claim_id": "P11-C05-C1",
+      "claim": "Existe discrepancia entre el RBAC estático de perfiles del dossier inicial y el modelo dinámico ABAC exigido por NIST SP 800-162 y P11_VERIFICATION_CORRECTIONS, el cual prevalece imponiendo evaluación desacoplada PDP/PEP en cada invocación de agentes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "access_matrix_abac_discrepancy_and_precedence",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Modelo de Autorización Dinámica ABAC'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia rectora: El acceso en BRIDGE se gobierna por ABAC formal (NIST SP 800-162). Se rechaza el RBAC estático tradicional por su incapacidad para discriminar el contexto ambiental y las acciones intermedias de herramientas agénticas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-162: Guide to Attribute Based Access Control (ABAC) Definition and Considerations",
+          "source_id": "2a88e293-2b53-4430-8dca-26e545448a9f",
+          "locator": "Section 4.1 'ABAC Architectural Components'",
+          "retrieved_at": null,
+          "excerpt_short": "ABAC enables fine-grained access control by evaluating rules against attributes of subjects, objects, actions, and environmental conditions via decoupled PDP and PEP components.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación rigurosa con el estándar federal estadounidense de autorización más avanzado y la prevalencia canónica de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Modelo RBAC inicial del dossier",
+      "Estándar NIST SP 800-162",
+      "Directiva de P11_VERIFICATION_CORRECTIONS"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "Desarrollador de Seguridad",
+      "Motor de Políticas ABAC"
+    ],
+    "steps": [
+      "Detección de dependencias en roles estáticos de sesión",
+      "Reemplazo por motor ABAC desacoplado en el API Gateway y ejecutores de tools",
+      "Configuración de evaluación en tiempo real de políticas por chunk y por acción",
+      "Auditoría de políticas mediante suite de pruebas automatizadas",
+      "Ratificación de la prevalencia canónica en el modelo de permisos"
+    ],
+    "states": [
+      "RBAC_OBSOLETE_DETECTED",
+      "ABAC_ARCHITECTURE_DEPLOYED",
+      "POLICY_EVALUATION_VERIFIED"
+    ],
+    "outputs": [
+      "Motor de permisos dinámico con precisión granular que previene la delegación ciega de privilegios"
+    ],
+    "exceptions": [
+      "Ninguna. El PEP deniega por defecto (Default Deny) ante cualquier fallo en la resolución de atributos"
+    ]
+  },
+  "entities": [
+    "NIST SP 800-162",
+    "ABAC PDP/PEP",
+    "P11_VERIFICATION_CORRECTIONS",
+    "RBAC Estático"
+  ],
+  "relations": [
+    {
+      "from": "NIST SP 800-162",
+      "to": "RBAC Estático",
+      "type": "SUPERSEDES_WITH_ABAC"
+    },
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "ABAC PDP/PEP",
+      "type": "MANDATES_IMPLEMENTATION_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "RBAC estático basado en roles vs ABAC contextual dinámico",
+      "diferencia": "RBAC concede permisos universales según el cargo; ABAC evalúa si el cargo, la hora, el dispositivo, el propósito de la consulta y la confidencialidad del fragmento justifican el acceso específico."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Modelo de Control de Acceso",
+      "dossier_claim": "RBAC básico por perfil de usuario",
+      "canonical_resolution": "ABAC dinámico desacoplado conforme a NIST SP 800-162."
+    }
+  ],
+  "metrics_and_denominators": {
+    "abac_policy_coverage_rate": "100% de operaciones agénticas evaluadas por PDP",
+    "default_deny_enforcement": "1.0"
+  },
+  "bridge_implications": "Garantiza que un usuario con privilegios de lectura general no pueda utilizar un agente para exfiltrar masivamente activos clasificados D3 o D5.",
+  "open_gaps": [
+    "Monitoreo de latencia en la evaluación de grafos de atributos complejos en milisegundos."
+  ],
+  "next_question_ids": [
+    "P11-C06",
+    "P11-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

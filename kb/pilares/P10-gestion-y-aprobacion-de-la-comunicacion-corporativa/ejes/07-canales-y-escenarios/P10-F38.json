@@ -1,0 +1,164 @@
+{
+  "question_id": "P10-F38",
+  "pilar": "P10",
+  "eje": "Canales y escenarios",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué flujos exigen crisis ambiental, reporte de sostenibilidad o consulta comunitaria?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cada uno de estos tres escenarios críticos impone exigencias procedimentales y regulatorias específicas: 1) Crisis Ambiental (e.g., rotura de concentraducto, rebalse de tranque de relaves, turbidez de cuenca): Exige un flujo de emergencia ultra-acelerado (SLA de holding statement < 30 minutos); reporte inmediato a la SMA según planes de contingencia aprobados en la RCA (Resolución de Calificación Ambiental); coordinación obligatoria con autoridades locales (Delegación Presidencial, Municipio, SENAPRED); aplicación de estrategias de respuesta de SCCT (Coombs/Anderson: 'Diminish' o 'Rebuild' asumiendo remediación) y despliegue de monitoreo de calidad de agua en tiempo real; 2) Reporte de Sostenibilidad Anual: Flujo cíclico planificado de alta gobernanza regulado por la NCG 461 de la CMF (y estándares SASB/GRI); exige auditoría y trazabilidad externa de métricas ESG (alcance 1, 2 y 3, consumo hídrico, accidentabilidad); prohibición estricta de afirmaciones vagas no verificables ('green claims' / greenwashing) y aprobación formal del Directorio; y 3) Consulta Comunitaria (e.g., Consulta Indígena bajo Convenio 169 OIT o participación ciudadana PAC): Flujo participativo continuo, de lenguaje intercultural claro, desprovisto de tecnicismos incomprensibles, con registro formal de compromisos en actas firmadas y trazabilidad directa en la memoria institucional de relaciones (P09).",
+  "findings": [
+    {
+      "claim_id": "P10-F38-C1",
+      "claim": "Los escenarios de crisis ambiental, reporte de sostenibilidad y consulta comunitaria imponen flujos diferenciados con sustento en la teoría SCCT (Anderson), la regulación CMF NCG 461 y los estándares de consulta ciudadana.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "scenario_specific_governance_flows",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 6 'Escenarios Sintéticos de Ejecución Integral'",
+          "retrieved_at": null,
+          "excerpt_short": "Escenario A (NCG 461): Trazabilidad de métricas ESG, deslinde de directivas extranjeras no vinculantes, visado del Directorio. Escenario B (Crisis Ambiental): SCCT de Anderson, holding statement en <30 min, reporte formal a SMA y autoridades de emergencia.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Anderson: Situational Crisis Communication Theory (SCCT)",
+          "source_id": "ae1d0dbb-67ec-484b-9d34-004f0faa44f2",
+          "locator": "Section 'Matching Crisis Response Strategies to Attribution of Responsibility'",
+          "retrieved_at": null,
+          "excerpt_short": "In accidental or preventable environmental crises, organizations must emphasize corrective actions and victim compensation (rebuilding strategies) to rebuild legitimacy and stakeholder trust.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Percepture: Crisis Communications Capabilities & Verification",
+          "source_id": "c41f5272-c83a-4a8c-8834-eaea7bd7a47a",
+          "locator": "Section 'Environmental Incident Protocols'",
+          "retrieved_at": null,
+          "excerpt_short": "Environmental emergencies demand immediate containment messaging, synchronization with scientific regulatory bodies, and community liaison desks to prevent rumors from spiraling.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre teoría académica SCCT (Anderson), fuentes operacionales de crisis (Percepture) y el dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Notificación de incidente ambiental o hito de sostenibilidad",
+      "Protocolos de emergencia de la empresa",
+      "RCA vigente"
+    ],
+    "actors": [
+      "Comité de Crisis",
+      "Gerencia de Sostenibilidad",
+      "Encargado de Asuntos Comunitarios",
+      "Fiscal Ambiental"
+    ],
+    "steps": [
+      "Identificación del escenario y despliegue del flujo especializado",
+      "Si es crisis ambiental: Activación de holding statement pre-aprobado y notificación formal a SMA",
+      "Si es sostenibilidad: Recolección y conciliación de métricas ESG contra registros certificados de P04",
+      "Si es consulta comunitaria: Adaptación a lenguaje comunitario y registro en actas vinculadas a P09",
+      "Monitoreo activo de retroalimentación de las partes interesadas"
+    ],
+    "states": [
+      "SCENARIO_IDENTIFIED",
+      "PROTOCOL_ACTIVE",
+      "REGULATORY_FILING",
+      "STAKEHOLDER_ENGAGEMENT"
+    ],
+    "outputs": [
+      "Acciones comunicacionales ejecutadas bajo protocolo específico"
+    ],
+    "exceptions": [
+      "Si la crisis ambiental escala con movilización comunitaria, se fusionan los flujos ambiental y comunitario bajo comando unificado"
+    ]
+  },
+  "entities": [
+    "SCCT Framework",
+    "NCG 461",
+    "SMA Chile",
+    "Convenio 169 OIT",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Crisis Ambiental",
+      "to": "Reporte SMA",
+      "type": "MANDATED_BY_LAW"
+    },
+    {
+      "from": "Reporte Sostenibilidad",
+      "to": "NCG 461",
+      "type": "GOVERNED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Manejo genérico de crisis vs Flujo tipificado ambiental con SCCT",
+      "diferencia": "El manejo genérico suele negar culpas a destiempo agravando el conflicto; el flujo SCCT aplica estrategias calibradas al nivel de atribución de responsabilidad, priorizando la ayuda a los afectados."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "crisis_containment_velocity": "Minutos transcurridos hasta el primer contacto formal con SMA y líderes comunitarios",
+    "esg_metric_audit_pass_rate": "100% de métricas publicadas en reporte respaldadas por hojas de trabajo certificadas"
+  },
+  "bridge_implications": "BRIDGE debe proveer workflows empaquetados para crisis ambientales y reportes NCG 461 con listas de chequeo pre-configuradas.",
+  "open_gaps": [
+    "Protocolos de enlace en terreno sin conectividad a internet en faenas remotas de alta cordillera."
+  ],
+  "next_question_ids": [
+    "P10-F39",
+    "P10-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

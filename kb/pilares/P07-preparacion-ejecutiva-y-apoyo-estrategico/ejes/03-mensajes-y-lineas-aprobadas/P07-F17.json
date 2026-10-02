@@ -1,0 +1,148 @@
+{
+  "question_id": "P07-F17",
+  "pilar": "P07",
+  "eje": "Mensajes y líneas aprobadas",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre mensajes y líneas aprobadas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se respaldan en cinco fuentes canónicas del corpus: 1) Arquitectura del Mensaje Corporativo: Umbrex (2022, 2024, 'The Message House Framework for Executive Messaging') y Page Society (2022, 'CommTech and Progression Paths for CCOs'); 2) Marcos de Gobernanza y Supervisión de IA: NIST AI Risk Management Framework 1.0 (2023, funciones GOVERN y MANAGE) y NIST Generative AI Profile (NIST AI 600-1, 2024); 3) Directrices Deontológicas de la Profesión: PR Council (2024, 'Ethical Standards and Guidelines for Generative AI in PR'); 4) Marco Regulatorio Chileno de Información Pública: BCN Chile, Ley 18.045 de Mercado de Valores (Arts. 9 y 10 sobre hechos reservados y prohibición de engaño al mercado); y 5) Síntesis Técnica Rectora: P07_RESEARCH_DOSSIER y P07_EVIDENCE_MAP (Septiembre 2026).",
+  "findings": [
+    {
+      "claim_id": "P07-F17-C1",
+      "claim": "El marco de líneas y mensajes aprobados integra principios arquitectónicos de comunicación estratégica, directrices éticas internacionales para IA y leyes de valores y transparencia corporativa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_grounding",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje C) y Sección 3",
+          "excerpt_short": "Eje C: Mensajes Respaldados y Conexión de Conocimiento Interno con Señales del Entorno. Respaldado con Nivel 1 por Umbrex (2024), Page Society (2022), NIST AI RMF 1.0 (2023), PR Council (2024) y Ley 18.045 (BCN Chile). Se fundamenta la obligatoriedad de que ningún mensaje ejecutivo se difunda sin respaldo documental auditado y aprobación humana explícita.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 18.045 de Mercado de Valores (Hechos Esenciales)",
+          "source_id": "0326c7d0-15d0-4e6f-a8e5-7852570ec65f",
+          "locator": "Artículos 9, 10 y 164",
+          "excerpt_short": "Los emisores de valores están obligados a divulgar en forma veraz, suficiente y oportuna todo hecho relevante... Se prohíbe suministrar antecedentes falsos o inducir a error al mercado... Las deliberaciones sobre negociaciones pendientes podrán mantenerse reservadas únicamente bajo acuerdo de tres cuartas partes del directorio.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación exhaustiva de fuentes en el mapa de evidencia y contraste directo con la legislación chilena aplicable.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_fuentes_mensajes_aprobados": [
+      {
+        "ambito": "Estructura Retórica",
+        "fuente": "Umbrex (2022/2024)",
+        "aporte": "Jerarquía Umbrella -> Pillars -> Proof Points."
+      },
+      {
+        "ambito": "Gobernanza de Algoritmos",
+        "fuente": "NIST AI RMF 1.0 / NIST AI 600-1",
+        "aporte": "Controles de procedencia y prevención de alucinaciones en salidas ejecutivas."
+      },
+      {
+        "ambito": "Ética Profesional",
+        "fuente": "PR Council (2024)",
+        "aporte": "Responsabilidad indelegable del ser humano en la comunicación pública."
+      },
+      {
+        "ambito": "Leyes de Mercado",
+        "fuente": "Ley 18.045 (BCN Chile)",
+        "aporte": "Responsabilidad penal y administrativa por afirmaciones falsas o filtración de hechos reservados."
+      },
+      {
+        "ambito": "Síntesis Metodológica",
+        "fuente": "P07_RESEARCH_DOSSIER / EVIDENCE_MAP",
+        "aporte": "Modelos operacionales y plantillas de control de líneas aprobadas."
+      }
+    ]
+  },
+  "entities": [
+    "Umbrex",
+    "Page Society",
+    "NIST AI RMF",
+    "PR Council",
+    "Ley 18.045 BCN",
+    "P07_EVIDENCE_MAP"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Ley 18.045",
+      "type": "cites_and_applies"
+    },
+    {
+      "from": "NIST AI RMF",
+      "to": "ApprovedMessageSchema",
+      "type": "governs"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Buenas Prácticas de RRPP vs Requisitos de la Ley 18.045",
+      "diferencia": "Las buenas prácticas sugieren claridad y consistencia; la Ley 18.045 impone sanciones pecuniarias y penales ante inconsistencias graves o falsedad ante el mercado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "canonical_sources_count": "5 cuerpos doctrinales y legales",
+    "statutory_compliance_rate": "100% de alineación con Ley 18.045"
+  },
+  "bridge_implications": "Asegurar que cada control de BRIDGE contemple explícitamente el cumplimiento del Art. 9 y 10 de la Ley 18.045 en la generación de briefs ejecutivos.",
+  "open_gaps": [
+    "Seguimiento de pronunciamientos de la CMF sobre el uso de herramientas de IA generativa por parte de directores corporativos."
+  ],
+  "next_question_ids": [
+    "P07-F18",
+    "P07-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

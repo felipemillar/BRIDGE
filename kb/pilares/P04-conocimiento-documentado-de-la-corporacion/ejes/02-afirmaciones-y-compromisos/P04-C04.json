@@ -1,0 +1,138 @@
+{
+  "question_id": "P04-C04",
+  "pilar": "P04",
+  "eje": "Afirmaciones y compromisos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué sigue sin prueba sobre afirmaciones y compromisos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Vacío e Incertidumbre: Permanece sin resolver empíricamente la detección automatizada del 'abandono silencioso de compromisos' (drift o meta abandonada). Ocurre cuando una empresa publica una meta ambiciosa en un año (e.g. Memoria 2021) y en los reportes subsiguientes (2023-2025) deja de mencionarla sin emitir un retiro formal ni explicar el incumplimiento. Fuente Parcial: Ni et al. (2023) identifica el problema a nivel teórico en reportes ESG pero carece de un benchmark algorítmico para rastrear el ciclo de vida completo de compromisos plurianuales. Validación Mínima Requerida: Ejecución de la Etapa 1 del protocolo empírico de P04_GAPS_AND_VALIDATION: someter la Ficha de Compromiso a juicio de expertos (5 Directores de Asuntos Corporativos y 3 abogados de valores) y auditar 50 metas en memorias 2021-2025 para validar la detección de compromisos omitidos.",
+  "findings": [
+    {
+      "claim_id": "P04-C04-C1",
+      "claim": "La detección desatendida de metas corporativas silenciosamente omitidas o discontinuadas sin explicación constituye una brecha no resuelta en la literatura de NLP corporativo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Agenda de Investigación P04"
+      },
+      "evidence": [
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1.1 y Sección 4: Agenda de Validación Empírica (Etapa 1)",
+          "excerpt_short": "Disparidad entre retórica y métrica operativa: carencia de modelos que verifiquen automáticamente si una Declaración cuenta con un Compromiso y si este tiene Resultados reportados y auditados.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío analítico formalmente diagnosticado en P04_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Secuencia plurianual de memorias de un mismo emisor"
+    ],
+    "actors": [
+      "Commitment Continuity Auditor",
+      "Drift Detector"
+    ],
+    "steps": [
+      "Extracción de metas de año T",
+      "Búsqueda de actualización en años T+1 a T+3",
+      "Alerta de meta silenciosamente discontinuada"
+    ],
+    "states": [
+      "Target_Indexed",
+      "Tracking_Across_Years",
+      "Drift_Alert_Raised"
+    ],
+    "outputs": [
+      "Alerta de riesgo reputacional por meta abandonada sin explicación"
+    ],
+    "exceptions": [
+      "Meta reemplazada por otra con nombre completamente distinto"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GAP_SILENT_DRIFT",
+      "type": "vacio_epistemico",
+      "name": "Vacío de Detección de Abandono Silencioso de Metas",
+      "aliases": [
+        "Corporate Goal Drift Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GAP_SILENT_DRIFT",
+      "predicate": "evidencia_limite_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C04-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Seguimiento temporal",
+      "Análisis de reporte individual": "Cada memoria parece completa en sí misma porque no menciona lo que omitió.",
+      "Auditoría plurianual de compromisos": "Identifica de inmediato que una meta comprometida hace 3 años desapareció del relato."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incluir una función de auditoría transversal que avise a los directivos sobre metas pasadas no reportadas antes de que las detecte una ONG.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP-P04-02",
+      "description": "Falta de algoritmos estandarizados para detectar el abandono silencioso de metas ESG entre años fiscales consecutivos.",
+      "missing_information": "Benchmark empírico de persistencia de metas en empresas supervisadas por la CMF entre 2021 y 2025."
+    }
+  ],
+  "next_question_ids": [
+    "P04-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

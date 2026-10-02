@@ -1,0 +1,200 @@
+{
+  "question_id": "T01-C01",
+  "pilar": "T01",
+  "eje": "Hipótesis y compuertas del piloto",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre hipótesis y compuertas del piloto, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Existe una discrepancia crítica entre las síntesis iniciales del corpus de T01 y las fuentes metodológicas rectoras: 1) Discrepancia: Las síntesis iniciales (Juego 1 de notas) planteaban compuertas de evaluación blandas basadas en 'satisfacción cualitativa declarada' y citaban erróneamente a Bridge Studio MX (e315f267); 2) Versión que Prevalece: Según T01_VERIFICATION_CORRECTIONS (f5a15f9d) y T01_QUALITY_ADDENDUM (45782049), prevalecen las compuertas Stage-Gate cuantitativas prefijadas de Cooper (773f1a85): G0 (Admisión/Pentest 0 críticas), G1 (Ragas Faithfulness >= 0.90 y latencia p95 < 5s), G2 (WAP >= 70% y ahorro neto >= 40%) y G3 (compromiso presupuestario formal). Asimismo, se descalifica a Bridge Studio MX y se establece a thebridgeintelligence.ai (6eca40e5) como única entidad rectora.",
+  "findings": [
+    {
+      "claim_id": "T01-C01-C1",
+      "claim": "T01_VERIFICATION_CORRECTIONS (f5a15f9d) descalifica terminantemente la atribución de los módulos corporativos a bridgestudio.mx y ratifica que toda evaluación comercial y metodológica debe referirse con exclusividad a The Bridge Intelligence (thebridgeintelligence.ai).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_VERIFICATION_CORRECTIONS"
+      },
+      "evidence": [
+        {
+          "source_id": "f5a15f9d-310f-4bfc-ae19-70ff8cc2bdcf",
+          "source_title": "T01_VERIFICATION_CORRECTIONS: Reconciliación de Tareas y Evidencia Canónica",
+          "original_url": null,
+          "locator": "Sección 3: Exclusión de Bridge Studio MX",
+          "excerpt_short": "Se corrige el error de atribución en cuadernos preliminares: bridgestudio.mx queda excluida; thebridgeintelligence.ai es la entidad rectora.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Mandato rector canónico de prevalencia editorial.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-C01-C2",
+      "claim": "T01_QUALITY_ADDENDUM (45782049) fija los umbrales numéricos de las compuertas G0-G3, dejando sin efecto las propuestas preliminares de evaluación no cuantitativa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 2: Compuertas Stage-Gate Prefijadas",
+          "excerpt_short": "Las compuertas son Go/Kill estrictas con umbrales cuantitativos innegociables para impedir el sesgo de confirmación.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma metodológica canónica interna de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Juego 1 de notas preliminares",
+      "Dictamen T01_VERIFICATION_CORRECTIONS",
+      "T01_QUALITY_ADDENDUM"
+    ],
+    "actors": [
+      "Comité de Gobernanza Editorial",
+      "Auditor Antigravity"
+    ],
+    "steps": [
+      "Identificar contradicciones entre notas iniciales y documentos rectores",
+      "Aplicar la regla de prevalencia canónica: Correcciones > Addendum > Síntesis previas",
+      "Purgar menciones a Bridge Studio MX",
+      "Formalizar las compuertas G0-G3 en el protocolo de pruebas"
+    ],
+    "states": [
+      "IDENTIFICACION_DISCREPANCIA",
+      "APLICACION_PREVALENCIA",
+      "PURGA_FUENTES_ERRONEAS",
+      "PROTOCOLO_SELLADO"
+    ],
+    "outputs": [
+      "Matriz de resolución de discrepancias Eje 1",
+      "Protocolo unificado de compuertas"
+    ],
+    "exceptions": [
+      "Ningún piloto puede ser evaluado bajo las normas no vinculantes de las notas preliminares"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "DISCREPANCIA_EJE1",
+      "type": "riesgo",
+      "name": "Discrepancia en Compuertas de Piloto",
+      "aliases": [
+        "Conflicto Evaluativo"
+      ]
+    },
+    {
+      "entity_id": "T01_VERIF_CORR",
+      "type": "documento",
+      "name": "T01_VERIFICATION_CORRECTIONS",
+      "aliases": [
+        "f5a15f9d"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "T01_VERIF_CORR",
+      "predicate": "resuelve",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C01-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Síntesis Iniciales (Subjetivas)",
+      "item_b": "Correcciones Canónicas (Stage-Gate Cuantitativo)",
+      "dimension": "Rigor evaluativo",
+      "conclusion": "Las síntesis iniciales permitían sesgo de complacencia; las correcciones imponen umbrales duros innegociables."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "T01-C01-C1",
+        "T01-C01-C2"
+      ],
+      "difference": "Notas iniciales citaban a bridgestudio.mx y proponían evaluación por encuestas; T01_VERIFICATION_CORRECTIONS excluye a la agencia mexicana y exige telemetría objetiva en thebridgeintelligence.ai.",
+      "resolution": "resuelta",
+      "reason": "Prevalencia normativa absoluta de T01_VERIFICATION_CORRECTIONS (f5a15f9d)."
+    }
+  ],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de discrepancias resueltas en Eje 1",
+      "denominator": "Total controversias detectadas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Blindaje frente a confusión de marca y garantía de rigurosidad científica en la venta enterprise.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-C02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

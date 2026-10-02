@@ -1,0 +1,159 @@
+{
+  "question_id": "P02-F06",
+  "pilar": "P02",
+  "eje": "Universo comercial y deduplicación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra universo comercial y deduplicación sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto se ilustra mediante un lote de prueba de 10 entradas brutas heterogéneas tomadas del catálogo inicial: 1) Brandwatch; 2) CisionOne; 3) PR Newswire; 4) Memo; 5) Signal AI AIQ; 6) Consultation Manager; 7) Social Point; 8) AMEC (Barcelona Principles 3.0); 9) The Bridge Intelligence; 10) FGS Global. Ejecución del algoritmo paso a paso: Paso 1 (Filtrado de no comerciales / estándares): AMEC se clasifica como asociación emisora de estándar y se excluye de N_comm; The Bridge Intelligence se clasifica como propuesta de referencia y se excluye de N_comm. Paso 2 (Deduplicación por grupo matriz y entidad legal): Brandwatch, CisionOne y PR Newswire se consolidan bajo Cision Ltd. / Platinum Equity (PROV-002, 1 proveedor); Memo y Signal AI AIQ se consolidan bajo Signal AI Ltd. (PROV-006, 1 proveedor); Consultation Manager y Social Point se consolidan bajo Open Point Group (PROV-018, 1 proveedor). Paso 3 (Verificación de propiedad actual): FGS Global se asigna como proveedor independiente (PROV-055) bajo KKR / Kite Bidco Inc. (no WPP). Resultado final estructurado: de 10 entradas brutas se obtienen exactamente 4 proveedores comerciales independientes verificados y 2 entidades excluidas, demostrando la reconciliación sin datos no documentados.",
+  "findings": [
+    {
+      "claim_id": "P02-F06-C1",
+      "claim": "El algoritmo de deduplicación procesa de forma determinista un conjunto de 10 entradas heterogéneas reduciéndolas a 4 proveedores comerciales independientes únicos bajo sus matrices reales y 2 entidades no comerciales excluidas del denominador.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Caso de Prueba Algorítmica P02"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Sección: Caso de Prueba Controlado de Deduplicación",
+          "excerpt_short": "Demostración de consolidación de marcas bajo grupos económicos únicos.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación matemática y documental del algoritmo en el atlas reconciliado.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Entrada 1: Brandwatch",
+      "Entrada 2: CisionOne",
+      "Entrada 3: PR Newswire",
+      "Entrada 4: Memo",
+      "Entrada 5: Signal AI AIQ",
+      "Entrada 6: Consultation Manager",
+      "Entrada 7: Social Point",
+      "Entrada 8: AMEC",
+      "Entrada 9: The Bridge Intelligence",
+      "Entrada 10: FGS Global"
+    ],
+    "actors": [
+      "Algoritmo de Deduplicación",
+      "Tabla de Reglas M&A"
+    ],
+    "steps": [
+      "Paso 1: Filtrar AMEC y The Bridge (exclusión de N_comm)",
+      "Paso 2: Consolidar Brandwatch + CisionOne + PR Newswire -> PROV-002 (Cision Ltd.)",
+      "Paso 3: Consolidar Memo + Signal AI AIQ -> PROV-006 (Signal AI Ltd.)",
+      "Paso 4: Consolidar Consultation Manager + Social Point -> PROV-018 (Open Point Group)",
+      "Paso 5: Asignar FGS Global -> PROV-055 (Kite Bidco / KKR)",
+      "Paso 6: Conteo final de proveedores"
+    ],
+    "states": [
+      "Lote_Ingresado",
+      "Filtro_NoComercial_Ejecutado",
+      "Holding_Agrupado",
+      "Salida_Verificada"
+    ],
+    "outputs": [
+      "PROV-002: Cision Ltd. (CisionOne/Brandwatch/PR Newswire)",
+      "PROV-006: Signal AI Ltd. (Signal AI AIQ/Memo)",
+      "PROV-018: Open Point Group (Consultation Manager/Social Point)",
+      "PROV-055: FGS Global (KKR / Kite Bidco)",
+      "EXCL-001: AMEC Org (Estándar Gremial)",
+      "EXCL-002: The Bridge Intelligence (Sujeto de Análisis / Referencia)"
+    ],
+    "exceptions": [
+      "Detección de acuerdos de marca compartida sin compraventa de acciones"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "TEST_CASE_DEDUPLICACION",
+      "type": "caso_prueba",
+      "name": "Caso de Prueba Controlado de Deduplicación (10 Entradas)",
+      "aliases": [
+        "Gold Standard Test Dataset"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "TEST_CASE_DEDUPLICACION",
+      "predicate": "valida_algoritmo_de",
+      "object_id": "Deduplicacion_Mercado_P02",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F06-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Entradas Brutas vs Salidas Validadas",
+      "Total Entradas Brutas": "10 registros aparentemente dispersos.",
+      "Total Salidas Reconciliadas": "4 proveedores comerciales independientes + 2 exclusiones justificadas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric_name": "Tasa de Reducción por Deduplicación en Caso de Prueba",
+      "value": 60.0,
+      "unit": "porcentaje",
+      "denominator": "10 entradas brutas reducidas a 4 proveedores comerciales (60% de reducción)",
+      "evidence_claim_id": "P02-F06-C1"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Implementar este mismo algoritmo de resolución de entidades en el pipeline de datos de BRIDGE para deduplicar automáticamente actores y medios en el módulo Relacionar.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F07",
+    "P02-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

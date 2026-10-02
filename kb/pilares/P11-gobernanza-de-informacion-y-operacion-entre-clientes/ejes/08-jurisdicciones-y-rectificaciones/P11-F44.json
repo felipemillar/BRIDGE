@@ -1,0 +1,163 @@
+{
+  "question_id": "P11-F44",
+  "pilar": "P11",
+  "eje": "Jurisdicciones y rectificaciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué partes del régimen comparado son inferencias que necesitan asesoría legal actualizada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En la evaluación regulatoria transnacional de BRIDGE, existen áreas grises e inferencias de diseño que no constituyen certezas normativas directas y exigen dictámenes formales de asesoría legal actualizada antes de su consolidación en producción: 1) Clasificación de Riesgo bajo el EU AI Act: La premisa de que un sistema B2B de inteligencia corporativa constituye un sistema de 'alto riesgo' (High-Risk AI System) según el Anexo III es una inferencia precautoria de ingeniería; no existe jurisprudencia consolidada de la Comisión Europea sobre asistentes analíticos de asuntos corporativos que no tomen decisiones administrativas vinculantes; 2) Extraterritorialidad del GDPR (Art. 3.2): La inferencia de que BRIDGE debe cumplir el GDPR cuando sus clientes chilenos analizan noticias o declaraciones de ejecutivos europeos requiere confirmación letrada, dado que el mero procesamiento incidental de información pública no configura necesariamente 'oferta de bienes o servicios' ni 'monitoreo de comportamiento'; 3) Transferencias Internacionales en la Transición Ley 19.628 a Ley 21.719: Durante la vacatio legis de 24 meses, la transferencia de datos a centros de datos en EE.UU. (ej. AWS Bedrock o OpenAI API) descansa en el consentimiento y la necesidad contractual bajo la Ley 19.628, pero la validez de los mecanismos transitorios ante la futura Agencia exige monitoreo de resoluciones judiciales; y 4) Validez de la Firma Electrónica Simple vs Avanzada en Logs WORM: La validez probatoria en juicio laboral o mercantil de los registros inmutables WORM bajo la Ley N° 19.799 de Firma Electrónica en Chile requiere peritaje y doctrina procesal actualizada.",
+  "findings": [
+    {
+      "claim_id": "P11-F44-C1",
+      "claim": "La clasificación bajo el EU AI Act, la extraterritorialidad del GDPR para datos públicos, el régimen transitorio de transferencias internacionales hacia EE.UU. y el valor probatorio de logs WORM son inferencias técnicas que requieren asesoría legal especializada permanente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "legal_inferences_requiring_counsel",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Deslinde Jurisdiccional y Prevalencia Normativa'",
+          "retrieved_at": null,
+          "excerpt_short": "GDPR y EU AI Act operan como derecho comparado o estándares de diseño conservador. Se prohíbe tratarlos como legislación vinculante directa en Chile sin dictamen legal específico de extraterritorialidad.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'Régimen Comparado y Salvaguardas'",
+          "retrieved_at": null,
+          "excerpt_short": "Las partes del régimen comparado relativas a transferencias internacionales de datos durante la vacatio legis de la Ley 21.719 constituyen hipótesis de trabajo que deben ser validadas por asesoría jurídica letrada.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "EUR-Lex: Regulation (EU) 2024/1689 Artificial Intelligence Act (EU AI Act)",
+          "source_id": "6d17ad64-b812-4322-a670-59f4f61ad78f",
+          "locator": "Article 6 and Annex III 'High-Risk AI Systems'",
+          "retrieved_at": null,
+          "excerpt_short": "Classification as high-risk depends on the specific intended purpose of the AI system, its integration into critical infrastructure, or its role in employment and essential services.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación lúcida y prudente de los límites entre la ingeniería de sistemas y la interpretación jurídica formal de normativas emergentes.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dictámenes de abogados externos",
+      "Consultas a la autoridad (CMF / CSIRT / ANPD)",
+      "Jurisprudencia de cortes chilenas"
+    ],
+    "actors": [
+      "Asesor Legal Externo",
+      "Oficial de Cumplimiento",
+      "Arquitecto de Soluciones"
+    ],
+    "steps": [
+      "Identificación de un supuesto de inferencia legal en la arquitectura o en un contrato de cliente",
+      "Formulación de una Consulta Jurídica Formal (Legal Memo Request) al estudio de abogados corporativo",
+      "Revisión de la doctrina sobre el régimen transitorio de la Ley 21.719 y la aplicabilidad de cláusulas contractuales tipo",
+      "Emisión de la Opinión Legal vinculante y registro en el Catálogo de Supuestos Jurídicos de BRIDGE",
+      "Ajuste de los términos contractuales y del diseño técnico si la opinión legal diverge de la hipótesis inicial"
+    ],
+    "states": [
+      "INFERENCE_IDENTIFIED",
+      "LEGAL_MEMO_REQUESTED",
+      "FORMAL_OPINION_DELIVERED",
+      "POLICY_RECONCILED"
+    ],
+    "outputs": [
+      "Certidumbre jurídica documentada que sustituye inferencias no probadas por interpretaciones letradas"
+    ],
+    "exceptions": [
+      "Si el dictamen legal señala riesgo de infracción en una transferencia transfronteriza, se suspende la sincronización hacia ese destino de inmediato"
+    ]
+  },
+  "entities": [
+    "EU AI Act Annex III",
+    "GDPR Art 3.2",
+    "Ley 21.719 Vacatio Legis",
+    "Ley 19.799 Firma Electrónica",
+    "P11_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "Inferencias Legales",
+      "to": "Asesor Legal Externo",
+      "type": "REFERRED_FOR_OPINION_TO"
+    },
+    {
+      "from": "Opinión Legal",
+      "to": "Diseño de Arquitectura",
+      "type": "GOVERNS_BOUNDARIES_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Ingenieros interpretando leyes complejas vs Validación formal por especialistas en derecho digital",
+      "diferencia": "La interpretación de ingenieros suele ser ingenua o excesivamente restrictiva; el dictamen especializado acota con precisión la responsabilidad y define salvaguardas contractuales efectivas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "legal_inferences_resolution_rate": "100% de inferencias críticas respaldadas por memorandos legales",
+    "regulatory_review_frequency": "Revisión trimestral de novedades en el Diario Oficial de Chile"
+  },
+  "bridge_implications": "Mantiene a BRIDGE a salvo de litigios por falsa interpretación jurídica y demuestra madurez corporativa ante los comités de auditoría de los clientes.",
+  "open_gaps": [
+    "Seguimiento al nombramiento de los Directores de la futura Agencia de Protección de Datos Personales en Chile."
+  ],
+  "next_question_ids": [
+    "P11-F45",
+    "P11-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

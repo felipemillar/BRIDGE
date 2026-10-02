@@ -1,0 +1,124 @@
+{
+  "question_id": "P03-F34",
+  "pilar": "P03",
+  "eje": "Desambiguación y análisis de señales",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar desambiguación y análisis de señales de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada exige: 1) Variables técnicas de NLP: `confidence_score_linking` (0.0 a 1.0), `candidate_entity_id`, `topic_cluster_id` (HDBSCAN label), `topic_coherence_score`, `stance_direction` (favor, contra, neutral, ambivalente) y `disarm_ttp_code` (ej. T0015); 2) Categorías de señal: Entidad_Comercial, Entidad_Gubernamental, Tema_Emergente_No_Nominal, Disputa_Regulatoria y Narrativa_Amplificada; 3) Relaciones en grafo: `desambiguado_como` (Entidad en KG), `asociado_a_topico` (Cluster Semántico), `postura_hacia` (Proyecto o Ley), y `táctica_identificada` (Técnica DISARM); y 4) Condiciones de integridad: prohibir clasificaciones definitivas de desinformación sin trazabilidad del patrón empírico observable y asignación formal de código de táctica DISARM.",
+  "findings": [
+    {
+      "claim_id": "P03-F34-C1",
+      "claim": "El modelado estructurado de desambiguación y análisis de señales debe registrar puntuaciones de confianza de linking, identificadores de clústeres de tópicos y clasificaciones de postura desacopladas de polaridad simple.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Modelado Estructurado P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e4c4d2d3-d141-4304-b2d4-00b9b7d3cee0",
+          "source_title": "DISARM Foundation: Disinformation Tactics, Techniques & Procedures Framework",
+          "original_url": "https://github.com/DISARMFoundation/DISARMframeworks/",
+          "locator": "TTP Identification and Schema",
+          "excerpt_short": "DISARM provides a standardized taxonomy of identifiers (T0000 series) to catalog observable behavior without attributing malicious intent without evidence.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación con especificaciones del marco DISARM y ontologías semánticas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Texto de señal analizado por NLP"
+    ],
+    "actors": [
+      "Semantic Structurer",
+      "Ontology Mapper"
+    ],
+    "steps": [
+      "Asignación de IDs de cluster y entidad",
+      "Normalización de postura",
+      "Inserción de metadatos estructurados"
+    ],
+    "states": [
+      "Raw_NLP_Output",
+      "Schema_Aligned",
+      "Graph_Triples_Emitted"
+    ],
+    "outputs": [
+      "Objeto estructurado con metadatos semánticos auditables"
+    ],
+    "exceptions": [
+      "Conflictos entre predicciones de múltiples modelos de clasificación"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SEMANTIC_ANALYSIS_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Análisis Semántico",
+      "aliases": [
+        "Semantic Analysis Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SEMANTIC_ANALYSIS_SCHEMA",
+      "predicate": "formaliza_analisis_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F34-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar el esquema con soporte explícito de códigos DISARM para la auditoría de riesgos reputacionales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "question_id": "P03-F29",
+  "pilar": "P03",
+  "eje": "Fuentes institucionales y regulatorias",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre fuentes institucionales y regulatorias?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos de este eje están respaldados por: 1) Normativa y divulgación de hechos esenciales en Chile: CMF Chile Portal de Consulta y Ley 18.045 de Mercado de Valores (Art. 9 y 10, definición de hecho esencial y divulgación continua); 2) Datos abiertos de contratación pública: ChileCompra API Documentation (2026, estándar OCDS y políticas de acceso); 3) Normativa de divulgación corporativa federal en EE.UU.: SEC EDGAR Developer Resources & Dissemination Guidelines (2026, especificaciones de Form 8-K, límites de 10 req/s y requerimiento de User-Agent); 4) Consolidación legal chilena: BCN LeyChile (2026, base de datos jurídica oficial de la Biblioteca del Congreso Nacional); y 5) Directrices de precedencia y cuotas: P03_QUALITY_ADDENDUM (Septiembre 2026, Sección 2.5), que delimita taxativamente las condiciones de acceso y cuotas por dirección IP.",
+  "findings": [
+    {
+      "claim_id": "P03-F29-C1",
+      "claim": "La base documental regulatoria se fundamenta directamente en leyes de mercado de valores de Chile y EE.UU., portales de datos abiertos de compras públicas y especificaciones de APIs gubernamentales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / EE.UU.",
+        "actor": "Corpus Canónico P03"
+      },
+      "evidence": [
+        {
+          "source_id": "ccc863f8-d879-4693-b10c-015f8ae278fa",
+          "source_title": "CMF Chile - Sistema de Consulta de Hechos Esenciales y Normativa",
+          "original_url": "https://www.cmfchile.cl/portal/principal/623/w4-propertyvalue-48783.html",
+          "locator": "Compendio de Normas CMF",
+          "excerpt_short": "Regulación sobre divulgación de información continua y hechos relevantes que puedan influir en el mercado bursátil chileno.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:20:00-03:00"
+        },
+        {
+          "source_id": "be4fb72f-480d-4820-b0ac-a1a734b17482",
+          "source_title": "SEC EDGAR API Developer Resources & Dissemination Guidelines",
+          "original_url": "https://www.sec.gov/about/developer-resources",
+          "locator": "EDGAR Submission Guidelines",
+          "excerpt_short": "Technical standards and protocols for automated access to official financial reports and material event notifications.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:20:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de portales estatales oficiales y leyes vigentes.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de citas regulatorias"
+    ],
+    "actors": [
+      "Legal Verifier"
+    ],
+    "steps": [
+      "Verificación de artículos de ley",
+      "Comprobación de URLs gubernamentales",
+      "Certificación de respaldos"
+    ],
+    "states": [
+      "Raw_Citations",
+      "Verified_Laws",
+      "Corpus_Approved"
+    ],
+    "outputs": [
+      "Catálogo de evidencia regulatoria auditado"
+    ],
+    "exceptions": [
+      "Cambios en estructura de enlaces permanentes de portales estatales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REGULATORY_EVIDENCE_CORPUS",
+      "type": "corpus_documental",
+      "name": "Corpus de Evidencia Regulatoria P03",
+      "aliases": [
+        "Regulatory Evidence Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REGULATORY_EVIDENCE_CORPUS",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "Eje_Regulatorio_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F29-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Mantener enlaces verificables a las normas primarias de la CMF y SEC en todos los reportes de cumplimiento de BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "question_id": "P07-F27",
+  "pilar": "P07",
+  "eje": "Apoyo estratégico y límites",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Cuándo debe el sistema elevar un riesgo a especialistas o abstenerse?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El sistema debe activar compuertas obligatorias de elevación o abstención en cinco situaciones críticas: 1) Elevación a Gerencia Legal / Compliance: Ante sospechas de delitos económicos o ambientales (Ley 21.595 de Delitos Económicos y Ley 20.393), inicio de procesos sancionatorios gravísimos de la SMA o litigios en Tribunales Ambientales; 2) Elevación a Gerencia de Finanzas / Directorio: Ante hechos que puedan calificar como Hecho Esencial o Reservado según la Ley 18.045 de Mercado de Valores; 3) Elevación a Gerencia Territorial: Ante denuncias que involucren a comunidades indígenas bajo Convenio 169 de la OIT; 4) Abstención Activa: Cuando el sistema no encuentre documentación interna contrastada sobre un hecho operativo, prohibiendo terminantemente la especulación generativa; y 5) Abstención Ética: Cuando se le solicite generar campañas encubiertas (astroturfing), desinformación o ataques difamatorios contra adversarios (PR Council 2024).",
+  "findings": [
+    {
+      "claim_id": "P07-F27-C1",
+      "claim": "El sistema debe incorporar compuertas deterministas de elevación a especialistas y de abstención ética y epistémica ante riesgos legales severos o vacíos probatorios.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "escalation_and_abstention_gates",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 4.1 y Sección 4.2",
+          "excerpt_short": "Límites y Elevación: Ante indicios de violaciones normativas o requerimientos sancionatorios de la SMA o CMF, el sistema debe abstenerse de formular respuestas y elevar de inmediato una alerta de riesgo a la Gerencia Legal. Siguiendo al PR Council (2024), se rechazará de plano cualquier solicitud de astroturfing o desinformación.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "PR Council: Ethical Standards and Guidelines for Generative AI",
+          "source_id": "f377819a-f643-4b8b-8c72-e531bd9d01ca",
+          "locator": "Sección 'Red Lines and Prohibited Use Cases', p. 7-10",
+          "excerpt_short": "AI systems must refuse to generate content designed to deceive regulators, manipulate public consultations, or falsify corporate records. When legal exposure is identified, the system must trigger human specialist intervention immediately.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares deontológicos del PR Council y los guardrails del dossier técnico P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "compuertas_elevacion_y_abstencion": {
+      "Compuerta_Legal": {
+        "condicion": "Citación a tribunal, sanción SMA, fiscalía",
+        "accion": "Bloqueo de salida + Elevación a Fiscal Corporativo."
+      },
+      "Compuerta_Bursatil": {
+        "condicion": "Mención de M&A, utilidades no públicas, cierres de faena",
+        "accion": "Alerta Ley 18.045 + Elevación a Directorio / CFO."
+      },
+      "Compuerta_Territorial": {
+        "condicion": "Territorio indígena, Convenio 169 OIT",
+        "accion": "Elevación a Asuntos Comunitarios."
+      },
+      "Compuerta_Epistemica": {
+        "condicion": "Cero evidencia interna contrastada",
+        "accion": "Abstención: 'Dato no disponible en conocimiento documentado'."
+      },
+      "Compuerta_Etica": {
+        "condicion": "Petición de astroturfing o encubrimiento",
+        "accion": "Rechazo determinista con log de auditoría."
+      }
+    }
+  },
+  "entities": [
+    "PR Council",
+    "Ley 21.595",
+    "Ley 18.045",
+    "Convenio 169 OIT",
+    "Compuertas de Abstención"
+  ],
+  "relations": [
+    {
+      "from": "Riesgo Legal Severo",
+      "to": "Compuerta de Elevación",
+      "type": "triggers"
+    },
+    {
+      "from": "Compuerta de Abstención",
+      "to": "Alucinación de IA",
+      "type": "prevents"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "LLM Comercial vs BRIDGE con Guardrails",
+      "diferencia": "Un LLM comercial inventa argumentos legales plausibles pero inválidos; BRIDGE detiene la generación y transfiere el ticket al abogado de la empresa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "escalation_trigger_latency": "< 500 ms tras detección de palabra clave o entidad regulada",
+    "prohibited_content_generation_rate": "0.0%"
+  },
+  "bridge_implications": "Implementar estos guardrails deterministas en el orquestador de agentes de BRIDGE antes de invocar los modelos generativos.",
+  "open_gaps": [
+    "Calibración de umbrales semánticos para detectar insinuaciones sutiles de soborno o colusión que no usan términos explícitos."
+  ],
+  "next_question_ids": [
+    "P07-F28",
+    "P07-F29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

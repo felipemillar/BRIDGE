@@ -1,0 +1,149 @@
+{
+  "question_id": "T01-F04",
+  "pilar": "T01",
+  "eje": "Hipótesis y compuertas del piloto",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar hipótesis y compuertas del piloto de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de hipótesis de investigación y compuertas del piloto exige un modelo de datos formal de experimentación operativa y gobernanza B2B, fundamentado en el marco Stage-Gate (Cooper 2016–2025) y estructurado en seis entidades principales: 1) `PilotEngagement`: Modela el acuerdo de prueba (`pilot_id`, `tenant_id`, `corporate_client_name`, `start_date`, `end_date`, `pilot_tier` [enterprise, mid_market], `sponsor_executive_name`, `status` [active, completed, killed]); 2) `ModuleHypothesis`: Modela la afirmación científica falsable (`hypothesis_id`, `pilot_id`, `module_name` [Saber, Escuchar, Hablar, Relacionar], `target_metric_code` [time_saving_pct, citation_precision, early_warning_hours, nominal_accountability_pct], `null_hypothesis_statement`, `falsification_threshold_value`, `evaluation_status` [pending, validated, falsified]); 3) `EvaluationGate`: Define los puntos de control temporal (`gate_id`, `pilot_id`, `gate_type` [G0_Security, G1_Technical, G2_Operational, G3_Commercial], `scheduled_date`, `execution_date`, `decision` [Go, Pivot, Kill], `executive_signoff_by`); 4) `GateMetricThreshold`: Especifica los límites numéricos de compuerta (`threshold_id`, `gate_id`, `metric_code`, `operator` [GTE, LTE], `go_threshold`, `pivot_threshold`, `kill_threshold`, `is_must_meet_criterion` [boolean]); 5) `PilotTelemetryMeasurement`: Registra las mediciones objetivas continuas (`measurement_id`, `pilot_id`, `module_name`, `timestamp`, `session_id`, `ragas_faithfulness_score`, `latency_ms`, `user_dwell_time_seconds`, `error_flag`); y 6) `GateDecisionAudit`: Registra la deliberación formal inmutable (`audit_id`, `gate_id`, `recorded_metrics_summary`, `deliberation_minutes`, `justification_text`, `sha256_hash_signature`). Las condiciones de integridad prohíben modificar umbrales después de la fecha de inicio del piloto.",
+  "findings": [
+    {
+      "claim_id": "T01-F04-C1",
+      "claim": "El esquema de datos relacional para hipótesis y compuertas estructura acuerdos de piloto, hipótesis por módulo, compuertas Stage-Gate (G0-G3), umbrales numéricos, telemetría continua y actas de auditoría inmutables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_hypotheses_and_gates",
+      "evidence": [
+        {
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & B2B Technology Pilot Governance",
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "locator": "Appendix A 'Data Architecture for Technology Stage-Gate Auditing'",
+          "excerpt_short": "Gates are structured Go/Kill decision points where projects are evaluated against predetermined operational, technical, and commercial criteria.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "T01_RESEARCH_DOSSIER: Arquitectura de Validación, Pilotos, Casos de Prueba y Rúbricas (Síntesis Interna)",
+          "source_id": "ce4d8135-f66d-46f0-bc63-4f80f88f6b55",
+          "locator": "Sección 8 'Modelo de Datos para Evaluación y Pilotos'",
+          "excerpt_short": "Marco de evaluación de pilotos corporativos con compuertas cuantitativas y diseño experimental riguroso.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño relacional riguroso que formaliza computacionalmente la disciplina de compuertas metodológicas.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Términos del acuerdo de piloto",
+      "Definición de hipótesis",
+      "Telemetría generada en plataforma"
+    ],
+    "actors": [
+      "Coordinador de Pilotos",
+      "Motor de Telemetría",
+      "Comité de Compuertas"
+    ],
+    "steps": [
+      "Creación de registro en 'PilotEngagement' y vinculación de hipótesis en 'ModuleHypothesis'",
+      "Configuración estricta de umbrales en 'GateMetricThreshold' (congelamiento de parámetros)",
+      "Captura y agregación en tiempo real de telemetría en 'PilotTelemetryMeasurement'",
+      "Cálculo automatizado de cumplimiento de compuerta antes de la sesión del comité",
+      "Registro de la decisión colegiada en 'GateDecisionAudit' con hash inmutable"
+    ],
+    "states": [
+      "ENGAGEMENT_CREATED",
+      "THRESHOLDS_FROZEN",
+      "TELEMETRY_RECORDING",
+      "GATE_AUDITED"
+    ],
+    "outputs": [
+      "Base de datos relacional auditable que respalda cada conclusión del piloto"
+    ],
+    "exceptions": [
+      "Cualquier intento de relajar un umbral de 'Must-Meet' durante el curso del piloto es rechazado por el esquema de base de datos"
+    ]
+  },
+  "entities": [
+    "PilotEngagement",
+    "ModuleHypothesis",
+    "EvaluationGate",
+    "GateMetricThreshold",
+    "GateDecisionAudit"
+  ],
+  "relations": [
+    {
+      "from": "EvaluationGate",
+      "to": "PilotEngagement",
+      "type": "GOVERNS_PHASE_OF"
+    },
+    {
+      "from": "GateMetricThreshold",
+      "to": "EvaluationGate",
+      "type": "DEFINES_DECISION_BOUNDARIES_FOR"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Gestión informal en presentaciones de PowerPoint vs Modelo relacional en base de datos",
+      "diferencia": "Las presentaciones permiten maquillar u omitir métricas desfavorables; el modelo relacional audita cada medición y genera veredictos matemáticos transparentes."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "threshold_immutability_enforcement": "100%",
+    "telemetry_measurement_capture_rate": "100% de sesiones de piloto registradas"
+  },
+  "bridge_implications": "Convierte la gestión de pilotos de BRIDGE en un proceso de grado empresarial verificable por comités de auditoría interna de clientes.",
+  "open_gaps": [
+    "Integración nativa con tableros de visualización en Grafana para el monitoreo de compuertas en tiempo real."
+  ],
+  "next_question_ids": [
+    "T01-F05",
+    "T01-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

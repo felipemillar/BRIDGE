@@ -1,0 +1,176 @@
+{
+  "question_id": "T01-F36",
+  "pilar": "T01",
+  "eje": "Atribución de valor e impacto",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra atribución de valor e impacto sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto de Atribución CCA-T01-140 (Piloto en Empresa Energética durante Consulta Indígena): 1) Entradas: Tarea de monitoreo y redacción asignada a BRIDGE ante 15 observaciones comunitarias complejas; Histórico manual: 80 horas de analista senior (costo interno: $4.000 USD) y 10 días de ciclo de aprobación; 2) Ejecución y Medición Desacoplada: a) Output: Generación de 15 minutas analíticas con 100% de citas verificadas a compromisos históricos del módulo Relacionar en 1.5 horas de cómputo; b) Outtake: El equipo legal adopta el 85% del texto propuesto e incluye 2 reservas ambientales detectadas por Saber; c) Outcome Operacional Validado: La tarea completa se cerró en 24 horas hombre de revisión (ahorro neto del 70% = 56 horas = $2.800 USD netos ahorrados) y el ciclo de aprobación bajó de 10 a 3 días hábiles; 3) Resultado Esperado de Atribución: El reporte de piloto atribuye formalmente el ahorro de 56 horas y la aceleración del 70% en el ciclo a The Bridge Intelligence; mientras que la posterior aprobación favorable de la consulta indígena por la comunidad se reporta como un Impacto Organizacional Exógeno, reconociendo que obedeció a las medidas sustantivas de mitigación acordadas por la empresa y no a la plataforma de software.",
+  "findings": [
+    {
+      "claim_id": "T01-F36-C1",
+      "claim": "En la evaluación de casos reales de asuntos corporativos, documentar con rigor el ahorro de horas y la aceleración del ciclo de aprobación demuestra un retorno de inversión contundente sin incurrir en la falacia de atribuir la licencia social comunitaria al software.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "The Bridge Intelligence / Caso CCA-T01-140"
+      },
+      "evidence": [
+        {
+          "source_id": "f7ad452c-58e4-47a4-81ba-7248495038a3",
+          "source_title": "AMEC - Integrated Evaluation Framework for Public Relations & Corporate Affairs",
+          "original_url": null,
+          "locator": "Case Study Methodology: Operational Outcomes vs Exogenous Impact",
+          "excerpt_short": "Rigorous case evaluation credits the technology with workflow velocity and factual accuracy, while properly attributing broader social acceptance to organizational actions.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "f45d1506-e90b-474f-813b-6846b15de6cc",
+          "source_title": "Arthur W. Page Society - The Page Principles of Corporate Public Relations",
+          "original_url": null,
+          "locator": "Principle 2: Prove it with action",
+          "excerpt_short": "Community trust is won through genuine operational commitments, not through messaging tools alone.",
+          "source_date": "2021",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso concreto de evaluación que aplica estrictamente los principios AMEC y Page.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "15 observaciones comunitarias de consulta indígena",
+      "Repositorio de compromisos históricos del módulo Relacionar",
+      "Registro de tiempos y costos de personal"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "Director Legal y de Comunidades",
+      "Módulos Saber, Hablar y Relacionar"
+    ],
+    "steps": [
+      "Recuperar compromisos históricos mediante búsqueda híbrida en Relacionar",
+      "Generar minutas de respuesta alineadas en Hablar con citas exactas",
+      "Revisión humana y validación de reservas legales por el área jurídica",
+      "Computar ahorro neto de 56 horas y aceleración de ciclo de 10 a 3 días",
+      "Emitir informe de cierre con separación explícita de outcome e impacto final"
+    ],
+    "states": [
+      "INGRESO_OBSERVACIONES",
+      "PROCESAMIENTO_RAG",
+      "VALIDACION_LEGAL",
+      "CIERRE_CON_ATRIBUCION_HONESTA"
+    ],
+    "outputs": [
+      "15 minutas aprobadas",
+      "Reporte de valor CCA-T01-140 con 70% de ahorro demostrado"
+    ],
+    "exceptions": [
+      "Si la consulta comunitaria hubiera sido rechazada por incumplimientos operacionales previos, dicho resultado negativo no se imputa al software"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CCA_140",
+      "type": "experimento",
+      "name": "Caso de Atribución CCA-T01-140",
+      "aliases": [
+        "Piloto Consulta Indígena"
+      ]
+    },
+    {
+      "entity_id": "AHORRO_HORAS_DEMOSTRADO",
+      "type": "metrica",
+      "name": "Ahorro de 56 Horas / $2.800 USD",
+      "aliases": [
+        "Outcome Operacional Comprobado"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CCA_140",
+      "predicate": "demuestra_valor_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F36-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Ahorro Operativo ($2.800 USD)",
+      "item_b": "Aprobación Social Comunitaria",
+      "dimension": "Atribución tecnológica",
+      "conclusion": "El ahorro de $2.800 USD y 7 días de ciclo es 100% atribuible a BRIDGE; la aprobación social es un impacto organizacional atribuible a las medidas de la empresa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Ahorro de tiempo en CCA-T01-140",
+      "denominator": "80 horas históricas",
+      "target": "70% (56 horas)"
+    },
+    {
+      "metric": "Reducción de ciclo de aprobación",
+      "denominator": "10 días hábiles de línea base",
+      "target": "70% (bajó a 3 días)"
+    },
+    {
+      "metric": "Citation Precision en minutas",
+      "denominator": "Total citas en las 15 minutas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Constituye la prueba reina para la compuerta G3: ahorro económico medible de $2.800 USD en un solo trámite regulatorio, pagando con creces la suscripción.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F37"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

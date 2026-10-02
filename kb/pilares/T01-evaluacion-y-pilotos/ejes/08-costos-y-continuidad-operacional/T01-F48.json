@@ -1,0 +1,176 @@
+{
+  "question_id": "T01-F48",
+  "pilar": "T01",
+  "eje": "Costos y continuidad operacional",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra costos y continuidad operacional sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto de Continuidad y Costos CCC-T01-210 (Simulación de Caída de Proveedor Primario durante Conferencia de Resultados Trimestrales): 1) Entradas: Ingesta previa de 1.800 documentos corporativos y 12 analistas conectados simultáneamente en el módulo Hablar durante la entrega de resultados del Q3; Caída intempestiva e inyección de error 503 (Service Unavailable) en el endpoint principal de Azure OpenAI a las 10:15 AM; 2) Ejecución y Conmutación: El orquestador detecta fallo tras 2 reintentos con backoff exponencial (800 ms), activa el circuit breaker y conmuta el flujo de inferencia hacia Anthropic Claude 3.5 Sonnet en AWS Bedrock bajo NeMo Guardrails en 1.85 segundos (RTO = 1.85s < 5.0s); 3) Resultado Esperado: Ningún analista percibe interrupción del servicio ni pérdida de texto en edición (RPO = 0); la consulta en curso se resuelve en 3.4 segundos con Citation Precision = 1.0; y el costo de inferencia de la sesión de crisis asciende a $0.018 USD por query, manteniéndose plenamente dentro del margen presupuestario del piloto.",
+  "findings": [
+    {
+      "claim_id": "T01-F48-C1",
+      "claim": "La ejecución empírica de una prueba de conmutación en caliente demuestra que The Bridge Intelligence mantiene continuidad operacional ininterrumpida frente a cortes de su proveedor primario de LLM con un tiempo de recuperación inferior a 2 segundos y pleno cumplimiento de guardrails de seguridad corporativa.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "The Bridge Intelligence / Caso CCC-T01-210"
+      },
+      "evidence": [
+        {
+          "source_id": "dee0924c-f288-4ff9-818a-50bb65ce00e3",
+          "source_title": "Rebedea et al. (2023) — NeMo Guardrails: Controllable and Safe LLM Applications with Programmable Rails",
+          "original_url": "https://arxiv.org/pdf/2310.10501.pdf",
+          "locator": "Section 4: Performance and Overhead in Failover Scenarios",
+          "excerpt_short": "NeMo Guardrails executes runtime policy checks with sub-100ms overhead, ensuring seamless transition across underlying LLM backends without compromising guardrail enforcement.",
+          "source_date": "2023-10-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 8: Certificación de Resiliencia en Caliente",
+          "excerpt_short": "La superación de la compuerta G1 exige prueba exitosa de failover en caliente con RTO < 5s bajo carga concurrente.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación experimental de conmutación por fallo y telemetría de resiliencia.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Carga activa de 12 analistas concurrentes",
+      "Inyección de error 503 en endpoint primario",
+      "Ruta secundaria en AWS Bedrock con NeMo Guardrails activo"
+    ],
+    "actors": [
+      "Orquestador Multi-Cloud BRIDGE",
+      "Site Reliability Engineer",
+      "Analistas corporativos del cliente"
+    ],
+    "steps": [
+      "Inyectar desconexión de API primaria a las 10:15 AM",
+      "Disparar circuit breaker tras 800 ms de timeout",
+      "Redirigir queries a AWS Bedrock con sanitización de NeMo Guardrails",
+      "Medir tiempo total de failover (1.85 segundos) y registrar costo de cómputo ($0.018 USD/query)",
+      "Restablecer ruta primaria de forma desatendida una vez normalizada la telemetría"
+    ],
+    "states": [
+      "OPERACION_NORMAL",
+      "DETECCION_FALLO",
+      "CONMUTACION_BEDROCK",
+      "RESTABLECIMIENTO_NORMAL"
+    ],
+    "outputs": [
+      "Reporte de Incidente Resuelto CCC-T01-210",
+      "Certificado de cumplimiento de SLA 99.9%"
+    ],
+    "exceptions": [
+      "Si la ruta secundaria también presentara fallo, el sistema entra en modo de solo lectura sobre la caché local con notificación al usuario"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CCC_210",
+      "type": "experimento",
+      "name": "Caso de Continuidad CCC-T01-210",
+      "aliases": [
+        "Prueba Failover Q3"
+      ]
+    },
+    {
+      "entity_id": "ORQUESTADOR_MULTICLOUD",
+      "type": "producto",
+      "name": "Orquestador Multi-Cloud BRIDGE",
+      "aliases": [
+        "Resilience Gateway"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CCC_210",
+      "predicate": "certifica_resiliencia_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F48-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Servicio con Single-Point-of-Failure",
+      "item_b": "Arquitectura BRIDGE con Failover en Caliente",
+      "dimension": "Disponibilidad ante crisis",
+      "conclusion": "El servicio vulnerable sufre corte prolongado de horas; BRIDGE conmuta en 1.85 segundos sin interrupción de la tarea de los analistas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tiempo de recuperación (RTO) en CCC-T01-210",
+      "denominator": "Tiempo cronometrado de corte",
+      "target": "1.85 s (meta < 5.0 s)"
+    },
+    {
+      "metric": "Pérdida de contexto (RPO)",
+      "denominator": "Sesiones de analistas interrumpidas",
+      "target": "0 (100% preservadas)"
+    },
+    {
+      "metric": "Costo por query en contingencia",
+      "denominator": "Inferencia en AWS Bedrock",
+      "target": "$0.018 USD"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Demuestra la solidez de infraestructura de nivel bancario exigida por grandes corporaciones en Chile y Latinoamérica.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

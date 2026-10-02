@@ -1,0 +1,142 @@
+{
+  "question_id": "P02-F12",
+  "pilar": "P02",
+  "eje": "Competidores cercanos a los cuatro módulos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra competidores cercanos a los cuatro módulos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto se ilustra mediante un incidente de contingencia territorial en Chile: 1) Contexto: una empresa minera o energética en el norte de Chile enfrenta una acusación en una radio regional donde un dirigente comunal afirma que la empresa 'incumplió el compromiso de monitoreo de agua de la Resolución de Calificación Ambiental (RCA) firmado en 2023'; 2) Entradas reales del sistema: Entrada 1 (Escuchar): audio y transcripción de la radioemisora provincial procesada por Litoralpress; Entrada 2 (Saber): PDF de 500 páginas de la RCA y Reporte de Sostenibilidad en Microsoft SharePoint (conectores tipo AlphaSense/Glean); Entrada 3 (Relacionar): acta de acuerdo y ficha del dirigente en el CRM de Borealis o Consultation Manager; Entrada 4 (Hablar): ficha de tema crítico (issue) y portavoz asignado en Broadsight; 3) Comportamiento de competidores existentes: Meltwater alerta de la noticia pero es ciega a la RCA y no sabe si es cierta; Broadsight tiene la postura oficial pero no detectó la radio en vivo; Borealis guarda el acta pero no monitorea medios ni redacta comunicados; AlphaSense encuentra el párrafo de la RCA pero carece de flujo de crisis; Entual prepara borradores pero no puede leer la RCA confidencial; 4) Resultado esperado del flujo unificado (The Bridge): en menos de 5 minutos el motor de enlace cruza la alerta radial (Escuchar) con la página 142 de la RCA (Saber) y el acta del CRM (Relacionar); verifica que el monitoreo de agua fue auditado favorablemente el mes anterior generando cita exacta al PDF; sintetiza un Executive Briefing para el CCO con postura aprobada y 3 preguntas difíciles asistidas (Hablar); y el CCO firma el brief en móvil (Human-in-the-Loop) autorizando la respuesta fidedigna.",
+  "findings": [
+    {
+      "claim_id": "P02-F12-C1",
+      "claim": "El caso concreto demuestra que ningún competidor actual puede resolver de forma autónoma el ciclo completo de contingencia territorial, requiriéndose hoy la intervención manual fragmentada entre 4 herramientas desconectadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Chile",
+        "actor": "Operación Minera / Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Sección: Caso de Prueba Controlado de Contingencia Territorial en Chile",
+          "excerpt_short": "Evaluación del flujo de respuesta ante denuncias de RCA en radios regionales cruzando los 4 módulos.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Escenario empírico basado en las limitaciones técnicas documentadas de cada proveedor.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alerta radial Litoralpress",
+      "RCA PDF en SharePoint",
+      "Ficha de dirigente en Borealis",
+      "Issue aprobado en Broadsight"
+    ],
+    "actors": [
+      "Dircom",
+      "Motor Bipartito BRIDGE",
+      "Portavoz Oficial",
+      "Medio Regional"
+    ],
+    "steps": [
+      "Paso 1: Captura de audio y transcripción por Litoralpress (Escuchar)",
+      "Paso 2: Cruce semántico con RCA en SharePoint vía RAG (Saber)",
+      "Paso 3: Identificación de compromiso cumplido y cita a pág. 142 (Verificación)",
+      "Paso 4: Consulta de compromisos históricos del actor en CRM (Relacionar)",
+      "Paso 5: Generación asistida de Executive Brief con Q&A (Hablar)",
+      "Paso 6: Aprobación y firma del CCO (Human-in-the-Loop)"
+    ],
+    "states": [
+      "Denuncia_Detectada",
+      "Grounding_RCA_Ejecutado",
+      "Dossier_Generado",
+      "Respuesta_Validada"
+    ],
+    "outputs": [
+      "Executive Briefing con cita a RCA y Q&A asistido liberado en < 5 minutos"
+    ],
+    "exceptions": [
+      "Inconsistencia real donde el compromiso no fue ejecutado (activa alerta roja de mitigación)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CONTINGENCIA_RCA",
+      "type": "caso_prueba",
+      "name": "Caso de Contingencia Territorial de RCA en Chile",
+      "aliases": [
+        "Gold Scenario P02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CONTINGENCIA_RCA",
+      "predicate": "demuestra_superioridad_de",
+      "object_id": "Flujo_Unificado_Cuatro_Modulos",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F12-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta Fragmentada Tradicional vs Flujo Unificado BRIDGE",
+      "Respuesta Tradicional": "2 a 6 horas de recopilación manual entre correos, llamados y búsqueda en carpetas de red.",
+      "Flujo Unificado BRIDGE": "Menos de 5 minutos con citación exacta a la RCA y Q&A preparado para el vocero."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Utilizar este caso de contingencia territorial de RCA como la demostración principal (core demo) de BRIDGE para validar el valor ante clientes chilenos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F13",
+    "P02-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:28:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

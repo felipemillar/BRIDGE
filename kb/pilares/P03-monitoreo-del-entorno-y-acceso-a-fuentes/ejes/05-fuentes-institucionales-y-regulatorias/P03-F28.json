@@ -1,0 +1,126 @@
+{
+  "question_id": "P03-F28",
+  "pilar": "P03",
+  "eje": "Fuentes institucionales y regulatorias",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar fuentes institucionales y regulatorias de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de fuentes oficiales exige: 1) Variables técnicas y jurídicas: `organismo_emisor` (CMF, SEC, SII, SEIA, Congreso), `tipo_documento` (hecho_esencial, decreto_supremo, resolucion_exenta, form_8k, licitacion_ocds), `numero_expediente_o_boletin`, `estado_juridico` (propuesta, tramite, norma_vigente), `fecha_promulgacion`, `fecha_entrada_vigencia`, y `url_trazabilidad_oficial`; 2) Categorías temáticas: Mercado_Valores, Tributario, Ambiental, Laboral, Libre_Competencia y Contratacion_Publica; 3) Relaciones en grafo: `dictado_por` (Organismo del Estado), `afecta_a_sector` (Industria/CIIU), `modifica_a` (Ley/Norma Preexistente), `fiscalizado_por` (Superintendencia) y `registra_lobby_con` (Autoridad Regulada); y 4) Condiciones de integridad: todo cambio normativo clasificado como 'Norma Vigente' debe incluir el identificador del Diario Oficial o gaceta estatal que acredita su obligatoriedad jurídica.",
+  "findings": [
+    {
+      "claim_id": "P03-F28-C1",
+      "claim": "El modelado estructurado de información regulatoria debe vincular organismos emisores, números de expedientes inmutables y relaciones de derogación/modificación de normas preexistentes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Modelado Estructurado P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.4: Señales Institucionales y Regulatorias",
+          "excerpt_short": "Todas estas fuentes se estructuran por taxonomía de temas... no por marca... permitiendo detectar cambios normativos y de actores sin confundir propuesta, trámite y norma vigente.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:20:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del esquema de datos ontológico de fuentes institucionales.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento regulatorio oficial crudo"
+    ],
+    "actors": [
+      "Regulatory Ontologist",
+      "Knowledge Graph Inserter"
+    ],
+    "steps": [
+      "Extracción de metadatos de vigencia",
+      "Resolución de dependencias legales",
+      "Inserción de tripletas en grafo"
+    ],
+    "states": [
+      "Raw_Document",
+      "Ontology_Mapped",
+      "Graph_Indexed"
+    ],
+    "outputs": [
+      "Nodo normativo estructurado en el grafo institucional"
+    ],
+    "exceptions": [
+      "Leyes misceláneas que modifican simultáneamente decenas de cuerpos legales disímiles"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REGULATORY_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado Regulatorio",
+      "aliases": [
+        "Structured Regulatory Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REGULATORY_SCHEMA",
+      "predicate": "estructura_entidades_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F28-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Diseñar la relación 'modifica_a' en el grafo de BRIDGE para advertir automáticamente cuando una nueva norma deroga un procedimiento corporativo previo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

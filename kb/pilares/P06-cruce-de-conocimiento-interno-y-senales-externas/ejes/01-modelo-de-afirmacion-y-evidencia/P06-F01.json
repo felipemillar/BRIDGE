@@ -1,0 +1,427 @@
+{
+  "question_id": "P06-F01",
+  "pilar": "P06",
+  "eje": "Modelo de afirmación y evidencia",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Cómo se representa una afirmación externa con entidad, fecha, alcance, modalidad y fuente?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el marco del corpus del cuaderno sobre el Pilar 6 (**P06 — Cruce de conocimiento interno y señales externas**), la representación de una **afirmación externa** estructurada mediante **entidad, fecha, alcance, modalidad y fuente** se aborda desde la ingeniería de datos, el modelado ontológico y las taxonomías del procesamiento de lenguaje natural (NLP) [1-3]. Entidad (Canonicalización de la Orga",
+  "findings": [
+    {
+      "claim_id": "P06-F01-C1",
+      "claim": "En el marco del corpus del cuaderno sobre el Pilar 6 (**P06 — Cruce de conocimiento interno y señales externas**), la representación de una **afirmación externa** estructurada mediante **entidad, fecha, alcance, modalidad y fuente** se aborda desde la ingeniería de datos, el modelado ontológico y la",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F01",
+          "excerpt_short": "En el marco del corpus del cuaderno sobre el Pilar 6 (**P06 — Cruce de conocimiento interno y señales externas**), la representación de una **afirmación externa** estructurada medi...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F01-C2",
+      "claim": "Entidad (Canonicalización de la Organización / Objeto):**",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F01",
+          "excerpt_short": "Entidad (Canonicalización de la Organización / Objeto):**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F01-C3",
+      "claim": "Las señales externas frecuentemente emplean nombres coloquiales o marcas fantasía (\"CMPC\", \"La Papelera\", \"Empresas CMPC S.A.\"), mientras que los registros internos utilizan razones sociales o RUT/CIK [2]. La entidad se representa mediante algoritmos probabilísticos de *record linkage* (Fellegi-Sunt",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F01",
+          "excerpt_short": "Las señales externas frecuentemente emplean nombres coloquiales o marcas fantasía (\"CMPC\", \"La Papelera\", \"Empresas CMPC S.A.\"), mientras que los registros internos utilizan razone...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F01-C4",
+      "claim": "Plataformas de Inteligencia Externa y Ontologías:**",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F01",
+          "excerpt_short": "Plataformas de Inteligencia Externa y Ontologías:**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F01-C5",
+      "claim": "Tipificación de Discrepancias:**",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F01",
+          "excerpt_short": "Tipificación de Discrepancias:**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F01-C6",
+      "claim": "Al contrastar la quintupla de una declaración interna contra una señal externa, el sistema permite inferir si la brecha corresponde a una **Contradicción Real** (incoherencia fáctica directa en un mismo marco temporal y de alcance), una **Diferencia Temporal** (desfase por fecha de corte), una **Dif",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F01",
+          "excerpt_short": "Al contrastar la quintupla de una declaración interna contra una señal externa, el sistema permite inferir si la brecha corresponde a una **Contradicción Real** (incoherencia fácti...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F01-C7",
+      "claim": "Mapeo en la Matriz Afirmación-Evidencia (12 Campos):**",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F01",
+          "excerpt_short": "Mapeo en la Matriz Afirmación-Evidencia (12 Campos):**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F01-C8",
+      "claim": "Se propone operacionalizar la representación unificando los cinco atributos solicitados dentro de la **Matriz Afirmación-Evidencia** (**P06_RESEARCH_DOSSIER**, Entregable 1) [3]:",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F01",
+          "excerpt_short": "Se propone operacionalizar la representación unificando los cinco atributos solicitados dentro de la **Matriz Afirmación-Evidencia** (**P06_RESEARCH_DOSSIER**, Entregable 1) [3]:...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de medios y reguladores",
+      "Documentación corporativa interna y memorias CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "CCO / Dircom",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Extracción y normalización de afirmaciones",
+      "Resolución de entidades y contraste temporal",
+      "Evaluación de coherencia fáctica y generación de brief"
+    ],
+    "states": [
+      "ENTRADA_RECIBIDA",
+      "ENTIDADES_CANONICALIZADAS",
+      "CONTRASTE_EJECUTADO",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Evaluación estructurada y respuesta citada para P06-F01"
+    ],
+    "exceptions": [
+      "Ausencia de señal externa verificable o desfase temporal en el corte documental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_P06_CORP",
+      "type": "organizacion",
+      "name": "Corporación Emisora CMF",
+      "aliases": [
+        "Empresa Reportante"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_REG",
+      "type": "organizacion",
+      "name": "CMF / SERNAC / SMA",
+      "aliases": [
+        "Regulador Chileno"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_BRIDGE",
+      "type": "producto",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "BRIDGE Platform"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_P06_CORP",
+      "predicate": "sujeto_a_fiscalizacion_de",
+      "object_id": "ENT_P06_REG",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P06-F01-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporación en el pipeline del módulo para sustentar decisiones ejecutivas en P06-F01.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Documentos correctivos aplicables (**P06_QUALITY_ADDENDUM**):**",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    },
+    {
+      "gap": "Corrección de autoría en Survey de Greenwashing:** El estudio *Detecting Greenwashing: A Natural Language Processing Literature Survey* (arXiv:2502.07541) debe atribuirse a **Tom Calamai, Oana Balalau, Théo Le Guenedal y Fabian M. Suchanek** (Télécom",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

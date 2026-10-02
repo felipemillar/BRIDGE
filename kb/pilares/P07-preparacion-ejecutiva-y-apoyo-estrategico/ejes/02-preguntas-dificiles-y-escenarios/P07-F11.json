@@ -1,0 +1,142 @@
+{
+  "question_id": "P07-F11",
+  "pilar": "P07",
+  "eje": "Preguntas difíciles y escenarios",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre preguntas difíciles y escenarios?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se respaldan en cuatro cuerpos de conocimiento contrastados: 1) Literatura Clásica y Manuales de Media Training: Comms Manoeuvres (2023, 'Media Training for CEOs') y DINFOS (Defense Information School, 2021) sobre técnicas de Bridging, Flagging y Hooking; 2) Gestión de Crisis y Comunicación Estratégica: W. Timothy Coombs (2007, 2014, Situational Crisis Communication Theory - SCCT) sobre posturas defensivas vs acomodaticias; 3) Simulación y Red Teaming de IA: ArXiv:2404.11446 (2024, 'Open-Ended Wargames with LLMs') y BCMMetrics (2023, 'Tabletop Exercise Objectives and Injects') sobre diseño de inyectores adversariales; y 4) Síntesis Metodológica Rectora: P07_RESEARCH_DOSSIER y P07_EVIDENCE_MAP (Septiembre 2026), que unifican estos marcos en las plantillas de Murder Board.",
+  "findings": [
+    {
+      "claim_id": "P07-F11-C1",
+      "claim": "Las técnicas de preparación ante preguntas difíciles y escenarios de crisis provienen de la convergencia entre la teoría situacional de crisis, manuales de media training militar/corporativo y protocolos contemporáneos de simulación con LLMs.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_synthesis",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje B y Eje D)",
+          "excerpt_short": "Eje B: Preguntas Difíciles, Red Teaming y Murder Boards. Respaldado por Comms Manoeuvres (2023), Coombs SCCT (2007) y ArXiv:2404.11446. Nivel 1 de confianza para las técnicas discursivas y diseño de ejercicios estructurados de simulación.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "ArXiv: Open-Ended Wargames with Large Language Models (Tabletop & Simulations)",
+          "source_id": "07c18a0c-d503-4a4d-ab67-1f5151b04d7c",
+          "locator": "Introducción y Metodología, p. 1-5",
+          "excerpt_short": "Simulating adversarial environments requires structured scenario trees where unexpected perturbations (injects) challenge agents' strategic alignment and consistency over multiple turns.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el mapa de evidencia y contraste con los papers académicos del corpus P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "mapeo_fuentes_escenarios": [
+      {
+        "ambito": "Técnicas de Vocería",
+        "fuente": "Comms Manoeuvres (2023)",
+        "aporte": "Mecanismos de Bridging, Flagging y Hooking."
+      },
+      {
+        "ambito": "Teoría de Crisis",
+        "fuente": "Coombs SCCT (2007)",
+        "aporte": "Asignación de responsabilidad de crisis y selección de estrategias reconstructivas."
+      },
+      {
+        "ambito": "Simulación y Wargaming",
+        "fuente": "ArXiv:2404.11446 / BCMMetrics (2023)",
+        "aporte": "Inyectores temporales secuenciales en ejercicios de mesa (Tabletop)."
+      },
+      {
+        "ambito": "Síntesis Metodológica",
+        "fuente": "P07_RESEARCH_DOSSIER / EVIDENCE_MAP",
+        "aporte": "Plantillas de Murder Board y evaluación de consistencia de mensajes."
+      }
+    ]
+  },
+  "entities": [
+    "Comms Manoeuvres",
+    "Timothy Coombs",
+    "ArXiv",
+    "BCMMetrics",
+    "P07_EVIDENCE_MAP"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "SCCT",
+      "type": "validates"
+    },
+    {
+      "from": "ArXiv:2404.11446",
+      "to": "Simulaciones Wargaming",
+      "type": "underpins"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Media Training Tradicional vs Simulación LLM",
+      "diferencia": "El media training tradicional depende de sesiones presenciales esporádicas; los LLMs permiten simulaciones continuas bajo demanda con inyectores adversariales automatizados."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "academic_and_industry_sources": "6 fuentes canónicas cruzadas",
+    "citation_completeness": "100% con localizadores exactos"
+  },
+  "bridge_implications": "Incorporar estas referencias en los tooltips y guías metodológicas del módulo de simulación de BRIDGE.",
+  "open_gaps": [
+    "Validación psicométrica del estrés inducido por simuladores basados en LLM comparado con entrenadores humanos."
+  ],
+  "next_question_ids": [
+    "P07-F12",
+    "P07-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T04:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

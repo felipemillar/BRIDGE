@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C15",
+  "pilar": "P03",
+  "eje": "Derechos, costos y calidad de ingesta",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre derechos, costos y calidad de ingesta, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radicaba en suponer que la minería de textos y datos (TDM) sobre la prensa abierta goza de una cobertura legal general en Chile similar al marco europeo. Prevalece la rigurosa distinción jurídica de la P03_QUALITY_ADDENDUM (Sección 2.4): 1) En la Unión Europea, el Artículo 4 de la Directiva 2019/790 ampara la minería comercial únicamente si los titulares no han formulado reserva expresa de derechos mediante medios legibles por máquina (opt-out en robots.txt o metadatos); si existe reserva, el scraping comercial es ilegal; 2) En Chile, la Ley 17.336 sobre Propiedad Intelectual carece de una excepción expresa de minería de textos y datos al corte de septiembre de 2026, limitando las excepciones al derecho de cita breve (Art. 38); por tanto, compilar y almacenar artículos íntegros sin autorización directa o licenciamiento acarrea riesgos jurídicos sustanciales; y 3) Prevalece la regla operativa de capturar solo metadatos, snippets efímeros y enlaces canónicos, recurriendo a APIs y licencias sindicadas para el almacenamiento prolongado.",
+  "findings": [
+    {
+      "claim_id": "P03-C15-C1",
+      "claim": "Prevalece la rectificación jurídica que desmiente una excepción legal amplia de minería de datos en Chile (Ley 17.336) y subraya la obligatoriedad del respeto al opt-out del Art. 4 de la Directiva UE 2019/790.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / UE",
+        "actor": "Auditoría Legal P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.4: Directiva (UE) 2019/790 y Ley 17.336",
+          "excerpt_short": "En Chile, la Ley de Propiedad Intelectual (Ley 17.336) no contempla al corte de septiembre de 2026 una excepción explícita de TDM... Ningún análisis técnico debe traducirse en garantías de inmunidad legal.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación vinculante según la regla de precedencia editorial del pilar.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Marco legal chileno y europeo",
+      "Procedimientos de ingesta técnica"
+    ],
+    "actors": [
+      "Intellectual Property Counsel",
+      "Data Storage Controller"
+    ],
+    "steps": [
+      "Verificación de régimen de derechos",
+      "Ajuste de política de almacenamiento a snippets",
+      "Bloqueo de almacenamiento de texto íntegro"
+    ],
+    "states": [
+      "IP_Assessed",
+      "Snippet_Policy_Active",
+      "Zero_Copyright_Risk_Enforced"
+    ],
+    "outputs": [
+      "Pipeline conforme con Ley 17.336 y Directiva UE 2019/790"
+    ],
+    "exceptions": [
+      "Medios que autorizan expresamente la minería mediante convenio bilateral"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_POLITICA_CUMPLIMIENTO_IP",
+      "type": "politica_cumplimiento",
+      "name": "Política de Cumplimiento de Propiedad Intelectual e Ingesta",
+      "aliases": [
+        "IP Compliance Policy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_POLITICA_CUMPLIMIENTO_IP",
+      "predicate": "restringe_retencion_en",
+      "object_id": "Eje_Derechos_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Marco legal de TDM comercial",
+      "Unión Europea (Directiva 2019/790 Art 4)": "Excepción legal expresa pero sujeta a reserva de derechos legible por máquina (opt-out).",
+      "Chile (Ley 17.336 a Sept 2026)": "Vacío legal de TDM; solo amparado derecho de cita breve con atribución de fuente y autor."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Cobertura legal de minería de textos en la legislación chilena",
+      "initial_claim": "El monitoreo comercial y minería de prensa están legalmente autorizados en Chile como en Europa.",
+      "corrected_claim": "La ley chilena carece de excepción expresa de TDM; el monitoreo sin autorización genera contingencias.",
+      "resolution": "Prevalece la P03_QUALITY_ADDENDUM por regla de precedencia editorial."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Asegurar que BRIDGE almacene solo snippets y metadatos analíticos efímeros para operar con riesgo legal nulo bajo la Ley 17.336.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "question_id": "P04-F08",
+  "pilar": "P04",
+  "eje": "Afirmaciones y compromisos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué campos distinguen promesa, meta, avance, incumplimiento y rectificación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La diferenciación entre los estados de un compromiso corporativo se rige por campos específicos en el modelo de datos: 1) Promesa / Declaración de Intención: tipificada como `corp:Statement`, caracterizada por `has_quantitative_target: false`, ausencia de `baseline_year` y horizonte indefinido; 2) Meta Formal: tipificada como `corp:Commitment`, caracterizada por `status: 'Activo / En Curso'`, `baseline: {year, value, unit}`, `target_year`, `target_value` y aprobación formal de directorio; 3) Avance Anual: registrado en el array `reported_outcomes` con `reporting_year`, `achieved_value`, `pct_progress_vs_target` y referencia al documento de reporte anual; 4) Incumplimiento: derivado automáticamente cuando la fecha actual supera el `target_year` o un hito intermedio y el `achieved_value` no alcanza el valor comprometido, asignando `status: 'Incumplido'` o `'En Riesgo / Rezago'`; y 5) Rectificación / Reexpresión: tipificada con `status: 'Reexpresado / Modificado'`, que exige los campos `previous_baseline`, `revised_baseline`, `reexpression_justification` (e.g. adquisición o cambio de metodología bajo IFRS S2) y la relación PROV-O `prov:wasRevisionOf`.",
+  "findings": [
+    {
+      "claim_id": "P04-F08-C1",
+      "claim": "Los estados de promesa, meta, avance, incumplimiento y rectificación se distinguen unívocamente mediante la combinación de tipo ontológico, año base, array de outcomes y flags de reexpresión según IFRS S2.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Estándares IFRS / GRI"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.2: Ontología Corporativa y Sección 3.1: Estructura de Campos",
+          "excerpt_short": "status enum: Propuesto, Activo/En Curso, Cumplido, En Riesgo/Rezago, Incumplido, Reexpresado/Modificado, Retirado. reported_outcomes array (reporting_year, achieved_value, pct_progress).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "3d670aa0-fc8d-48ca-8c2d-26879dc45378",
+          "source_title": "IFRS S2: Climate-related Disclosures",
+          "original_url": "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/ifrs-s2-climate-related-disclosures/",
+          "locator": "Párrafos 33-36: Targets and Re-expressions",
+          "excerpt_short": "An entity shall disclose how it tracks progress against its targets, whether the target is absolute or intensity-based, and any revisions to base year emissions or targets.",
+          "source_date": "2023-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma contable internacional IFRS S2 y modelo de datos del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria Anual o Reporte de Sostenibilidad",
+      "Compromiso original indexado"
+    ],
+    "actors": [
+      "Commitment Tracker",
+      "Discrepancy Detector",
+      "State Transition Engine"
+    ],
+    "steps": [
+      "Comparación de valor reportado vs meta",
+      "Evaluación de vencimiento temporal",
+      "Actualización de enum status y registro de reexpresión si aplica"
+    ],
+    "states": [
+      "Active",
+      "Progress_Recorded",
+      "Breached",
+      "Reexpressed",
+      "Fulfilled"
+    ],
+    "outputs": [
+      "Estado actualizado del compromiso con historial de transiciones"
+    ],
+    "exceptions": [
+      "Reexpresión de línea base no explicada en nota técnica"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_COMMITMENT_STATES",
+      "type": "taxonomia",
+      "name": "Estados Operativos de Compromisos Corporativos",
+      "aliases": [
+        "Corporate Commitment Lifecycle States"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_COMMITMENT_STATES",
+      "predicate": "monitorea_cumplimiento_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F08-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Naturaleza del dato",
+      "Promesa (Declaración)": "Aspiración sin indicador cuantificable; no genera obligación matemática.",
+      "Meta (Compromiso)": "Obligación formal con año base, valor objetivo, plazo y auditoría externa obligatoria."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe alertar proactivamente a los directivos si una meta entra en estado 'En Riesgo / Rezago' antes de que sea expuesta en medios.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

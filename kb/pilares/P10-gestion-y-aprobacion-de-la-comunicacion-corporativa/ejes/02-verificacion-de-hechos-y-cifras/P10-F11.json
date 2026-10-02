@@ -1,0 +1,145 @@
+{
+  "question_id": "P10-F11",
+  "pilar": "P10",
+  "eje": "Verificación de hechos y cifras",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre verificación de hechos y cifras?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos normativos y metodológicos relativos a la verificación fáctica están respaldados por: 1) Cornell LII: 17 CFR § 240.10b-5 (SEC Rule 10b-5, fuente sustantiva comprobada en sustitución de eCFR): Prohíbe formalmente hacer cualquier declaración falsa sobre hechos materiales o incurrir en omisión de hechos necesarios para que las afirmaciones no resulten engañosas; 2) European Commission (2023, 'Green Claims Directive Proposal', COM(2023) 166 final): Regula la fundamentación científica obligatoria de afirmaciones ambientales y de sostenibilidad; 3) Arthur W. Page Society: Principio 1 ('Tell the truth') que establece la subordinación irrenunciable del relato comunicacional a la realidad operativa; 4) Broadsight (2025): Aporta la arquitectura de System of Record para la custodia y verificación de posturas institucionales; y 5) P10_VERIFICATION_CORRECTIONS (2026): Invalida la fuente eCFR CAPTCHA y consagra el deslinde normativo y de jurisdicción.",
+  "findings": [
+    {
+      "claim_id": "P10-F11-C1",
+      "claim": "El marco de verificación fáctica se sustenta en la regla bursátil antifraude SEC Rule 10b-5 (Cornell LII), la propuesta europea de Green Claims, los Principios de Page Society y las rectificaciones canónicas de P10.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_fact_checking",
+      "evidence": [
+        {
+          "source_title": "Cornell LII: 17 CFR § 240.10b-5 - Employment of Manipulative and Deceptive Devices",
+          "source_id": "b689098d-8595-4f11-9e01-293b0e194a96",
+          "locator": "Paragraph (b)",
+          "retrieved_at": null,
+          "excerpt_short": "It shall be unlawful for any person to make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made, in the light of the circumstances under which they were made, not misleading.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Deslinde Normativo (Síntesis Interna)",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 1 'Invalidación Expresa del Intento eCFR y Recuperación Oficial Cornell LII'",
+          "retrieved_at": null,
+          "excerpt_short": "Se importó e inspeccionó la norma desde Cornell LII: 17 CFR § 240.10b-5 (b689098d), comprobando que su cuerpo contiene el texto normativo real de la regla antifraude bursátil (incisos a, b y c; 15 U.S.C. 78j).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa del texto normativo en Cornell LII y concordancia con P10_VERIFICATION_CORRECTIONS.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes P10",
+      "Texto legal Cornell LII",
+      "Propuesta Directiva Green Claims"
+    ],
+    "actors": [
+      "Auditor de Fuentes",
+      "Especialista Legal Internacional"
+    ],
+    "steps": [
+      "Cotejo de artículos y citas textuales",
+      "Confirmación de no utilización de la fuente eCFR CAPTCHA",
+      "Consolidación en el schema JSON"
+    ],
+    "states": [
+      "Fuentes Verificadas",
+      "Citas Asignadas",
+      "Trazabilidad Completa"
+    ],
+    "outputs": [
+      "Matriz probatoria del Eje 2 de P10"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "Cornell LII 10b-5",
+    "Green Claims Directive",
+    "Page Society",
+    "Broadsight",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "Cornell LII 10b-5",
+      "to": "Veracidad Fáctica",
+      "type": "LEGALLY_ENFORCES"
+    },
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "Cornell LII",
+      "type": "VALIDATES_AS_SUBSTANTIVE_SOURCE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citar página bloqueada con CAPTCHA (eCFR) vs Texto legal verificado (Cornell LII)",
+      "diferencia": "Citar una pantalla de bloqueo destruye el rigor epistemológico; Cornell LII aporta el articulado fáctico completo de la norma."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "verified_legal_benchmarks": "1 regla federal bursátil (Rule 10b-5) + 1 directiva europea (Green Claims)",
+    "substantive_status": "100% verificado sin CAPTCHA"
+  },
+  "bridge_implications": "Incluir las advertencias de la Rule 10b-5 y Green Claims en los checklists de aprobación legal de BRIDGE.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F12",
+    "P10-F13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

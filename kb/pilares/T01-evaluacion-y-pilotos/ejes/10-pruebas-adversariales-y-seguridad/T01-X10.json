@@ -1,0 +1,151 @@
+{
+  "question_id": "T01-X10",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Pruebas adversariales y seguridad",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué ataque intenta obtener datos de otro cliente o un mensaje no aprobado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los dos ataques adversariales más destructivos en entornos SaaS corporativos multi-cliente son: 1) Ataque de Exfiltración y Fuga Cross-Tenant: Intentos estructurados de forzar al motor RAG a recuperar pasajes, vectores o citas pertenecientes a la partición de otro cliente (ej. un usuario del Cliente A inyecta una consulta diseñada para consultar por similitud semántica borradores estratégicos del Cliente B mediante manipulación de filtros de metadatos o colisiones de prefijo en PostgreSQL pgvector); y 2) Ataque de Divulgación de Mensaje No Aprobado / Hecho Reservado: Intentos de extraer borradores embargados que aún se encuentran en estado 'Borrador' o 'Pendiente de Aprobación Legal' en el módulo Hablar, burlando la cadena DACI mediante peticiones que simulan ser del Gerente General o alegando falsas emergencias corporativas. En The Bridge Intelligence, ambos ataques son neutralizados por Row-Level Security (RLS) criptográfico estricto a nivel de base de datos y por guardrails de control de acceso basados en roles (RBAC) que verifican el token JWT y el tenant_id en cada consulta.",
+  "findings": [
+    {
+      "claim_id": "T01-X10-C1",
+      "claim": "T01_QUALITY_ADDENDUM y el marco de gobernanza multi-tenant estipulan que la frontera de seguridad entre clientes no debe delegarse en el prompt del LLM, sino en controles deterministas a nivel de base de datos (PostgreSQL RLS) y aislamiento en cuatro planos, haciendo imposible la fuga de datos cross-tenant aún frente a inyecciones de prompt exitosas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM & P11 Multi-Tenant Governance"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 10: Pruebas Adversariales Cross-Tenant",
+          "excerpt_short": "El aislamiento entre clientes debe ser físico o lógico determinista (RLS). Si un prompt logra que el LLM devuelva un solo token de otro tenant, el piloto se detiene inmediatamente.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio de seguridad innegociable ratificado en las síntesis rectoras.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Batería de 50 ataques de cruce cross-tenant",
+      "Tokens JWT falsificados o alterados",
+      "Módulo de auditoría de queries SQL"
+    ],
+    "actors": [
+      "Ethical Hacker de QA",
+      "Auditor de Cumplimiento Normativo"
+    ],
+    "steps": [
+      "Emitir queries desde el contexto del Tenant A solicitando documentos del Tenant B",
+      "Verificar que la cláusula WHERE tenant_id = current_tenant filtre los resultados a nivel de base de datos",
+      "Comprobar que el motor de respuesta devuelva 0 resultados sin revelar la existencia del documento ajeno",
+      "Registrar el intento de ataque en el Security Information and Event Management (SIEM)"
+    ],
+    "states": [
+      "INYECCION_ATAQUE_TENANT",
+      "EVALUACION_RLS",
+      "BLOQUEO_DETERMINISTA",
+      "ALERTA_SIEM"
+    ],
+    "outputs": [
+      "Reporte de Penetración Cross-Tenant T01-X10 (0 fugas)"
+    ],
+    "exceptions": [
+      "Si se detecta cualquier fuga de datos entre clientes, se ejecuta el protocolo de desconexión inmediata (Kill)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ATAQUE_CROSS_TENANT",
+      "type": "riesgo",
+      "name": "Ataque de Fuga Cross-Tenant",
+      "aliases": [
+        "Cross-Customer Data Leakage Attack"
+      ]
+    },
+    {
+      "entity_id": "POSTGRES_RLS_GUARD",
+      "type": "producto",
+      "name": "PostgreSQL Row-Level Security (RLS)",
+      "aliases": [
+        "Determinista Database Boundary"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "POSTGRES_RLS_GUARD",
+      "predicate": "neutraliza",
+      "object_id": "ATAQUE_CROSS_TENANT",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X10-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Filtro en Prompt del LLM ('Por favor no mires otros clientes')",
+      "item_b": "Aislamiento Determinista RLS en Base de Datos",
+      "dimension": "Efectividad ante jailbreaks",
+      "conclusion": "El filtro en prompt es fácilmente vulnerado con inyecciones semánticas; el RLS en base de datos impide el acceso a nivel de kernel de datos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de éxito en intentos de fuga cross-tenant",
+      "denominator": "Total ataques de penetración ejecutados",
+      "target": "0.0% (absoluto)"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite alojar a competidores directos de la misma industria (ej. dos mineras rivales) en la misma nube con aislamiento garantizado.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

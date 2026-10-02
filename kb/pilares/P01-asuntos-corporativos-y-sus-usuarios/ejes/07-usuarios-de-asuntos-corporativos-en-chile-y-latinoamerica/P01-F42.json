@@ -1,0 +1,183 @@
+{
+  "question_id": "P01-F42",
+  "pilar": "P01",
+  "eje": "Usuarios de asuntos corporativos en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra usuarios de asuntos corporativos en Chile y Latinoamérica sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso de una corporación minera/energética en Chile sujeta a la NCG 461 de la CMF y a la Ley N° 20.730 de Lobby que enfrenta simultáneamente una audiencia regulatoria ministerial y protestas comunitarias por recursos hídricos ilustra el tema: contrastando la operación artesanal tradicional (minutas manuales nocturnas en PDF que generan contradicciones fácticas) con la asistencia agéntica en VPC privada (cruce bidireccional de Memoria CMF, RCA y actas de InfoLobby en 12 minutos), el resultado esperado verifica cero discrepancias con los mercados financieros, 100% consistencia testimonial y respuesta oficial blindada en menos de 30 minutos.",
+  "findings": [
+    {
+      "claim_id": "P01-F42-C1",
+      "claim": "En una contingencia de alta exposición en Chile (audiencia de Lobby ministerial y movilización comunitaria hídrica simultánea), las entradas operativas ingresadas en entorno VPC seguro integran el capítulo hídrico de la Memoria CMF NCG 461, las RCA de la faena, convenios territoriales y señales de monitoreo en redes sociales.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Corporación Minero-Energética"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Caso Práctico Regional de Adopción e Interacción",
+          "excerpt_short": "Entradas del caso: Memoria CMF NCG 461, RCA ambiental, InfoLobby y monitoreo mediático en tiempo real.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:01:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso práctico detallado en el dossier P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F42-C2",
+      "claim": "El resultado esperado verifica tres logros: cero contradicciones testimoniales entre lo declarado a la autoridad y lo reportado a la CMF, reducción del tiempo de elaboración de la minuta ejecutiva de 4 horas a 12 minutos, y capacidad de emitir un holding statement en menos de 30 minutos (Golden Hour) preservando la Licencia Social.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "CCO y Vocero Corporativo"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Resultados Esperados del Caso Práctico Regional",
+          "excerpt_short": "Resultados esperados: cero contradicciones con CMF, reducción a 12 minutos y holding statement en <30 min.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:01:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación de resultados verificables en el dossier.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria CMF NCG 461",
+      "RCA faena",
+      "InfoLobby histórico",
+      "Monitoreo social regional"
+    ],
+    "actors": [
+      "CCO / Gerente de Asuntos Públicos",
+      "Gerente General",
+      "Fiscal Legal",
+      "Oficial de Seguridad (CISO)"
+    ],
+    "steps": [
+      "Ingesta en entorno VPC privado aislado",
+      "Cruce automatizado entre compromisos CMF/RCA y señales externas en 12 minutos",
+      "Emisión de Briefing con Q&A y citas exactas",
+      "Validación de CCO y Fiscal Legal",
+      "Audiencia ministerial de lobby y respuesta en medios dentro de Golden Hour"
+    ],
+    "states": [
+      "Crisis_Doble_Detectada",
+      "Briefing_12min_Generado",
+      "Legal_Visado",
+      "Audiencia_Completada",
+      "Holding_Statement_Emitido"
+    ],
+    "outputs": [
+      "Briefing ejecutivo trazable",
+      "Holding statement fundamentado",
+      "Acta pública InfoLobby consistente"
+    ],
+    "exceptions": [
+      "Discrepancia no documentada entre datos operacionales de faena y memoria CMF"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_REGIONAL_HIBRIDO",
+      "type": "caso_estudio",
+      "name": "Caso Regional de Contingencia Hídrica y Audiencia Ministerial",
+      "aliases": [
+        "Caso Práctico P01-F42"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_REGIONAL_HIBRIDO",
+      "predicate": "valida_adopcion_de",
+      "object_id": "ENT_ESTADIOS_MADUREZ",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F42-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tiempo asistido de elaboración de briefing ejecutivo",
+      "value": "12 minutos",
+      "denominator": "Tiempo previo artesanal de 4 horas",
+      "source_claim_id": "P01-F42-C2"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Actuar",
+      "implication": "Incorporar el flujo de resolución de crisis hídrico-regulatorio como plantilla predefinida en BRIDGE para empresas de recursos naturales en Chile.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F43",
+    "P01-F44"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:01:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

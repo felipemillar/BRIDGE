@@ -1,0 +1,139 @@
+{
+  "question_id": "T01-C10",
+  "pilar": "T01",
+  "eje": "Métricas y denominadores",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre métricas y denominadores, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal el tamaño óptimo de fragmento (chunk size) y solapamiento (overlap) para maximizar la fidelidad Ragas en memorias corporativas que combinan tablas financieras horizontales con prosa narrativa extensa: 1) Vacío Identificado: El corpus de T01 demuestra el cálculo de Ragas y ALCE, pero no define si un chunk de 256, 512 o 1024 tokens optimiza el Context Recall en tablas de balances ante la CMF donde cortar una fila destruye el significado de la columna; 2) Fuente Fallida / Parcial: El paper de Ragas (01d6cab0) utiliza fragmentos de texto continuo de Wikipedia y no evalúa datos tabulares densos; y 3) Validación Mínima Necesaria: Barrido experimental de hiperparámetros de chunking (128, 256, 512, 1024 tokens) sobre una muestra de 100 tablas financieras de memorias anuales de la CMF, midiendo Faithfulness y Context Recall.",
+  "findings": [
+    {
+      "claim_id": "T01-C10-C1",
+      "claim": "La literatura de evaluación RAG en T01 carece de recomendaciones empíricas validadas para el particionamiento de tablas corporativas estructuradas y balances contables complejos, subsistiendo incertidumbre técnica sobre el trade-off entre fragmentos pequeños y pérdida de contexto tabular.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "The Bridge Intelligence ML Team"
+      },
+      "evidence": [
+        {
+          "source_id": "01d6cab0-4331-4f04-b66e-4ad6c3fa6f78",
+          "source_title": "Es et al. (2023) — Ragas: Automated Evaluation of Retrieval Augmented Generation",
+          "original_url": "https://arxiv.org/pdf/2309.15217.pdf",
+          "locator": "Section 4: Benchmark Corpus Properties",
+          "excerpt_short": "Evaluations are conducted primarily on natural language passages; specialized chunking strategies for dense tabular schemas remain outside the empirical scope of this study.",
+          "source_date": "2023-09-27",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Limitación explícita del framework Ragas en relación con datos tabulares.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "100 tablas financieras de balances CMF",
+      "Batería de 4 configuraciones de chunking"
+    ],
+    "actors": [
+      "ML Engineer de Ingestión",
+      "Auditor de RAG"
+    ],
+    "steps": [
+      "Particionar las 100 tablas en chunks de 128, 256, 512 y 1024 tokens con overlap proporcional",
+      "Ejecutar 200 consultas financieras que exigen cruzar dos columnas distantes",
+      "Medir Ragas Context Recall y Faithfulness para cada configuración",
+      "Seleccionar la estrategia de chunking estructural con mayor score de Pareto"
+    ],
+    "states": [
+      "EXPERIMENTO_CHUNKING",
+      "CONSULTAS_TABULARES",
+      "EVALUACION_RAGAS",
+      "SELECCION_OPTIMA"
+    ],
+    "outputs": [
+      "Reporte de Optimización de Chunking para Balances Financieros CMF"
+    ],
+    "exceptions": [
+      "Si la tabla se fragmenta rompiendo encabezados, se activa el parser semántico Markdown/HTML"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "EXPERIMENTO_CHUNKING_CMF",
+      "type": "experimento",
+      "name": "Experimento de Chunking Tabular CMF",
+      "aliases": [
+        "Table RAG Optimization"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "EXPERIMENTO_CHUNKING_CMF",
+      "predicate": "optimiza_modulo",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C10-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Context Recall en tablas financieras complejas",
+      "denominator": "Consultas sobre balances CMF",
+      "target": ">= 92%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Permite garantizar que BRIDGE no cometa errores de lectura en notas a los estados financieros y balances de clientes.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Configuración óptima de chunking y preservación semántica en tablas y notas de estados financieros CMF",
+      "minimum_validation": "Barrido experimental de chunk size (128-1024 tokens) sobre 100 tablas financieras con cálculo de Ragas Context Recall",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "T01-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

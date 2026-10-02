@@ -1,0 +1,143 @@
+{
+  "question_id": "T01-F46",
+  "pilar": "T01",
+  "eje": "Costos y continuidad operacional",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar costos y continuidad operacional de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de los costos y la continuidad operacional exige un esquema relacional estricto compuesto por: 1) Entidad Rubro_Costo: Identificador, categoría (Infraestructura Cloud, Horas de Ingeniería, Horas de Cliente, Almacenamiento Amortizado), unidad de medida (tokens, horas, USD), y periodicidad (fijo de setup, variable por consulta, mensual recurrente); 2) Entidad Evento_Continuidad: Tipo de fallo inyectado o simulado (caída de API, timeout de embeddings, error de scrapers), timestamp de inicio, timestamp de recuperación, duración de corte, y estatus de servicio (Operativo, Degradado, Conmutado, Caído); 3) Entidad Politica_SLA: Nivel de disponibilidad comprometido (99.9%), tiempo máximo de recuperación (RTO < 5s), y punto de recuperación de datos (RPO = 0); 4) Relaciones de Dependencia: Grafo de tolerancia a fallos que vincula el módulo de software con sus proveedores primarios y de contingencia; y 5) Condiciones de Integridad: Validación de que el balance de costos sume exactamente el TCO del piloto y que ningún registro de fallo no resuelto sea clasificado como 'conforme' para la compuerta G1.",
+  "findings": [
+    {
+      "claim_id": "T01-F46-C1",
+      "claim": "El modelamiento estructurado de la continuidad operacional permite auditar el cumplimiento del SLA y el costo exacto por consulta en tiempo real, garantizando transparencia financiera y de resiliencia ante el comité de adquisiciones del cliente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "ArXiv 2025 & Cooper Stage-Gate"
+      },
+      "evidence": [
+        {
+          "source_id": "f57279c5-07ed-4e50-900a-5fa7c66f6a0e",
+          "source_title": "ArXiv (2025) - A Cost-Benefit Analysis of On-Premise LLM Deployment vs Cloud APIs",
+          "original_url": null,
+          "locator": "Section 6: Structured Cost Architecture",
+          "excerpt_short": "Structured logging of inference, token volume, and failover latencies provides verifiable telemetry for enterprise procurement audits.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de estándares de arquitectura estructurada.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de JSON Schema de Costos y Continuidad",
+      "Trazas de infraestructura cloud y logs de failover"
+    ],
+    "actors": [
+      "FinOps Engineer",
+      "Site Reliability Engineer (SRE)"
+    ],
+    "steps": [
+      "Configurar el esquema de entidades de costo y eventos de continuidad",
+      "Ingestar datos de facturación de proveedores cloud y logs de Prometheus",
+      "Verificar condiciones de integridad relacional y SLAs",
+      "Generar reporte consolidado de resiliencia y unit economics"
+    ],
+    "states": [
+      "CONFIGURACION_ESQUEMA",
+      "INGESTA_TELEMETRIA",
+      "AUDITORIA_INTEGRIDAD",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Catálogo estructurado de costos y continuidad",
+      "Panel de visualización de SLA"
+    ],
+    "exceptions": [
+      "Si el costo de inferencia se desvía más de un 15% del presupuesto sin incremento de queries, se activa auditoría de prompts"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SCHEMA_COSTOS_SLA",
+      "type": "documento",
+      "name": "Esquema Estructurado de Costos y SLA",
+      "aliases": [
+        "FinOps & SRE Schema"
+      ]
+    },
+    {
+      "entity_id": "POLITICA_SLA_999",
+      "type": "documento",
+      "name": "SLA Corporativo 99.9%",
+      "aliases": [
+        "Service Level Agreement"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SCHEMA_COSTOS_SLA",
+      "predicate": "monitorea_cumplimiento_de",
+      "object_id": "POLITICA_SLA_999",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F46-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Completitud de atributos en registros de costos y continuidad",
+      "denominator": "Total registros generados en el piloto",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite demostrar madurez operacional de nivel bancario e industrial ante auditorías de ciberseguridad.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F47",
+    "T01-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

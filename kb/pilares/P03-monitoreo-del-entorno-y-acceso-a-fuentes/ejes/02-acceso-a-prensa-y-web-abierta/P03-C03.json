@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C03",
+  "pilar": "P03",
+  "eje": "Acceso a prensa y web abierta",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre acceso a prensa y web abierta, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radicaba en la interpretación del precedente judicial estadounidense hiQ Labs v. LinkedIn Corp.: las síntesis preliminares sugerían que el fallo garantizaba un 'derecho amplio y seguro de scraping sobre cualquier dato público en la web'. Prevalece de forma categórica la rectificación de la P03_QUALITY_ADDENDUM (Sección 2.4): hiQ resolvió exclusivamente una medida cautelar preliminar bajo la ley penal federal de delitos informáticos (CFAA), determinando que raspar datos públicos sin login no es delito penal federal; sin embargo, no confirió inmunidad civil. En fases procesales posteriores, LinkedIn prevaleció en demandas por incumplimiento contractual de Términos de Servicio (Breach of Contract), culminando en acuerdos patrimoniales lesivos para hiQ. Además, en Chile la Ley 17.336 no contiene una excepción general de TDM comercial, por lo que prevalece la regla de operar mediante APIs oficiales, datos abiertos gubernamentales y uso de snippets efímeros bajo derecho de cita.",
+  "findings": [
+    {
+      "claim_id": "P03-C03-C1",
+      "claim": "Prevalece la rectificación jurídica que delimita hiQ v. LinkedIn exclusivamente a la ley penal CFAA, advirtiendo sobre contingencias civiles por incumplimiento de Términos de Servicio y el vacío de TDM en la legislación chilena.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "EE.UU. / Chile",
+        "actor": "Auditoría Legal P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.4: Precedente hiQ v. LinkedIn en Estados Unidos",
+          "excerpt_short": "No otorga una autorización legal amplia ni inmunidad civil: en fases procesales posteriores... los tribunales confirmaron la viabilidad de demandas por incumplimiento contractual de Términos de Servicio.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación jurídica vinculante según la adenda de calidad editorial.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Términos de servicio de medios",
+      "Jurisprudencia de scraping"
+    ],
+    "actors": [
+      "Compliance Counsel",
+      "Ingest Policy Architect"
+    ],
+    "steps": [
+      "Revisión de ToS",
+      "Verificación de precedentes contractuales",
+      "Ajuste de límites de captura"
+    ],
+    "states": [
+      "Legal_Review",
+      "Precedence_Enforced",
+      "Safe_Ingest_Configured"
+    ],
+    "outputs": [
+      "Política de captura ajustada a cero riesgo de contingencia contractual"
+    ],
+    "exceptions": [
+      "Medios que no explicitan condiciones de uso en su sitio web"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRECEDENTE_HIQ_LINKEDIN",
+      "type": "jurisprudencia",
+      "name": "Precedente y Litigio hiQ v. LinkedIn Corp.",
+      "aliases": [
+        "hiQ v. LinkedIn Scraping Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRECEDENTE_HIQ_LINKEDIN",
+      "predicate": "delimita_legalidad_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Alcance legal de hiQ v. LinkedIn",
+      "Interpretación Preliminar Errónea": "Scraping de datos públicos es completamente legal e inmune a demandas.",
+      "Estatus Jurídico Real Prevaleciente": "No es delito informático bajo CFAA, pero es demandable por incumplimiento contractual de ToS."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Inmunidad legal en extracción automatizada de datos públicos",
+      "initial_claim": "El fallo hiQ v. LinkedIn otorga autorización legal amplia para raspar portales públicos.",
+      "corrected_claim": "hiQ v. LinkedIn no exime de responsabilidad civil contractual por violación de Términos de Servicio.",
+      "resolution": "Prevalece la P03_QUALITY_ADDENDUM por regla de precedencia editorial."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Prohibir el scraping automatizado sobre portales con Términos de Servicio explícitos contrarios a la extracción masiva.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

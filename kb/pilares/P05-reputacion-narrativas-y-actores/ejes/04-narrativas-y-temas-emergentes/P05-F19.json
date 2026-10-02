@@ -1,0 +1,161 @@
+{
+  "question_id": "P05-F19",
+  "pilar": "P05",
+  "eje": "Narrativas y temas emergentes",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Cómo se detecta el origen, marco, evolución y amplificación de una narrativa?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La detección sistemática de una narrativa corporativa se ejecuta a través de cuatro dimensiones complementarias fundamentadas en la teoría del encuadre de Entman (1993), la economía narrativa de Shiller (2017) y el ciclo de vida de temas (Issue Life Cycle): 1) Origen: Se identifica mediante la monitorización de fuentes primarias en la periferia informacional (fase de señales débiles: literatura científica especializada, actas de participación ciudadana comunitaria, foros de nicho o expedientes administrativos de la DGA/SMA); 2) Marco (Framing): Se descompone el relato en las 4 funciones diagnósticas de Entman: a) Definición del problema (qué daño u oportunidad se describe), b) Diagnóstico causal (qué actor es señalado como causante), c) Juicio moral (evaluación ética o normativa de la conducta), y d) Sugerencia de remedio (qué medidas legislativas, judiciales o punitivas se exigen); 3) Evolución: Se traza la progresión temporal por las etapas del ciclo de vida del asunto (Señal débil -> Emergente en blogs y redes -> Mainstream en prensa nacional -> Cristalización regulatoria en leyes o litigios masivos); 4) Amplificación: Se modela mediante la dinámica epidemiológica SIR de Shiller, donde la tasa de reproducción básica R0 = beta / gamma; si el contagio narrativo (beta, impulsado por arquetipos emocionales de abuso corporativo) supera el olvido (gamma), la historia se propaga de forma exponencial forzando la intervención del poder político y regulatorio.",
+  "findings": [
+    {
+      "claim_id": "P05-F19-C1",
+      "claim": "Las narrativas corporativas se propagan siguiendo dinámicas epidemiológicas y marcos interpretativos que pueden anticiparse analizando el acoplamiento entre funciones de framing y etapas del ciclo de vida del tema.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1993-2026",
+        "region": "Global",
+        "actor": "Analistas de Inteligencia Narrativa"
+      },
+      "evidence": [
+        {
+          "source_id": "7a4899f4-3cc7-43fe-abdb-ac1108d5282b",
+          "source_title": "Entman: Framing — Toward Clarification of a Fractured Paradigm (Journal of Communication)",
+          "original_url": "https://academic.oup.com/joc/article-abstract/43/4/51/4657475",
+          "locator": "Journal of Communication, 43(4), pp. 51-58",
+          "excerpt_short": "Framing essentially involves selection and salience: define problems, diagnose causes, make moral judgments, and suggest remedies.",
+          "source_date": "1993-12-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "7d9871b7-ce2b-4cae-b265-2d467351d0f4",
+          "source_title": "Shiller: Narrative Economics — How Stories Go Viral & Drive Major Economic Events",
+          "original_url": "https://press.princeton.edu/books/hardcover/9780691182292/narrative-economics",
+          "locator": "Capítulos 2 y 3: Epidemic Models and Narrative Contagion",
+          "excerpt_short": "Economic narratives spread like epidemics using SIR models. When the contagion rate exceeds the recovery rate, the story goes viral and drives economic and regulatory decisions.",
+          "source_date": "2019-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Modelos teóricos de máxima autoridad académica en ciencias de la comunicación y economía.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Monitoreo de señales periféricas",
+      "Textos de declaraciones de ONG y parlamentarios",
+      "Artículos de prensa y redes sociales"
+    ],
+    "actors": [
+      "Analista de Asuntos Públicos",
+      "Científico de Datos de NLP",
+      "Comité de Estrategia"
+    ],
+    "steps": [
+      "Extracción de entidades y predicados causales",
+      "Clasificación de funciones de framing de Entman",
+      "Cálculo de velocidad de propagación y estimación de R0"
+    ],
+    "states": [
+      "Weak_Signal_Logged",
+      "Framing_Diagnosed",
+      "Epidemic_Spread_Projected"
+    ],
+    "outputs": [
+      "Reporte de Inteligencia Narrativa con matriz de encuadre y fase del tema"
+    ],
+    "exceptions": [
+      "Narrativas efímeras de redes sin anclaje en actores con legitimidad ni capacidad regulatoria"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ENTMAN_FRAMING",
+      "type": "modelo_comunicacional",
+      "name": "Modelo de Framing de Entman",
+      "aliases": [
+        "4 Diagnostic Functions of Framing"
+      ]
+    },
+    {
+      "entity_id": "ENT_SHILLER_SIR",
+      "type": "modelo_epidemiologico",
+      "name": "Modelo SIR de Economía Narrativa de Shiller",
+      "aliases": [
+        "Viral Narrative Economics"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ENTMAN_FRAMING",
+      "predicate": "estructura_analisis_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "1993",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F19-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de análisis",
+      "Monitoreo Léxico Tradicional": "Cuenta palabras clave aisladas o polaridad positiva/negativa básica.",
+      "Análisis de Encuadre (Framing)": "Descompone quién es culpado de qué daño, bajo qué juicio moral y con qué exigencia de remedio normativo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de Reproducción Básica Narrativa (R0)",
+      "denominator": "Cociente entre tasa de contagio (nuevas citas/menciones) y tasa de olvido temporal.",
+      "formula": "R0 = beta / gamma"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Detector de Narrativas",
+      "implication": "BRIDGE debe etiquetar automáticamente las menciones según las 4 funciones de Entman para advertir al CCO si un encuadre hostil está cristalizando culpabilidad corporativa.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F20"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

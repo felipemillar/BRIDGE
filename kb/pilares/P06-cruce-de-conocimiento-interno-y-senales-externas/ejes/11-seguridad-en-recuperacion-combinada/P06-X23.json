@@ -1,0 +1,150 @@
+{
+  "question_id": "P06-X23",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Seguridad en recuperación combinada",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre seguridad en recuperación combinada, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en seguridad de recuperación combinada: 1) Discrepancia: El dossier preliminar P06_RESEARCH_DOSSIER asumía que bastaba con incluir instrucciones en el system prompt del LLM (ej. 'si el usuario no tiene permiso, no menciones el documento reservado X'), confiando en la adherencia del modelo generativo a las reglas éticas; 2) Prevalencia canónica: Conforme a P06_QUALITY_ADDENDUM (Sección 4.5) y Palantir AIP, PREVALECE el principio innegociable de que los LLMs son vulnerables a ataques de 'jailbreak', 'leakage de contexto' y 'prompt injection indirecto', por lo que la seguridad jamás puede delegarse en la instrucción textual del modelo. La seguridad debe ser DETERMINISTA e impuesta en la capa de datos (filtrado SQL / Row-Level Security en pgvector) antes de que cualquier fragmento ingrese al prompt. Si el usuario no tiene permiso, el dato simplemente no existe para el modelo.",
+  "findings": [
+    {
+      "claim_id": "P06-X23-C1",
+      "claim": "P06_QUALITY_ADDENDUM y la ingeniería de contexto anulan la seguridad por prompt, imponiendo filtrado determinista en la capa de datos antes de la inferencia.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Gobernanza de Ciberseguridad P06"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 4.5: Prohibición de Delegar Seguridad en el System Prompt",
+          "excerpt_short": "Confiar en que el LLM ocultará un secreto presente en su contexto es una vulnerabilidad crítica. La seguridad multi-tenant se garantiza por poda determinista en base de datos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "5168f7d7-3499-40e3-afc8-c6b216843f19",
+          "source_title": "Palantir AIP - Architecture Overview & Context Engineering",
+          "original_url": "https://palantir.com/docs/foundry/architecture-center/aip-architecture/",
+          "locator": "Context Sanitation: Pre-Inference Pruning",
+          "excerpt_short": "Security is enforced at the data layer, not via generative prompting. What a user cannot see is never vectorized into the prompt window.",
+          "source_date": "2024-06-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio universal de ciberseguridad defensiva respaldado en la literatura de vanguardia.",
+      "epistemic_status_original": "prevalencia_editorial_correccion",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dossier preliminar",
+      "Addendum de calidad"
+    ],
+    "actors": [
+      "Comité de Ciberseguridad",
+      "Arquitecto de Software"
+    ],
+    "steps": [
+      "Identificación de vulnerabilidad de prompt prompting",
+      "Aplicación de prevalencia de Addendum",
+      "Eliminación de guardrails meramente textuales a favor de RLS"
+    ],
+    "states": [
+      "Vulnerability_Identified",
+      "RLS_Hardened"
+    ],
+    "outputs": [
+      "Arquitectura endurecida contra fugas"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RLS_STANDARD",
+      "type": "norma_seguridad",
+      "name": "Estándar de Seguridad RLS Pre-Inferencia",
+      "aliases": [
+        "Pre-Inference Data Pruning"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RLS_STANDARD",
+      "predicate": "reemplaza_seguridad_de",
+      "object_id": "ENT_ABAC_GATE",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X23-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P06-X23-C1"
+      ],
+      "difference": "Dossier admitía control de seguridad mediante system prompt; Addendum prohíbe taxativamente la seguridad por prompt y exige filtrado en base de datos.",
+      "resolution": "resuelta",
+      "reason": "Prevalece P06_QUALITY_ADDENDUM conforme a las normas del mandato."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Inmunidad contra ataques de jailbreak en la recuperación combinada de información.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

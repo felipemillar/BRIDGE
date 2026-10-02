@@ -1,0 +1,152 @@
+{
+  "question_id": "P09-F02",
+  "pilar": "P09",
+  "eje": "Mapa de actores y relaciones",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué vínculos entre actor, asunto, territorio, reunión y compromiso deben conservarse?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La memoria institucional exige preservar un grafo de vínculos n-dimensionales que conecta: 1) Actor ↔ Organización: Pertenencia, cargo, representatividad estatutaria y vigencia de mandato; 2) Actor / Organización ↔ Asunto Crítico (Issue): Nivel de salience, postura pública expresada e historial de reclamos bajo el Principio 31 de la ONU; 3) Actor ↔ Territorio / Faena: Área de influencia directa o indirecta según la RCA, comunidad vecina o cuenca hidrográfica; 4) Actor ↔ Reunión / Interacción: Participación presencial o telemática, acta firmada, modalidad (Lobby Ley 20.730 o asamblea abierta); y 5) Reunión ↔ Compromiso: Cada compromiso asumido DEBE trazar su origen a una reunión o documento específico, vinculando al titular receptor (beneficiario), el dueño interno (responsable corporativo), el plazo límite improrrogable y la evidencia de cumplimiento.",
+  "findings": [
+    {
+      "claim_id": "P09-F02-C1",
+      "claim": "El grafo relacional de BRIDGE vincula de forma determinista e inalterable cada compromiso con la reunión donde se originó, el territorio afectado y el actor beneficiario.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "relational_graph_architecture",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades y Relaciones (ERD)'",
+          "retrieved_at": null,
+          "excerpt_short": "El sistema prohíbe la existencia de compromisos 'huérfanos': Todo compromiso (Entity_Commitment) debe estar inexorablemente vinculado a un origen formal (Entity_Interaction), a un beneficiario (Entity_Person o Entity_Org), a una faena o proyecto (Entity_Project) y a un dueño interno responsable (Entity_User).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: Building Strong Stakeholder Relationships & How an SRM Can Help",
+          "source_id": "09790394-0243-49ec-8617-343b020c8cf2",
+          "locator": "Sección 'Linking Stakeholders to Issues and Commitments', p. 4-7",
+          "retrieved_at": null,
+          "excerpt_short": "A robust SRM must map the multidimensional relationship between the person, the community they represent, the specific geographic parcel or asset, and the chain of meeting minutes that culminated in an agreed social or environmental commitment.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la doctrina de Boréalis SRM y el modelo ERD de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Acta de reunión",
+      "Identificador de faena minera/energética",
+      "Lista de compromisos pactados"
+    ],
+    "actors": [
+      "Analista de Relaciones",
+      "Dueño de Compromiso",
+      "Grafo Relacional BRIDGE"
+    ],
+    "steps": [
+      "Registro de minuta de reunión",
+      "Extracción de compromisos asumidos",
+      "Generación automática de aristas en el grafo",
+      "Validación de integridad referencial"
+    ],
+    "states": [
+      "Interacción Registrada",
+      "Vínculos Generados",
+      "Grafo Sincronizado"
+    ],
+    "outputs": [
+      "Grafo navegable de trazabilidad de promesas"
+    ],
+    "exceptions": [
+      "Compromisos derivados de acuerdos epistolares o resoluciones sancionatorias de la SMA vinculados mediante expediente formal"
+    ]
+  },
+  "entities": [
+    "Grafo Relacional",
+    "Boréalis SRM",
+    "Compromiso Huérfano (Prohibido)",
+    "Entity_Interaction",
+    "RCA Faena"
+  ],
+  "relations": [
+    {
+      "from": "Compromiso",
+      "to": "Reunión de Origen",
+      "type": "originates_from"
+    },
+    {
+      "from": "Compromiso",
+      "to": "Actor Beneficiario",
+      "type": "benefits"
+    },
+    {
+      "from": "Interacción",
+      "to": "Territorio / Faena",
+      "type": "located_at"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Notas de reunión en Google Docs vs Grafo relacional BRIDGE",
+      "diferencia": "El Google Doc dispersa la promesa y nadie la sigue; el grafo BRIDGE activa alertas automáticas, asigna un responsable y audita el cumplimiento."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "orphan_commitments_allowed": "0% (integridad referencial estricta)",
+    "relational_dimensions_linked": "5 dimensiones obligatorias (Actor, Organización, Asunto, Reunión, Compromiso)"
+  },
+  "bridge_implications": "Implementar llaves foráneas y validaciones de base de datos en BRIDGE que impidan crear compromisos sin asociar una reunión y un beneficiario.",
+  "open_gaps": [
+    "Definir el modelo de representación visual del grafo relacional para ejecutivos en la interfaz web."
+  ],
+  "next_question_ids": [
+    "P09-F03",
+    "P09-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

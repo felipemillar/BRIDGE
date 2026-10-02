@@ -1,0 +1,149 @@
+{
+  "question_id": "P10-F40",
+  "pilar": "P10",
+  "eje": "Canales y escenarios",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar canales y escenarios de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El modelamiento estructurado de canales y escenarios exige representar: 1) Entidad CommunicationChannel (channel_id, channel_name: [NEWSWIRE, MEDIA_PULL, SOCIAL_LINKEDIN, SOCIAL_X, INTERNAL_INTRANET, INTERNAL_EMAIL, REGULATOR_OFFICE, COMMUNITY_BOARD], max_character_limit, requires_canonical_url: boolean, supported_mime_types, distribution_latency_seconds); 2) Entidad OperationalScenario (scenario_id, scenario_type: [ENVIRONMENTAL_CRISIS, ESG_ANNUAL_REPORT, COMMUNITY_CONSULTATION, ROUTINE_PRODUCT_LAUNCH, M_AND_A_ANNOUNCEMENT], severity_level: [LEVEL_1_CATASTROPHIC, LEVEL_2_MAJOR, LEVEL_3_MODERATE, ROUTINE], mandatory_regulatory_filings: list); 3) Relaciones de Mapeo (ADAPTED_FOR_CHANNEL, REQUIRES_SPECIALIZED_DISCLAIMER, EMBARGOED_UNTIL, TIED_TO_SCENARIO); y 4) Condiciones de Validación (if (scenario == 'ENVIRONMENTAL_CRISIS') -> enforce_holding_statement_under_30m(), if (channel == 'REGULATOR_OFFICE') -> require_legal_folio_and_peritaje(), cross_channel_factual_similarity >= 0.95).",
+  "findings": [
+    {
+      "claim_id": "P10-F40-C1",
+      "claim": "La representación estructurada de canales y escenarios requiere modelar límites de caracteres, tipos de severidad, listas de filings regulatorios obligatorios y relaciones de embargo horario en el motor de flujos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_schema_channels_and_scenarios",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Modelo de Datos de Canales, Escenarios y Embargos'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades requeridas: ChannelProfile, ScenarioDefinition, ChannelVariant, EmbargoSchedule. Restricciones: canal con límite de caracteres debe adjuntar URL de mensaje canónico con disclaimers.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "ContentGrip: Practical PR Workflow - Staging, Embargoes and Multi-Channel Distribution",
+          "source_id": "4b3bd2de-e375-4ca4-a494-8adce9b0d5a5",
+          "locator": "Section 'Data Modeling of Multi-Channel PR Schedules'",
+          "retrieved_at": null,
+          "excerpt_short": "Workflow engines must define explicit schemas for channels, enforcing length constraints and timestamped embargo releases synchronized across global time zones.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño de esquemas consistente con las especificaciones técnicas de plataformas de distribución de contenidos.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de canales corporativos",
+      "Definición de escenarios de crisis y sostenibilidad",
+      "Reglas de negocio"
+    ],
+    "actors": [
+      "Administrador de Sistema",
+      "Orquestador de Canales BRIDGE",
+      "Especialista en Canales"
+    ],
+    "steps": [
+      "Carga de metadatos de canales y restricciones de formato",
+      "Mapeo de escenarios a flujos de trabajo específicos",
+      "Validación de restricciones previas a la programación del despacho",
+      "Ejecución de despachos automáticos al expirar los embargos",
+      "Monitoreo de estado de entrega por canal"
+    ],
+    "states": [
+      "CHANNELS_CONFIGURED",
+      "SCENARIO_TIED",
+      "VARIANTS_VALIDATED",
+      "STAGED_WITH_EMBARGO"
+    ],
+    "outputs": [
+      "Estructura de datos persistida que gobierna la distribución"
+    ],
+    "exceptions": [
+      "Falla en la API de un canal externo no interrumpe el despacho a los demás canales habilitados"
+    ]
+  },
+  "entities": [
+    "CommunicationChannel",
+    "OperationalScenario",
+    "EmbargoSchedule",
+    "ContentGrip",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "OperationalScenario",
+      "to": "ApprovalWorkflow",
+      "type": "SELECTS_WORKFLOW_TEMPLATE"
+    },
+    {
+      "from": "ChannelVariant",
+      "to": "CommunicationChannel",
+      "type": "TARGETS_CHANNEL"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Distribución manual correo por correo vs Despacho estructurado multicanal",
+      "diferencia": "La distribución manual comete errores de destinatarios y filtra embargos; el despacho estructurado sincroniza la salida precisa al segundo bajo reglas inmutables."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "embargo_release_synchronization_seconds": "Desviación en segundos del despacho respecto a la hora de embargo fijada",
+    "channel_payload_validation_rate": "100% de adaptaciones dentro de los límites de caracteres del canal"
+  },
+  "bridge_implications": "BRIDGE debe incluir en su arquitectura de base de datos tablas para perfiles de canal, calendarios de embargo y adaptaciones asociadas a cada mensaje.",
+  "open_gaps": [
+    "Mecanismos de rollback de mensajes programados ante cancelaciones de último segundo en newswires comerciales."
+  ],
+  "next_question_ids": [
+    "P10-F41",
+    "P10-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

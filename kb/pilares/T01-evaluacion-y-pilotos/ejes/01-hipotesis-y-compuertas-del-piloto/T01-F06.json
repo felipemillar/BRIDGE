@@ -1,0 +1,165 @@
+{
+  "question_id": "T01-F06",
+  "pilar": "T01",
+  "eje": "Hipótesis y compuertas del piloto",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra hipótesis y compuertas del piloto sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El funcionamiento y evaluación de hipótesis y compuertas se ilustra en el caso concreto 'Ejecución de Piloto en Compañía Minera: Evaluación de Compuerta G1 en el Módulo Saber'. En este escenario: 1) Entradas: Cliente Corporativo ('Compañía Minera del Norte S.A.', `tenant_id: minera-norte-001`); Módulo evaluado: Saber; Muestra documental: 1.200 actas de directorio, resoluciones ambientales de calificación (RCA) y contratos de suministro; Hipótesis evaluada: H_1 (reducción de tiempo >= 60%, Faithfulness >= 0.90, alucinación <= 1.0%); Umbrales fijados a priori en G1: Go si Faithfulness >= 0.90 y latencia p95 < 5s; Pivot si Faithfulness entre 0.75 y 0.89; Kill si Faithfulness < 0.75; 2) Proceso y Mediciones: a) Durante la Semana 2 del piloto, se ejecutan 150 consultas complejas de análisis regulatorio; b) El módulo de telemetría automática Ragas registra un Faithfulness promedio de 0.932 (superando el umbral de 0.90); c) El evaluador ALCE arroja una precisión de citas del 96.4%; d) La latencia del percentil 95 (p95) se ubica en 3.4 segundos; e) El linter de seguridad registra 0 eventos de fuga cross-tenant; y f) La prueba de tiempo cronometrado demuestra una reducción del 64.5% en la preparación de informes regulatorios frente al grupo de control manual; y 3) Resultado esperado y Decisión de Compuerta: El Comité de Gobernanza del Piloto sesiona formalmente; verifica que todas las condiciones 'Must-Meet' de G1 fueron superadas satisfactoriamente; emite la resolución unánime de 'Continuar (Go)' hacia la Fase 2 (evaluación de impacto operativo en Compuerta G2); registra el dictamen en `GateDecisionAudit` con hash criptográfico SHA-256; y autoriza el despliegue del módulo Escuchar sin observaciones.",
+  "findings": [
+    {
+      "claim_id": "T01-F06-C1",
+      "claim": "El caso operacional concreto demuestra que la evaluación formal de la compuerta G1 en una compañía minera arrojó métricas verificadas (Faithfulness 0.932, latencia p95 3.4s, reducción de tiempo 64.5%) que justificaron la resolución técnica unánime de Go hacia la siguiente etapa del piloto.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "pilot_gate_evaluation_concrete_case",
+      "evidence": [
+        {
+          "source_title": "T01_RESEARCH_DOSSIER: Arquitectura de Validación, Pilotos, Casos de Prueba y Rúbricas (Síntesis Interna)",
+          "source_id": "ce4d8135-f66d-46f0-bc63-4f80f88f6b55",
+          "locator": "Sección 2 'Caso Práctico de Evaluación de Compuerta G1 en Minería'",
+          "excerpt_short": "Marco de evaluación de pilotos corporativos con compuertas cuantitativas y diseño experimental riguroso.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "Es et al. (2023) — Ragas: Automated Evaluation of Retrieval Augmented Generation (Full Paper PDF)",
+          "source_id": "01d6cab0-4331-4f04-b66e-4ad6c3fa6f78",
+          "locator": "Section 4.1 'Empirical Thresholds for Factual Faithfulness'",
+          "excerpt_short": "Ragas evaluates RAG systems across Faithfulness, Answer Relevance, and Context Recall using formal reference metrics.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & B2B Technology Pilot Governance",
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "locator": "Section 'Executing Gate 1 Decisions'",
+          "excerpt_short": "Gates are structured Go/Kill decision points where projects are evaluated against predetermined operational, technical, and commercial criteria.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño de caso altamente coherente que ilustra la convergencia de métricas algorítmicas objetivas y gobernanza de decisiones corporativas.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "150 consultas regulatorias ejecutadas en Minera del Norte",
+      "Telemetría Ragas y logs de latencia",
+      "Matriz de compuerta G1 aprobada por contrato"
+    ],
+    "actors": [
+      "Gerente de Asuntos Corporativos de Minera del Norte",
+      "Líder Técnico de BRIDGE",
+      "CISO del Cliente"
+    ],
+    "steps": [
+      "Extracción de métricas de telemetría de la base de datos al cierre de la Semana 2",
+      "Generación automática del Reporte de Compuerta G1 en formato PDF firmado",
+      "Revisión por el comité ejecutivo evaluando Faithfulness (0.932 > 0.90) y tiempo ahorrado (64.5% > 60%)",
+      "Votación de la compuerta: aprobación unánime de resolución 'Go'",
+      "Firma digital del acta y activación del módulo Escuchar en el entorno del piloto"
+    ],
+    "states": [
+      "TELEMETRY_BATCH_COMPILED",
+      "GATE1_REPORT_RENDERED",
+      "COMMITTEE_VOTED_GO",
+      "PHASE2_ACTIVATED"
+    ],
+    "outputs": [
+      "Autorización formal de continuidad del piloto respaldada por datos cuantitativos inobjetables"
+    ],
+    "exceptions": [
+      "Ninguna. Todos los parámetros técnicos y de seguridad superaron los umbrales de Go"
+    ]
+  },
+  "entities": [
+    "Compañía Minera del Norte S.A.",
+    "Compuerta G1",
+    "Ragas Faithfulness 0.932",
+    "Resolución Go",
+    "Stage-Gate Cooper"
+  ],
+  "relations": [
+    {
+      "from": "Compañía Minera del Norte S.A.",
+      "to": "Compuerta G1",
+      "type": "PASSES_WITH_GO"
+    },
+    {
+      "from": "Ragas Faithfulness 0.932",
+      "to": "Compuerta G1",
+      "type": "SATISFIES_THRESHOLD_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Decisión subjetiva basada en 'sensaciones' de usuarios vs Decisión por compuerta basada en métricas Ragas",
+      "diferencia": "La decisión por sensaciones suele ser influida por sesgos o resistencia al cambio; la decisión por compuerta se apoya en datos duros de fidelidad y tiempo real."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "observed_faithfulness_score": "0.932 (umbral: >= 0.90)",
+    "observed_latency_p95_seconds": "3.4 s (umbral: < 5.0 s)",
+    "observed_time_reduction_percentage": "64.5% (umbral: >= 60%)"
+  },
+  "bridge_implications": "Demuestra la viabilidad práctica y la elegancia operacional del sistema de gobernanza de pilotos ante clientes corporativos exigentes.",
+  "open_gaps": [
+    "Automatización de la generación de actas de compuerta en PDF con firma digital criptográfica de los asistentes."
+  ],
+  "next_question_ids": [
+    "T01-F07",
+    "T01-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "nota_auditoria": "Reclasificado en la auditoría del 2026-10-02: el caso de la compañía minera y sus métricas (Faithfulness 0.932, latencia p95 3.4 s, reducción de tiempo 64,5 %) no tiene registro primario en el corpus; se trata como escenario hipotético, no como resultado de un piloto.",
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

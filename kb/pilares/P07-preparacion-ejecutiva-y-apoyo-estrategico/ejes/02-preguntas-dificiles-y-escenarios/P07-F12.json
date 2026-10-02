@@ -1,0 +1,120 @@
+{
+  "question_id": "P07-F12",
+  "pilar": "P07",
+  "eje": "Preguntas difíciles y escenarios",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra preguntas difíciles y escenarios sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso documentado en la Plantilla 3 del Dossier P07 ilustra la preparación del Gerente General ante una entrevista en vivo en televisión nacional (TVN / CNN Chile) sobre el tema 'Agua y Comunidades'. Entradas: 1) Pregunta hostil del periodista: 'Las comunidades señalan que desde que ampliaron la producción, sus pozos de regadío se secaron y destruyen el modo de vida atacameño. ¿Cómo justifica lucrar a costa del agua de la gente?'; 2) Trampa detectada: Aceptar la premisa falsa de causalidad ('ustedes secaron los pozos') o ponerse a la defensiva; 3) Datos internos respaldados: 84% de agua desalinizada de mar certificada por la DGA, cero consumo de pozos continentales en la cuenca y meta pública CMF de alcanzar 95% en 2027. Resultado esperado: Ejecución de guion en 4 pasos: Empatía ('Entiendo el dolor por la sequía...'), Desmarque ('...no es correcto atribuirla a nuestra faena'), Bridging ('...porque según la evidencia científica auditada por la DGA...'), Dato Respaldado ('...el 84% proviene del mar sin competir por agua humana ni agrícola') y Flagging de cierre ('...y en 2027 llegaremos al 95%').",
+  "findings": [
+    {
+      "claim_id": "P07-F12-C1",
+      "claim": "El entrenamiento en Murder Board permite neutralizar acusaciones infundadas en televisión en vivo al sustituir la confrontación visceral por datos científicos auditados y empatía institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "adversarial_case",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 6 (Plantilla 3: Caso Entrevista Televisión Nacional)",
+          "excerpt_short": "Pregunta Hostil: '¿Cómo justifica lucrar a costa del agua de la gente?'. Guion de respuesta validado: Empatía y Desmarque ('Entiendo perfectamente la preocupación... pero no es correcto atribuir esa sequía a nuestra faena'); Puente ('Porque cuando miramos la evidencia de la DGA...'); Dato respaldado ('...más del 84% del agua utilizada proviene del mar y los monitoreos son públicos'); Flagging ('Lo central es esto: no competimos por el agua de consumo humano').",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso canónico completamente parametrizado en la Plantilla 3 del Dossier técnico P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "caso_murder_board_tv": {
+      "escenario": "Entrevista de 15 minutos en estudio de televisión en vivo.",
+      "entrevistador": "Periodista inquisitivo de investigación.",
+      "ataque": "Acusación de secamiento de pozos comunitarios por lucro corporativo.",
+      "riesgo_trampa": "Reacción defensiva visceral o aceptación pasiva de la premisa falsa.",
+      "despliegue_tactico": [
+        "Paso 1: Reconocimiento del valor del agua y sequía climática en el norte.",
+        "Paso 2: Desmarque formal de causalidad con la empresa.",
+        "Paso 3: Puente a la inversión en desalación auditada.",
+        "Paso 4: Dato duro: 84% agua de mar hoy, 95% en 2027.",
+        "Paso 5: Frase de cierre señalizada para titular de prensa."
+      ]
+    }
+  },
+  "entities": [
+    "TVN / CNN Chile",
+    "Gerente General",
+    "DGA",
+    "Desalinizadora",
+    "Plantilla 3 Dossier P07"
+  ],
+  "relations": [
+    {
+      "from": "Gerente General",
+      "to": "DGA",
+      "type": "cites_audit_from"
+    },
+    {
+      "from": "Guion Táctico",
+      "to": "Pregunta Hostil",
+      "type": "neutralizes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta Improvisada vs Respuesta con Bridging",
+      "diferencia": "La improvisación genera titulares de confrontación política ('Minera niega impacto a regantes'); el guion con bridging genera titulares sobre inversión tecnológica ('Minera opera con 84% de agua de mar y abrirá telemetría')."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "bridging_transition_time": "< 5 segundos para pasar de premisa a dato",
+    "factual_retention_score": "> 90% de mensaje clave recordado"
+  },
+  "bridge_implications": "Implementar este caso como tutorial interactivo en la vista de preparación de voceros de BRIDGE.",
+  "open_gaps": [
+    "Simulación de repreguntas inmediatas del entrevistador si insiste agresivamente tras el puente."
+  ],
+  "next_question_ids": [
+    "P07-F13",
+    "P07-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T04:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

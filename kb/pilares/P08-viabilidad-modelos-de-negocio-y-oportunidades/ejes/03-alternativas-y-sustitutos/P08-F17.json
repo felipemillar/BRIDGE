@@ -1,0 +1,146 @@
+{
+  "question_id": "P08-F17",
+  "pilar": "P08",
+  "eje": "Alternativas y sustitutos",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre alternativas y sustitutos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos de este eje se respaldan en cinco fuentes documentadas del corpus: 1) 00_P02_GLOBAL_READ_ME_AND_ERRATA (2026), que establece la regla canónica de precedencia sobre los 70 vendors y sus claims comerciales; 2) Quorum vs FiscalNote 2026 Platform Comparison, que documenta la estructura de precios, módulos legislativos y limitaciones de los líderes de software de asuntos públicos en EE.UU.; 3) LLYC (2025-2026), que detalla la estructura operativa y dependencia en horas-hombre de las agencias de comunicaciones en el mercado hispanohablante; 4) Michael Page Chile (2026), con los costos de contratación de analistas in-house; y 5) RepTrak Compass Platform Overview (2025-2026), que documenta las limitaciones de las plataformas de reputación desconectadas de las operaciones legales y regulatorias.",
+  "findings": [
+    {
+      "claim_id": "P08-F17-C1",
+      "claim": "La comparación de alternativas está respaldada por benchmarks de software de EE.UU. (FiscalNote, Quorum), análisis de agencias hispanas (LLYC) y estudios de costos locales (Michael Page).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "bibliographic_alternatives_evidence",
+      "evidence": [
+        {
+          "source_title": "Quorum vs FiscalNote 2026: Platform & Financial Comparison",
+          "source_id": "d89d3fda-5b1f-4cd4-a67d-dc0211f1e087",
+          "locator": "Sección 'Market Analysis & Core Competencies Comparison', p. 4-8",
+          "excerpt_short": "Both Quorum and FiscalNote dominate North American legislative and grassroots tracking, but their expansion into Latin American jurisdictions remains hampered by reliance on third-party scrapers and lack of localized regulatory ontologies.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "RepTrak: RepTrak Compass Reputation Intelligence Platform",
+          "source_id": "40872245-df04-4349-a7f8-aae598c7ee7e",
+          "locator": "Platform Overview 'Reputation vs Operational Signals', p. 3-6",
+          "excerpt_short": "RepTrak provides perception metrics and stakeholder sentiment scores quarterly or annually, but does not provide real-time operational integration with compliance databases or legislative hearings.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en los documentos de comparación de software y estudios de mercado del corpus P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Informes de mercado Quorum/FiscalNote",
+      "Plataforma RepTrak",
+      "Errata P02",
+      "Estudio Michael Page"
+    ],
+    "actors": [
+      "Investigador Antigravity",
+      "Auditor de Citas"
+    ],
+    "steps": [
+      "Cotejo de citas bibliográficas",
+      "Comprobación de números de página y localizadores",
+      "Verificación de aplicabilidad territorial"
+    ],
+    "states": [
+      "Fuente Identificada",
+      "Cita Extraída",
+      "Verificación Superada"
+    ],
+    "outputs": [
+      "Registro bibliográfico del Eje 3 en el manifiesto"
+    ],
+    "exceptions": [
+      "Diferencias cambiarias USD/CLP normalizadas a tipo de cambio promedio 2026 (~960 CLP/USD)"
+    ]
+  },
+  "entities": [
+    "Quorum",
+    "FiscalNote",
+    "RepTrak",
+    "LLYC",
+    "Michael Page"
+  ],
+  "relations": [
+    {
+      "from": "Quorum / FiscalNote",
+      "to": "Mercado Norteamericano",
+      "type": "specialized_in"
+    },
+    {
+      "from": "RepTrak",
+      "to": "Percepción Periódica no Operativa",
+      "type": "provides"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Métricas de percepción (RepTrak) vs Inteligencia operativa (BRIDGE)",
+      "diferencia": "RepTrak dice si la empresa 'cae bien'; BRIDGE avisa que la SMA está inspeccionando el tranque de relaves y qué compromisos de la RCA están en riesgo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "sources_analyzed_count": "5 fuentes primarias contrastadas",
+    "usd_clp_exchange_rate_anchor": "1 USD = 960 CLP (referencia 2026)"
+  },
+  "bridge_implications": "Explicar a los clientes que BRIDGE complementa herramientas de marca como RepTrak aportando la dimensión regulatoria y operativa de la que aquellas carecen.",
+  "open_gaps": [
+    "Monitorear si RepTrak planea adquirir alguna plataforma de monitoreo legislativo regional."
+  ],
+  "next_question_ids": [
+    "P08-F18",
+    "P08-F19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

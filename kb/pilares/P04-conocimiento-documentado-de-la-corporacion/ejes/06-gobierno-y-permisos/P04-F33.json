@@ -1,0 +1,147 @@
+{
+  "question_id": "P04-F33",
+  "pilar": "P04",
+  "eje": "Gobierno y permisos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué registro de cambios y revisión humana exige una afirmación sensible?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Toda afirmación corporativa calificada como sensible (compromisos ambientales, cifras financieras preliminares, posturas en litigios o planes laborales) exige un protocolo de 'Doble Visado Humano' (Four-Eyes Principle) y un registro de auditoría inmutable: 1) Registro de Auditoría W3C PROV-O: almacenamiento criptográfico inmutable de cada mutación, registrando autor de la propuesta (`prov:wasAttributedTo`), rol que visó (`prov:wasApprovedBy`), marca de tiempo exacta (`prov:generatedAtTime`) y justificación formal del cambio; 2) Prohibición de Aprobación Autónoma por IA: ningún modelo de lenguaje o proceso desatendido puede promover un borrador sensible a postura oficial sin firma digital de un directivo acreditado; y 3) Control de Versiones Estricto: cualquier corrección posterior genera una nueva versión `prov:wasRevisionOf` preservando la versión previa para peritajes legales o regulatorios (Mökander et al., 2023).",
+  "findings": [
+    {
+      "claim_id": "P04-F33-C1",
+      "claim": "Las afirmaciones corporativas sensibles exigen el principio de cuatro ojos (revisión humana dual obligatoria) y registro inmutable de trazabilidad de firmas bajo W3C PROV-O.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global",
+        "actor": "Auditoría de IA y Riesgo Operacional"
+      },
+      "evidence": [
+        {
+          "source_id": "fd693c3a-4d50-47c4-a56c-1c431193d0f9",
+          "source_title": "Auditing LLMs: Governance and Risk Management (Mökander et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2303.12719",
+          "locator": "Sección 4: Operational Governance and Human-in-the-Loop",
+          "excerpt_short": "Mandates human-in-the-loop review for high-stakes corporate communication and immutable audit trails of model outputs and human edits.",
+          "source_date": "2023-03-21",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "5737d422-55c7-4103-9b0c-8148106d1fa0",
+          "source_title": "W3C PROV-O: The PROV Ontology",
+          "original_url": "https://www.w3.org/TR/prov-o/",
+          "locator": "Sección 3: Starting Point Terms",
+          "excerpt_short": "prov:wasAttributedTo, prov:wasAssociatedWith, prov:qualifiedAssociation for explicit human agent responsibility tracking.",
+          "source_date": "2013-04-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prácticas de auditoría de IA en Mökander et al. y ontología formal de responsabilidad W3C.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Propuesta de nueva afirmación sensible o modificación de meta"
+    ],
+    "actors": [
+      "Human Proposer",
+      "Human Reviewer",
+      "PROV-O Audit Logger"
+    ],
+    "steps": [
+      "Envío a bandeja de visado",
+      "Revisión y firma digital",
+      "Registro de tripleta PROV-O",
+      "Publicación en el corpus oficial"
+    ],
+    "states": [
+      "Draft_Pending_Review",
+      "First_Sign_Off",
+      "Formally_Approved",
+      "Published"
+    ],
+    "outputs": [
+      "Afirmación oficial certificada con trazabilidad inmutable de firmas"
+    ],
+    "exceptions": [
+      "Intento de publicación sin completar la segunda firma de revisión"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_FOUR_EYES_AUDIT",
+      "type": "protocolo_auditoria",
+      "name": "Protocolo de Cuatro Ojos y Auditoría de Afirmaciones",
+      "aliases": [
+        "Four-Eyes Review Protocol"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_FOUR_EYES_AUDIT",
+      "predicate": "gobierna_afirmaciones_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F33-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de control",
+      "Publicación automática por IA": "Riesgo crítico de emitir compromisos vinculantes sin consentimiento del Directorio.",
+      "Protocolo Four-Eyes": "Garantiza que toda cifra oficial cuente con respaldo explícito y firma de directivos responsables."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incluir flujos de visado humano antes de incorporar nuevas declaraciones institucionales a la base de conocimiento.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

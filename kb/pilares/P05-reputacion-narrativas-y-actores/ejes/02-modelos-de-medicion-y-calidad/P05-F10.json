@@ -1,0 +1,127 @@
+{
+  "question_id": "P05-F10",
+  "pilar": "P05",
+  "eje": "Modelos de medición y calidad",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar modelos de medición y calidad de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar modelos de medición y calidad de forma estructurada exige modelar en el sistema las siguientes especificaciones: 1) Variables formales: `model_id` (e.g. REPTRAK, MERCO, CADEM, CALIBER, AMEC_IEF), `methodology_type` (Encuesta_Panel, Multistakeholder_Hibrido, RealTime_Tracker, Framework_Evaluativo), `sample_size` (N de casos o informantes), `sampling_error` (e.g. +/- 2.5%), `confidence_interval` (95%), `temporal_frequency` (Diaria, Semestral, Anual), `dimensions_evaluated` (lista de drivers o pilares), `audit_standard` (e.g. ISAE 3000 KPMG o N/A); 2) Categorías: Calidad del dato (Auditado_Externo, Autoreportado, Telemetria_Algoritmica); 3) Relaciones formales: `mide_a_traves_de` (Modelo -> Dimensiones), `audita_metodologia` (Auditor -> Modelo), `presenta_sesgo_conocido` (Modelo -> TipoSesgo), `aplica_a_poblacion` (Modelo -> TipoStakeholder); y 4) Condiciones de integridad: Prohibición absoluta de normalización aritmética directa entre modelos que emplean escalas incompatibles (e.g. sumar puntaje Merco 1-10.000 con Pulse 0-100); obligación de reportar siempre la fecha de trabajo de campo; y exigencia de declarar explícitamente si un ranking incluye evaluación de méritos objetivos o solo percepción.",
+  "findings": [
+    {
+      "claim_id": "P05-F10-C1",
+      "claim": "La modelación estructurada de los marcos de reputación exige tipificar el estándar de auditoría, las dimensiones evaluadas y las restricciones de comparabilidad entre metodologías.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Plataforma BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2: Comparativa Metodológica de Modelos de Medición de Reputación",
+          "excerpt_short": "Define los atributos canónicos: enfoque, público evaluado, dimensiones, métrica de salida, auditoría externa, frecuencia temporal y limitaciones metodológicas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en la estructura taxonómica comparada del dossier de investigación de P05.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fichas técnicas metodológicas de estudios de reputación",
+      "Informes de auditoría de procesos"
+    ],
+    "actors": [
+      "Ingeniero de Ontologías",
+      "Analista de Calidad Metodológica"
+    ],
+    "steps": [
+      "Carga de metadatos del estudio",
+      "Validación de cumplimiento de parámetros estadísticos",
+      "Publicación en el catálogo de modelos estructurado"
+    ],
+    "states": [
+      "Metadata_Extracted",
+      "Quality_Audited",
+      "Model_Registered"
+    ],
+    "outputs": [
+      "Registro normalizado de modelo de medición en base relacional"
+    ],
+    "exceptions": [
+      "Estudios comerciales que ocultan el tamaño de la muestra o la fórmula de cálculo del score"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODEL_REGISTRY",
+      "type": "registro_sistema",
+      "name": "Registro Estructurado de Modelos de Medición",
+      "aliases": [
+        "Measurement Model Registry"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODEL_REGISTRY",
+      "predicate": "valida_estandares_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F10-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gestor de Modelos",
+      "implication": "BRIDGE debe impedir la comparación de series temporales de diferentes proveedores sin aplicar un factor de normalización contextual debidamente advertido.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

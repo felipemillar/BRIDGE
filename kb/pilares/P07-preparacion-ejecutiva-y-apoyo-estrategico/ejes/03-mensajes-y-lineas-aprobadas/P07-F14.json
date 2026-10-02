@@ -1,0 +1,142 @@
+{
+  "question_id": "P07-F14",
+  "pilar": "P07",
+  "eje": "Mensajes y líneas aprobadas",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Cómo se muestra qué frase está aprobada, para quién y en qué canal?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se muestra mediante una matriz de autorización visual y contextual que acompaña a cada frase del brief: 1) Badge de Estado (Verde: 'Línea Oficial Aprobada'; Ámbar: 'Propuesta / En Revisión'; Rojo: 'Prohibida / Obsoleta'); 2) Perímetro de Vocero (etiquetas explícitas: [Solo CEO], [Vocero Técnico Autorizado], [Comité Territorial]); 3) Canal Permitido (ej. [Entrevista Televisión en Vivo], [Solo Minuta Escrita Bajo Embargo], [Audiencia Ley del Lobby]); y 4) Metadato de Auditoría (ID del aprobador, fecha de visado y enlace directo al documento probatorio interno que sustenta la cifra).",
+  "findings": [
+    {
+      "claim_id": "P07-F14-C1",
+      "claim": "Cada línea discursiva debe delimitar de forma visible el rol del vocero autorizado, el canal de comunicación permitido y el identificador de la autoridad humana que la validó.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "message_authorization_display",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 1 y Sección 4.1",
+          "excerpt_short": "Cada frase sugerida en el brief debe presentarse con su ficha de autorización: quién puede decirla (CEO, CCO o técnico), en qué medio (televisión, prensa escrita o reunión bilateral privada) y qué directivo firmó su aprobación. Si un mensaje técnico sólo está autorizado para minuta escrita, el sistema debe alertar al vocero de televisión que no debe improvisar dicha cifra al aire.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Umbrex: The Message House Framework for Executive Messaging",
+          "source_id": "40c71d89-2265-4bc4-9437-f06891eff48a",
+          "locator": "Sección 'Deployment Guidelines', p. 10-14",
+          "excerpt_short": "Message disciplines collapse when organizations assume any spokesperson can deliver any message in any channel. Channel-role gating within the message framework prevents operational missteps and executive overreach.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño validado por marcos de comunicación corporativa ejecutiva (Umbrex, Page Society) y reflejado en el dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_autorizacion_visual": {
+      "frase_ejemplo": "Minera Los Salares opera al 100% con agua de mar desalada y no extrae agua de pozos continentales.",
+      "badges_ui": {
+        "estado": "APPROVED (Verde)",
+        "voceros_autorizados": [
+          "CEO",
+          "Vicepresidente de Operaciones",
+          "CCO"
+        ],
+        "canales_permitidos": [
+          "TV en Vivo",
+          "Prensa Escrita",
+          "Audiencia Lobby SMA",
+          "Presentación Inversionistas"
+        ],
+        "canales_prohibidos": [
+          "Redes Sociales Personales"
+        ],
+        "aprobado_por": "Gerente Legal y CCO (28-09-2026 18:30)",
+        "evidencia_origen": "Informe DGA 2026-08 / Hash SHA-256 #8fa43b"
+      }
+    }
+  },
+  "entities": [
+    "Message House",
+    "Umbrex",
+    "Visual Badge",
+    "Canal de Vocería",
+    "Perímetro de Vocero"
+  ],
+  "relations": [
+    {
+      "from": "Frase Aprobada",
+      "to": "Vocero Autorizado",
+      "type": "restricted_to"
+    },
+    {
+      "from": "Frase Aprobada",
+      "to": "Canal Permitido",
+      "type": "authorized_for"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Lista Plana de Q&A vs Matriz con Permisos por Canal",
+      "diferencia": "La lista plana confunde al vocero sobre qué puede decir al aire; la matriz delimita con badges inmediatos el alcance de cada frase."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "authorization_clarity_score": "100% de frases con badges de rol y canal",
+    "unauthorized_channel_warnings": "Alerta visual en 100% de canales bloqueados"
+  },
+  "bridge_implications": "Renderizar badges interactivos de rol y canal junto a cada soundbite en la interfaz de usuario de BRIDGE.",
+  "open_gaps": [
+    "Monitoreo de transcripciones de entrevistas para evaluar si el vocero respetó las restricciones de canal asignadas."
+  ],
+  "next_question_ids": [
+    "P07-F15",
+    "P07-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

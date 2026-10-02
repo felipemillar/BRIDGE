@@ -1,0 +1,282 @@
+{
+  "question_id": "P01-F07",
+  "pilar": "P01",
+  "eje": "Mapa de usuarios, compradores y aprobadores",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué tareas, restricciones y criterios de éxito tiene cada usuario cotidiano del sistema?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los usuarios cotidianos abarcan 6 perfiles (CCO, Asuntos Públicos, Prensa, Interna, Sostenibilidad/ESG y Portavoz), con trabajos funcionales de compilación de briefings (JTBD-F1), monitoreo regulatorio (JTBD-F2) y distribución de lines to take (JTBD-F3); atrapados en >60% de reactividad táctica; con criterios de éxito de reducción de tiempo de 3-5h a <15 min, cero contradicciones y Golden Hour <30 min.",
+  "findings": [
+    {
+      "claim_id": "P01-F07-C1",
+      "claim": "Los perfiles operativos cotidianos abarcan CCO (reporte al CEO en 54,4%), Gerente de Asuntos Públicos (Ley 20.730), Prensa (48,7% del tiempo), Interna, Sostenibilidad (NCG 461) y Portavoz Oficial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global/España/Chile",
+        "actor": "Equipos de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "11566961-aace-42d0-bdcc-6b9171cecded",
+          "source_title": "Dircom - El Estado de la Comunicación en España (ECE 2025): Reporte al CEO y Comité Ejecutivo",
+          "original_url": "https://www.dircom.org/2025/09/25/mas-de-la-mitad-de-los-dircoms-reportan-al-ceo-y-uno-de-cada-tres-esta-en-el-comite-ejecutivo-segun-el-estado-de-la-comunicacion-en-espana-2025/",
+          "locator": "Estructura organizativa y distribución de tiempos",
+          "excerpt_short": "54,4% de reporte directo al CEO y 32,3% en Comité Ejecutivo; 48,7% de esfuerzo en medios tradicionales y 47,3% en redes sociales.",
+          "source_date": "2025-09-25",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Datos censales empíricos de Dircom España.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F07-C2",
+      "claim": "Los trabajos cotidianos clave (Jobs-to-be-Done) son JTBD-F1 (compilación de briefing books ejecutivos), JTBD-F2 (detección temprana de proyectos normativos y riesgos) y JTBD-F3 (distribución de argumentarios lines to take en crisis).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "User Personas"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3: Matriz de Trabajos por Hacer (JTBD)",
+          "excerpt_short": "JTBD-F1 a JTBD-F3 definen las tareas funcionales críticas de preparación y respuesta ejecutiva.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Mapeo sistemático de procesos operacionales en el dossier de investigación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F07-C3",
+      "claim": "La mayor restricción operacional es el atrapamiento táctico reactivo (>60% del tiempo en apagar incendios mediáticos y minutas de madrugada) y la asimetría de información interna entre áreas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2025",
+        "region": "Europa / LatAm",
+        "actor": "EUPRERA / Dircom"
+      },
+      "evidence": [
+        {
+          "source_id": "899c4c53-e9ea-4131-8072-1cbf102bd0b9",
+          "source_title": "EUPRERA - European Communication Monitor (ECM) 2023: 15-Year Retrospective",
+          "original_url": "https://www.communicationmonitor.eu/2023/09/07/ecm-european-communication-monitor-2023/",
+          "locator": "Retrospectiva de sobrecarga operativa",
+          "excerpt_short": "Los profesionales reconocen una brecha crónica entre el rol estratégico deseado y el tiempo absorbido en tareas comunicacionales reactivas.",
+          "source_date": "2023-09-07",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estudio longitudinal de 15 años de EUPRERA.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F07-C4",
+      "claim": "No existen en la literatura pública datos cuantitativos auditados de horas-hombre consumidas en la elaboración manual de minutas de crisis, siendo la métrica de ahorro 'de 4h a 15 min' una hipótesis de trabajo (HT-2).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Literatura de gestión"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Vacío 1: Falta de mediciones temporales de preparación",
+          "excerpt_short": "No existen mediciones cuantitativas auditadas de tiempos de elaboración artesanal de briefings directivos.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío metodológico explícitamente documentado en el corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de riesgo",
+      "Documentos normativos internos",
+      "Requerimientos de vocería urgente"
+    ],
+    "actors": [
+      "CCO",
+      "Asuntos Públicos",
+      "Prensa",
+      "Interna",
+      "Sostenibilidad",
+      "Portavoz"
+    ],
+    "steps": [
+      "Detección de evento/audiencia",
+      "Extracción de antecedentes",
+      "Cruce y redacción de minuta",
+      "Validación ejecutiva"
+    ],
+    "states": [
+      "Evento_Detectado",
+      "Compilando_Brief",
+      "Validando",
+      "Ejecutado"
+    ],
+    "outputs": [
+      "Briefing book ejecutivo",
+      "Lines to take de crisis",
+      "Alerta temprana"
+    ],
+    "exceptions": [
+      "Información contradictoria en faena vs matriz",
+      "Falta de vocero acreditado disponible"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_JTBD_F1",
+      "type": "tema",
+      "name": "JTBD-F1: Compilación de Briefing Ejecutivo"
+    },
+    {
+      "entity_id": "ENT_ECM",
+      "type": "documento",
+      "name": "European Communication Monitor 2023"
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_JTBD_F1",
+      "predicate": "ejecutado_por",
+      "object_id": "ENT_CCO",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F07-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P01-F07-C1",
+        "P01-F07-C3"
+      ],
+      "difference": "El CCO aspira a operar como consejero estratégico en el Comité Ejecutivo, pero los estudios ECM y Dircom muestran que el equipo pasa la mayor parte del tiempo atrapado en apagar incendios tácticos.",
+      "resolution": "abierta",
+      "reason": "Paradoja funcional entre estatus jerárquico formal y carga de trabajo reactiva."
+    }
+  ],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tiempo de elaboración de minuta con IA (hipótesis)",
+      "value": "<15 min",
+      "denominator": "Tiempo previo estimado de 3 a 5 horas"
+    },
+    {
+      "metric": "Ventana de respuesta en crisis (Golden Hour)",
+      "value": "<30 min",
+      "denominator": "Tiempo transcurrido desde el incidente"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Reducir la fricción de búsqueda manual cruzando documentos corporativos automáticamente.",
+      "status": "hipotesis"
+    },
+    {
+      "module": "Hablar",
+      "implication": "Distribuir lines to take consistentes dentro de la Golden Hour (<30 min).",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "sin_evidencia sobre mediciones cuantitativas auditadas de horas-hombre dedicadas a minutas de crisis.",
+      "minimum_validation": "Estudio empírico de tracking temporal en 15-20 departamentos corporativos.",
+      "priority": "media"
+    }
+  ],
+  "next_question_ids": [
+    "P01-F08",
+    "P01-F09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:33:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

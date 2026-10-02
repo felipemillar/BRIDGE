@@ -1,0 +1,133 @@
+{
+  "question_id": "P02-X29",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Certeza comercial y madurez",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre certeza comercial y madurez?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos están respaldados por el conjunto de fuentes normativas primarias de P02: 1) Atlas de Reconciliación Global: respaldado por 'P02_GLOBAL_ATLAS_RECONCILIATION_V1' (2026), que fija la escala de evidencia (OPD, DTI, FD, POR) y define las condiciones de certeza comercial; 2) Errata oficial: respaldado por '00_P02_GLOBAL_READ_ME_AND_ERRATA' (2026), que establece la precedencia editorial absoluta sobre las afirmaciones de proveedores; 3) Mapa de Brechas y Validación: respaldado por 'P02_GLOBAL_GAPS_AND_VALIDATION_V1' (2026), que formaliza el cuestionario estándar de 5 preguntas de demo; 4) Fuentes primarias de producto: respaldado por las fichas técnicas y contratos públicos auditados de Litoralpress, Broadsight, Prezly y AlphaSense.",
+  "findings": [
+    {
+      "claim_id": "P02-X29-C1",
+      "claim": "El respaldo documental de certeza comercial se fundamenta en los documentos normativos de reconciliación de atlas y en los marcos de auditoría de brechas del cuaderno P02.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Fuentes primarias P02"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Commercial Certainty and Source Verification Master Table",
+          "excerpt_short": "Synthesis cataloging authoritative evidence sources, locator references, and verification timestamps across all commercial entries.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:54:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de identificadores y metadatos en el manifiesto P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Citas del atlas de reconciliación",
+      "Manifiesto auditado de fuentes fuentes/P02.json"
+    ],
+    "actors": [
+      "Auditor de Fuentes",
+      "Analista de Investigación"
+    ],
+    "steps": [
+      "Verificación de concordancia de citas",
+      "Validación cruzada de números de sección",
+      "Chequeo de integridad referencial"
+    ],
+    "states": [
+      "Citas_Revisadas",
+      "Extractos_Verificados",
+      "Auditoria_Cerrada"
+    ],
+    "outputs": [
+      "Registro de evidencia primaria para el eje de certeza comercial"
+    ],
+    "exceptions": [
+      "Diferencias en nombres de fuentes normalizadas bajo la directiva de errata"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ATLAS_RECONCILIACION_DOC",
+      "type": "documento_fuente",
+      "name": "Global Atlas Reconciliation V1",
+      "aliases": [
+        "Atlas Reconciliation V1"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ATLAS_RECONCILIACION_DOC",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "P02-X25_a_P02-X28",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X29-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respaldo Metodológico (Atlas) vs Afirmaciones Aisladas",
+      "Respaldo Metodológico": "Articula una taxonomía coherente de evidencia para toda la investigación.",
+      "Afirmaciones Aisladas": "Comentarios dispersos que generan contradicciones internas en los reportes."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La solidez del respaldo documental garantiza que los hallazgos de P02 resistan cualquier escrutinio externo.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:54:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

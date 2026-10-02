@@ -1,0 +1,144 @@
+{
+  "question_id": "T01-C16",
+  "pilar": "T01",
+  "eje": "Costos y continuidad operacional",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre costos y continuidad operacional, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal el impacto en costos de transferencia de red (egress fees) y latencia agregada ante conmutación transfronteriza masiva y concurrente (ej. failover simultáneo de 50 analistas de Santiago de Chile a la región US-East en Virginia): 1) Vacío Identificado: El estudio de ArXiv (2025 f57279c5) modela costos de cómputo estacionarios, pero no mide el sobrecosto de transferir gigabytes de contextos vectoriales cifrados entre regiones de nube distintas durante un incidente prolongado de 24 horas; 2) Fuente Fallida / Parcial: Ninguna fuente en T01 incluye telemetría de enlaces internacionales de fibra óptica entre Chile y Estados Unidos bajo congestión; y 3) Validación Mínima Necesaria: Prueba de carga con herramientas de benchmarking distribuido (Locust / k6) simulando 50 usuarios concurrentes en conmutación transfronteriza durante 2 horas continuas, midiendo latencia p99 y costos de egress en la factura de nube.",
+  "findings": [
+    {
+      "claim_id": "T01-C16-C1",
+      "claim": "Los costos de transferencia de datos inter-región (cloud egress) y el incremento de latencia transfronteriza ante incidentes de conmutación prolongados permanecen como una variable técnica y financiera no calibrada empíricamente en el corpus.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / US",
+        "actor": "The Bridge Intelligence SRE Team"
+      },
+      "evidence": [
+        {
+          "source_id": "f57279c5-07ed-4e50-900a-5fa7c66f6a0e",
+          "source_title": "ArXiv (2025) - A Cost-Benefit Analysis of On-Premise LLM Deployment vs Cloud APIs",
+          "original_url": null,
+          "locator": "Section 7: Network Egress and Multi-Region Caveats",
+          "excerpt_short": "Inter-region data egress charges and cross-border latency spikes during prolonged failovers are excluded from standard unit economics models and require empirical load stress testing.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Limitación explícita documentada en el estudio económico de ArXiv 2025.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Script de prueba de carga distribuida Locust con 50 usuarios virtuales",
+      "Entornos de prueba en Santiago y Virginia"
+    ],
+    "actors": [
+      "Performance Test Engineer",
+      "FinOps Specialist"
+    ],
+    "steps": [
+      "Lanzar prueba de estrés de 50 usuarios concurrentes realizando consultas densas",
+      "Forzar la conmutación de tráfico desde Santiago hacia Virginia",
+      "Medir la latencia p50, p95 y p99 en el cliente y monitorear la factura de egress",
+      "Definir el presupuesto de contingencia para incidentes transfronterizos prolongados"
+    ],
+    "states": [
+      "PREPARACION_LOCUST",
+      "INYECCION_CARGA",
+      "MEDICION_EGRESS",
+      "REPORTE_FINOPS"
+    ],
+    "outputs": [
+      "Informe de Estrés de Red y Costos de Egress Transfronterizo"
+    ],
+    "exceptions": [
+      "Si la latencia p95 supera los 6.5 segundos, se activa caché regional de embeddings en Santiago"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "PRUEBA_EGRESS_TRANSFRONTERIZO",
+      "type": "experimento",
+      "name": "Prueba de Carga y Egress Transfronterizo",
+      "aliases": [
+        "Cross-Border Failover Stress Test"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "PRUEBA_EGRESS_TRANSFRONTERIZO",
+      "predicate": "resuelve_incertidumbre_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C16-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Latencia p95 transfronteriza bajo carga",
+      "denominator": "Consultas en conmutación transfronteriza",
+      "target": "< 5.0 s"
+    },
+    {
+      "metric": "Sobrecosto de egress por consulta de contingencia",
+      "denominator": "Costo basal de consulta",
+      "target": "<= 8%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite dimensionar la arquitectura de cachés locales para minimizar costos de egress en escenarios de falla prolongada.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Comportamiento de costos de egress y latencia agregada en conmutaciones transfronterizas prolongadas entre Chile y Estados Unidos bajo alta concurrencia",
+      "minimum_validation": "Prueba de carga de 2 horas con 50 usuarios virtuales midiendo latencia p99 y facturación de egress de nube",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "T01-X01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

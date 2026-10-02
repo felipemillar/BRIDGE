@@ -1,0 +1,178 @@
+{
+  "question_id": "P01-C10",
+  "pilar": "P01",
+  "eje": "Riesgos de preparación insuficiente",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué sigue sin prueba sobre riesgos de preparación insuficiente, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba: 1) métricas temporales exactas de preparación (cuántas horas-hombre cuesta realmente un briefing book); 2) estudios académicos longitudinales sobre impacto directo de la IA en la reducción de crisis y preservación de licencia social; 3) auditorías de consistencia fáctica entre minutas preparatorias y registros de InfoLobby en Chile. Fuentes fallidas: Gartner (Future of Communications y Gartner for Communications), Page Society (Pacesetter y Corporate Character), Gregory & Willis 2019, todas bloqueadas por WAF o 403. Fuentes parciales: McKinsey 2025 y Page Society, que ofrecen marcos conceptuales cualitativos pero omiten métricas de error y estrés de campo. Validación mínima: Fase 1 (15 entrevistas cualitativas con Dircoms) y Fase 2 (shadowing cronometrado en tiempo real durante preparación de comités de crisis).",
+  "findings": [
+    {
+      "claim_id": "P01-C10-C1",
+      "claim": "No existen datos cuantitativos auditados en la literatura académica ni corporativa abierta que cuantifiquen el número exacto de horas-hombre invertidas por equipos de asuntos corporativos en compilar dossiers de crisis, ni estudios longitudinales revisados por pares que demuestren menor daño reputacional en empresas asistidas por IA.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Literatura Científica y Sectorial"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección: Vacíos de Prueba Identificados en Preparación Insuficiente",
+          "excerpt_short": "Ausencia de mediciones auditadas de horas-hombre y falta de estudios longitudinales revisados por pares.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del estado del arte en el manifiesto P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C10-C2",
+      "claim": "Para resolver las incertidumbres sobre el dolor de preparación y tiempos de respuesta, el plan de validación de P01 define un protocolo en dos fases: Fase 1 con 15 entrevistas semiestructuradas a CCOs/Dircoms y Fase 2 con shadowing de observación cronometrada en comités de crisis simulados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Equipo Investigador BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección: Plan de Validación Mínima Propuesto (Fase 1 y Fase 2)",
+          "excerpt_short": "Fase 1: 15 entrevistas semiestructuradas; Fase 2: shadowing con cronómetro durante comités de crisis.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño metodológico formal en los entregables de síntesis de P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario de 15 preguntas de comportamiento",
+      "Protocolo de observación de shadowing"
+    ],
+    "actors": [
+      "Investigador de Campo",
+      "Dircom",
+      "Analista de Inteligencia Corporativa"
+    ],
+    "steps": [
+      "Selección muestral de 15 CCOs",
+      "Entrevista presencial/remota",
+      "Cronometraje de preparación de minuta",
+      "Análisis de vacíos de fuentes"
+    ],
+    "states": [
+      "Muestra_Definida",
+      "Entrevistas_Ejecutadas",
+      "Shadowing_Completado",
+      "Vacios_Cerrados"
+    ],
+    "outputs": [
+      "Reporte empírico de tiempos reales y fricciones de preparación"
+    ],
+    "exceptions": [
+      "Acuerdos de confidencialidad que restrinjan la observación directa de minutas de crisis"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SHADOWING_CRISIS",
+      "type": "metodologia_campo",
+      "name": "Shadowing de Preparación de Crisis",
+      "aliases": [
+        "Observación Cronometrada en Tiempo Real"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SHADOWING_CRISIS",
+      "predicate": "mide_empiricamente",
+      "object_id": "ENT_RIESGO_PREPARACION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C10-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Diagnóstico Cualitativo de Consultoría vs Protocolo de Shadowing",
+      "Consultoría Tradicional": "Afirmaciones generales sobre la necesidad de adoptar IA para mitigar riesgos.",
+      "Protocolo BRIDGE": "Medición empírica con cronómetro de tiempos de preparación y auditoría de citas fácticas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Incorporar telemetría en el sistema para contrastar experimentalmente la reducción de horas de preparación en pilotos reales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    "Medición cuantitativa auditada de horas-hombre requeridas para elaborar minutas de comparecencia legislativa.",
+    "Evidencia empírica sobre la correlación entre uso de software de inteligencia ejecutiva y reducción de contingencias reputacionales."
+  ],
+  "next_question_ids": [
+    "P01-C11",
+    "P01-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

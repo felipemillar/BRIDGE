@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C10",
+  "pilar": "P03",
+  "eje": "Fuentes institucionales y regulatorias",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué sigue sin prueba sobre fuentes institucionales y regulatorias, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la capacidad de ingesta automatizada continua sobre ordenanzas, resoluciones alcaldicias y actas de concejos municipales en los 345 municipios de Chile: 1) Brecha: Mientras las instituciones centrales (CMF, Diario Oficial, Congreso) poseen portales consolidados, la regulación comunal está dispersa en sitios web municipales heterogéneos, sin APIs y frecuentemente en documentos PDF escaneados sin capa de texto; 2) Fuente fallida/parcial: Los portales de transparencia municipal sufren caídas frecuentes y desactualización crónica de meses en la carga de actas; 3) Validación mínima: Diseñar un estudio de auditoría con una muestra estratificada de 20 municipalidades chilenas donde operen faenas industriales de alto impacto, evaluando la recuperabilidad programática de sus decretos edilicios de los últimos 12 meses y midiendo el porcentaje de normas locales efectivamente detectadas.",
+  "findings": [
+    {
+      "claim_id": "P03-C10-C1",
+      "claim": "La regulación municipal e hiperlocal en los 345 municipios de Chile constituye un vacío estructural de datos abiertos sin APIs, requiriendo validación sobre una muestra de 20 municipalidades industriales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (345 Comunas)",
+        "actor": "Vacío Regulatorio Municipal P03"
+      },
+      "evidence": [
+        {
+          "source_id": "443e6667-3d26-48ad-b56a-bb825e9ea387",
+          "source_title": "P03_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2.1: Puntos Ciegos de Cobertura y Fragmentación Territorial",
+          "excerpt_short": "Boletines comunales, periódicos locales... y resoluciones comunitarias siguen teniendo un impacto decisivo... pero carecen de indexación digital en tiempo real.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de los vacíos de cobertura institucional en P03_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Portales de transparencia de 20 municipios",
+      "Decretos alcaldicios reales"
+    ],
+    "actors": [
+      "Municipal Data Harvester",
+      "OCR Engine"
+    ],
+    "steps": [
+      "Descarga de actas municipales",
+      "Procesamiento OCR de PDFs escaneados",
+      "Medición de recuperabilidad"
+    ],
+    "states": [
+      "Municipalities_Selected",
+      "Documents_Fetched",
+      "Completeness_Evaluated"
+    ],
+    "outputs": [
+      "Diagnóstico de viabilidad técnica de monitoreo municipal en Chile"
+    ],
+    "exceptions": [
+      "Municipios con portales caídos o con bloqueos por CAPTCHA"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTUDIO_REGULACION_MUNICIPAL",
+      "type": "estudio_factibilidad",
+      "name": "Estudio de Recuperabilidad Regulatoria Municipal",
+      "aliases": [
+        "Municipal Regulatory Ingest Study"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESTUDIO_REGULACION_MUNICIPAL",
+      "predicate": "audita_factibilidad_de",
+      "object_id": "Eje_Regulatorio_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C10-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de Recuperabilidad Regulatoria Municipal",
+      "numerator": "Decretos municipales correctamente extraídos e indexados",
+      "denominator": "Total de decretos emitidos según libros de actas de 20 comunas",
+      "context": "Evaluación de cobertura de normas comunales en Chile"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Incorporar un módulo OCR especializado para procesar actas municipales escaneadas en zonas de operación de clientes de BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_P03_MUNICIPAL_REGULATION",
+      "description": "Falta de acceso programático a regulaciones de 345 municipios chilenos",
+      "action": "Ejecutar estudio de recuperabilidad en 20 comunas clave"
+    }
+  ],
+  "next_question_ids": [
+    "P03-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

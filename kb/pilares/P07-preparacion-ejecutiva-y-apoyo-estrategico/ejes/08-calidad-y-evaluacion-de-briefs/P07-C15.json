@@ -1,0 +1,131 @@
+{
+  "question_id": "P07-C15",
+  "pilar": "P07",
+  "eje": "Calidad y evaluación de briefs",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre calidad y evaluación de briefs, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en las métricas de éxito de la comunicación: la práctica tradicional de agencias de relaciones públicas y suites de clipping continúa midiendo la efectividad mediante métricas de vanidad desacreditadas, como el volumen bruto de menciones, el alcance estimado o el Valor Publicitario Equivalente (AVE - Advertising Value Equivalency); mientras que las síntesis internas (P07_RESEARCH_DOSSIER, P07_EVIDENCE_MAP) y los estándares internacionales (AMEC Barcelona Principles 3.0) demuestran que el AVE carece de rigor científico y que la verdadera calidad de una preparación ejecutiva reside en métricas de resultado cognitivo y de protección reputacional (Grounding Index ≥ 95%, tiempo de lectura < 3 minutos, neutralización de trampas en ruedas de prensa y preservación fiduciaria de la licencia para operar). Prevalece sin excepciones el estándar AMEC y P07_EVIDENCE_MAP.",
+  "findings": [
+    {
+      "claim_id": "P07-C15-C1",
+      "claim": "Se erradican formalmente las métricas de vanidad y el Valor Publicitario Equivalente (AVE), prevaleciendo la evaluación de la calidad del brief mediante rigor probatorio, concisión y valor decisional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evaluation_standards_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje A) y Sección 3",
+          "excerpt_short": "Discrepancia Eje A: Prácticas obsoletas miden el éxito de comunicaciones por volumen de clipping o AVE. AMEC Framework (Barcelona Principles 3.0) y P07_EVIDENCE_MAP declaran al AVE pseudocientífico e inválido. La evaluación de calidad debe basarse en el Grounding Index y el impacto decisional fiduciario.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "AMEC: Integrated Evaluation Framework for Public Affairs",
+          "source_id": "634ebc1c-dd54-453f-8187-2975050e8760",
+          "locator": "Principio 5: 'AVEs are not the value of communication', p. 4-6",
+          "excerpt_short": "Advertising Value Equivalency measures the cost of space, not the value of communication. Executive briefings must be measured against out-takes, organizational impact, and strategic alignment.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Consenso internacional unánime encabezado por AMEC y formalizado en las directrices de P07_EVIDENCE_MAP.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "resolucion_discrepancia_metricas": {
+      "practica_obsoleta_rrpp": "Reportes de clipping basados en AVE y número de apariciones en prensa.",
+      "estandar_cientifico_bridge": "Grounding Index (>= 95%), Razón de Compresión (< 3m), Factual Certainty y cumplimiento legal.",
+      "version_prevalente": "AMEC Barcelona Principles 3.0 / P07_EVIDENCE_MAP."
+    }
+  },
+  "entities": [
+    "AMEC Framework",
+    "Barcelona Principles 3.0",
+    "AVE Pseudocientífico",
+    "Grounding Index",
+    "P07_EVIDENCE_MAP"
+  ],
+  "relations": [
+    {
+      "from": "AMEC Framework",
+      "to": "AVE Pseudocientífico",
+      "type": "condemns"
+    },
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Grounding Index",
+      "type": "adopts"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Valor Publicitario Equivalente (AVE) vs Valor Decisional AMEC",
+      "diferencia": "El AVE inventa un costo publicitario que no existe; el valor decisional AMEC certifica que el brief protegió la licencia de operación de la empresa."
+    }
+  ],
+  "contradictions": [
+    {
+      "source_a": "Agencias Tradicionales usando AVE",
+      "source_b": "AMEC / P07_EVIDENCE_MAP",
+      "conflict": "Validez del AVE vs Rechazo categórico por carencia de base científica.",
+      "resolution": "Prevalece AMEC y P07_EVIDENCE_MAP."
+    }
+  ],
+  "metrics_and_denominators": {
+    "ave_usage_in_bridge": "0.0% (Terminantemente prohibido)",
+    "grounding_target": ">= 95% de anclaje a fuentes auditadas"
+  },
+  "bridge_implications": "Prohibir la inclusión de métricas de AVE en cualquier panel o exportación de BRIDGE, promoviendo exclusivamente indicadores AMEC.",
+  "open_gaps": [
+    "Educación de directores corporativos tradicionales que aún solicitan reportes medidos en AVE."
+  ],
+  "next_question_ids": [
+    "P07-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "question_id": "P01-F03",
+  "pilar": "P01",
+  "eje": "Mandato y fronteras de asuntos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿En qué situaciones la preparación institucional cambia una decisión y no solo acelera la redacción?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La preparación institucional cambia decisiones sustantivas en audiencias regulatorias bajo la Ley de Lobby (modificando petitorios), en crisis territoriales y ambientales (paralizando faenas preventivamente o activando compensaciones), en la asignación de CapEx ante memorias NCG 461 y en el retiro o silencio estratégico ante controversias geopolíticas.",
+  "findings": [
+    {
+      "claim_id": "P01-F03-C1",
+      "claim": "En audiencias bajo la Ley de Lobby N° 20.730 en Chile, contrastar el historial de registros con las actas internas lleva a modificar petitorios regulatorios o retirar propuestas legales inviables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2014-2026",
+        "region": "Chile",
+        "actor": "Sujetos pasivos y lobbistas"
+      },
+      "evidence": [
+        {
+          "source_id": "87978287-38ec-4b0f-bd60-e724e02362aa",
+          "source_title": "Biblioteca del Congreso Nacional de Chile - Ley N° 20.730 que Regula el Lobby y Gestiones de Intereses Particulares",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=1060115",
+          "locator": "Artículos 5, 6 y 8 (Registro de Audiencias y Materias)",
+          "excerpt_short": "Las actividades reguladas abarcan decisiones sobre actos administrativos y proyectos de ley, exigiendo registrar materias tratadas y representados.",
+          "source_date": "2026-04-02",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto legal expreso de la Ley 20.730 del Estado de Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F03-C2",
+      "claim": "En incidentes socioambientales, cruzar hechos con las Resoluciones de Calificación Ambiental (RCA) determina paralizaciones preventivas de faenas o compensaciones antes de emitir comunicados reactivos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile",
+        "actor": "Compañías operativas y comunidades"
+      },
+      "evidence": [
+        {
+          "source_id": "c2dbae6a-963d-4471-ab12-823eab7384d1",
+          "source_title": "Acción Empresas Chile - Red de Sostenibilidad y Desafíos Ambientales, Sociales y Gobernanza (ASG)",
+          "original_url": "https://accionempresas.cl/",
+          "locator": "Gestión territorial y debida diligencia",
+          "excerpt_short": "La debida diligencia y el diálogo temprano en el territorio transforman las decisiones operacionales de los proyectos para prevenir conflictos.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Directrices de debida diligencia de Acción Empresas y marco ambiental chileno.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F03-C3",
+      "claim": "La auditoría previa de métricas de sostenibilidad bajo la NCG 461 de la CMF conduce a reasignar presupuestos de inversión (CapEx) para cerrar brechas antes de publicar la memoria anual.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025",
+        "region": "Chile",
+        "actor": "Directorios de Emisores de Valores"
+      },
+      "evidence": [
+        {
+          "source_id": "72c69269-a06e-4c45-a916-1cd68b9af0be",
+          "source_title": "Comisión para el Mercado Financiero (CMF Chile) - NCG 461 y 519: Sostenibilidad y Gobierno Corporativo",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Aprendizajes de implementación de la NCG 461",
+          "excerpt_short": "Las memorias integradas fuerzan a los directorios a evaluar brechas en gobierno corporativo, gestión de riesgos y métricas de sostenibilidad.",
+          "source_date": "2025-11-26",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evaluación regulatoria oficial de la CMF sobre la implementación de la NCG 461.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F03-C4",
+      "claim": "Ante controversias geopolíticas complejas, evaluar la legitimidad institucional lleva a la alta dirección a adoptar silencio estratégico o desinversión en mercados riesgosos en vez de redactar comunicados apresurados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025",
+        "region": "Global",
+        "actor": "CEO y Comités Ejecutivos"
+      },
+      "evidence": [
+        {
+          "source_id": "b6f21f15-0ec9-4e85-b6ae-aca2f29e1ed1",
+          "source_title": "McKinsey & Company - Upgrading corporate affairs for a new geopolitical era",
+          "original_url": "https://www.mckinsey.com/capabilities/geopolitics/our-insights/upgrading-corporate-affairs-for-a-new-geopolitical-era",
+          "locator": "Right to play and strategic posture",
+          "excerpt_short": "Preparation enables leaders to choose when to speak and when to adapt business operations quietly, avoiding reactive public entanglements.",
+          "source_date": "2025-10-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Análisis de casos de gestión de crisis geopolíticas por McKinsey.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F03-C5",
+      "claim": "No existen datos cuantitativos auditados en la literatura pública que demuestren numéricamente cuántas horas-hombre exactas ahorra la IA en la elaboración de briefings de crisis.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Literatura de gestión"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección Vacíos Identificados",
+          "excerpt_short": "Vacío documentado: No existen estudios cuantitativos de benchmarks temporales auditados sobre preparación de minutas ejecutivas.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío epistémico formalmente explicitado en el documento de control del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Historial de audiencias de lobby",
+      "Resoluciones de Calificación Ambiental (RCA) y convenios territoriales",
+      "Reportes de auditoría de indicadores ASG (NCG 461)"
+    ],
+    "actors": [
+      "Comité de Crisis / Directorio",
+      "CCO y Director Legal",
+      "Gerente de Operaciones en Terreno"
+    ],
+    "steps": [
+      "1. Detección de brecha o contradicción fáctica en la preparación",
+      "2. Evaluación del riesgo de litigio, sanción o pérdida de licencia social",
+      "3. Modificación de la decisión operativa, petitorio regulatorio o asignación de CapEx",
+      "4. Emisión de vocería alineada con el cambio real de conducta"
+    ],
+    "states": [
+      "Brecha_Factual_Detectada",
+      "Analisis_Impacto_Directivo",
+      "Decision_Operativa_Modificada",
+      "Comunicacion_Consistente"
+    ],
+    "outputs": [
+      "Petitorio regulatorio enmendado",
+      "Paralización preventiva de faena",
+      "Reasignación presupuestaria ASG",
+      "Silencio estratégico justificado"
+    ],
+    "exceptions": [
+      "El Directorio desestima la alerta del CCO y fuerza una vocería sin respaldo fáctico",
+      "Inconsistencia entre lo declarado ante la CMF y lo sostenido en InfoLobby"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_LEY_LOBBY",
+      "type": "documento",
+      "name": "Ley N° 20.730 de Lobby Chile"
+    },
+    {
+      "entity_id": "ENT_CMF_NCG461",
+      "type": "documento",
+      "name": "NCG 461 de la CMF"
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LEY_LOBBY",
+      "predicate": "obliga_a_transparentar_materias_en",
+      "object_id": "Audiencias_Publicas",
+      "valid_from": "2014",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Naturaleza del impacto",
+      "preparacion_institucional": "Modifica la conducta corporativa, la inversión, el cumplimiento legal o la postura regulatoria",
+      "aceleracion_de_redaccion": "Reduce minutos en redactar un borrador de texto que mantiene la misma postura previa"
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P01-F03-C1",
+        "P01-F03-C2"
+      ],
+      "difference": "Cumplir formalmente con la Ley de Lobby o con la divulgación de memorias NCG 461 no inmuniza a la empresa contra el rechazo ciudadano o la pérdida de confianza territorial si la decisión de fondo desatiende el bien común.",
+      "resolution": "abierta",
+      "reason": "La legalidad del acto administrativo no equivale a su legitimidad reputacional según Cadem 2026 y Acción Empresas."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "El módulo no debe redactar comunicados sin antes chequear si la empresa tiene derecho fáctico a opinar y respaldo documental.",
+      "status": "evidencia"
+    },
+    {
+      "module": "Relacionar",
+      "implication": "Vincular el registro de lobby con compromisos y decisiones reales tomadas en las reuniones.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "sin_evidencia sobre mediciones cuantitativas del costo evitado en litigios o sanciones regulatorias mediante preparación asistida por IA.",
+      "minimum_validation": "Estudios comparativos de casos de litigios corporativos antes y después de implementar sistemas de gestión documental.",
+      "priority": "media"
+    }
+  ],
+  "next_question_ids": [
+    "P01-F04",
+    "P01-F05",
+    "P01-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:26:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

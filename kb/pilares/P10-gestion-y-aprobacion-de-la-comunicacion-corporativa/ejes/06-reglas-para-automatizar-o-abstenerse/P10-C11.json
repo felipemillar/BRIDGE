@@ -1,0 +1,152 @@
+{
+  "question_id": "P10-C11",
+  "pilar": "P10",
+  "eje": "Reglas para automatizar o abstenerse",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre reglas para automatizar o abstenerse, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radicaba en la permisividad de la automatización: Síntesis preliminares exploraban la idea de habilitar la publicación autónoma desatendida mediante agentes de IA para respuestas de bajo impacto o comunicados comerciales rutinarios; en oposición frontal, los códigos deontológicos globales (CIPR, PR Council, PRSA, IABC) y el marco de gobernanza NIST AI RMF establecen que la rendición de cuentas pública es exclusivamente humana y prohíben cualquier despacho directo a medios o redes sin supervisión humana efectiva. Conforme a P10_VERIFICATION_CORRECTIONS (f043631e), prevalece la postura de CIPR, PR Council y NIST: Ningún agente de software o modelo de IA puede contar con permisos de publicación directa en canales externos; la automatización se confina estrictamente a tareas sintácticas de soporte, monitoreo y redacción asistida, requiriendo siempre y sin excepción la compuerta de aprobación ejecutiva humana (Executive Sign-Off) con telemetría de lectura sustantiva.",
+  "findings": [
+    {
+      "claim_id": "P10-C11-C1",
+      "claim": "Conforme a P10_VERIFICATION_CORRECTIONS, prevalece la prohibición absoluta de publicación desatendida por IA, exigiendo que toda salida externa cuente con compuerta de aprobación y supervisión humana indelegable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "automation_governance_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Prevalencia Canónica: Prohibición de Publicación Desatendida por IA'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica: Está prohibida por diseño la publicación autónoma desatendida. Todo mensaje que impacte a públicos externos o internos exige sign-off humano con telemetría probatoria de dwell time.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "CIPR: Artificial Intelligence in Public Relations Policy and Ethics Guides",
+          "source_id": "0f644aa9-897a-4f0e-87ac-29dd7c0e2d0b",
+          "locator": "Section 'Human Agency and Moral Accountability'",
+          "retrieved_at": null,
+          "excerpt_short": "AI algorithms lack moral agency and legal responsibility. PR professionals cannot delegate the final sign-off or external distribution authority to automated systems.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Mandato explícito de las directrices éticas de relaciones públicas y de las correcciones canónicas de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud de publicación",
+      "Propuesta generada por IA",
+      "Directiva de supervisión humana"
+    ],
+    "actors": [
+      "Agente de IA",
+      "Compuerta de Seguridad BRIDGE",
+      "Aprobador Humano"
+    ],
+    "steps": [
+      "Agente de IA redacta borrador de soporte",
+      "Intento de despacho directo a API de canal bloqueado a nivel de kernel/gateway",
+      "Ruteo obligatorio del borrador a la bandeja de entrada del revisor humano",
+      "Medición del dwell time de lectura del revisor",
+      "Habilitación del botón de publicación exclusivamente tras validación humana autenticada"
+    ],
+    "states": [
+      "DRAFT_ASSISTED",
+      "API_DISPATCH_BLOCKED",
+      "HUMAN_OVERSIGHT_MANDATED",
+      "HUMAN_SIGN_OFF_ISSUED"
+    ],
+    "outputs": [
+      "Mensaje liberado exclusivamente por acción humana consciente"
+    ],
+    "exceptions": [
+      "Ninguna; la regla de compuerta humana es un invariante de seguridad inquebrantable"
+    ]
+  },
+  "entities": [
+    "Supervisión Humana",
+    "CIPR Ethics Guide",
+    "NIST AI RMF",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "Publicación Desatendida",
+      "type": "PROHIBITS_IN_SYSTEM_KERNEL"
+    },
+    {
+      "from": "Mensaje Externo",
+      "to": "Aprobador Humano",
+      "type": "REQUIRES_AUTHENTICATED_GATE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Publicación desatendida por agentes autónomos vs Compuerta humana mandatoria",
+      "diferencia": "La publicación desatendida genera respuestas desastrosas ante provocaciones o alucinaciones; la compuerta humana asegura criterio ético, empatía y protección legal."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Publicación autónoma por IA vs Supervisión humana indelegable",
+      "resolution": "Prevalece la supervisión humana indelegable; prohibida la publicación desatendida."
+    }
+  ],
+  "metrics_and_denominators": {
+    "autonomous_publishing_events": "0 intentos de publicación externa sin firma humana"
+  },
+  "bridge_implications": "Convierte a BRIDGE en un sistema de IA seguro y confiable para las gerencias de asuntos corporativos más conservadoras.",
+  "open_gaps": [
+    "Diseño de interfaces ergonómicas para evitar fatiga visual en revisores de grandes volúmenes."
+  ],
+  "next_question_ids": [
+    "P10-C12",
+    "P10-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

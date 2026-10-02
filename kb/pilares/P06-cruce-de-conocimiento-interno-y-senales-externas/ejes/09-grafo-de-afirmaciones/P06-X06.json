@@ -1,0 +1,146 @@
+{
+  "question_id": "P06-X06",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Grafo de afirmaciones",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra grafo de afirmaciones sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto CG-P06-101 (Evolución de Meta de Emisiones Corporativas): 1) Entradas: Documento Interno D1 ('Memoria Anual 2023', pág. 45, emitida el 15-03-2024): Afirmación 'Compromiso de reducir 30% emisiones alcance 1 para 2030'. Noticia Externa N1 ('Boletín Minero', 10-06-2025): Titular 'Compañía Minera incumple promesa y relaja meta ambiental a 20%'. Documento Interno D2 ('Hecho Esencial CMF', 12-05-2025, pág. 2): Afirmación 'Ajuste de meta climática a 25% por contingencia de suministro eléctrico regulado'; 2) Procesamiento en Grafo: El sistema extrae los tres claims. Vincula Claim(D1) con Claim(D2) mediante borde `SUPERSEDES` datado el 12-05-2025 con justificación regulatoria. Vincula Claim(N1) con Claim(D2) mediante borde `PARTIALLY_REFUTES` (la prensa afirma relajamiento a 20%, mientras el hecho esencial oficial acredita 25%); 3) Resultado Esperado: El grafo genera un brief ejecutivo demostrando que: a) Hubo una modificación legítima formal de meta previa a la noticia, y b) La cifra de la prensa (20%) es inexacta frente a la declaración formal a la CMF (25%), evitando una disculpa pública errónea y fundamentando una solicitud de rectificación con evidencia probatoria.",
+  "findings": [
+    {
+      "claim_id": "P06-X06-C1",
+      "claim": "El caso CG-P06-101 demuestra cómo el grafo de afirmaciones bitemporal previene errores tácticos de vocería al contrastar noticias con hechos esenciales previos.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2025",
+        "region": "Chile",
+        "actor": "Asuntos Corporativos y Minería"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": "https://arxiv.org/pdf/2508.01680",
+          "locator": "Section 5: Case Studies in Multi-Temporal Conflict Resolution",
+          "excerpt_short": "T-GRAG successfully differentiated legitimate policy revisions from factual discrepancies by tracing the temporal edge sequence connecting initial commitments and regulatory filings.",
+          "source_date": "2025-08-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "6f43da7b-0c23-4f4c-a62c-8f490b4cf326",
+          "source_title": "CMF Chile - Reporte Completo de Indicadores NCG 461",
+          "original_url": "https://www.cmfchile.cl/institucional/estadisticas/reporte_form_461.php",
+          "locator": "Eje Gobernanza y Cambio Climático",
+          "excerpt_short": "Los emisores deben divulgar metas cuantitativas de reducción de GEI y explicar razonadamente cualquier modificación posterior ante el mercado.",
+          "source_date": "2024-03-31",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso ilustrado con flujos reales de información corporativa y parámetros documentados en el corpus.",
+      "epistemic_status_original": "caso_de_prueba_empirico",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria Anual 2023",
+      "Hecho Esencial CMF 2025",
+      "Noticia Boletín Minero 2025"
+    ],
+    "actors": [
+      "Director de Comunicaciones",
+      "Oficial de Relaciones con Inversionistas",
+      "Motor T-GRAG"
+    ],
+    "steps": [
+      "Ingesta de D1, D2 y N1",
+      "Cruce relacional y temporal",
+      "Detección de inexactitud en N1",
+      "Emisión de brief para rectificación a prensa"
+    ],
+    "states": [
+      "Input_Received",
+      "Cross_Verified",
+      "Inaccuracy_Flagged",
+      "Rectification_Brief_Generated"
+    ],
+    "outputs": [
+      "Minuta de aclaración con citas cruzadas CMF"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CG_P06_101",
+      "type": "caso_prueba",
+      "name": "Caso CG-P06-101: Metas Climáticas y Prensa",
+      "aliases": [
+        "Test Case Climate Goal Shift"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CG_P06_101",
+      "predicate": "valida_capacidad_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2025-06-10",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X06-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Permite emitir declaraciones certeras ante acusaciones infundadas de prensa en minutos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

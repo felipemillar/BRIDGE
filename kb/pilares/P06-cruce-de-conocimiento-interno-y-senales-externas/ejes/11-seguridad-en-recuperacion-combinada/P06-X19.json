@@ -1,0 +1,150 @@
+{
+  "question_id": "P06-X19",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Seguridad en recuperación combinada",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué pruebas muestran ausencia de contaminación entre clientes y usuarios?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La ausencia de contaminación cross-tenant y cross-user se certifica mediante una batería de pruebas de regresión adversarial automatizadas en el pipeline de CI/CD (P11 Multi-Tenant Governance; Palantir AIP; P06_QUALITY_ADDENDUM, Sección 4.3): 1) Pruebas de Penetración de Inyección Cruzada (Cross-Tenant Canary Probing): Se inyectan 'documentos canario' con tokens criptográficos sintéticos únicos en el espacio del Tenant A y se lanzan 1.000 consultas semánticas maliciosas desde el Tenant B solicitando explícitamente fragmentos o palabras clave del Tenant A; la métrica de aceptación innegociable es $0.00\\%$ de tokens canario recuperados; 2) Verificación de RLS en Base de Datos: Auditorías estáticas y dinámicas sobre PostgreSQL garantizando que toda consulta aplique `WHERE tenant_id = current_setting('app.current_tenant_id')` con la directiva `FORCE ROW LEVEL SECURITY`; 3) Pruebas de Desinfección de Caché Compartida: Comprobación de que la caché de embeddings y respuestas del LLM particione estrictamente las claves con prefijo de tenant (`tenant_id:prompt_hash`), garantizando que la respuesta generada para un cliente jamás sea reutilizada para responder a otro.",
+  "findings": [
+    {
+      "claim_id": "P06-X19-C1",
+      "claim": "La no-contaminación entre clientes se audita mediante pruebas canary probing con tasa de fuga 0.00% y forzamiento de Row-Level Security en base de datos.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "Ciberseguridad Multi-Tenant"
+      },
+      "evidence": [
+        {
+          "source_id": "5168f7d7-3499-40e3-afc8-c6b216843f19",
+          "source_title": "Palantir AIP - Architecture Overview & Context Engineering",
+          "original_url": "https://palantir.com/docs/foundry/architecture-center/aip-architecture/",
+          "locator": "Multi-Tenant Isolation Verification & CI Testing",
+          "excerpt_short": "Adversarial cross-tenant testing suites verify that tenant boundaries remain impermeable, with zero cross-tenant retrieval leakage observed under automated fuzzing.",
+          "source_date": "2024-06-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 4.3: Auditoría y Batería de Pruebas Canario Cross-Tenant",
+          "excerpt_short": "El pipeline de despliegue exige una prueba canario automatizada: cualquier retorno de fragmentos ajenos anula la compilación y bloquea el release de software.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Pruebas técnicas estándar de la industria SaaS enterprise reflejadas en el Addendum y arquitectura de Palantir.",
+      "epistemic_status_original": "estandar_seguridad_comprobado",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Vectores canario",
+      "Consultas de ataque simulado"
+    ],
+    "actors": [
+      "Pipeline CI/CD",
+      "Auditor Automatizado de Ciberseguridad",
+      "Base de Datos PostgreSQL RLS"
+    ],
+    "steps": [
+      "Inyección de datos canario en Tenant A",
+      "Lanzamiento de 1.000 queries desde Tenant B",
+      "Comprobación de fuga de tokens",
+      "Si fuga > 0, abortar despliegue"
+    ],
+    "states": [
+      "Canary_Injected",
+      "Fuzzing_Executed",
+      "Zero_Leakage_Certified"
+    ],
+    "outputs": [
+      "Certificado de no-contaminación multi-tenant"
+    ],
+    "exceptions": [
+      "Detección de fuga que gatilla Hard Kill Switch inmediato"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CANARY_TEST",
+      "type": "suite_pruebas",
+      "name": "Batería de Pruebas Canario Cross-Tenant",
+      "aliases": [
+        "Cross-Tenant Isolation Suite"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CANARY_TEST",
+      "predicate": "certifica_seguridad_de",
+      "object_id": "ENT_ABAC_GATE",
+      "valid_from": "2024-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X19-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric_name": "Cross-Tenant Leakage Rate",
+      "denominator": "Total de consultas adversariales de ataque",
+      "target_value": "0.00%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite comercializar BRIDGE a empresas competidoras en el mismo sector (ej. dos mineras o dos bancos) con total garantía legal.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X20"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

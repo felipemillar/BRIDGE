@@ -1,0 +1,158 @@
+{
+  "question_id": "P10-F35",
+  "pilar": "P10",
+  "eje": "Reglas para automatizar o abstenerse",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre reglas para automatizar o abstenerse?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los preceptos y reglas sobre automatización responsable, abstención estratégica y control humano sustantivo se sustentan en directrices normativas y éticas consolidadas: 1) Ética de IA y supervisión humana indelegable en relaciones públicas: CIPR (Chartered Institute of Public Relations, 2023) 'Artificial Intelligence in Public Relations Policy and Ethics Guides' y PR Council (2023) 'Ethical Standards and Guidelines for Generative AI', que prohíben la publicación sin visado humano y delimitan la IA a labores asistidas; 2) Gestión de riesgos de IA y validación de supervisión humana: NIST AI RMF 1.0 (National Institute of Standards and Technology, 2023), funciones GOVERN y MEASURE sobre control efectivo y prevención de alucinaciones de impacto social; 3) Deberes deontológicos de confidencialidad y veracidad: PRSA (Public Relations Society of America) 'Code of Ethics' e IABC 'Code of Ethics for Professional Communicators', estableciendo la obligación de abstenerse ante litigios y proteger secretos; y 4) Arquitectura de sistemas de registro de gobernanza: Broadsight 'System of Record for Corporate Communications' y 'Product Workflow and Communications Knowledge' (2024-2025).",
+  "findings": [
+    {
+      "claim_id": "P10-F35-C1",
+      "claim": "El marco de reglas de decisión y supervisión humana está sólidamente sustentado en estándares internacionales de IA (NIST), códigos deontológicos de comunicaciones (PRSA, IABC, CIPR, PR Council) y literatura técnica de software de registro.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_base_decision_rules",
+      "evidence": [
+        {
+          "source_title": "P10_SOURCE_INDEX: Indice Maestro de Fuentes, Auditoria y Jerarquia",
+          "source_id": "1c52f005-30d5-4877-9b75-31f0785411ca",
+          "locator": "Sección 'Cluster 5: Ética, IA, Supervisión Humana y Riesgos'",
+          "retrieved_at": null,
+          "excerpt_short": "Fuentes centrales: CIPR AI Policy, PR Council Guidelines, NIST AI RMF 1.0, PRSA Code of Ethics, IABC Code of Ethics, Broadsight Workflow.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "NIST: Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+          "source_id": "7b6bd5f9-00ed-4842-b819-dfcf19b5c016",
+          "locator": "Section 2.2 'Trustworthy AI Characteristics'",
+          "retrieved_at": null,
+          "excerpt_short": "Trustworthy AI requires systems that are valid, reliable, safe, secure, resilient, transparent, explainable, privacy-enhanced, and fair with documented human accountability.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "CIPR: Artificial Intelligence in Public Relations Policy and Ethics Guides",
+          "source_id": "0f644aa9-897a-4f0e-87ac-29dd7c0e2d0b",
+          "locator": "Section 'Skills and Competencies for PR AI Governance'",
+          "retrieved_at": null,
+          "excerpt_short": "Professionals must understand algorithmic limitations, actively verify prompt outputs against primary enterprise records, and refuse automation for sensitive stakeholder statements.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual rigurosa sobre los documentos originales indexados en fuentes/P10.json.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registros bibliográficos en fuentes/P10.json",
+      "Validación cruzada de citas"
+    ],
+    "actors": [
+      "Auditor Bibliográfico",
+      "Investigador de Cumplimiento"
+    ],
+    "steps": [
+      "Cotejo de postulados operacionales contra textos de NIST y CIPR",
+      "Verificación de que las fuentes de ética estén activas y libres de errores",
+      "Mapeo de correspondencia en el índice de evidencia",
+      "Formalización de referencias en el esquema de respuestas"
+    ],
+    "states": [
+      "SOURCES_CROSS_CHECKED",
+      "CITATIONS_ALIGNED",
+      "GROUNDING_VALIDATED"
+    ],
+    "outputs": [
+      "Respaldo bibliográfico irrebatible para los módulos de control ético"
+    ],
+    "exceptions": [
+      "Ninguna; las fuentes documentan directamente los estándares analizados"
+    ]
+  },
+  "entities": [
+    "NIST AI RMF",
+    "CIPR",
+    "PR Council",
+    "PRSA",
+    "P10_SOURCE_INDEX"
+  ],
+  "relations": [
+    {
+      "from": "NIST AI RMF",
+      "to": "Gobernanza de Algoritmos",
+      "type": "DEFINES_TECHNICAL_FRAMEWORK"
+    },
+    {
+      "from": "CIPR",
+      "to": "Deontología de PR",
+      "type": "ESTABLISHES_PROFESSIONAL_STANDARDS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Uso empírico de IA sin marco de gobernanza vs Apego a NIST y CIPR",
+      "diferencia": "El uso empírico genera alucinaciones públicas y sanciones reputacionales; el apego a marcos globales asegura consistencia, legalidad y defensibilidad técnica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "bibliographic_citation_accuracy": "100% de pasajes citados coinciden textualmente con los documentos indexados"
+  },
+  "bridge_implications": "Otorga certeza jurídica y técnica al equipo directivo de la compañía cliente sobre las políticas de seguridad implementadas en BRIDGE.",
+  "open_gaps": [
+    "Seguimiento de la futura Ley de Inteligencia Artificial de Chile (Boletín 16.821-19) actualmente en tramitación parlamentaria."
+  ],
+  "next_question_ids": [
+    "P10-F36",
+    "P10-F37"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

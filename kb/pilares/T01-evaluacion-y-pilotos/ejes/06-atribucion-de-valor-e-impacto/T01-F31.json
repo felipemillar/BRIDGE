@@ -1,0 +1,187 @@
+{
+  "question_id": "T01-F31",
+  "pilar": "T01",
+  "eje": "Atribución de valor e impacto",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Cómo separar calidad de respuesta, cambio de decisión, resultado operativo y reputación futura?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para evitar reclamos comerciales infundados y proteger la honestidad intelectual del producto, The Bridge Intelligence (thebridgeintelligence.ai) adopta la cadena de valor de cuatro eslabones desacoplados del AMEC Integrated Evaluation Framework (f7ad452c): 1) Calidad de Respuesta (Outputs): Métrica puramente técnica del software (Citation Precision >= 95%, fidelidad Ragas, latencia < 5s); 2) Cambio de Decisión (Outtakes): Efecto cognitivo directo en el usuario profesional (aceptación del borrador, modificación de estrategia, inclusión de reservas legales antes de publicar); 3) Resultado Operativo (Outcomes): Eficiencia organizacional tangible a corto plazo (reducción del 50% en el ciclo de aprobación, ahorro de 10 horas/semana por analista, cero multas por infracción a Ley de Lobby o Ley 21.719); y 4) Reputación Futura (Impact): Construcción de confianza a largo plazo entre stakeholders, la cual depende de las acciones operacionales reales de la empresa y no puede atribuirse causalmente en exclusiva al software.",
+  "findings": [
+    {
+      "claim_id": "T01-F31-C1",
+      "claim": "El marco Integrated Evaluation Framework de AMEC (f7ad452c) formaliza que la evaluación rigurosa de asuntos corporativos debe distinguir tajantemente entre Outputs (entregables de comunicación), Outtakes (recepción y comprensión por los tomadores de decisión), Outcomes (cambios de comportamiento y procesos internos) e Impact (impacto reputacional y económico final).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "AMEC Global"
+      },
+      "evidence": [
+        {
+          "source_id": "f7ad452c-58e4-47a4-81ba-7248495038a3",
+          "source_title": "AMEC - Integrated Evaluation Framework for Public Relations & Corporate Affairs",
+          "original_url": null,
+          "locator": "The 4-Stage Impact Chain, p. 2-3",
+          "excerpt_short": "Outputs represent the communication activity; outtakes measure the immediate stakeholder perception; outcomes reflect internal behavioral change; impact represents broader organizational and financial performance.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco rector de evaluación de comunicaciones corporativas AMEC.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F31-C2",
+      "claim": "El Principio 2 de Arthur W. Page ('Prove it with action') establece que el 90% de la reputación corporativa proviene de lo que la organización hace en el terreno (operaciones, medioambiente, gobernanza) y solo el 10% de lo que comunica, prohibiendo atribuir mejoras reputacionales estructurales al software de redacción o monitoreo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Arthur W. Page Society"
+      },
+      "evidence": [
+        {
+          "source_id": "f45d1506-e90b-474f-813b-6846b15de6cc",
+          "source_title": "Arthur W. Page Society - The Page Principles of Corporate Public Relations",
+          "original_url": null,
+          "locator": "Principle 2: Prove It With Action",
+          "excerpt_short": "Public perception of an enterprise is determined 90 percent by what it does and 10 percent by what it says.",
+          "source_date": "2021",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio fundamental e histórico de gestión reputacional corporativa.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Métricas técnicas de software (Outputs)",
+      "Registros de adopción de analistas (Outtakes)",
+      "KPIs de tiempos y costos de gestión (Outcomes)"
+    ],
+    "actors": [
+      "Comité de Evaluación de Piloto",
+      "Director de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Reportar los outputs técnicos generados por BRIDGE (precisión, latencia)",
+      "Medir los outtakes: registrar cuántas sugerencias del sistema alteraron la decisión final",
+      "Calcular los outcomes operativos: reducción de tiempos de ciclo y horas humanas",
+      "Aislar explícitamente el impacto reputacional final como una variable multifactorial no atribuible 100% al software"
+    ],
+    "states": [
+      "MEDICION_OUTPUTS",
+      "MEDICION_OUTTAKES",
+      "MEDICION_OUTCOMES",
+      "INFORME_DESACOPLADO"
+    ],
+    "outputs": [
+      "Reporte de Valoración Escalonada AMEC",
+      "Matriz de atribución honesta"
+    ],
+    "exceptions": [
+      "Queda estrictamente prohibido prometer en contratos comerciales un incremento de X puntos en reputación corporativa atribuible a BRIDGE"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CADENA_VALOR_AMEC",
+      "type": "documento",
+      "name": "Cadena de Valor de 4 Fases AMEC",
+      "aliases": [
+        "Outputs-Outtakes-Outcomes-Impact"
+      ]
+    },
+    {
+      "entity_id": "PRINCIPIO_PAGE_2",
+      "type": "documento",
+      "name": "Principio 2 de Page: Prove It With Action",
+      "aliases": [
+        "Regla 90/10 Reputacional"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CADENA_VALOR_AMEC",
+      "predicate": "desacopla_atribucion_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F31-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Outputs Técnicos (BRIDGE)",
+      "item_b": "Outcomes Operativos",
+      "dimension": "Lugar de captura de valor",
+      "conclusion": "Los outputs ocurren en los servidores de BRIDGE; los outcomes se materializan en el ahorro de horas y mitigación de multas en la empresa cliente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de desacoplamiento de métricas en reportes",
+      "denominator": "Total de reportes de valor emitidos",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Blindaje frente a demandas de clientes por 'incumplimiento de promesas reputacionales' al delimitar el alcance legal del software.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F32",
+    "T01-F33"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

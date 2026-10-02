@@ -1,0 +1,145 @@
+{
+  "question_id": "P03-F45",
+  "pilar": "P03",
+  "eje": "Derechos, costos y calidad de ingesta",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Cómo evaluar precisión, cobertura, duplicados y fallos de captura con denominadores correctos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La evaluación rigurosa de la calidad de ingesta exige definir matemáticamente 4 métricas con denominadores formalmente auditados: 1) Precisión de Señal (Precision): `Señales_Pertinentes_para_Asuntos_Corporativos / Total_de_Señales_Ingeridas` (evita inflar métricas con ruido comercial u homónimos); 2) Cobertura de Entorno (Recall / Coverage): `Eventos_Criticos_Detectados / Total_de_Eventos_Reales_del_Entorno_Auditable` (requiere un panel de control independiente de auditoría con 50 eventos de referencia para evitar el sesgo de medir sobre denominadores autodefinidos); 3) Tasa de Redundancia de Duplicados (Duplication Ratio): `Articulos_Clonados_o_Sindicalizados / Total_de_Articulos_Ingeridos` (mide la eficiencia de los algoritmos de clustering); y 4) Tasa de Fallo de Ingesta (Capture Failure Rate): `Intentos_Fallidos_por_Timeout_o_Bloqueo_429_403 / Total_de_Llamadas_Programadas_de_Extraccion`.",
+  "findings": [
+    {
+      "claim_id": "P03-F45-C1",
+      "claim": "La auditoría de ingesta exige el cálculo explícito de Precisión, Cobertura sobre eventos auditados, Tasa de Duplicados y Tasa de Fallos de Ingesta sobre denominadores comprobables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría de Ingesta P03"
+      },
+      "evidence": [
+        {
+          "source_id": "5eaa5b99-624c-4877-87be-66c339c7b6d4",
+          "source_title": "AMEC Barcelona Principles 3.0 & Integrated Evaluation Framework",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principle 7: Rigor in Metrics and Denominators",
+          "excerpt_short": "Measurement integrity requires explicit, verified denominators. Metrics should not be based on self-referential or undefined denominator universes.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los principios AMEC de rigor métrico y denominadores.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Logs de llamadas a APIs",
+      "Registro de señales ingeridas",
+      "Panel de 50 eventos auditados"
+    ],
+    "actors": [
+      "Data Quality Auditor",
+      "Metric Engine"
+    ],
+    "steps": [
+      "Cálculo de señales pertinentes",
+      "Cotejo con panel de eventos auditados",
+      "Cálculo de tasas de error y duplicación"
+    ],
+    "states": [
+      "Raw_Logs",
+      "Denominators_Verified",
+      "Quality_Report_Generated"
+    ],
+    "outputs": [
+      "Reporte mensual de calidad de ingesta y cobertura de fuentes"
+    ],
+    "exceptions": [
+      "Falta de verdad terreno (ground truth) para eventos de comunidades remotas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_INGEST_QUALITY_METRICS",
+      "type": "marco_metrologico",
+      "name": "Métricas y Denominadores de Calidad de Ingesta",
+      "aliases": [
+        "Ingest Quality Metrics"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_INGEST_QUALITY_METRICS",
+      "predicate": "audita_rendimiento_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F45-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Precisión de Ingesta",
+      "numerator": "Señales relevantes para asuntos corporativos",
+      "denominator": "Total de señales capturadas por el pipeline",
+      "context": "Evaluación del ruido y falsos positivos de los filtros de ingesta"
+    },
+    {
+      "metric": "Cobertura Real de Entorno (Recall)",
+      "numerator": "Eventos críticos detectados por el sistema",
+      "denominator": "Total de eventos críticos ocurridos según panel de auditoría humana",
+      "context": "Evaluación de la ceguera y omisión de eventos"
+    },
+    {
+      "metric": "Tasa de Fallos de Captura",
+      "numerator": "Intentos fallidos de extracción (HTTP 4xx, 5xx, timeouts)",
+      "denominator": "Total de consultas e intentos de ingesta programados",
+      "context": "Evaluación de la estabilidad técnica y resiliencia de los conectores"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Establecer dashboards continuos de telemetría de ingesta con denominadores auditados para garantizar la confiabilidad operativa de BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

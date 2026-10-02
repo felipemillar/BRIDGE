@@ -1,0 +1,154 @@
+{
+  "question_id": "P04-C13",
+  "pilar": "P04",
+  "eje": "Búsqueda y respuesta fundada",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre búsqueda y respuesta fundada, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: Soluciones comerciales de RAG afirman que 'incluir la instrucción \"cite sus fuentes\" en el prompt del sistema es suficiente para obtener respuestas trazables y confiables'. En agudo contraste, la investigación científica de Google Research (Bohnet et al., 2022, Attributed QA) y P04_EVIDENCE_MAP demuestran que la citación guiada únicamente por prompt produce 'alucinación de citas' (citation hallucination): el modelo inventa números de página o atribuye cifras reales a documentos que no las contienen. Versión que prevalece: Prevalece la regla de 'Post-Verificación Algorítmica de Citas'. Ninguna cita se entrega al directivo sin pasar por un evaluador algorítmico independiente (FActScore / RAGAS) que compruebe la alineación atómica con el fragmento recuperado y verifique el hash criptográfico SHA-256 del documento de origen.",
+  "findings": [
+    {
+      "claim_id": "P04-C13-C1",
+      "claim": "La citación en el prompt es refutada por Bohnet et al. por inducir alucinación de referencias, prevaleciendo la post-verificación algorítmica de citas anclada a hashes inmutables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2026",
+        "region": "Global",
+        "actor": "Evaluación de Atribución en IA"
+      },
+      "evidence": [
+        {
+          "source_id": "005e6819-75c5-40e4-b0a2-39b00ec373eb",
+          "source_title": "P04_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 3: Matriz de Tensiones Metodológicas (Atribución y Citación)",
+          "excerpt_short": "Pedir al LLM que cite en el prompt produce alucinación de citas plausibles pero falsas. Adopción de post-verificación algorítmica de citas con FActScore/RAGAS y anclaje a hash.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "4df5f8f3-f0db-42c2-a566-b66b67b81db0",
+          "source_title": "Attributed QA: Evaluation and Modeling (Bohnet et al., 2022)",
+          "original_url": "https://arxiv.org/abs/2212.08037",
+          "locator": "Sección 1 and 4: Spurious Citations",
+          "excerpt_short": "Demonstrates that models frequently hallucinate citations when prompted naively, requiring programmatic post-generation verification of citation spans.",
+          "source_date": "2022-12-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución formalizada en Bohnet et al. y matriz de tensiones de P04_EVIDENCE_MAP.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Respuesta preliminar generada con citas textuales"
+    ],
+    "actors": [
+      "Post-Generation Citation Verifier",
+      "Cryptographic Anchor"
+    ],
+    "steps": [
+      "Extracción de llamadas de cita",
+      "Búsqueda de correspondencia exacta en fragmento fuente",
+      "Comprobación de hash SHA-256",
+      "Supresión de citas espurias"
+    ],
+    "states": [
+      "Raw_Generated_Text",
+      "Verifying_Citations",
+      "Authenticated_Attribution"
+    ],
+    "outputs": [
+      "Respuesta con citas certificadas algorítmicamente"
+    ],
+    "exceptions": [
+      "Cita que parafrasea el texto de origen sin contener las palabras clave"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_POST_VERIFICATION_PROTOCOL",
+      "type": "protocolo_seguridad",
+      "name": "Protocolo de Post-Verificación Algorítmica de Citas",
+      "aliases": [
+        "Algorithmic Citation Verification Protocol"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_POST_VERIFICATION_PROTOCOL",
+      "predicate": "erradica_citas_falsas_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Veracidad de citas",
+      "Citación por prompt": "El modelo cita 'página 84' cuando en realidad la cifra estaba en la página 120 o no existía.",
+      "Post-verificación algorítmica": "Comprueba que la cadena exacta exista en la página citada antes de entregar la respuesta."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Método de atribución y citación en RAG",
+      "claim_a": "Pedir citas en el prompt del LLM garantiza atribución fiel.",
+      "source_a": "Enfoques comerciales de chatbots",
+      "claim_b": "La citación por prompt produce alucinaciones de citas; se requiere post-verificación programática.",
+      "source_b": "Bohnet et al. (2022) / P04_EVIDENCE_MAP",
+      "resolution_or_status": "Prevalece Claim B: post-verificación algorítmica obligatoria de citas y anclaje a hash."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incluir este paso de post-verificación en su pipeline de inferencia antes de mostrar la minuta al vocero.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-C14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

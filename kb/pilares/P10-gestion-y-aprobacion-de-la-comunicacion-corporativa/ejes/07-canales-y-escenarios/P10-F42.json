@@ -1,0 +1,155 @@
+{
+  "question_id": "P10-F42",
+  "pilar": "P10",
+  "eje": "Canales y escenarios",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra canales y escenarios sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto: Gestión y Difusión Sincronizada Multicanal ante Incidente Operacional de Turbidez en Bocatoma Minera. Entradas: 1) Reporte de planta indicando turbidez anormal por arrastre de sedimentos tras deshielo extraordinario en Quebrada Blanca, sin falla estructural en tranque ni fuga química; 2) Ficha pericial de calidad de agua validada en Shared Fact Record: pH 7.2 (normal), sólidos suspendidos totales 150 mg/L (sobre promedio pero inocuo para la salud humana); 3) Necesidad de comunicar simultáneamente a 4 públicos: SMA (autoridad), Medios de prensa (periodistas), Vecinos de la cuenca (comunidad) y Trabajadores (interno). Proceso: El sistema genera la postura central aprobada v1.0 y deriva automáticamente 4 paquetes sincronizados bajo embargo común hasta las 11:00 AM: A) Oficio Técnico a la SMA con informe de laboratorio anexo; B) Comunicado de Prensa con cita de vocero (Gerente de Sustentabilidad) destacando que la turbidez es por sedimento natural de deshielo; C) Mensaje Comunitario para WhatsApp vecinal y radio comunitaria explicando en lenguaje simple que el agua de riego está segura y monitoreada; D) Comunicado Interno a colaboradores asegurando la continuidad de turnos y recordando no divulgar rumores. Resultado Esperado: A las 11:00 AM expira el embargo y se liberan los 4 despachos en paralelo; no existen contradicciones entre versiones; la radio comunitaria transmite el mensaje de tranquilidad; la autoridad confirma recepción del oficio formal; el rumor de 'derrame químico tóxico' queda desarticulado antes de instalarse en redes.",
+  "findings": [
+    {
+      "claim_id": "P10-F42-C1",
+      "claim": "El caso operacionaliza la ejecución sincronizada bajo embargo multicanal para una crisis operacional ambiental, demostrando modulación de tono sobre la misma base fáctica sin contradicciones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_multi_channel_execution",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 6 'Escenarios Sintéticos de Ejecución Integral (Escenario B: Crisis Ambiental Faena Minera)'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso turbidez: generación de mensaje maestro -> derivación a 4 canales (oficio regulador, comunicado prensa, mensaje comunitario, comunicado interno) -> embargo sincronizado -> neutralización de desinformación.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Percepture: Crisis Communications Capabilities & Verification",
+          "source_id": "c41f5272-c83a-4a8c-8834-eaea7bd7a47a",
+          "locator": "Section 'Coordinated Community and Authority Engagement'",
+          "retrieved_at": null,
+          "excerpt_short": "Simultaneous dissemination of factual findings to both oversight agencies and affected local populations prevents speculative panics and stabilizes community relations.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los escenarios documentados en el dossier de P10 y las directrices de respuesta ante crisis ambientales.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ficha técnica pericial de turbidez (pH 7.2, sólidos 150 mg/L)",
+      "Alerta de desinformación incipiente en grupos comunitarios",
+      "Programación de embargo a las 11:00 AM"
+    ],
+    "actors": [
+      "Gerente de Sustentabilidad (Vocero)",
+      "Oficial de Enlace Comunitario",
+      "Asesor Legal",
+      "Orquestador BRIDGE"
+    ],
+    "steps": [
+      "Creación del mensaje maestro anclado al SFR",
+      "Aprobación ejecutiva por el Comité de Crisis",
+      "Generación y visado de las 4 derivadas de canal",
+      "Configuración de ventana de embargo sincrónico",
+      "Despacho automatizado a las 11:00 AM a través de pasarelas de canal",
+      "Activación de monitoreo de impacto y recepción comunitaria"
+    ],
+    "states": [
+      "INCIDENT_REPORTED",
+      "VARIANTS_STAGED",
+      "EMBARGO_LOCKED",
+      "DISPATCHED_SYNCHRONOUSLY",
+      "MONITORING_REACTIONS"
+    ],
+    "outputs": [
+      "Oficio entregado a SMA",
+      "Comunicado en newswires",
+      "Audio / mensaje emitido en radio y redes comunitarias",
+      "Boletín interno publicado"
+    ],
+    "exceptions": [
+      "Si un medio filtra información antes de las 11:00 AM, el embargo se levanta de inmediato en todos los canales"
+    ]
+  },
+  "entities": [
+    "Quebrada Blanca",
+    "Turbidez",
+    "Oficio SMA",
+    "Radio Comunitaria",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Mensaje Maestro",
+      "to": "4 Derivadas de Canal",
+      "type": "GOVERNS_SYNCHRONOUS_DISPATCH"
+    },
+    {
+      "from": "Embargo 11:00 AM",
+      "to": "Pasarelas de Despacho",
+      "type": "HOLDS_UNTIL_RELEASE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Reacción desfasada donde la autoridad se entera por la prensa vs Despacho sincronizado",
+      "diferencia": "La reacción desfasada provoca sanciones y enojo de fiscalizadores; el despacho sincronizado demuestra seriedad y respeto estricto hacia la autoridad y la comunidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "multi_channel_dispatch_variance_seconds": "< 5 segundos de diferencia entre el despacho al regulador y a medios",
+    "post_dispatch_rumor_decay_rate": "Reducción > 80% en menciones de rumor tóxico en las primeras 2 horas"
+  },
+  "bridge_implications": "Demuestra la efectividad de BRIDGE para coordinar operaciones de comunicación multicanal complejas bajo estrés de tiempo y escrutinio público.",
+  "open_gaps": [
+    "Integración con repetidoras locales de radio comunitaria mediante síntesis de voz neural autorizada."
+  ],
+  "next_question_ids": [
+    "P10-F43",
+    "P10-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

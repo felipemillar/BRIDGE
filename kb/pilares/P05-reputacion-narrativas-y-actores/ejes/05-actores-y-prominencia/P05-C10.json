@@ -1,0 +1,141 @@
+{
+  "question_id": "P05-C10",
+  "pilar": "P05",
+  "eje": "Actores y prominencia",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué sigue sin prueba sobre actores y prominencia, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis de gaps documentado en P05_GAPS_AND_VALIDATION Sección 2 establece: 1) Lo que sigue sin prueba rigurosa: La captura estructurada y en tiempo real de interacciones informales o semi-formales entre actores de poder que ocurren fuera de las audiencias oficiales regladas (e.g. encuentros en foros gremiales, seminarios académicos, eventos benéficos o conversaciones parlamentarias de pasillo). El sistema no cuenta con mecanismos empíricos para medir la influencia real de estas interacciones sin vulnerar la privacidad de las personas; 2) Qué fuente es parcial o falló: La plataforma InfoLobby / Ley 20.730 es parcial debido al desfase de actualización en los portales ministeriales (retrasos de 30 a 60 días en la carga de actas) y a la exclusión de reuniones que los sujetos pasivos catalogan como 'técnicas' o 'informativas' no afectas a lobby; 3) Validación mínima que resolvería la incertidumbre: Implementar un algoritmo de triangulación que cruce los registros formales de InfoLobby con los calendarios de sesiones de comisiones legislativas del Congreso Nacional, asistencias públicas de autoridades a foros sectoriales y noticias de prensa económica, generando un índice compuesto de proximidad institucional con banderas de actualización continua.",
+  "findings": [
+    {
+      "claim_id": "P05-C10-C1",
+      "claim": "Los registros oficiales de lobby presentan desfases temporales y exclusiones de interacciones informales, exigiendo la triangulación con calendarios legislativos y coberturas públicas de líderes de opinión.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile",
+        "actor": "Monitoreo Institucional de Lobby"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2: Sistemas de Registro de Lobby (InfoLobby / Ley 20.730)",
+          "excerpt_short": "Sub-reporte de gestiones informales y desfase en la actualización de registros públicos. Mecanismo de atenuación: cruzar registros formales con calendarios legislativos y coberturas mediáticas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Limitación empírica demostrada en los informes de observancia de transparencia del Consejo para la Transparencia en Chile.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Actas de InfoLobby",
+      "Calendarios de comisiones parlamentarias",
+      "Cobertura de prensa política"
+    ],
+    "actors": [
+      "Analista de Asuntos Públicos",
+      "Científico de Datos"
+    ],
+    "steps": [
+      "Descarga periódica de bases de datos de InfoLobby",
+      "Cruce con asistencias registradas en el Congreso",
+      "Detección de interacciones no mapeadas en la agenda oficial"
+    ],
+    "states": [
+      "Official_Lobby_Ingested",
+      "Parliamentary_Schedule_CrossChecked",
+      "Interaction_Index_Updated"
+    ],
+    "outputs": [
+      "Matriz de Proximidad Institucional Triangulada"
+    ],
+    "exceptions": [
+      "Reuniones estrictamente privadas que escapan a todo registro público auditable"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_LOBBY_DATA_GAP",
+      "type": "vacio_metodologico",
+      "name": "Brecha de Completitud en Registros de Lobby",
+      "aliases": [
+        "Lobby Reporting Lag Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LOBBY_DATA_GAP",
+      "predicate": "limita_cobertura_de",
+      "object_id": "ENT_LOBBY_COMPLIANCE",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C10-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de cobertura de interacciones",
+      "Registro Exclusivo InfoLobby": "Captura únicamente las reuniones formalmente concedidas y publicadas con semanas de rezago.",
+      "Triangulación BRIDGE": "Detecta si la empresa compareció en la comisión investigadora o participó en el panel sectorial con la autoridad en tiempo real."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Monitor de Agenda Pública",
+      "implication": "BRIDGE debe incorporar un pipeline de ingesta de diarios de sesiones del Senado y Cámara para compensar el rezago temporal de los registros de lobby ministeriales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_LOBBY_OFFLINE_LAG",
+      "description": "Rezago temporal y exclusión de interacciones no regladas en los portales públicos de lobby.",
+      "severity": "media",
+      "status": "documentado"
+    }
+  ],
+  "next_question_ids": [
+    "P05-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

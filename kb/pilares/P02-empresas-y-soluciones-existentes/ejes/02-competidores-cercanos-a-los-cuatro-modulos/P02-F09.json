@@ -1,0 +1,206 @@
+{
+  "question_id": "P02-F09",
+  "pilar": "P02",
+  "eje": "Competidores cercanos a los cuatro módulos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué integración entre módulos está probada por documentación específica y cuál se infiere por pertenecer a un grupo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La auditoría metodológica distingue rigurosamente integraciones técnicas comprobadas de meras inferencias societarias: 1) Integraciones técnicas probadas por documentación específica (DTI/HTD): AlphaSense (mercado externo + RAG en SharePoint/Drive con citas a párrafos); Dataminr + Crisis24 Horizon (alertas tempranas de incidentes integradas en consola de gestión de crisis); Signal AI + Memo (grafo de riesgo AIQ con métricas de lectura real verificada); Open Point (CRM Consultation Manager integrado con análisis de feedback comunitario por IA en Converlens); Burson + Limbik (motor de simulación cognitiva de audiencias embebido en la suite Decipher); y Contify (inteligencia de mercado conectada a SharePoint y Gong). 2) Integraciones inferidas por grupo societario pero fragmentadas técnicamente: Cision Ltd. (Brandwatch, CisionOne y PR Newswire operan sobre bases de datos segregadas sin grafo unificado); Hootsuite + Talkwalker (adquisición de abril 2024 mantiene backend analítico separado); Onclusive / STG (Digimind, Kantar y PRgloo carecen de base de datos unificada, operando con análisis retrospectivo inconexo); Access Group (Isentia en APAC y Vuelio en UK operan como marcas regionales sin plataforma integrada); y Stagwell (PRophet y UNICEPTA no tienen integración documentada de flujos).",
+  "findings": [
+    {
+      "claim_id": "P02-F09-C1",
+      "claim": "La pertenencia a un mismo grupo económico de adquisiciones no implica integración tecnológica: Cision Ltd. mantiene a Brandwatch y CisionOne sobre infraestructuras y bases de datos segregadas sin un grafo de conocimiento único.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Cision Ltd. / Platinum Equity"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Sección: Matriz de Integración Técnica vs M&A Fragmentado",
+          "excerpt_short": "Cision comercializa Brandwatch y CisionOne bajo una misma matriz pero con backends y datos segregados.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        },
+        {
+          "source_id": "e88ee6e0-73dc-46ba-9aa9-0f9c7fd12b0f",
+          "source_title": "Brandwatch for PR and Corporate Communications Teams",
+          "original_url": "https://www.brandwatch.com/roles/for-pr-comms/",
+          "locator": "Platform Architecture and PR Roles",
+          "excerpt_short": "Focuses on consumer intelligence and social monitoring without direct native fusion with Cision media database.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica de especificaciones de producto de Brandwatch y Cision.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P02-F09-C2",
+      "claim": "Integraciones técnicas auténticas entre módulos están comprobadas en casos específicos como AlphaSense (Saber interno + externo) y Dataminr con Crisis24 Horizon (Escuchar + gestión de incidentes).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "AlphaSense / Dataminr"
+      },
+      "evidence": [
+        {
+          "source_id": "67f7c8ea-5636-448e-b7ce-a31901aeef84",
+          "source_title": "Dataminr Agentic AI and Crisis24 Integration",
+          "original_url": "https://www.dataminr.com/press/announcement/dataminr-and-crisis24-deliver-new-intelligence-and-agentic-ai-in-crisis24-horizon/",
+          "locator": "Press Release: Dataminr and Crisis24 deliver new intelligence and agentic AI",
+          "excerpt_short": "Seamless integration of Dataminr real-time event intelligence into Crisis24 Horizon risk management platform.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Comunicado oficial de integración técnica verificada.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Arquitecturas de software de filiales",
+      "Documentación de APIs conjuntas"
+    ],
+    "actors": [
+      "Auditor Técnico",
+      "Holdings de Software"
+    ],
+    "steps": [
+      "Verificación de SSO y backend compartido",
+      "Detección de sincronización bidireccional",
+      "Clasificación como Integración Probada o Pertenencia Inferida"
+    ],
+    "states": [
+      "Adquisicion_Verificada",
+      "Backend_Auditado",
+      "Estatus_Integracion_Fijado"
+    ],
+    "outputs": [
+      "Matriz de Integración Técnica vs M&A Fragmentado"
+    ],
+    "exceptions": [
+      "Empresas adquiridas que mantienen marcas independientes pero comparten lago de datos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "INT_ALPHASENSE_DRIVE",
+      "type": "integracion_probada",
+      "name": "AlphaSense + SharePoint/Drive Connector",
+      "aliases": [
+        "RAG Híbrido Interno/Externo"
+      ]
+    },
+    {
+      "entity_id": "INT_DATAMINR_CRISIS24",
+      "type": "integracion_probada",
+      "name": "Dataminr + Crisis24 Horizon",
+      "aliases": [
+        "Agentic AI Crisis Integration"
+      ]
+    },
+    {
+      "entity_id": "INF_CISION_BRANDWATCH",
+      "type": "integracion_inferida",
+      "name": "Cision + Brandwatch (M&A Segregado)",
+      "aliases": [
+        "Holding Multi-Producto Inconexo"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "INT_ALPHASENSE_DRIVE",
+      "predicate": "demuestra_flujo_unificado_en",
+      "object_id": "Modulo_Saber",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F09-C2"
+    },
+    {
+      "subject_id": "INF_CISION_BRANDWATCH",
+      "predicate": "opera_como_plataformas_segregadas",
+      "object_id": "Cision_Brandwatch_PRN",
+      "valid_from": "2021",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fusión Societaria vs Integración Tecnológica Real",
+      "Holding M&A (Cision/Onclusive)": "Compra de marcas con integración puramente financiera y comercial de facturación.",
+      "Integración Real (Dataminr/Crisis24)": "Consola unificada donde los eventos externos disparan automáticamente protocolos operativos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Evitar el error de los grandes holdings: BRIDGE debe construirse con un grafo de datos unificado nativo en lugar de yuxtaponer herramientas desconectadas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F10",
+    "P02-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:28:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

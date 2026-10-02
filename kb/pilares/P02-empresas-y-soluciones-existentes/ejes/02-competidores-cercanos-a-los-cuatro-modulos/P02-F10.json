@@ -1,0 +1,177 @@
+{
+  "question_id": "P02-F10",
+  "pilar": "P02",
+  "eje": "Competidores cercanos a los cuatro módulos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar competidores cercanos a los cuatro módulos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo de datos con cuatro componentes obligatorios: 1) Variables de entidad y cobertura: ID_Proveedor, Entidad_Legal, Grupo_Corporativo, Marca_Producto, Sede_HQ, Cobertura_Comercial, Buyer_Persona, Modelo_Operativo, Precios (Transparente vs Enterprise), y calificación de los 4 módulos (Saber, Escuchar, Hablar, Relacionar) bajo la escala OPD / FD / DTI / POR (=Ninguna) / ND; 2) Siete Categorías Funcionales: Media Monitoring, Public Affairs CRM, Enterprise Search RAG, PR Workflow, Medición de Reputación, Consultoras y Narrative Intelligence; 3) Relaciones Ontológicas del Grafo Bipartito: Enlace Bitemporal (Señal Externa Hoy <=> Memoria Interna Histórica), Triangulación Actor-Compromiso-Alerta (Stakeholder -> Acta/Contrato -> Alerta de Prensa) y Gobernanza de Asuntos (Issue -> Position Paper -> Portavoz Oficial); 4) Cuatro Condiciones Estrictas del Sistema: Condición de Verificabilidad Extrema (Zero Hallucination con citas obligatorias a párrafo y página en documentos internos/externos), Condición Human-in-the-Loop (prohibición de auto-publicación sin firma de vocero), Condición de Aislamiento de Tenant (respeto a permisos RBAC heredados de repositorios) y Condición de Adaptabilidad Regional (integración de radios locales chilenas, Ley de Lobby N° 20.730 y RCAs ambientales).",
+  "findings": [
+    {
+      "claim_id": "P02-F10-C1",
+      "claim": "El diseño de la representación de competidores exige formalizar la relación ontológica del Grafo Bipartito, la cual enlaza las señales del entorno exterior en tiempo real con la memoria documental histórica de la empresa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Arquitectura Ontológica BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Sección: Arquitectura del Grafo Bipartito y Modelado de Datos",
+          "excerpt_short": "El enlace bitemporal conecta las señales externas con la memoria corporativa histórica estructurada.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación arquitectónica formal documentada en el informe de competidores.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P02-F10-C2",
+      "claim": "La condición de verificabilidad extrema impone que ningún resumen o recomendación ejecutiva pueda ser liberado sin hipervínculos a párrafos específicos de los documentos fuente primarios (Zero Hallucination para respaldo legal).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Gobernanza de Producto BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Condición de Trazabilidad y Verificabilidad de Salidas",
+          "excerpt_short": "Obligatoriedad de citación estricta a nivel de párrafo y página para garantizar respaldo legal.",
+          "source_date": "2026-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Regla canónica de control de calidad del mandato.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señal externa capturada",
+      "Memoria documental interna",
+      "Grafo relacional de actores"
+    ],
+    "actors": [
+      "Grafo Bipartito",
+      "Motor RAG Verificado",
+      "Vocero Aprobador"
+    ],
+    "steps": [
+      "Detección de entidad en señal externa",
+      "Travesía del grafo hacia documento interno",
+      "Extracción de párrafo verificable",
+      "Generación de briefing con cita",
+      "Aprobación human-in-the-loop"
+    ],
+    "states": [
+      "Señal_Ingresada",
+      "Memoria_Enlazada",
+      "Briefing_Generado",
+      "Voceria_Firmada"
+    ],
+    "outputs": [
+      "Executive Briefing auditado con trazabilidad legal"
+    ],
+    "exceptions": [
+      "Falta de documento interno de respaldo (se marca vacío explícito)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "GRAFO_BIPARTITO",
+      "type": "modelo_ontologico",
+      "name": "Grafo Bipartito Bitemporal BRIDGE",
+      "aliases": [
+        "Bipartite Intelligence Graph"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "GRAFO_BIPARTITO",
+      "predicate": "conecta_señal_con_memoria",
+      "object_id": "Señales_Medios_y_Documentos_RCA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F10-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuestas Basadas en Probabilidad vs RAG Estricto con Citación",
+      "LLM Comercial Estándar": "Texto fluido pero sujeto a alucinaciones sin localizador.",
+      "RAG Estricto BRIDGE": "Párrafos citados con hipervínculo visual directo al PDF fuente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Implementar como regla dura del sistema la prohibición de generar minutas sin citas comprobables.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F11",
+    "P02-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:28:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

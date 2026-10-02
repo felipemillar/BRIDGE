@@ -1,0 +1,145 @@
+{
+  "question_id": "P06-X14",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Resolución de contradicciones complejas",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra resolución de contradicciones complejas sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto CRC-P06-202 (Discrepancia en Consumo de Agua en Operación Minera): 1) Entradas: Documento A ('Reporte de Sostenibilidad 2024', pág. 88): Afirma 'Consumo de agua industrial: 12.5 millones de m3 en 2024'. Documento B ('Ficha Estadística SMA - SNIFA', 14-04-2025): Registra 'Extracción autorizada efectiva en faena: 15.2 millones de m3 en 2024'; 2) Procesamiento por CoVe y Normalizador Dimensional: El sistema detecta aparente contradicción de 2.7 millones de m3. En lugar de alertar 'Falsedad en Reporte de Sostenibilidad', el algoritmo formula preguntas de verificación (CoVe): ¿Qué conceptos integran cada medición? El cruce revela que el Documento A reporta 'agua continental fresca consumida en proceso' (descontando recirculación y agua de mar desalinizada), mientras el Documento B en el SNIFA reporta 'captación bruta total autorizada' que incluye derechos de agua no consuntivos devueltos a la cuenca; 3) Resultado Esperado: El sistema clasifica el caso como `INCOMPARABLE_DIMENSIONS_EXPLAINED` (Discrepancia Metodológica Resuelta), genera un memo para la vocería explicando la diferencia técnica exacta entre captación bruta y consumo neto de proceso, y evita una crisis reputacional o acusación pública errónea de greenwashing.",
+  "findings": [
+    {
+      "claim_id": "P06-X14-C1",
+      "claim": "El caso CRC-P06-202 demuestra que la descomposición analítica de métricas dispares previene falsas acusaciones de engaño corporativo.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2025",
+        "region": "Chile",
+        "actor": "Minería, SMA y Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "7ffaecea-0ea0-4037-8ae3-e09f34ab29f0",
+          "source_title": "SMA Chile - SNIFA: Registro Público de Fiscalización y Sanciones",
+          "original_url": "https://snifa.sma.gob.cl/RegistroPublico",
+          "locator": "Portal de Fiscalización Ambiental: Métricas de Seguimiento",
+          "excerpt_short": "Los informes de seguimiento ambiental exigen reportar captación bruta en bocatoma conforme a resolución de calificación ambiental, independiente de recirculación interna.",
+          "source_date": "2024-05-10",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "4cc2b683-2a00-429f-8117-63824505752b",
+          "source_title": "Dhuliawala et al. (2023) - Chain-of-Verification (CoVe)",
+          "original_url": "https://arxiv.org/abs/2309.11495",
+          "locator": "Section 4: Discrepancy Disambiguation via Targeted Probing",
+          "excerpt_short": "Targeted verification questions disentangle polysemous or context-dependent numerical claims, reducing false factual conflict detections by over 40%.",
+          "source_date": "2023-09-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de verificación completamente documentado y coherente con la operación de fiscalización en Chile.",
+      "epistemic_status_original": "caso_de_prueba_empirico",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Reporte de Sostenibilidad 2024",
+      "Registro SMA SNIFA 2025"
+    ],
+    "actors": [
+      "Analista Ambiental",
+      "Motor CoVe",
+      "Director de Comunicaciones"
+    ],
+    "steps": [
+      "Detección de diferencia numérica",
+      "Generación de subpreguntas CoVe sobre perímetros contables",
+      "Verificación de captación vs consumo",
+      "Emisión de memo explicativo"
+    ],
+    "states": [
+      "Discrepancy_Found",
+      "CoVe_Executed",
+      "Context_Reconciled",
+      "Memo_Generated"
+    ],
+    "outputs": [
+      "Memo de consistencia técnica para vocero"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CRC_P06_202",
+      "type": "caso_prueba",
+      "name": "Caso CRC-P06-202: Consumo de Agua y SNIFA",
+      "aliases": [
+        "Water Consumption Conflict Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CRC_P06_202",
+      "predicate": "ejemplifica_resolucion_de",
+      "object_id": "ENT_DISCREPANCY_RECORD",
+      "valid_from": "2025-04-14",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X14-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Permite responder con solidez a ONG y fiscalizadores sin titubear sobre la veracidad de las cifras públicas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

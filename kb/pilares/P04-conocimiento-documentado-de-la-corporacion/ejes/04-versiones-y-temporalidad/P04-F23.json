@@ -1,0 +1,142 @@
+{
+  "question_id": "P04-F23",
+  "pilar": "P04",
+  "eje": "Versiones y temporalidad",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre versiones y temporalidad?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos relativos a versiones y temporalidad corporativa se sustentan en cuatro fuentes primarias del corpus: 1) W3C DCAT-3 Data Catalog Vocabulary (mayo 2024), que define las propiedades de versionado y sustitución documental (`dcterms:replaces`, `dcterms:isReplacedBy`); 2) W3C PROV-O (abril 2013), que formaliza el linaje de revisión entre entidades (`prov:wasRevisionOf`) e invalidación temporal (`prov:invalidatedAtTime`); 3) DCMI Metadata Terms (2020), que aporta el estándar global de metadatos de vigencia temporal (`dcterms:valid`, `dcterms:temporal`); y 4) P04_RESEARCH_DOSSIER (30 de septiembre de 2026, Secciones 2.3 y 4), que integra la teoría bitemporal y el protocolo de superación documental para asuntos corporativos.",
+  "findings": [
+    {
+      "claim_id": "P04-F23-C1",
+      "claim": "Los estándares W3C DCAT-3, PROV-O y DCMI fundamentan matemáticamente el modelo de superación inmutable y preservación histórica sin destrucción de evidencia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2013-2026",
+        "region": "Internacional",
+        "actor": "W3C / DCMI"
+      },
+      "evidence": [
+        {
+          "source_id": "d1f9b36e-6fd4-411a-8e8a-da15aa5ed9b8",
+          "source_title": "W3C DCAT-3: Data Catalog Vocabulary Version 3",
+          "original_url": "https://www.w3.org/TR/vocab-dcat-3/",
+          "locator": "Dataset Versioning and Relationships",
+          "excerpt_short": "Provides normative properties for describing relationships between dataset versions and replacing outdated distributions.",
+          "source_date": "2024-05-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "5737d422-55c7-4103-9b0c-8148106d1fa0",
+          "source_title": "W3C PROV-O: The PROV Ontology",
+          "original_url": "https://www.w3.org/TR/prov-o/",
+          "locator": "Expanded Terms: wasRevisionOf",
+          "excerpt_short": "A revision is an entity that was derived from another entity, where the new entity is considered an updated version of the original.",
+          "source_date": "2013-04-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de especificaciones formales W3C en el corpus P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus normativo de temporalidad"
+    ],
+    "actors": [
+      "Standards Verifier",
+      "Provenance Auditor"
+    ],
+    "steps": [
+      "Cotejo de definiciones de W3C PROV-O y DCAT-3",
+      "Alineación de axiomas con reglas de base de datos"
+    ],
+    "states": [
+      "Verified",
+      "Standards_Aligned"
+    ],
+    "outputs": [
+      "Matriz de respaldo normativo para el subsistema temporal"
+    ],
+    "exceptions": [
+      "Ambigüedades en la interpretación de invalidación"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TEMPORAL_STANDARDS",
+      "type": "fuentes_normativas",
+      "name": "Estándares W3C de Procedencia y Temporalidad",
+      "aliases": [
+        "W3C Temporal Standards"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TEMPORAL_STANDARDS",
+      "predicate": "respalda_motor_temporal_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F23-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Rigor formal",
+      "Modelos propietarios ad-hoc": "Reglas de base de datos aisladas que no interoperan con catálogos externos.",
+      "Estándares W3C": "Ontología abierta interoperable con cualquier plataforma semántica global."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe seguir estrictamente los vocabularios W3C para facilitar auditorías externas y exportaciones reguladas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

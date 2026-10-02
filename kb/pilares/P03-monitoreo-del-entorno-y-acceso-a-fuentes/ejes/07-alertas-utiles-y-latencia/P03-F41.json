@@ -1,0 +1,137 @@
+{
+  "question_id": "P03-F41",
+  "pilar": "P03",
+  "eje": "Alertas útiles y latencia",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre alertas útiles y latencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los respaldos documentales comprenden: 1) Principios de evaluación y focalización en audiencias: AMEC Barcelona Principles 3.0 (2020), que fundamenta la eliminación de métricas de vanidad superficiales y la entrega basada en gobernanza; 2) Agrupamiento de eventos y mitigación de fatiga: Event Registry API Documentation (2026, sección 'Event Clustering and Deduplication'); 3) Latencias de procesamiento masivo: GDELT 2.0 Global Event Database (2015-2026, bloques de 15 minutos) y TVEyes Broadcast Feeds (2026, procesamiento continuo de televisión lineal); 4) Protocolos de streaming de baja latencia: AT Protocol Jetstream Documentation (2026, subsegundo); y 5) Marco de calibración editorial: P03_QUALITY_ADDENDUM (Septiembre 2026, Sección 1 y 2), que establece la necesidad de diferenciar hechos técnicos verificables respecto a promesas comerciales de 'inmediatez instantánea'.",
+  "findings": [
+    {
+      "claim_id": "P03-F41-C1",
+      "claim": "El respaldo documental de alertas y latencia integra estándares AMEC de focalización directiva, especificaciones de clustering de Event Registry, protocolos de streaming de AT Protocol y la adenda de calidad P03.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Corpus Canónico P03"
+      },
+      "evidence": [
+        {
+          "source_id": "5eaa5b99-624c-4877-87be-66c339c7b6d4",
+          "source_title": "AMEC Barcelona Principles 3.0 & Integrated Evaluation Framework",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principle 7: Integrity of Measurement",
+          "excerpt_short": "Measurement and alerts must ensure transparency, avoiding misleading claims of universal or instantaneous coverage.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:30:00-03:00"
+        },
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 1: Propósito y Rigor Epistémico",
+          "excerpt_short": "Deslinda los hechos técnicos directamente verificables en documentación primaria oficial respecto a las inferencias operativas, estimaciones de mercado de terceros e hipótesis.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de especificaciones técnicas y estándares internacionales.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de citas de alertas"
+    ],
+    "actors": [
+      "Audit Worker"
+    ],
+    "steps": [
+      "Verificación de especificaciones",
+      "Comprobación de latencias",
+      "Aprobación de referencias"
+    ],
+    "states": [
+      "Raw_Citations",
+      "Verified_Citations",
+      "Corpus_Approved"
+    ],
+    "outputs": [
+      "Catálogo de respaldo de evidencia de alertas certificado"
+    ],
+    "exceptions": [
+      "Afirmaciones publicitarias de latencia instantánea desmentidas por la evidencia"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ALERTS_EVIDENCE_CORPUS",
+      "type": "corpus_documental",
+      "name": "Corpus de Evidencia de Alertas P03",
+      "aliases": [
+        "Alerts Evidence Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ALERTS_EVIDENCE_CORPUS",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "Eje_Alertas_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F41-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Mantener una base de conocimiento documental para certificar la credibilidad de los SLAs de alertas en BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "question_id": "P08-C16",
+  "pilar": "P08",
+  "eje": "Experimentos comerciales",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué sigue sin prueba sobre experimentos comerciales, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la tasa real de conversión de pilotos guiados a contratos anuales de USD 60.000 en el contexto macroeconómico chileno actual, pues las cifras de éxito se apoyan en benchmarks de compras de innovación de la CCS y proyecciones del dossier. En cuanto a fuentes fallidas del corpus, fallaron las fuentes del IPR (6fb2d4e3 y 111b114d), sustituidas canónicamente por PRSA Guidance on AI & Ethics (8aa1bd49-38e4-4528-9a67-b4b2c3c6b6d3) y Page Society. La validación mínima concluyente para cerrar la incertidumbre consiste en ejecutar la primera cohorte experimental real de 3 pilotos pagados con Minera Cordillera Norte S.A., Holding Energético Andes-Sur y Celulosa del Biobío S.A. durante 60 días, registrando la conversión matemática efectiva a órdenes de compra corporativas anuales.",
+  "findings": [
+    {
+      "claim_id": "P08-C16-C1",
+      "claim": "La tasa empírica de conversión comercial definitiva solo quedará probada tras ejecutar la primera cohorte de 3 pilotos pagados en corporaciones de sectores regulados en Chile.",
+      "epistemic_status": "inferencia",
+      "scope": "final_commercial_validation_gap",
+      "evidence": [
+        {
+          "source_title": "P08_GAPS_AND_VALIDATION",
+          "source_id": "b37bbf38-9c0d-4dc9-bf01-ac0b24ed0bd4",
+          "locator": "Sección 8 'Vacíos de Información Críticos: Eje 8 y Cierre de Pilar'",
+          "retrieved_at": null,
+          "excerpt_short": "Conclusión de validación de P08: La viabilidad económica, los márgenes superiores al 73% y la superioridad del modelo Tech-Enabled están plenamente fundamentados en fuentes secundarias y modelos matemáticos. La prueba de fuego definitiva exige ejecutar la cohorte inicial de 3 pilotos pagados para constatar la firma de las tres primeras órdenes de compra anuales de USD 60.000.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 10 'Cierre Metodológico y Traspaso a Ejecución'",
+          "retrieved_at": null,
+          "excerpt_short": "El cierre formal de P08 certifica que las hipótesis de modelo de negocio quedan estructuradas y listas para su contraste en los pilares operativos P09, P10 y P11.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Síntesis concluyente de vacíos y condiciones de validación final en P08.",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Diseño de cohorte experimental",
+      "3 acuerdos de piloto pagado",
+      "Seguimiento de orden de compra"
+    ],
+    "actors": [
+      "Equipo Fundador BRIDGE",
+      "Comité de Dirección",
+      "3 CCOs Clientes"
+    ],
+    "steps": [
+      "Despliegue simultáneo de 3 pilotos de 60 días",
+      "Medición de uso y cumplimiento de KPIs",
+      "Presentación de contrato anual al día 45",
+      "Registro de conversión y facturación"
+    ],
+    "states": [
+      "Planificación de Cohorte",
+      "Pilotos en Terreno",
+      "Conversión Medida",
+      "Viabilidad de Negocio Certificada"
+    ],
+    "outputs": [
+      "Validación empírica final del modelo de negocio de BRIDGE"
+    ],
+    "exceptions": [
+      "Conversión parcial (2 de 3) que active la compuerta de ajuste menor de pricing"
+    ]
+  },
+  "entities": [
+    "Cohorte Inicial de 3 Pilotos",
+    "Minera Cordillera Norte",
+    "Holding Andes-Sur",
+    "Celulosa del Biobío",
+    "Validación Comercial Definitiva"
+  ],
+  "relations": [
+    {
+      "from": "Cohorte Inicial 3 Pilotos",
+      "to": "Validación Comercial Definitiva",
+      "type": "provides_empirical_proof_for"
+    },
+    {
+      "from": "P08 Viabilidad",
+      "to": "P09 Memoria de Relaciones",
+      "type": "transitions_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Plan de negocios en papel vs Ejecución de cohorte real",
+      "diferencia": "El plan en papel es una hipótesis bien fundada; la cohorte de 3 pilotos pagados convierte la hipótesis en una empresa operativa autofinanciada."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "target_initial_cohort_size": "3 clientes corporativos",
+    "target_initial_arr_unlocked": "USD 180.000 ARR en los primeros 90 días"
+  },
+  "bridge_implications": "Ejecutar de inmediato las acciones comerciales de preventa para iniciar la primera cohorte de 3 pilotos pagados.",
+  "open_gaps": [
+    "Monitorear el plazo de pago efectivo a 30 o 60 días tras la emisión de las primeras facturas."
+  ],
+  "next_question_ids": [
+    "P09-F01",
+    "P09-F02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

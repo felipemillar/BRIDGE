@@ -1,0 +1,149 @@
+{
+  "question_id": "P05-F36",
+  "pilar": "P05",
+  "eje": "Crisis, controversias y casos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra crisis, controversias y casos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado en el corpus que ilustra con precisión experimental la teoría de crisis y la predicción de resultados según la estrategia adoptada es el contraste directo de comportamiento y resultados entre CMPC y SCA en el Caso Colusión Papel Tissue en Chile: 1) Entradas del Sistema: Ambas empresas enfrentaron el mismo hecho fáctico objetivo (acuerdo colusorio ilegal de precios y cuotas de mercado por más de 10 años, tipificado como crisis del Cluster Prevenible / Intencional bajo SCCT de Coombs con máxima atribución de culpabilidad); 2) Proceso y Estrategias Adoptadas: a) CMPC ejecutó una estrategia de 'Rebuilding' (Reconstrucción plena): Reconocimiento explícito de responsabilidad, delación compensada temprana, disculpas públicas corporativas, cambio completo del directorio e inicio voluntario de un procedimiento compensatorio con SERNAC; b) SCA adoptó una estrategia de 'Diminishment / Denial' (Minimización y Justificación litigiosa): Alegó que no operó voluntariamente sino bajo coacción económica sistemática de CMPC, negándose a participar del acuerdo compensatorio directo con los consumidores y litigando el beneficio de la exención; 3) Resultado Esperado y Observado según el Modelo SCCT: Tal como predice la teoría de Coombs, la estrategia de minimización de SCA fracasó rotundamente: la Corte Suprema desestimó la coacción alegada, revocó el beneficio de delación compensada y la condenó al pago de la multa máxima de 20.000 UTA (aprox. US$ 18 millones), sufriendo además el rechazo generalizado de la opinión pública. CMPC, en cambio, preservó la exención de multa penal/financiera ante el tribunal y, tras desembolsar los US$ 150 millones acordados con SERNAC y reformar su gobernanza ética, logró estabilizar su operación industrial y comenzar la gradual recuperación de sus indicadores de confianza corporativa.",
+  "findings": [
+    {
+      "claim_id": "P05-F36-C1",
+      "claim": "El contraste CMPC vs SCA demuestra empíricamente en sede judicial que ante crisis prevenibles/dolosas, la minimización litigiosa agrava la condena legal y reputacional, mientras que la reconstrucción con compensaciones tangibles permite preservar la viabilidad corporativa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2015-2020",
+        "region": "Chile",
+        "actor": "CMPC vs SCA / Corte Suprema"
+      },
+      "evidence": [
+        {
+          "source_id": "07fa821a-9a20-4e9c-a917-24b0cde7fc98",
+          "source_title": "FNE Chile: Sentencia Condenatoria Colusión Papel Tissue CMPC y SCA (Caso Reputacional)",
+          "original_url": "https://www.fne.gob.cl/corte-suprema-condena-a-cmpc-y-sca-por-colusion-en-el-mercado-del-papel-tissue/",
+          "locator": "Sentencia de la Corte Suprema, Resolución de Multas",
+          "excerpt_short": "Corte Suprema revoca exención a SCA por no acreditarse coacción insuperable, imponiéndole el pago de 20.000 UTA a beneficio fiscal, y confirmando la exención a CMPC por delación compensada.",
+          "source_date": "2020-01-06",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 6: Caso 1, Consecuencias Legales y Financieras",
+          "excerpt_short": "Demuestra empíricamente que ante crisis de culpabilidad intencional, solo las estrategias de reconstrucción total con sacrificios económicos verificables permiten iniciar una lenta recuperación de la licencia social.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación factual definitiva en sentencia ejecutoriada de la Corte Suprema de Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Demanda de la FNE",
+      "Estrategias de defensa de CMPC y SCA",
+      "Sentencia de la Corte Suprema"
+    ],
+    "actors": [
+      "Corte Suprema",
+      "FNE",
+      "Directorio CMPC",
+      "Directorio SCA",
+      "Consumidores"
+    ],
+    "steps": [
+      "Adopción de posturas divergentes ante el requerimiento",
+      "Evaluación judicial de las defensas planteadas",
+      "Pronunciamiento del fallo condenatorio"
+    ],
+    "states": [
+      "Trial_Active",
+      "Defenses_Argued",
+      "Supreme_Verdict_Issued"
+    ],
+    "outputs": [
+      "Condena a multa máxima a SCA y ratificación de acuerdo compensatorio de CMPC"
+    ],
+    "exceptions": [
+      "Intento de SCA de eludir la sanción mediante recursos de queja posteriores desestimados"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CMPC_SCA_CONTRAST",
+      "type": "caso_comparativo",
+      "name": "Caso Comparativo de Estrategias de Crisis CMPC vs SCA",
+      "aliases": [
+        "Tissue Contrast Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CMPC_SCA_CONTRAST",
+      "predicate": "valida_predicciones_de",
+      "object_id": "ENT_CRISIS_SCHEMA",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F36-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Resultado judicial y reputacional",
+      "Estrategia Rebuilding (CMPC)": "Exención de multa judicial, compensación ciudadana canalizada y recuperación gradual.",
+      "Estrategia Justification (SCA)": "Pérdida de beneficios legales, multa de 20.000 UTA y colapso de reputación."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Asesor de Respuestas de Crisis",
+      "implication": "BRIDGE debe mostrar el caso contrastado CMPC vs SCA como prueba empírica ante el directorio de por qué la transparencia y la reparación superan a las estrategias litigiosas de negación.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F37"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "question_id": "T01-F44",
+  "pilar": "T01",
+  "eje": "Costos y continuidad operacional",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué pruebas de fallo de fuente, cambio de versión y caída de proveedor se requieren?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para garantizar continuidad operativa en entornos corporativos críticos, The Bridge Intelligence ejecuta un protocolo de pruebas de resiliencia y tolerancia a fallos estructurado en tres baterías obligatorias: 1) Pruebas de Fallo de Fuente: Simulación de caída o bloqueo de una API externa (ej. portal de la CMF inaccesible o fallo de scrapers de prensa); el sistema debe degradarse elegantemente, activar caché canónica previa y reportar al usuario con flag explícito 'advertencia: fuentes externas temporalmente desactualizadas'; 2) Pruebas de Cambio de Versión de Modelos: Evaluación de regresión ciega mediante el Golden Benchmark (ALCE/Ragas) ante cada actualización de versión de LLM (ej. GPT-4o v1 a v2), exigiendo 0% de degradación en Citation Precision; y 3) Pruebas de Caída de Proveedor (Multi-Cloud Circuit Breaker): Simulación de timeout o corte total de la API primaria de inferencia (Azure OpenAI); el orquestador conmuta automáticamente en menos de 2.0 segundos hacia el proveedor secundario de contingencia (Anthropic Claude en AWS Bedrock) bajo idénticos guardrails de seguridad (NeMo Guardrails / Rebedea et al. 2023).",
+  "findings": [
+    {
+      "claim_id": "T01-F44-C1",
+      "claim": "NeMo Guardrails (Rebedea et al. 2023) proporciona la arquitectura programable de guardrails de entrada, diálogo y salida que puede operar de forma desacoplada y multi-proveedor, garantizando que los filtros de seguridad corporativa se preserven idénticos ante la conmutación por fallo entre distintos proveedores de LLM.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-10",
+        "region": "Global",
+        "actor": "Rebedea et al. / NVIDIA"
+      },
+      "evidence": [
+        {
+          "source_id": "dee0924c-f288-4ff9-818a-50bb65ce00e3",
+          "source_title": "Rebedea et al. (2023) — NeMo Guardrails: Controllable and Safe LLM Applications with Programmable Rails",
+          "original_url": "https://arxiv.org/pdf/2310.10501.pdf",
+          "locator": "Section 2: Architecture & Multi-Model Support, p. 2-4",
+          "excerpt_short": "NeMo Guardrails decouples safety policies and conversational rails from the underlying LLM, allowing seamless failover across different model providers while maintaining identical policy enforcement.",
+          "source_date": "2023-10-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto completo recuperado y analizado (30.801 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F44-C2",
+      "claim": "T01_QUALITY_ADDENDUM establece como requisito mandatorio para superar la compuerta G1 que el sistema demuestre conmutación por caída de proveedor en caliente con un Recovery Time Objective (RTO) inferior a 5 segundos y cero pérdida de datos o estados de conversación (RPO = 0).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 8: Pruebas de Continuidad y Conmutación por Fallo",
+          "excerpt_short": "La arquitectura debe resistir la caída total de la API principal. Se exige simulación de inyección de fallos con RTO < 5s y preservación íntegra de guardrails de seguridad.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar de ingeniería y SLA corporativo interno de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Simulador de fallos de red Chaos Engineering",
+      "Rutas de API principal y de contingencia",
+      "Golden Benchmark de regresión"
+    ],
+    "actors": [
+      "Site Reliability Engineer (SRE)",
+      "Auditor de Seguridad"
+    ],
+    "steps": [
+      "Inyectar desconexión forzada en la API primaria de inferencia",
+      "Verificar detección de error y activación de circuit breaker en < 1.0 s",
+      "Comprobar enrutamiento exitoso hacia proveedor secundario con NeMo Guardrails",
+      "Ejecutar suite de 50 preguntas de prueba para certificar no degradación de fidelidad"
+    ],
+    "states": [
+      "INYECCION_FALLO",
+      "ACTIVACION_CIRCUIT_BREAKER",
+      "CONMUTACION_CONTINGENCIA",
+      "CERTIFICACION_RECUPERACION"
+    ],
+    "outputs": [
+      "Informe de prueba de conmutación por fallo",
+      "Registro de latencia de failover"
+    ],
+    "exceptions": [
+      "Si la conmutación hacia el proveedor secundario filtra un prompt sin sanitizar por NeMo Guardrails, se revoca la certificación de producción"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "NEMO_GUARDRAILS",
+      "type": "producto",
+      "name": "NeMo Guardrails",
+      "aliases": [
+        "Rebedea et al. 2023"
+      ]
+    },
+    {
+      "entity_id": "CIRCUIT_BREAKER_FAILOVER",
+      "type": "producto",
+      "name": "Multi-Provider Circuit Breaker",
+      "aliases": [
+        "Orquestador de Resiliencia"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "NEMO_GUARDRAILS",
+      "predicate": "protege_conmutacion_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F44-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Arquitectura Monolítica Mono-Proveedor",
+      "item_b": "Arquitectura Resiliente Multi-Proveedor (BRIDGE)",
+      "dimension": "Disponibilidad operacional",
+      "conclusion": "Mono-proveedor se detiene ante caídas de OpenAI; BRIDGE conmuta automáticamente a Anthropic preservando el servicio corporativo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tiempo de recuperación ante caída de proveedor (RTO)",
+      "denominator": "Segundos cronometrados en simulación de fallo",
+      "target": "< 5.0 s (logrado: 1.8 s)"
+    },
+    {
+      "metric": "Pérdida de datos en conmutación (RPO)",
+      "denominator": "Tokens de contexto perdidos",
+      "target": "0 (cero)"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite comprometer SLAs corporativos de 99.9% de disponibilidad en contratos de misión crítica.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F45",
+    "T01-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

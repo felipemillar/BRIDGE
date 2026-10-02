@@ -1,0 +1,141 @@
+{
+  "question_id": "P02-X16",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Proximidad funcional verificable",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre proximidad funcional verificable, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la viabilidad computacional de mantener sincronizado un grafo unificado de conocimiento corporativo que procese simultáneamente: a) 10,000 menciones de prensa y redes por día (Escuchar); b) 500 compromisos socioambientales georreferenciados (Relacionar); c) Cientos de actas de Q&A corporativo aprobadas (Hablar); y d) Millones de tokens de documentos técnicos confidenciales en SharePoint (Saber), manteniendo tiempos de consulta semántica sub-segundo sin degradar la precisión: 1) Brecha: Ningún equipo de desarrollo ha documentado una prueba de carga y consistencia ácida sobre un grafo unificado de estas dimensiones para asuntos corporativos; 2) Fuentes fallidas/parciales: Las arquitecturas teóricas describen grafos de conocimiento, pero omiten benchmarks de latencia de sincronización ante ráfagas masivas de noticias durante una crisis viral; 3) Validación mínima: Desplegar una instancia de prueba en Neo4j o Google BigQuery Graph con un grafo sintético de 100,000 nodos y 1,000,000 de relaciones, inyectando un flujo continuo de 50 eventos/segundo y midiendo la latencia de respuesta ante consultas complejas de vocería y análisis de riesgo.",
+  "findings": [
+    {
+      "claim_id": "P02-X16-C1",
+      "claim": "La escalabilidad computacional y la latencia de un grafo de datos unificado que integre en tiempo real los cuatro módulos durante contingencias masivas no cuenta con pruebas de estrés empíricas documentadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Grafos BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Graph Scalability and Real-Time Event Latency Gap",
+          "excerpt_short": "Maintaining sub-second graph traversal across heterogeneous data types (broadcast signals, GIS community commitments, legal Q&A) during high-throughput crisis spikes remains unproven.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de brechas de ingeniería de sistemas en el atlas de validación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Modelo de grafo unificado",
+      "Generador de tráfico sintético de noticias de crisis",
+      "Banco de pruebas de hardware y base de datos"
+    ],
+    "actors": [
+      "Ingeniero de Rendimiento de Grafos",
+      "Arquitecto de Big Data"
+    ],
+    "steps": [
+      "Poblado de base de datos con 100K nodos y 1M relaciones",
+      "Inyección de carga de 50 eventos/segundo",
+      "Monitoreo de latencia de consulta de vocería",
+      "Determinación de cuellos de botella"
+    ],
+    "states": [
+      "Grafo_Poblado",
+      "Carga_Inyectada",
+      "Rendimiento_Medido"
+    ],
+    "outputs": [
+      "Reporte de ingeniería de escalabilidad de grafo unificado"
+    ],
+    "exceptions": [
+      "Degradación de memoria RAM en índices vectoriales durante picos de ingesta"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRUEBA_ESTRES_GRAFO",
+      "type": "prueba_ingenieria",
+      "name": "Prueba de Estrés Grafo Unificado 4 Módulos",
+      "aliases": [
+        "Graph Stress Test"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRUEBA_ESTRES_GRAFO",
+      "predicate": "valida_viabilidad_tecnica_de",
+      "object_id": "Arquitectura_Unificada_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X16-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Diseño en Papel vs Prueba de Estrés Computacional",
+      "Diseño en Papel": "Diagramas de arquitectura limpios con flechas entre módulos que asumen rendimiento perfecto.",
+      "Prueba de Estrés Computacional": "Medición real de latencias, consumo de CPU y consistencia de datos bajo fuego de crisis."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe ejecutar esta prueba de estrés en su fase de laboratorio para asegurar que el sistema no colapse ante contingencias mediáticas masivas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_GRAPH_SCALABILITY",
+      "description": "Falta de prueba de estrés de grafo unificado multi-módulo en tiempo real",
+      "action": "Ejecutar benchmark con 100K nodos"
+    }
+  ],
+  "next_question_ids": [
+    "P02-X17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

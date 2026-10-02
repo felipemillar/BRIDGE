@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X10",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Proximidad funcional verificable",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué evidencia muestra flujo operativo entre módulos en vez de páginas comerciales separadas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La evidencia técnica documentada demuestra que en los grandes conglomerados el flujo operativo entre módulos no existe como arquitectura unificada, operando como silos comerciales con interfaces separadas: 1) Cision y Brandwatch: tras más de 5 años de la adquisición por Platinum Equity, Brandwatch continúa comercializándose en un portal independiente para social listening y análisis de audiencia de consumo, mientras que CisionOne maneja el monitoreo de medios tradicionales y periodistas, sin sincronización automática de entidades ni alertas cruzadas; 2) Hootsuite y Talkwalker: operan con consolas independientes de gestión de redes sociales y escucha social avanzada; 3) Open Point Group: aunque unificó Consultation Manager y Converlens bajo una misma marca corporativa, los usuarios continúan autenticándose en entornos de software distintos según si gestionan actas territoriales o consultas públicas ciudadanas; 4) Conclusión: la integración actual es exclusivamente a nivel de marca comercial, ventas empaquetadas y facturación consolidada, careciendo de flujos operacionales telemétricos en tiempo real entre módulos.",
+  "findings": [
+    {
+      "claim_id": "P02-X10-C1",
+      "claim": "Las suites comerciales de grandes conglomerados operan con interfaces, bases de datos y consolas segregadas, careciendo de un flujo operacional automatizado entre sus módulos de escucha y gestión.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Cision/Brandwatch, Hootsuite/Talkwalker, Open Point"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Section 5: Operational Flow vs Segregated Interfaces",
+          "excerpt_short": "Platform architectures remain segregated post-acquisition; data exchange between traditional PR monitoring and social intelligence relies on manual exports or disconnected logins.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de arquitectura de producto e interfaces de usuario documentadas.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuentas de usuario en Cision y Brandwatch",
+      "Auditoría de navegación y tráfico de red",
+      "Manuales de administración de producto"
+    ],
+    "actors": [
+      "Auditor de Experiencia de Usuario",
+      "Ingeniero de Integración"
+    ],
+    "steps": [
+      "Verificación de autenticación única (SSO)",
+      "Trazado de intercambio de datos entre módulos",
+      "Constatación de necesidad de exportación manual CSV/PDF"
+    ],
+    "states": [
+      "Entornos_Inspeccionados",
+      "Aislamiento_Verificado",
+      "Silos_Comprobados"
+    ],
+    "outputs": [
+      "Evaluación de fricción operacional de suites adquiridas"
+    ],
+    "exceptions": [
+      "Integraciones superficiales mediante widgets iFrame embebidos en el dashboard principal"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SILOS_OPERACIONALES",
+      "type": "patron_arquitectura",
+      "name": "Silos Operacionales Post-Adquisición",
+      "aliases": [
+        "Segregated Architecture"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SILOS_OPERACIONALES",
+      "predicate": "caracteriza_a",
+      "object_id": "Suites_M&A_Mercado",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X10-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Flujo Integrado Nativo (BRIDGE) vs Silos de M&A (Cision/Brandwatch)",
+      "Flujo Integrado Nativo": "Una alerta de radio actualiza el perfil del actor y genera la minuta de vocería en el mismo hilo de ejecución.",
+      "Silos de M&A": "El usuario debe salir de CisionOne, abrir Brandwatch en otra pestaña, descargar un Excel y cargarlo manualmente en su CRM."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La fluidez operacional nativa sin fricción de cambio de contexto es una de las mayores ventajas de diseño de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

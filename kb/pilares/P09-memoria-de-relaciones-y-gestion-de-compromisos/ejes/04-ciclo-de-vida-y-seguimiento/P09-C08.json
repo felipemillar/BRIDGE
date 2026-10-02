@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-C08",
+  "pilar": "P09",
+  "eje": "Ciclo de vida y seguimiento",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué sigue sin prueba sobre ciclo de vida y seguimiento, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Brecha sin Prueba: El corpus no documenta la tasa de lectura y efectividad real de las alertas preventivas despachadas mediante mensajería instantánea (Slack, MS Teams, WhatsApp) frente al correo electrónico tradicional en personal de faena de terreno, existiendo incertidumbre sobre si las notificaciones push reducen efectivamente el olvido de plazos o provocan mayor fatiga de alertas. Fuentes Fallidas: Los documentos duplicados de OECD (`010df9f7`, `87991dd4`, `22566ef0`) presentaban solapamientos de contenido y problemas de renderizado web, los cuales quedaron completamente resueltos con la ingesta del reporte oficial PDF completo (`49910d9b`, 86.856 tokens). Validación Mínima Requerida: Ejecutar una prueba A/B durante un trimestre en dos faenas operacionales (Grupo A: alertas por email corporativo tradicional; Grupo B: alertas escalonadas por Slack/Teams con webhook interactivo), midiendo el tiempo de respuesta (Lead Time) y la tasa de cumplimiento oportuno de hitos intermedios.",
+  "findings": [
+    {
+      "claim_id": "P09-C08-C1",
+      "claim": "La efectividad comparativa de las alertas push en canales de chat vs correo tradicional carece de evidencia empírica en el corpus; los HTMLs de la OCDE fueron resueltos con el PDF oficial; se requiere prueba A/B de telemetría de alertas.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "contrast_lifecycle_tracking_gaps",
+      "evidence": [
+        {
+          "source_title": "P09_PENDING_SOURCES_RESOLUTION",
+          "source_id": "dcb397bc-d659-44fc-af6b-e394801f12a9",
+          "locator": "Sección 'Ingesta y Deduplicación del Reporte Oficial OECD 2024'",
+          "retrieved_at": null,
+          "excerpt_short": "Se resolvió la incertidumbre de fuentes dispersas de la OCDE al integrar el PDF oficial consolidado de 86.856 tokens, deduplicando los tres registros web previos y asegurando cobertura íntegra.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_GAPS_AND_VALIDATION",
+          "source_id": "33944e01-6a0f-46f1-bfa3-19224f1c8d72",
+          "locator": "Sección 'Gaps en Canales de Alerta y Telemetría'",
+          "retrieved_at": null,
+          "excerpt_short": "Incertidumbre: Se requiere validar si los ingenieros de faena atienden más rápido las alertas por mensajería que por correo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación transparente de la brecha de usabilidad en terreno.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.92,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Padrón de usuarios de prueba",
+      "Configuración de canales de alerta",
+      "Métricas de interacción con la notificación"
+    ],
+    "actors": [
+      "Ingenieros de Faena (Grupo A y B)",
+      "Administrador BRIDGE",
+      "Analista de Usabilidad"
+    ],
+    "steps": [
+      "Despliegue de alertas diferenciadas por grupo",
+      "Registro de timestamp de apertura y clic en el enlace",
+      "Cálculo de tasa de resolución de hitos a tiempo",
+      "Comparación estadística de medias"
+    ],
+    "states": [
+      "Test A/B Iniciado",
+      "Datos de Telemetría Recolectados",
+      "Análisis Estadístico Completado"
+    ],
+    "outputs": [
+      "Reporte de efectividad de canales de notificación"
+    ],
+    "exceptions": [
+      "Usuarios en zonas sin cobertura celular quedan excluidos del análisis comparativo durante sus turnos de descanso"
+    ]
+  },
+  "entities": [
+    "Test A/B de Alertas",
+    "OECD PDF Oficial (`49910d9b`)",
+    "Deduplicación de Fuentes",
+    "Slack / Teams API",
+    "P09_PENDING_SOURCES_RESOLUTION"
+  ],
+  "relations": [
+    {
+      "from": "HTMLs OCDE",
+      "to": "PDF Oficial OCDE",
+      "type": "DEDUPLICATED_INTO"
+    },
+    {
+      "from": "Alerta Preventiva",
+      "to": "Slack / Teams",
+      "type": "TESTED_THROUGH"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Alerta por email que se pierde en la bandeja vs Alerta interactiva en canal de chat",
+      "diferencia": "El email suele quedar sepultado entre cientos de correos; el canal de chat con botón de acción inmediata permite registrar avances con un clic."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "test_duration": "90 días (1 trimestre operacional)",
+    "oecd_pdf_tokens_verified": "86.856 tokens en fuente oficial consolidada"
+  },
+  "bridge_implications": "Diseñar la arquitectura de notificaciones con adaptadores intercambiables (Email, Webhook, Slack Bot) para facilitar el test A/B.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C09",
+    "P09-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

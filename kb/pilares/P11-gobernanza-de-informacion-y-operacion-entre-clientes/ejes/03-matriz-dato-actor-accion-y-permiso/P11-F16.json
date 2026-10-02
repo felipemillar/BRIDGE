@@ -1,0 +1,149 @@
+{
+  "question_id": "P11-F16",
+  "pilar": "P11",
+  "eje": "Matriz dato, actor, acción y permiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar matriz dato, actor, acción y permiso de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El modelamiento estructurado de la matriz de autorización y bitácora exige formalizar: 1) Entidad AccessPolicyRule (rule_id, subject_role: [A1_ADMIN, A2_CORP_INTERNAL, A3_CONSULTANT, A4_C_LEVEL, A5_AUDITOR], object_classification: [D1, D2, D3, D4, D5], action: [CREATE, READ, UPDATE, DELETE, EXPORT, VECTORIZE, SIGN_OFF], purpose_constraint: list, environment_conditions: [MFA_REQUIRED, TIME_WINDOW, ALLOWED_CIDR], effect: [PERMIT, DENY]); 2) Entidad AuditTrailRecord (log_id, tenant_id, timestamp_utc, user_id, user_role, action, resource_id, classification, purpose_code, client_ip, prev_record_hash, record_hash_sha256); 3) Entidad SessionToken (token_id, user_id, tenant_id, issued_at, expires_at_ttl_15m, is_revoked: boolean); 4) Relaciones de Grafo (GOVERNED_BY_RULE, AUTHORED_ACTION, APPLIES_TO_RESOURCE); y 5) Condiciones de Seguridad Invariables (if (role == 'A3_CONSULTANT' and classification in ['D3', 'D4', 'D5']) -> effect = DENY, if (action == 'EXPORT' and role != 'A4_C_LEVEL') -> effect = DENY, immutable_prev_hash_verification == true).",
+  "findings": [
+    {
+      "claim_id": "P11-F16-C1",
+      "claim": "La matriz de autorización y auditoría exige esquemas estructurados para reglas de política ABAC, registros forenses de auditoría y tokens de sesión con invariantes que bloqueen accesos de consultores externos a datos confidenciales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_authorization_schema",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 2.4 'Modelo de Datos de Autorización y Bitácora'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de gobernanza de permisos: AccessRule, AuditLog, UserSession. Invariantes del esquema: Denegación automática a consultores (A3) para clases D3/D4/D5 y encadenamiento criptográfico estricto de hashes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-162: Guide to Attribute Based Access Control (ABAC) Definition and Considerations",
+          "source_id": "2a88e293-2b53-4430-8dca-26e545448a9f",
+          "locator": "Section 4 'Policy Model and Rule Structures'",
+          "retrieved_at": null,
+          "excerpt_short": "Rules are formal statements expressing the conditions under which access permissions are granted, evaluating logical conjunctions of subject, object, action, and environment attributes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño relacional consistente con las especificaciones de ABAC de NIST SP 800-162 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de modelo de políticas",
+      "Reglas corporativas de segregación",
+      "Esquemas de base de datos"
+    ],
+    "actors": [
+      "Administrador de Seguridad",
+      "Motor OPA (Open Policy Agent)",
+      "Motor PostgreSQL"
+    ],
+    "steps": [
+      "Persistencia de políticas ABAC en tablas relacionales con compilación a JSON/Rego",
+      "Carga de reglas en memoria para evaluación sub-milisegundo en el PEP",
+      "Validación de que ninguna regla permita a consultores (A3) leer D3",
+      "Ejecución de triggers de verificación de hash encadenado en cada insert de auditoría",
+      "Emisión de alertas automáticas ante intentos de violar las invariantes de esquema"
+    ],
+    "states": [
+      "POLICIES_COMPILED",
+      "OPA_SYNCED",
+      "SCHEMA_CONSTRAINTS_LOCKED",
+      "AUDIT_CHAIN_MONITORED"
+    ],
+    "outputs": [
+      "Esquema estructurado de autorización y auditoría activo"
+    ],
+    "exceptions": [
+      "Corrupción detectada en el encadenamiento de hashes bloquea la base de datos para análisis forense"
+    ]
+  },
+  "entities": [
+    "AccessPolicyRule",
+    "AuditTrailRecord",
+    "NIST SP 800-162",
+    "Invariantes de Autorización",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "AccessPolicyRule",
+      "to": "PEP",
+      "type": "ENFORCES_CONDITIONS"
+    },
+    {
+      "from": "AuditTrailRecord",
+      "to": "AuditTrailRecord",
+      "type": "CHAINS_HASHES_TO_PREVIOUS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Políticas en código hardcoded vs Esquema estructurado ABAC desacoplado",
+      "diferencia": "El código hardcoded es propenso a bugs y difícil de auditar; el esquema estructurado desacoplado permite auditar y actualizar las reglas en caliente sin re-desplegar software."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "policy_decision_cache_hit_rate": "> 98% de resoluciones de permisos servidas en memoria caché",
+    "audit_hash_chain_verification_pass": "100% de registros con coincidencia matemática de hash encadenado"
+  },
+  "bridge_implications": "Facilita la certificación de cumplimiento ante auditores externos mediante exportación directa del modelo de políticas y verificación matemática de integridad de bitácoras.",
+  "open_gaps": [
+    "Pruebas de estrés del encadenamiento de hashes ante cargas de 10.000 transacciones concurrentes por segundo."
+  ],
+  "next_question_ids": [
+    "P11-F17",
+    "P11-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

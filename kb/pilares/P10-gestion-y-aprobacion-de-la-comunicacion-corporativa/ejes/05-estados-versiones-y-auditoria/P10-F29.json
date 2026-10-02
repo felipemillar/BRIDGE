@@ -1,0 +1,158 @@
+{
+  "question_id": "P10-F29",
+  "pilar": "P10",
+  "eje": "Estados, versiones y auditoría",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre estados, versiones y auditoría?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los preceptos técnicos, éticos y operacionales sobre estados, versionado y auditoría se fundamentan en fuentes primarias verificadas: 1) Estándares éticos internacionales de corrección y retractación: COPE (Committee on Publication Ethics, 2021) 'Retraction Guidelines', que fija el mandato de no borrado, marca de agua de retractación y enlace bidireccional permanente a la fe de erratas; 2) Políticas públicas de transparencia y no alteración silenciosa: Shire of Serpentine Jarrahdale 'Media Policy and Correction Protocols' (2023), que prohíbe la modificación clandestina de registros y exige rectificación documentada ante la ciudadanía; 3) Arquitectura de sistemas de registro de comunicaciones y sellado criptográfico: Broadsight 'System of Record for Corporate Communications' y 'Product Workflow and Communications Knowledge' (2024-2025), estableciendo la necesidad de libros de auditoría inmutables basados en hashes SHA-256; y 4) Flujos de aprobación editorial y trazabilidad: Presspage 'Content Approval Workflow and Newsroom FAQ' (2024), documentando la historia de versiones y trazabilidad de aprobadores.",
+  "findings": [
+    {
+      "claim_id": "P10-F29-C1",
+      "claim": "El marco de auditoría y ciclo de vida descansa en la confluencia de directrices éticas globales de publicación (COPE), normas de información pública y literatura de sistemas de registro corporativos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_base_audit_and_states",
+      "evidence": [
+        {
+          "source_title": "P10_SOURCE_INDEX: Indice Maestro de Fuentes, Auditoria y Jerarquia",
+          "source_id": "1c52f005-30d5-4877-9b75-31f0785411ca",
+          "locator": "Sección 'Cluster 4: Ciclo de Vida, Retractación y Auditoría'",
+          "retrieved_at": null,
+          "excerpt_short": "Mapeo de fuentes clave: COPE (estándar ético de corrección/retractación), Shire of Serpentine Jarrahdale (política de corrección pública), Broadsight (modelo System of Record), Presspage (historial de versiones).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "COPE: Committee on Publication Ethics - Retraction & Correction Guidelines",
+          "source_id": "d0f9e6c9-5476-410e-886f-4bbb38556d95",
+          "locator": "Section 'Maintaining the Integrity of the Record'",
+          "retrieved_at": null,
+          "excerpt_short": "The main purpose of retractions is to correct the literature and ensure its integrity rather than to punish the authors. Retracted notices must mention the reasons and basis for retraction.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Immutable History and Digital Signatures'",
+          "retrieved_at": null,
+          "excerpt_short": "Audit integrity requires complete non-repudiation, ensuring that every published iteration can be matched against an authentic approval event in the historical ledger.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación exhaustiva de fuentes originales con citas directas y correspondencia conceptual.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes primarias en fuentes/P10.json",
+      "Criterios de auditoría de la investigación"
+    ],
+    "actors": [
+      "Auditor Epistemológico",
+      "Investigador BRIDGE"
+    ],
+    "steps": [
+      "Inspección de citas directas en textos de COPE, Shire of Serpentine Jarrahdale y Broadsight",
+      "Validación de ausencia de fuentes fallidas o degradadas por CAPTCHA",
+      "Asignación de identificadores de evidencia",
+      "Sistematización en el índice maestro de fuentes"
+    ],
+    "states": [
+      "SOURCES_VERIFIED",
+      "CITATIONS_ALIGNED",
+      "EPISTEMIC_GROUNDING_CONFIRMED"
+    ],
+    "outputs": [
+      "Evidencia estructurada que blinda las respuestas frente a escrutinio"
+    ],
+    "exceptions": [
+      "Ninguna; las fuentes respaldan de forma textual los postulados de auditoría"
+    ]
+  },
+  "entities": [
+    "COPE",
+    "Shire Policy",
+    "Broadsight System of Record",
+    "Presspage",
+    "P10_SOURCE_INDEX"
+  ],
+  "relations": [
+    {
+      "from": "COPE",
+      "to": "Retractación Pública",
+      "type": "STANDARDIZES"
+    },
+    {
+      "from": "Broadsight",
+      "to": "Auditoría Criptográfica",
+      "type": "ARCHITECTS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Prácticas empíricas de agencias vs Estándares auditables internacionales",
+      "diferencia": "Las prácticas empíricas borran los tuits o posts erróneos; los estándares internacionales exigen fe de erratas y trazabilidad para proteger la reputación institucional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "source_verifiability_rate": "100% de fuentes rastreables con UUID activo en fuentes/P10.json"
+  },
+  "bridge_implications": "Confirma la validez y robustez de los protocolos de auditoría implementados en BRIDGE ante reguladores o auditorías de compliance.",
+  "open_gaps": [
+    "Incorporación de jurisprudencia comparada de la FTC (EE.UU.) en materia de eliminación de claims publicitarios engañosos."
+  ],
+  "next_question_ids": [
+    "P10-F30",
+    "P10-F31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

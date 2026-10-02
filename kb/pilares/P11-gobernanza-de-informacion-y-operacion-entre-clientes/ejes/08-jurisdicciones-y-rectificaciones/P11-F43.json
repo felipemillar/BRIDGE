@@ -1,0 +1,185 @@
+{
+  "question_id": "P11-F43",
+  "pilar": "P11",
+  "eje": "Jurisdicciones y rectificaciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué obligaciones de Chile, Brasil, UE u otras jurisdicciones están verificadas directamente?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Las obligaciones regulatorias verificadas directamente en fuentes legales primarias y reconciliadas en las directrices canónicas de BRIDGE son: 1) Chile: a) Ley N° 19.628 (Sobre Protección de la Vida Privada): Vigente en el régimen transitorio como marco residual para el tratamiento lícito de datos; b) Ley N° 21.719 (Protección de Datos Personales y Creación de la Agencia de Protección de Datos): Promulgada en 2024, sujeta a una vacatio legis legal de 24 meses que posterga su exigibilidad plena hacia fines de 2026; establece principios de licitud, responsabilidad proactiva, deberes formales para encargados de tratamiento (Art. 14), notificación obligatoria de vulneraciones en 72 horas (Art. 15) y sanciones de hasta 20.000 UTM; c) Ley N° 21.663 (Ley Marco de Ciberseguridad): Plenamente vigente desde abril de 2024, impone el deber legal vinculante de reportar incidentes de ciberseguridad con efectos significativos al CSIRT Nacional en un plazo perentorio de 3 horas (Art. 24); d) Ley N° 20.730 (Lobby): Regula la publicidad y registro de gestiones de intereses particulares; y e) Ley N° 18.045 (Mercado de Valores, Art. 10): Deber de reserva estricta para hechos esenciales reservados; 2) Brasil: Lei Nº 13.709 (LGPD) actualizada al 25 de febrero de 2026 por la Lei Nº 15.352 (Câmara dos Deputados / Presidência da República), obligando al nombramiento de Encargado (DPO), adopción de medidas de seguridad, respeto irrestricto a los derechos de los titulares y rendición de cuentas ante la ANPD; 3) Unión Europea (Derecho Comparado no universal en Chile): Reglamento (UE) 2016/679 (GDPR) y Reglamento (UE) 2024/1689 (EU AI Act): Verificados como marco de referencia internacional respecto de gobernanza de modelos y roles de processor/controller, pero deslindados expresamente conforme a la corrección canónica P11_VERIFICATION_CORRECTIONS al no constituir normativa de aplicación directa general en territorio chileno salvo hipótesis de extraterritorialidad comprobada.",
+  "findings": [
+    {
+      "claim_id": "P11-F43-C1",
+      "claim": "En Chile rigen plenamente la Ley 21.663 (reporte CSIRT en 3h) y la Ley 19.628, mientras la Ley 21.719 opera en vacatio legis hacia fines de 2026; en Brasil rige la LGPD actualizada a 2026 por la Lei 15.352; y las normas de la UE (GDPR/AI Act) constituyen referencias comparadas sin aplicación universal directa en Chile.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "cross_jurisdictional_statutory_obligations",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Deslinde Jurisdiccional y Prevalencia Normativa'",
+          "retrieved_at": null,
+          "excerpt_short": "Ley 21.719 se encuentra en vacatio legis de 24 meses (vigencia plena hacia fines de 2026); Ley 19.628 rige el período intermedio. Ley 21.663 de Ciberseguridad rige plenamente con notificación de 3 horas. GDPR y EU AI Act no son legislación universal chilena; operan como derecho comparado o por extraterritorialidad.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.663 Ley Marco de Ciberseguridad e Infraestructura Crítica",
+          "source_id": "ee032cb3-abe5-4440-948f-815a9b4fbe78",
+          "locator": "Artículo 24",
+          "retrieved_at": null,
+          "excerpt_short": "Las instituciones y operadores deberán notificar al CSIRT Nacional los ciberataques e incidentes de ciberseguridad que puedan tener efectos significativos en el plazo máximo de tres horas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Artículos 14, 15 y Disposiciones Transitorias",
+          "retrieved_at": null,
+          "excerpt_short": "Esta ley entrará en vigencia veinticuatro meses después de su publicación en el Diario Oficial. Los encargados de tratamiento deberán adoptar medidas de seguridad y notificar vulneraciones en 72 horas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Câmara dos Deputados: Lei Nº 15.352/2026 (Altera a LGPD)",
+          "source_id": "ea76a1ee-ec7a-4180-8d2a-716758dd60c7",
+          "locator": "Publicação Oficial de 25/02/2026",
+          "retrieved_at": null,
+          "excerpt_short": "Altera a Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais - LGPD), para aprimorar os mecanismos de governança e sanções administrativas perante a ANPD.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia jurídica absoluta entre los textos oficiales de las leyes chilenas, la legislación brasileña de 2026 y la prevalencia canónica de P11_VERIFICATION_CORRECTIONS.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ubicación del cliente corporativo",
+      "Tipo de datos tratados",
+      "Ubicación del centro de datos del proveedor"
+    ],
+    "actors": [
+      "Oficial Legal de BRIDGE",
+      "DPO",
+      "Comité de Cumplimiento",
+      "Auditor Externo"
+    ],
+    "steps": [
+      "Identificación del domicilio legal del cliente y de los titulares de datos",
+      "Mapeo de obligaciones directas: si opera en Chile, aplicación obligatoria de Ley 21.663 y preparación hacia Ley 21.719",
+      "Si trata datos de personas en Brasil, activación de cláusulas específicas de la LGPD (Lei 13.709 / Lei 15.352)",
+      "Evaluación de extraterritorialidad: verificar si existe oferta activa de servicios a residentes en la UE para determinar si aplica GDPR formalmente",
+      "Incorporación de los requisitos normativos aplicables en el DPA y en la configuración técnica del tenant"
+    ],
+    "states": [
+      "JURISDICTION_IDENTIFIED",
+      "STATUTES_MAPPED",
+      "VACATIO_LEGIS_CALIBRATED",
+      "DPA_CUSTOMIZED"
+    ],
+    "outputs": [
+      "Contrato DPA y matriz de cumplimiento perfectamente calibrados a la realidad jurídica del cliente"
+    ],
+    "exceptions": [
+      "Si un cliente exige cumplimiento estricto de GDPR sin operar en Europa, se adoptan las cláusulas como estándar contractual voluntario sin atribuirle rango de ley local"
+    ]
+  },
+  "entities": [
+    "Ley N° 21.719",
+    "Ley N° 19.628",
+    "Ley N° 21.663",
+    "Lei 13.709 LGPD",
+    "Lei 15.352/2026",
+    "GDPR",
+    "P11_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "Ley N° 21.719",
+      "to": "Vacatio Legis",
+      "type": "OPERATES_UNDER_24_MONTHS"
+    },
+    {
+      "from": "Ley N° 21.663",
+      "to": "CSIRT Nacional",
+      "type": "ENFORCES_REPORTING_IN_3H"
+    },
+    {
+      "from": "Lei 15.352/2026",
+      "to": "Lei 13.709 LGPD",
+      "type": "MODIFIES_CANONICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir que GDPR aplica por defecto a cualquier empresa chilena vs Deslinde riguroso de soberanía legal",
+      "diferencia": "Asumir GDPR por defecto crea falsas expectativas y sobrecostos regulatorios; el deslinde riguroso aplica la ley chilena (21.663/19.628/21.719) y reserva GDPR solo para casos de extraterritorialidad real."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "statutory_accuracy_rate": "100% de exigencias legales asignadas a su jurisdicción real",
+    "vacatio_legis_tracking_days_remaining": "Monitoreo continuo de los 24 meses de vacatio legis de la Ley 21.719"
+  },
+  "bridge_implications": "Evita errores regulatorios graves y garantiza a los clientes que BRIDGE cumple con exactitud milimétrica el ordenamiento jurídico chileno y regional.",
+  "open_gaps": [
+    "Publicación de los reglamentos ejecutivos de la Ley 21.719 por el Ministerio de Justicia y Derechos Humanos de Chile."
+  ],
+  "next_question_ids": [
+    "P11-F44",
+    "P11-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

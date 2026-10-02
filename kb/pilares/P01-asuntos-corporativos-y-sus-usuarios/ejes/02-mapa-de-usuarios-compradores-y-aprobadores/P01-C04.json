@@ -1,0 +1,177 @@
+{
+  "question_id": "P01-C04",
+  "pilar": "P01",
+  "eje": "Mapa de usuarios, compradores y aprobadores",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué sigue sin prueba sobre mapa de usuarios, compradores y aprobadores, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la falta de datos cuantitativos sobre las matrices de objeción técnica, requisitos de arquitectura de datos y tasas de rechazo aplicadas por CISOs en América Latina al evaluar herramientas de IA generativa con información confidencial corporativa. Las fuentes gremiales del sector (ECM, LCM, Dircom) son parciales por consultar solo a comunicadores ignorando a TI/Seguridad, y las fuentes de analistas de TI de Gartner fallaron por bloqueos HTTP 403. La validación mínima requiere co-diseñar una Matriz de Viabilidad de Seguridad B2B y ejecutar pruebas con un panel simétrico de CCOs, CISOs y Fiscales Legales de 12-15 corporaciones reguladas e IPSA en Chile.",
+  "findings": [
+    {
+      "claim_id": "P01-C04-C1",
+      "claim": "Existe un vacío crítico de evidencia en la literatura pública regional respecto a las políticas y parámetros de homologación técnica que utilizan los CISOs en América Latina ante soluciones de IA generativa en el C-Suite, debido a que las encuestas del sector (LCM/ECM) solo consultan a directores de comunicación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "América Latina",
+        "actor": "Literatura de Gestión y TI"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Knowledge Gap 3: Opacidad en Criterios de Aprobación de CISO y Legal",
+          "excerpt_short": "Vacío en literatura pública sobre matrices de objeción técnica y tasas de rechazo de CISOs en América Latina.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:09:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío metodológico formal del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C04-C2",
+      "claim": "La validación mínima para destrabar esta incertidumbre exige realizar mesas de trabajo técnicas y aplicar el cuestionario del Módulo 5 con un panel integrado simétricamente por CCOs, CISOs y Fiscales de Compliance en corporaciones chilenas de sectores altamente regulados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Diseño Experimental B2B"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Protocolo de Validación con CISO y Legal",
+          "excerpt_short": "Validación empírica mediante entrevistas técnicas a CISOs y pruebas de concepto en VPC privada.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:09:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Protocolo de validación técnica formal en el corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario técnico de ciberseguridad Módulo 5",
+      "Arquitectura de despliegue VPC",
+      "Bases de datos de CISOs corporativos"
+    ],
+    "actors": [
+      "Arquitecto de Solución BRIDGE",
+      "CISO Evaluador",
+      "Fiscal Legal",
+      "Oficial de Datos"
+    ],
+    "steps": [
+      "Identificación de CISOs de empresas IPSA",
+      "Aplicación de pauta técnica sobre VPC y encriptación",
+      "Tabulación de objeciones recurrentes",
+      "Ajuste de matriz de cumplimiento"
+    ],
+    "states": [
+      "Vacío_Identificado",
+      "Mesa_Técnica_Convocada",
+      "Objeciones_Parametrizadas",
+      "Matriz_Validada"
+    ],
+    "outputs": [
+      "Matriz de Viabilidad de Seguridad B2B para LatAm"
+    ],
+    "exceptions": [
+      "Confidencialidad bancaria que impida divulgar políticas de seguridad internas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MATRIZ_OBJECIONES_CISO",
+      "type": "herramienta_analitica",
+      "name": "Matriz de Objeciones Técnicas de CISOs en LatAm",
+      "aliases": [
+        "Parámetros de Homologación B2B"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MATRIZ_OBJECIONES_CISO",
+      "predicate": "resuelve_incertidumbre_de",
+      "object_id": "HT-3",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C04-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gobernanza",
+      "implication": "Desarrollar un whitepaper de seguridad técnica específico para CISOs basado en la Matriz de Viabilidad validada.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "sin_evidencia sobre matrices formales de objeción técnica y tasas de rechazo de CISOs en América Latina ante LLMs.",
+      "minimum_validation": "Entrevistas estructuradas a 12 CISOs de grandes corporaciones chilenas.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "P01-C05",
+    "P01-C06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:09:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

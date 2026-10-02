@@ -1,0 +1,128 @@
+{
+  "question_id": "P06-X04",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Grafo de afirmaciones",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar grafo de afirmaciones de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del grafo de afirmaciones exige un modelo de datos formal compuesto por: 1) Variables principales: `claim_id` (UUIDv4), `subject_entity_id`, `predicate`, `object_value_or_entity`, `epistemic_status` (hecho_documentado, declaración_corporativa, rumor_redes, inferencia), `modality` (cierto, probable, condicional), `validity_start`, `validity_end`, `evidence_doc_id`, `sha256_evidence_hash`, `locator_page_para`; 2) Categorías ontológicas: Entidades Corporativas (Organización, Persona, Planta/Faena, Marca), Compromisos (Regulatorio, Ambiental, Laboral, Comercial), Afirmaciones Externas (Prensa, Redes, Denuncia Administrativa) y Hechos Internos (Memoria Anual, Hecho Esencial CMF, Acta Directorio); 3) Relaciones cardinales: SUJETO_DE, OBJETO_DE, RESPALDADO_POR, CONTRADICE, SUSTITUYE_A, CADUCA_EN; 4) Condiciones de integridad: Prohibición de bordes huérfanos, unicidad de entidades mediante claves compuestas (RUT/jurisdicción), y no-retroactividad de modificaciones de postura sin nuevo documento comprobable.",
+  "findings": [
+    {
+      "claim_id": "P06-X04-C1",
+      "claim": "El modelado estructurado del grafo de afirmaciones requiere tipado estricto de variables, restricciones de integridad referencial y marcas temporales bi-temporales.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "Modelado de Bases de Datos de Grafos"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": "https://arxiv.org/pdf/2508.01680",
+          "locator": "Section 3.3: Node and Edge Property Specifications",
+          "excerpt_short": "Nodes store attribute dictionaries including epistemic confidence, canonical identifiers, and extraction locators. Edges enforce temporal consistency constraints preventing cyclic contradictions across validity horizons.",
+          "source_date": "2025-08-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación estándar de grafos de conocimiento bitemporales aplicada a inteligencia corporativa.",
+      "epistemic_status_original": "diseno_de_datos_formal",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Extracciones semiestructuradas de documentos y noticias"
+    ],
+    "actors": [
+      "Administrador de Base de Datos de Grafos (Neo4j / Memgraph)",
+      "Pipeline ETL Semántico"
+    ],
+    "steps": [
+      "Validación de esquema de nodo",
+      "Verificación de integridad referencial",
+      "Inserción de nodo y relación",
+      "Indexación en índices vectoriales y de búsqueda全文"
+    ],
+    "states": [
+      "Validating_Schema",
+      "Constraint_Checked",
+      "Persisted"
+    ],
+    "outputs": [
+      "Estructura de grafo relacionalmente sólida"
+    ],
+    "exceptions": [
+      "Violación de restricción de clave primaria que cancela transacción"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GRAPH_SCHEMA_SPEC",
+      "type": "especificacion_tecnica",
+      "name": "Especificación de Esquema de Grafo Corporativo",
+      "aliases": [
+        "Corporate Graph DDL"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GRAPH_SCHEMA_SPEC",
+      "predicate": "gobierna_estructura_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2025-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X04-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Permite consultas complejas multi-salto sobre compromisos históricos y noticias sin perder precisión.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

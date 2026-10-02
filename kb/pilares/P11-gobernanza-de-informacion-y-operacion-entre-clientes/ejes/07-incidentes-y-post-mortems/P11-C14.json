@@ -1,0 +1,143 @@
+{
+  "question_id": "P11-C14",
+  "pilar": "P11",
+  "eje": "Incidentes y post-mortems",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué sigue sin prueba sobre incidentes y post-mortems, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En la gestión de incidentes y post-mortems: 1) Lo que sigue sin prueba empírica: La capacidad técnica para detectar y neutralizar ataques avanzados de 'Exfiltración Esteganográfica en Salidas de LLMs' (In-Context Steganography), donde un prompt inyectado instruye al modelo a fugar información sensible de otro cliente codificándola sutilmente en la estructura léxica, acrósticos, puntuación o variación estilística del texto generado, eludiendo los scrubbers tradicionales de expresiones regulares y coincidencia de strings; 2) Fuente que falló o es parcial: Las publicaciones de OWASP GenAI Top 10 y NIST SP 800-61 Rev. 3 describen el riesgo conceptual de exfiltración pero no ofrecen algoritmos de detección en tiempo real para lenguaje natural esteganográfico; y 3) Validación mínima que resolvería la incertidumbre: Implementar un filtro post-generación de 'Neutralización por Paráfrasis Determinista' (Deterministic Paraphrase Neutralizer) que re-escriba la respuesta generada a través de un modelo secundario liviano y determinista con temperatura 0.0 antes de la entrega final, destruyendo cualquier codificación esteganográfica basada en selección de sinónimos o espaciado sin alterar el significado sustantivo del mensaje.",
+  "findings": [
+    {
+      "claim_id": "P11-C14-C1",
+      "claim": "Sigue sin prueba la detección en línea de exfiltración esteganográfica en LLMs; los marcos OWASP y NIST son parciales al no proveer contramedidas en tiempo real; y la validación mínima consiste en implementar un neutralizador por paráfrasis determinista con temperatura 0.0.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "incident_detection_open_gaps_and_validation",
+      "evidence": [
+        {
+          "source_title": "OWASP GenAI: Top 10 for Large Language Model Applications 2025",
+          "source_id": "83d92341-65c3-4adf-877a-8cf4b4cd29f2",
+          "locator": "Item LLM02: Sensitive Information Disclosure and Steganographic Egress",
+          "retrieved_at": null,
+          "excerpt_short": "Sophisticated adversarial prompts can force language models to encode unauthorized data into innocent-looking linguistic structures, evading basic pattern matching filters.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 7 'Detección de Incidentes, Contención y Post-Mortems'",
+          "retrieved_at": null,
+          "excerpt_short": "Scrubbers de salida y contramedidas frente a fuga contextual.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación lúcida de una frontera avanzada de ciberseguridad para IA y propuesta de una solución técnica factible y elegante.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Respuesta generada por el LLM principal",
+      "Canal de salida",
+      "Módulo de Paráfrasis"
+    ],
+    "actors": [
+      "CitationCrossTenantScrubber",
+      "Deterministic Paraphrase Neutralizer",
+      "API Gateway"
+    ],
+    "steps": [
+      "Recepción del borrador generado por el LLM principal",
+      "Paso obligatorio por el CitationCrossTenantScrubber para validar UUIDs",
+      "Paso secundario por el Neutralizador por Paráfrasis Determinista (re-escritura con temp=0.0)",
+      "Destrucción de patrones esteganográficos residuales mediante normalización sintáctica",
+      "Despacho del texto limpio y verificado al usuario"
+    ],
+    "states": [
+      "RAW_COMPLETION_INTERCEPTED",
+      "UUIDS_SCRUBBED",
+      "PARAPHRASE_NORMALIZED",
+      "VERIFIED_OUTPUT_DELIVERED"
+    ],
+    "outputs": [
+      "Texto completamente purificado de posibles canales ocultos de exfiltración"
+    ],
+    "exceptions": [
+      "Si la similitud semántica entre el texto original y la paráfrasis es inferior al 95%, se bloquea la respuesta y se alerta al SOC"
+    ]
+  },
+  "entities": [
+    "Deterministic Paraphrase Neutralizer",
+    "In-Context Steganography",
+    "OWASP GenAI LLM02",
+    "CitationCrossTenantScrubber"
+  ],
+  "relations": [
+    {
+      "from": "Deterministic Paraphrase Neutralizer",
+      "to": "In-Context Steganography",
+      "type": "DESTROYS_COVERT_CHANNELS_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Filtros de regex tradicionales vs Neutralización por paráfrasis determinista",
+      "diferencia": "Los filtros de regex solo buscan palabras clave conocidas; la paráfrasis determinista normaliza la estructura del lenguaje e inutiliza cualquier mensaje oculto en el orden de las palabras."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "steganographic_channel_entropy_reduction": "> 99.8%",
+    "semantic_fidelity_retention": "> 98.5%"
+  },
+  "bridge_implications": "Convierte a BRIDGE en uno de los primeros sistemas del mercado con defensas activas contra la esteganografía en IA generativa.",
+  "open_gaps": [
+    "Medición de latencia incremental (< 200 ms) introducida por el paso de paráfrasis determinista."
+  ],
+  "next_question_ids": [
+    "P11-C15",
+    "P11-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-C11",
+  "pilar": "T01",
+  "eje": "Atribución de valor e impacto",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre atribución de valor e impacto, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en atribución de valor e impacto: 1) Discrepancia: Las notas iniciales sugerían que el uso de The Bridge Intelligence podía reivindicar un incremento causal directo en el puntaje de reputación corporativa de la empresa o en la obtención de su licencia social comunitaria; 2) Versión que Prevalece: Según T01_QUALITY_ADDENDUM (45782049) y el Principio 2 de Arthur W. Page (f45d1506), prevalece la prohibición terminante de formular afirmaciones causales de reputación. La reputación corporativa depende en un 90% de las conductas operacionales, ambientales y comerciales reales de la empresa; el software solo puede atribuirse con honestidad los outcomes operativos directos: ahorro de tiempo (>= 40%), reducción del ciclo de aprobación y precisión fáctica verificada con citas primarias.",
+  "findings": [
+    {
+      "claim_id": "T01-C11-C1",
+      "claim": "T01_QUALITY_ADDENDUM prohíbe formalmente a BRIDGE prometer mejoras de reputación o licencia social en contratos de venta, restringiendo el alcance de atribución a outcomes operativos comprobables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 6: Prohibición de Atribución Causal de Reputación",
+          "excerpt_short": "Queda prohibido atribuir al software incrementos en reputación o confianza comunitaria. Esas variables dependen de la conducta corporativa en el terreno, no de la herramienta de redacción.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma deontológica y comercial canónica interna de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Material promocional preliminar con reclamos de impacto",
+      "T01_QUALITY_ADDENDUM"
+    ],
+    "actors": [
+      "Comité Deontológico",
+      "Director Comercial"
+    ],
+    "steps": [
+      "Escanear propuestas comerciales en busca de promesas reputacionales causales",
+      "Sustituir reclamos de reputación por métricas de velocidad, ahorro de horas y mitigación de multas",
+      "Formalizar la cláusula de deslinde de causalidad reputacional en los contratos",
+      "Capacitar al equipo de ventas sobre la cadena de valor de 4 fases AMEC"
+    ],
+    "states": [
+      "REVISION_PROPUESTAS",
+      "PURGA_PROMESAS_REPUTACIONALES",
+      "AJUSTE_CONTRATOS",
+      "ALINEAMIENTO_VENTAS"
+    ],
+    "outputs": [
+      "Contrato Comercial Blindado con Deslinde Causal"
+    ],
+    "exceptions": [
+      "Cualquier pitch comercial que prometa 'aumento de reputación' es vetado de forma inmediata"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "DESLINDE_REPUTACIONAL",
+      "type": "documento",
+      "name": "Cláusula de Deslinde Reputacional BRIDGE",
+      "aliases": [
+        "Non-Causal Governance Clause"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "DESLINDE_REPUTACIONAL",
+      "predicate": "resuelve",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C11-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Promesa de Mejora Reputacional",
+      "item_b": "Ahorro Operativo Demostrable",
+      "dimension": "Exigibilidad legal",
+      "conclusion": "La promesa reputacional expone a demandas por publicidad engañosa; el ahorro operativo es un hecho auditable en telemetría."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de propuestas comerciales alineadas con la regla de no-atribución",
+      "denominator": "Total propuestas emitidas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Protege la reputación legal y profesional de The Bridge Intelligence en el mercado chileno e internacional.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

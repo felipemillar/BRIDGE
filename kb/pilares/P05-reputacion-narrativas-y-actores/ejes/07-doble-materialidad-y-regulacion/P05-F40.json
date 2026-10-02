@@ -1,0 +1,125 @@
+{
+  "question_id": "P05-F40",
+  "pilar": "P05",
+  "eje": "Doble materialidad y regulación",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar doble materialidad y regulación de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar doble materialidad y regulación de forma estructurada exige las siguientes especificaciones técnicas de modelado: 1) Variables formales: `material_topic_id`, `topic_name`, `impact_severity_score` (producto de Escala x Alcance x Carácter_Irremediable, escala 1 a 5), `financial_exposure_score` (Magnitud_Económica x Probabilidad, escala 1 a 5), `is_impact_material` (bool), `is_financial_material` (bool), `double_materiality_status` (Impact_Only, Financial_Only, Dual_Material, Non_Material), `regulatory_compliance_ref` (artículos CMF NCG 461, GRI 3, ESRS), `active_supervision_agencies` (SMA, CMF, FNE, SERNAC, DGA), `last_assessment_date`; 2) Categorías: Eje de sostenibilidad (Ambiental / E, Social / S, Gobernanza / G); 3) Relaciones formales: `genera_impacto_en` (Empresa -> Stakeholder_MedioAmbiente), `deriva_en_riesgo_financiero` (Impacto -> RiesgoFinanciero), `regulado_bajo_norma` (Tema -> NormaLegal), `sustentado_en_evidencia` (Calificacion -> DocumentoAuditable); 4) Condiciones de integridad: Un tema se clasifica automáticamente como 'Material' si `is_impact_material == true` O `is_financial_material == true` (unión disyuntiva EFRAG); todo tema con estatus 'Dual_Material' debe tener asociado un plan de mitigación en el corpus institucional con presupuesto asignado.",
+  "findings": [
+    {
+      "claim_id": "P05-F40-C1",
+      "claim": "El modelado estructurado de la doble materialidad exige formalizar la evaluación independiente de impacto y finanzas bajo una regla de inclusión disyuntiva vinculada a los estándares ESRS y CMF.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Arquitectura de Software BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "432f26cd-3292-4459-8239-eef44bcf1527",
+          "source_title": "EFRAG: Implementation Guidance 1 (IG 1) Materiality Assessment for ESRS",
+          "original_url": "https://www.efrag.org/",
+          "locator": "Sección 3.2: Materiality Criteria and Disjunctive Rule",
+          "excerpt_short": "A topic is material for ESRS reporting if it meets either the impact materiality criteria or the financial materiality criteria, or both.",
+          "source_date": "2024-05-31",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Regla lógica algorítmica consagrada en el estándar técnico de EFRAG.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evaluaciones de impacto socioambiental",
+      "Matrices de riesgo financiero corporativo"
+    ],
+    "actors": [
+      "Diseñador de Base de Datos",
+      "Auditor de Sostenibilidad"
+    ],
+    "steps": [
+      "Modelación de tablas de temas materiales",
+      "Programación de lógica disyuntiva de inclusión",
+      "Generación de gráfico de dispersión de doble materialidad"
+    ],
+    "states": [
+      "Scores_Ingested",
+      "Disjunctive_Logic_Applied",
+      "Double_Materiality_Grid_Rendered"
+    ],
+    "outputs": [
+      "Cuadrante interactivo de Doble Materialidad"
+    ],
+    "exceptions": [
+      "Tratar de excluir un impacto grave para la comunidad porque no afecta inmediatamente los flujos de caja"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MATERIALITY_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Doble Materialidad",
+      "aliases": [
+        "Double Materiality Data Model"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MATERIALITY_SCHEMA",
+      "predicate": "normaliza_evaluacion_de",
+      "object_id": "ENT_DOUBLE_MATERIALITY",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F40-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Módulo de Doble Materialidad",
+      "implication": "BRIDGE debe implementar el algoritmo disyuntivo de EFRAG para asegurar que ningún tema socioambiental crítico quede invisibilizado en los reportes al directorio.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

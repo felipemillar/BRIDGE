@@ -1,0 +1,153 @@
+{
+  "question_id": "P04-C01",
+  "pilar": "P04",
+  "eje": "Inventario de documentos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre inventario de documentos corporativos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: Los enfoques comerciales estándar y repositorios ofimáticos tratan cualquier archivo corporativo (PDF de memoria, comunicado de prensa o minuta interna) como texto homogéneo sin jerarquía jurídica. En contraste, las síntesis internas analíticas (P04_EVIDENCE_MAP y P04_RESEARCH_DOSSIER), alineadas con la regulación imperativa de la CMF (NCG N° 461) y la Ley 18.045 de Mercado de Valores, establecen una estricta taxonomía jerárquica de 8 clases donde los Hechos Esenciales y las Memorias depositadas tienen máxima fuerza vinculante legal, mientras que comunicados y borradores carecen de valor de balance. Versión que prevalece según la regla editorial: Prevalece rigurosamente la clasificación formal respaldada por la CMF y W3C DCAT-3. Asimismo, se explicita que las síntesis internas P04_* son documentos analíticos propios de trabajo que jamás deben considerarse como fuentes externas independientes.",
+  "findings": [
+    {
+      "claim_id": "P04-C01-C1",
+      "claim": "La discrepancia sobre la homogeneidad documental se resuelve a favor de la taxonomía jerárquica respaldada por CMF NCG 461 y W3C DCAT-3, subordinando las síntesis internas a su rol de documentos analíticos propios.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Gobernanza Editorial P04"
+      },
+      "evidence": [
+        {
+          "source_id": "005e6819-75c5-40e4-b0a2-39b00ec373eb",
+          "source_title": "P04_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Encabezado y Sección 1: Marco Epistémico Fundamental",
+          "excerpt_short": "Nivel de Clasificación: Documento Interno de Síntesis Analítica — Prohibida su consideración como fuente externa independiente. Mezclar una promesa con un logro auditado genera severos riesgos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "62bbf73f-3262-466f-9b1c-feb81c69d6dd",
+          "source_title": "CMF Chile: NCG N° 461 Memoria Anual Integrada y Sostenibilidad",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Capítulo I y II: Ámbito de Aplicación",
+          "excerpt_short": "Fuerza obligatoria para entidades fiscalizadas inscritas en el Registro de Valores.",
+          "source_date": "2021-11-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución editorial formal documentada en los encabezados y cuerpo de P04_EVIDENCE_MAP.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documentos crudos ingresados al sistema"
+    ],
+    "actors": [
+      "Editorial Precedence Enforcer",
+      "Taxonomy Classifier"
+    ],
+    "steps": [
+      "Verificación de jerarquía legal",
+      "Asignación de clase documental canónica",
+      "Subordinación de documentos no oficiales"
+    ],
+    "states": [
+      "Raw",
+      "Classified_By_Precedence",
+      "Officially_Ranked"
+    ],
+    "outputs": [
+      "Corpus ordenado por jerarquía legal vinculante"
+    ],
+    "exceptions": [
+      "Documentos mixtos que combinan comunicados informales con hechos regulatorios"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_EDITORIAL_PRECEDENCE_P04",
+      "type": "regla_editorial",
+      "name": "Regla de Precedencia Editorial P04",
+      "aliases": [
+        "P04 Editorial Precedence Rule"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_EDITORIAL_PRECEDENCE_P04",
+      "predicate": "dirime_conflictos_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C01-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de clasificación",
+      "Enfoque plano tradicional": "Cualquier texto institucional se considera evidencia de igual peso.",
+      "Enfoque de precedencia regulada": "Los hechos esenciales y memorias CMF priman jurídicamente sobre notas de prensa."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Homogeneidad documental en corpus corporativos",
+      "claim_a": "Todo texto corporativo puede ser indexado en el mismo nivel sin jerarquía formal.",
+      "source_a": "Práctica ofimática convencional de TI empresarial",
+      "claim_b": "Los documentos corporativos poseen estatus legal y vinculación regulatoria diferenciada (Ley 18.045 / CMF NCG 461).",
+      "source_b": "P04_EVIDENCE_MAP / CMF Chile NCG 461",
+      "resolution_or_status": "Prevalece Claim B: tipificación formal en 8 clases con niveles diferenciados de autoridad."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe implementar este orden de precedencia para que una memoria CMF siempre prime sobre un comunicado de prensa en caso de conflicto.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-C02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

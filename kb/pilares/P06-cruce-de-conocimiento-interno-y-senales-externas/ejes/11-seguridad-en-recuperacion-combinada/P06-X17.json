@@ -1,0 +1,145 @@
+{
+  "question_id": "P06-X17",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Seguridad en recuperación combinada",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué ocurre cuando una noticia pública activa una búsqueda sobre documentos internos restringidos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cuando una señal o noticia pública gatilla una recuperación automática que intersecta documentos internos clasificados, la arquitectura de The Bridge Intelligence activa el protocolo de Aislamiento Contextual y Control de Acceso Basado en Atributos (ABAC) con Row-Level Security (Palantir AIP; P11 Multi-Tenant Security; P06_QUALITY_ADDENDUM, Sección 4.1): 1) Evaluación Temprana de Credenciales: El motor evalúa el perfil del usuario activo (roles DACI, nivel de acreditación D1..D5 y pertenencia a área) ANTES de ejecutar la búsqueda semántica en pgvector o el grafo; 2) Poda Determinista de Documentos: Los fragmentos de documentos internos con clasificación superior a los privilegios del usuario (ej. D4 Hecho Reservado CMF o D5 Secreto Industrial) son excluidos a nivel de motor de base de datos con `tenant_id` y `acl_group_id`, impidiendo que sus vectores ingresen al prompt del LLM; 3) Generación de Síntesis Asimétrica: Si el usuario carece de permiso para el documento reservado, el brief público se elabora exclusivamente con las fuentes externas y las memorias públicas, registrando en un canal administrativo interno que existe un conflicto potencial conocido solo por los funcionarios expresamente habilitados (Comité de Crisis / Directorio).",
+  "findings": [
+    {
+      "claim_id": "P06-X17-C1",
+      "claim": "La recuperación combinada filtra documentos protegidos en la capa de datos antes de la inferencia, evitando fugas de hechos reservados hacia usuarios no autorizados.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Arquitectura de Seguridad Multi-Tenant"
+      },
+      "evidence": [
+        {
+          "source_id": "5168f7d7-3499-40e3-afc8-c6b216843f19",
+          "source_title": "Palantir AIP - Architecture Overview & Context Engineering",
+          "original_url": "https://palantir.com/docs/foundry/architecture-center/aip-architecture/",
+          "locator": "Data Security & Granular Access Controls: Context Sanitation",
+          "excerpt_short": "Context Engineering applies deterministic access controls before retrieval. Documents beyond user authorization are completely pruned from the vector search space, preventing prompt leakage.",
+          "source_date": "2024-06-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 4.1: Protección de Hechos Reservados y Sanitización de Contexto",
+          "excerpt_short": "El cruce de noticias con información interna jamás debe exponer la existencia de negociaciones reservadas (M&A, litigios confidenciales) a analistas sin acreditación legal.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio esencial de ciberseguridad corporativa respaldado en Palantir AIP y la gobernanza del Addendum.",
+      "epistemic_status_original": "control_de_ciberseguridad_formal",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Noticia pública detonante",
+      "ID y roles del usuario corporativo activo"
+    ],
+    "actors": [
+      "Controlador ABAC",
+      "Motor RAG Seguro",
+      "Módulo de Síntesis Asimétrica"
+    ],
+    "steps": [
+      "Verificación de ACL del usuario",
+      "Aplicación de filtros de seguridad en pgvector",
+      "Generación de contexto sanitizado",
+      "Inferencia del LLM con datos estrictamente permitidos"
+    ],
+    "states": [
+      "Query_Received",
+      "ACL_Filtered",
+      "Context_Sanitized",
+      "Response_Synthesized"
+    ],
+    "outputs": [
+      "Brief sanitizado sin fuga de información confidencial"
+    ],
+    "exceptions": [
+      "Intento de inyección de prompt para eludir ABAC bloqueado por guardrails"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ABAC_GATE",
+      "type": "sistema_seguridad",
+      "name": "Controlador ABAC de Recuperación Segura",
+      "aliases": [
+        "Attribute-Based Access Filter"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ABAC_GATE",
+      "predicate": "protege_integridad_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2024-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X17-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Permite coexistencia segura de información confidencial y pública en un único repositorio corporativo.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

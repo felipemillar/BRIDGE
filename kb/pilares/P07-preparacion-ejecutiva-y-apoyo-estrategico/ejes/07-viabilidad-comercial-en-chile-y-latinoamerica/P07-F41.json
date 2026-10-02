@@ -1,0 +1,148 @@
+{
+  "question_id": "P07-F41",
+  "pilar": "P07",
+  "eje": "Viabilidad comercial en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre viabilidad comercial en Chile y Latinoamérica?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se respaldan en cinco fuentes canónicas del corpus: 1) Normativa Legal de Transparencia y Mercados: BCN Chile, Ley 20.730 de Lobby (2014) y Ley 18.045 de Mercado de Valores; 2) Regulación Bursátil y ESG: CMF Chile, Norma de Carácter General NCG 461 (2021); 3) Reputación Corporativa Regional: Merco Chile (2024, Monitor Empresarial de Reputación Corporativa); 4) Análisis Competitivo de Suites Globales: FiscalNote (2024, Public Affairs Intelligence) y Quorum (2024, Stakeholder Engagement CRM); y 5) Síntesis de Brechas y Viabilidad: P07_RESEARCH_DOSSIER y P07_GAPS_AND_VALIDATION (Septiembre 2026), que documentan la oportunidad comercial de BRIDGE frente a las herramientas extranjeras.",
+  "findings": [
+    {
+      "claim_id": "P07-F41-C1",
+      "claim": "La viabilidad comercial de BRIDGE en Chile se fundamenta en la insatisfacción de los directores corporativos con las herramientas globales que no capturan la realidad regulatoria ni territorial de la región.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_grounding",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje F: Aplicabilidad y Realidad Regulatoria en Chile y LatAm)",
+          "excerpt_short": "Eje F: Respaldado por Ley 20.730 (BCN), CMF NCG 461, Merco Chile (2024), Quorum (2024) y FiscalNote (2024). Nivel 1 de certidumbre. Se demuestra que las corporaciones chilenas demandan software adaptado a InfoLobby, SNIFA y conflictividad comunitaria, donde las plataformas anglosajonas tienen nula penetración.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Quorum: Stakeholder Engagement CRM for Public Affairs",
+          "source_id": "569b53ee-4bac-4d04-9d9b-dc0726962f63",
+          "locator": "Capítulo 'International Expansion Barriers', p. 8-12",
+          "excerpt_short": "Enterprise adoption in Latin America is hindered by distinct administrative lobbying frameworks and unique subnational stakeholder dynamics that standard US-centric CRM schemas fail to represent.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada exhaustiva contra el mapa de evidencia y la literatura comercial de suites de public affairs.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_fuentes_mercado_local": [
+      {
+        "ambito": "Marco Regulatorio",
+        "fuente": "Ley 20.730 / Ley 18.045 (BCN)",
+        "aporte": "Obligaciones legales de registro y transparencia fiduciaria."
+      },
+      {
+        "ambito": "Gobierno ESG",
+        "fuente": "CMF NCG 461 (2021)",
+        "aporte": "Reportes obligatorios de sostenibilidad y relacionamiento."
+      },
+      {
+        "ambito": "Benchmark de Reputación",
+        "fuente": "Merco Chile (2024)",
+        "aporte": "Dimensiones críticas valoradas por stakeholders chilenos."
+      },
+      {
+        "ambito": "Brechas de Mercado",
+        "fuente": "FiscalNote / Quorum (2024)",
+        "aporte": "Inadecuación de suites globales al entorno latinoamericano."
+      },
+      {
+        "ambito": "Estrategia Comercial",
+        "fuente": "P07_GAPS_AND_VALIDATION",
+        "aporte": "Modelo de pricing y posicionamiento de nicho defensable para BRIDGE."
+      }
+    ]
+  },
+  "entities": [
+    "BCN Chile",
+    "CMF Chile",
+    "Merco Chile",
+    "Quorum",
+    "FiscalNote",
+    "P07_EVIDENCE_MAP"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Merco Chile",
+      "type": "synthesizes_metrics_from"
+    },
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "Quorum",
+      "type": "benchmarks_against"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Suite Genérica de US$ 50k vs Solución Especializada BRIDGE",
+      "diferencia": "La suite genérica solo provee monitoreo de noticias traducidas; BRIDGE entrega cumplimiento de la Ley del Lobby, expedientes SMA y briefs ejecutivos con respaldo probatorio."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "sources_in_inventory": "5 fuentes canónicas activas",
+    "market_opportunity_rating": "Nivel 1 (Validada por directores corporativos en P07_GAPS)"
+  },
+  "bridge_implications": "Utilizar este cuerpo de evidencia para fundamentar el pitch comercial y el caso de negocio de BRIDGE ante inversionistas y clientes piloto.",
+  "open_gaps": [
+    "Validación de la disposición a pagar (willingness-to-pay) específica de empresas medianas no cotizadas en bolsa."
+  ],
+  "next_question_ids": [
+    "P07-F42",
+    "P07-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

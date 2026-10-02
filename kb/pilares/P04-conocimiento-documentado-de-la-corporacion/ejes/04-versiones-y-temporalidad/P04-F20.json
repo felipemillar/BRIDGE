@@ -1,0 +1,134 @@
+{
+  "question_id": "P04-F20",
+  "pilar": "P04",
+  "eje": "Versiones y temporalidad",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Cómo debe responderse una pregunta sobre lo que la empresa sabía o decía en una fecha histórica?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Una consulta sobre el conocimiento o postura corporativa en una fecha histórica (Point-in-Time / As-of Query) debe responderse ejecutando un corte temporal retrospectivo estricto sobre el Grafo y el índice de recuperación. El protocolo exige: 1) Fijar como filtro de consulta que `transaction_time <= T_historico` y `valid_time contiene T_historico`, excluyendo de la ventana de contexto cualquier documento, hecho esencial, auditoría o reexpresión indexada con posterioridad a esa fecha; 2) Citar las fuentes documentales exactamente en su redacción vigente a esa fecha; y 3) Añadir obligatoriamente una nota epistemológica al final de la minuta: 'Esta síntesis reconstruye estrictamente la información pública y formal disponible por la corporación al [T_historico]. Hechos, reexpresiones o auditorías posteriores no formaban parte del conocimiento institucional en ese instante'.",
+  "findings": [
+    {
+      "claim_id": "P04-F20-C1",
+      "claim": "Las consultas de reconstrucción histórica exigen corte bitemporal as-of para evitar la falacia de retrospectiva (hindsight bias) y proteger a los directivos en investigaciones de debida diligencia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Auditoría Legal y Vocería"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.3: Trazabilidad Bitemporal y Sección 5: Matriz de Criterios",
+          "excerpt_short": "Dimensión 3: Coherencia Temporal y Frescura: capacidad de responder fielmente reconstruyendo la versión vigente en el punto histórico solicitado.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio bitemporal formalizado en la arquitectura del dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Pregunta del usuario con fecha objetivo T_historico"
+    ],
+    "actors": [
+      "As-Of Query Planner",
+      "Temporal Filter",
+      "Historical Generator"
+    ],
+    "steps": [
+      "Extracción de T_historico",
+      "Aplicación de máscara temporal a nodos y vectores",
+      "Generación con citas de documentos activos a esa fecha",
+      "Inyección de advertencia retrospectiva"
+    ],
+    "states": [
+      "Target_Date_Parsed",
+      "Historical_Subcorpus_Isolated",
+      "Response_Generated"
+    ],
+    "outputs": [
+      "Minuta que reconstruye fielmente la postura histórica sin anacronismos"
+    ],
+    "exceptions": [
+      "Corpus no posee documentos anteriores a la fecha histórica solicitada"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_AS_OF_QUERY",
+      "type": "mecanismo_consulta",
+      "name": "Mecanismo de Consulta Retrospectiva As-Of",
+      "aliases": [
+        "Point-in-Time Corporate Query"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_AS_OF_QUERY",
+      "predicate": "ejecuta_consultas_historicas_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F20-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Comportamiento del sistema",
+      "Consulta RAG convencional": "Utiliza la memoria más reciente de 2025 para responder qué sabía la empresa en 2022 (anacronismo fatal).",
+      "Consulta As-Of bitemporal": "Aísla únicamente los artefactos existentes en 2022, reconstruyendo la postura real de la época."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incorporar este modo 'As-Of' para respaldar a equipos legales ante investigaciones judiciales o parlamentarias.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

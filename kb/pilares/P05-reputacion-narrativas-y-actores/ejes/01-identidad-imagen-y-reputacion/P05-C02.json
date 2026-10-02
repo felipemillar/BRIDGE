@@ -1,0 +1,140 @@
+{
+  "question_id": "P05-C02",
+  "pilar": "P05",
+  "eje": "Identidad, imagen y reputación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué sigue sin prueba sobre identidad, imagen y reputación, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis de gaps documentado en P05_GAPS_AND_VALIDATION Sección 1 revela lo siguiente: 1) Lo que sigue sin prueba rigurosa: La relación de causalidad estricta y cuantificable entre una mejora en la reputación corporativa y el incremento del desempeño financiero o bursátil de una empresa. Aunque existe correlación econométrica positiva comprobada (Deephouse 2000; Fombrun & Shanley 1990), la literatura científica no ha logrado resolver si una mayor reputación genera mayores utilidades, o si las corporaciones más rentables cuentan con mayores recursos para comunicar su identidad y blindar su reputación; 2) Qué fuente falló o es parcial: Fallan los estudios comerciales que prometen 'fórmulas de ROI directo de relaciones públicas', ya que omiten factores macroeconómicos, dinámicas de mercado y estacionalidad; asimismo, la fuente OECD Due Diligence Guidance falló en su ingesta automática en el cuaderno y debió sustituirse por estándares homólogos (AA1000SES y NCG 461); 3) Validación mínima que resolvería la incertidumbre: Aplicar diseños de investigación cuasi-experimentales en empresas con múltiples unidades de negocio comparables o adoptar el estándar AMEC Framework, midiendo la reputación no como generador de ventas directas sino como reductor de costos de fricción institucional (disminución de multas, celeridad en obtención de licencias ambientales y retención de talento clave).",
+  "findings": [
+    {
+      "claim_id": "P05-C02-C1",
+      "claim": "La atribución causal directa de la reputación sobre el retorno financiero permanece como un vacío empírico que exige reenfocar la medición hacia la reducción de costos de fricción institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Investigación Empírica P05"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1: La Caja Negra de la Atribución Causal en Reputación Corporativa",
+          "excerpt_short": "Casi ningún estudio logra aislar la causalidad estricta entre comunicación y desempeño financiero. La plataforma debe enfocarse en mitigación de riesgos y reducción de fricción.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío metodológico formalmente identificado y respaldado en la literatura científica de economía y gestión.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Literatura sobre ROI en relaciones públicas",
+      "Estudios econométricos de panel"
+    ],
+    "actors": [
+      "Investigador de Métricas",
+      "Auditor Metodológico"
+    ],
+    "steps": [
+      "Revisión sistemática de literatura de causalidad",
+      "Identificación de variables de confusión",
+      "Formulación de protocolo cuasi-experimental"
+    ],
+    "states": [
+      "Literature_Reviewed",
+      "Causality_Gap_Mapped",
+      "Validation_Protocol_Defined"
+    ],
+    "outputs": [
+      "Definición de protocolo de validación mínima para reducción de fricción"
+    ],
+    "exceptions": [
+      "Afirmaciones infundadas de consultoras que aseguran poder medir el ROI exacto de un comunicado"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CAUSALITY_GAP",
+      "type": "vacio_metodologico",
+      "name": "Brecha de Atribución Causal en Reputación",
+      "aliases": [
+        "Reputation ROI Causality Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CAUSALITY_GAP",
+      "predicate": "limita_inferencia_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C02-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de valor financiero",
+      "Promesa Comercial Inválida": "'Nuestra estrategia de reputación aumentó las ventas de la compañía en un 12%'.",
+      "Enfoque Basado en Evidencia": "'La estrategia de relacionamiento redujo los recursos contenciosos en el SEIA a cero, ahorrando 18 meses de paralización de obras'."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Reporte de Valor",
+      "implication": "BRIDGE debe medir el valor de los asuntos corporativos a través de indicadores de evitación de costos de litigación, celeridad en permisos y estabilidad de la licencia social.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_REP_CAUSALITY",
+      "description": "Falta de aislamiento econométrico estricto entre comunicación y valor bursátil directo.",
+      "severity": "alta",
+      "status": "documentado"
+    }
+  ],
+  "next_question_ids": [
+    "P05-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F01",
+  "pilar": "P10",
+  "eje": "Origen de solicitudes y señales",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué eventos inician una respuesta pública planificada o de crisis?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El inicio de una respuesta corporativa se clasifica en dos macro-categorías ontológicas de eventos: 1) Eventos Planificados / Ordinarios: Hitos del calendario corporativo (entrega de resultados financieros trimestrales bajo CMF NCG 30/30-1989, publicación del reporte de sostenibilidad bajo NCG 461, colocación de instrumentos de deuda, anuncios de fusiones y adquisiciones post-cierre, inauguración de infraestructura o campañas reputacionales); y 2) Eventos de Crisis / Contingencia No Planificados: Señales externas o internas de alta criticidad detectadas en tiempo real (incidentes operacionales con afectación ambiental o de seguridad física, requerimientos urgentes de prensa investigativa con plazo fatal, demandas o medidas cautelares judiciales, fiscalizaciones sancionatorias de la SMA, filtración de datos o ciberataques, y campañas masivas de desinformación en redes sociales con riesgo de daño patrimonial).",
+  "findings": [
+    {
+      "claim_id": "P10-F01-C1",
+      "claim": "Los eventos que inician comunicaciones corporativas se dividen entre hitos planificados de calendario regulatorio/comercial y eventos no planificados de crisis operacional, legal o mediática.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "communication_triggering_events",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Flujo de Trabajo Integral (Fase 1: Ingesta y Registro Unificado)'",
+          "retrieved_at": null,
+          "excerpt_short": "Captura centralizada de requerimientos de prensa, consultas ciudadanas, alertas de monitoreo (P06) o iniciativas comerciales en una única bandeja de entrada auditable. Asignación automática de un identificador único de expediente (e.g., COMM-2026-0891).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Anderson: Situational Crisis Communication Theory (SCCT) - Operational Framework",
+          "source_id": "ae1d0dbb-67ec-484b-9d34-004f0faa44f2",
+          "locator": "Section 'Crisis Trigger Identification and Attribution Categories', p. 4-8",
+          "retrieved_at": null,
+          "excerpt_short": "Crisis responses are initiated by triggering events that threaten organization-stakeholder relationships: victim crises (natural disasters, rumors), accidental crises (technical errors, equipment breakdowns), and preventable crises (human-error accidents, legal misbehavior).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la teoría SCCT de Anderson y la taxonomía del dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alertas de monitoreo mediático (P06)",
+      "Calendario corporativo financiero",
+      "Notificaciones de accidentes en faena"
+    ],
+    "actors": [
+      "Jefe de Prensa",
+      "Encargado de Monitoreo",
+      "Comité de Crisis"
+    ],
+    "steps": [
+      "Detección del evento detonante",
+      "Apertura automática de expediente unificado",
+      "Clasificación inicial (Planificado vs Crisis)",
+      "Enrutamiento a la bandeja de triaje"
+    ],
+    "states": [
+      "Evento Detectado",
+      "Expediente Abierto",
+      "Enrutado a Triaje"
+    ],
+    "outputs": [
+      "Ticket de comunicación N° COMM-AAAA-NNNN"
+    ],
+    "exceptions": [
+      "Eventos con riesgo vital inmediato activan el protocolo de emergencia en paralelo a la apertura del expediente"
+    ]
+  },
+  "entities": [
+    "Evento Detonante",
+    "SCCT Anderson",
+    "P10_RESEARCH_DOSSIER",
+    "CMF NCG 30",
+    "COMM-Ticket"
+  ],
+  "relations": [
+    {
+      "from": "Evento Detonante",
+      "to": "COMM-Ticket",
+      "type": "CREATES"
+    },
+    {
+      "from": "COMM-Ticket",
+      "to": "Bandeja de Triaje",
+      "type": "ENQUEUED_IN"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Reacción espontánea en redes vs Protocolo estructurado por evento",
+      "diferencia": "La reacción espontánea comete errores fácticos no forzados; el protocolo estructurado garantiza clasificación y gobierno antes de emitir palabras públicas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "intake_event_types": "2 macro-categorías (Planificado, Crisis) subdivididas en 8 tipologías",
+    "time_to_ticket_creation": "< 60 segundos desde detección"
+  },
+  "bridge_implications": "Implementar un servicio de ingesta multicanal en BRIDGE que capture solicitudes de periodistas y alertas de monitoreo en una cola unificada de expedientes.",
+  "open_gaps": [
+    "Definir el umbral de viralidad en redes sociales que clasifica automáticamente una mención como señal de crisis."
+  ],
+  "next_question_ids": [
+    "P10-F02",
+    "P10-F03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

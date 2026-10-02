@@ -1,0 +1,149 @@
+{
+  "question_id": "P03-F07",
+  "pilar": "P03",
+  "eje": "Acceso a prensa y web abierta",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué canales de acceso a prensa digital están documentados y qué restricciones muestran?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Están documentados 5 canales de acceso a prensa digital con restricciones técnicas y legales contrastadas: 1) Agregadores masivos abiertos (GDELT 2.0 y Event Registry): cobertura multilingüe en intervalos de 15 minutos, pero restringidos a texto público sin paywalls y con normalización léxica heterogénea; 2) Suites globales con licencias sindicadas (Dow Jones Factiva, CisionOne, Meltwater): acceso a prensa protegida por paywall y archivos históricos de décadas, pero sujetos a contratos enterprise opacos, límites estrictos de exportación por API y prohibición de redistribución de texto íntegro; 3) Canales RSS oficiales de medios: latencia de minutos, acceso libre y metadatos limpios, pero limitados a titulares y entradillas (snippets), susceptibles de eliminación o truncamiento unilateral; 4) Búsqueda web programática (APIs de motores de búsqueda): indexación rápida, pero con altos costos por mil consultas y sin garantías de exhaustividad temática; y 5) Extracción directa / Web scraping: acceso a la totalidad del contenido visualizable, pero altamente vulnerable a protecciones WAF/Cloudflare, cambios de DOM y riesgo de litigio por incumplimiento de Términos de Servicio (ToS).",
+  "findings": [
+    {
+      "claim_id": "P03-F07-C1",
+      "claim": "Los canales de acceso a prensa digital se dividen en agregadores abiertos, suites sindicadas de pago, sindicación RSS, APIs de búsqueda y scraping directo, cada uno con barreras de costo, paywall o restricciones de redistribución.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Ecosistema de Prensa P03"
+      },
+      "evidence": [
+        {
+          "source_id": "84802d89-7c31-45cc-b85f-5e7c0562b856",
+          "source_title": "Dow Jones Factiva Sentiment Signals & News API Documentation",
+          "original_url": null,
+          "locator": "Factiva Developer Portal - Content Rights & API Limits",
+          "excerpt_short": "Factiva provides licensed access to over 33,000 global news sources, strictly governed by publisher redistribution rules and rate-limited API endpoints.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:05:00-03:00"
+        },
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.1: Prensa y Web Abierta",
+          "excerpt_short": "GDELT 2.0 procesa noticias globales... cada 15 minutos en bloques estructurados... Event Registry implementa agrupamiento en Eventos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:05:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificado contra documentación oficial de Factiva, GDELT y Event Registry.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Lista de medios objetivo",
+      "Credenciales API",
+      "Feeds RSS",
+      "Endpoints Factiva/EventRegistry"
+    ],
+    "actors": [
+      "Press Ingest Engine",
+      "Paywall Handler",
+      "ToS Compliance Gate"
+    ],
+    "steps": [
+      "Verificación de canal autorizado",
+      "Ingesta de feed/API",
+      "Control de tasa de consultas",
+      "Almacenamiento de snippet"
+    ],
+    "states": [
+      "Target_Selected",
+      "Ingest_Channel_Routed",
+      "Content_Stored_Within_Rights"
+    ],
+    "outputs": [
+      "Registro normalizado de artículo periodístico"
+    ],
+    "exceptions": [
+      "Bloqueo WAF en scraping no autorizado de portales de noticias"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRESS_CHANNELS",
+      "type": "canales_ingesta",
+      "name": "Canales de Ingesta de Prensa",
+      "aliases": [
+        "Press Access Channels"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRESS_CHANNELS",
+      "predicate": "alimenta_ingesta_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F07-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo de acceso",
+      "Suites Sindicadas (Factiva/Cision)": "Paga por licencia comercial, acceso tras muro de pago, retención restringida.",
+      "Agregadores Abiertos (GDELT)": "Acceso libre a datos públicos, actualización 15 min, sin paywall corporativo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Combinar RSS directos para inmediatez con APIs comerciales para profundidad histórica y acceso con derechos asegurados.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:05:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

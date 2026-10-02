@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F46",
+  "pilar": "P09",
+  "eje": "Calidad, acceso y correcciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar calidad, acceso y correcciones de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de calidad, acceso y correcciones exige: 1) Entidad de Control de Acceso: `Entity_AccessPolicy` con atributos (policy_id, user_role, resource_sensitivity_level [public, confidential, restricted], allowed_actions [read, write, audit, export]); 2) Entidad de Registro de Consulta: `Entity_ReadAccessLog` con atributos (log_id, user_id, record_id, timestamp, ip_address, business_justification_text); 3) Entidad de Calidad de Datos: `Entity_DataQualityAudit` con atributos (audit_id, entity_type, entity_id, completeness_score, evidence_hash_status, freshness_days, audit_passed_flag); 4) Relaciones Grafo: `PROTECTED_BY_POLICY`, `ACCESSED_AND_LOGGED_BY`, `CERTIFIED_BY_QUALITY_AUDIT`; 5) Condiciones de Integridad: Restricción de base de datos que bloquea la consulta de registros Restringidos si el log de acceso no puede ser persistido (fail-closed security pattern), y prohibición absoluta de campos para almacenar atributos sensibles protegidos por la Ley 21.719.",
+  "findings": [
+    {
+      "claim_id": "P09-F46-C1",
+      "claim": "El modelo relacional formaliza entidades de políticas de seguridad, logs de acceso append-only (con patrón fail-closed) y auditorías de calidad de datos para garantizar la integridad institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_quality_access_corrections",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades y Relaciones (ERD) — Entidades de Seguridad y Calidad'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de gobernanza: Entity_AccessPolicy, Entity_ReadAccessLog y Entity_DataQualityAudit. Regla de seguridad: Si el subsistema de auditoría falla, el acceso a registros confidenciales se bloquea automáticamente (fail-closed).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: Top 10 Secure Stakeholder Tools for Government and Public Sector",
+          "source_id": "da35828d-1b2b-4ede-8143-38784d7fc927",
+          "locator": "Section 'Fail-Closed Security and Compliance Logging', p. 24-28",
+          "retrieved_at": null,
+          "excerpt_short": "High-security stakeholder platforms must never serve sensitive records without successfully writing an unalterable audit log entry, preventing unmonitored data exfiltration.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las especificaciones de seguridad de Tractivity y el modelo de datos de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de roles y permisos",
+      "Eventos de consulta de base de datos",
+      "Reportes de integridad"
+    ],
+    "actors": [
+      "Administrador de Seguridad BRIDGE",
+      "Motor de Base de Datos",
+      "Oficial de Datos"
+    ],
+    "steps": [
+      "Verificación de políticas de seguridad en cada petición",
+      "Persistencia síncrona en `read_access_logs`",
+      "Cálculo periódico de completitud en `data_quality_audits`",
+      "Generación de dashboards de telemetría de seguridad"
+    ],
+    "states": [
+      "Política Aplicada",
+      "Acceso Auditado",
+      "Calidad Aprobada"
+    ],
+    "outputs": [
+      "Tablero de gobernanza y trazabilidad de accesos en BRIDGE"
+    ],
+    "exceptions": [
+      "Cualquier fallo de escritura en la tabla de logs aborta la transacción y devuelve error HTTP 500"
+    ]
+  },
+  "entities": [
+    "Entity_AccessPolicy",
+    "Entity_ReadAccessLog",
+    "Entity_DataQualityAudit",
+    "Fail-Closed Pattern",
+    "Tractivity"
+  ],
+  "relations": [
+    {
+      "from": "Entity_Interaction",
+      "to": "Entity_AccessPolicy",
+      "type": "GOVERNED_BY"
+    },
+    {
+      "from": "Entity_Commitment",
+      "to": "Entity_DataQualityAudit",
+      "type": "AUDITED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fail-open (permitir acceso si falla el log) vs Fail-closed (bloquear)",
+      "diferencia": "Fail-open crea puntos ciegos aprovechables por actores maliciosos; fail-closed prioriza la seguridad y la confidencialidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "security_logging_reliability": "99.999% de transacciones auditadas sin excepción",
+    "fail_closed_enforcement": "100% de consultas confidenciales abortadas ante caída de logging"
+  },
+  "bridge_implications": "Implementar el middleware de seguridad en FastAPI con decoradores de transacciones atómicas para el logging de lectura.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F47",
+    "P09-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "question_id": "P02-C11",
+  "pilar": "P02",
+  "eje": "Flujo editorial y servicios expertos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre flujo editorial y servicios expertos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan sobre la clasificación de empresas de servicios humanos y consultoría como supuestos proveedores de software: 1) Discrepancia: Versiones tempranas incluían a firmas como Entual B.V., FGS Global, Burson y Brunswick dentro de tablas comparativas de software, creando la falsa impresión de que competían directamente con SaaS de flujo editorial como Broadsight o Prezly; 2) Versión que prevalece: Rige '00_P02_GLOBAL_READ_ME_AND_ERRATA', que rectifica y establece taxativamente: a) Entual B.V. opera como un servicio de consultoría personalizada e inteligencia humana asistida por paneles web sobre datos abiertos en Países Bajos, sin software de workflow de vocería corporativa ni conectores a repositorios internos; b) FGS Global, Burson, Edelman y Brunswick son agencias de asesoría estratégica humana cuyos modelos de negocio se basan en honorarios profesionales de consultores sénior; c) Únicamente Broadsight, Prezly y Contrlr califican como plataformas SaaS de flujo editorial. Prevalece la separación nítida entre herramientas de software y servicios profesionales humanos.",
+  "findings": [
+    {
+      "claim_id": "P02-C11-C1",
+      "claim": "La errata de precedencia reclasifica a Entual B.V. y a las agencias globales de relaciones públicas como servicios de consultoría estratégica humana, delimitando su oferta frente a las plataformas de software de flujo editorial como Broadsight.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Entual, FGS Global, Burson, Broadsight"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 5: Software Vendors vs Professional Consulting Agencies",
+          "excerpt_short": "Excludes consulting firms (FGS Global, Burson) and bespoke human-driven advisory (Entual B.V.) from pure software vendor rankings.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:46:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de modelos de negocio y directivas de errata inmutables.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Portafolios de servicios de agencias",
+      "Modelos de fijación de precios (horas vs suscripción SaaS)",
+      "Directiva de errata P02"
+    ],
+    "actors": [
+      "Auditor de Modelos de Negocio",
+      "Analista de Software"
+    ],
+    "steps": [
+      "Inspección de contratos y modalidades de entrega",
+      "Separación entre facturación de servicios y licencias de software",
+      "Actualización de tablas comparativas"
+    ],
+    "states": [
+      "Modelos_Revisados",
+      "Entidades_Reclasificadas",
+      "Tablas_Actualizadas"
+    ],
+    "outputs": [
+      "Clasificación rigurosa de proveedores de software frente a agencias de consultoría"
+    ],
+    "exceptions": [
+      "Agencias que desarrollan productos de software internos para uso exclusivo de sus consultores"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ENTUAL_BV",
+      "type": "servicio_consultoria",
+      "name": "Entual B.V.",
+      "aliases": [
+        "Entual"
+      ]
+    },
+    {
+      "entity_id": "ENT_BROADSIGHT_SAAS",
+      "type": "plataforma_saas",
+      "name": "Broadsight Software",
+      "aliases": [
+        "Broadsight"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ENTUAL_BV",
+      "predicate": "reclasificado_como",
+      "object_id": "Servicio_Consultoria_Humana",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C11-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Consultoría Estratégica (Entual/FGS) vs Plataforma SaaS (Broadsight)",
+      "Consultoría Estratégica": "Entrega informes curados manualmente por analistas, facturación por retainers mensuales altos.",
+      "Plataforma SaaS": "Entrega software con flujos de aprobación automáticos, trazabilidad digital y licencias por usuario/mes."
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "P02-CONT-03",
+      "description": "Inclusión indebida de agencias y servicios humanos como proveedores de software en borradores tempranos.",
+      "resolution": "Prevalece la errata 00_P02_GLOBAL_READ_ME_AND_ERRATA: reclasificación como consultoría estratégica."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "BRIDGE compite en la categoría de software SaaS de gobernanza y no en la de agencia de asesoría humana.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:46:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

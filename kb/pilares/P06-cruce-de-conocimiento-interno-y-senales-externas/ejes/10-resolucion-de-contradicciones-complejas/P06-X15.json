@@ -1,0 +1,151 @@
+{
+  "question_id": "P06-X15",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Resolución de contradicciones complejas",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre resolución de contradicciones complejas, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en resolución de contradicciones complejas: 1) Discrepancia: El documento inicial P06_RESEARCH_DOSSIER planteaba que los modelos de lenguaje de última generación podían resolver autónomamente cualquier conflicto mediante un prompt tipo 'analiza si estas dos fuentes se contradicen y emite veredicto', confiando ciegamente en la respuesta generativa directa; 2) Prevalencia canónica: Conforme a P06_QUALITY_ADDENDUM (Sección 3.1) y el benchmark SABER (Zhu et al., 2026), PREVALECE el principio de que los LLMs directos padecen de sesgo de confirmación y sobreconfianza ante conflictos complejos, alucinando explicaciones forzadas para compatibilizar contradicciones flagrantes o, al revés, inventando discrepancias donde no las hay. Se establece como estándar obligatorio el uso de CoVe con verificación desacoplada y el gatekeeper humano innegociable ante materias reguladas.",
+  "findings": [
+    {
+      "claim_id": "P06-X15-C1",
+      "claim": "P06_QUALITY_ADDENDUM y SABER anulan la pretensión de que un LLM resuelva contradicciones complejas en un solo paso generativo, exigiendo verificación desacoplada y control humano.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Gobernanza Editorial P06"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 3.1: Falibilidad de LLMs en Razonamiento Contradictorio Directo",
+          "excerpt_short": "Pedir a un LLM resolver un conflicto fáctico mediante prompt simple produce sincretismo espurio o alucinaciones de reconciliación. Se requiere descomposición formal y arbitraje humano.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "8efce53c-a1b5-4416-b399-3a615f36b2b5",
+          "source_title": "Zhu et al. (2026) - SABER: Trust or Abstain? (Texto Completo HTML v1)",
+          "original_url": "https://arxiv.org/html/2605.18792v1",
+          "locator": "Section 2: The Brittleness of Standard LLMs under Conflicting Evidence",
+          "excerpt_short": "Standard LLMs frequently exhibit sycophancy or hallucinated reconciliations when presented with directly contradictory premises in their context window.",
+          "source_date": "2026-05-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Corrección metodológica explícita y coherente con las pruebas empíricas de SABER.",
+      "epistemic_status_original": "prevalencia_editorial_correccion",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dossier preliminar",
+      "Addendum de calidad",
+      "Benchmark SABER"
+    ],
+    "actors": [
+      "Comité de Arquitectura",
+      "Especialista en NLP"
+    ],
+    "steps": [
+      "Constatación de alucinaciones en resolución directa",
+      "Aplicación de prevalencia de SABER / Addendum",
+      "Sustitución de prompt simple por pipeline desacoplado CoVe"
+    ],
+    "states": [
+      "Direct_Prompting_Deprecating",
+      "Decoupled_Pipeline_Adopted"
+    ],
+    "outputs": [
+      "Pipeline desacoplado de arbitraje"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SABER_FRAMEWORK",
+      "type": "benchmark_nlp",
+      "name": "Benchmark SABER (Zhu et al. 2026)",
+      "aliases": [
+        "SABER RAG Framework"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SABER_FRAMEWORK",
+      "predicate": "invalida_metodo_de",
+      "object_id": "ENT_DISCREPANCY_RECORD",
+      "valid_from": "2026-05-18",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X15-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P06-X15-C1"
+      ],
+      "difference": "Dossier asumía resolución automática por prompt simple; Addendum y SABER demuestran que el prompt simple alucina y exigen pipeline CoVe desacoplado.",
+      "resolution": "resuelta",
+      "reason": "Prevalece P06_QUALITY_ADDENDUM conforme a las normas del mandato."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Blindaje técnico del motor contra alucinaciones sincretistas en disputas complejas de información.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

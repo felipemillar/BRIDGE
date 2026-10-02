@@ -1,0 +1,138 @@
+{
+  "question_id": "P07-F46",
+  "pilar": "P07",
+  "eje": "Calidad y evaluación de briefs",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar calidad y evaluación de briefs de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un schema de evaluación y control de calidad (Brief_Quality_Evaluation_Schema) compuesto por: 1) Metadatos del brief auditado (Brief_Id, Evaluator_Id, Evaluator_Type [ALGORITHMIC_LINTER / HUMAN_EXPERT]); 2) Puntuaciones por dimensión cuantitativa (Decision_Utility_Score [0-100], Grounding_Factual_Index [0-100%], Conciseness_Score [0-100], Tone_Neutrality_Score [0-100], Overall_Quality_Score [0-100]); 3) Auditoría de fallos críticos (Fatal_Flaws_Checklist: Hallucinated_Metric_Flag, MNPI_Leakage_Flag, Lobby_Law_Omission_Flag, Premature_Liability_Admission_Flag); 4) Telemetría de desempeño (Reading_Time_Seconds, Citation_Coverage_Ratio); y 5) Condiciones de certificación (Condición booleana: Brief_Authorized_For_Dispatch = TRUE sólo si Overall_Quality_Score >= 85, Grounding_Factual_Index >= 95% y todos los Fatal_Flaws_Flags son FALSE).",
+  "findings": [
+    {
+      "claim_id": "P07-F46-C1",
+      "claim": "El modelado estructurado de la calidad del brief requiere registrar dimensiones analíticas cuantitativas y una lista binaria de control de fallos críticos fatales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "quality_schema",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 7 (Criterios de Calidad, Utilidad y Trazabilidad)",
+          "excerpt_short": "Variables del schema de evaluación: Brief_Ref, Utility_Rating, Grounding_Ratio, Conciseness_Score, Tone_Objectivity, Fatal_Error_Flags[] (MNPI, Hallucination, Lobby_Omission), Certification_Verdict. Si cualquier Fatal_Error_Flag es positivo, el score final colapsa a 0 y el brief queda retenido.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "NIST: AI Risk Management Framework (AI RMF 1.0)",
+          "source_id": "3e70b28e-2295-4ce6-9f9f-efc2bfd4a5bf",
+          "locator": "Función MEASURE 2.5, p. 32-36",
+          "excerpt_short": "Quality evaluation models must implement gating logic where severe negative flags override aggregate performance scores, preventing catastrophic failures from being masked by high linguistic fluency.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación directa entre los principios de control de fallos de NIST AI RMF y la arquitectura de calidad del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "schema_evaluacion_calidad": {
+      "eval_id": "EVAL-2026-10-01-104",
+      "brief_id": "BRF-DAILY-2026-10-01",
+      "metricas_dimensionales": {
+        "utilidad_decisional": 92.0,
+        "indice_anclaje_factico": 98.5,
+        "concision_tiempo_lectura": 95.0,
+        "neutralidad_tono": 90.0,
+        "score_global_ponderado": 94.2
+      },
+      "lista_fallos_criticos": {
+        "alucinacion_cifras": false,
+        "filtracion_secreto_bursatil": false,
+        "omision_ley_lobby": false,
+        "admision_injustificada_culpa": false
+      },
+      "veredicto_despacho": "AUTHORIZED_FOR_EXECUTIVE_USE",
+      "timestamp_auditoria": "2026-10-01T07:28:00Z"
+    }
+  },
+  "entities": [
+    "BriefQualityEvaluationSchema",
+    "NIST AI RMF",
+    "Gating Logic",
+    "Grounding Ratio"
+  ],
+  "relations": [
+    {
+      "from": "BriefQualityEvaluationSchema",
+      "to": "Brief Ejecutivo",
+      "type": "certifies"
+    },
+    {
+      "from": "Fatal Error Flags",
+      "to": "Score Global",
+      "type": "overrides_on_failure"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Puntuación Promedio Simple vs Compuerta con Veto Fatal",
+      "diferencia": "El promedio simple permite que una alta fluidez compense una mentira fáctica; la compuerta con veto fatal anula el documento si contiene una sola alucinación crítica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "schema_fields_count": "13 variables operacionales",
+    "fatal_flaw_override_enforcement": "100% determinista"
+  },
+  "bridge_implications": "Implementar este schema de evaluación en el backend de BRIDGE como un middleware obligatorio antes de renderizar briefs.",
+  "open_gaps": [
+    "Diseño de mecanismos de auto-reparación donde la IA corrige automáticamente el fallo fáctico al detectar el veto."
+  ],
+  "next_question_ids": [
+    "P07-F47",
+    "P07-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

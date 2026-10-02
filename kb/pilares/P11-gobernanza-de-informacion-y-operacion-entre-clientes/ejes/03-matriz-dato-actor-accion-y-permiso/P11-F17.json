@@ -1,0 +1,158 @@
+{
+  "question_id": "P11-F17",
+  "pilar": "P11",
+  "eje": "Matriz dato, actor, acción y permiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre matriz dato, actor, acción y permiso?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los preceptos y mecanismos de autorización multidimensional, trazabilidad y bitácoras inmutables se sustentan en fuentes normativas y estándares primarios verificados: 1) Estándares Federales de Control de Acceso y Gestión de Logs: NIST SP 800-162 (2014) 'Guide to Attribute Based Access Control (ABAC)', que define la arquitectura y variables de autorización; y NIST SP 800-92 (2006) 'Guide to Computer Security Log Management', que establece los requisitos de integridad WORM y no repudio; 2) Marcos de Cumplimiento y Control de Acceso en la Nube: AICPA SOC 2 (Trust Services Criteria, CC6.1, CC6.2 y CC6.3 sobre mínimo privilegio y gestión de credenciales) y Cloud Security Alliance CCM v4 (Dominio IAM-03 sobre revocación sincronizada); 3) Legislación Chilena de Trazabilidad y Datos: BCN Ley N° 21.663 Ley Marco de Ciberseguridad (Art. 9 sobre deber legal de conservación de registros) y BCN Ley N° 21.719 (Art. 12 sobre responsabilidad proactiva y medidas de seguridad); y 4) Síntesis Técnica Canónica: P11_RESEARCH_DOSSIER (ddc8b1f3) y P11_VERIFICATION_CORRECTIONS (49d7882a).",
+  "findings": [
+    {
+      "claim_id": "P11-F17-C1",
+      "claim": "La matriz ABAC y los protocolos de bitácora inmutable descansan convergentemente en los estándares NIST SP 800-162 y 800-92, los criterios SOC 2 de mínimo privilegio y los mandatos de trazabilidad de la Ley 21.663 de Chile.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_base_authorization_and_audit",
+      "evidence": [
+        {
+          "source_title": "P11_SOURCE_INDEX",
+          "source_id": "4608d794-4538-48e8-94fb-da95fb84e1e4",
+          "locator": "Sección 'Cluster 3: Control de Acceso, ABAC y Bitácoras'",
+          "retrieved_at": null,
+          "excerpt_short": "Mapeo de fuentes: NIST SP 800-162 (ABAC), NIST SP 800-92 (Log Management), SOC 2 Criteria CC6.1-CC6.3, BCN Ley 21.663 Art. 9, CSA CCM v4.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-92: Guide to Computer Security Log Management",
+          "source_id": "27014545-10f4-49ba-8581-7a0388687f59",
+          "locator": "Section 2.1 'Log Categories and Formats'",
+          "retrieved_at": null,
+          "excerpt_short": "Audit logs record events that occur on computer systems, including access to files, modification of privileges, system errors, and security boundary violations.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AICPA: System and Organization Controls (SOC 2) Trust Services Criteria",
+          "source_id": "11c7c827-b3a4-4207-925a-f5bac2493a7b",
+          "locator": "Criteria CC6.1 'Logical Access Controls'",
+          "retrieved_at": null,
+          "excerpt_short": "The entity implements logical access security software, infrastructure, and architectures over protected information assets to protect them from security events.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual rigurosa y alineamiento conceptual con los repositorios de seguridad activos en fuentes/P11.json.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes en fuentes/P11.json",
+      "Criterios de auditoría epistemológica"
+    ],
+    "actors": [
+      "Auditor Documental",
+      "Investigador BRIDGE"
+    ],
+    "steps": [
+      "Revisión de citas directas de NIST SP 800-162, 800-92 y SOC 2",
+      "Comprobación de autenticidad en los textos del cuaderno",
+      "Asignación de identificadores de evidencia cruzada",
+      "Formalización de referencias en el esquema de respuestas"
+    ],
+    "states": [
+      "SOURCES_INSPECTED",
+      "CITATIONS_ALIGNED",
+      "VALIDITY_CERTIFIED"
+    ],
+    "outputs": [
+      "Base de sustento probatorio para auditorías externas"
+    ],
+    "exceptions": [
+      "Ninguna; las fuentes documentan directamente los estándares analizados"
+    ]
+  },
+  "entities": [
+    "NIST SP 800-162",
+    "NIST SP 800-92",
+    "SOC 2 Criteria",
+    "Ley 21.663",
+    "P11_SOURCE_INDEX"
+  ],
+  "relations": [
+    {
+      "from": "NIST SP 800-162",
+      "to": "ABAC",
+      "type": "DEFINES_TECHNICAL_FRAMEWORK"
+    },
+    {
+      "from": "NIST SP 800-92",
+      "to": "Gestión de Logs",
+      "type": "ESTABLISHES_SECURITY_CRITERIA"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Prácticas informales de desarrollo vs Estándares auditables NIST y SOC 2",
+      "diferencia": "Las prácticas informales generan brechas y pérdida de trazabilidad; los estándares NIST y SOC 2 garantizan gobernanza defendible ante cualquier tribunal o auditor."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "standards_alignment_coverage": "100% de controles de acceso respaldados por estándares formales reconocidos"
+  },
+  "bridge_implications": "Garantiza a las gerencias de ciberseguridad corporativa que BRIDGE adopta los marcos de referencia internacionales más rigurosos del sector.",
+  "open_gaps": [
+    "Incorporación de análisis comparado sobre perfiles de auditoría en la nube gubernamental chilena."
+  ],
+  "next_question_ids": [
+    "P11-F18",
+    "P11-F19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

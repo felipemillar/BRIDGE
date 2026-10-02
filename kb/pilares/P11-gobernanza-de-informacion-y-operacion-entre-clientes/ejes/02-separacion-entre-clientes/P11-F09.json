@@ -1,0 +1,164 @@
+{
+  "question_id": "P11-F09",
+  "pilar": "P11",
+  "eje": "Separación entre clientes",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué fallos cruzados deben incluirse en pruebas adversariales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Las pruebas adversariales y ejercicios de Red Teaming en BRIDGE deben incluir de forma mandatoria 5 vectores de fallo cruzado de alta peligrosidad: 1) Suplantación de Cabeceras e Identidad de Tenant (Tenant ID Spoofing / Header Tampering): Manipulación de cabeceras HTTP (`X-Tenant-ID`) o parámetros en peticiones GraphQL intentando forzar al backend a consultar datos de otra empresa; 2) Contaminación Vectorial Cruzada (Cross-Tenant Vector Pollution): Inyección deliberada de vectores de un cliente en colecciones compartidas o manipulación de payloads para eludir el filtrado de proximidad semántica en Qdrant; 3) Envenenamiento de Caché Semántica (Semantic Cache Poisoning): Envío de consultas idénticas desde un tenant malicioso para inducir al sistema a entregar como respuesta en caché datos confidenciales generados previamente por otro cliente; 4) Fuga de Variables de Conexión en Pool (Connection Pool Session Bleed): Reutilización de conexiones en el pool de PostgreSQL donde la directiva `SET app.current_tenant_id` no se restablece con `DISCARD ALL` o `RESET`, permitiendo que el siguiente usuario herede inadvertidamente la visibilidad del inquilino anterior; y 5) Ataques de Autorización a Nivel de Objeto (BOLA / IDOR): Iteración secuencial de identificadores de documentos (`asset_id`) en endpoints de exportación y descarga para comprobar que la capa de autorización bloquee el acceso foráneo.",
+  "findings": [
+    {
+      "claim_id": "P11-F09-C1",
+      "claim": "El marco de pruebas adversariales exige testear cinco vectores de fallo: suplantación de cabeceras, contaminación vectorial, envenenamiento de caché, sesión residual en pool de conexiones y ataques BOLA/IDOR, conforme a OWASP GenAI 2025 y NIST SP 800-53.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "adversarial_cross_tenant_vectors",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 3.3 'Vectores Adversariales y Red Teaming'",
+          "retrieved_at": null,
+          "excerpt_short": "5 vectores mandatorios de Red Teaming: 1. Header Tampering; 2. Cross-Tenant Vector Pollution; 3. Semantic Cache Poisoning; 4. Session Bleed en connection pools; 5. BOLA/IDOR en APIs de exportación.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "OWASP GenAI: Top 10 for Large Language Model Applications 2025",
+          "source_id": "83d92341-65c3-4adf-877a-8cf4b4cd29f2",
+          "locator": "LLM06: Sensitive Information Disclosure & LLM08: Vector Security",
+          "retrieved_at": null,
+          "excerpt_short": "Test against unauthorized data extraction across multi-tenant vector databases and shared cache infrastructures, verifying that prompt injections cannot extract contextual memories of other tenants.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations",
+          "source_id": "24c7952c-3d6a-417c-8e7d-746065c9ca20",
+          "locator": "Control CA-8 'Penetration Testing'",
+          "retrieved_at": null,
+          "excerpt_short": "Conduct penetration testing under specified conditions to identify and exploit multi-tenant vulnerabilities, validating the effectiveness of logical separation boundaries.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los riesgos emergentes tipificados por OWASP GenAI 2025 y los controles de penetración NIST SP 800-53.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Entorno de staging con tenants simulados",
+      "Scripts de ataque adversarial",
+      "Monitor SIEM"
+    ],
+    "actors": [
+      "Equipo de Red Teaming",
+      "Defensor de Infraestructura",
+      "Auditor de Ciberseguridad"
+    ],
+    "steps": [
+      "Ejecución automatizada de los 5 ataques de fallo cruzado",
+      "Monitoreo de logs en tiempo real: Verificación del bloqueo por RLS y Qdrant",
+      "Medición de alertas generadas en el SIEM ante cada intento de BOLA o Header Tampering",
+      "Comprobación de que `DISCARD ALL` se ejecute al retornar conexiones al pool",
+      "Emisión de reporte de inmunidad frente a ataques multitenant"
+    ],
+    "states": [
+      "ATTACK_SIMULATION",
+      "BOUNDARY_EVALUATED",
+      "SIEM_ALERTED",
+      "RESILIENCE_VERIFIED"
+    ],
+    "outputs": [
+      "Reporte de penetración con hallazgos y certificación de estanqueidad"
+    ],
+    "exceptions": [
+      "La detección de una vulnerabilidad crítica detiene de inmediato el paso a producción"
+    ]
+  },
+  "entities": [
+    "Red Teaming",
+    "Header Tampering",
+    "Session Bleed",
+    "BOLA / IDOR",
+    "OWASP GenAI 2025",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Red Teaming",
+      "to": "5 Vectores Adversariales",
+      "type": "TESTS_SYSTEMATICALLY"
+    },
+    {
+      "from": "Session Bleed",
+      "to": "DISCARD ALL",
+      "type": "MITIGATED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Pruebas funcionales comunes vs Pruebas de penetración adversarial multitenant",
+      "diferencia": "Las pruebas funcionales solo evalúan el camino feliz; las pruebas adversariales fuerzan intencionalmente los límites de la arquitectura para descubrir grietas invisibles."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "adversarial_breach_success_rate": "0% de penetraciones exitosas en pruebas adversariales",
+    "pool_reset_compliance_rate": "100% de conexiones retornadas con ejecución de DISCARD ALL"
+  },
+  "bridge_implications": "Garantiza que la arquitectura de software de BRIDGE resista ataques maliciosos sofisticados provenientes de usuarios internos o externos.",
+  "open_gaps": [
+    "Pruebas continuas de fuzzing sobre los serializadores de datos de Qdrant y Redis."
+  ],
+  "next_question_ids": [
+    "P11-F10",
+    "P11-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

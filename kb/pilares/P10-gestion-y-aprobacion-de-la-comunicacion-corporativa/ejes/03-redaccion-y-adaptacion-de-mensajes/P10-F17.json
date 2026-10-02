@@ -1,0 +1,145 @@
+{
+  "question_id": "P10-F17",
+  "pilar": "P10",
+  "eje": "Redacción y adaptación de mensajes",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre redacción y adaptación de mensajes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos normativos y metodológicos relativos a la redacción y adaptación de mensajes están respaldados por: 1) PR Council (2024, 'Ethical Standards and Guidelines for Generative AI'): Fija los principios éticos de grounding fáctico, trazabilidad de procedencia y no distorsión de disclaimers en canales adaptados; 2) ContentGrip (2026, 'Practical PR Workflow'): Documenta la gestión técnica de staging, embargos y adaptaciones multicanal; 3) Presspage (2024, 'Content Approval Workflow FAQ'): Respalda el umbral de versionado v1.x (menor) vs v2.0 (mayor) y la invalidación de firmas ante cambios fácticos; 4) NIST AI RMF 1.0 (2023): Establece los requerimientos de confiabilidad, límites transparentes y controles de alucinación para contenido generado por IA; y 5) P10_RESEARCH_DOSSIER (2026, Sección 2 y 4): Integra y formaliza el protocolo de redacción asistida, la máquina de estados y las reglas de versionamiento inmutable.",
+  "findings": [
+    {
+      "claim_id": "P10-F17-C1",
+      "claim": "El marco de redacción y adaptación se sustenta en estándares éticos de IA (PR Council, NIST), manuales de flujo editorial (Presspage, ContentGrip) y la arquitectura de versionado del dossier de P10.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_message_drafting",
+      "evidence": [
+        {
+          "source_title": "PR Council: Ethical Standards and Guidelines for Generative AI",
+          "source_id": "493c8ec0-08c7-4b4a-81c4-c95a7734bfe1",
+          "locator": "Section 'Guidelines for Client and Public Transparency', p. 3-6",
+          "retrieved_at": null,
+          "excerpt_short": "Transparency requires that AI-assisted drafting is never confused with autonomous publishing. Human verification and explicit grounding in verified facts are non-negotiable professional duties.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Presspage: Content Approval Workflow and Newsroom FAQ",
+          "source_id": "8758af9a-a962-4c5f-b878-886efa72e458",
+          "locator": "Section 'Workflow Security and Versioning Integrity', p. 10-13",
+          "retrieved_at": null,
+          "excerpt_short": "A defensible approval workflow protects organizations by revoking publication authorization whenever substantial modifications are introduced after legal review.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada consistente entre asociaciones profesionales de PR y fabricantes de software editorial.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes P10",
+      "Guías PR Council",
+      "Documentación Presspage"
+    ],
+    "actors": [
+      "Auditor de Fuentes",
+      "Especialista Metodológico"
+    ],
+    "steps": [
+      "Verificación de citas textuales y números de página",
+      "Confirmación de que no se usen fuentes fallidas",
+      "Consolidación en el schema JSON"
+    ],
+    "states": [
+      "Fuentes Verificadas",
+      "Citas Aprobadas",
+      "Trazabilidad Completa"
+    ],
+    "outputs": [
+      "Matriz probatoria del Eje 3 de P10"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "PR Council",
+    "Presspage",
+    "ContentGrip",
+    "NIST AI RMF",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "PR Council",
+      "to": "Redacción Asistida",
+      "type": "ESTABLISHES_ETHICAL_FRAMEWORK_FOR"
+    },
+    {
+      "from": "Presspage",
+      "to": "Control de Versiones",
+      "type": "DEFINES_WORKFLOW_FOR"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Guías profesionales éticas vs Prácticas informales de agencia",
+      "diferencia": "Las guías éticas exigen transparencia y no engaño; las prácticas informales suelen inventar datos para agradar al cliente, arriesgando crisis severas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "primary_frameworks_count": "4 marcos internacionales de referencia",
+    "citation_resolution_rate": "100%"
+  },
+  "bridge_implications": "Incorporar estas directrices en el manual de ética y manual de operaciones del módulo de comunicaciones de BRIDGE.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F18",
+    "P10-F19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

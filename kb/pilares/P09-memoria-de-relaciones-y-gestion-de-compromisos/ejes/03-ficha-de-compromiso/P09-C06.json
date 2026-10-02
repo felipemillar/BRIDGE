@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-C06",
+  "pilar": "P09",
+  "eje": "Ficha de compromiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué sigue sin prueba sobre ficha de compromiso, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Brecha sin Prueba: El corpus no documenta el porcentaje de compromisos asumidos en el sector minero chileno que requieren renegociación formal por desfases de permisología ambiental estatal (e.g., demoras en permisos sectoriales de la DGA o Sernageomin ajenos al titular), existiendo incertidumbre sobre qué proporción de los atrasos son atribuibles a ineficiencia corporativa versus demoras burocráticas del Estado. Fuentes Fallidas: La fuente de SustaiNet (`3c823db9`) sobre seguimiento de compromisos presentó problemas de captura de texto y fue sustituida por Boréalis (`27ce9bc8`) y Simply Stakeholders (`f962cf2b`). Validación Mínima Requerida: Analizar una muestra retrospectiva de 50 compromisos modificados en tres faenas mineras en operación, clasificando la causa raíz del desfase en tres categorías (culpa interna de ingeniería/presupuesto, fuerza mayor climática, o retraso en otorgamiento de permiso sectorial por la autoridad).",
+  "findings": [
+    {
+      "claim_id": "P09-C06-C1",
+      "claim": "El impacto de las demoras en permisología estatal sobre el cumplimiento de compromisos comunitarios carece de datos consolidados en el corpus; SustaiNet falló y fue sustituida por Boréalis y Simply Stakeholders; se requiere auditoría de causa raíz.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "contrast_commitment_card_gaps",
+      "evidence": [
+        {
+          "source_title": "P09_PENDING_SOURCES_RESOLUTION",
+          "source_id": "dcb397bc-d659-44fc-af6b-e394801f12a9",
+          "locator": "Sección 'Sustitución de SustaiNet por Boréalis y Simply Stakeholders'",
+          "retrieved_at": null,
+          "excerpt_short": "La documentación de SustaiNet/StakeTracker fue reemplazada íntegramente por los whitepapers auditados de Boréalis y Simply Stakeholders, resolviendo las brechas técnicas de gestión de compromisos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_GAPS_AND_VALIDATION",
+          "source_id": "33944e01-6a0f-46f1-bfa3-19224f1c8d72",
+          "locator": "Sección 'Gaps en Causalidad de Incumplimientos'",
+          "retrieved_at": null,
+          "excerpt_short": "Incertidumbre: No existe cuantificación de cuántos compromisos comunitarios se atrasan por demoras de permisos de la DGA o SERNAGEOMIN vs fallas de gestión de la empresa.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación fundamentada de vacíos en la causalidad de los desfases de compromisos.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.92,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Expedientes de 50 compromisos modificados",
+      "Fechas de ingreso de permisos a DGA/Sernageomin",
+      "Resoluciones de otorgamiento"
+    ],
+    "actors": [
+      "Auditor de Permisología",
+      "Gestor de Asuntos Corporativos",
+      "Jefe de Operaciones"
+    ],
+    "steps": [
+      "Extracción de la muestra de compromisos renegociados",
+      "Cálculo de tiempos de tramitación del permiso habilitante",
+      "Asignación de categoría de causa raíz",
+      "Consolidación de estadísticas para reportes de riesgo"
+    ],
+    "states": [
+      "Muestra Extraída",
+      "Causas Clasificadas",
+      "Reporte Emitido"
+    ],
+    "outputs": [
+      "Matriz de causalidad de retrasos de compromisos"
+    ],
+    "exceptions": [
+      "Compromisos que no requerían permisos sectoriales se clasifican de inmediato como causa interna"
+    ]
+  },
+  "entities": [
+    "SustaiNet (Sustituido)",
+    "Boréalis (Sustituto)",
+    "Simply Stakeholders (Sustituto)",
+    "Permisología Sectorial",
+    "DGA / Sernageomin"
+  ],
+  "relations": [
+    {
+      "from": "SustaiNet",
+      "to": "Boréalis",
+      "type": "REPLACED_BY"
+    },
+    {
+      "from": "Compromiso Atrasado",
+      "to": "Permisología Sectorial",
+      "type": "HYPOTHESIZED_DEPENDENCY_ON"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Culpar siempre a la burocracia estatal vs Diagnóstico de causa raíz objetivo",
+      "diferencia": "Culpar sin pruebas daña las relaciones con el regulador; el diagnóstico objetivo permite mostrar a la comunidad la trazabilidad real del trámite."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "audit_sample_size": "50 expedientes de compromisos modificados",
+    "root_cause_categories": "3 categorías (Interna, Climática, Permisología Estatal)"
+  },
+  "bridge_implications": "Incluir en el formulario de renegociación de BRIDGE un campo tipificado: `motivo_retraso` con opción de documentar demoras de servicios públicos.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C07",
+    "P09-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

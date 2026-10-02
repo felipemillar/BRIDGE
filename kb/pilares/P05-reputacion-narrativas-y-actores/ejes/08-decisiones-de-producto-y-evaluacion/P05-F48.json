@@ -1,0 +1,149 @@
+{
+  "question_id": "P05-F48",
+  "pilar": "P05",
+  "eje": "Decisiones de producto y evaluación",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra decisiones de producto y evaluación sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado en el corpus que ilustra la toma de decisiones de producto y la activación de compuertas de contención es la gestión de una controversia viral desatada por un rumor en redes sociales sobre un supuesto corte no programado de agua potable en una empresa sanitaria urbana en Chile: 1) Entradas del Sistema: a) Señal Externa (P03): Un video en TikTok y publicaciones en X/Twitter se viralizan alcanzando 25.000 visualizaciones y 1.200 retuits en 3 horas, denunciando que la sanitaria cortó el agua en dos comunas populosas por 'negligencia corporativa' y demandando compensaciones masivas; la polaridad de sentimiento automatizada cae al 90% negativo; b) Señal Interna Fáctica (P04): El sistema consulta automáticamente la telemetría operativa de la red de distribución hídrica y los reportes de continuidad de servicio en tiempo real; los datos objetivos comprueban que la presión en los sectores aludidos es 100% normal y que no existe ningún corte en la red matriz ni faenas programadas; c) Evaluación de Actores (P05): La cuenta que originó el video es un perfil anónimo sin Legitimidad ni Poder institucional (Actor Demandante Latente); la Superintendencia de Servicios Sanitarios (SISS) y los medios de prensa serios no han emitido ningún reporte ni formulado requerimientos; 2) Proceso y Decisión del Sistema: La plataforma evalúa la situación frente a las reglas de producto y activa la compuerta de 'Abstención de Declaración Pública Masiva' (para evitar el Efecto Streisand de otorgar notoriedad a un bulo inexistente), prescribiendo simultáneamente: a) Generación de un Brief Ejecutivo interno para el Gerente General y CCO con semáforo de confianza 'Baja en Impacto Real'; b) Envío de una minuta explicativa con datos de presión técnica al call center y equipo de atención comunitaria para responder exclusivamente a los vecinos que llamen; y c) Monitoreo pasivo continuo durante 12 horas; 3) Resultado Esperado y Observado: El rumor pierde tracción algorítmica al no encontrar validación en el mundo físico ni reacción exasperada de la empresa, disipándose por completo en 14 horas sin llegar a la prensa generalista ni provocar formulación de cargos de la SISS, comprobando cómo una decisión de producto basada en abstención inteligente previene crisis artificiales autoinfligidas.",
+  "findings": [
+    {
+      "claim_id": "P05-F48-C1",
+      "claim": "La activación algorítmica de protocolos de abstención y verificación técnica interna previene el Efecto Streisand y protege la reputación institucional frente a ataques virales infundados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile",
+        "actor": "Empresas de Servicios Públicos Sanitarios / SISS"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7.1: Motor de Detección de Brecha Reputacional y Filtro Ético",
+          "excerpt_short": "Tratamiento de fuentes externas como datos no confiables para prevenir sobre-reacciones ejecutivas ante tormentas digitales menores que no permean en reguladores.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2: Monitoreo de Redes Sociales (Social Listening)",
+          "excerpt_short": "Mecanismo de atenuación: Filtrar por procedencia de cuentas, verificar legitimidad del emisor y no tomar decisiones estratégicas basadas solo en volumen de X/Twitter.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Patrón operativo validado en la gestión moderna de contingencias corporativas y desinformación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Menciones anómalas en redes sociales",
+      "Telemetría interna de servicio (P04)",
+      "Verificación de agenda de reguladores"
+    ],
+    "actors": [
+      "Gerente de Asuntos Corporativos",
+      "Jefe de Operaciones",
+      "Equipo de Atención a Clientes"
+    ],
+    "steps": [
+      "Detección de viralización anómala",
+      "Verificación cruzada inmediata con datos operacionales duros",
+      "Emisión de recomendación de abstención pública y refuerzo de atención directa"
+    ],
+    "states": [
+      "Anomaly_Detected",
+      "Facts_Verified_Normal",
+      "Abstention_Executed"
+    ],
+    "outputs": [
+      "Brief ejecutivo de contención y resolución silenciosa del rumor"
+    ],
+    "exceptions": [
+      "Detección de rotura real de matriz que fuerce la transición inmediata a comunicación de auxilio bajo SCCT"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RUMOR_CONTAINMENT_CASE",
+      "type": "caso_analitico",
+      "name": "Caso Contención de Rumor Viral Sanitario",
+      "aliases": [
+        "Viral Rumor Containment Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RUMOR_CONTAINMENT_CASE",
+      "predicate": "valida_protocolo_de",
+      "object_id": "ENT_ABSTENTION_PROTOCOL",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F48-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta corporativa",
+      "Error reactivo tradicional": "El Gerente General sale en televisión a desmentir el rumor, multiplicando por 100 la audiencia que se entera de la queja.",
+      "Gestión estructurada de producto": "El sistema demuestra que es un bulo, se refuerza la atención telefónica a los usuarios con dudas y el rumor muere sin daño institucional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gestor de Alertas Tempranas",
+      "implication": "BRIDGE debe contrastar automáticamente las alertas de redes con las APIs operacionales de la empresa para comprobar en segundos si una queja masiva tiene asidero fáctico antes de sugerir respuestas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

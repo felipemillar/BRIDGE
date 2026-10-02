@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-C02",
+  "pilar": "P02",
+  "eje": "Universo comercial y deduplicación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre universo comercial y deduplicación, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Siguen sin prueba empírica tres aspectos críticos del universo comercial: 1) Titularidad legal y sede física de Direct Signal: la entidad figura en catálogos de marketing pero sus fuentes fallaron en certificar registro corporativo activo en Delaware o California, manteniéndose como 'propiedad no verificada'; 2) Grado de integración real de datos entre CisionOne y Brandwatch: aunque Platinum Equity adquirió Brandwatch en 2021 por 450M USD, no hay prueba pública de que compartan un grafo de datos unificado; 3) Existencia de una suite de 4 módulos: ninguna fuente comercial o independiente prueba la existencia de un SaaS que integre nativamente Saber, Escuchar, Hablar y Relacionar; Validación mínima requerida: a) Búsqueda en el registro de corporaciones de Delaware para Direct Signal; b) Prueba técnica de API unificada entre Brandwatch y CisionOne; c) Ensayo operacional de extremo a extremo para validar si algún vendor puede procesar los 4 módulos sin middleware externo.",
+  "findings": [
+    {
+      "claim_id": "P02-C02-C1",
+      "claim": "La estructura societaria de Direct Signal carece de respaldo registral público, y la integración técnica interna de mega-adquisiciones (Cision/Brandwatch) no está demostrada fuera de presentaciones comerciales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Direct Signal, Cision/Brandwatch"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Section 3: Unverified Corporate Entities and Integration Gaps",
+          "excerpt_short": "Direct Signal lacks corporate registration trail. Brandwatch and Cision remain operating with segregated backend architectures despite single ownership.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:44:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación documental de brechas registradas en el cuaderno P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registros mercantiles",
+      "Llamadas de prueba a endpoints de API de Cision/Brandwatch",
+      "Fichas de proveedores no verificados"
+    ],
+    "actors": [
+      "Auditor Societario",
+      "Ingeniero de Integración"
+    ],
+    "steps": [
+      "Consulta en base de datos mercantil estatal",
+      "Envío de solicitud de demo técnica con flujo cruzado",
+      "Verificación de autenticación unificada SSO y token de datos"
+    ],
+    "states": [
+      "Entidad_Sospechosa",
+      "Consulta_Ejecutada",
+      "Integracion_Evaluada"
+    ],
+    "outputs": [
+      "Ficha de validación societaria y técnica"
+    ],
+    "exceptions": [
+      "Negativa del proveedor a exhibir el backend de integración bajo secreto comercial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DIRECT_SIGNAL",
+      "type": "proveedor_no_verificado",
+      "name": "Direct Signal",
+      "aliases": [
+        "DirectSignal AI"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DIRECT_SIGNAL",
+      "predicate": "clasificado_como",
+      "object_id": "Entidad_No_Verificada",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C02-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Integración Comercial (Marketing) vs Integración Técnica (Backend)",
+      "Integración Comercial": "Misma marca, empaquetamiento conjunto de precios y facturación única.",
+      "Integración Técnica": "Bases de datos unificadas, API común y sincronización de eventos en tiempo real."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE no debe asumir que las mega-adquisiciones de la competencia representan plataformas unificadas en el backend.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_DIRECT_SIGNAL",
+      "description": "Falta de verificación jurídica de Direct Signal",
+      "action": "Consultar registro mercantil"
+    }
+  ],
+  "next_question_ids": [
+    "P02-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:44:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

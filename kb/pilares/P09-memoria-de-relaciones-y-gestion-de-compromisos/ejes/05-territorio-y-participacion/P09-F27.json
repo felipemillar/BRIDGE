@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-F27",
+  "pilar": "P09",
+  "eje": "Territorio y participación",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué prácticas documentadas preservan confianza y continuidad al cambiar el equipo corporativo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La preservación del capital relacional y la confianza territorial durante procesos de recambio ejecutivo o cambio de agencias exige tres prácticas canónicas documentadas en la literatura: 1) Traspaso Estructurado de Memoria Institucional: El ejecutivo saliente y el entrante ejecutan un proceso formal de handover guiado por la Ficha de Actor de BRIDGE, revisando compromisos pendientes, sensibilidades históricas y actas suscritas; 2) Presentación Formal Conjunta en Terreno: Antes del retiro definitivo del titular saliente, se realiza una reunión o visita a terreno donde se presenta personalmente al nuevo enlace ante los dirigentes comunitarios y autoridades locales, reafirmando que 'los compromisos son de la compañía y no de la persona'; y 3) Monitoreo Continuo de la Alianza Agencia-Cliente: Según los estudios de Taylor & Francis y Sinergie, la rotación de consultores externos debe gobernarse mediante una plataforma centralizada (System of Record) que pertenezca a la empresa mandante, garantizando que el historial de contactos no quede secuestrado en los archivos privados de la agencia saliente.",
+  "findings": [
+    {
+      "claim_id": "P09-F27-C1",
+      "claim": "La continuidad de la confianza territorial ante el recambio de ejecutivos depende de la propiedad corporativa inmutable de los datos de relación, briefings estructurados pre-reunión y la ratificación explícita de que los compromisos son institucionales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "relationship_continuity_and_turnover",
+      "evidence": [
+        {
+          "source_title": "RiuNet: A Methodology for Avoiding Corporate Amnesia — Knowledge Loss Prevention",
+          "source_id": "de77d867-8aeb-4d70-8e3a-410697b15a2a",
+          "locator": "Section 'Knowledge Continuity in Stakeholder Relations', p. 55-61",
+          "retrieved_at": null,
+          "excerpt_short": "A robust repository of interactions ensures that trust built over years does not vanish when an employee leaves. The new manager steps in with full awareness of promises made, avoiding the classic blunder of asking stakeholders to repeat their grievances.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Taylor & Francis: Cultivating Effective Agency–Client Relationships in Strategic Communications",
+          "source_id": "bea77867-87f2-4a03-a6c7-2b7107904349",
+          "locator": "Section 'Managing Inter-Organizational Turnover', p. 112-118",
+          "retrieved_at": null,
+          "excerpt_short": "Institutional memory must reside within an owned technology platform rather than the transient notebooks of external agencies or temporary public relations consultants.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre RiuNet y Taylor & Francis sobre la mitigación de la amnesia corporativa.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Notificación de renuncia o cambio de gerente",
+      "Historial relacional en BRIDGE",
+      "Agenda de reuniones de traspaso"
+    ],
+    "actors": [
+      "Gerente Saliente",
+      "Gerente Entrante",
+      "Líderes Comunitarios Locales"
+    ],
+    "steps": [
+      "Generación de informe de handover en BRIDGE",
+      "Revisión conjunta de compromisos en riesgo",
+      "Reunión de presentación en el territorio",
+      "Reasignación de permisos y traspaso de propiedad en sistema"
+    ],
+    "states": [
+      "Handover Iniciado",
+      "Visitas Realizadas",
+      "Traspaso Formalizado",
+      "Cuentas Actualizadas"
+    ],
+    "outputs": [
+      "Acta de traspaso institucional de relaciones comunitarias"
+    ],
+    "exceptions": [
+      "Salidas abruptas del personal obligan a un audit exprés de 48 horas de los compromisos a su cargo"
+    ]
+  },
+  "entities": [
+    "Amnesia Corporativa",
+    "RiuNet",
+    "Taylor & Francis",
+    "Handover Estructurado",
+    "System of Record"
+  ],
+  "relations": [
+    {
+      "from": "Nuevo Gerente",
+      "to": "Memoria Institucional",
+      "type": "INHERITS"
+    },
+    {
+      "from": "Empresa Mandante",
+      "to": "Datos de Relación",
+      "type": "OWNS_INMUTABLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Datos secuestrados en agencia vs Datos en System of Record corporativo",
+      "diferencia": "Cuando la agencia se va, se lleva los contactos si no hay SRM; con BRIDGE, la empresa mantiene la propiedad ininterrumpida de su capital relacional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "handover_completion_days": "Máximo 10 días hábiles",
+    "relationship_retention_rate": "100% de expedientes de actores preservados"
+  },
+  "bridge_implications": "Diseñar la función 'Reasignación Masiva de Cartera con Handover' para traspasos de gerentes o cambio de agencias territoriales.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F28",
+    "P09-F29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "question_id": "P05-F42",
+  "pilar": "P05",
+  "eje": "Doble materialidad y regulación",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra doble materialidad y regulación sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado en el corpus que ilustra la doble materialidad y su integración regulatoria es el reporte anual y gestión del recurso hídrico de una empresa de celulosa / forestal o minera en Chile supervisada por la CMF bajo la NCG 461 y por la SMA en una cuenca declarada con escasez hídrica: 1) Entradas del Sistema: a) Evaluación Inside-Out (Materialidad de Impacto): La operación industrial extrae 1,2 m3/s de un río cuya disponibilidad hídrica ha disminuido en un 40% en la última década; el impacto es severo para las comunidades agrícolas río abajo (afectación al derecho humano al agua y modos de vida ancestrales), con alta escala e irremediabilidad si se secan las napas; b) Evaluación Outside-In (Materialidad Financiera): La DGA declara zona de prohibición y escasez hídrica, existiendo un riesgo cierto de reducción del 30% en los derechos de extracción autorizados, lo que obligaría a paralizar faenas con un costo financiero estimado de US$ 45 millones al año en ventas no realizadas; además, fondos institucionales de inversión (pensiones y fondos soberanos) exigen revelar métricas SASB/GRI bajo NCG 461; 2) Proceso y Resultado Observado: La empresa clasifica formalmente la 'Gestión Hídrica y Adaptación al Cambio Climático' como Tema Dualmente Material; en su Memoria Integrada CMF NCG 461 publica el inventario hídrico auditado por terceros bajo ISAE 3000, e informa al mercado un plan de inversiones de US$ 80 millones para construir un sistema de desalinización marina y recirculación total; la CMF y los analistas bursátiles aprueban la revelación sin observaciones por omisión de riesgos, mientras que en el SEIA se aprueba la modificación técnica de la RCA con respaldo de las comunidades. El resultado esperado demuestra cómo la doble materialidad sincroniza la transparencia regulatoria financiera con la solución de impactos socioambientales territoriales reales.",
+  "findings": [
+    {
+      "claim_id": "P05-F42-C1",
+      "claim": "La aplicación integrada de la doble materialidad en industrias intensivas en recursos en Chile permite anticipar restricciones de operación y responder a exigencias vinculantes de revelación de la CMF.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile",
+        "actor": "Empresas Emisoras CMF / DGA / SMA"
+      },
+      "evidence": [
+        {
+          "source_id": "11ce6bf4-9dcf-4933-bf0b-d6a7579da3ac",
+          "source_title": "CMF Chile: Norma de Carácter General NCG 461 (Gobierno Corporativo y ESG)",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Sección 4: Indicadores de Intensidad Hídrica y Planes de Contingencia",
+          "excerpt_short": "Requiere la cuantificación del consumo de agua en zonas de estrés hídrico y la descripción de los planes de mitigación de continuidad operacional.",
+          "source_date": "2021-11-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4.3: Doble Materialidad: Intersección entre Impacto y Finanzas",
+          "excerpt_short": "Un impacto no financiero severo (contaminación o sobreextracción de agua) se transmuta con rapidez en materialidad financiera catastrófica vía revocación de permisos y boicots comerciales.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso representativo del modelo de cumplimiento e impacto socioambiental exigido en el marco chileno.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos de consumo hídrico en cuenca",
+      "Decretos de escasez de la DGA",
+      "Directrices NCG 461 de la CMF"
+    ],
+    "actors": [
+      "Gerente de Medio Ambiente",
+      "Oficial de Relación con Inversionistas",
+      "Directorio Corporativo"
+    ],
+    "steps": [
+      "Cálculo de estrés hídrico y riesgo de restricción de faenas",
+      "Diseño de plan de inversión en desalinización",
+      "Reporte estructurado en la Memoria Integrada CMF"
+    ],
+    "states": [
+      "Water_Risk_Identified",
+      "CapEx_Committed",
+      "Integrated_Report_Published"
+    ],
+    "outputs": [
+      "Capítulo de Sostenibilidad conforme a NCG 461 con mitigación efectiva"
+    ],
+    "exceptions": [
+      "Declaración de riesgos sin respaldo de inversiones concretas, calificada como greenwashing"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_WATER_MATERIALITY_CASE",
+      "type": "caso_analitico",
+      "name": "Caso de Doble Materialidad Hídrica bajo NCG 461",
+      "aliases": [
+        "NCG 461 Water Double Materiality Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_WATER_MATERIALITY_CASE",
+      "predicate": "ejemplifica_aplicacion_de",
+      "object_id": "ENT_MATERIALITY_SCHEMA",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F42-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo de revelación",
+      "Memoria Tradicional Desconectada": "El reporte financiero ignora la cuenca hídrica y el reporte de RSE muestra donaciones a escuelas locales sin resolver el agua.",
+      "Memoria Integrada NCG 461 (Doble Materialidad)": "Conecta la escasez de agua de la cuenca con la inversión de capital en desalinización y la protección del EBITDA futuro."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Generador de Memorias NCG 461",
+      "implication": "BRIDGE debe permitir conectar los análisis de materialidad con las secciones oficiales de la memoria anual CMF para asegurar coherencia entre la gestión de asuntos corporativos y el reporte legal.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

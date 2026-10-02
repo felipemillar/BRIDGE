@@ -1,0 +1,138 @@
+{
+  "question_id": "P04-C02",
+  "pilar": "P04",
+  "eje": "Inventario de documentos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué sigue sin prueba sobre inventario de documentos corporativos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Vacío e Incertidumbre: Sigue sin prueba empírica formal la compatibilidad automatizada completa entre los catálogos documentales estructurados bajo CMF NCG 461 y los estándares europeos ESRS en empresas multilatinas con matriz o filiales en la Unión Europea. Fuentes que fallaron: 1) F-01: 'EFRAG European Sustainability Reporting Standards (ESRS)' (servidor inaccesible por timeout TLS / error de conexión en ingesta); y 2) F-02: 'G20/OECD Principles of Corporate Governance 2023' (bloqueo por portal antibot de la OECD); ambas suplidas en el corpus por IFRS S1/S2, GRI Universal Standards y CMF NCG 461. Validación Mínima Requerida: Descarga y carga manual de los PDFs oficiales de ESRS y OECD Principles 2023 para ejecutar una auditoría de schema mapping contra el modelo DCAT-3 y verificar si introducen tipos documentales adicionales que deban incorporarse a la taxonomía canónica.",
+  "findings": [
+    {
+      "claim_id": "P04-C02-C1",
+      "claim": "El inventario documental presenta un vacío de mapeo automatizado con estándares ESRS de la UE debido a fallas de ingesta en servidores de EFRAG y OECD, remediables mediante validación asistida por descarga local.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / UE",
+        "actor": "Auditoría de Ingesta P04"
+      },
+      "evidence": [
+        {
+          "source_id": "35dd0ce8-75f5-44fc-ab0a-ddf0b780a1ca",
+          "source_title": "P04_SOURCE_INDEX",
+          "original_url": null,
+          "locator": "Sección 3: Registro de Incidencias: Fuentes Externas Fallidas",
+          "excerpt_short": "F-01: EFRAG ESRS Standards (Error de conexión / timeout TLS), suplido por IFRS S1/S2 y GRI. F-02: G20/OECD Principles (Bloqueo antibot OECD), suplido por CMF NCG 461 y FIBO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Incidencias de red y fallos de ingesta documentados exhaustivamente en P04_SOURCE_INDEX.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registro de incidencias F-01 y F-02"
+    ],
+    "actors": [
+      "Source Ingestion Auditor",
+      "Schema Harmonizer"
+    ],
+    "steps": [
+      "Verificación de causas de falla en crawler",
+      "Descarga out-of-band de documentos",
+      "Validación cruzada de tipos documentales"
+    ],
+    "states": [
+      "Failed_Ingestion",
+      "Substituted",
+      "Validation_Protocol_Defined"
+    ],
+    "outputs": [
+      "Protocolo de remediación de fuentes fallidas para homologación ESRS"
+    ],
+    "exceptions": [
+      "Divergencias ontológicas profundas entre CSRD europea y CMF chilena"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GAP_ESRS_MAPPING",
+      "type": "vacio_epistemico",
+      "name": "Vacío de Homologación Documental CMF vs ESRS",
+      "aliases": [
+        "ESRS-CMF Document Taxonomy Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GAP_ESRS_MAPPING",
+      "predicate": "requiere_resolucion_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C02-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Estado de la fuente",
+      "Fuentes activas (IFRS/GRI/CMF)": "Texto sustantivo recuperado y vectorizado al 100% en el cuaderno.",
+      "Fuentes fallidas (ESRS/OECD)": "Bloqueadas por firewall en origen; reemplazadas por estándares con equivalencia oficial."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incorporar conectores locales para ingestar normativas europeas sin depender de rastreadores web dinámicos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP-P04-01",
+      "description": "Falta de prueba empírica sobre interoperabilidad directa de taxonomías documentales CMF NCG 461 con ESRS (CSRD) de la Unión Europea.",
+      "missing_information": "Mapeo campo por campo entre requerimientos de reporte de la Directiva CSRD y la Circular CMF NCG 461."
+    }
+  ],
+  "next_question_ids": [
+    "P04-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

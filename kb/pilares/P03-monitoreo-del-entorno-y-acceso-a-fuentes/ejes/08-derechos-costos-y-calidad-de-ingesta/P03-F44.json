@@ -1,0 +1,145 @@
+{
+  "question_id": "P03-F44",
+  "pilar": "P03",
+  "eje": "Derechos, costos y calidad de ingesta",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué costos y dependencias contractuales son observables y cuáles requieren cotización?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los costos y dependencias contractuales se dividen en observables y opacos: 1) Costos observables públicamente: a) Bluesky (AT Protocol Jetstream): $0 USD (abierto y libre); b) APIs Estatales (ChileCompra, CMF, SEC EDGAR, Diario Oficial): $0 USD de costo de licencia (consumo de datos abiertos sujeto a límites técnicos de tasa); c) Reddit API: nivel estándar gratuito bajo OAuth hasta 100 req/min; y d) Tiers de autoservicio de X: Basic ($100 USD/mes) y Pro ($5.000 USD/mes); y 2) Costos y contratos opacos que requieren cotización bilateral obligatoria ('Contact Sales'): a) X Enterprise: contratos a la medida sujetos a evaluación de caso de uso (la cifra de $42.000 USD/mes es una estimación de consultores, no tarifa pública garantizada, P03_QUALITY_ADDENDUM); b) Suites de monitoreo comercial (Meltwater, CisionOne, Factiva, TVEyes, Litoralpress): licenciamiento anual B2B que oscila típicamente entre $15.000 y más de $100.000 USD/año según número de usuarios, canales activos y volumen de menciones, requiriendo firma de Acuerdos de Nivel de Servicio (SLA) y contratos de confidencialidad.",
+  "findings": [
+    {
+      "claim_id": "P03-F44-C1",
+      "claim": "Los costos de APIs gubernamentales y protocolos abiertos son de acceso público sin cargo de licencia, mientras que las suites comerciales y el nivel Enterprise de X operan bajo contratos a la medida que requieren cotización bilateral.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Estructura de Costos P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.1: Estatus Tarifario Oficial de X",
+          "excerpt_short": "En la documentación oficial de la plataforma de desarrolladores de X... el nivel para grandes volúmenes no posee tarifa fija pública garantizada; se comercializa bajo la modalidad 'Contact Sales'.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:35:00-03:00"
+        },
+        {
+          "source_id": "922ef3e1-475d-4c2e-8931-c888cdd906a2",
+          "source_title": "Meltwater Listening & Intelligence REST API Reference",
+          "original_url": "https://developer.meltwater.com/api-reference/api-reference-overview/",
+          "locator": "API Access and Licensing Model",
+          "excerpt_short": "Meltwater API access requires an enterprise subscription add-on with custom data export quotas negotiated via sales representatives.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de la adenda de calidad y portales de desarrolladores de Meltwater y X.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Plan de presupuesto de infraestructura de datos",
+      "Catálogo de proveedores"
+    ],
+    "actors": [
+      "Procurement Officer",
+      "Infrastructure Cost Architect"
+    ],
+    "steps": [
+      "Identificación de fuentes gratuitas vs de pago",
+      "Solicitud de cotizaciones B2B",
+      "Cálculo de TCO anual"
+    ],
+    "states": [
+      "Free_Sources_Identified",
+      "Quotes_Requested",
+      "TCO_Modeled"
+    ],
+    "outputs": [
+      "Presupuesto estructurado de ingesta de señales de entorno"
+    ],
+    "exceptions": [
+      "Sobrecostos no planificados por exceder cuotas de consultas de API"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_INGEST_COST_STRUCTURE",
+      "type": "modelo_financiero",
+      "name": "Estructura de Costos de Ingesta",
+      "aliases": [
+        "Ingest Cost Structure"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_INGEST_COST_STRUCTURE",
+      "predicate": "presupuesta_operacion_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F44-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo de contratación",
+      "Fuentes Abiertas / Gubernamentales": "Costo cero de licencia, inversión en infraestructura de cómputo propia.",
+      "Suites Enterprise (Meltwater / Factiva)": "Contratos anuales B2B con cargos adicionales por usuario y volumen."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Maximizar el uso de conectores gubernamentales abiertos y Bluesky para reducir el gasto recurrente en licencias de datos comerciales en BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

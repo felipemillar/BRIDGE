@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X18",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Cobertura territorial y derechos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué limitaciones regionales declaran proveedores de África, Asia y Medio Oriente?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los proveedores documentados en estas regiones (como DataEQ en Sudáfrica o Isentia en Asia-Pacífico) reportan severas restricciones operacionales: 1) Fragmentación lingüística y dialectal extrema: en África y Medio Oriente conviven decenas de idiomas vernáculos y variantes dialectales del árabe donde los modelos de lenguaje comercial estándar (LLMs) presentan tasas de error superiores al 40% en análisis de sentimiento; 2) Ausencia de digitalización en medios locales: la prensa comunitaria y las radios rurales transmiten en ondas hertzianas sin señal streaming ni archivos digitales, exigiendo redes físicas de grabación muy costosas; 3) Restricciones y censura estatal: bloqueos gubernamentales intermitentes de redes sociales (X, Telegram), limitaciones en el acceso a APIs de mensajería (WhatsApp) y persecución de reporteros independientes; 4) Opacidad regulatoria: inexistencia de gacetas parlamentarias o judiciales en formato digital abierto, obligando a recopilación manual de boletines impresos.",
+  "findings": [
+    {
+      "claim_id": "P02-X18-C1",
+      "claim": "Los proveedores en mercados emergentes de África, Asia y Medio Oriente enfrentan barreras estructurales de fragmentación dialectal, falta de digitalización de medios rurales y censura estatal que limitan la cobertura automatizada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "África / Asia / Medio Oriente",
+        "actor": "DataEQ, Isentia"
+      },
+      "evidence": [
+        {
+          "source_id": "5556e455-7c2c-458c-bcad-e0910d9ccc4e",
+          "source_title": "P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1",
+          "original_url": null,
+          "locator": "Emerging Markets Operational Constraints Section",
+          "excerpt_short": "Regional providers face severe dialectal fragmentation, absent digital archives, and regulatory censorship, restricting automated media intelligence in Africa and APAC.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de limitaciones documentadas en la adenda regional de integración.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de limitaciones de infraestructura",
+      "Mapa de dialectos locales",
+      "Restricciones legales de censura"
+    ],
+    "actors": [
+      "Director de Expansión Internacional",
+      "Analista de Riesgo Político"
+    ],
+    "steps": [
+      "Evaluación de viabilidad de ingesta por país",
+      "Identificación de fuentes analógicas no digitalizadas",
+      "Determinación de dependencia de analistas humanos locales"
+    ],
+    "states": [
+      "Pais_Evaluado",
+      "Barreras_Mapeadas",
+      "Modelo_Hibrido_Definido"
+    ],
+    "outputs": [
+      "Matriz de viabilidad de inteligencia para mercados emergentes"
+    ],
+    "exceptions": [
+      "Apagones de internet decretados por gobiernos durante elecciones o disturbios"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DATAEQ",
+      "type": "proveedor_listening_emergente",
+      "name": "DataEQ",
+      "aliases": [
+        "DataEQ Africa"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DATAEQ",
+      "predicate": "opera_en_contexto_de",
+      "object_id": "Fragmentacion_Dialectal_Africana",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X18-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Mercados Desarrollados (EE. UU./UE) vs Mercados Emergentes (África/Asia)",
+      "Mercados Desarrollados": "APIs limpias, medios 100% digitales, transparencia legislativa total.",
+      "Mercados Emergentes": "Radios analógicas rurales, censura estatal, dependencia de analistas lingüísticos locales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe focalizar su primera fase de expansión en América Latina antes de abordar mercados con barreras lingüísticas e institucionales extremas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:52:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

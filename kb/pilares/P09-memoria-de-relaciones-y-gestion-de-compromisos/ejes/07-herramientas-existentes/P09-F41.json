@@ -1,0 +1,145 @@
+{
+  "question_id": "P09-F41",
+  "pilar": "P09",
+  "eje": "Herramientas existentes",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre herramientas existentes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos relativos a herramientas existentes están fundamentados en: 1) Boréalis SRM (2024, 'Platform Overview' y 'The Proving Problem'): Documenta las capacidades de compliance socioambiental, módulos de quejas y trazabilidad inmutable; 2) Tractivity (2024, 'What's The Difference Between CRM and SRM?' y 'Top 10 Secure Tools'): Aporta la delimitación técnica entre CRM transaccional y SRM relacional y los requisitos de seguridad gubernamental; 3) Simply Stakeholders (2024, 'Commitments Tracking Tools That Close The Loop'): Fija el estándar de cierre del ciclo y gestión de hitos; 4) Sopact (2024, 'Best Stakeholder Intelligence Platforms'): Respalda la interoperabilidad de datos y la integración de escucha con gestión interna; 5) Quorum (2024, 'Stakeholder Engagement CRM for Public Affairs'): Documenta las funciones de seguimiento legislativo y lobby corporativo; y 6) P09_RESEARCH_DOSSIER (2026, Sección 4): Consolida la matriz comparativa de las 10 plataformas del mercado.",
+  "findings": [
+    {
+      "claim_id": "P09-F41-C1",
+      "claim": "El benchmark de software se fundamenta en la literatura técnica y whitepapers oficiales de Boréalis, Tractivity, Simply Stakeholders, Sopact y Quorum, analizados comparativamente en el dossier de P09.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_srm_tools",
+      "evidence": [
+        {
+          "source_title": "Boréalis: Stakeholder Management Software & Platform Overview",
+          "source_id": "00e3a352-4041-49c9-9a6d-cb89e793343b",
+          "locator": "Platform Specifications, p. 1-6",
+          "retrieved_at": null,
+          "excerpt_short": "Boréalis is designed specifically to help organizations manage social risk, meet regulatory standards, and demonstrate corporate compliance through unbroken relational data.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: What's The Difference Between CRM and SRM?",
+          "source_id": "8b347889-c8d7-450f-8a1f-41996e0385c4",
+          "locator": "Section 'Why Generic CRMs Fail in Stakeholder Engagement', p. 2-5",
+          "retrieved_at": null,
+          "excerpt_short": "Generic CRMs lack the architecture to manage community groups, statutory consultations, and complex inter-organizational hierarchies typical of public infrastructure projects.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada directa entre fuentes primarias de fabricantes de SRM.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes P09",
+      "Whitepapers de fabricantes"
+    ],
+    "actors": [
+      "Auditor de Fuentes",
+      "Analista de Software"
+    ],
+    "steps": [
+      "Verificación de UUIDs de fuentes",
+      "Comprobación de que no se citen URLs fallidas",
+      "Consolidación en el registro estructurado"
+    ],
+    "states": [
+      "Fuentes Verificadas",
+      "Citas Asignadas",
+      "Trazabilidad Completa"
+    ],
+    "outputs": [
+      "Matriz probatoria del Eje 7"
+    ],
+    "exceptions": [
+      "Fuentes no verificadas o caídas (Darzin, SustaiNet) son sustituidas por Boréalis y Tractivity conforme al catálogo canónico"
+    ]
+  },
+  "entities": [
+    "Boréalis",
+    "Tractivity",
+    "Simply Stakeholders",
+    "Sopact",
+    "Quorum",
+    "P09_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Boréalis",
+      "to": "SRM Benchmark",
+      "type": "DOCUMENTED_IN"
+    },
+    {
+      "from": "Tractivity",
+      "to": "SRM Benchmark",
+      "type": "DOCUMENTED_IN"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cita de marketing publicitario vs Whitepaper técnico de arquitectura",
+      "diferencia": "La cita publicitaria abusa de superlativos; el whitepaper técnico documenta flujos de datos y estructuras de base de datos reales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "peer_reviewed_srm_sources_count": "5 fabricantes analizados",
+    "replacement_of_failed_sources": "100% de fuentes fallidas reemplazadas por sustitutos canónicos"
+  },
+  "bridge_implications": "Documentar formalmente en el manual de BRIDGE las ventajas competitivas frente a cada uno de estos competidores globales.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F42",
+    "P09-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

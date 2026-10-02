@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-X08",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Adquisiciones y estructura de grupos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre adquisiciones y estructura de grupos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba el grado real de integración tecnológica y sinergia de backend entre las empresas adquiridas y sus matrices: 1) Brecha: Aunque Cision adquirió Brandwatch hace más de 5 años, los usuarios reportan que continúan iniciando sesión en plataformas separadas con modelos de datos divergentes; similarmente, no hay prueba de que los algoritmos de Limbik estén efectivamente operando en el core de Burson Decipher o si permanecen como una capa de consultoría interna aislada; 2) Fuentes fallidas/parciales: Las notas de prensa de adquisición prometen 'integración completa de IA', pero no aportan detalles de arquitectura de microservicios ni documentación técnica de APIs compartidas; 3) Validación mínima: Realizar una auditoría técnica de arquitectura en una cuenta corporativa que tenga contratado CisionOne + Brandwatch o Burson Decipher + Limbik, solicitando inspeccionar los esquemas de bases de datos y la latencia de sincronización de eventos entre ambas plataformas.",
+  "findings": [
+    {
+      "claim_id": "P02-X08-C1",
+      "claim": "No existe evidencia técnica pública que demuestre que las adquisiciones corporativas de mega-holdings hayan logrado unificar el backend y las bases de datos de las plataformas adquiridas con sus sistemas centrales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Cision/Brandwatch, Burson/Limbik"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Post-Merger Technical Integration Gap",
+          "excerpt_short": "Commercial acquisitions frequently fail to unify backend data stores, leaving acquired assets operating as isolated point solutions with shared branding.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:48:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de brechas de integración post-fusión en el atlas de validación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuentas activas en plataformas adquiridas",
+      "Herramientas de inspección de red y llamadas a API",
+      "Manuales técnicos de integración"
+    ],
+    "actors": [
+      "Auditor Técnico de Software",
+      "Ingeniero de Sistemas"
+    ],
+    "steps": [
+      "Inicio de sesión en ambas herramientas",
+      "Trazado de llamadas a endpoints y orígenes de datos",
+      "Evaluación de sincronización de perfiles y entidades"
+    ],
+    "states": [
+      "Cuentas_Configuradas",
+      "Trazado_Ejecutado",
+      "Aislamiento_Demostrado"
+    ],
+    "outputs": [
+      "Informe de nivel de integración técnica post-adquisición"
+    ],
+    "exceptions": [
+      "Cláusulas de confidencialidad que restrinjan la auditoría de tráfico web"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_AUDITORIA_INTEGRACION_POST_M&A",
+      "type": "protocolo_auditoria",
+      "name": "Auditoría de Integración Técnica Post-Adquisición",
+      "aliases": [
+        "Post-Merger Tech Audit"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_AUDITORIA_INTEGRACION_POST_M&A",
+      "predicate": "evalua_silos_en",
+      "object_id": "Cision_Brandwatch_y_Burson_Limbik",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X08-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Integración de Marca (Branding) vs Integración de Código (Backend)",
+      "Integración de Marca": "Logotipo unificado en el portal web y factura consolidada.",
+      "Integración de Código": "Bases de datos comunes, API REST unificada y un solo modelo de datos de actores y alertas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La incapacidad de los conglomerados para unificar sus sistemas adquiridos es la mayor ventaja competitiva para una suite diseñada nativamente como un solo bloque (BRIDGE).",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_POST_MERGER_INTEGRATION",
+      "description": "Falta de prueba de unificación técnica en adquisiciones de mega-holdings",
+      "action": "Ejecutar auditoría técnica de red"
+    }
+  ],
+  "next_question_ids": [
+    "P02-X09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:48:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

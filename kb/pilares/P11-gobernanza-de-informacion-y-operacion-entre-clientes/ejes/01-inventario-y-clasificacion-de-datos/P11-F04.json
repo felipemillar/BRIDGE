@@ -1,0 +1,149 @@
+{
+  "question_id": "P11-F04",
+  "pilar": "P11",
+  "eje": "Inventario y clasificación de datos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar inventario y clasificación de datos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del inventario y clasificación de datos exige modelar: 1) Entidad DataAsset (asset_id, tenant_id, asset_name, asset_type: [UNSTRUCTURED_DOC, STRUCTURED_TABLE, TRANSCRIPT, API_STREAM], source_origin_hash, created_at, storage_location_s3_uri); 2) Entidad ClassificationTier (tier_id, tier_code: [D1_PUBLIC, D2_INTERNAL, D3_CONFIDENTIAL_STRATEGIC, D4_PERSONAL_DATA, D5_THIRD_PARTY_SECRET], legal_framework_basis: [LEY_21719, LEY_19628, LEY_18045, LEY_20730, LEY_17336, GDPR], rag_admissibility_status: [PERMITTED_GLOBAL, PERMITTED_RESTRICTED, PSEUDONYMIZED_ONLY, FORBIDDEN]); 3) Entidad AssetOwnership (ownership_id, asset_id, data_owner_user_id, data_owner_role, data_custodian_id, dpo_reviewer_id, assigned_at); 4) Relaciones de Grafo (OWNED_BY, CLASSIFIED_UNDER, GOVERNED_BY_LAW, RESTRICTED_TO_ROLE); y 5) Condiciones de Integridad Invariables (tenant_id_match == true, data_owner_not_null == true, if (classification == 'D4') -> pii_scanned_at_least_once == true, if (classification == 'D5') -> rag_indexing_allowed == false).",
+  "findings": [
+    {
+      "claim_id": "P11-F04-C1",
+      "claim": "El modelamiento relacional del inventario exige formalizar entidades para activos, niveles de clasificación, trazabilidad de dueños y condiciones lógicas booleanas que impidan la vectorización no autorizada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "inventory_data_model_architecture",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 2.1 'Modelo de Datos para Inventario y Clasificación'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades requeridas: DataAsset, ClassificationTier, OwnershipRecord, CompliancePolicy. Invariantes del esquema: data_owner_id NOT NULL y tenant_id obligatorio en clave foránea.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-162: Guide to Attribute Based Access Control (ABAC) Definition and Considerations",
+          "source_id": "2a88e293-2b53-4430-8dca-26e545448a9f",
+          "locator": "Section 3 'ABAC Structure: Subjects, Objects, and Environment Attributes'",
+          "retrieved_at": null,
+          "excerpt_short": "Object attributes represent the information characteristics (e.g., classification, owner, creation date) evaluated against subject attributes and environmental conditions to enforce access policies.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño de esquemas consistente con los estándares de control de acceso basado en atributos NIST SP 800-162 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de esquemas relacionales",
+      "Restricciones de base de datos",
+      "Políticas ABAC"
+    ],
+    "actors": [
+      "Administrador de Base de Datos",
+      "Motor de Políticas BRIDGE",
+      "Auditor de Cumplimiento"
+    ],
+    "steps": [
+      "Definición de tablas `data_assets`, `classification_tiers` y `asset_ownership` en PostgreSQL",
+      "Creación de triggers que impidan la inserción de registros sin Data Owner o sin clasificación",
+      "Asociación de políticas RLS vinculadas a la clave `tenant_id`",
+      "Exposición de API GraphQL/REST para consultas de inventario auditables"
+    ],
+    "states": [
+      "SCHEMAS_APPLIED",
+      "TRIGGERS_COMPILED",
+      "INVARIANTS_VERIFIED",
+      "INVENTORY_LIVE"
+    ],
+    "outputs": [
+      "Esquema estructurado persistido en base de datos"
+    ],
+    "exceptions": [
+      "Intentos de eludir los triggers de integridad referencial disparan excepciones SQL y abortan la transacción"
+    ]
+  },
+  "entities": [
+    "DataAsset",
+    "ClassificationTier",
+    "AssetOwnership",
+    "NIST SP 800-162",
+    "ABAC",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "DataAsset",
+      "to": "ClassificationTier",
+      "type": "TYPED_BY"
+    },
+    {
+      "from": "DataAsset",
+      "to": "AssetOwnership",
+      "type": "ACCOUNTABLE_VIA"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Listas en Excel de documentos vs Esquema relacional con disparadores de integridad",
+      "diferencia": "Las listas en Excel se corrompen y no aplican seguridad en tiempo de ejecución; el esquema relacional bloquea físicamente cualquier operación no autorizada a nivel de motor de datos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "schema_integrity_violation_rate": "0 transacciones aceptadas con violación de invariantes de clasificación",
+    "attribute_resolution_latency_ms": "Tiempo en milisegundos para evaluar atributos ABAC del objeto"
+  },
+  "bridge_implications": "Permite estructurar las entidades de Prisma/TypeORM con validaciones estrictas en tiempo de compilación y ejecución.",
+  "open_gaps": [
+    "Definición de granularidad de clasificación a nivel de párrafos o tablas individuales dentro de un documento extenso."
+  ],
+  "next_question_ids": [
+    "P11-F05",
+    "P11-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

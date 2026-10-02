@@ -1,0 +1,165 @@
+{
+  "question_id": "P02-F37",
+  "pilar": "P02",
+  "eje": "Mapa mundial y diferencias regionales",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué categorías están documentadas en cada región y dónde hay vacíos de búsqueda?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La distribución geográfica del software de asuntos corporativos revela asimetrías estructurales: 1) Norteamérica (EE. UU. / Canadá): máxima concentración de categorías maduras en Listening (Meltwater, Cision, Dataminr, Signal AI), CRM Legislativo (Quorum, FiscalNote), Búsqueda RAG (AlphaSense, Glean) y Flujo Editorial (Broadsight); 2) Europa (UK, UE): liderazgo en PR y newsrooms digitales (Prezly en Bélgica), escucha multilingüe (Talkwalker en Luxemburgo), monitoreo regulatorio parlamentario (Polit-X en Alemania) y consultoría estratégica de alto nivel (FGS Global, Brunswick); 3) América Latina (Chile, Brasil, México, Colombia): dominio de agencias de clipping tradicional y monitoreo de medios locales (Litoralpress en Chile, Knewin en Brasil, Buho Media en Colombia), con un vacío crítico de proveedores locales de software para CRM legislativo, gestión de compromisos comunitarios integrados o System of Record de vocerías; 4) Asia-Pacífico: desarrollo especializado en SRM comunitario y consulta pública para industrias extractivas (Open Point Group / Consultation Manager, Converlens, Simply Stakeholders en Australia y Nueva Zelanda); 5) África y Medio Oriente: predominio de análisis de redes sociales (DataEQ en Sudáfrica) y vacíos casi absolutos en suites integradas.",
+  "findings": [
+    {
+      "claim_id": "P02-F37-C1",
+      "claim": "Existe una profunda brecha geográfica: Norteamérica y Europa concentran el software de listening y gobernanza legislativa/editorial, Australia lidera la gestión comunitaria territorial, y América Latina depende de proveedores de clipping de medios locales sin plataformas de software de asuntos públicos nativas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Mapa Mundial de Software P02"
+      },
+      "evidence": [
+        {
+          "source_id": "5556e455-7c2c-458c-bcad-e0910d9ccc4e",
+          "source_title": "P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1",
+          "original_url": null,
+          "locator": "Section 2: Regional Geographic Distribution of the 70 Vendors",
+          "excerpt_short": "North America accounts for over 55% of analyzed vendors, Europe 25%, APAC 12%, and Latin America under 5%, creating regional blind spots in local regulatory and stakeholder tech.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:40:00-03:00"
+        },
+        {
+          "source_id": "8445acb1-1da5-4f0e-a98a-c9c3d8dac8a1",
+          "source_title": "P02_GLOBAL_COMPANY_ATLAS_V1",
+          "original_url": null,
+          "locator": "Regional Coverage & Category Matrix",
+          "excerpt_short": "Categorizes commercial solutions across jurisdictions, highlighting Latin American dependency on traditional media monitoring agencies.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada del censo de 70 proveedores clasificados por sede y cobertura territorial.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de 70 proveedores comerciales",
+      "Sedes corporativas",
+      "Jurisdicciones operacionales declaradas"
+    ],
+    "actors": [
+      "Analista Geográfico de Software",
+      "Director de Expansión Internacional"
+    ],
+    "steps": [
+      "Mapeo de proveedores por coordenadas y región",
+      "Clasificación por módulo funcional",
+      "Identificación de vacíos de oferta local por país"
+    ],
+    "states": [
+      "Censo_Clasificado",
+      "Densidad_Calculada",
+      "Brechas_Detectadas"
+    ],
+    "outputs": [
+      "Mapa de calor de madurez tecnológica de asuntos corporativos por región"
+    ],
+    "exceptions": [
+      "Proveedores con presencia multinacional que solo adaptan ventas sin desarrollo local"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REGION_LATAM",
+      "type": "region_mercado",
+      "name": "Mercado América Latina",
+      "aliases": [
+        "LATAM"
+      ]
+    },
+    {
+      "entity_id": "ENT_REGION_APAC",
+      "type": "region_mercado",
+      "name": "Mercado Asia-Pacífico",
+      "aliases": [
+        "APAC"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REGION_LATAM",
+      "predicate": "presenta_deficit_en",
+      "object_id": "Software_CRM_Legislativo_Nativo",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F37-C1"
+    },
+    {
+      "subject_id": "ENT_REGION_APAC",
+      "predicate": "lidera_en_categoria",
+      "object_id": "Stakeholder_Relationship_Management",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F37-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Madurez Tecnológica: Norteamérica vs América Latina",
+      "Norteamérica": "Decenas de soluciones SaaS especializadas en cada nicho del flujo de asuntos públicos.",
+      "América Latina": "Mercado desatendido tecnológicamente, dependiente de clipping manual y agencias tradicionales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Relacionar",
+      "implication": "Existe una oportunidad de mercado de 'océano azul' para BRIDGE en América Latina al integrar normativa local con monitoreo territorial.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F38",
+    "P02-F39"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

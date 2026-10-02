@@ -1,0 +1,153 @@
+{
+  "question_id": "P04-C12",
+  "pilar": "P04",
+  "eje": "Gobierno y permisos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué sigue sin prueba sobre gobierno y permisos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Vacío e Incertidumbre: Sigue sin prueba empírica formal la gestión desatendida del levantamiento anticipado de embargos en situaciones de crisis de mercado (e.g. filtración en prensa a las 07:00 AM que obliga al Directorio a publicar un Hecho Esencial 3 horas antes del horario programado). Fuente Fallida: F-03: 'NIST AI 100-1: AI Risk Management Framework (AI RMF 1.0)' (bloqueo por política perimetral del servidor de NIST), suplida por Mökander et al. (2023) y NIST SP 800-162. Validación Mínima Requerida: Simulación en la Etapa 4 de la agenda empírica (Gabinete de Crisis / Stress Test de Vocería): programar un documento bajo embargo para las 12:00, disparar una señal de contingencia de prensa a las 08:00 y auditar que la orden de visado de emergencia por el Gerente General libere el documento para los voceros en menos de 60 segundos sin desconfigurar la bitácora de auditoría.",
+  "findings": [
+    {
+      "claim_id": "P04-C12-C1",
+      "claim": "La orquestación de liberaciones de embargo de emergencia ante filtraciones de prensa requiere pruebas de estrés dinámicas con tiempos de respuesta inferiores a 60 segundos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Gobernanza de Crisis y ABAC"
+      },
+      "evidence": [
+        {
+          "source_id": "35dd0ce8-75f5-44fc-ab0a-ddf0b780a1ca",
+          "source_title": "P04_SOURCE_INDEX",
+          "original_url": null,
+          "locator": "Sección 3: Registro de Incidencias: F-03",
+          "excerpt_short": "F-03: NIST AI 100-1: AI Risk Management Framework: Portal NIST bloqueó crawler automático por política perimetral. Suplida por Mökander et al. y NIST SP 800-162.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1.3: Fricción entre la Velocidad de Crisis y Rigidez de Auditoría, y Sección 4: Etapa 4",
+          "excerpt_short": "Simulación de Gabinete de Crisis: tres escenarios de contingencia en tiempo inferior a 3 minutos por escenario y con cero fuga de documentos bajo embargo (ABAC).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Incidencia F-03 y escenario de crisis detallados en los documentos de gobierno de P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Orden de levantamiento de embargo de emergencia firmada por Gerente General"
+    ],
+    "actors": [
+      "Emergency Access Controller",
+      "ABAC Policy Updater"
+    ],
+    "steps": [
+      "Recepción de orden firmada",
+      "Actualización atómica de timestamp de embargo",
+      "Invalidación de caché de consultas",
+      "Notificación a voceros acreditados"
+    ],
+    "states": [
+      "Embargo_Active",
+      "Emergency_Override_Authorized",
+      "Instant_Unblock_Propagated"
+    ],
+    "outputs": [
+      "Documento liberado inmediatamente para voceros con bitácora de excepción registrada"
+    ],
+    "exceptions": [
+      "Orden emitida por un cargo que no posee atribuciones de excepción de directorio"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GAP_EMERGENCY_OVERRIDE",
+      "type": "vacio_epistemico",
+      "name": "Vacío de Protocolo de Liberación de Emergencia de Embargos",
+      "aliases": [
+        "Emergency Embargo Lift Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GAP_EMERGENCY_OVERRIDE",
+      "predicate": "afecta_velocidad_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C12-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Velocidad de reacción",
+      "Proceso burocrático manual": "Demora horas en actualizar permisos, dejando a los voceros sin información durante la crisis.",
+      "Sobreescritura de emergencia gobernada": "Libera el documento en < 60 segundos manteniendo registro formal de auditoría."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe implementar un comando seguro de liberación de emergencia de embargos para gabinetes de crisis.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP-P04-06",
+      "description": "Falta de validación empírica sobre la latencia de propagación de excepciones de embargo en motores de búsqueda distribuida.",
+      "missing_information": "Telemetría de tiempo de propagación de cambios de permisos ABAC en clusters vectoriales bajo carga."
+    }
+  ],
+  "next_question_ids": [
+    "P04-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

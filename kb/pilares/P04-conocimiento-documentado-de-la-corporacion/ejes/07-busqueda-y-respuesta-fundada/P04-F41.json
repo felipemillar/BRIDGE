@@ -1,0 +1,141 @@
+{
+  "question_id": "P04-F41",
+  "pilar": "P04",
+  "eje": "Búsqueda y respuesta fundada",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre búsqueda y respuesta fundada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos relativos a la búsqueda y respuesta fundada se sustentan en cuatro fuentes académicas fundacionales: 1) Khattab & Zaharia (abril 2020, ColBERT, arXiv:2004.12832), que demuestra la superioridad de la interacción tardía para consultas con identificadores exactos y terminología especializada; 2) Edge et al. (abril 2024, GraphRAG, arXiv:2404.16130, Microsoft Research), que establece la metodología de particionamiento jerárquico Leiden para síntesis global multi-documental; 3) Asai et al. (octubre 2023, Self-RAG, arXiv:2310.11511), que introduce los tokens de reflexión para auto-evaluación y abstención activa; y 4) Yan et al. (enero 2024, CRAG, arXiv:2401.15884), que formaliza el evaluador de recuperación y corrección adaptativa.",
+  "findings": [
+    {
+      "claim_id": "P04-F41-C1",
+      "claim": "La combinación de interacción tardía (ColBERT), clustering en grafos (GraphRAG) y mecanismos reflexivos de abstención (Self-RAG/CRAG) conforma el estado del arte validado para búsqueda corporativa rigurosa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2024",
+        "region": "Internacional",
+        "actor": "Khattab & Zaharia / Edge et al. / Asai et al. / Yan et al."
+      },
+      "evidence": [
+        {
+          "source_id": "cf77b030-c20a-425e-8eea-97b70109ab23",
+          "source_title": "ColBERT: Efficient and Effective Passage Search (Khattab & Zaharia, 2020)",
+          "original_url": "https://arxiv.org/abs/2004.12832",
+          "locator": "Sección 3: Architecture",
+          "excerpt_short": "Contextualized late interaction achieves state-of-the-art retrieval accuracy with sub-second execution.",
+          "source_date": "2020-04-29",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "a99b62cd-e413-477a-852c-ab184570b44b",
+          "source_title": "GraphRAG: From Local to Global (Edge et al., 2024)",
+          "original_url": "https://arxiv.org/abs/2404.16130",
+          "locator": "Sección 4: Evaluation and Results",
+          "excerpt_short": "Substantial improvements in comprehensiveness and diversity of global questions over baseline RAG systems.",
+          "source_date": "2024-04-24",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada con la literatura de vanguardia indexada en el corpus P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus de algoritmos de recuperación P04"
+    ],
+    "actors": [
+      "Algorithm Benchmark Evaluator"
+    ],
+    "steps": [
+      "Verificación de métricas de precisión en ColBERT y GraphRAG",
+      "Comprobación de condiciones de parada en Self-RAG"
+    ],
+    "states": [
+      "Audited",
+      "Scientifically_Validated"
+    ],
+    "outputs": [
+      "Matriz de respaldo científico para el subsistema de búsqueda fundada"
+    ],
+    "exceptions": [
+      "Variaciones de rendimiento según tamaño del corpus"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RETRIEVAL_PAPERS",
+      "type": "corpus",
+      "name": "Literatura de Vanguardia en Recuperación y RAG",
+      "aliases": [
+        "Advanced RAG Scientific Literature"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RETRIEVAL_PAPERS",
+      "predicate": "respalda_algoritmos_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F41-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Madurez científica",
+      "Técnicas empíricas no validadas": "Inestabilidad en producción y falta de garantías de reproducibilidad.",
+      "Arquitecturas revisadas por pares": "Evidencia estadística documentada en benchmarks estandarizados."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe fundamentar sus elecciones arquitectónicas en estos estudios para garantizar solidez técnica ante comités de TI.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

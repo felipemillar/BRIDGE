@@ -1,0 +1,156 @@
+{
+  "question_id": "P02-C05",
+  "pilar": "P02",
+  "eje": "Plataformas de escucha y reputación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre plataformas de escucha y reputación, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en transacciones corporativas críticas, fechas de M&A y estructura de propiedad: 1) FGS Global: borradores tempranos continuaban categorizando a FGS Global como subsidiaria consolidada de WPP plc; la errata y el filing formal ante la SEC (Form 6-K a5017o.htm del 3 de diciembre de 2024) demuestran que WPP vendió su participación mayoritaria a fondos gestionados por KKR (Kite Bidco Inc.), por lo que FGS Global opera bajo control de KKR y no debe ser tratada como parte de WPP; 2) Burson Global y Limbik: notas preliminares fechaban la adquisición de Limbik de forma errática; la errata establece que la adquisición de la firma de IA cognitiva Limbik por Burson (WPP) ocurrió el 12 de agosto de 2026; 3) Signal AI y Memo: se rectifica la fecha de adquisición de Memo por Signal AI al 20 de abril de 2026 para la incorporación de 'Verified Readership'; Prevalecen las versiones rectificadas en '00_P02_GLOBAL_READ_ME_AND_ERRATA' con respaldo en documentos regulatorios oficiales.",
+  "findings": [
+    {
+      "claim_id": "P02-C05-C1",
+      "claim": "La errata editorial corrige definitivamente la estructura societaria de FGS Global (controlada por KKR desde dic-2024) y las fechas de adquisición de Limbik (Burson, 12-ago-2026) y Memo (Signal AI, 20-abr-2026).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "FGS Global, Burson, Signal AI"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 2 & 3: Corporate Ownership and Acquisition Dates",
+          "excerpt_short": "FGS Global ownership transferred to KKR (Kite Bidco) on Dec 3, 2024 (SEC Form 6-K). Limbik acquired by Burson on Aug 12, 2026. Memo acquired by Signal AI on Apr 20, 2026.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:44:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en filings regulatorios de la SEC y directivas de errata inmutables.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Filings de la SEC de WPP",
+      "Notas de prensa de KKR y Burson",
+      "Borradores desactualizados de P02"
+    ],
+    "actors": [
+      "Auditor Corporativo",
+      "Analista de Inteligencia Financiera"
+    ],
+    "steps": [
+      "Verificación de números de formulario SEC",
+      "Cruce de fechas de anuncio vs cierre de transacción",
+      "Corrección de matriz de propiedad corporativa"
+    ],
+    "states": [
+      "Error_Detectado",
+      "Filing_Consultado",
+      "Estructura_Corregida"
+    ],
+    "outputs": [
+      "Árbol genealógico societario verificado de agencias y vendors"
+    ],
+    "exceptions": [
+      "Operaciones de M&A cerradas bajo acuerdos privados sin revelación de montos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_KKR_KITE",
+      "type": "fondo_inversion",
+      "name": "Kite Bidco Inc. (KKR Funds)",
+      "aliases": [
+        "KKR"
+      ]
+    },
+    {
+      "entity_id": "ENT_WPP_PLC",
+      "type": "holding_publicitario",
+      "name": "WPP plc",
+      "aliases": [
+        "WPP"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_KKR_KITE",
+      "predicate": "adquirio_control_mayoritario_de",
+      "object_id": "FGS_Global",
+      "valid_from": "2024-12-03",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C05-C1"
+    },
+    {
+      "subject_id": "ENT_BURSON",
+      "predicate": "adquirio_empresa_cognitiva",
+      "object_id": "Limbik",
+      "valid_from": "2026-08-12",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C05-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Propiedad de FGS Global: Versión Preliminar vs Versión Oficial SEC",
+      "Versión Preliminar": "Considerada parte integral de WPP.",
+      "Versión Oficial SEC": "Controlada por fondos de KKR (Kite Bidco) tras la desinversión mayoritaria de WPP en dic-2024."
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "P02-CONT-02",
+      "description": "Discrepancia en la propiedad de FGS Global y fechas de adquisición de Limbik y Memo.",
+      "resolution": "Prevalece la errata 00_P02_GLOBAL_READ_ME_AND_ERRATA con respaldo en SEC Form 6-K."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La precisión en la estructura de propiedad evita falsas suposiciones sobre sinergias tecnológicas entre agencias y holdings.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-C06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:44:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

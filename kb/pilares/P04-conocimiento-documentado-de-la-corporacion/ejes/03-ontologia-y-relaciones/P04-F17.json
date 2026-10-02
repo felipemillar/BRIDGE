@@ -1,0 +1,142 @@
+{
+  "question_id": "P04-F17",
+  "pilar": "P04",
+  "eje": "Ontología y relaciones",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre ontología y relaciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los fundamentos sobre ontología y relaciones corporativas descansan en cuatro fuentes primarias del corpus: 1) EDM Council Financial Industry Business Ontology (FIBO, edición marzo 2024), módulos Corporate Governance y Business Entities, que tipifican personas jurídicas, filiales y titularidad formal de activos; 2) Schema.org Organization (especificación 2024), que define la semántica web interoperable para organizaciones, departamentos y vocerías; 3) Pan et al. (enero 2024, arXiv:2306.08302), que formaliza el roadmap de integración entre LLMs y Grafos de Conocimiento para razonamiento factual; y 4) Hogan et al. (febrero 2021, arXiv:2003.02320, ACM Computing Surveys), que expone los principios de grafos de conocimiento deductivos, reificación y mantenimiento de verdad.",
+  "findings": [
+    {
+      "claim_id": "P04-F17-C1",
+      "claim": "El modelado ontológico corporativo se sustenta en especificaciones de industria financiera (FIBO), vocabularios web globales (Schema.org) e investigaciones fundacionales en grafos semánticos (Hogan et al., Pan et al.).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2024",
+        "region": "Internacional",
+        "actor": "EDM Council / W3C / ACM"
+      },
+      "evidence": [
+        {
+          "source_id": "0a2c0fce-8216-4357-b046-e19d5a7b3243",
+          "source_title": "EDM Council: Financial Industry Business Ontology (FIBO)",
+          "original_url": "https://spec.edmcouncil.org/fibo/",
+          "locator": "Business Entities (FIBO-BE) Module",
+          "excerpt_short": "Ontological modeling of corporate ownership, control structures, and legal entities in financial ecosystems.",
+          "source_date": "2024-03-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "a857b376-bc84-4f17-9936-6502fa6dae3b",
+          "source_title": "Knowledge Graphs: Survey and Foundations (Hogan et al., 2021)",
+          "original_url": "https://arxiv.org/abs/2003.02320",
+          "locator": "ACM Computing Surveys, Vol. 54, No. 4",
+          "excerpt_short": "Comprehensive coverage of graph data models, schema languages, reasoning mechanisms and knowledge extraction.",
+          "source_date": "2021-02-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de fuentes estándar internacionales en el corpus P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus ontológico P04"
+    ],
+    "actors": [
+      "Standards Auditor",
+      "Cross-Reference Validator"
+    ],
+    "steps": [
+      "Verificación de cláusulas FIBO y Schema.org",
+      "Comprobación de referencias en literatura de grafos"
+    ],
+    "states": [
+      "Audited",
+      "Referenced_To_Standards"
+    ],
+    "outputs": [
+      "Matriz de respaldo teórico-normativo de la ontología"
+    ],
+    "exceptions": [
+      "Divergencias en modelado de holdings entre FIBO y Schema.org"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ONTOLOGY_STANDARDS",
+      "type": "fuentes_normativas",
+      "name": "Estándares Ontológicos Internacionales",
+      "aliases": [
+        "Semantic Graph Standards"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ONTOLOGY_STANDARDS",
+      "predicate": "respalda_diseno_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F17-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de estándar",
+      "FIBO": "Orientado al rigor jurídico-financiero y control corporativo de entidades de mercado.",
+      "Schema.org": "Orientado a la interoperabilidad y consumo masivo en motores de búsqueda web."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe interoperar con FIBO en su núcleo interno y exponer vistas Schema.org para consumo de sistemas externos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

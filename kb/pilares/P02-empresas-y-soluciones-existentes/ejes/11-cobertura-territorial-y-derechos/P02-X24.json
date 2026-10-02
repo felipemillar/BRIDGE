@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-X24",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Cobertura territorial y derechos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre cobertura territorial y derechos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba el estatus jurídico y las tarifas exigibles por parte de los medios de prensa para el uso de sus contenidos en modelos de lenguaje RAG y generación de briefings en América Latina: 1) Brecha: Mientras en la UE la Directiva de Derechos de Autor en el Mercado Único Digital regula los derechos afines de los editores, en Chile y la región andina no existe jurisprudencia consolidada ni tarifas estandarizadas que diferencien el mero clipping de lectura del procesamiento por agentes de inteligencia artificial generativa; 2) Fuentes fallidas/parciales: Los manuales de proveedores locales (Litoralpress) describen sus contratos tradicionales de distribución de prensa, pero guardan silencio sobre las cláusulas específicas de IA generativa y RAG; 3) Validación mínima: Solicitar una consulta formal de pronunciamiento legal ante el Departamento de Derechos Intelectuales (DDI) de Chile y encargar un dictamen jurídico a un estudio de abogados experto en telecomunicaciones y propiedad intelectual para definir el marco contractual exacto aplicable a BRIDGE.",
+  "findings": [
+    {
+      "claim_id": "P02-X24-C1",
+      "claim": "El marco contractual y tarifario para el procesamiento de noticias mediante modelos RAG e IA generativa en América Latina se encuentra en un vacío jurisprudencial y regulatorio no resuelto.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / América Latina",
+        "actor": "Marco Jurídico de IA y Medios"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "AI and RAG Copyright Jurisprudence Gap in LATAM",
+          "excerpt_short": "Unresolved legal framework regarding statutory licensing fees for generative AI embedding and RAG summarization of journalistic content in Latin America.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de vacíos regulatorios en el atlas de validación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Proyectos de ley de IA en Chile y la región",
+      "Contratos marco de prensa vigentes",
+      "Consultas a especialistas en propiedad intelectual"
+    ],
+    "actors": [
+      "Asesor Legal Especializado",
+      "Oficial de Cumplimiento Regulatorio"
+    ],
+    "steps": [
+      "Análisis de jurisprudencia comparada (UE vs EE. UU. vs Chile)",
+      "Redacción de consulta al DDI",
+      "Definición de modelo contractual conservador"
+    ],
+    "states": [
+      "Vacio_Identificado",
+      "Consulta_Redactada",
+      "Dictamen_Recibido"
+    ],
+    "outputs": [
+      "Estrategia jurídica de blindaje para ingesta de medios por IA"
+    ],
+    "exceptions": [
+      "Aparición de demandas colectivas imprevistas de gremios de medios contra desarrolladores de IA"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DDI_CHILE",
+      "type": "organismo_regulador",
+      "name": "Departamento de Derechos Intelectuales de Chile",
+      "aliases": [
+        "DDI"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DDI_CHILE",
+      "predicate": "autoridad_competente_en",
+      "object_id": "Propiedad_Intelectual_Chile",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X24-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Regulación Europea (EU AI Act) vs Realidad Latinoamericana",
+      "Regulación Europea": "Marcos específicos sobre transparencia de datos de entrenamiento y opt-out de medios.",
+      "Realidad Latinoamericana": "Vacío legislativo donde rige la ley común de propiedad intelectual sin tipificación de IA."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe anticiparse al mercado operando con una política de opt-out y convenios de valor compartido con los editores de medios.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_RAG_COPYRIGHT_LATAM",
+      "description": "Vacío de jurisprudencia sobre tarifas de IA y RAG de prensa en América Latina",
+      "action": "Solicitar dictamen al DDI"
+    }
+  ],
+  "next_question_ids": [
+    "P02-X25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:52:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

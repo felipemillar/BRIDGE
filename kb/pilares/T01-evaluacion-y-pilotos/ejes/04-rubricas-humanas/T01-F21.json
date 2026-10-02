@@ -1,0 +1,187 @@
+{
+  "question_id": "T01-F21",
+  "pilar": "T01",
+  "eje": "Rúbricas humanas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fallo crítico anula una puntuación promedio aparentemente buena?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el diseño evaluativo de The Bridge Intelligence, rige el 'Principio del Fallo Fatal Asimétrico' (Fatal Flaw Rule), en virtud del cual cualquier promedio general alto (ej. 4.8 / 5.0) queda automáticamente anulado si se produce al menos uno de los siguientes cuatro fallos críticos: 1) Alucinación en Hecho Regulado: Generar una cifra financiera falsa o atribuir una sanción inexistente en un borrador destinado a la CMF o tribunales (infracción al Principio 2 de AMEC Barcelona); 2) Contradicción con Compromiso Vigente: Redactar un mensaje que niega un compromiso comunitario o ambiental formalmente activo en el módulo Relacionar; 3) Fuga Cross-Tenant de Información: Citar o inferir datos de otro cliente en una respuesta; y 4) Cita Falsificada: Fabricar un identificador de documento o URL que no existe en el corpus (alucinación de atribución / ALCE).",
+  "findings": [
+    {
+      "claim_id": "T01-F21-C1",
+      "claim": "El documento rector T01_QUALITY_ADDENDUM estipula que las métricas promediadas ocultan catástrofes en asuntos corporativos: una sola alucinación factual en un hecho regulado anula cualquier ganancia de velocidad o estilo, convirtiendo la prueba en un Kill instantáneo en la compuerta Stage-Gate.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 4: Reglas de Fallo Fatal y Anulación de Promedios",
+          "excerpt_short": "Ningún promedio aritmético de satisfacción puede enmascarar un error factual en materias reguladas. La presencia de una sola alucinación no detectada en hechos esenciales invalida la evaluación y fuerza la detención (Kill) del piloto.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Regla de gobernanza canónica establecida en las síntesis rectoras.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F21-C2",
+      "claim": "El Principio 2 de los Barcelona Principles 3.0 de AMEC advierte que la medición de comunicaciones no debe basarse en métricas vanidosas que ignoran el riesgo reputacional y la integridad de la organización.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "AMEC Global"
+      },
+      "evidence": [
+        {
+          "source_id": "92dfdc7c-83e6-4439-b476-56af1da92d1b",
+          "source_title": "AMEC - Barcelona Principles 3.0 for Communications Measurement and Evaluation",
+          "original_url": null,
+          "locator": "Principle 2: Measurement and Evaluation Should Identify Outputs, Outcomes, and Potential Impact",
+          "excerpt_short": "Evaluation must account for the integrity and holistic quality of communication outcomes, recognizing that misleading or false outputs can completely destroy institutional value.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar global de medición AMEC verificado.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Puntajes promedio de la evaluación",
+      "Bitácora de incidentes críticos y violaciones"
+    ],
+    "actors": [
+      "Comité de Compuerta G1/G2",
+      "Chief Compliance Officer"
+    ],
+    "steps": [
+      "Calcular el puntaje promedio por módulo",
+      "Escanear la base de respuestas en busca de flags de 'Fallo Fatal'",
+      "Si existe flag de Fallo Fatal, invalidar el pase automático de compuerta",
+      "Emitir dictamen de Pivot obligatorio o Kill del piloto"
+    ],
+    "states": [
+      "CALCULO_PROMEDIO",
+      "SCAN_FATAL_FLAW",
+      "BLOQUEO_SEGURIDAD",
+      "DICTAMEN_STAGE_GATE"
+    ],
+    "outputs": [
+      "Reporte de gobernanza con veto de compuerta si aplica"
+    ],
+    "exceptions": [
+      "Ningún usuario o sponsor comercial puede levantar el veto de un Fallo Fatal sin remediación técnica comprobada en re-test"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "FATAL_FLAW_RULE",
+      "type": "riesgo",
+      "name": "Principio de Fallo Fatal Asimétrico",
+      "aliases": [
+        "Zero Tolerance Rule"
+      ]
+    },
+    {
+      "entity_id": "STAGE_GATE_KILL",
+      "type": "evento",
+      "name": "Detención Obligatoria de Piloto (Kill)",
+      "aliases": [
+        "Compuerta G1/G2 Bloqueada"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "FATAL_FLAW_RULE",
+      "predicate": "desencadena",
+      "object_id": "STAGE_GATE_KILL",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F21-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Promedio Aritmético Likert",
+      "item_b": "Filtro de Fallo Fatal",
+      "dimension": "Efecto decisional",
+      "conclusion": "El promedio indica satisfacción agregada ordinaria; el filtro de fallo fatal previene desastres corporativos y regulatorios."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de fallos fatales tolerados",
+      "denominator": "Total casos de prueba ejecutados",
+      "target": "0.0% (absoluto)"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "La arquitectura debe integrar guardrails deterministas previos a la entrega para interceptar cualquier fallo fatal antes del usuario.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F22",
+    "T01-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

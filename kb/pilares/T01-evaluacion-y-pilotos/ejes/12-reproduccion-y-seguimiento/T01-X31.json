@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-X31",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Reproducción y seguimiento",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre reproducción y seguimiento, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en reproducción y seguimiento: 1) Discrepancia: Las notas iniciales asumían que 'por la naturaleza estocástica intrínseca de los LLMs, exigir reproducibilidad exacta es imposible y carece de sentido en software de IA'; 2) Versión que Prevalece: Según ALCE (e1a0171b), Ragas (01d6cab0) y T01_QUALITY_ADDENDUM (45782049), prevalece el principio de que la reproducibilidad determinista es obligatoria en entornos corporativos de alta responsabilidad: fijando temperatura T = 0.0, congelando semillas aleatorias deterministas (seed) y archivando el estado exacto del corpus indexado, las respuestas son rigurosamente reproducibles en su lógica fáctica y citas primarias. Queda terminantemente desestimada la excusa de la estocasticidad como justificación para la falta de auditabilidad de The Bridge Intelligence.",
+  "findings": [
+    {
+      "claim_id": "T01-X31-C1",
+      "claim": "T01_QUALITY_ADDENDUM y la literatura científica de benchmarking establecen que la estocasticidad no es una justificación válida para el descontrol forense, exigiendo parámetros deterministas y archivo inmutable para asegurar reproducibilidad operacional total.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 12: Inadmisibilidad de la Excusa Estocástica",
+          "excerpt_short": "Alegar que los LLMs son estocásticos para evadir la auditoría forense es inaceptable en asuntos corporativos. Con temperatura cero y control de semillas, la reproducibilidad factual es obligatoria.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma canónica interna de gobernanza y control de modelos.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Excusas preliminares sobre estocasticidad",
+      "Estándar determinista ALCE/Ragas"
+    ],
+    "actors": [
+      "Auditor de QA",
+      "Lead ML Engineer"
+    ],
+    "steps": [
+      "Forzar temperatura T = 0.0 en todas las consultas de módulos fácticos (Saber y Relacionar)",
+      "Fijar semilla determinista en el orquestador de inferencia",
+      "Verificar reproducibilidad en suite de 50 consultas ejecutadas dos veces",
+      "Emitir política de reproducibilidad determinista obligatoria"
+    ],
+    "states": [
+      "REVISION_POLITICA_ESTOCASTICA",
+      "CONFIGURACION_DETERMINISTA",
+      "PRUEBA_DOBLE_EJECUCION",
+      "POLITICA_REPRODUCIBILIDAD_SELLADA"
+    ],
+    "outputs": [
+      "Política Canónica de Reproducibilidad Determinista BRIDGE"
+    ],
+    "exceptions": [
+      "En tareas de brainstorming creativo se permite temperatura positiva, pero se advierte al usuario que la respuesta no es certificada"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "POLITICA_DETERMINISTA_BRIDGE",
+      "type": "documento",
+      "name": "Política de Reproducibilidad Determinista",
+      "aliases": [
+        "Zero-Temperature Policy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "POLITICA_DETERMINISTA_BRIDGE",
+      "predicate": "reemplaza_a",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X31-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Operación Estocástica (T > 0.7)",
+      "item_b": "Operación Determinista (T = 0.0, Seed Fijo)",
+      "dimension": "Auditabilidad corporativa",
+      "conclusion": "La operación estocástica genera respuestas diferentes cada vez impidiendo auditorías; la operación determinista garantiza repetibilidad forense exacta."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de concordancia en doble ejecución determinista",
+      "denominator": "Consultas fácticas auditadas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Asegura consistencia institucional: dos analistas de la misma empresa que consultan lo mismo reciben exactamente la misma respuesta y citas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X32"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

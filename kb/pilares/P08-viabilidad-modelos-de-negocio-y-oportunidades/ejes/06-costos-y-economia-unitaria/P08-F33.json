@@ -1,0 +1,148 @@
+{
+  "question_id": "P08-F33",
+  "pilar": "P08",
+  "eje": "Costos y economía unitaria",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿En qué condiciones el precio cubriría el costo marginal y el soporte?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El precio promedio de USD 5.000/mes (~CLP 4.800.000) cubre con holgura el costo marginal y el soporte bajo tres condiciones estructurales: 1) Escala Mínima de Agrupación de Clientes: A partir de 3 clientes corporativos activos, los costos fijos de datos (Factiva/Meltwater) y cloud se diluyen, reduciendo el costo marginal por cliente a USD 1.650/mes y generando un margen bruto del 67%; 2) Adhesión al Límite de Capacidad HITL (1:4): El soporte y validación se mantienen dentro del costo previsto siempre que la carga de cada analista senior no baje de 3 ni supere los 4 clientes; y 3) Delimitación del Alcance del Servicio (Fair Use Policy): La cuota base mensual cubre hasta 40 briefs estructurados y monitoreo 24/7 de hasta 5 temas estratégicos y 3 expedientes regulatorios activos; cualquier requerimiento de contingencia extendida (ej. comité de crisis en faena durante más de 3 días) se factura como módulo consultivo adicional a tarifa de USD 2.500/semana.",
+  "findings": [
+    {
+      "claim_id": "P08-F33-C1",
+      "claim": "El modelo financiero asegura la rentabilidad marginal desde el tercer cliente activo y protege los márgenes mediante políticas de uso razonable y módulos adicionales para crisis agudas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "price_marginal_coverage",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 6.3 'Condiciones de Cobertura de Costos Marginales y Márgenes Brutos'",
+          "excerpt_short": "La evolución de márgenes según escala demuestra la solidez de la economía unitaria: Con 1 cliente: Ingreso USD 4.500 vs Costo USD 2.580 -> Margen 42.7%; Con 3 clientes: Ingreso USD 15.000 (USD 5.000/cli) vs Costo USD 4.950 -> Margen 67.0%; Con 5 clientes: Ingreso USD 26.000 (USD 5.200/cli) vs Costo USD 6.350 -> Margen 75.6%. El punto de equilibrio operativo se alcanza con solo 2 clientes corporativos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 7.2 'Políticas de Uso Razonable y Tarifas de Contingencia'",
+          "excerpt_short": "Para blindar la economía unitaria frente a crisis prolongadas, los contratos deben incorporar una política de fair use: 40 briefs mensuales incluidos; solicitudes adicionales o dedicación presencial en comités de emergencia se facturan bajo anexo de consultoría tarifada.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Modelación matemática rigurosa de costos marginales y políticas de cobro en P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Número de clientes activos",
+      "Volumen de briefs emitidos por cliente",
+      "Horas de soporte dedicadas"
+    ],
+    "actors": [
+      "Billing System",
+      "Customer Success Manager",
+      "CFO"
+    ],
+    "steps": [
+      "Monitoreo continuo de consumo de briefs por cuenta",
+      "Alerta automática al alcanzar el 80% de la cuota de fair use",
+      "Facturación de módulos adicionales de crisis si corresponde",
+      "Cierre mensual contable"
+    ],
+    "states": [
+      "Consumo Normal",
+      "Uso Intensivo",
+      "Módulo Adicional Activado"
+    ],
+    "outputs": [
+      "Factura recurrente con desglose de servicios base y contingencias"
+    ],
+    "exceptions": [
+      "Acuerdo comercial que incluya briefs ilimitados a cambio de una cuota fija premium de USD 7.500/mes"
+    ]
+  },
+  "entities": [
+    "Costo Marginal",
+    "Break-Even Point",
+    "Fair Use Policy",
+    "Módulo de Crisis",
+    "Margen Bruto Escalonado"
+  ],
+  "relations": [
+    {
+      "from": "3 Clientes Activos",
+      "to": "Margen Bruto 67%",
+      "type": "achieves"
+    },
+    {
+      "from": "Fair Use Policy",
+      "to": "Blindaje de Margen en Crisis",
+      "type": "protects"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Tarifa plana sin límite vs Tarifa Tech-Enabled con Fair Use",
+      "diferencia": "La tarifa plana sin límite quiebra al proveedor si el cliente sufre una crisis de 3 meses; el Fair Use garantiza que el trabajo intensivo se pague adecuadamente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "break_even_clients_count": "2 clientes corporativos para cubrir OPEX directo",
+    "steady_state_gross_margin": "75.6% a escala de 5 clientes"
+  },
+  "bridge_implications": "Incluir en los contratos tipo de BRIDGE la cláusula de Fair Use (40 briefs/mes incluidos) redactada por asesoría legal.",
+  "open_gaps": [
+    "Determinar la frecuencia real de crisis agudas en empresas mineras chilenas por año."
+  ],
+  "next_question_ids": [
+    "P08-F34",
+    "P08-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "question_id": "P05-F12",
+  "pilar": "P05",
+  "eje": "Modelos de medición y calidad",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra modelos de medición y calidad sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado en el corpus que ilustra los modelos de medición y sus diferencias de calidad es la evaluación comparada de una empresa corporativa de infraestructura / energía en Chile a través de Merco Chile vs. Cadem Marcas Ciudadanas: 1) Entradas del Sistema: a) Evaluación Merco: La empresa es evaluada en primera fase por directivos empresariales y en segunda fase por analistas financieros, periodistas económicos y comités de gobierno corporativo, complementado con auditoría de méritos objetivos (cumplimiento regulatorio, solvencia financiera y gobierno corporativo bajo ISAE 3000 de KPMG); b) Evaluación Cadem: La empresa es evaluada mediante encuesta nacional a consumidores y ciudadanos urbanos sobre su presencia en la vida cotidiana y su aporte percibido a la sociedad; 2) Proceso y Resultado Observado: En Merco, la empresa obtiene una posición en el Top 20 del ranking general debido a su solidez de balance, gobierno corporativo y alta valoración entre pares ejecutivos y analistas financieros. Sin embargo, en Cadem Marcas Ciudadanas, la empresa no califica dentro del ranking de marcas relevantes o registra una baja puntuación de 'Presencia Positiva', dado que su servicio no es de consumo masivo directo y la ciudadanía general desconoce su impacto positivo o la asocia negativamente con obras en el territorio. El resultado esperado demuestra que ambos modelos son válidos pero miden constructos y poblaciones distintas: Merco mide reputación corporativa y legitimidad ante la élite económica y expertos, mientras Cadem mide impacto social y vínculo afectivo directo con el consumidor masivo.",
+  "findings": [
+    {
+      "claim_id": "P05-F12-C1",
+      "claim": "La discrepancia empírica de una empresa en diferentes rankings refleja la diversidad de poblaciones evaluadas y constructos medidos, validando la necesidad de triangulación metodológica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024",
+        "region": "Chile",
+        "actor": "Empresas en Chile / Merco / Cadem"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2: Comparativa Metodológica de Modelos de Medición de Reputación",
+          "excerpt_short": "Merco sesgado hacia grandes corporaciones con alta visibilidad directiva; Cadem con foco primario en marcas de consumo masivo y menor granularidad en B2B e industrias extractivas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "526111d7-05a7-4169-81f5-1977d16b8352",
+          "source_title": "Cadem Chile: Marcas Ciudadanas — Metodología de Impacto y Relevancia Social",
+          "original_url": "https://cadem.cl/marcas-ciudadanas/",
+          "locator": "Metodología Marcas Ciudadanas 2024",
+          "excerpt_short": "Evalúa marcas que tienen un impacto relevante en la sociedad y en la vida cotidiana de las personas, con foco en el consumidor masivo y presencia en el hogar.",
+          "source_date": "2024-07-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Divergencia estructural ampliamente observada en los reportes anuales de ambos monitores en Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Puntaje Merco Empresas Chile",
+      "Puntaje Cadem Marcas Ciudadanas"
+    ],
+    "actors": [
+      "Director de Comunicaciones",
+      "Comité Ejecutivo",
+      "Consultor de Marca"
+    ],
+    "steps": [
+      "Cruce de puntajes entre estudios",
+      "Desagregación por perfil de informante",
+      "Explicación de discrepancias al directorio"
+    ],
+    "states": [
+      "Rankings_Received",
+      "Variance_Analyzed",
+      "Executive_Brief_Delivered"
+    ],
+    "outputs": [
+      "Informe explicativo de divergencia entre reputación corporativa de élite y cercanía ciudadana"
+    ],
+    "exceptions": [
+      "Interpretación ejecutiva errónea de que una caída en Cadem implica pérdida de confianza financiera en Merco"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_COMPARISON_CASE_CHILE",
+      "type": "caso_analitico",
+      "name": "Caso Comparativo Merco vs Cadem en Chile",
+      "aliases": [
+        "Divergencia Ranking Élite vs Masivo"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_COMPARISON_CASE_CHILE",
+      "predicate": "ejemplifica_triangulacion_de",
+      "object_id": "ENT_MODEL_REGISTRY",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F12-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de valor",
+      "Ranking Merco": "Mide reputación institucional, solidez de gobierno, talento y méritos objetivos para stakeholders especializados.",
+      "Ranking Cadem": "Mide conexión afectiva, cotidianidad de consumo y relevancia percibida en los hogares chilenos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Interpretador de Métricas",
+      "implication": "BRIDGE debe contextualizar los resultados de rankings explicando explícitamente qué segmento fue consultado y por qué una empresa B2B no compite en las mismas condiciones que una empresa de retail o consumo masivo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

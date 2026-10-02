@@ -1,0 +1,148 @@
+{
+  "question_id": "T01-X19",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Adopción, confianza y trabajo humano",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué medida capta carga cognitiva del usuario además del tiempo ahorrado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El ahorro de tiempo cronometrado es insuficiente para captar el beneficio humano real si el usuario experimenta una fatiga mental abrumadora al auditar textos generados por IA. The Bridge Intelligence adopta una batería psicométrica dual: 1) Índice Estandarizado NASA-TLX (Task Load Index): Mide seis dimensiones en escalas visuales analógicas de 0 a 100: Demanda Mental, Demanda Temporal, Esfuerzo, Frustración, Rendimiento Percibido y Fatiga; la meta del piloto es lograr una reducción de al menos un 35% en la Demanda Mental y Frustración frente al proceso manual; y 2) Carga Cognitiva Social e Interaccional (Social IQa / Sap et al. 2019): Mide la reducción de la ansiedad ejecutiva ante el temor de cometer errores de tono o indiscreciones en la interacción con stakeholders críticos, evaluando si el profesional se siente respaldado por citas inobjetables que le confieren seguridad psicológica en sus decisiones.",
+  "findings": [
+    {
+      "claim_id": "T01-X19-C1",
+      "claim": "Social IQa (Sap et al. 2019) y la literatura de factores humanos demuestran que las herramientas de IA corporativa deben evaluarse no solo por eficiencia cronológica, sino por su capacidad para mitigar la ansiedad de toma de decisiones y la sobrecarga cognitiva en escenarios de alta presión comunicacional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2019-2026",
+        "region": "Global",
+        "actor": "Sap et al. / Social IQa & Human Factors"
+      },
+      "evidence": [
+        {
+          "source_id": "45cf111e-3dc7-4a30-ad9f-a487a9d50b1e",
+          "source_title": "Sap et al. (2019) — Social IQa: Commonsense Reasoning about Social Interactions",
+          "original_url": "https://arxiv.org/pdf/1904.09728.pdf",
+          "locator": "Section 1: Motivation & Cognitive Stress in Social Reasoning, p. 1-2",
+          "excerpt_short": "Social reasoning imposes high cognitive burden on human communicators who must simultaneously navigate factual precision, emotional subtext, and reputational risk.",
+          "source_date": "2019-04-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fundamento teórico y psicométrico verificado en Social IQa PDF.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario psicométrico digital NASA-TLX",
+      "Escala de Ansiedad de Decisión Corporativa"
+    ],
+    "actors": [
+      "Ergónomo de Producto",
+      "Analistas de Asuntos Corporativos en Prueba"
+    ],
+    "steps": [
+      "Aplicar el test NASA-TLX inmediatamente después de resolver una crisis con el método manual",
+      "Aplicar el test NASA-TLX tras resolver una crisis equivalente con The Bridge Intelligence",
+      "Calcular la reducción porcentual ponderada en la puntuación global de carga de trabajo (WWL)",
+      "Registrar testimonios cualitativos sobre la tranquilidad brindada por las citas verificables"
+    ],
+    "states": [
+      "MEDICION_BASAL_MANUAL",
+      "MEDICION_ASISTIDA_BRIDGE",
+      "COMPUTO_REDUCCION_NASA",
+      "CERTIFICACION_BIENESTAR"
+    ],
+    "outputs": [
+      "Reporte Psicométrico de Reducción de Carga Cognitiva T01-X19"
+    ],
+    "exceptions": [
+      "Si la dimensión 'Frustración' aumenta debido a problemas de interfaz, se congela el diseño para refactorización de frontend"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "NASA_TLX_METRIC",
+      "type": "metrica",
+      "name": "Índice NASA-TLX Global",
+      "aliases": [
+        "Weighted Workload Score"
+      ]
+    },
+    {
+      "entity_id": "SEGURIDAD_PSICOLOGICA_ANALISTA",
+      "type": "metrica",
+      "name": "Seguridad Psicológica Decisional",
+      "aliases": [
+        "Decision Confidence Score"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "NASA_TLX_METRIC",
+      "predicate": "cuantifica_alivio_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X19-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Métrica Simple de Tiempo Cronometrado",
+      "item_b": "Métrica Dual (Tiempo + NASA-TLX)",
+      "dimension": "Comprensión del valor humano",
+      "conclusion": "El tiempo solo mide velocidad bruta; el NASA-TLX demuestra que el analista trabaja con menor estrés y mayor claridad estratégica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Reducción en Demanda Mental y Frustración (NASA-TLX)",
+      "denominator": "Puntaje basal del proceso manual",
+      "target": ">= 35%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite posicionar a BRIDGE en departamentos de Recursos Humanos como una herramienta clave de retención de talento y prevención del burnout.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X20"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

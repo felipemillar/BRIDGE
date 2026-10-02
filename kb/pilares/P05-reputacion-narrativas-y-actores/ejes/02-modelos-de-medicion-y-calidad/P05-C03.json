@@ -1,0 +1,140 @@
+{
+  "question_id": "P05-C03",
+  "pilar": "P05",
+  "eje": "Modelos de medición y calidad",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre modelos de medición y calidad, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia metodológica radica en la pugna entre los modelos que persiguen un 'Score Único Global' de la firma (estilo Net Promoter Score - NPS agregado o índice Pulse colapsado) y los modelos multidimensionales y multistakeholder respaldados por la evidencia científica. Fuentes comerciales promueven el uso de un solo número para facilitar comparaciones en rankings públicos. En contraste, las síntesis internas canónicas (P05_EVIDENCE_MAP Tensión 4 y P05_RESEARCH_DOSSIER Sección 2) y la literatura de stakeholders (Freeman 1984; Mitchell et al. 1997; Boutilier & Thomson 2011) dictaminan que una corporación no posee una sola reputación, sino múltiples reputaciones sectoriales que divergen según el grupo evaluador: una empresa puede ostentar una reputación sobresaliente entre inversionistas institucionales por su rentabilidad financiera, pero simultáneamente sufrir una reputación crítica en comunidades territoriales por contaminación o falta de diálogo. De acuerdo con las correcciones del mandato, prevalece la versión de P05_EVIDENCE_MAP: la plataforma BRIDGE debe prohibir la reducción forzada a un índice único y debe representar la reputación de forma desagregada por stakeholder y por driver analítico.",
+  "findings": [
+    {
+      "claim_id": "P05-C03-C1",
+      "claim": "Prevalece el principio de desagregación multidimensional de la reputación por grupos de interés, proscribiendo el colapso en un índice único que invisibilice riesgos asimétricos críticos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "Diseño Metodológico BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2: Matriz de Tensiones Epistemológicas, Tensión 4",
+          "excerpt_short": "Una firma tiene tantas reputaciones como grupos de interés con los que interactúa. Desagregar por stakeholder. La plataforma debe permitir visualizar la reputación segmentada.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución normativa expresa en el mapa de evidencias de P05.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos de encuestas generales",
+      "Evaluaciones por panel segmentado"
+    ],
+    "actors": [
+      "Metodólogo de BRIDGE",
+      "Comité de Riesgos"
+    ],
+    "steps": [
+      "Verificación de la estructura de reporte de los modelos",
+      "Desagregación de índices en vectores por stakeholder",
+      "Construcción de gráficos radiales de reputación segmentada"
+    ],
+    "states": [
+      "Aggregated_Data_Parsed",
+      "Disaggregation_Rules_Applied",
+      "Segmented_Profile_Generated"
+    ],
+    "outputs": [
+      "Perfil de reputación multidimensional no colapsado"
+    ],
+    "exceptions": [
+      "Exigencia de clientes de disponer de un único número para bonos ejecutivos, que debe acompañarse de advertencia de riesgo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DISAGGREGATION_RULE",
+      "type": "regla_metodologica",
+      "name": "Regla de Desagregación Multistakeholder",
+      "aliases": [
+        "Multidimensional Stakeholder Rule"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DISAGGREGATION_RULE",
+      "predicate": "gobierna_visualizacion_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de reporte",
+      "Score Único Comercial": "Puntaje 72/100 (oculta que en comunidades locales la calificación es 20/100).",
+      "Reporte Desagregado BRIDGE": "Inversionistas: 85/100; Empleados: 78/100; Reguladores: 70/100; Comunidades Locales: 20/100 (Alerta Crítica)."
+    }
+  ],
+  "contradictions": [
+    {
+      "issue": "Puntaje único vs reputaciones múltiples",
+      "source_a": "Rankings comerciales de score sintético",
+      "source_b": "P05_EVIDENCE_MAP / Freeman / Mitchell",
+      "resolution": "Prevalece P05_EVIDENCE_MAP: la reputación es inherentemente plural y debe desagregarse por grupo de interés."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Dashboard de Métricas",
+      "implication": "BRIDGE debe estructurar sus tableros permitiendo filtrar la reputación según el tipo de público consultado, evitando un promedio aritmético ciego.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-C04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

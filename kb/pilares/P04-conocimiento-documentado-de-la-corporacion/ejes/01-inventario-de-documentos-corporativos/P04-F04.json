@@ -1,0 +1,146 @@
+{
+  "question_id": "P04-F04",
+  "pilar": "P04",
+  "eje": "Inventario de documentos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar inventario de documentos corporativos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar de forma estructurada el inventario de documentos corporativos exige un modelo formal compuesto por: 1) Variables de identificación e inmutabilidad (`document_id` UUID, `title` canónico, `hash_sha256` del archivo original, `original_uri`, `format_mimetype`); 2) Categorías taxonómicas (`document_family`: Memoria, Hecho Esencial, Política, Comunicado, Presentación, Minuta, Aseguramiento; `regulatory_scope`: CMF NCG 461, Ley 18.045, GRI, IFRS); 3) Metadatos bitemporales (`valid_from`, `valid_to`, `publication_date`, `system_ingestion_timestamp`); 4) Relaciones ontológicas W3C PROV-O y DCAT-3 (`prov:wasAttributedTo` -> Owner/Autor, `prov:wasApprovedBy` -> Directorio/Gerencia, `dcterms:replaces` -> Documento anterior, `dcterms:isVersionOf` -> Serie documental); y 5) Condiciones de gobierno ABAC (`security_classification`: Público, Interno, Confidencial, Embargo; `embargo_timestamp`; `department_restrictions`).",
+  "findings": [
+    {
+      "claim_id": "P04-F04-C1",
+      "claim": "El inventario estructurado de documentos corporativos requiere un schema que combine identificación criptográfica, taxonomía regulatoria, temporalidad bitemporal, relaciones PROV-O y restricciones ABAC.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Datos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.2: Ontología Corporativa y Sección 3.1: Estructura de Campos",
+          "excerpt_short": "corp:DocumentArtifact: objeto digital persistente con metadatos DCAT (dcterms:issued, dcterms:isVersionOf, dcat:distribution), hash criptográfico SHA-256 y reglas ABAC.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "1cf0d513-b850-4fa2-af8d-08b20c91d954",
+          "source_title": "DCMI Metadata Terms (Dublin Core)",
+          "original_url": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
+          "locator": "Properties in the /terms/ namespace",
+          "excerpt_short": "Defines core properties: title, creator, issued, valid, isVersionOf, replaces, and accessRights for structured resource description.",
+          "source_date": "2020-01-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de estándares DCMI, W3C DCAT-3 y schema formalizado en el dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documentos crudos en PDF/DOCX/HTML",
+      "Metadatos de registro"
+    ],
+    "actors": [
+      "Metadata Extractor",
+      "Catalog Registry",
+      "Provenance Linker"
+    ],
+    "steps": [
+      "Cálculo de SHA-256",
+      "Extracción de campos taxonómicos y regulatorios",
+      "Indexación en catálogo estructurado"
+    ],
+    "states": [
+      "Parsed",
+      "Validated_Schema",
+      "Persisted_Inventory"
+    ],
+    "outputs": [
+      "Registro JSON-LD del artefacto documental en base estructurada"
+    ],
+    "exceptions": [
+      "Colisión de identificadores o hash corrupto"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DOC_INVENTORY_SCHEMA",
+      "type": "schema",
+      "name": "Esquema del Inventario Documental Corporativo",
+      "aliases": [
+        "Corporate Document Inventory Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DOC_INVENTORY_SCHEMA",
+      "predicate": "define_registro_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F04-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de estructuración",
+      "Directorio de archivos tradicional": "Archivos sueltos en carpetas con nombres arbitrarios y sin control de vigencia.",
+      "Inventario Ontológico DCAT-3": "Catálogo estructurado con inmutabilidad SHA-256, linaje PROV-O y bitemporalidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe implementar este schema como contrato de datos inmutable para todo archivo ingresado al corpus corporativo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

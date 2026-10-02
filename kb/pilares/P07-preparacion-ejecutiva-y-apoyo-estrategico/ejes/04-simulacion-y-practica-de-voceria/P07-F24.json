@@ -1,0 +1,121 @@
+{
+  "question_id": "P07-F24",
+  "pilar": "P07",
+  "eje": "Simulación y práctica de vocería",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra simulación y práctica de vocería sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso documentado en la Plantilla 4 del Dossier P07 ilustra la simulación de crisis para el Comité de Comunicaciones de Minera Los Salares S.A. ante una falla en tubería de relaves en Sector Quebrada Seca (Km 42). Entradas: 1) Inyector 1 (T+0): Sensor de presión indica caída de 12 bar; alarma en sala de control; corte automático de válvulas en 90 segundos confinado en pretil industrial; 2) Inyector 2 (T+45m): Publicación en redes sociales por dirigente vecinal: 'Derrame tóxico de Los Salares en la quebrada. Muerte de ganado' con 50 republicaciones rápidas; 3) Inyector 3 (T+2h): Minuta de prensa del Ministerio de Medio Ambiente informando apertura de proceso sancionatorio y llegada inminente de fiscalizadores SMA a faena. Resultado esperado: Ejecución del ejercicio de simulación donde el vocero oficial: a) Emite un Holding Statement en T+15m ('Priorizamos la seguridad; bombeo detenido preventivamente en 90 segundos; sin vertimiento a cursos de agua'); b) Despliega toma de muestras de agua con Notario Público independiente; c) Utiliza técnica de Bridging en rueda de prensa ('Lamentamos la preocupación legítima de los vecinos; los sensores confirman confinamiento en pretil y compartiremos toda la información con la SMA'); d) Obtiene un score de 92/100 en la rúbrica de prudencia y evidencia, sin incurrir en contradicciones legales ni admisión prematura de culpas no probadas.",
+  "findings": [
+    {
+      "claim_id": "P07-F24-C1",
+      "claim": "El entrenamiento secuencial mediante inyectores de crisis permite a los portavoces y al comité de comunicaciones ejecutar planes de respuesta alineados con SCCT bajo alta presión temporal.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "crisis_simulation_case",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 6 (Plantilla 4: Matriz de Evaluación de Escenarios de Crisis y Wargame)",
+          "excerpt_short": "Caso de crisis: Filtración en tubería de recirculación Km 42. Inyectores: T+0 (sensor -12 bar), T+45m (alerta comunitaria en X sobre muerte de ganado), T+2h (fiscalización SMA). El ejercicio evalúa la disciplina del vocero al aplicar la estrategia SCCT de Accidente Técnico: aclaración de confinamiento en pretil, holding statement rápido y coordinación de muestreo con notario para certificar la indemnidad del río.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso exhaustivamente documentado y parametrizado en la Plantilla 4 del Dossier técnico P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "caso_wargame_quebrada_seca": {
+      "evento_operacional": "Caída de presión de 12 bar en ducto Km 42 a las 05:00 AM.",
+      "estrategia_scct_adoptada": "Cluster Accidente Técnico (Holding Statement empático + instrucción fáctica de confinamiento).",
+      "acciones_simuladas": [
+        "T+15m: Despacho de Holding Statement validado por Legal.",
+        "T+45m: Respuesta a radio local desmintiendo muerte de ganado con acta notarial de pretil seco.",
+        "T+2h: Recepción de inspectores SMA con entrega de registros de telemetría de válvulas."
+      ],
+      "evaluacion_vocero": {
+        "adherencia_message_house": "95%",
+        "tiempo_holding_statement": "14 minutos (Meta < 20 min)",
+        "violaciones_legales": 0,
+        "calificacion_final": "CERTIFICADO (92/100)"
+      }
+    }
+  },
+  "entities": [
+    "Minera Los Salares S.A.",
+    "Sector Quebrada Seca",
+    "Superintendencia del Medio Ambiente (SMA)",
+    "SCCT Cluster Accidente"
+  ],
+  "relations": [
+    {
+      "from": "Minera Los Salares",
+      "to": "Sector Quebrada Seca",
+      "type": "operates_facility_in"
+    },
+    {
+      "from": "Comité de Crisis",
+      "to": "SMA",
+      "type": "delivers_telemetry_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta Improvisada en Terreno vs Protocolo de Wargame",
+      "diferencia": "La respuesta improvisada niega el hecho o acusa a los vecinos; el protocolo de wargame valida el confinamiento en pretil con notario y evita la clausura temporal de faena por la SMA."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "holding_statement_latency": "14 minutos transcurridos desde Inyector 2",
+    "notarized_sampling_lead_time": "< 3 horas desde la alerta"
+  },
+  "bridge_implications": "Implementar este escenario de crisis como la prueba de estrés de referencia en el módulo de simulación de BRIDGE.",
+  "open_gaps": [
+    "Simulación de cortes de conectividad o apagones de telecomunicaciones en faenas remotas durante una crisis."
+  ],
+  "next_question_ids": [
+    "P07-F25",
+    "P07-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

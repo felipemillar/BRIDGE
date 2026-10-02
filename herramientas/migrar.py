@@ -57,6 +57,8 @@ def migrar_datos() -> None:
     """Ejecuta la tarea F2.2: migración de registros y manifiestos a kb/pilares/ y kb/canon/."""
     r = raiz()
     banco, titulos = cargar_banco()
+    respuestas = cargar_respuestas()
+    manifiestos = cargar_manifiestos()
 
     # 1. Crear kb/canon/banco_preguntas.jsonl
     canon_dir = r / "kb" / "canon"
@@ -76,7 +78,6 @@ def migrar_datos() -> None:
             fh.write(json.dumps(fila, ensure_ascii=False) + "\n")
 
     # 2. Migrar registros de respuestas individuales
-    respuestas = cargar_respuestas()
     for reg in respuestas:
         qid = reg["question_id"]
         b = banco[qid]
@@ -103,7 +104,6 @@ def migrar_datos() -> None:
             fh.write("\n")
 
     # 3. Migrar manifiestos de fuentes a pilar.json y fuentes.jsonl
-    manifiestos = cargar_manifiestos()
     for p, data in manifiestos.items():
         p_dir = pilar_dir(p, titulos)
         p_dest = r / "kb" / "pilares" / p_dir

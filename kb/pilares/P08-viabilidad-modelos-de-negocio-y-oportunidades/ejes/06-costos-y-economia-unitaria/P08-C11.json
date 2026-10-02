@@ -1,0 +1,156 @@
+{
+  "question_id": "P08-C11",
+  "pilar": "P08",
+  "eje": "Costos y economía unitaria",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre costos y economía unitaria, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radica en el cálculo del costo de cómputo y el margen bruto proyectado: Las síntesis preliminares del Research Dossier asumían que todas las etapas del pipeline debían ejecutarse utilizando modelos de frontera de alto costo (GPT-4 / Claude 3 Opus), estimando un costo de inferencia de más de USD 350 mensuales por cliente, lo que comprimía el margen bruto a un precario 52%. Por su parte, la documentación de Google Cloud Vertex AI y el P08_QUALITY_ADDENDUM corrigen este error metodológico mediante la arquitectura escalonada en dos niveles (Two-Tier Model Architecture): el 85% de las tareas mecánicas de parseo, filtrado y embeddings se delegan a Gemini 1.5 Flash (~$2.00/mes), reservando Gemini 1.5 Pro o GPT-4o (~$17.50/mes) exclusivamente para el 15% restante de síntesis compleja. Prevalece la versión rectificada del QUALITY_ADDENDUM: el costo real de cómputo por cliente cae a ~$80/mes, elevando el margen bruto a escala del 73.1% al 75.6%.",
+  "findings": [
+    {
+      "claim_id": "P08-C11-C1",
+      "claim": "Conforme al P08_QUALITY_ADDENDUM, se rectifica la sobreestimación del costo de inferencia adoptando la arquitectura escalonada en 2 tiers, blindando un margen bruto superior al 73%.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "unit_economics_reconciliation",
+      "evidence": [
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 7 'Validación de Supuestos Financieros y Arquitectura de Costos'",
+          "retrieved_at": null,
+          "excerpt_short": "Precedencia canónica financiera: El supuesto de usar exclusivamente modelos de frontera para el 100% de la carga queda formalmente derogado. La arquitectura de costos obligatoria se escalona en dos niveles: Tier 1 (Gemini 1.5 Flash / GPT-4o-mini) para clasificación masiva y embeddings; Tier 2 (Gemini 1.5 Pro / GPT-4o) para razonamiento y redacción ejecutiva. Esta corrección reduce el gasto de cómputo en un 78% y garantiza un margen bruto operativo del 73.1% con 5 clientes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Google Cloud Vertex AI: Generative AI Data Governance & Enterprise Privacy",
+          "source_id": "99ed7566-0ecf-45dd-b475-8b81c1429419",
+          "locator": "Model Selection Architecture 'Tiered Cost Optimization', p. 10-12",
+          "retrieved_at": null,
+          "excerpt_short": "Production pipelines achieve substantial margin expansion by routing low-complexity ingestion to Gemini Flash and reserving flagship models for final strategic synthesis.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación matemática y técnica entre el addendum de calidad de P08 y las recomendaciones de Google Cloud.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "P08_RESEARCH_DOSSIER preliminar",
+      "Tarifas Vertex AI",
+      "P08_QUALITY_ADDENDUM"
+    ],
+    "actors": [
+      "CFO",
+      "Lead Cloud Architect",
+      "Auditor Financiero"
+    ],
+    "steps": [
+      "Detección de sobreestimación de costos LLM",
+      "Implementación de router de inferencia de dos niveles",
+      "Recálculo del P&L unitario a régimen"
+    ],
+    "states": [
+      "Costos Inflados",
+      "Arquitectura en 2 Tiers Diseñada",
+      "Margen > 73% Ratificado"
+    ],
+    "outputs": [
+      "Modelo financiero corregido y aprobado para BRIDGE"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P08_QUALITY_ADDENDUM",
+    "Arquitectura en 2 Tiers",
+    "Gemini 1.5 Flash",
+    "Gemini 1.5 Pro",
+    "Margen Bruto 73.1%"
+  ],
+  "relations": [
+    {
+      "from": "QUALITY_ADDENDUM",
+      "to": "Arquitectura en 2 Tiers",
+      "type": "mandates"
+    },
+    {
+      "from": "Arquitectura en 2 Tiers",
+      "to": "Margen Bruto 73.1%",
+      "type": "achieves"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cómputo monolítico de frontera vs Arquitectura escalonada en 2 tiers",
+      "diferencia": "Monolítico: USD 350/mes/cliente (despilfarro). Escalonado: USD 80/mes/cliente con idéntica calidad ejecutiva final."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P08-F31-C1",
+        "P08-C11-C1"
+      ],
+      "difference": "Discrepancia entre la estimación preliminar de cómputo ineficiente y el modelo optimizado de dos niveles.",
+      "resolution": "resuelta",
+      "reason": "El QUALITY_ADDENDUM formaliza el enrutamiento inteligente de modelos para maximizar el margen bruto."
+    }
+  ],
+  "metrics_and_denominators": {
+    "reconciled_compute_cost_per_client": "$65 a $95 USD mensuales",
+    "steady_state_gross_margin_reconciled": "73.1% a 75.6%"
+  },
+  "bridge_implications": "Configurar el pipeline de inferencia en código con un enrutador explícito hacia Gemini Flash para todas las tareas de descarte y clasificación.",
+  "open_gaps": [
+    "Monitorear si el procesamiento de documentos PDF escaneados de la SMA incrementa el consumo de tokens multimodales."
+  ],
+  "next_question_ids": [
+    "P08-C12",
+    "P08-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

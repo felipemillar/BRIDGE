@@ -1,0 +1,153 @@
+{
+  "question_id": "P10-F45",
+  "pilar": "P10",
+  "eje": "Indicadores y límites normativos",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué correcciones de P10_VERIFICATION_CORRECTIONS impiden citar eCFR o afirmar cobertura legal universal?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El documento rector P10_VERIFICATION_CORRECTIONS (UUID f043631e-98ac-4b5b-8fc6-de772d489bcf), que goza de prevalencia canónica estricta sobre síntesis previas, introduce dos correcciones mandatorias fundamentales: 1) Invalidez Técnica Absoluta de eCFR (source_id 8858106c-e819-465b-8106-91a4f6983d67): La extracción original de eCFR falló al capturar únicamente una pantalla anti-bot CAPTCHA de Cloudflare ('Just a moment... Enable JavaScript and cookies to continue'), por lo que carece de texto sustantivo; se prohíbe terminantemente citarla como evidencia y se establece como único sustituto canónico sustantivo verificado para la Rule 10b-5 de la SEC al repositorio de Cornell Law School LII (source_id b689098d-8595-4f11-9e01-293b0e194a96); y 2) Retractación de Cobertura Legal Universal: Se anula la pretensión previa de 'cumplimiento legal universal al 100%', aclarando que la gobernanza comunicacional debe desagregar estrictamente la territorialidad legal (CMF y leyes chilenas para emisores locales; SEC para emisores en EE.UU.; y advertir que la Green Claims Directive europea es una propuesta legislativa parlamentaria COM(2023) 166 en negociación, no una ley vinculante aplicable en Chile ni en el resto del mundo).",
+  "findings": [
+    {
+      "claim_id": "P10-F45-C1",
+      "claim": "P10_VERIFICATION_CORRECTIONS invalida el uso de eCFR (pantalla CAPTCHA) designando como sustituto canónico a Cornell LII (b689098d), y retracta las afirmaciones de cobertura legal universal delimitando el alcance territorial estricto de las normas chilenas, estadounidenses y europeas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "canonical_corrections_enforcement",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Corrección 1: Invalidez de eCFR y Prevalencia de Cornell LII' & 'Corrección 2: Deslinde Jurisdiccional'",
+          "retrieved_at": null,
+          "excerpt_short": "eCFR (8858106c) es una pantalla anti-bot inválida. La fuente sustantiva comprobada para Rule 10b-5 es Cornell LII (b689098d). Retractación de afirmaciones absolutas de 'cobertura legal 100%': CMF y leyes chilenas para Chile, SEC para emisores EE.UU., EU Green Claims es propuesta legislativa no vigente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Cornell LII: 17 CFR § 240.10b-5 - Employment of Manipulative and Deceptive Devices",
+          "source_id": "b689098d-8595-4f11-9e01-293b0e194a96",
+          "locator": "Full Text of Rule 10b-5 (a), (b), (c)",
+          "retrieved_at": null,
+          "excerpt_short": "It shall be unlawful for any person... to make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made... not misleading.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación empírica del texto del dossier de correcciones y examen directo de la pantalla CAPTCHA en eCFR.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 1.0,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Directiva de auditoría canónica",
+      "Índice de fuentes en fuentes/P10.json",
+      "Textos de syntheses internas"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "Investigador BRIDGE",
+      "Linter de Citas"
+    ],
+    "steps": [
+      "Bloqueo del UUID 8858106c en el catálogo de citas válidas de la investigación",
+      "Redirección obligatoria de toda referencia a Rule 10b-5 hacia Cornell LII (b689098d)",
+      "Revisión y rectificación de afirmaciones sobre la vigencia de la Green Claims Directive",
+      "Aplicación de advertencia de alcance jurisdiccional en todos los análisis regulatorios"
+    ],
+    "states": [
+      "AUDIT_DIRECTIVE_ACTIVE",
+      "INVALID_SOURCE_BLOCKED",
+      "SUBSTITUTE_ENFORCED",
+      "JURISDICTION_RESTRICTED"
+    ],
+    "outputs": [
+      "Base de respuestas plenamente depurada y conforme a las correcciones canónicas"
+    ],
+    "exceptions": [
+      "Ninguna; la regla de prevalencia canónica de P10_VERIFICATION_CORRECTIONS es obligatoria e inmutable"
+    ]
+  },
+  "entities": [
+    "eCFR Invalidation",
+    "Cornell LII",
+    "P10_VERIFICATION_CORRECTIONS",
+    "Jurisdicción Territorial",
+    "P10_QUALITY_ADDENDUM"
+  ],
+  "relations": [
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "P10_QUALITY_ADDENDUM",
+      "type": "SUPERSEDES_CANONICALLY"
+    },
+    {
+      "from": "Cornell LII",
+      "to": "Rule 10b-5",
+      "type": "PROVIDES_AUTHENTIC_TEXT"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citar fuentes rotas o bloqueadas por CAPTCHA vs Sustitución canónica validada",
+      "diferencia": "Citar páginas rotas degrada la autoridad epistemológica del estudio; la sustitución canónica garantiza que cada afirmación provenga de un repositorio legal íntegro y verificable."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Validez de eCFR",
+      "resolution": "eCFR fue descartada por pantalla anti-bot; prevalece Cornell LII (b689098d)."
+    }
+  ],
+  "metrics_and_denominators": {
+    "canonical_precedence_adherence": "100% de citas normativas apegadas a P10_VERIFICATION_CORRECTIONS",
+    "invalid_source_usage_rate": "0 menciones de eCFR como fuente sustantiva"
+  },
+  "bridge_implications": "Garantiza un rigor metodológico intachable y protege a BRIDGE de citar fuentes erróneas o asumir coberturas legales inexistentes en su propuesta comercial.",
+  "open_gaps": [
+    "Monitoreo periódico de disponibilidad en línea de repositorios legales oficiales estadounidenses y chilenos."
+  ],
+  "next_question_ids": [
+    "P10-F46",
+    "P10-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

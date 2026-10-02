@@ -1,0 +1,166 @@
+{
+  "question_id": "P11-F07",
+  "pilar": "P11",
+  "eje": "Separación entre clientes",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué frontera lógica y operativa impide que datos de un cliente aparezcan en otro?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La separación entre clientes en BRIDGE se implementa mediante una arquitectura de defensa en profundidad multinivel que articula cuatro fronteras técnicas inquebrantables: 1) Capa de Base de Datos Relacional: PostgreSQL 18 con Row Level Security (RLS) mandatorio (`FORCE ROW LEVEL SECURITY`), donde cada conexión fija la variable de sesión `SET app.current_tenant_id = 'X'` y las políticas `USING (tenant_id = current_setting('app.current_tenant_id'))` bloquean físicamente a nivel de kernel de base de datos cualquier lectura de filas ajenas, aun ante vulnerabilidades de inyección en la capa web; 2) Capa Vectorial: Qdrant multitenancy con particionamiento estricto por payload indexado, donde todo filtro de búsqueda de vecinos más cercanos inyecta forzosamente la cláusula `must: [{key: 'tenant_id', match: {value: current_tenant}}]`; 3) Capa de Caché y Memoria LLM: Redis segregado mediante prefijos de clave obligatorios `tenant:{tenant_id}:session:{id}` y purga total de contexto entre invocaciones de API, con prohibición de caché semántica compartida entre organizaciones; y 4) Cifrado en Reposo con Llaves Dedicadas (Envelope Encryption): Cada cliente cuenta con su propia clave gestionada (CMK) en AWS KMS o Cloud KMS, garantizando que incluso un volcado físico de disco sea matemáticamente indecifrable para otro cliente.",
+  "findings": [
+    {
+      "claim_id": "P11-F07-C1",
+      "claim": "El aislamiento entre clientes opera mediante PostgreSQL 18 RLS, filtros de payload obligatorios en Qdrant, partición estricta de caché y llaves KMS dedicadas por tenant, conforme a las estrategias de aislamiento de AWS y SOC 2.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "tenant_isolation_architecture",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 3 'Arquitectura de Aislamiento Multi-Tenant'",
+          "retrieved_at": null,
+          "excerpt_short": "Fronteras de aislamiento: PostgreSQL 18 RLS mandatorio con FORCE ROW LEVEL SECURITY; Qdrant con filtro de payload obligatorio tenant_id; Redis con namespaces independientes; Envelope Encryption con CMK dedicada por tenant.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "PostgreSQL 18 Documentation: Section 5.9 Row Security Policies (RLS)",
+          "source_id": "2bac776e-1375-4cee-9097-117f74f1d9e1",
+          "locator": "Section 5.9 'Row Security Policies'",
+          "retrieved_at": null,
+          "excerpt_short": "Row-level security policies restrict which rows can be returned by normal queries or inserted, updated, or deleted by data modification commands, enforcing multi-tenant isolation at the database layer.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AWS Whitepapers: SaaS Tenant Isolation Strategies",
+          "source_id": "9c4732c4-ab75-4496-bbe6-f62334e3de5f",
+          "locator": "Section 'Logical Isolation in Pooled Architectures'",
+          "retrieved_at": null,
+          "excerpt_short": "In a pooled model, isolation is achieved through policy-driven enforcement mechanisms that evaluate tenant context on every request, preventing cross-tenant access across compute, storage, and caching layers.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la documentación técnica oficial de PostgreSQL 18, las directrices de aislamiento de AWS y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud de usuario autenticado",
+      "Token JWT con claim `tenant_id`",
+      "Consulta SQL/RAG"
+    ],
+    "actors": [
+      "Middleware de Autenticación",
+      "Motor PostgreSQL RLS",
+      "Motor Qdrant",
+      "KMS"
+    ],
+    "steps": [
+      "Validación de la firma criptográfica del JWT y extracción del `tenant_id`",
+      "Apertura de conexión de base de datos y ejecución inmediata de `SET LOCAL app.current_tenant_id = ?`",
+      "Evaluación de la política RLS en PostgreSQL para la consulta",
+      "Inyección del payload `tenant_id` en la petición vectorial a Qdrant",
+      "Desencriptación de datos en memoria utilizando la CMK del tenant",
+      "Respuesta entregada al usuario y cierre de conexión limpiando variables de sesión (`DISCARD ALL`)"
+    ],
+    "states": [
+      "JWT_VALIDATED",
+      "TENANT_CONTEXT_SET",
+      "RLS_ENFORCED",
+      "VECTOR_FILTERED",
+      "SESSION_RESET"
+    ],
+    "outputs": [
+      "Datos retornados exclusivamente pertenecientes al tenant autenticado"
+    ],
+    "exceptions": [
+      "Peticiones con `tenant_id` nulo o adulterado son abortadas con error HTTP 403 y registradas en SIEM"
+    ]
+  },
+  "entities": [
+    "PostgreSQL 18 RLS",
+    "Qdrant Multitenancy",
+    "AWS SaaS Whitepaper",
+    "Envelope Encryption",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "PostgreSQL 18 RLS",
+      "to": "tenant_id",
+      "type": "ENFORCES_ROW_LEVEL_FILTER"
+    },
+    {
+      "from": "Qdrant",
+      "to": "Payload Filter",
+      "type": "RESTRICTS_NEAREST_NEIGHBOR"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Filtrado WHERE tenant_id en código de aplicación vs RLS en base de datos",
+      "diferencia": "El filtrado en código es vulnerable a olvidos del desarrollador o inyecciones SQL; RLS en PostgreSQL bloquea el acceso a nivel de kernel impidiendo cualquier fuga."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cross_tenant_leakage_events": "0 incidentes de fuga de datos entre inquilinos",
+    "rls_policy_coverage_rate": "100% de tablas multitenant con FORCE ROW LEVEL SECURITY activo"
+  },
+  "bridge_implications": "Permite a BRIDGE certificar su arquitectura ante comités de ciberseguridad corporativos y superar auditorías SOC 2 Type II.",
+  "open_gaps": [
+    "Automatización de auditorías de configuración de RLS en migraciones de base de datos CI/CD."
+  ],
+  "next_question_ids": [
+    "P11-F08",
+    "P11-F09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

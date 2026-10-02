@@ -1,0 +1,153 @@
+{
+  "question_id": "P09-C15",
+  "pilar": "P09",
+  "eje": "Calidad, acceso y correcciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre calidad, acceso y correcciones, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: En documentos iniciales se contemplaba la posibilidad de que los administradores de sistemas pudieran 'ajustar' registros históricos de compromisos de forma discrecional o borrar entradas duplicadas directamente en base de datos sin generar pistas de auditoría para 'limpiar el sistema'. Esta práctica destruye la defensa jurídica y vulnera el principio de inmutabilidad. Versión Prevalente: En virtud de las Rectificaciones R2 y R5 de `P09_VERIFICATION_CORRECTIONS` (`f7d21328`), prevalece la inmutabilidad absoluta y la política append-only. Ningún usuario, sin importar su nivel de privilegio técnico, puede alterar o eliminar registros sin que quede constancia indeleble en el log de auditoría forense con justificación, hash SHA-256 e individualización del responsable de la corrección.",
+  "findings": [
+    {
+      "claim_id": "P09-C15-C1",
+      "claim": "P09_VERIFICATION_CORRECTIONS prevalece categóricamente prohibiendo el borrado destructivo o ajuste arbitrario de registros, exigiendo auditoría forense inmutable y arquitectura append-only.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "contrast_quality_access_corrections_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R2 'Inmutabilidad Absoluta y Prohibición de Modificación Destructiva'",
+          "retrieved_at": null,
+          "excerpt_short": "Se revoca cualquier mecanismo de sobreescritura de datos históricos. La arquitectura de base de datos debe ser append-only; los errores de digitación se corrigen mediante transacciones de rectificación enlazadas, garantizando trazabilidad ante fiscalizaciones de la SMA o juicios civiles.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: Top 10 Secure Stakeholder Tools for Government and Public Sector",
+          "source_id": "da35828d-1b2b-4ede-8143-38784d7fc927",
+          "locator": "Section 'Audit Log Integrity and Anti-Tampering Protections', p. 25-29",
+          "retrieved_at": null,
+          "excerpt_short": "A platform that permits administrative erasure of historical stakeholder entries fails basic SOC 2 and public integrity audits. Immutability must be cryptographically enforced.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Tractivity y la norma canónica rectora de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Petición administrativa de corrección de datos",
+      "Políticas de seguridad de base de datos",
+      "Motor de audit trail"
+    ],
+    "actors": [
+      "Administrador de Base de Datos",
+      "Oficial de Cumplimiento",
+      "Auditor Forense"
+    ],
+    "steps": [
+      "Verificación de la prohibición de DELETE/UPDATE en esquemas de compromisos",
+      "Canalización obligatoria de correcciones vía transacciones de versión",
+      "Generación de evento criptográfico en log inmutable",
+      "Certificación periódica de integridad de la base de datos"
+    ],
+    "states": [
+      "Intento de Modificación Evaluado",
+      "Regla de Inmutabilidad Aplicada",
+      "Rectificación Auditada Persistida"
+    ],
+    "outputs": [
+      "Base de datos con integridad forense verificada"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P09_VERIFICATION_CORRECTIONS",
+    "Inmutabilidad Append-Only",
+    "Tractivity Security",
+    "SOC 2 Type II",
+    "Audit Trail Forense"
+  ],
+  "relations": [
+    {
+      "from": "P09_VERIFICATION_CORRECTIONS",
+      "to": "Inmutabilidad Append-Only",
+      "type": "MANDATES_ABSOLUTE_ENFORCEMENT_OF"
+    },
+    {
+      "from": "BRIDGE Database",
+      "to": "DELETE / UPDATE",
+      "type": "PROHIBITS_ON_HISTORICAL_RECORDS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Limpieza discrecional de base de datos vs Corrección histórica append-only",
+      "diferencia": "La discrecional abre la puerta a sospechas de encubrimiento de delitos o negligencias; la append-only demuestra transparencia y buena fe procesal."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "Propuestas informáticas preliminares: 'Añadir botón de eliminar para limpiar registros erróneos'.",
+      "claim_b": "P09_VERIFICATION_CORRECTIONS Rectificación R2: 'Prohibición absoluta de DELETE; solo se admiten versiones sucesoras y adendas'.",
+      "resolution": "Prevalece canónicamente la regla de inmutabilidad append-only de P09_VERIFICATION_CORRECTIONS."
+    }
+  ],
+  "metrics_and_denominators": {
+    "destructive_queries_allowed": "0 consultas DELETE o UPDATE directas sobre registros históricos",
+    "audit_trail_tamper_evidence": "100% hashes verificables"
+  },
+  "bridge_implications": "Revocar permisos de DELETE y UPDATE en las tablas de historial y compromisos en PostgreSQL mediante triggers de excepción.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C16",
+    "P09-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

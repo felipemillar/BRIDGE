@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X28",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Certeza comercial y madurez",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar certeza comercial y madurez de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo de datos con las siguientes especificaciones: 1) Variables: Identificador de solución (`solution_id`), nivel de disponibilidad comercial (`ga_comercial`, `beta_privada`, `piloto_diseno`, `hipotesis_teorica`), transparencia tarifaria (`precios_publicados`, `cotizacion_opaca`), rango de costo anual (`min_annual_usd`, `max_annual_usd`), nivel de prueba epistemológica (`OPD`, `FD`, `DTI`, `POR`), recuento de clientes públicos verificables (`verified_clients_count`), y fecha de última auditoría técnica (`last_audit_date`); 2) Categorías: Proveedor consolidado de alta certeza, Solución emergente en validación, y Modelo conceptual de referencia; 3) Relaciones: `Proveedor -> Asignado_A -> Nivel_Certeza_Comercial`, `Solucion -> Evaluada_Bajo -> Escala_Evidencia`, `Cliente_Verificado -> Contrata -> Solucion`; 4) Condiciones de frontera: Prohibición terminante de clasificar cualquier funcionalidad como 'madura' si su nivel de evidencia es únicamente FD (declaración en marketing) sin soporte DTI o POR comprobable.",
+  "findings": [
+    {
+      "claim_id": "P02-X28-C1",
+      "claim": "La modelación estructurada de certeza comercial exige un esquema formal que bloquee la inflación de madurez tecnológica y exija documentación técnica (DTI) o contratos públicos (OPD).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Datos P02"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Data Model for Commercial Certainty and Product Maturity",
+          "excerpt_short": "Schema enforcing strict relational attributes for verified commercial scale, transparent pricing schedules, and epistemic evidence classification.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:54:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación arquitectónica formal en el atlas de reconciliación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Matriz de evaluación de proveedores",
+      "Definición de atributos relacionales",
+      "Reglas de validación cruzada"
+    ],
+    "actors": [
+      "Administrador de Ontologías",
+      "Auditor de Certeza Comercial"
+    ],
+    "steps": [
+      "Creación de tablas de certeza comercial",
+      "Poblado de datos con evidencia auditada",
+      "Ejecución de tests de integridad relacional"
+    ],
+    "states": [
+      "Esquema_Definido",
+      "Datos_Poblados",
+      "Integridad_Certificada"
+    ],
+    "outputs": [
+      "Base de datos de certeza comercial y madurez de proveedores"
+    ],
+    "exceptions": [
+      "Proveedores que operan en mercados cerrados que impiden verificar contratos comerciales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODELO_CERTEZA_COMERCIAL",
+      "type": "modelo_datos",
+      "name": "Esquema Estructurado Certeza Comercial y Madurez",
+      "aliases": [
+        "Commercial Certainty Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODELO_CERTEZA_COMERCIAL",
+      "predicate": "aplica_condicion_de",
+      "object_id": "Bloqueo_Inflacion_Madurez",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X28-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo Estructurado de Certeza vs Percepción de Marca",
+      "Modelo Estructurado": "Evalúa pruebas técnicas inmutables, contratos firmados y disponibilidad de código.",
+      "Percepción de Marca": "Se deja impresionar por stands gigantes en conferencias y patrocinios millonarios."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe autoevaluarse bajo este mismo esquema estructurado en cada ciclo de desarrollo.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:54:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

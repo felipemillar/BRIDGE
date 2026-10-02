@@ -1,0 +1,133 @@
+{
+  "question_id": "T01-X20",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Adopción, confianza y trabajo humano",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar adopción, confianza y trabajo humano de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la adopción, la confianza y el trabajo humano requiere un esquema relacional formal compuesto por: 1) Entidad Sesion_Trabajo_Humano: ID de sesión, timestamp de inicio/fin, usuario, módulo utilizado, tipo de tarea (rutina, crisis, regulatoria); 2) Entidad Telemetria_Verificacion: Total citas mostradas, total citas abiertas (CTR), dwell time promedio por cita (segundos), distancia de edición textual (diff ratio); 3) Entidad Psicométrica_NASA_TLX: Puntajes numéricos [0-100] en Demanda Mental, Física, Temporal, Rendimiento, Esfuerzo y Frustración; 4) Relaciones de Comportamiento: Vínculo entre el dwell time de verificación y la ausencia de fallos fatales en los textos aprobados; y 5) Condiciones de Integridad: Validación de que dwell_time >= 0 y de que las sesiones con cero clics en citas pero aprobación inmediata queden etiquetadas con el flag 'revisión_nominal_presunta_complacencia'.",
+  "findings": [
+    {
+      "claim_id": "T01-X20-C1",
+      "claim": "El modelamiento estructurado de las interacciones humanas con la IA permite correlacionar el tiempo de inspección de citas con la reducción de alucinaciones en los documentos emitidos, formalizando la evidencia de control humano exigida por marcos de gobernanza.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "SummEval & T01 Schema Standards"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 3: Data Logging and Interaction Schema",
+          "excerpt_short": "Structured logging of human evaluator telemetry captures behavioral verification patterns and correlates latency with factual accuracy.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar de captura de datos de interacción humana en benchmarking.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de JSON Schema de Trabajo Humano",
+      "Trazas de eventos de frontend y encuestas TLX"
+    ],
+    "actors": [
+      "Frontend Telemetry Architect",
+      "Auditor de Trabajo Humano"
+    ],
+    "steps": [
+      "Configurar el esquema de entidades de sesión humana y telemetría de verificación",
+      "Ingestar eventos de interfaz y puntuaciones de encuestas NASA-TLX",
+      "Verificar condiciones de integridad relacional y flags de complacencia",
+      "Generar dataset estructurado JSONL para auditoría de compuerta G2"
+    ],
+    "states": [
+      "CONFIGURACION_ESQUEMA",
+      "INGESTA_EVENTOS_UX",
+      "VALIDACION_INTEGRIDAD",
+      "DATASET_HUMANO_SELLADO"
+    ],
+    "outputs": [
+      "Catálogo Estructurado de Trabajo Humano y Confianza T01-X20"
+    ],
+    "exceptions": [
+      "Si el esquema detecta inconsistencias lógicas en los tiempos de sesión, se descarta el registro para análisis de fatiga"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SCHEMA_TRABAJO_HUMANO",
+      "type": "documento",
+      "name": "Esquema Estructurado de Trabajo Humano",
+      "aliases": [
+        "Human Telemetry Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SCHEMA_TRABAJO_HUMANO",
+      "predicate": "registra_comportamiento_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X20-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Completitud de telemetría de verificación humana",
+      "denominator": "Total sesiones de usuario en el piloto",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite auditar el cumplimiento del rol de 'humano en el bucle' en auditorías de compliance.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

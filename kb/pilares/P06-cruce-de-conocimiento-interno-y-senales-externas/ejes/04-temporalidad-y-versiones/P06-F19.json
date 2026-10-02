@@ -1,0 +1,335 @@
+{
+  "question_id": "P06-F19",
+  "pilar": "P06",
+  "eje": "Temporalidad y versiones",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué respuesta corresponde cuando una fuente externa es posterior al último documento oficial?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "[P06-F19] ¿Qué respuesta corresponde cuando una fuente externa es posterior al último documento oficial?** En la taxonomía del corpus P06, este fenómeno no constituye una contradicción fáctica, sino que se categoriza formalmente como **Diferencia Temporal (Temporal Lag / Evolution)** [1]. Se define como el desfase inherente entre la fecha de corte de los reportes oficiales internos (por ejemplo, l",
+  "findings": [
+    {
+      "claim_id": "P06-F19-C1",
+      "claim": "[P06-F19] ¿Qué respuesta corresponde cuando una fuente externa es posterior al último documento oficial?**",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F19",
+          "excerpt_short": "[P06-F19] ¿Qué respuesta corresponde cuando una fuente externa es posterior al último documento oficial?**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F19-C2",
+      "claim": "En la taxonomía del corpus P06, este fenómeno no constituye una contradicción fáctica, sino que se categoriza formalmente como **Diferencia Temporal (Temporal Lag / Evolution)** [1]. Se define como el desfase inherente entre la fecha de corte de los reportes oficiales internos (por ejemplo, la Memor",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F19",
+          "excerpt_short": "En la taxonomía del corpus P06, este fenómeno no constituye una contradicción fáctica, sino que se categoriza formalmente como **Diferencia Temporal (Temporal Lag / Evolution)** [1...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F19-C3",
+      "claim": "Plataformas comerciales como **Signal AI** (Risk Intelligence Platform) y **Dataminr Pulse** afirman procesar miles de millones de documentos e hitos noticiosos externos en tiempo real para alertar de forma inmediata cuando surgen datos posteriores a las memorias e informes de la empresa [6-8].",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "622d9c7c-2cdd-46f4-bd8d-10f8e8b26cee",
+          "source_title": "Signal AI - Risk Intelligence Platform & AIQ Engine",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F19",
+          "excerpt_short": "Plataformas comerciales como **Signal AI** (Risk Intelligence Platform) y **Dataminr Pulse** afirman procesar miles de millones de documentos e hitos noticiosos externos en tiempo ...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F19-C4",
+      "claim": "Clasificar una señal posterior como \"Contradicción Real\" u \"Ocultamiento/Greenwashing\" expondría a la organización a paralizaciones comunicacionales e imputaciones legales infundadas, dado que el documento oficial reportaba la verdad fáctica correspondiente a su fecha de corte [1, 3, 9].",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "33d0f555-7934-4af8-913b-89920a2514ac",
+          "source_title": "SERNAC Chile - Circular sobre Consumo Sostenible y Greenwashing",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F19",
+          "excerpt_short": "Clasificar una señal posterior como \"Contradicción Real\" u \"Ocultamiento/Greenwashing\" expondría a la organización a paralizaciones comunicacionales e imputaciones legales infundad...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F19-C5",
+      "claim": "Anclaje e Intervalos Temporales:** Etiquetar las afirmaciones en el grafo de conocimiento dinámico con intervalos de validez \\\\([t_{\\text{start}}, t_{\\text{end}}]\\\\) y comparar la `fecha_corte` del informe interno con la `fecha_senal` externa [1, 3, 4, 10].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F19",
+          "excerpt_short": "Anclaje e Intervalos Temporales:** Etiquetar las afirmaciones en el grafo de conocimiento dinámico con intervalos de validez \\\\([t_{\\text{start}}, t_{\\text{end}}]\\\\) y comparar la ...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-F19-C6",
+      "claim": "Descomposición de Consultas (TQD):** Implementar el módulo *Temporal Query Decomposition* (TQD) de T-GRAG para acotar la búsqueda al subgrafo del período del reporte original [4, 11, 12].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-F19",
+          "excerpt_short": "Descomposición de Consultas (TQD):** Implementar el módulo *Temporal Query Decomposition* (TQD) de T-GRAG para acotar la búsqueda al subgrafo del período del reporte original [4, 1...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de medios y reguladores",
+      "Documentación corporativa interna y memorias CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "CCO / Dircom",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Extracción y normalización de afirmaciones",
+      "Resolución de entidades y contraste temporal",
+      "Evaluación de coherencia fáctica y generación de brief"
+    ],
+    "states": [
+      "ENTRADA_RECIBIDA",
+      "ENTIDADES_CANONICALIZADAS",
+      "CONTRASTE_EJECUTADO",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Evaluación estructurada y respuesta citada para P06-F19"
+    ],
+    "exceptions": [
+      "Ausencia de señal externa verificable o desfase temporal en el corte documental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_P06_CORP",
+      "type": "organizacion",
+      "name": "Corporación Emisora CMF",
+      "aliases": [
+        "Empresa Reportante"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_REG",
+      "type": "organizacion",
+      "name": "CMF / SERNAC / SMA",
+      "aliases": [
+        "Regulador Chileno"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_BRIDGE",
+      "type": "producto",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "BRIDGE Platform"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_P06_CORP",
+      "predicate": "sujeto_a_fiscalizacion_de",
+      "object_id": "ENT_P06_REG",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P06-F19-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporación en el pipeline del módulo para sustentar decisiones ejecutivas en P06-F19.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

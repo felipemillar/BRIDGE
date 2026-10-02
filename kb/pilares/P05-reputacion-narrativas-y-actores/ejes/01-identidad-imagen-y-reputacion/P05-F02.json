@@ -1,0 +1,153 @@
+{
+  "question_id": "P05-F02",
+  "pilar": "P05",
+  "eje": "Identidad, imagen y reputación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué observación permitiría saber si la percepción externa contradice la conducta documentada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La observación técnica y empírica que permite saber si la percepción externa contradice la conducta documentada es el cálculo del 'Reputation Gap' o 'Divergencia Semántica y Conductual' mediante el cruce bitemporal de dos capas de datos: por un lado, el registro de hechos auditables del corpus interno (P04: memorias CMF NCG 461, auditorías ISAE 3000 de cumplimiento laboral/ambiental, registros de lobby Ley 20.730 e inversiones en sostenibilidad); por otro lado, el encuadre (framing de Entman) y la polaridad perceptual capturada en medios, redes y asambleas de stakeholders (P03/P05). Una contradicción se evidencia cuando: 1) Existe una acusación pública generalizada de una conducta (e.g. 'empresa contaminante que destruye el río') pero los datos documentados demuestran cumplimiento estricto de parámetros de RCA auditados por la SMA (brecha por desinformación o falta de visibilidad); o 2) La empresa proyecta un discurso público de sostenibilidad y ética pero los expedientes regulatorios o judiciales registran sanciones condenatorias firmes (e.g. colusión acreditada por la FNE frente a declaraciones de probidad en el código de ética, configurando hipocresía corporativa o greenwashing).",
+  "findings": [
+    {
+      "claim_id": "P05-F02-C1",
+      "claim": "La discrepancia entre la percepción pública externa y la conducta fáctica documentada se mide cruzando registros periciales internos con los encuadres narrativos externos de las partes interesadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Internacional",
+        "actor": "Comité de Crisis y Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7.1: Motor de Detección de Brecha Reputacional (Reputation Gap Engine)",
+          "excerpt_short": "Calcula la divergencia semántica entre lo afirmado internamente por la empresa (P04) y los encuadres mediáticos / demandas ciudadanas externas (P03/P05).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "4a704f39-0f78-4e44-8b03-b9922d00ed6b",
+          "source_title": "Arthur W. Page Society: The Page Principles for Corporate Character & Trust",
+          "original_url": "https://page.org/who-we-are/page-principles/",
+          "locator": "Principio 2: Prove it with action",
+          "excerpt_short": "Public perception of an enterprise is determined 90 percent by what it does and 10 percent by what it says. Management must align corporate behavior with stated values.",
+          "source_date": "2023-01-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en los Page Principles y en la arquitectura del motor analítico de asuntos corporativos.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Informes auditados de sostenibilidad (P04)",
+      "Dictámenes y resoluciones de reguladores (SMA, CMF, FNE)",
+      "Menciones y encuadres en medios y redes (P03)"
+    ],
+    "actors": [
+      "Oficial de Cumplimiento",
+      "Director de Asuntos Corporativos",
+      "Auditor Externo"
+    ],
+    "steps": [
+      "Extracción de afirmaciones fácticas y métricas verificadas",
+      "Mapeo de acusaciones y sentimientos externos hacia la entidad",
+      "Comparación vectorial de consistencia semántica y detección de discrepancias"
+    ],
+    "states": [
+      "Audit_Facts_Loaded",
+      "External_Narratives_Parsed",
+      "Gap_Index_Computed"
+    ],
+    "outputs": [
+      "Reporte de Brecha de Conducta vs Percepción con alertas de riesgo reputacional"
+    ],
+    "exceptions": [
+      "Carencia de métricas auditadas que impide falsar acusaciones externas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REP_GAP",
+      "type": "modelo_analitico",
+      "name": "Reputation Gap Engine",
+      "aliases": [
+        "Motor de Brecha Reputacional"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REP_GAP",
+      "predicate": "compara_conducta_con",
+      "object_id": "ENT_IMAGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F02-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Tipología de brecha",
+      "Brecha por Desconocimiento": "La empresa cumple y posee conducta irreprochable, pero los públicos perciben negatividad por falta de relato transparente.",
+      "Brecha por Hipocresía (Greenwashing)": "La empresa publicita virtudes éticas/ambientales pero sus operaciones generan incumplimientos o sanciones materiales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Índice de Consistencia Conductual (CCI)",
+      "denominator": "Proporción de compromisos públicos respaldados por evidencias auditadas independientes.",
+      "formula": "Compromisos_Auditados / Total_Compromisos_Declarados"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Monitor de Brechas",
+      "implication": "BRIDGE debe alertar automáticamente cuando un tema crítico en medios o redes contradice un hecho esencial o informe de sostenibilidad depositado en la memoria corporativa.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

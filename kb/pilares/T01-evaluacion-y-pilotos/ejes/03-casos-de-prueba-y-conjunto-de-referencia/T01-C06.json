@@ -1,0 +1,139 @@
+{
+  "question_id": "T01-C06",
+  "pilar": "T01",
+  "eje": "Casos de prueba y conjunto de referencia",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre casos de prueba y conjunto de referencia, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica suficiente la robustez del Golden Benchmark de BRIDGE ante documentos corporativos históricos escaneados con bajo contraste, tablas complejas rotadas o marcas de agua invasivas: 1) Vacío Identificado: Los benchmarks ALCE (e1a0171b) y SABER (8663bbbe) fueron construidos sobre textos digitales nativos limpios (Wikipedia, ArXiv, QA), sin evaluar la degradación de la recuperación cuando el OCR introduce errores de caracteres en números de balance o firmas legales; 2) Fuente Fallida / Parcial: Ninguno de los 9 papers de ArXiv incluye corpus de documentos escaneados de la década de 1990 o 2000 típicos de expedientes mineros o sanitarios antiguos; y 3) Validación Mínima Necesaria: Construir un subconjunto de prueba de 50 documentos históricos escaneados reales y medir la caída en Citation Recall y Faithfulness bajo OCR estándar Tesseract vs Vision-LLM.",
+  "findings": [
+    {
+      "claim_id": "T01-C06-C1",
+      "claim": "Los benchmarks estándar de citación y fidelidad RAG asumen texto digitalizado perfecto, por lo que el desempeño de The Bridge Intelligence sobre corpus históricos corporativos con degradación física de OCR permanece como una hipótesis no demostrada en el corpus.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "The Bridge Intelligence QA"
+      },
+      "evidence": [
+        {
+          "source_id": "e1a0171b-34f0-48f2-b343-29f7ec88bd31",
+          "source_title": "Gao et al. (2023) — Enabling Language Models to Generate Text with Citations (ALCE Benchmark)",
+          "original_url": "https://arxiv.org/pdf/2305.14627.pdf",
+          "locator": "Section 2: Dataset Collection and Preprocessing",
+          "excerpt_short": "All candidate passages are sourced from clean digital text dumps without optical character recognition artifacts or document scanning degradations.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Limitación estructural intrínseca de los benchmarks académicos modernos.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus de 50 expedientes escaneados históricos (1995-2010)",
+      "Pipeline de ingestión multimodal de BRIDGE"
+    ],
+    "actors": [
+      "OCR & Document Processing Engineer",
+      "Auditor de QA"
+    ],
+    "steps": [
+      "Compilar muestra de 50 documentos escaneados con distintos niveles de degradación",
+      "Ejecutar ingesta y medir Character Error Rate (CER) y Word Error Rate (WER)",
+      "Evaluar Citation Precision y Recall de las respuestas generadas sobre ese corpus",
+      "Calibrar filtros de corrección ortográfica y heurísticas de reconstrucción de tablas"
+    ],
+    "states": [
+      "COMPILACION_MUESTRA_OCR",
+      "INGESTA_MULTIMODAL",
+      "CALCULO_DEGRADACION",
+      "REMEDIACION_PIPELINE"
+    ],
+    "outputs": [
+      "Reporte de Desempeño RAG sobre Documentos Escaneados"
+    ],
+    "exceptions": [
+      "Si el WER supera el 20%, el documento se clasifica como 'requiere_re-escaneo_o_transcripción_manual'"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CORPUS_OCR_HISTORICO",
+      "type": "documento",
+      "name": "Corpus de Prueba OCR Histórico",
+      "aliases": [
+        "Escaneos 1995-2010"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CORPUS_OCR_HISTORICO",
+      "predicate": "evalua_limite_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C06-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tolerancia de Citation Precision ante OCR degradado",
+      "denominator": "Casos con documentos escaneados",
+      "target": ">= 85%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "El módulo Saber debe incorporar modelos de visión multimodal para procesar directamente imágenes de expedientes antiguos sin depender de OCR plano.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Desempeño de precisión y citación de BRIDGE sobre expedientes corporativos históricos escaneados con bajo contraste",
+      "minimum_validation": "Testset de 50 casos sobre expedientes reales con medición de WER y caída de Citation Recall",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "T01-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "question_id": "P09-C14",
+  "pilar": "P09",
+  "eje": "Herramientas existentes",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué sigue sin prueba sobre herramientas existentes, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Brecha sin Prueba: El corpus no documenta el Costo Total de Propiedad (TCO) real a 3 y 5 años de implementar soluciones SRM propietarias extranjeras (como Boréalis o Consultation Manager) en medianas empresas mineras chilenas, existiendo incertidumbre sobre los costos ocultos asociados a licencias por usuario, horas de consultoría de configuración y cobros por gigabyte de almacenamiento documental. Fuentes Fallidas: La referencia de PRSA sobre relaciones con medios (`cf913fd3`) resultó ser una guía genérica de relaciones públicas sin análisis de software, siendo reemplazada por Prowly (`73c2f92c`) y Guideflow (`4d89f574`). Validación Mínima Requerida: Construir un modelo financiero comparativo de TCO cotizando formalmente tres alternativas para un despliegue de 30 usuarios y 5 faenas en Chile: 1) Licencia SaaS de Boréalis SRM; 2) Licencia de Tractivity; y 3) Despliegue modular nativo de la suite BRIDGE sobre infraestructura corporativa del cliente.",
+  "findings": [
+    {
+      "claim_id": "P09-C14-C1",
+      "claim": "El TCO a 3-5 años de las plataformas SRM extranjeras en empresas chilenas carece de desglose cuantitativo en el corpus; PRSA fue sustituida por Prowly y Guideflow; se requiere modelo de simulación financiera de TCO.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "contrast_srm_tools_gaps",
+      "evidence": [
+        {
+          "source_title": "P09_PENDING_SOURCES_RESOLUTION",
+          "source_id": "dcb397bc-d659-44fc-af6b-e394801f12a9",
+          "locator": "Sección 'Sustitución de PRSA por Prowly y Guideflow'",
+          "retrieved_at": null,
+          "excerpt_short": "El artículo doctrinario de PRSA se reemplazó por las evaluaciones de Prowly y Guideflow, que aportan especificaciones técnicas de software PR CRM y costos de gestión de prensa.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_GAPS_AND_VALIDATION",
+          "source_id": "33944e01-6a0f-46f1-bfa3-19224f1c8d72",
+          "locator": "Sección 'Gaps en Costo Total de Propiedad de Software SRM'",
+          "retrieved_at": null,
+          "excerpt_short": "Incertidumbre: No existe comparación financiera del TCO de soluciones SRM extranjeras en Chile, incluyendo costos de adaptación a la regulación local.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación transparente de la brecha financiera y de costos operacionales.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.92,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cotizaciones oficiales de proveedores",
+      "Parámetros de despliegue corporativo",
+      "Hojas de cálculo de costos"
+    ],
+    "actors": [
+      "Gerente de Finanzas",
+      "Lead Architect BRIDGE",
+      "Jefe de Compras TI"
+    ],
+    "steps": [
+      "Recopilación de pliegos de precios SaaS y setup",
+      "Modelación de costos a 36 y 60 meses",
+      "Cálculo del VAN y TIR comparativo",
+      "Generación de recomendación de inversión"
+    ],
+    "states": [
+      "Cotizaciones Recibidas",
+      "Modelo Financiero Construido",
+      "Recomendación Emitida"
+    ],
+    "outputs": [
+      "Simulador financiero de TCO para plataformas SRM"
+    ],
+    "exceptions": [
+      "Cobros extras por almacenamiento de video de asambleas se modelan como variable de sensibilidad"
+    ]
+  },
+  "entities": [
+    "TCO Financiero",
+    "Boréalis SRM",
+    "Tractivity",
+    "Prowly",
+    "Guideflow",
+    "P09_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Plataforma SRM",
+      "to": "TCO Financiero",
+      "type": "EVALUATED_BY_METRIC"
+    },
+    {
+      "from": "PRSA",
+      "to": "Prowly / Guideflow",
+      "type": "SUPERSEDED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Costo de licencia inicial vs Costo Total de Propiedad (TCO)",
+      "diferencia": "La licencia inicial oculta los costos de consultoría de adaptación local; el TCO revela el costo integral del ciclo de vida del software."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "evaluation_timeframe_years": "3 a 5 años",
+    "user_base_benchmark": "30 usuarios corporativos concurrentes"
+  },
+  "bridge_implications": "Desarrollar una propuesta de valor de BRIDGE que demuestre una reducción sustantiva del TCO frente a competidores extranjeros.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C15",
+    "P09-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

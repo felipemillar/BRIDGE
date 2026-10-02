@@ -1,0 +1,169 @@
+{
+  "question_id": "P07-F22",
+  "pilar": "P07",
+  "eje": "Simulación y práctica de vocería",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar simulación y práctica de vocería de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un schema de simulación interactiva (Simulation_Session_Schema) compuesto por: 1) Metadatos de sesión (Session_Id, Spokesperson_Id, Role, Topic, Timestamp); 2) Configuración de la contraparte sintética (Interviewer_Archetype, Aggressiveness_Level [1-5], Interrupt_Frequency); 3) Secuencia temporal de inyectores (Inject_List: Time_Offset, Event_Text, External_Signal_Ref); 4) Turnos de diálogo interactivo (Turn_Number, Speaker, Text, Timestamp, Extracted_Proof_Points, Detected_Discursive_Faults); 5) Registro analítico de métricas (Evidence_Score, Clarity_Score, Prudence_Score, Readiness_Total); 6) Reporte de retroalimentación estructurado (Key_Strengths, Critical_Mistakes, Recommendations); y 7) Condiciones de certificación (Certificado_Emision_Valido = TRUE sólo si Readiness_Total >= 85 y Critical_Mistakes == 0).",
+  "findings": [
+    {
+      "claim_id": "P07-F22-C1",
+      "claim": "El modelado de simulaciones de vocería requiere un esquema relacional estructurado que capture desde la configuración del arquetipo adversarial hasta la telemetría de cada turno discursivo y la puntuación de salida.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "simulation_schema",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 6 (Plantilla 4: Matriz de Evaluación de Escenarios) y Sección 7",
+          "excerpt_short": "Variables del schema de simulación: Session_ID, Target_Spokesperson, Interviewer_Persona, Injects_Queue[], Dialog_Turns[], Telemetry_Data (response_delay, soundbite_length), Scoring_Matrix (evidence_adherence, bridging_quality, legal_safety_flag), Final_Debrief_Summary.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "BCMMetrics: Tabletop Exercise Objectives, Injects, and Follow-Through",
+          "source_id": "fa16bdf5-8225-48c3-bf3c-e894b1289bfc",
+          "locator": "Capítulo 'Structuring Tabletop Data Models', p. 14-19",
+          "excerpt_short": "Tabletop simulation logs must preserve temporal fidelity: each inject timestamp, participant intervention, and deviation from the crisis response plan must be recorded in structured fields to enable rigorous post-exercise evaluation.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los modelos de datos de ejercicios de simulación de crisis y la arquitectura de P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "schema_simulacion_voceria": {
+      "session_id": "SIM-2026-10-01-004",
+      "vocero": {
+        "id": "USR-CEO-01",
+        "nombre": "Gerente General",
+        "experiencia": "Senior"
+      },
+      "entrevistador_sintetico": {
+        "arquetipo": "Periodista Televisión Inquisitivo",
+        "agresividad": 4
+      },
+      "inyectores_crisis": [
+        {
+          "tiempo": "T+0",
+          "evento": "Publicación viral en X de video de turbiedad"
+        },
+        {
+          "tiempo": "T+30m",
+          "evento": "Llamada de periodista exigiendo confirmación de paralización"
+        },
+        {
+          "tiempo": "T+1h",
+          "evento": "Anuncio de fiscalización SMA de oficio"
+        }
+      ],
+      "telemetria_turnos": [
+        {
+          "turno": 1,
+          "tipo": "pregunta_hostil",
+          "texto": "¿Por qué secan la cuenca?"
+        },
+        {
+          "turno": 2,
+          "tipo": "respuesta_vocero",
+          "soundbite_segundos": 22,
+          "tecnica_detectada": "Bridging",
+          "proof_point_usado": "DOC-DESAL-84%"
+        }
+      ],
+      "puntuacion_final": {
+        "evidencia": 95,
+        "claridad": 90,
+        "prudencia": 92,
+        "total": 92.3
+      },
+      "certificacion": {
+        "aprobado": true,
+        "vigencia_dias": 90
+      }
+    }
+  },
+  "entities": [
+    "SimulationSessionSchema",
+    "BCMMetrics",
+    "InjectsQueue",
+    "TelemetryTurns"
+  ],
+  "relations": [
+    {
+      "from": "SimulationSessionSchema",
+      "to": "InjectsQueue",
+      "type": "sequences"
+    },
+    {
+      "from": "SimulationSessionSchema",
+      "to": "TelemetryTurns",
+      "type": "records"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Grabación de Audio Tradicional vs Registro Estructurado de Simulación",
+      "diferencia": "La grabación requiere revisión manual extenuante; el registro estructurado permite computar automáticamente métricas de adherencia y reportes de debrief en segundos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "telemetry_capture_resolution": "Por turno de conversación",
+    "schema_attributes_count": "15 campos relacionales"
+  },
+  "bridge_implications": "Implementar este schema de base de datos para persistir el historial de entrenamientos y simulaciones de vocería en BRIDGE.",
+  "open_gaps": [
+    "Integración de transcripción automática de audio (STT) en tiempo real con latencia menor a 500 ms."
+  ],
+  "next_question_ids": [
+    "P07-F23",
+    "P07-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

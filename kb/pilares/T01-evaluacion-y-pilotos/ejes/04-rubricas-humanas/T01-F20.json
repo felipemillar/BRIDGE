@@ -1,0 +1,144 @@
+{
+  "question_id": "T01-F20",
+  "pilar": "T01",
+  "eje": "Rúbricas humanas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Cómo se mide acuerdo entre evaluadores y se resuelven desacuerdos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El acuerdo inter-juez en la evaluación cualitativa de The Bridge Intelligence se mide mediante coeficientes estadísticos robustos que corrigen por azar: 1) Coeficiente Alfa de Krippendorff y Kappa de Fleiss (SummEval / Fabbri et al. 2021): Se exige un Alpha/Kappa >= 0.70 en dimensiones objetivas (consistencia fáctica y detección de alucinaciones) y >= 0.60 en dimensiones estilísticas (adecuación de tono); y 2) Protocolo Formal de Resolución de Desacuerdos: Cuando dos evaluadores difieren por más de 1 punto en la escala Likert (ej. 2 vs 4), se activa un tercer juez de rango senior (Master Coder / Director Legal) para adjudicación ciega; si la discrepancia obedece a ambigüedad en la fuente original, se clasifica como 'incertidumbre documental' y no como fallo del modelo.",
+  "findings": [
+    {
+      "claim_id": "T01-F20-C1",
+      "claim": "SummEval (Fabbri et al. 2021) demuestra que la concordancia humana en evaluación de textos varía drásticamente según la dimensión, siendo la consistencia factual la dimensión con mayor grado de reproducibilidad y correlación entre jueces cuando se proporcionan pautas y fragmentos fuente explícitos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021",
+        "region": "Global",
+        "actor": "Fabbri et al. / SummEval Benchmark"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 4: Inter-Annotator Agreement, p. 4-6",
+          "excerpt_short": "We report Krippendorff's alpha and Fleiss' kappa across all evaluation criteria, finding that consistency exhibits high annotator agreement when grounded against source context.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Datos empíricos rigurosos de SummEval PDF.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Planillas de evaluación de 3 anotadores independientes",
+      "Matriz de discrepancias"
+    ],
+    "actors": [
+      "Anotador A",
+      "Anotador B",
+      "Juez Senior de Adjudicación (Master Coder)"
+    ],
+    "steps": [
+      "Calcular Krippendorff's Alpha global para cada dimensión evaluada",
+      "Filtrar casos con delta de puntaje > 1.0 entre jueces",
+      "Someter casos discrepantes a sesión de consenso o revisión ciega por el Master Coder",
+      "Registrar puntaje definitivo y causa raíz de la divergencia"
+    ],
+    "states": [
+      "CALCULO_ALPHA",
+      "FILTRADO_DISCREPANCIAS",
+      "ARBITRAJE_SENIOR",
+      "CONSENSO_FINALIZADO"
+    ],
+    "outputs": [
+      "Reporte de concordancia inter-evaluador (Alpha/Kappa)",
+      "Dataset consolidado con resolución de arbitraje"
+    ],
+    "exceptions": [
+      "Si Krippendorff's Alpha cae por debajo de 0.60 en consistencia fáctica, la pauta de evaluación debe redefinirse y reentrenar a los jueces"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "KRIPPENDORFF_ALPHA",
+      "type": "metrica",
+      "name": "Krippendorff's Alpha",
+      "aliases": [
+        "Coeficiente de acuerdo inter-juez"
+      ]
+    },
+    {
+      "entity_id": "FLEISS_KAPPA",
+      "type": "metrica",
+      "name": "Fleiss' Kappa",
+      "aliases": [
+        "Concordancia estadística multijuez"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "KRIPPENDORFF_ALPHA",
+      "predicate": "mide_validez_de",
+      "object_id": "SUMMEVAL_DIMENSIONS",
+      "valid_from": "2021",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F20-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Krippendorff's Alpha en consistencia factual",
+      "denominator": "Muestras evaluadas por panel",
+      "target": ">= 0.75"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Asegura a los clientes corporativos que los resultados del piloto no son fruto de la subjetividad de un único evaluador.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F21",
+    "T01-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

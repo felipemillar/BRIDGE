@@ -1,0 +1,163 @@
+{
+  "question_id": "P11-F20",
+  "pilar": "P11",
+  "eje": "Ciclo de vida y retención",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué períodos de retención son políticas propuestas y cuáles obligaciones verificadas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La gobernanza de retención deslinda con rigor las obligaciones legales verificadas de las políticas propuestas de diseño operativo: 1) Obligaciones Legales Verificadas en Chile: A) Ley N° 20.730 de Lobby: Conservación pública permanente de los registros de audiencias, viajes y donativos de sujetos pasivos (obligación de publicidad histórica indefinida); B) Código de Comercio (Art. 44) y Código Tributario (Art. 17): Conservación de correspondencia mercantil y registros contables por un mínimo de 4 años (general) y 6 años (prescripción tributaria extraordinaria); C) Ley N° 21.663 de Ciberseguridad (Art. 9): Obligación de conservar logs de eventos e incidentes cibernéticos por el plazo mínimo que fije la Agencia Nacional de Ciberseguridad (ANCI); y D) Ley N° 21.719 / Ley N° 19.628: Principio de limitación del plazo de conservación de datos personales, exigiendo supresión inmediata una vez extinguida la finalidad contractual o legal; 2) Políticas Propuestas de Diseño Operativo (Best Practices de BRIDGE): Conservación de borradores intermedios descartados por 12 meses; retención de sesiones de chat y prompts de usuarios por 24 meses para analítica interna; retención de caché de embeddings por 90 días; y retención de metadatos de tickets en estado TOMBSTONE por 5 años.",
+  "findings": [
+    {
+      "claim_id": "P11-F20-C1",
+      "claim": "El marco de retención deslinda obligaciones legales verificadas en Chile (Lobby indefinido, Código Tributario 4-6 años, Ley 21.663 ciberseguridad, Ley 21.719/19.628 datos personales) frente a políticas operativas internas propuestas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "retention_obligations_vs_proposed_policies",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 4.1 'Tabla Comparativa de Retención: Ley vs Política Interna'",
+          "retrieved_at": null,
+          "excerpt_short": "Obligaciones verificadas: Ley 20.730 indefinida; Cód. Comercio 4-6 años; Ley 21.663 plazo ANCI; Ley 21.719 supresión post-finalidad. Políticas propuestas: Borradores 12 meses, prompts de chat 24 meses.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 20.730 Regula el Lobby y las Gestiones de Intereses Particulares",
+          "source_id": "5edd4c95-22cb-4245-944b-36db4715258a",
+          "locator": "Artículos 5 a 10",
+          "retrieved_at": null,
+          "excerpt_short": "Los registros de audiencias, viajes y donativos que mantengan los sujetos pasivos son públicos y deben mantenerse accesibles para la ciudadanía a través de los portales de transparencia activa.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Artículo 4 'Principio de Limitación del Plazo de Conservación'",
+          "retrieved_at": null,
+          "excerpt_short": "Los datos personales deben ser conservados solo durante el tiempo necesario para el cumplimiento de los fines que justificaron su tratamiento, debiendo ser eliminados o anonimizados una vez cumplidos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual directa de la legislación chilena aplicable y deslinde explícito en el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de tipos de datos",
+      "Cronómetro de retención (TTL)",
+      "Tabla de obligaciones legales"
+    ],
+    "actors": [
+      "Motor de Retención BRIDGE",
+      "Oficial de Cumplimiento",
+      "Data Custodian"
+    ],
+    "steps": [
+      "Asociación del período de retención legal o propuesto al crear el activo",
+      "Cálculo de la fecha fatal de purga (`purge_due_date = created_at + retention_interval`)",
+      "Evaluación periódica mediante worker diario en background",
+      "Si la fecha fatal se alcanza y no hay Legal Hold: Disparo del flujo de purga segura",
+      "Si se trata de registros de Lobby o tributarios obligatorios: Bloqueo de purga prematura"
+    ],
+    "states": [
+      "RETENTION_POLICY_TIED",
+      "ACTIVE_LIFETIME",
+      "PURGE_PENDING",
+      "PURGED_OR_RETAINED_LEGALLY"
+    ],
+    "outputs": [
+      "Activos gestionados conforme a su calendario legal estricto"
+    ],
+    "exceptions": [
+      "Requerimiento de auditoría judicial suspende la purga de cualquier activo mediante congelamiento preventivo"
+    ]
+  },
+  "entities": [
+    "Ley 20.730",
+    "Ley 21.719",
+    "Código Tributario Art. 17",
+    "Políticas Propuestas",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Ley 20.730",
+      "to": "Registros de Lobby",
+      "type": "MANDATES_PERMANENT_RETENTION"
+    },
+    {
+      "from": "Ley 21.719",
+      "to": "Datos Personales",
+      "type": "MANDATES_TIMELY_ERASURE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Conservación indefinida de todo vs Calendario estructurado de retención",
+      "diferencia": "La conservación indefinida aumenta exponencialmente la exposición legal ante demandas y filtraciones; el calendario estructurado elimina datos innecesarios reduciendo el perímetro de riesgo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "expired_data_retention_latency_days": "Tiempo promedio en días para purgar datos tras vencer su plazo de retención (Target < 7 días)",
+    "statutory_retention_compliance_score": "100% de registros contables y de lobby retenidos durante el plazo de ley"
+  },
+  "bridge_implications": "Permite configurar temporizadores automáticos de expiración en base de datos para garantizar que BRIDGE no retenga ilegalmente datos personales obsoletos.",
+  "open_gaps": [
+    "Publicación de los reglamentos complementarios de la Ley 21.663 respecto a plazos específicos de retención de telemetría de ciberseguridad."
+  ],
+  "next_question_ids": [
+    "P11-F21",
+    "P11-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

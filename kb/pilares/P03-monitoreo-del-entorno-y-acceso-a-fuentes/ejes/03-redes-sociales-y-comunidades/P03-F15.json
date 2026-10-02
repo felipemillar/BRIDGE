@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-F15",
+  "pilar": "P03",
+  "eje": "Redes sociales y comunidades",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Cómo verificar conversaciones relevantes sin atribuir representatividad a una muestra incompleta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La verificación rigurosa de conversaciones relevantes sin cometer la falacia de representatividad exige aplicar una metodología de 'Triangulación Cualitativa y Auditoría de Actores': 1) Monitoreo de 'Actores Clave' (Stakeholder-Centric Tracking): rastrear handles verificados de líderes comunitarios, autoridades locales, parlamentarios y periodistas especializados, ponderando la conversación por el rol institucional del emisor en lugar del volumen masivo de menciones; 2) Detección de patrones topológicos de coordinación (Pacheco et al. 2020): analizar si las tendencias emergentes provienen de sincronización artificial (co-acción rápida) o de difusión orgánica descentralizada; 3) Deslinde de veracidad (DISARM Framework): separar el patrón de propagación de la verdad fáctica del contenido, tratando la señal como indicador de 'tensión dialógica' y no como consenso social; y 4) Validación cruzada multicanal: contrastar si la conversación digital tiene correlato en la prensa local, actas municipales o presentaciones ante organismos regulatorios.",
+  "findings": [
+    {
+      "claim_id": "P03-F15-C1",
+      "claim": "La relevancia de una conversación digital no se mide por volumen de menciones sino por la autoridad de los actores involucrados, la ausencia de coordinación artificial y su correlato con hechos del mundo real.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Metodología P03 / DISARM"
+      },
+      "evidence": [
+        {
+          "source_id": "7c28f705-c639-4b70-80d3-18f6f9e9c362",
+          "source_title": "Uncovering Coordinated Networks on Social Media (Pacheco et al. 2020)",
+          "original_url": "https://arxiv.org/html/2001.05658v1",
+          "locator": "Coordinated Inauthentic Behavior Framework",
+          "excerpt_short": "Network analysis identifies accounts that perform synchronized actions within narrow time windows, revealing coordinated influence separate from organic grassroots discussion.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        },
+        {
+          "source_id": "e4c4d2d3-d141-4304-b2d4-00b9b7d3cee0",
+          "source_title": "DISARM Foundation: Disinformation Tactics, Techniques & Procedures Framework",
+          "original_url": "https://github.com/DISARMFoundation/DISARMframeworks/",
+          "locator": "TTP Matrix - Narrative Amplification and Stakeholder Targeting",
+          "excerpt_short": "DISARM provides a structured framework to map influence operations, distinguishing between organic engagement and tactical disinformation maneuvers targeting corporate assets.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificado contra la literatura fundacional de redes coordinadas y el framework DISARM.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Volumen de publicaciones sociales",
+      "Lista de actores clave corporativos",
+      "Grafos de co-acción"
+    ],
+    "actors": [
+      "Stakeholder Graph Resolver",
+      "Network Coordinator Detector"
+    ],
+    "steps": [
+      "Filtrado por emisores clave",
+      "Cálculo de sincronía temporal",
+      "Triangulación con fuentes institucionales"
+    ],
+    "states": [
+      "Raw_Buzz",
+      "Key_Actors_Isolated",
+      "Triangulation_Confirmed"
+    ],
+    "outputs": [
+      "Informe de relevancia validada libre de falacia de representatividad"
+    ],
+    "exceptions": [
+      "Campañas legítimas de base ciudadana que coordinan horarios de difusión"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ACTOR_CENTRIC_TRACKING",
+      "type": "metodologia",
+      "name": "Monitoreo Centrado en Actores Clave",
+      "aliases": [
+        "Stakeholder-Centric Tracking"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ACTOR_CENTRIC_TRACKING",
+      "predicate": "filtra_relevancia_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F15-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Priorizar el análisis de grafos de influencia de actores específicos sobre dashboards cuantitativos de volumen agregado.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

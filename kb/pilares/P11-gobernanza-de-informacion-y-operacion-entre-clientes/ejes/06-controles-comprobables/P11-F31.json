@@ -1,0 +1,171 @@
+{
+  "question_id": "P11-F31",
+  "pilar": "P11",
+  "eje": "Controles comprobables",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué pruebas muestran cifrado, segregación, registro, control de acceso y respuesta a incidentes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La arquitectura técnica de BRIDGE proporciona evidencias empíricas y verificables en los cinco dominios críticos de seguridad: 1) Cifrado: Envelope encryption demostrado mediante uso de Customer Managed Keys (CMK) independientes por tenant en AWS KMS / Cloud KMS (AES-256-GCM), cifrado en tránsito validado con forzado de TLS 1.3 y suites seguras con Perfect Forward Secrecy; 2) Segregación: Aislamiento comprobado en cuatro planos técnicos independientes: base relacional mediante PostgreSQL 18 Row Level Security (RLS) con 'FORCE ROW LEVEL SECURITY' y aserciones automatizadas de '0 rows' en cross-tenant queries; base vectorial mediante Qdrant payload filters de 'tenant_id' en toda búsqueda ANN; capa de caché con prefijado de namespaces 'tenant:{id}:' en Redis; y almacenamiento de objetos segregado por prefijo de bucket y clave CMK única; 3) Registro: Conforme a NIST SP 800-92, emisión de logs estructurados firmados criptográficamente (SHA-256 hash chaining) y despachados en tiempo real a almacenamiento WORM inmutable (S3 Object Lock / GCS Bucket Lock) con retención legal bloqueada; 4) Control de acceso: Evaluación estricta de políticas ABAC (NIST SP 800-162) mediante PDP/PEP desacoplado que evalúa atributos de sujeto, recurso, acción y contexto ambiental en cada invocación de API o tool de agente; y 5) Respuesta a incidentes: Procedimientos de contención inmediata automatizada (aislamiento de tenant en milisegundos mediante revocación de DEK en KMS y desalojo de tokens) y trazabilidad forense según NIST SP 800-61 Rev. 3, alineados con los plazos de notificación de 3 horas ante el CSIRT Nacional (Ley 21.663) y 72 horas ante la Agencia de Protección de Datos (Ley 21.719 en vacatio legis).",
+  "findings": [
+    {
+      "claim_id": "P11-F31-C1",
+      "claim": "Las pruebas de seguridad de BRIDGE son verificables mediante suites automatizadas de CI/CD que testean RLS en PostgreSQL 18, particionamiento en Qdrant, cifrado envelope con KMS CMK, logs WORM según NIST SP 800-92 y playbooks de contención NIST SP 800-61 Rev. 3.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "technical_security_controls",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 4 'Aislamiento Multi-Tenant y Seguridad Criptográfica'",
+          "retrieved_at": null,
+          "excerpt_short": "Pruebas comprobables de seguridad: Envelope encryption con CMK por cliente; RLS mandatorio en PostgreSQL 18 con test de penetración automatizado; aislamiento en Qdrant con filtro de tenant_id en payload; bitácora WORM inmutable según NIST SP 800-92; protocolo de contención NIST SP 800-61 r3.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations",
+          "source_id": "24c7952c-3d6a-417c-8e7d-746065c9ca20",
+          "locator": "Familias AC (Access Control), SC (System and Comms Protection), AU (Audit and Accountability), IR (Incident Response)",
+          "retrieved_at": null,
+          "excerpt_short": "Organizations must implement verifiable technical controls including AC-3 Access Enforcement, SC-8 Transmission Confidentiality, SC-28 Protection at Rest, AU-2 Event Logging, AU-9 Protection of Audit Information, and IR-4 Incident Handling.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AICPA: System and Organization Controls (SOC 2) Trust Services Criteria",
+          "source_id": "11c7c827-b3a4-4207-925a-f5bac2493a7b",
+          "locator": "Criteria CC6.1, CC6.3, CC6.6, CC7.2, CC7.3",
+          "retrieved_at": null,
+          "excerpt_short": "The entity implements logical access security software, infrastructure, and architectures over protected information assets to protect them from security events and unauthorized access across multiple tenant environments.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los requerimientos de auditoría SOC 2, los controles NIST SP 800-53 Rev. 5 y el diseño de arquitectura técnica de BRIDGE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Suite de pruebas automatizadas CI/CD",
+      "Test de penetración semestral",
+      "Telemetría de acceso continuo"
+    ],
+    "actors": [
+      "CI/CD Pipeline",
+      "Auditor Independiente SOC 2",
+      "PDP/PEP de Seguridad",
+      "Módulo WORM Logger"
+    ],
+    "steps": [
+      "Ejecución de tests adversariales cruzados: un actor autenticado en Tenant A intenta consultar tablas y vectores de Tenant B",
+      "Verificación de aserción criptográfica: cada registro devuelto por PostgreSQL 18 y Qdrant debe corresponder estrictamente al 'app.current_tenant_id' inyectado",
+      "Validación de cifrado en reposo: inspección directa del almacenamiento binario demostrando que los bloques de datos son ilegibles sin la DEK derivada del CMK",
+      "Comprobación de inmutabilidad de logs: prueba de borrado/modificación de registros de auditoría en el bucket WORM con aserción obligatoria de denegación '403 Access Denied' por política Object Lock",
+      "Simulación de incidente de brecha: disparo del playbook de aislamiento que revoca la clave DEK en menos de 500 ms y genera alerta automática al equipo de seguridad"
+    ],
+    "states": [
+      "PRE_AUDIT_VERIFIED",
+      "CONTINUOUS_CONTROLS_ACTIVE",
+      "WORM_INTEGRITY_SEALED",
+      "CONTAINMENT_READY"
+    ],
+    "outputs": [
+      "Evidencia estructurada reproducible lista para revisión de debida diligencia de clientes enterprise"
+    ],
+    "exceptions": [
+      "Si un test de fuga cruzada no falla con denegación explícita, la compilación de CI/CD se detiene de forma bloqueante"
+    ]
+  },
+  "entities": [
+    "PostgreSQL 18 RLS",
+    "Qdrant Vector DB",
+    "NIST SP 800-92",
+    "NIST SP 800-61 Rev. 3",
+    "AICPA SOC 2",
+    "KMS CMK"
+  ],
+  "relations": [
+    {
+      "from": "PostgreSQL 18 RLS",
+      "to": "Segregación Multi-Tenant",
+      "type": "ENFORCES"
+    },
+    {
+      "from": "Logs de Auditoría",
+      "to": "Almacenamiento WORM",
+      "type": "COMMITTED_IMMUTABLY_TO"
+    },
+    {
+      "from": "KMS CMK",
+      "to": "Envelope Encryption",
+      "type": "PROVIDES_ROOT_OF_TRUST"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Pruebas declarativas en documentación vs Suites de pruebas técnicas ejecutables en CI/CD",
+      "diferencia": "La documentación declarativa describe intenciones teóricas; las suites técnicas de CI/CD demuestran matemáticamente la denegación de acceso ante inyecciones de cross-tenant ID."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cross_tenant_leak_test_pass_rate": "100% de tests de aislamiento superados en cada build de CI/CD",
+    "worm_log_write_verification_latency": "< 1.5 segundos por bloque de auditoría inmutable",
+    "incident_containment_response_time": "< 500 ms para revocación criptográfica de sesión y tenant"
+  },
+  "bridge_implications": "Permite entregar al equipo de CISO y Auditoría Interna del cliente un dossier de auditoría técnica con pruebas reproducibles que allanan la aprobación de despliegues en producción.",
+  "open_gaps": [
+    "Monitoreo continuo de side-channels basados en tiempos de respuesta de inferencia en GPUs compartidas de proveedores cloud."
+  ],
+  "next_question_ids": [
+    "P11-F32",
+    "P11-F33"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

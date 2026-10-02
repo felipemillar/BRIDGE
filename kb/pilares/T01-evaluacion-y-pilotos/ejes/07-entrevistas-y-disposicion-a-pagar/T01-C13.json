@@ -1,0 +1,140 @@
+{
+  "question_id": "T01-C13",
+  "pilar": "T01",
+  "eje": "Entrevistas y disposición a pagar",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre entrevistas y disposición a pagar, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en entrevistas y disposición a pagar: 1) Discrepancia: Las notas iniciales sugerían recabar la disposición a pagar mediante preguntas directas de intención ('¿Cuánto pagaría usted por este software?') al final del piloto, sin protocolo econométrico; 2) Versión que Prevalece: Según SurveyMonkey (b62914e1) y Cooper Stage-Gate (773f1a85), prevalece la metodología canónica Van Westendorp Price Sensitivity Meter (PSM) de cuatro preguntas cruzadas con regla estricta de monotonicidad. Asimismo, prevalece la compuerta Gate 3 que exige compromiso presupuestario formal (Letter of Intent o creación de número de proveedor en SAP) para declarar superada la fase de piloto, descartando la complacencia verbal como indicador de éxito comercial.",
+  "findings": [
+    {
+      "claim_id": "T01-C13-C1",
+      "claim": "La metodología Van Westendorp PSM y los protocolos de Stage-Gate prevalecen sobre encuestas informales de precio, impidiendo que el equipo fundador de BRIDGE fije tarifas en base a sesgos de complacencia o respuestas no vinculantes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "SurveyMonkey & Cooper Stage-Gate"
+      },
+      "evidence": [
+        {
+          "source_id": "b62914e1-de40-490c-ae09-d229aaf7f384",
+          "source_title": "SurveyMonkey - How To Use The Van Westendorp Price Sensitivity Meter",
+          "original_url": null,
+          "locator": "Methodological Superiority over Direct Questioning",
+          "excerpt_short": "Direct 'what would you pay' questions trigger severe anchoring and negotiation biases. Van Westendorp's 4-tier model reveals true psychological pricing thresholds.",
+          "source_date": "2024",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar econométrico verificado en el corpus de T01.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Formularios informales obsoletos de precio",
+      "Cuestionario estandarizado Van Westendorp PSM"
+    ],
+    "actors": [
+      "Director Comercial",
+      "Auditor de FinOps"
+    ],
+    "steps": [
+      "Sustituir preguntas abiertas por el protocolo de 4 preguntas PSM",
+      "Auditar la monotonicidad de las respuestas obtenidas",
+      "Trazar curvas acumuladas para identificar OPP e IPP",
+      "Exigir el hito de orden de compra formal para validar la compuerta G3"
+    ],
+    "states": [
+      "SUSTITUCION_CUESTIONARIO",
+      "CAPTURA_VAN_WESTENDORP",
+      "TRAZADO_CURVAS",
+      "VALIDACION_G3"
+    ],
+    "outputs": [
+      "Análisis de Sensibilidad de Precios Validado"
+    ],
+    "exceptions": [
+      "Si un cliente se niega a responder las 4 preguntas de precio, se programa entrevista ejecutiva con el CFO"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "PSM_CANONICO",
+      "type": "metrica",
+      "name": "Protocolo Van Westendorp Canónico",
+      "aliases": [
+        "4-Question Pricing Meter"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "PSM_CANONICO",
+      "predicate": "reemplaza_a",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Pregunta Directa Informal",
+      "item_b": "Protocolo Van Westendorp PSM",
+      "dimension": "Validez predictiva",
+      "conclusion": "La pregunta directa induce a subestimar el precio para regatear; Van Westendorp revela la verdadera banda presupuestaria psicológica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de aplicación de Van Westendorp en pilotos",
+      "denominator": "Total pilotos conducidos",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite negociar contratos enterprise de $50.000 a $100.000 USD anuales con respaldo analítico irrebatible.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-C14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

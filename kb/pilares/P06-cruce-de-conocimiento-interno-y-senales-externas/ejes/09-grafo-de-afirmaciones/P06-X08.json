@@ -1,0 +1,148 @@
+{
+  "question_id": "P06-X08",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Grafo de afirmaciones",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué sigue sin prueba sobre grafo de afirmaciones, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal la escalabilidad y latencia en tiempo real de consultas GraphRAG multi-salto sobre grafos con más de 1.000.000 de afirmaciones corporativas heterogéneas (P06_GAPS_AND_VALIDATION, Sección 3.1). Las fuentes del corpus (T-GRAG y GraphRAG) presentan pruebas experimentales sobre benchmarks académicos cerrados (MultiHop, HotpotQA, conjuntos sintéticos de unos pocos miles de triples), pero no reportan métricas de rendimiento ni costos de inferencia bajo cargas concurrentes intensivas con miles de usuarios corporativos. La validación mínima necesaria consiste en diseñar un benchmark de estrés sobre un grafo representativo de 500.000 triples corporativos chilenos (memorias CMF, SNIFA, prensa Factiva), midiendo latencia p95 de consulta y costo en USD por ejecución de clustering comunitario.",
+  "findings": [
+    {
+      "claim_id": "P06-X08-C1",
+      "claim": "La escalabilidad computacional y los costos de T-GRAG en grafos de gran escala (>1M afirmaciones) permanecen como vacío empírico abierto en el corpus.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Ingeniería de Grafos a Escala"
+      },
+      "evidence": [
+        {
+          "source_id": "8801b08d-0b93-40cc-b2ed-ad1d3978cd68",
+          "source_title": "P06_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación Empírica (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 3.1: Rendimiento y Costo Computacional de GraphRAG a Gran Escala",
+          "excerpt_short": "Los costos de indexación comunitaria en GraphRAG son elevados y la literatura no provee benchmarks en entornos corporativos masivos (>100k documentos).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "4a4a5417-6cca-4af2-b946-893e515614c9",
+          "source_title": "Edge et al. (2024) - GraphRAG: Query-Focused Summarization",
+          "original_url": "https://arxiv.org/abs/2404.16130",
+          "locator": "Section 6: Limitations - Computational Overhead of Community Summarization",
+          "excerpt_short": "A key limitation of GraphRAG is the computational cost associated with hierarchical clustering and generating summaries across large-scale dynamic corpora.",
+          "source_date": "2024-04-24",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Limitación explícitamente reconocida por Edge et al. y confirmada en la síntesis de vacíos de P06.",
+      "epistemic_status_original": "vacio_empirico_documentado",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Benchmark sintético de 500k triples",
+      "Cargas de consulta concurrentes"
+    ],
+    "actors": [
+      "Equipo de Ingeniería de Rendimiento",
+      "Arquitecto Cloud"
+    ],
+    "steps": [
+      "Configuración de clúster de grafos",
+      "Lanzamiento de suite de estrés",
+      "Medición de latencia p95 y consumo de memoria",
+      "Cálculo de costo mensual"
+    ],
+    "states": [
+      "Test_Planned",
+      "Benchmark_Pending"
+    ],
+    "outputs": [
+      "Reporte de benchmarking de escalabilidad"
+    ],
+    "exceptions": [
+      "OOM en motor de grafos bajo consultas multi-hop profundas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "GAP_GRAPH_SCALE",
+      "type": "vacio_investigacion",
+      "name": "Escalabilidad de GraphRAG Masivo",
+      "aliases": [
+        "Large-Scale GraphRAG Latency"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "GAP_GRAPH_SCALE",
+      "predicate": "limita_adopcion_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X08-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Obliga a implementar arquitecturas híbridas (grafo para relaciones críticas + RAG vectorial simple para texto general) para no disparar costos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Ausencia de benchmarking empírico de latencia y costo de T-GRAG en grafos corporativos de más de un millón de triples.",
+      "minimum_validation": "Prueba de carga con 500k triples corporativos midiendo latencia p95 < 2.0s y costo mensual por tenant.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "P06-X09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

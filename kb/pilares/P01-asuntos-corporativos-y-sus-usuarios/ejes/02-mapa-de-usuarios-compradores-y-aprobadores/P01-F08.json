@@ -1,0 +1,248 @@
+{
+  "question_id": "P01-F08",
+  "pilar": "P01",
+  "eje": "Mapa de usuarios, compradores y aprobadores",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Quién compra, quién aprueba seguridad y presupuesto, y quién puede vetar la adopción?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El comprador es el CCO junto al CEO; el presupuesto lo aprueba el CFO (con el 83% de los departamentos manteniendo o subiendo presupuesto); la seguridad la aprueba el CISO y el Fiscal Legal; y el CISO junto al Fiscal Legal tienen poder de veto absoluto e inmediato ante riesgos de fuga de datos o alucinaciones.",
+  "findings": [
+    {
+      "claim_id": "P01-F08-C1",
+      "claim": "El proceso de adopción tecnológica B2B distingue tres figuras: el Usuario (CCO, Asuntos Públicos, Prensa), el Comprador (CCO/CEO, con 83% manteniendo o subiendo presupuestos) y el Aprobador (CISO, Fiscal Legal, CFO).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global/Chile",
+        "actor": "C-Suite B2B"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2: Mapa de Compradores, Aprobadores y Usuarios (B2B Personas)",
+          "excerpt_short": "Diferenciación de User Persona, Buyer Persona y Approver Persona en compras de tecnología corporativa.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        },
+        {
+          "source_id": "11566961-aace-42d0-bdcc-6b9171cecded",
+          "source_title": "Dircom - El Estado de la Comunicación en España (ECE 2025): Reporte al CEO y Comité Ejecutivo",
+          "original_url": "https://www.dircom.org/2025/09/25/mas-de-la-mitad-de-los-dircoms-reportan-al-ceo-y-uno-de-cada-tres-esta-en-el-comite-ejecutivo-segun-el-estado-de-la-comunicacion-en-espana-2025/",
+          "locator": "Presupuestos de comunicación 2025",
+          "excerpt_short": "El 83% de los departamentos de comunicación mantuvo o incrementó sus presupuestos en el último ciclo.",
+          "source_date": "2025-09-25",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de marco B2B enterprise y censo presupuestario de Dircom.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F08-C2",
+      "claim": "El CISO y el Fiscal Legal ejercen poder de veto absoluto e inmediato sobre cualquier herramienta si detectan riesgo de exposición de repositorios internos o reentrenamiento de modelos con datos de la empresa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global/Chile",
+        "actor": "CISO / Compliance"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Criterios de Veto de Approver Personas",
+          "excerpt_short": "El CISO y Fiscal Legal poseen capacidad de veto absoluto ante fugas de actas confidenciales o reentrenamiento de LLMs públicos.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Protocolo de gobernanza B2B corporativo.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F08-C3",
+      "claim": "Existe opacidad en estudios profesionales de comunicación respecto a los protocolos técnicos y de arquitectura de seguridad que exigen los CISOs para aprobar herramientas de IA en asuntos corporativos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Literatura profesional"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Vacío 3: Protocolos de aprobación de CISO y Legal",
+          "excerpt_short": "La literatura de comunicación omite los requisitos específicos de ciberseguridad y gobernanza que imponen los CISOs para habilitar software de IA.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío crítico registrado explícitamente en el corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Propuesta de software",
+      "Matriz de arquitectura y seguridad",
+      "Evaluación de costos SaaS"
+    ],
+    "actors": [
+      "CCO (Comprador/Sponsor)",
+      "CISO (Aprobador de seguridad)",
+      "Fiscal Legal (Aprobador de compliance)",
+      "CFO (Aprobador de presupuesto)"
+    ],
+    "steps": [
+      "Solicitud de adopción",
+      "Evaluación técnica y de seguridad por CISO",
+      "Revisión de cláusulas legales y de privacidad",
+      "Visto bueno del CFO y firma"
+    ],
+    "states": [
+      "Propuesta_Iniciada",
+      "En_Evaluacion_Seguridad",
+      "Aprobado_por_CISO",
+      "Contratado"
+    ],
+    "outputs": [
+      "Autorización de despliegue",
+      "Acuerdo de procesamiento de datos (DPA)",
+      "Contrato de servicio"
+    ],
+    "exceptions": [
+      "Veto del CISO por falta de VPC dedicada o riesgo de fuga de datos",
+      "Rechazo del Fiscal Legal por términos de servicio ambiguos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CISO",
+      "type": "persona_rol",
+      "name": "Chief Information Security Officer (CISO)"
+    },
+    {
+      "entity_id": "ENT_FISCAL_LEGAL",
+      "type": "persona_rol",
+      "name": "Fiscal Legal / Gerente de Compliance"
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CISO",
+      "predicate": "tiene_poder_de_veto_sobre",
+      "object_id": "Software_IA",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F08-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P01-F08-C1",
+        "P01-F08-C2"
+      ],
+      "difference": "El área de comunicación tiene la urgencia de adoptar IA para acelerar minutas, pero el CISO prioriza la seguridad y detiene la adopción si no hay aislamiento estricto de repositorios privados.",
+      "resolution": "abierta",
+      "reason": "Tensión clásica entre agilidad funcional y política corporativa de ciberseguridad."
+    }
+  ],
+  "metrics_and_denominators": [
+    {
+      "metric": "Porcentaje de empresas con presupuesto de comunicación estable o en alza",
+      "value": "83%",
+      "denominator": "Departamentos encuestados en ECE 2025"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Garantizar aislamiento total de datos por cliente (VPC dedicada, zero data retention) para superar el veto del CISO.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "sin_evidencia sobre protocolos técnicos estandarizados de homologación CISO en empresas latinoamericanas para software de IA en asuntos públicos.",
+      "minimum_validation": "Entrevistas estructuradas con 10 CISOs de empresas IPSA.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "P01-F09",
+    "P01-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:33:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

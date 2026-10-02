@@ -1,0 +1,150 @@
+{
+  "question_id": "P07-F16",
+  "pilar": "P07",
+  "eje": "Mensajes y líneas aprobadas",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar mensajes y líneas aprobadas de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un schema de gobernanza de mensajes (Approved_Message_Schema) con: 1) Metadatos identificatorios (Message_Id, Version, Theme_Category); 2) Nivel jerárquico dentro del Message House (Core_Umbrella, Strategic_Pillar, Supporting_Proof_Point); 3) Contenido textual exacto (Approved_Text, Short_Soundbite_Text); 4) Matriz de autorización (Authorized_Roles, Authorized_Channels, Restricted_Contexts); 5) Anclaje probatorio (Proof_Point_Ref con URI interno, fragmento exacto y hash criptográfico); 6) Registro de gobernanza (Approved_By_User, Legal_Visado_Status, Approved_Timestamp, Expiration_Timestamp); y 7) Condiciones lógicas (bloqueo automático si Expiration_Timestamp < NOW o si el documento probatorio fuente fue revocado).",
+  "findings": [
+    {
+      "claim_id": "P07-F16-C1",
+      "claim": "El modelado estructurado de mensajes aprobados requiere articular la arquitectura del Message House con metadatos de vigencia temporal, roles autorizados y enlaces criptográficos a la evidencia documental.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "message_schema_architecture",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 2.3 y Sección 4.1",
+          "excerpt_short": "El esquema estructurado del mensaje aprobado vincula: Message_ID, Architecture_Level (Umbrella, Pillar, Proof_Point), Soundbite, Authorized_Roles[], Permitted_Channels[], Proof_Point_Link (URI al reporte fuente), Legal_Approval_Flag, Expiration_Date. Si un proof point pierde vigencia (ej. se actualiza la memoria anual), todas las líneas que dependen de él quedan automáticamente en estado 'UNDER_REVIEW'.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Umbrex: The Message House Framework for Executive Messaging",
+          "source_id": "40c71d89-2265-4bc4-9437-f06891eff48a",
+          "locator": "Sección 'Architectural Hierarchy', p. 4-8",
+          "excerpt_short": "A robust messaging taxonomy requires deterministic dependencies: an umbrella message depends on its pillars, and pillars depend strictly on verifiable evidence. Breaking this chain produces unsubstantiated claims and strategic exposure.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Consistencia estructural entre el marco Umbrex Message House y el modelo de datos de gobernanza de P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "schema_linea_aprobada": {
+      "message_id": "MSG-ESG-WATER-001",
+      "categoria": "Sustentabilidad Hídrica",
+      "nivel_message_house": "Proof_Point",
+      "texto_completo": "En Minera Los Salares el 84% del agua utilizada proviene directamente del mar a través de planta desalinizadora propia, sin extraer agua de cuencas continentales.",
+      "soundbite_15s": "El 84% de nuestra agua es desalada de mar; no competimos por el agua de la gente.",
+      "roles_autorizados": [
+        "CEO",
+        "CCO",
+        "Gerente de Operaciones",
+        "Vocero Técnico"
+      ],
+      "canales_permitidos": [
+        "TV",
+        "Radio",
+        "Prensa Escrita",
+        "Lobby SMA"
+      ],
+      "referencia_prueba": {
+        "documento_id": "DOC-SMA-DESAL-2026",
+        "hash_sha256": "3a7b8c...9f",
+        "pagina": 12,
+        "auditor_externo": "PwC / ISAE 3000"
+      },
+      "gobernanza": {
+        "aprobado_por": "fmillar_legal",
+        "fecha_aprobacion": "2026-09-28T14:00:00Z",
+        "fecha_vencimiento": "2027-04-30T00:00:00Z",
+        "estado": "ACTIVE"
+      }
+    }
+  },
+  "entities": [
+    "ApprovedMessageSchema",
+    "Umbrex Framework",
+    "ProofPointLink",
+    "ISAE 3000"
+  ],
+  "relations": [
+    {
+      "from": "ApprovedMessageSchema",
+      "to": "ProofPointLink",
+      "type": "depends_on"
+    },
+    {
+      "from": "ApprovedMessageSchema",
+      "to": "Umbrex Framework",
+      "type": "conforms_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Documento Word de Argumentario vs Schema JSON de Mensajes",
+      "diferencia": "El documento Word es estático y opaco a la validación algorítmica; el schema JSON permite validaciones automáticas de caducidad e inmutabilidad en tiempo de ejecución."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "schema_fields_count": "12 campos estructurados",
+    "proof_point_linkage_rate": "100% de proof points con enlace a documento auditado"
+  },
+  "bridge_implications": "Definir este schema en la base de datos de BRIDGE como la entidad 'CorporateApprovedMessage' para gestionar todos los copys de comunicación corporativa.",
+  "open_gaps": [
+    "Sincronización bidireccional automática si un revisor edita el soundbite directamente en una presentación PowerPoint."
+  ],
+  "next_question_ids": [
+    "P07-F17",
+    "P07-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

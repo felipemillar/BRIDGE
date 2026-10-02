@@ -1,0 +1,131 @@
+{
+  "question_id": "P03-F30",
+  "pilar": "P03",
+  "eje": "Fuentes institucionales y regulatorias",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra fuentes institucionales y regulatorias sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso: Detección anticipada de riesgo regulatorio hídrico que no menciona a la compañía afectada. Entradas: 1) Publicación en el Diario Oficial de Chile de una Resolución Exenta de la Dirección General de Aguas (DGA) declarando 'Zona de Escasez Hídrica' en una cuenca del Valle del Huasco; 2) Acta de sesión de la Comisión de Medio Ambiente del Senado donde se discute una indicación para priorizar consumo humano y restringir extracciones industriales en zonas declaradas de escasez; 3) Hecho Esencial publicado en la CMF por una empresa agroindustrial competidora informando reducción proyectada en su capacidad de riego; y 4) API de la SEC procesando el Form 8-K de la matriz internacional que cotiza en el NYSE. Resultado esperado: El sistema de monitoreo regulatorio detecta la resolución de la DGA a las 06:15 AM del día de su publicación en el Diario Oficial, clasifica el evento como 'Norma Vigente - Restricción Hídrica', activa una regla de impacto sobre las faenas de la compañía ubicadas en la cuenca del Huasco (a pesar de que la DGA jamás nombró a la empresa en su resolución), y notifica a la gerencia de sostenibilidad y asuntos regulatorios con el texto íntegro y el CSV verificable del Diario Oficial.",
+  "findings": [
+    {
+      "claim_id": "P03-F30-C1",
+      "claim": "Un caso estructurado de monitoreo regulatorio institucional detecta resoluciones sectoriales generales de escasez hídrica en el Diario Oficial y las cruza con las operaciones territoriales de la empresa sin que la marca sea nombrada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Valle del Huasco)",
+        "actor": "Caso Regulatorio P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.4: Señales Institucionales y Regulatorias - Hipótesis Operativa",
+          "excerpt_short": "Un sistema de asuntos corporativos... debe monitorear diariamente: (a) el Diario Oficial de Chile para decretos sectoriales... Todas estas fuentes se estructuran por taxonomía de temas (ej. agua, royalty), no por marca.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:20:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los modelos operativos documentados del mapa de evidencia.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Diario Oficial Diario",
+      "Actas Senado",
+      "Hechos Esenciales CMF",
+      "Catálogo de Faenas Corporativas"
+    ],
+    "actors": [
+      "Gazette Ingester",
+      "Geographical Regulatory Mapper",
+      "Risk Engine"
+    ],
+    "steps": [
+      "Descarga de Diario Oficial",
+      "Filtro por cuenca hidrográfica",
+      "Mapeo a faenas de la empresa",
+      "Envío de alerta con CSV"
+    ],
+    "states": [
+      "Gazette_Parsed",
+      "Geographic_Match_Found",
+      "High_Severity_Alert_Emitted"
+    ],
+    "outputs": [
+      "Alerta crítica de restricción de extracción hídrica vinculada a resolución oficial"
+    ],
+    "exceptions": [
+      "Demoras en la actualización del portal del Diario Oficial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_ESCASEZ_HIDRICA",
+      "type": "caso_de_uso",
+      "name": "Caso Demostrativo Monitoreo Regulatorio Hídrico",
+      "aliases": [
+        "Water Scarcity Regulatory Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_ESCASEZ_HIDRICA",
+      "predicate": "evidencia_capacidad_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F30-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Cruzar toda resolución del Diario Oficial con las coordenadas geográficas de los activos corporativos para generar alertas territoriales automáticas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

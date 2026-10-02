@@ -1,0 +1,137 @@
+{
+  "question_id": "P02-F44",
+  "pilar": "P02",
+  "eje": "Posicionamiento y alianzas",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué alianzas de datos, producto o servicio son plausibles y bajo qué limitaciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se identifican tres tipologías de alianzas viables con sus correspondientes restricciones técnicas y regulatorias: 1) Alianzas de datos (Data Partnerships): con proveedores de monitoreo de medios locales (Litoralpress) para ingesta de audio radial y prensa regional mediante webhooks y APIs, y con distribuidores internacionales (LexisNexis, Factiva); limitaciones: restricciones de derechos de autor y licencias de prensa (copyright) que prohíben la redistribución de textos íntegros y exigen retención temporal limitada; 2) Alianzas de producto y tecnología (Product/Tech Partnerships): con proveedores de Enterprise Search (Glean) para acceder a repositorios internos empresariales respetando ACLs, y con plataformas de Identity Provider (Microsoft Azure AD / Okta); limitaciones: exigencia de cumplimiento SOC2 Type II, residencias de datos locales para industrias reguladas y contratos de no divulgación estrictos; 3) Alianzas de servicio (Go-to-Market con Agencias): con firmas de consultoría estratégica y asuntos públicos (FGS Global, Burson, agencias locales en Chile); limitaciones: resistencia cultural de las agencias a adoptar plataformas que reduzcan las horas facturables de consultores júnior.",
+  "findings": [
+    {
+      "claim_id": "P02-F44-C1",
+      "claim": "Las alianzas de datos con proveedores de clipping locales y sindicadores globales son técnicamente plausibles pero están sujetas a restricciones de derechos de autor y exigencias de gobernanza de datos confidenciales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Ecosistema de Alianzas"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Partnerships and Data Rights Landscape",
+          "excerpt_short": "Examines commercial licensing agreements with press reproduction organizations, radio syndicators, and technology platforms.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:42:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de acuerdos comerciales y regulaciones de propiedad intelectual en monitoreo de medios.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Términos de servicio de proveedores de datos",
+      "Contratos de licencia de propiedad intelectual",
+      "Requisitos de seguridad del cliente"
+    ],
+    "actors": [
+      "Gerente de Alianzas",
+      "Abogado de Propiedad Intelectual",
+      "Director de Seguridad de la Información (CISO)"
+    ],
+    "steps": [
+      "Negociación de cláusulas de redistribución de datos",
+      "Implementación de conectores API seguros con cifrado mTLS",
+      "Auditoría de cumplimiento de derechos de autor",
+      "Habilitación de feeds para clientes"
+    ],
+    "states": [
+      "Acuerdo_Negociado",
+      "Conector_Certificado",
+      "Feed_Activo"
+    ],
+    "outputs": [
+      "Alianza comercial operativa con respaldo legal y técnico"
+    ],
+    "exceptions": [
+      "Bloqueo de términos de servicio por parte de plataformas de redes sociales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ALIANZAS_DATOS",
+      "type": "modelo_alianza",
+      "name": "Alianzas Estratégicas de Datos y Tecnología",
+      "aliases": [
+        "Ecosystem Partnerships"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ALIANZAS_DATOS",
+      "predicate": "sujeto_a_restricciones_de",
+      "object_id": "Copyright_y_Seguridad",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F44-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Ingesta por Scraping no Autorizado vs Alianza Formal de Datos",
+      "Scraping no Autorizado": "Riesgo de bloqueo de IPs, contingencias legales por infracción de propiedad intelectual, datos inestables.",
+      "Alianza Formal de Datos": "Acceso estable por API, respaldo legal, acuerdos de nivel de servicio (SLA) y metadatos limpios."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe suscribir acuerdos formales de licenciamiento con proveedores de datos para asegurar continuidad operacional y legitimidad legal.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F45",
+    "P02-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:42:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

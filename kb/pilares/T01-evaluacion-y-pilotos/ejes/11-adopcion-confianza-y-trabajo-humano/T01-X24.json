@@ -1,0 +1,141 @@
+{
+  "question_id": "T01-X24",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Adopción, confianza y trabajo humano",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre adopción, confianza y trabajo humano, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal la transferencia de aprendizaje y autonomía del analista: si el uso prolongado de BRIDGE desarrolla habilidades analíticas superiores en el profesional o si genera atrofia cognitiva (desaprendizaje) de sus competencias de investigación manual: 1) Vacío Identificado: No existen estudios en el corpus de T01 que midan el desempeño de un analista tras 12 meses de usar BRIDGE cuando debe resolver una crisis imprevista sin acceso a la herramienta (ej. corte de energía o caída de red); 2) Fuente Fallida / Parcial: Social IQa (45cf111e) y SummEval (9df1af53) son estudios transversales de laboratorio de una sola sesión que no miden efectos cognitivos longitudinales en humanos; y 3) Validación Mínima Necesaria: Estudio cuasiexperimental de cohorte a 12 meses evaluando la competencia de análisis manual basal de 15 analistas antes del piloto y tras 1 año de uso continuo de BRIDGE.",
+  "findings": [
+    {
+      "claim_id": "T01-X24-C1",
+      "claim": "El impacto a largo plazo de los sistemas de inteligencia corporativa sobre las competencias cognitivas basales de los analistas (potenciación vs atrofia de habilidades) permanece como una interrogante abierta sin resolución empírica en el corpus.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "The Bridge Intelligence Human Cognition Lab"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 11: Hipótesis de Desaprendizaje Cognitivo",
+          "excerpt_short": "Se desconoce si la asistencia de IA a largo plazo preserva o atrofia las destrezas de síntesis manual de los profesionales en asuntos corporativos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Vacío longitudinal explícitamente formulado en el addendum metodológico.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Prueba de evaluación de síntesis manual basal (Pre-test)",
+      "Prueba equivalente a los 12 meses (Post-test)"
+    ],
+    "actors": [
+      "Investigador de Ciencias Cognitivas",
+      "Cohorte de 15 Analistas"
+    ],
+    "steps": [
+      "Aplicar prueba estandarizada de redacción manual de 2 horas sin IA en el onboarding",
+      "Monitorear uso regular de BRIDGE durante 12 meses",
+      "Aplicar prueba idéntica de redacción manual sin IA a los 12 meses",
+      "Medir si la calidad analítica y velocidad manual aumentaron, se mantuvieron o decayeron"
+    ],
+    "states": [
+      "PRETEST_ONBOARDING",
+      "SEGUIMIENTO_ANUAL",
+      "POSTTEST_12_MESES",
+      "INFORME_COGNITIVO"
+    ],
+    "outputs": [
+      "Reporte Longitudinal de Impacto Cognitivo a 12 Meses"
+    ],
+    "exceptions": [
+      "Si se detecta una caída > 20% en destrezas manuales, se incorporan módulos de entrenamiento cognitivo continuo en la plataforma"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ESTUDIO_COGNITIVO_12M",
+      "type": "experimento",
+      "name": "Estudio Longitudinal de Competencia Cognitiva",
+      "aliases": [
+        "Cognitive Skill Retention Study"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ESTUDIO_COGNITIVO_12M",
+      "predicate": "monitorea_impacto_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X24-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Retención de competencia de análisis manual a 12 meses",
+      "denominator": "Puntaje basal pre-test",
+      "target": ">= 95%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite demostrar ante asociaciones profesionales que BRIDGE enriquece el capital humano corporativo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Impacto cognitivo longitudinal a 12 meses sobre las destrezas de síntesis e investigación manual de analistas corporativos",
+      "minimum_validation": "Diseño pre-post experimental con cohorte de 15 analistas evaluados sin asistencia de IA",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "T01-X25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

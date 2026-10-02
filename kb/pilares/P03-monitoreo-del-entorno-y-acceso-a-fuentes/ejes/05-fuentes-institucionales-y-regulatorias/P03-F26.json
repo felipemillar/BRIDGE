@@ -1,0 +1,135 @@
+{
+  "question_id": "P03-F26",
+  "pilar": "P03",
+  "eje": "Fuentes institucionales y regulatorias",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Cómo se detectan cambios normativos y de actores sin confundir propuesta, trámite y norma vigente?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para evitar falsas alarmas y errores de apreciación jurídica, la detección se estructura mediante una Máquina de Estados Finitos (FSM) que clasifica cada documento en 5 estados ontológicos mutuamente excluyentes: 1) `Propuesta_o_Minuta`: ideas prelegislativas, declaraciones de prensa o mociones no ingresadas formalmente (Severidad: Monitoreo Temprano / Informativo); 2) `Tramite_Legislativo_Iniciado`: proyectos de ley con número de boletín asignado, radicados en comisión (Severidad: Seguimiento de Enmiendas); 3) `Tramite_Avanzado`: proyecto aprobado en primer trámite constitucional o con urgencia presidencial calificada (Severidad: Alerta de Riesgo Inminente); 4) `Sancion_Presidencial`: ley aprobada pendiente de promulgación; y 5) `Norma_Vigente_Publicada`: decreto o ley formalmente publicado en el Diario Oficial con fecha de vigencia vinculante (Severidad: Cumplimiento Regulatorio Obligatorio). Además, se rastrean los cambios de actores clave mediante el registro cruzado de nombramientos en ministerios y superintendencias.",
+  "findings": [
+    {
+      "claim_id": "P03-F26-C1",
+      "claim": "La inteligencia regulatoria exige una máquina de estados que distinga con rigor jurídico entre propuestas mediáticas, trámites legislativos en comisión y normas vigentes publicadas en el Diario Oficial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Modelado Regulatorio P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.4: Señales Institucionales y Regulatorias",
+          "excerpt_short": "Un sistema de asuntos corporativos... debe monitorear diariamente: (a) el Diario Oficial de Chile para decretos sectoriales... (d) proyectos de ley en el Congreso... estructurados por taxonomía de temas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:20:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del diseño ontológico de estados regulatorios.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Boletín legislativo",
+      "Diario Oficial",
+      "Declaraciones de autoridades"
+    ],
+    "actors": [
+      "Regulatory State Machine",
+      "Legal Entity Tracker"
+    ],
+    "steps": [
+      "Extracción de metadatos de trámite",
+      "Transición de estado en FSM",
+      "Ponderación de riesgo corporativo"
+    ],
+    "states": [
+      "Propuesta",
+      "Tramite_Comision",
+      "Aprobado_Congreso",
+      "Publicado_Diario_Oficial"
+    ],
+    "outputs": [
+      "Registro de alerta regulatoria con estado jurídico inequívoco"
+    ],
+    "exceptions": [
+      "Proyectos refundidos en comisiones mixtas con cambios de articulado"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REGULATORY_FSM",
+      "type": "maquina_estados",
+      "name": "Máquina de Estados de Ciclo de Vida Regulatorio",
+      "aliases": [
+        "Regulatory Lifecycle FSM"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REGULATORY_FSM",
+      "predicate": "clasifica_validez_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F26-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Estatus jurídico de la señal",
+      "Propuesta / Minuta": "Declaración política o borrador; no impone obligaciones legales.",
+      "Norma Vigente (Diario Oficial)": "Cuerpo legal promulgado y vinculante con fuerza ejecutoria."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Prohibir en BRIDGE la clasificación de meras mociones parlamentarias como 'cambios regulatorios consolidados', exigiendo la etiqueta de estado de trámite.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

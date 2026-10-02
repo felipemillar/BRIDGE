@@ -1,0 +1,133 @@
+{
+  "question_id": "P06-X24",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Seguridad en recuperación combinada",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué sigue sin prueba sobre seguridad en recuperación combinada, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal la resistencia de la plataforma ante ataques de inferencia por canales laterales basados en latencia de respuesta o tamaño de respuesta (Side-Channel Timing Attacks) en despliegues compartidos en la nube (P06_GAPS_AND_VALIDATION, Sección 3.4). Las fuentes analizadas (Palantir AIP) documentan exhaustivamente el aislamiento semántico y relacional, pero no analizan si un atacante sofisticado con acceso a la API puede deducir la existencia de documentos confidenciales midiendo variaciones milimétricas en el tiempo de procesamiento de consultas vectoriales. La validación mínima necesaria consiste en ejecutar un test de penetración de canal lateral de temporización sobre el endpoint de búsqueda híbrida, evaluando la necesidad de introducir ruido temporal aleatorio (jittering de latencia determinista) para asegurar que el tiempo de respuesta sea estadísticamente indistinguible independientemente del volumen de documentos filtrados.",
+  "findings": [
+    {
+      "claim_id": "P06-X24-C1",
+      "claim": "La vulnerabilidad a ataques de canal lateral por latencia (timing attacks) en el motor de recuperación segura permanece como vacío empírico abierto.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Ciberseguridad y Criptoanálisis de Sistemas RAG"
+      },
+      "evidence": [
+        {
+          "source_id": "8801b08d-0b93-40cc-b2ed-ad1d3978cd68",
+          "source_title": "P06_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación Empírica (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 3.4: Riesgos de Canal Lateral por Latencia en Sistemas RAG Multi-Tenant",
+          "excerpt_short": "No existen pruebas de estrés sobre canales laterales de temporización en la capa de filtrado vectorial, existiendo riesgo teórico de inferencia de existencia de documentos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío de seguridad avanzado documentado en el análisis de riesgos de P06.",
+      "epistemic_status_original": "vacio_empirico_documentado",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Suite de pruebas de temporización estadística"
+    ],
+    "actors": [
+      "Ethical Hacker Externo",
+      "Ingeniero de Ciberseguridad"
+    ],
+    "steps": [
+      "Medición de distribución de tiempos de respuesta con y sin documentos restringidos",
+      "Análisis estadístico ANOVA de latencia",
+      "Implementación de jittering preventivo si p < 0.05"
+    ],
+    "states": [
+      "Side_Channel_Test_Planned",
+      "Jitter_Evaluation_Pending"
+    ],
+    "outputs": [
+      "Reporte de vulnerabilidad de canal lateral"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "GAP_SIDE_CHANNEL",
+      "type": "vacio_investigacion",
+      "name": "Vulnerabilidad de Canal Lateral de Temporización",
+      "aliases": [
+        "Timing Attack Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "GAP_SIDE_CHANNEL",
+      "predicate": "amenaza_potencialmente",
+      "object_id": "ENT_ABAC_GATE",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X24-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Identifica la necesidad de incorporar jittering defensivo en entornos de alta confidencialidad bursátil.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Ausencia de peritaje sobre ataques de inferencia por canal lateral de temporización en el motor de búsqueda vectorial.",
+      "minimum_validation": "Prueba de penetración con 10.000 llamadas midiendo correlación entre latencia y volumen de datos excluidos.",
+      "priority": "media"
+    }
+  ],
+  "next_question_ids": [
+    "P06-X25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

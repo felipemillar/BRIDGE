@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-F08",
+  "pilar": "P07",
+  "eje": "Preguntas difíciles y escenarios",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué criterios priorizan una pregunta hostil sin convertir posibilidad en predicción cierta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La priorización se realiza mediante una matriz condicional de plausibilidad y severidad basada en tres criterios objetivos: 1) Salience del actor formulador (poder, legitimidad y urgencia según Mitchell et al., priorizando reguladores y medios de alcance masivo); 2) Severidad del daño potencial (riesgo de tipificación de greenwashing SERNAC, sanción SMA o colapso de licencia social); y 3) Nivel de tracción en la agenda pública (volumen e índice de propagación SIR). La pregunta se cataloga estrictamente como un 'Escenario Condicional What-If' probabilístico, prohibiendo afirmaciones predictivas deterministas (ej. 'el periodista preguntará X con 95% de certeza') para evitar sesgos de confirmación en el vocero.",
+  "findings": [
+    {
+      "claim_id": "P07-F08-C1",
+      "claim": "Las preguntas hostiles deben ser jerarquizadas por severidad y plausibilidad institucional sin pretender una predicción matemática determinista de la conducta del periodista.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "risk_prioritization",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje B) y Sección 3",
+          "excerpt_short": "Afirmación: 'La IA puede predecir preguntas con 95% de exactitud analizando redes'. Veredicto: Incierto / Sobreprometido. Se rechaza la predicción determinista. La literatura exige catalogar los reactivos como escenarios de plausibilidad probabilística ('Murder Board Injects') basados en severidad regulatoria y relevancia del stakeholder.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 2.2",
+          "excerpt_short": "La priorización de preguntas difíciles se calibra en 3 niveles de severidad: Alta (cuestiona legalidad o viabilidad operativa), Media (discrepancia en plazos o metas ESG) y Baja (percepción o comentarios menores en redes). Se presentan como hipótesis de trabajo para blindar al vocero.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Criterio editorial rector de P07_EVIDENCE_MAP que sanciona como sobrepromesa el determinismo predictivo en ciencias sociales y comunicaciones.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_priorizacion_preguntas": {
+      "Criterio_1_Salience": "Poder coercitivo de la contraparte (SMA, CMF, Tribunal Ambiental) > Prensa de Investigación > Redes Sociales.",
+      "Criterio_2_Severidad": "Riesgo de sanción penal/civil o pérdida de RCA > Daño de imagen de corto plazo.",
+      "Criterio_3_Viralidad": "Multiplicador de contagio SIR (R0 > 1) en plataformas digitales.",
+      "Clasificacion_Salida": [
+        "Crítica (Obligatoria en Murder Board)",
+        "Relevante (Preparación secundaria)",
+        "Periférica (Descartable / Monitoreo pasivo)"
+      ]
+    }
+  },
+  "entities": [
+    "Mitchell Salience Model",
+    "Murder Board",
+    "SMA",
+    "CMF",
+    "SERNAC",
+    "P07_EVIDENCE_MAP"
+  ],
+  "relations": [
+    {
+      "from": "Matriz de Priorización",
+      "to": "Preguntas Críticas",
+      "type": "filters_and_ranks"
+    },
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Predicción Determinista",
+      "type": "rejects"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Predicción Determinista vs Escenario Condicional",
+      "diferencia": "La predicción promete falsamente saber el futuro; el escenario condicional prepara al vocero ante hipótesis de alta severidad técnica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "false_certainty_mitigation": "0% de afirmaciones predictivas absolutas en la UI",
+    "top_hostile_tier": "Máximo 5 preguntas críticas por sesión de entrenamiento"
+  },
+  "bridge_implications": "En BRIDGE, las preguntas de preparación deben etiquetarse siempre como 'Escenario Probable / What-If' con indicadores de severidad, evitando scores de probabilidad ilusorios.",
+  "open_gaps": [
+    "Modelado del impacto de preguntas sorpresa no contempladas en ningún registro documental previo."
+  ],
+  "next_question_ids": [
+    "P07-F09",
+    "P07-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T04:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

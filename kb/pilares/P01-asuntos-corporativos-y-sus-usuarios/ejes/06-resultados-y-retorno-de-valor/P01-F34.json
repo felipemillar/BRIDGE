@@ -1,0 +1,172 @@
+{
+  "question_id": "P01-F34",
+  "pilar": "P01",
+  "eje": "Resultados y retorno de valor",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar resultados y retorno de valor de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del retorno de valor se define por: 2 dimensiones de variables de valor (reputacionales/intangibles como capital de confianza, SLO, Marcas Ciudadanas y legitimidad C-Suite; y financieras como solvencia bursátil, costo de capital ESG y mitigación en Golden Hour <30 min); 4 categorías de KPIs (eficiencia operativa, coherencia discursiva 100%, gobernanza/cumplimiento Ley 20.730/NCG 461, y posición reputacional Merco/Cadem); relaciones causales directas con la continuidad operacional; y condiciones de trazabilidad estricta a fuentes y gobernanza multi-persona B2B (Usuario, Comprador, Aprobador).",
+  "findings": [
+    {
+      "claim_id": "P01-F34-C1",
+      "claim": "El retorno de valor se estructura en dos dimensiones de variables: intangibles/reputacionales (capital de confianza, Licencia Social para Operar, percepción de Marca Ciudadana y legitimidad directiva) y financieras/negocio (solvencia bursátil, costo de capital ASG y reducción de pérdidas en la Golden Hour de crisis <30 min).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Direcciones Corporativas"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Variables de Valor Financiero y Reputacional",
+          "excerpt_short": "Dos dimensiones de valor: variables reputacionales (SLO, confianza, Marca Ciudadana) y financieras (costo de capital ASG, valor bursátil, Golden Hour).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:56:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F34-C2",
+      "claim": "Las cuatro categorías de KPIs corresponden a Eficiencia Operativa (reducción de briefing de 4h a 15m), Coherencia Discursiva (100% consistencia fáctica), Gobernanza y Cumplimiento (cero sanciones bajo Ley 20.730 y NCG 461), y Posicionamiento Directivo (asiento C-Suite en 32,3% y rankings Merco/Cadem).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "España / Chile",
+        "actor": "C-Suite y Dircoms"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Categorías de KPIs y Métricas de Desempeño",
+          "excerpt_short": "Cuatro categorías de KPIs: Eficiencia Operativa, Coherencia Discursiva, Gobernanza/Cumplimiento y Posicionamiento.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:56:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Métricas operativas de equipos",
+      "Reportes de auditoría de cumplimiento",
+      "Encuestas de reputación"
+    ],
+    "actors": [
+      "CCO",
+      "CEO",
+      "CFO",
+      "Director de Operaciones"
+    ],
+    "steps": [
+      "Medición de indicadores en las cuatro categorías",
+      "Evaluación de causalidad en continuidad operacional",
+      "Reporte de retorno de valor a Directorio",
+      "Ajuste de presupuesto y arquitectura"
+    ],
+    "states": [
+      "Indicadores_Definidos",
+      "Medición_Sistémica",
+      "Causalidad_Verificada",
+      "Retorno_Consolidado"
+    ],
+    "outputs": [
+      "Cuadro de mando multidimensional",
+      "Informe de valor mitigado ante Directorio"
+    ],
+    "exceptions": [
+      "Disociación entre métricas operativas de comunicación y estados financieros de la empresa"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODELO_VALOR_P01",
+      "type": "marco_conceptual",
+      "name": "Modelo Multidimensional de Valor en Asuntos Corporativos",
+      "aliases": [
+        "Estructura de Retorno P01"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODELO_VALOR_P01",
+      "predicate": "vincula_eficiencia_con",
+      "object_id": "Continuidad_del_Negocio",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F34-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Actuar",
+      "implication": "Configurar paneles de control en BRIDGE que visualicen el impacto en las 4 categorías de KPIs simultáneamente.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F35",
+    "P01-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:56:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

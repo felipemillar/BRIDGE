@@ -1,0 +1,145 @@
+{
+  "question_id": "P04-F39",
+  "pilar": "P04",
+  "eje": "Búsqueda y respuesta fundada",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Cuándo debe abstenerse el sistema por conflicto, vencimiento o falta de evidencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El sistema debe activar el protocolo de 'Abstención Activa Segura' (Self-RAG / CRAG; Asai et al., 2023; Yan et al., 2024) en tres circunstancias operacionales estrictas: 1) Falta de Evidencia Documentada: cuando la recuperación arroja una confianza de relevancia insuficiente (`[IsRel] = False`) o cuando el tópico no está contemplado en el corpus institucional; la respuesta debe declarar explícitamente: 'La corporación no cuenta con información formal documentada sobre este asunto en sus registros oficiales' (umbral de abstención segura ≥ 98%); 2) Conflicto Irreconciliable entre Fuentes: cuando dos documentos de igual jerarquía formal (e.g. dos memorias o hechos esenciales) reportan cifras o posturas contradictorias sin una nota de reexpresión o fe de erratas que dirima cuál prevalece; el sistema debe alertar: 'Existe una contradicción no resuelta en los documentos oficiales entre [Fuente A] y [Fuente B]' detallando la discrepancia; y 3) Vencimiento o Caducidad sin Renovación: cuando un compromiso u objetivo cumplió su horizonte temporal (e.g. meta 2024) pero el resultado final nunca fue reportado ni auditado; el sistema debe abstenerse de inventar el cumplimiento y declarar el rezago de información.",
+  "findings": [
+    {
+      "claim_id": "P04-F39-C1",
+      "claim": "Los mecanismos Self-RAG y CRAG dotan al sistema de capacidad reflexiva para abstenerse activamente ante vacíos, conflictos no resueltos o compromisos caducos, mitigando el riesgo de alucinación corporativa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global",
+        "actor": "Mitigación de Alucinaciones en RAG"
+      },
+      "evidence": [
+        {
+          "source_id": "2566a09d-41b1-497a-8ce7-00381f5b9213",
+          "source_title": "Self-RAG: Learning to Retrieve, Generate, and Critique (Asai et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2310.11511",
+          "locator": "Sección 2 and 3: Reflection Tokens and Adaptive Retrieval",
+          "excerpt_short": "Introduces critique tokens [IsRel], [IsSup], [IsUse] enabling the model to selectively abstain or issue warnings when retrieved passages provide insufficient evidence.",
+          "source_date": "2023-10-17",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "40435886-c0b2-496f-bae5-908c6c9ff633",
+          "source_title": "Corrective Retrieval Augmented Generation - CRAG (Yan et al., 2024)",
+          "original_url": "https://arxiv.org/abs/2401.15884",
+          "locator": "Sección 3: Retrieval Evaluator and Robust Generation",
+          "excerpt_short": "Evaluates confidence of retrieved documents, triggering corrective knowledge searches or explicit abstention when information is incorrect or absent.",
+          "source_date": "2024-01-29",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Arquitecturas pioneras de auto-crítica y corrección de RAG en Asai et al. y Yan et al.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evaluación de fragmentos recuperados por el Retrieval Evaluator"
+    ],
+    "actors": [
+      "Retrieval Evaluator",
+      "Conflict Detector",
+      "Safe Abstainer"
+    ],
+    "steps": [
+      "Cálculo de puntaje de confianza de recuperación",
+      "Verificación de conflictos semánticos entre fragmentos",
+      "Disparo de plantilla de abstención segura si la confianza es baja o el conflicto persiste"
+    ],
+    "states": [
+      "Evaluating_Support",
+      "Low_Confidence_Detected",
+      "Safe_Abstention_Emitted"
+    ],
+    "outputs": [
+      "Declaración formal de falta de evidencia o alerta de contradicción interna"
+    ],
+    "exceptions": [
+      "Consulta formulada de forma tendenciosa para forzar una respuesta afirmativa"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SAFE_ABSTENTION",
+      "type": "mecanismo_seguridad",
+      "name": "Mecanismo de Abstención Activa y Detección de Conflictos",
+      "aliases": [
+        "Safe Abstention Guardrail"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SAFE_ABSTENTION",
+      "predicate": "previene_alucinaciones_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F39-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Comportamiento ante la duda",
+      "LLM convencional sin guardrails": "Inventa una respuesta verosímil y plausible para no parecer ignorante (alucinación grave).",
+      "Sistema con Self-RAG/CRAG": "Declara con transparencia técnica que la información no está documentada o que existe un conflicto."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe priorizar la abstención fundada sobre la completitud forzada, salvaguardando la credibilidad institucional del cliente.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

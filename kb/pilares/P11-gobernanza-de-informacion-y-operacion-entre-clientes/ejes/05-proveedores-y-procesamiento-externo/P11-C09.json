@@ -1,0 +1,169 @@
+{
+  "question_id": "P11-C09",
+  "pilar": "P11",
+  "eje": "Proveedores y procesamiento externo",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre proveedores y procesamiento externo, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia fundamental sobre proveedores externos estriba en la naturaleza de sus garantías de privacidad y en los documentos contractuales vigentes: el dossier inicial (`P11_RESEARCH_DOSSIER`) y síntesis preliminares (`P11_PENDING_SOURCES_RESOLUTION`) asumían que las declaraciones públicas de 'cero retención' en sitios web de OpenAI o Anthropic constituían una prueba técnica suficiente de aislamiento operativo, basándose en páginas HTML desactualizadas. Las directrices rectoras canónicas `P11_2026_LAW_AND_PROVIDER_CORRECTION` (0716e04e) y `P11_VERIFICATION_CORRECTIONS` (49d7882a) rectifican de forma terminante este planteamiento: 1) Se sustituyen formalmente los enlaces HTML web por los documentos contractuales oficiales en formato PDF vigentes al 1 de enero de 2026: OpenAI Services Agreement (8d9a7ceb, Sección 4.2 que estipula el compromiso de no entrenamiento) y el OpenAI Data Processing Addendum (1bc87361, que califica a OpenAI como encargado/processor); 2) Se descalifican las afirmaciones de 'privacidad resuelta' basadas en marketing, estableciendo que las cláusulas contractuales son compromisos legales con alcance acotado que no prueban por sí solas aislamiento físico, segregación de tenencia en memoria ni ausencia de bugs en la infraestructura del proveedor; y 3) Prevalece con rango rector la versión de `0716e04e` y `49d7882a`, ordenando no trasladar promesas comerciales a los clientes de BRIDGE y exigiendo capas técnicas locales de aislamiento en PostgreSQL 18 RLS, índices vectoriales dedicados y claves KMS CMK propias.",
+  "findings": [
+    {
+      "claim_id": "P11-C09-C1",
+      "claim": "Existe discrepancia entre asumir que el marketing de proveedores garantiza privacidad versus la prevalencia canónica de P11_2026_LAW_AND_PROVIDER_CORRECTION y P11_VERIFICATION_CORRECTIONS, que sustituyen HTMLs por PDFs oficiales de 2026 y dictaminan que las cláusulas contractuales no sustituyen el aislamiento técnico local.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "provider_terms_discrepancy_and_precedence",
+      "evidence": [
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'OpenAI y Cláusulas Contractuales'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica rectora: Sustitución de páginas HTML por PDFs oficiales en vigor al 1 de enero de 2026. Services Agreement (Sec. 4.2) y DPA establecen no entrenamiento y rol de processor, pero no prueban por sí solos segregación efectiva entre clientes en tiempo de ejecución.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Calibración Epistémica de Controles y Términos Comerciales'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia rectora: Se prohíbe confundir términos comerciales o garantías contractuales con controles probados en código. El aislamiento debe residir en la arquitectura propia de BRIDGE.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "OpenAI: OpenAI Services Agreement (Effective Jan 1, 2026) Official PDF",
+          "source_id": "8d9a7ceb-b830-4a59-93f3-7701c2bd4685",
+          "locator": "Section 4.2",
+          "retrieved_at": null,
+          "excerpt_short": "We do not use Customer Content that you provide to or receive from the Services to develop or improve our Services.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia canónica explícita y formalmente documentada en las síntesis rectoras del proyecto BRIDGE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borrador de acuerdos con afirmaciones comerciales",
+      "PDFs oficiales de OpenAI 2026",
+      "Correcciones canónicas rectoras"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "CISO de BRIDGE",
+      "Oficial Legal"
+    ],
+    "steps": [
+      "Identificación de afirmaciones que califiquen la privacidad como 'garantizada por OpenAI'",
+      "Aplicación de la prevalencia canónica de 0716e04e y 49d7882a",
+      "Sustitución de referencias HTML por los PDFs oficiales 8d9a7ceb y 1bc87361",
+      "Inclusión de salvaguardas técnicas locales: RLS en PostgreSQL, filtrado en Qdrant y cifrado KMS",
+      "Sellado del contrato DPA de cliente con compromisos realistas y auditables"
+    ],
+    "states": [
+      "MARKETING_CLAIM_IDENTIFIED",
+      "CANONICAL_PRECEDENCE_APPLIED",
+      "OFFICIAL_PDFS_BOUND",
+      "LOCAL_ISOLATION_MANDATED"
+    ],
+    "outputs": [
+      "Marco de contratación con proveedores técnicamente honesto y jurídicamente blindado"
+    ],
+    "exceptions": [
+      "Ninguna. La doctrina canónica prohíbe de forma absoluta cualquier afirmación de seguridad basada únicamente en marketing"
+    ]
+  },
+  "entities": [
+    "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+    "P11_VERIFICATION_CORRECTIONS",
+    "OpenAI Services Agreement PDF",
+    "OpenAI DPA PDF",
+    "PostgreSQL 18 RLS"
+  ],
+  "relations": [
+    {
+      "from": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+      "to": "OpenAI Services Agreement PDF",
+      "type": "ADOPTS_AS_CANONICAL_SOURCE"
+    },
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "Términos Comerciales de IA",
+      "type": "SUBORDINATES_TO_LOCAL_CONTROLS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Creer que la privacidad está resuelta por contrato vs Blindar técnicamente la arquitectura local",
+      "diferencia": "Creer en el contrato deja a la empresa expuesta ante filtraciones del proveedor; blindar localmente con cifrado y RLS asegura la invulnerabilidad independientemente del proveedor."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Garantías de Proveedores de IA",
+      "dossier_claim": "Privacidad garantizada por acuerdos web de OpenAI",
+      "canonical_resolution": "Compromisos contractuales válidos pero insuficientes; se exige aislamiento técnico local y sustitución por PDFs de 2026."
+    }
+  ],
+  "metrics_and_denominators": {
+    "canonical_pdf_citation_rate": "100%",
+    "marketing_claim_elimination_rate": "1.0"
+  },
+  "bridge_implications": "Evita litigios por publicidad engañosa y consolida la reputación de BRIDGE como una solución seria para clientes altamente desconfiados.",
+  "open_gaps": [
+    "Monitoreo de futuras revisiones contractuales de OpenAI o Anthropic a lo largo de 2026."
+  ],
+  "next_question_ids": [
+    "P11-C10",
+    "P11-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

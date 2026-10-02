@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F07",
+  "pilar": "P10",
+  "eje": "Verificación de hechos y cifras",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué pasos validan cifras, fechas, alcance y versión de una afirmación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El protocolo de verificación fáctica de cifras, fechas y alcance opera mediante una compuerta metodológica obligatoria de 4 pasos antes de permitir la redacción del borrador: 1) Trazabilidad de Procedencia (Provenance Tagging): Toda cifra cuantitativa (inversión, producción, emisiones, tasas de accidentabilidad o dotación) debe contar con un puntero documental verificable en el repositorio de conocimiento institucional de P04 o en balances auditados (prohibición de datos memorizados no documentados); 2) Verificación de Vigencia Temporal y Alcance (TTL Check): Se comprueba que la cifra corresponda al ejercicio fiscal, trimestre o fase de proyecto vigente, verificando si existen actualizaciones posteriores que la invaliden; 3) Reconciliación Cruzada con Registros Regulatorios: En empresas chilenas o emisores internacionales, las declaraciones financieras y ambientales se contrastan contra las memorias presentadas a la CMF (NCG 30 / NCG 461), los reportes de la SMA y los informes técnicos de ensayo; y 4) Validación de Declaraciones Verdes (Green Claims Substantiation): Las afirmaciones sobre sustentabilidad o huella de carbono deben cumplir con el estándar de fundamentación técnica de la propuesta de Directiva Green Claims de la UE y de la Ley 19.496 del Consumidor, descartando adjetivos superlativos sin peritaje independiente.",
+  "findings": [
+    {
+      "claim_id": "P10-F07-C1",
+      "claim": "La validación fáctica exige etiquetado de procedencia documental en P04, control de vigencia temporal, reconciliación con expedientes de la CMF/SMA y fundamentación técnica demostrable para alegaciones ambientales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "fact_checking_and_provenance_verification",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Flujo de Trabajo Integral (Fase 3: Verificación Fáctica y Procedencia de Cifras)'",
+          "retrieved_at": null,
+          "excerpt_short": "Trazabilidad obligatoria: cada cifra debe tener un identificador de procedencia (provenance tag). Se prohíbe el uso de datos de memoria no documentados. El sistema valida contra P04 y reportes oficiales auditados antes de autorizar la redacción.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "European Commission: Green Claims Directive Proposal (Substantiation Standards)",
+          "source_id": "09b89326-c438-4e2d-a2a3-c8932482ff0e",
+          "locator": "Article 3 'Substantiation of Explicit Environmental Claims'",
+          "retrieved_at": null,
+          "excerpt_short": "Companies must ensure that environmental claims are substantiated by independent, widely recognized scientific evidence, identifying significant environmental impacts and demonstrating measurable improvements based on life-cycle assessment.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares de la Comisión Europea y el dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borrador de cifras",
+      "Base documental P04",
+      "Reportes auditados CMF"
+    ],
+    "actors": [
+      "Analista Fáctico",
+      "Experto Técnico (SME)",
+      "Motor de Fact-Checking BRIDGE"
+    ],
+    "steps": [
+      "Extracción de entidades numéricas del texto",
+      "Búsqueda de correspondencia exacta en repositorio P04",
+      "Verificación de fecha de auditoría de la cifra",
+      "Asignación de sello de verificación fáctica"
+    ],
+    "states": [
+      "Cifras Identificadas",
+      "Trazabilidad Verificada",
+      "Grounding Aprobado"
+    ],
+    "outputs": [
+      "Registro de procedencia fáctica (Fact Check Record)"
+    ],
+    "exceptions": [
+      "Cifras sin respaldo documental en P04 son marcadas con bandera roja y bloqueadas para su inclusión en comunicados"
+    ]
+  },
+  "entities": [
+    "Provenance Tagging",
+    "European Commission Green Claims",
+    "P10_RESEARCH_DOSSIER",
+    "CMF NCG 461",
+    "Fact Check Record"
+  ],
+  "relations": [
+    {
+      "from": "Afirmación Corporativa",
+      "to": "Repositorio P04",
+      "type": "GROUNDED_IN"
+    },
+    {
+      "from": "Alegación Ambiental",
+      "to": "Green Claims Directive",
+      "type": "MUST_COMPLY_WITH"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cifras de memoria o aproximadas vs Datos con procedencia trazable",
+      "diferencia": "Las cifras de memoria generan contradicciones que la prensa o el regulador detectan de inmediato; las trazables resisten peritajes judiciales y auditorías."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "fact_checking_accuracy_target": "100% de cifras con trazabilidad documental",
+    "unsupported_claims_tolerance": "0 afirmaciones sin respaldo admitidas"
+  },
+  "bridge_implications": "Implementar un linter de cifras en el editor de BRIDGE que subraye en rojo cualquier número que no esté vinculado a un documento de P04.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F08",
+    "P10-F09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

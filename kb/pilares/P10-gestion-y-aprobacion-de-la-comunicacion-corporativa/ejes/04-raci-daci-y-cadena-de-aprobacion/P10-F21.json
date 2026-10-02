@@ -1,0 +1,164 @@
+{
+  "question_id": "P10-F21",
+  "pilar": "P10",
+  "eje": "RACI, DACI y cadena de aprobación",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Cómo evitar bloqueos por ausencia de un aprobador sin saltarse controles?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para prevenir cuellos de botella y parálisis operacional sin comprometer los controles de seguridad, el sistema debe estructurar 4 mecanismos de contingencia: 1) Matriz de Subrogancia Formal (Delegated Authority Matrix): Cada aprobador titular cuenta con dos delegados alternos pre-aprobados y registrados estatutariamente con idénticos o escalonados límites de firma; 2) Reglas de Escalamiento Vertical por Timeout: Si transcurre el 50% de la ventana de SLA sin respuesta del titular, el sistema notifica al alterno; si expira el 100% del SLA, la solicitud se escala verticalmente al superior jerárquico (nunca lateralmente ni hacia abajo); 3) Prohibición Estricta de Auto-Aprobación y Omisión: Bajo ninguna circunstancia de urgencia se permite el 'auto-visto bueno' del redactor o la publicación con cero aprobadores; y 4) Aprobación Condicional de Holding Statements: Para crisis de extrema inmediatez, se autoriza la liberación de un mensaje de contingencia prediseñado y pre-aprobado jurídicamente con anterioridad, limitando la acción a completar datos fácticos corroborados (lugar, hora, canal de contacto).",
+  "findings": [
+    {
+      "claim_id": "P10-F21-C1",
+      "claim": "La continuidad operacional sin degradación de control se garantiza mediante subrogantes pre-acreditados, escalamiento vertical ascendente por vencimiento de SLA y el uso de plantillas pre-aprobadas, prohibiendo la auto-aprobación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "escalation_and_delegation_mechanisms",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 3 'Mecanismos Anti-Bloqueo y Continuidad Operacional'",
+          "retrieved_at": null,
+          "excerpt_short": "Escalamiento vertical automático por timeout de SLA hacia el superior jerárquico. Matriz de subrogantes predefinida por poder notarial corporativo. Prohibición estricta de bypass: la urgencia jamás habilita la publicación sin sign-off.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Presspage: Content Approval Workflow and Newsroom FAQ",
+          "source_id": "8758af9a-a962-4c5f-b878-886efa72e458",
+          "locator": "Section 'Workflow Escalation and Alternate Approvers'",
+          "retrieved_at": null,
+          "excerpt_short": "Automated delegation routes approval notifications to designated deputies when primary stakeholders are unavailable, logging the full chain of authority in the audit history.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "PECB: ISO 31000 Risk Management Principles and Guidelines",
+          "source_id": "1b6b3a4e-dcff-4e3e-9dab-b270d01805e8",
+          "locator": "Clause 5.4.2 'Accountability and Governance in Crisis Scenarios'",
+          "retrieved_at": null,
+          "excerpt_short": "Clear delegation frameworks must define who assumes decision-making power during crises to maintain risk boundaries without creating operational paralysis.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia plena entre estándares de gestión de riesgo ISO 31000 y prácticas de workflow editorial.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ticket pendiente de firma",
+      "Temporizador de SLA",
+      "Matriz de titulares y subrogantes"
+    ],
+    "actors": [
+      "Aprobador Titular",
+      "Aprobador Alterno",
+      "Superior Jerárquico",
+      "Motor de Escalamiento BRIDGE"
+    ],
+    "steps": [
+      "Envío de notificación de aprobación al titular con cuenta regresiva de SLA",
+      "Al 50% de tiempo vencido: Recordatorio de alta prioridad al titular y pre-alerta al subrogante",
+      "Al 100% de tiempo vencido sin acción: Transferencia formal del ticket al subrogante y escalamiento informativo al superior",
+      "Registro en bitácora inmutable de la causa de subrogación (Timeout automático)",
+      "Firma emitida por el subrogante con sello de delegado"
+    ],
+    "states": [
+      "WAITING_PRIMARY",
+      "PRE_ALERT_DELEGATE",
+      "ESCALATED_TO_DELEGATE",
+      "DELEGATE_SIGNED"
+    ],
+    "outputs": [
+      "Aprobación ejecutiva válida y trazable emitida dentro del tiempo límite"
+    ],
+    "exceptions": [
+      "Si titular y subrogante están ilocalizables en una crisis Nivel 1, la decisión recae directamente en el CEO o Comité de Crisis"
+    ]
+  },
+  "entities": [
+    "Matriz de Subrogancia",
+    "Escalamiento Vertical",
+    "SLA Timer",
+    "ISO 31000",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Aprobador Titular",
+      "to": "Aprobador Alterno",
+      "type": "DELEGATES_UPON_TIMEOUT"
+    },
+    {
+      "from": "SLA Timer",
+      "to": "Ticket",
+      "type": "TRIGGERS_ESCALATION"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Salteo informal de aprobador vs Escalamiento formal a subrogante",
+      "diferencia": "El salteo informal genera desprotección legal y pérdida de control; el escalamiento formal documenta quién asumió la responsabilidad bajo poderes previamente validados."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "delegation_rate": "% de mensajes firmados por subrogantes en lugar de titulares",
+    "sla_breach_prevention_rate": "% de cuellos de botella resueltos mediante escalamiento exitoso"
+  },
+  "bridge_implications": "BRIDGE debe implementar temporizadores en background y listeners de eventos para transferir automáticamente el token de aprobación al vencer el SLA.",
+  "open_gaps": [
+    "Configuración de alertas por canales críticos alternativos (e.g., SMS/WhatsApp corporativo) ante ausencias de respuesta en Slack/Email."
+  ],
+  "next_question_ids": [
+    "P10-F22",
+    "P10-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

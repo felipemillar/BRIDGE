@@ -1,0 +1,138 @@
+{
+  "question_id": "P07-F15",
+  "pilar": "P07",
+  "eje": "Mensajes y líneas aprobadas",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué procedimiento sigue una propuesta de mensaje cuando carece de aprobación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue un estricto protocolo de contención y gobernanza Human-in-the-Loop (HITL): 1) Bloqueo de salida externa: El mensaje queda inhabilitado para ser copiado, exportado a PDF o enviado a ejecutivos en terreno; 2) Etiquetado visual preventivo: Se despliega con marca de agua y badge ámbar 'PROPUESTA DE MENSAJE - REQUIERE VISADO HUMANO'; 3) Enrutamiento automático: Se genera un ticket en la bandeja de revisión del CCO o Asesoría Jurídica con la trazabilidad de fuentes y la justificación del algoritmo; 4) Resolución humana: El revisor humano puede aprobar, editar, o rechazar la propuesta con un comentario justificado; y 5) En caso de silencio o falta de visado previo a la interacción, el sistema aplica la regla de abstención: orienta al vocero a mantener silencio estratégico o remitirse a las posturas oficiales previamente consolidadas.",
+  "findings": [
+    {
+      "claim_id": "P07-F15-C1",
+      "claim": "Las propuestas de mensajes no aprobadas no pueden circular externamente y deben someterse a un flujo estructurado de revisión humana antes de ser habilitadas en el brief.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "hitl_governance_workflow",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 4.1 y Sección 6",
+          "excerpt_short": "Principio Obligatorio de Supervisión Humana: Nunca publicar ni usar en modo autónomo. Si una propuesta de mensaje sugerida por el LLM no tiene la firma del CCO o Legal, el sistema bloquea su exportación y emite una alerta roja: 'Línea no aprobada - Riesgo corporativo'. El vocero debe remitirse a las líneas previamente autorizadas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "PR Council: Ethical Standards and Guidelines for Generative AI",
+          "source_id": "f377819a-f643-4b8b-8c72-e531bd9d01ca",
+          "locator": "Sección 'Human Accountability and Review Mandates', p. 4-6",
+          "excerpt_short": "AI-generated messaging must remain provisional until human communicators verify accuracy, contextual sensitivity, and ethical compliance. Automated publishing or unverified executive briefing violates professional duties of diligence.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación obligatoria con los principios éticos del PR Council (2024) y el protocolo HITL de BRIDGE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "flujo_propuesta_no_aprobada": [
+      {
+        "etapa": "1. Generación y Detección",
+        "accion": "El motor de síntesis formula una propuesta ante una pregunta nueva sin registro previo; detecta ausencia de aprobación."
+      },
+      {
+        "etapa": "2. Cuarentena y Bloqueo",
+        "accion": "Estado 'PENDING_APPROVAL'; funciones de copiar y exportar desactivadas; marca de agua ámbar."
+      },
+      {
+        "etapa": "3. Notificación a Revisor",
+        "accion": "Alerta a CCO / Legal con panel de aprobación rápida (Aprobar / Editar / Rechazar)."
+      },
+      {
+        "etapa": "4. Resolución",
+        "accion": "Si es aprobada, pasa a estado 'APPROVED' con timestamp y firma digital. Si vence el plazo sin visado, se purga del brief final y se aplica abstención."
+      }
+    ]
+  },
+  "entities": [
+    "HITL Workflow",
+    "PR Council",
+    "CCO",
+    "Gerencia Legal",
+    "Cuarentena de Mensajes"
+  ],
+  "relations": [
+    {
+      "from": "Propuesta No Aprobada",
+      "to": "Cuarentena",
+      "type": "routed_to"
+    },
+    {
+      "from": "CCO",
+      "to": "Propuesta No Aprobada",
+      "type": "adjudicates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Flujo Tradicional por Correo vs Workflow HITL BRIDGE",
+      "diferencia": "El correo dispersa versiones y no bloquea el uso de borradores; el workflow de BRIDGE centraliza la trazabilidad e impide físicamente la salida del texto sin firma."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "quarantine_leakage": "0.0% de propuestas en cuarentena filtradas a briefs finales",
+    "review_sla": "< 15 minutos en gabinete de crisis"
+  },
+  "bridge_implications": "Construir en BRIDGE una bandeja de entrada de aprobaciones HITL con permisos diferenciados para CCO y abogados corporativos.",
+  "open_gaps": [
+    "Integración con sistemas corporativos de Single Sign-On (SSO) y firma electrónica avanzada."
+  ],
+  "next_question_ids": [
+    "P07-F16",
+    "P07-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

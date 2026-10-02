@@ -1,0 +1,179 @@
+{
+  "question_id": "P01-C12",
+  "pilar": "P01",
+  "eje": "Resultados y retorno de valor",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué sigue sin prueba sobre resultados y retorno de valor, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba: 1) la cuantificación monetaria exacta de 'evitar una hora de contradicción comunicacional durante una crisis'; 2) la validación empírica en entornos reales de la hipótesis de ahorro de tiempo en minutas (HT-2); 3) la disposición a pagar (WTP) y las condiciones técnicas de compra requeridas por CISOs y Fiscales en Chile. Fuentes fallidas: OECD Corporate Governance y Gregory & Willis 2019 (bloqueos técnicos). Fuentes parciales: PAC Benchmarking y Dircom ECE 2025 (demuestran presupuestos estables pero no entregan métricas unitarias de ROI por proyecto). Validación mínima: Fase 3 del plan de validación (Semanas 9 a 12), consistente en una prueba de concepto (PoC) de arquitectura VPC con un panel evaluador tripartito (CCO, CISO y Fiscal Legal) para auditar viabilidad técnica, seguridad y disposición a pagar.",
+  "findings": [
+    {
+      "claim_id": "P01-C12-C1",
+      "claim": "No existe en la literatura abierta una fórmula estandarizada y auditada que permita cuantificar en unidades monetarias el valor exacto de evitar una hora de contradicción pública corporativa, manteniéndose como un cálculo de reducción de riesgo cualitativo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Economía de la Reputación"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección: Vacíos de Prueba en Retorno Económico y ROI de Intangibles",
+          "excerpt_short": "No existe una fórmula matemática auditada que asigne una cifra monetaria a evitar una hora de contradicción comunicacional.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Revisión exhaustiva de literatura sobre medición de intangibles en P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C12-C2",
+      "claim": "Para resolver la incertidumbre de retorno de valor B2B y requisitos de adquisición, el plan de validación de P01 establece la Fase 3 (PoC y Evaluación de Arquitectura) con un panel tripartito de CCOs, CISOs y Fiscales Legales sobre un entorno de nube privada VPC.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Equipo Investigador BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección: Fase 3 del Plan de Validación Mínima (Semanas 9 a 12)",
+          "excerpt_short": "Presentación de prototipo de interfaz ejecutiva ante panel tripartito: CCO, CISO y Fiscal Legal.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño del experimento de validación B2B documentado en el dossier metodológico.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Prototipo funcional de asistente ejecutivo",
+      "Dossier técnico de arquitectura VPC",
+      "Matriz de preguntas de seguridad"
+    ],
+    "actors": [
+      "Equipo BRIDGE",
+      "CCO Evaluador",
+      "CISO Evaluador",
+      "Fiscal Legal Evaluador"
+    ],
+    "steps": [
+      "Despliegue de demo interactiva en entorno aislado",
+      "Auditoría de seguridad y cifrado por el CISO",
+      "Revisión de confidencialidad por el Fiscal Legal",
+      "Medición de disposición a pagar del CCO"
+    ],
+    "states": [
+      "Demo_Desplegada",
+      "Auditoria_Seguridad_En_Curso",
+      "Dictamen_Tripartito_Emitido"
+    ],
+    "outputs": [
+      "Matriz de Viabilidad de Retorno y Adquisición B2B"
+    ],
+    "exceptions": [
+      "Restricciones de gobernanza que prohíban pilotos con datos corporativos reales sin homologación previa de proveedor"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_POC_TRIPARTITA",
+      "type": "proceso_validacion",
+      "name": "Prueba de Concepto Trilateral (Fase 3)",
+      "aliases": [
+        "Validación de Retorno B2B y Arquitectura"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_POC_TRIPARTITA",
+      "predicate": "valida_viabilidad_comercial_de",
+      "object_id": "BRIDGE_Executive_Assistant",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C12-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Venta Directa a Usuario Final vs Validación Estructurada B2B",
+      "Venta B2C / SaaS Tradicional": "Convencer al usuario final para que ingrese tarjeta de crédito personal o corporativa.",
+      "Validación B2B Corporativa": "Superar el proceso formal de homologación con CISO y Legal demostrando retorno en control de riesgos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Estructurar la propuesta comercial de BRIDGE destacando el blindaje normativo y la compatibilidad con VPC para acelerar la aprobación de los comités de seguridad.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    "Fórmula económica validada para monetizar la mitigación de crisis comunicacionales.",
+    "Umbrales de precio y presupuesto disponible para herramientas de asistencia ejecutiva en empresas reguladas chilenas."
+  ],
+  "next_question_ids": [
+    "P01-C13",
+    "P01-C14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

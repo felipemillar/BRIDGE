@@ -1,0 +1,154 @@
+{
+  "question_id": "P04-C14",
+  "pilar": "P04",
+  "eje": "Búsqueda y respuesta fundada",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué sigue sin prueba sobre búsqueda y respuesta fundada, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Vacío e Incertidumbre: Sigue sin prueba empírica comparativa el balance óptimo entre latencia de respuesta y completitud analítica al contrastar Búsqueda Híbrida (ColBERT) vs GraphRAG sobre corpus de memorias anuales corporativas en español. GraphRAG requiere pre-computación de resúmenes de comunidad que insume alto costo de tokens y latencia de inferencia. Fuente Fallida: F-04: 'TruLens: The RAG Triad for Retrieval Evaluation' (inaccesible por restricción en servidor de documentación), suplida exitosamente por Es et al. (2023) RAGAS y Min et al. (2023) FActScore. Validación Mínima Requerida: Ejecución de la Etapa 3 de la agenda empírica en P04_GAPS_AND_VALIDATION: benchmark formal sobre 250 consultas complejas, midiendo latencia por consulta, costo de inferencia, Fidelidad Factual (FActScore) y exhaustividad temática (GraphRAG vs ColBERT).",
+  "findings": [
+    {
+      "claim_id": "P04-C14-C1",
+      "claim": "El trade-off costo-latencia entre GraphRAG y Búsqueda Híbrida ColBERT en memorias corporativas en español requiere validación comparativa mediante la suite de 250 consultas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Benchmark de Búsqueda P04"
+      },
+      "evidence": [
+        {
+          "source_id": "35dd0ce8-75f5-44fc-ab0a-ddf0b780a1ca",
+          "source_title": "P04_SOURCE_INDEX",
+          "original_url": null,
+          "locator": "Sección 3: Registro de Incidencias: F-04",
+          "excerpt_short": "F-04: TruLens: The RAG Triad: Restricción de acceso en sitio de documentación (unreachable). Suplida por Es et al. 2023 (RAGAS) y Min et al. 2023 (FActScore).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2: Costo Computacional de GraphRAG y Sección 4: Etapa 3",
+          "excerpt_short": "Ejecutar la suite de 250 consultas complejas contrastando Naive RAG vs Búsqueda Híbrida vs GraphRAG. Criterio de éxito: Fidelidad ≥ 0.95; Precisión de Cita ≥ 0.98.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Incidencia F-04 y diseño de benchmark formalmente especificados en P04_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Suite de 250 consultas de prueba",
+      "Corpus de memorias vectorizado y particionado en grafo"
+    ],
+    "actors": [
+      "Retrieval Benchmarker",
+      "Latency Profiler",
+      "Cost Auditor"
+    ],
+    "steps": [
+      "Ejecución de consultas en ambos modos",
+      "Medición de latencia de primer token y costo en dólares",
+      "Evaluación de fidelidad y completitud con RAGAS"
+    ],
+    "states": [
+      "Benchmarking_ColBERT",
+      "Benchmarking_GraphRAG",
+      "Comparison_Report_Generated"
+    ],
+    "outputs": [
+      "Matriz de compensación técnica para enrutamiento adaptativo de consultas"
+    ],
+    "exceptions": [
+      "Consultas globales donde ColBERT omite compromisos clave"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GAP_GRAPHRAG_BENCHMARK",
+      "type": "vacio_epistemico",
+      "name": "Vacío de Compensación Técnica GraphRAG vs ColBERT",
+      "aliases": [
+        "GraphRAG vs ColBERT Trade-Off Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GAP_GRAPHRAG_BENCHMARK",
+      "predicate": "orienta_enrutamiento_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C14-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Comportamiento del motor",
+      "ColBERT Híbrido": "Ultrarrápido (< 300 ms) y exacto en cifras puntuales, pero limitado en agregaciones de 5 años.",
+      "GraphRAG": "Exhaustivo en síntesis globales multi-documento, pero con latencia superior a 3 segundos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe implementar un enrutador inteligente que reserve GraphRAG para síntesis transversales y use ColBERT para preguntas de cifras puntuales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP-P04-07",
+      "description": "Falta de perfilado empírico del costo-latencia de GraphRAG sobre memorias corporativas en español.",
+      "missing_information": "Telemetría de tiempo de ejecución y consumo de tokens comparando ColBERT vs GraphRAG en la suite de 250 consultas."
+    }
+  ],
+  "next_question_ids": [
+    "P04-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

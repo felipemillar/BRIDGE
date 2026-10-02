@@ -1,0 +1,138 @@
+{
+  "question_id": "P02-F20",
+  "pilar": "P02",
+  "eje": "Asuntos públicos y memoria de actores",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué diferencia el CRM legislativo del seguimiento comunitario, regulatorio o de prensa?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se diferencian en cuatro dimensiones estructurales: 1) CRM Legislativo / Lobby (Quorum, FiscalNote, Plural Policy): foco en incidencia política y votos en congresos; fuentes son proyectos de ley, enmiendas y gacetas; actores son parlamentarios, asesores y ministros; el registro es de reuniones de lobby, cartas institucionales y posturas legislativas; 2) Seguimiento Comunitario / Territorial (Borealis, Open Point, Simply Stakeholders): foco en Licencia Social para Operar (SLO) y desempeño socioambiental; fuentes son actas de mesas de diálogo, consultas OIT 169, reclamos de campo y GIS; actores son dirigentes comunales, vecinos y comunidades indígenas; el registro es de convenios socioambientales y mitigaciones de RCA; 3) Seguimiento Regulatorio / Compliance (FiscalNote, Polit-X, DataEQ): foco en adecuación normativa y gacetas de agencias; fuentes son diarios oficiales y resoluciones de superintendencias/CMF/SEA; actores son reguladores e inspectores; el registro es de obligaciones legales y calendarios de reporte; 4) Seguimiento de Prensa / Clipping & Listening (Litoralpress, Meltwater, Signal AI): foco en reputación mediática y detección de crisis; fuentes son prensa escrita, radio, TV y redes; actores son periodistas e influencers; el registro es de notas publicadas, volumen y sentimiento. La falla estructural actual es que operan en silos aislados: el CRM legislativo no sabe lo que ocurre en radios comunitarias, y el seguimiento de prensa no dialoga con los compromisos de la RCA ni con las posturas aprobadas.",
+  "findings": [
+    {
+      "claim_id": "P02-F20-C1",
+      "claim": "El mercado actual fragmenta la gestión de asuntos corporativos en cuatro silos desconectados (legislativo, territorial, regulatorio y de prensa), impidiendo que una alerta de medios se cruce en tiempo real con los compromisos territoriales o con el historial de lobby de la empresa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Mercado de Software de Corporate Affairs"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Cuadro Comparativo: CRM Legislativo vs SRM Comunitario vs Clipping",
+          "excerpt_short": "Los cuatro arquetipos operan en silos aislados sin comunicación entre el monitoreo externo y los compromisos de campo.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:34:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Taxonomía funcional de mercado documentada en los informes de investigación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Proyectos de ley",
+      "Actas de campo territoriales",
+      "Resoluciones CMF/SEA",
+      "Clipping radial"
+    ],
+    "actors": [
+      "Equipo Legislativo",
+      "Equipo Territorial",
+      "Equipo Legal",
+      "Equipo de Comunicaciones"
+    ],
+    "steps": [
+      "Operación independiente en 4 herramientas separadas",
+      "Falta de interoperabilidad",
+      "Desalineamiento en crisis ante preguntas de prensa cruzadas"
+    ],
+    "states": [
+      "Silos_Inconexos",
+      "Informacion_Fragmentada",
+      "Vulnerabilidad_Reputacional"
+    ],
+    "outputs": [
+      "Cuatro reportes dispersos que no se consolidan para la alta dirección"
+    ],
+    "exceptions": [
+      "Consolidación manual artesanal mediante minutas en Word antes de comités de crisis"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SILOS_CORPORATIVOS",
+      "type": "patologia_operativa",
+      "name": "Silos Operativos de Asuntos Corporativos",
+      "aliases": [
+        "Cuatro Arquetipos Desconectados"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SILOS_CORPORATIVOS",
+      "predicate": "fragmenta_gestion_de",
+      "object_id": "Direccion_Asuntos_Corporativos",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F20-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de Silos vs Enfoque Integrado BRIDGE",
+      "Enfoque Tradicional": "Comprar Quorum para lobby, Borealis para territorio y Meltwater para prensa (3 contratos sin conexión).",
+      "Enfoque BRIDGE": "Una sola plataforma con enlace relacional entre ley, territorio, regulación y medios."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "La propuesta de valor diferencial de BRIDGE consiste en unificar los 4 arquetipos en un solo grafo relacional.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F21",
+    "P02-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:34:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

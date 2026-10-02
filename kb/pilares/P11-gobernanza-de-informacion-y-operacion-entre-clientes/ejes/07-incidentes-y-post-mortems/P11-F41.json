@@ -1,0 +1,176 @@
+{
+  "question_id": "P11-F41",
+  "pilar": "P11",
+  "eje": "Incidentes y post-mortems",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre incidentes y post-mortems?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos, criterios y obligaciones operativas sobre gestión de incidentes y post-mortems están fundamentados en una sólida red de fuentes primarias vinculantes y estándares técnicos globales: 1) NIST SP 800-61 Rev. 3 (2024): Guía de referencia sobre el ciclo de vida de manejo de incidentes de ciberseguridad, delimitando las fases de preparación, detección/análisis, contención rápida, erradicación y actividades post-incidente, así como el principio de sanitización de información compartida (Sección 3.5); 2) BCN Chile: Ley N° 21.663 Ley Marco de Ciberseguridad (Publicada el 08-04-2024): Respalda la obligatoriedad jurídica ineludible de reportar ciberataques e incidentes con efecto significativo al CSIRT Nacional dentro del plazo máximo perentorio de 3 horas (Artículo 24); 3) BCN Chile: Ley N° 21.719 Protección de Datos Personales (Promulgada 2024, en vacatio legis hacia fines de 2026): Establece el deber del responsable y encargado de reportar vulneraciones de seguridad a la Agencia de Protección de Datos en un plazo máximo de 72 horas (Artículo 15); 4) OWASP GenAI: Top 10 for Large Language Model Applications 2025: Documenta las tipologías de fallo emergentes en sistemas de IA generativa (LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure) y sus contramedidas de aislamiento contextual; y 5) P11_RESEARCH_DOSSIER (Sección 7): Articula estos requerimientos en la arquitectura de BRIDGE mediante scrubbers de salida, timers regresivos de notificación y creación de casos de prueba sintéticos para post-mortems.",
+  "findings": [
+    {
+      "claim_id": "P11-F41-C1",
+      "claim": "La gobernanza de incidentes se fundamenta en NIST SP 800-61 Rev. 3, la Ley 21.663 (notificación en 3 horas al CSIRT), la Ley 21.719 (notificación en 72 horas a la Agencia) y el estándar OWASP GenAI Top 10 2025.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "sources_lineage_incident_management",
+      "evidence": [
+        {
+          "source_title": "NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management",
+          "source_id": "1a1681bf-4024-4cbf-ab85-af3903a784ff",
+          "locator": "Section 3 'Incident Handling Lifecycle'",
+          "retrieved_at": null,
+          "excerpt_short": "A structured incident response process establishes coordination, swift containment, evidence preservation, and mandatory compliance with legal reporting mandates.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.663 Ley Marco de Ciberseguridad e Infraestructura Crítica",
+          "source_id": "ee032cb3-abe5-4440-948f-815a9b4fbe78",
+          "locator": "Artículo 24",
+          "retrieved_at": null,
+          "excerpt_short": "Las instituciones y operadores deberán notificar al CSIRT Nacional los ciberataques e incidentes de ciberseguridad que puedan tener efectos significativos en el plazo máximo de tres horas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Artículo 15",
+          "retrieved_at": null,
+          "excerpt_short": "Vulneraciones de seguridad deberán notificarse a la Agencia en el plazo de setenta y dos horas de haber tomado conocimiento de ellas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "OWASP GenAI: Top 10 for Large Language Model Applications 2025",
+          "source_id": "83d92341-65c3-4adf-877a-8cf4b4cd29f2",
+          "locator": "LLM01 & LLM02",
+          "retrieved_at": null,
+          "excerpt_short": "Adversarial prompts and context leakage represent primary vectors requiring continuous monitoring and real-time egress filtering.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación exhaustiva de fuentes normativas primarias de Chile y estándares de seguridad de computación federal e internacional.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Legislación chilena",
+      "Publicaciones especiales NIST",
+      "Marcos OWASP GenAI"
+    ],
+    "actors": [
+      "Analista de Seguridad",
+      "Abogado Corporativo",
+      "Auditor de Normativa"
+    ],
+    "steps": [
+      "Revisión de textos legales publicados en el Diario Oficial de Chile",
+      "Cotejo de estándares técnicos internacionales emitidos por NIST y OWASP",
+      "Verificación de las fechas de entrada en vigencia y vacatio legis",
+      "Registro sistemático de citas textuales y números de artículos en la matriz de evidencia",
+      "Alineación de los procedimientos operativos de BRIDGE con dichas fuentes"
+    ],
+    "states": [
+      "LEGAL_SOURCE_CHECKED",
+      "TECHNICAL_STANDARD_MAPPED",
+      "EVIDENCE_CONFIRMED"
+    ],
+    "outputs": [
+      "Catálogo de respaldo legal y normativo incontestable que protege la validez de los procedimientos"
+    ],
+    "exceptions": [
+      "Ninguna. Las leyes de la República de Chile y estándares federales citados son textos oficiales públicos e inmutables"
+    ]
+  },
+  "entities": [
+    "Ley N° 21.663",
+    "Ley N° 21.719",
+    "NIST SP 800-61 Rev. 3",
+    "OWASP GenAI Top 10",
+    "CSIRT Nacional"
+  ],
+  "relations": [
+    {
+      "from": "Ley N° 21.663",
+      "to": "CSIRT Nacional",
+      "type": "MANDATES_REPORTING_TO"
+    },
+    {
+      "from": "NIST SP 800-61 Rev. 3",
+      "to": "Respuesta a Incidentes",
+      "type": "STANDARDIZES_LIFECYCLE_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir plazos arbitrarios de la industria vs Aplicar los plazos legales de la Ley 21.663 y 21.719",
+      "diferencia": "Los plazos arbitrarios exponen a sanciones de la autoridad; la adhesión exacta al estándar de 3 horas de la Ley 21.663 y 72 horas de la Ley 21.719 asegura el cumplimiento regulatorio."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "statutory_source_traceability_rate": "100% de citas vinculadas a leyes oficiales y publicaciones técnicas",
+    "statutory_accuracy_score": "1.0 en interpretación de plazos de reporte"
+  },
+  "bridge_implications": "Garantiza que BRIDGE opere bajo un marco de absoluta legalidad y cumplimiento ante los reguladores de ciberseguridad y protección de datos en Chile.",
+  "open_gaps": [
+    "Monitoreo de la publicación de reglamentos complementarios de la Ley 21.663 por parte de la Agencia Nacional de Ciberseguridad (ANCI)."
+  ],
+  "next_question_ids": [
+    "P11-F42",
+    "P11-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

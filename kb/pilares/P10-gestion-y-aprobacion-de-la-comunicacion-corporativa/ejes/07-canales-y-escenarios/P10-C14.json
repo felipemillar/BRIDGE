@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-C14",
+  "pilar": "P10",
+  "eje": "Canales y escenarios",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué sigue sin prueba sobre canales y escenarios, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "1) Lo que sigue sin prueba de campo es la efectividad de las medidas de mitigación cuando un medio extranjero en una zona horaria adelantada (e.g., Londres o Tokio) rompe unilateralmente un embargo global de prensa, midiendo la velocidad para neutralizar la asimetría de información en el mercado local antes de la apertura bursátil en Santiago; 2) Fuentes fallidas o parciales: La fuente ContentGrip (4b3bd2de) es parcial porque asume cumplimiento voluntario y pacífico de los embargos por parte de periodistas sin modelar respuestas de contingencia automatizadas ante rupturas maliciosas; y 3) Validación mínima para resolver la incertidumbre: Conducir un ejercicio de ruptura de embargo simulada en el cual un nodo de prueba libere la noticia 60 minutos antes de la hora fijada, midiendo la latencia de los webhooks de BRIDGE para detectar la publicación no autorizada, levantar de inmediato el embargo en todos los canales restantes y despachar la postura oficial a los reguladores en menos de 120 segundos.",
+  "findings": [
+    {
+      "claim_id": "P10-C14-C1",
+      "claim": "La respuesta automatizada ante rupturas maliciosas de embargos por medios foráneos carece de métricas de campo; ContentGrip es parcial al asumir cumplimiento voluntario, requiriéndose una simulación de ruptura de embargo.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "embargo_breach_contingency_gaps",
+      "evidence": [
+        {
+          "source_title": "P10_GAPS_AND_VALIDATION: Vacios, Hipotesis y Validacion",
+          "source_id": "1bdee7c1-95df-4848-ba8e-74ff3eaca685",
+          "locator": "Sección 'Brechas en Gestión de Rupturas de Embargo'",
+          "retrieved_at": null,
+          "excerpt_short": "Vacío en contingencia de embargos: Falta modelamiento de respuesta automatizada ante filtraciones que rompen el embargo internacionalmente. Validación: Simulación con detección por webhooks y liberación acelerada.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "ContentGrip: Practical PR Workflow - Staging, Embargoes and Multi-Channel Distribution",
+          "source_id": "4b3bd2de-e375-4ca4-a494-8adce9b0d5a5",
+          "locator": "Section 'Embargo Agreements and Honor Codes'",
+          "retrieved_at": null,
+          "excerpt_short": "Embargoes rely on professional courtesy and formal agreements; systemic technical responses to rogue early releases are typically ad-hoc.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación de vacíos técnicos en plataformas PR y coherencia con P10_GAPS_AND_VALIDATION.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Comunicado embargado hasta las 12:00 PM",
+      "Simulación de ruptura de embargo a las 11:15 AM",
+      "Webhooks de escucha de medios"
+    ],
+    "actors": [
+      "Centinela de Medios BRIDGE",
+      "Motor de Despacho de Emergencia",
+      "Oficial de Prensa de Guardia"
+    ],
+    "steps": [
+      "Detección de publicación anticipada en medio externo mediante rastreo de texto",
+      "Disparo automático de alerta de ruptura de embargo en el kernel de BRIDGE",
+      "Cancelación inmediata de la restricción de horario de embargo para los canales restantes",
+      "Despacho simultáneo acelerado a CMF, newswires globales y redes corporativas",
+      "Medición del tiempo total de reacción del sistema"
+    ],
+    "states": [
+      "EMBARGO_ACTIVE",
+      "BREACH_DETECTED",
+      "EMBARGO_LIFTED_EARLY",
+      "MASS_DISPATCH_COMPLETED"
+    ],
+    "outputs": [
+      "Asimetría informativa neutralizada en tiempo récord"
+    ],
+    "exceptions": [
+      "Si la ruptura fue un error menor de tipeo sin impacto material, el oficial de prensa puede abortar el levantamiento automático"
+    ]
+  },
+  "entities": [
+    "Ruptura de Embargo",
+    "ContentGrip",
+    "Webhook de Escucha",
+    "P10_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Ruptura de Embargo",
+      "to": "Levantamiento Automático",
+      "type": "TRIGGERS_ACCELERATED_RELEASE"
+    },
+    {
+      "from": "Simulación",
+      "to": "Incertidumbre",
+      "type": "RESOLVES_EMPIRICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Llamadas telefónicas de pánico tras romperse un embargo vs Liberación automática de BRIDGE",
+      "diferencia": "Las llamadas de pánico tardan horas permitiendo desinformación; la liberación automática de BRIDGE restablece la verdad oficial en 120 segundos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "embargo_breach_response_latency_seconds": "Target < 120 segundos desde detección de ruptura hasta liberación masiva"
+  },
+  "bridge_implications": "Dota a BRIDGE de un escudo operativo único frente a la informalidad y la piratería informativa de medios digitales no regulados.",
+  "open_gaps": [
+    "Penalizaciones contractuales y listas negras automáticas de periodistas infractores."
+  ],
+  "next_question_ids": [
+    "P10-C15",
+    "P10-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

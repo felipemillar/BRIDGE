@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-F37",
+  "pilar": "P07",
+  "eje": "Viabilidad comercial en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué formatos y estilos requiere una audiencia con autoridad chilena o comunidad local?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Requiere dos formatos y registros discursivos marcadamente diferenciados: 1) Audiencia con Autoridad Pública Chilena (Ministros, Subsecretarios, Directores SMA o CMF): Registro técnico, sobrio, formal e institucional; minutas ejecutivas de 1 a 2 páginas con citas exactas a Resoluciones de Calificación Ambiental (RCA), códigos de expedientes administrativos y referencias a leyes orgánicas; sujeción estricta a la Ley 20.730 de Lobby con registro previo y posterior en la plataforma InfoLobby.cl; y 2) Reunión con Comunidad Local o Vecinal: Registro horizontal, cercano, empático y transparente; eliminación de tecnicismos crípticos y jergas financieras; foco en la calidad de vida cotidiana (polvo, ruidos, empleo local, seguridad del agua); uso de material infográfico y cartográfico intuitivo; y respeto ceremonial a líderes sociales y autoridades indígenas ancestrales.",
+  "findings": [
+    {
+      "claim_id": "P07-F37-C1",
+      "claim": "La efectividad del brief ejecutivo en Chile exige adaptar el formato discursivo y documental entre la sobriedad técnica regulatoria ante el Estado y la cercanía transparente ante comunidades territoriales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "local_audience_formats",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 5 (Particularidades de Aplicación en Chile y Latinoamérica)",
+          "excerpt_short": "En Chile, la preparación ejecutiva no puede limitarse a fórmulas anglosajonas genéricas. Ante autoridades de gobierno rige la formalidad técnica y el registro obligatorio en InfoLobby (Ley 20.730). Ante comunidades vecinales y pueblos originarios, el lenguaje distante o legalista es percibido como prepotencia; se exige diálogo transparente anclado a compromisos tangibles de inversión territorial.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 20.730 Regula el Lobby y Gestiones Particulares",
+          "source_id": "3fddd00a-c0ca-418b-83a7-d5c207c88bea",
+          "locator": "Artículos 5, 7 y 8",
+          "excerpt_short": "Toda audiencia concedida por un sujeto pasivo para promover o defender un interés particular debe ser consignada en los registros públicos de lobby, especificando individualización del lobbista o gestor de intereses, materia tratada y personas representadas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Articulación directa entre la ley chilena de lobby y las especificaciones operativas del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "formatos_diferenciados_chile": {
+      "Audiencia_Autoridad_Estatal": {
+        "estilo": "Formal, técnico, legal-institucional.",
+        "documento": "Minuta ejecutiva de 2 páginas con expedientes SMA/CMF y número de RCA.",
+        "protocolo": "Verificación y carga de datos para formulario InfoLobby."
+      },
+      "Asamblea_Comunitaria_Local": {
+        "estilo": "Horizontal, empático, sin tecnicismos.",
+        "documento": "Ficha infográfica de compromisos hídricos y monitoreo visual.",
+        "protocolo": "Respeto a autoridades tradicionales y acuerdos de mesa de trabajo previa."
+      }
+    }
+  },
+  "entities": [
+    "Ley 20.730",
+    "InfoLobby",
+    "RCA",
+    "Comunidades Locales",
+    "P07_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Ley 20.730",
+      "to": "Audiencia con Autoridad",
+      "type": "regulates"
+    },
+    {
+      "from": "Asamblea Comunitaria",
+      "to": "Licencia Social",
+      "type": "determines"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Minuta Regulatoria vs Ficha Comunitaria",
+      "diferencia": "La minuta regulatoria acredita estricta legalidad administrativa; la ficha comunitaria construye confianza y legitimidad social compartida."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "infolobby_compliance_rate": "100% de audiencias con reporte precargado",
+    "jargon_density_community": "< 5% de términos técnicos en guiones comunitarios"
+  },
+  "bridge_implications": "Programar en BRIDGE dos generadores de salida discursiva: 'Modo Autoridad Pública / Lobby' y 'Modo Diálogo Territorial Comunitario'.",
+  "open_gaps": [
+    "Adaptación de materiales para traducción simultánea a lenguas originarias (Quechua, Aymara, Mapuzungun)."
+  ],
+  "next_question_ids": [
+    "P07-F38",
+    "P07-F39"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

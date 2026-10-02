@@ -1,0 +1,143 @@
+{
+  "question_id": "T01-F34",
+  "pilar": "T01",
+  "eje": "Atribución de valor e impacto",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar atribución de valor e impacto de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la atribución de valor e impacto requiere un esquema relacional estricto compuesto por: 1) Entidad Eslabón_Valor: Clasificación en una de las cuatro categorías AMEC (Output, Outtake, Outcome, Impact), grado de control del software (Directo, Parcial, Nulo/Exógeno) y horizonte temporal; 2) Entidad Métrica_Atribución: Nombre del indicador, fórmula de cálculo, tasa de causalidad atribuible a la tecnología (%), e inventario de variables confusoras concurrentes; 3) Entidad Evidencia_Impacto: Trazas de telemetría que acreditan el outcome operativo (horas ahorradas, actas de aprobación legal aceleradas); 4) Relaciones de Causalidad: Conexiones dirigidas exclusivamente entre eslabones adyacentes (Output -> Outtake -> Outcome) prohibiendo saltos directos no demostrados de Output a Impact reputacional; y 5) Condiciones de Integridad: Validación de que ninguna métrica categorizada como 'Impact' tenga asignada una tasa de causalidad tecnológica superior al 20% sin un diseño cuasiexperimental de diferencias en diferencias.",
+  "findings": [
+    {
+      "claim_id": "T01-F34-C1",
+      "claim": "El marco AMEC Integrated Framework (f7ad452c) exige que los modelos de datos de evaluación mantengan un grafo acíclico dirigido de causalidad donde los outputs no pueden mapearse directamente a impacto sin pasar por outcomes intermedios comprobados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020",
+        "region": "Global",
+        "actor": "AMEC Global"
+      },
+      "evidence": [
+        {
+          "source_id": "f7ad452c-58e4-47a4-81ba-7248495038a3",
+          "source_title": "AMEC - Integrated Evaluation Framework for Public Relations & Corporate Affairs",
+          "original_url": null,
+          "locator": "Graph Architecture of Value Attribution, p. 5",
+          "excerpt_short": "Attribution models must respect a strict sequence: outputs trigger outtakes, which enable outcomes, which ultimately contribute to impact. Skipping steps violates measurement integrity.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estructura formal de modelamiento de valor AMEC.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de JSON Schema de Atribución de Valor",
+      "Registros operacionales del piloto"
+    ],
+    "actors": [
+      "Data Architect",
+      "Auditor de Cumplimiento Deontológico"
+    ],
+    "steps": [
+      "Configurar el modelo relacional con las 4 entidades AMEC",
+      "Verificar que las relaciones sigan el grafo dirigido sin atajos causales",
+      "Ponderar el peso de atribución causal tecnológica en cada outcome",
+      "Generar reporte de atribución para auditoría de compuerta G2"
+    ],
+    "states": [
+      "CONFIGURACION_GRAFO",
+      "VALIDACION_RELACIONES",
+      "CALCULO_ATRIBUCION",
+      "INFORME_ESTRUCTURADO"
+    ],
+    "outputs": [
+      "Esquema estructurado de atribución de valor",
+      "Grafo relacional de valor"
+    ],
+    "exceptions": [
+      "Si un registro mapea un Output de software directamente a un cambio de valor bursátil, la relación se invalida de inmediato"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SCHEMA_ATRIBUCION",
+      "type": "documento",
+      "name": "Esquema Estructurado de Atribución de Valor",
+      "aliases": [
+        "Value Attribution Schema"
+      ]
+    },
+    {
+      "entity_id": "GRAFO_VALOR_AMEC",
+      "type": "documento",
+      "name": "Grafo Dirigido de Causalidad AMEC",
+      "aliases": [
+        "DAG Attribution Model"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SCHEMA_ATRIBUCION",
+      "predicate": "restringe_relaciones_segun",
+      "object_id": "GRAFO_VALOR_AMEC",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F34-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Consistencia estructural del grafo de valor",
+      "denominator": "Total aristas en el grafo de evaluación",
+      "target": "100% (cero saltos prohibidos)"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite presentar a comités de inversión un modelo econométrico transparente y verificable de la creación de valor.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F35",
+    "T01-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

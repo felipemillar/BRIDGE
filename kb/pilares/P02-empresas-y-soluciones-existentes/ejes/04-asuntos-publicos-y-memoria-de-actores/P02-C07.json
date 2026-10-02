@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-C07",
+  "pilar": "P02",
+  "eje": "Asuntos públicos y memoria de actores",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre asuntos públicos y memoria de actores, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan sobre la transferibilidad de los CRMs legislativos de origen estadounidense a la gestión de asuntos públicos en América Latina: 1) Discrepancia: Resúmenes preliminares trataban a Quorum y FiscalNote como herramientas inmediatamente adoptables para asuntos públicos en Chile; 2) Versión que prevalece: Las fuentes primarias y el análisis de vacíos de P02 demuestran que Quorum y FiscalNote están estrechamente acoplados al sistema político y legislativo de Washington, Westminster y Bruselas (proyectos de ley del Congreso estadounidense, gacetas federales y registros de lobby norteamericanos). En Chile y la región andina, carecen totalmente de ingesta para la plataforma de Ley de Lobby (InfoLobby), el Sistema de Evaluación de Impacto Ambiental (SEIA) y la tramitación legislativa de la Cámara y el Senado. Prevalece la distinción entre software de lobby político anglosajón y las necesidades de gestión comunitaria y regulatoria territorial en faenas de recursos naturales (cubiertas parcialmente por Borealis y Open Point).",
+  "findings": [
+    {
+      "claim_id": "P02-C07-C1",
+      "claim": "Los CRMs legislativos líderes (Quorum, FiscalNote) no son directamente transferibles a América Latina debido a la ausencia de conectores nativos con la normativa local (Ley de Lobby, SEIA en Chile).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / América Latina",
+        "actor": "Quorum, FiscalNote"
+      },
+      "evidence": [
+        {
+          "source_id": "5556e455-7c2c-458c-bcad-e0910d9ccc4e",
+          "source_title": "P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1",
+          "original_url": null,
+          "locator": "Public Affairs Software Jurisdictional Misalignment",
+          "excerpt_short": "Quorum and FiscalNote lack native ingestion for Chilean InfoLobby and environmental regulatory frameworks, rendering them ineffective for local compliance without heavy custom integration.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:44:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de catálogos de integración de Quorum y FiscalNote.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Marco regulatorio de Ley de Lobby chilena",
+      "Mapeo de APIs de Quorum",
+      "Requerimientos de compliance local"
+    ],
+    "actors": [
+      "Gerente de Asuntos Públicos",
+      "Consultor Regulatorio"
+    ],
+    "steps": [
+      "Evaluación de compatibilidad de esquemas de datos",
+      "Identificación de vacíos de integración institucional",
+      "Dictamen de adopción tecnológica"
+    ],
+    "states": [
+      "Compatibilidad_Evaluada",
+      "Vacio_Confirmado",
+      "Decision_Adoptada"
+    ],
+    "outputs": [
+      "Dictamen de no transferibilidad directa de CRMs anglosajones"
+    ],
+    "exceptions": [
+      "Desarrollo de conectores intermedios ad-hoc que eleven el costo de mantención"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_INFOLOBBY_CHILE",
+      "type": "plataforma_estatal",
+      "name": "Plataforma Ley de Lobby Chile",
+      "aliases": [
+        "InfoLobby"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_QUORUM",
+      "predicate": "no_posee_conector_con",
+      "object_id": "InfoLobby_Chile",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C07-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "CRM Legislativo Anglosajón vs Realidad de Asuntos Públicos en Chile",
+      "CRM Anglosajón": "Modelado sobre comités del Congreso de EE. UU. y donaciones de campaña PAC.",
+      "Realidad en Chile": "Regulada por Ley de Lobby estricta, audiencias públicas registradas y tramitación ambiental SEIA."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Relacionar",
+      "implication": "BRIDGE debe construir el módulo Relacionar con conectores nativos a InfoLobby y SEIA para liderar el mercado chileno.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-C08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:44:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

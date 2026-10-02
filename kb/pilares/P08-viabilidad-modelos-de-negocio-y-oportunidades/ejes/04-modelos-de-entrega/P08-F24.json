@@ -1,0 +1,152 @@
+{
+  "question_id": "P08-F24",
+  "pilar": "P08",
+  "eje": "Modelos de entrega",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra modelos de entrega sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado es el 'Protocolo de Respuesta Rápida de Aguas del Valle S.A. ante Contingencia Hídrica': Entradas: 1) Rotura imprevista de matriz matriz en sector urbano con afectación a 45.000 clientes residenciales y hospital regional; 2) Cobertura en vivo de canales de televisión y declaraciones del Delegado Presidencial exigiendo sanciones; 3) Contrato Tech-Enabled vigente de la empresa con BRIDGE por USD 5.500/mes; y 4) La plataforma genera automáticamente a los 45 segundos el primer borrador de brief con resumen de noticias, antecedentes técnicos de la red y compromisos de la ficha de emergencia de la SISS (Superintendencia de Servicios Sanitarios). Resultado Esperado: El analista senior asignado de BRIDGE recibe el borrador, verifica los antecedentes en el portal de la SISS, formula la línea roja ('no especular sobre compensaciones hasta informe pericial técnico') y entrega el brief pulido al CCO a los 35 minutos del inicio del incidente, permitiendo una vocería exitosa del Gerente General ante la prensa y evitando multas por entrega tardía de información.",
+  "findings": [
+    {
+      "claim_id": "P08-F24-C1",
+      "claim": "El caso de la contingencia sanitaria ilustra el funcionamiento integral del modelo Tech-Enabled: velocidad algorítmica inicial combinada con rigor humano en la formulación de líneas rojas bajo extrema presión.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "delivery_model_case_study",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 4.5 'Caso Operativo: Protocolo de Respuesta Rápida en Utilities'",
+          "excerpt_short": "Caso de contingencia crítica en servicios sanitarios: Ante la rotura mayor de una matriz de agua potable con impacto masivo, la empresa activa el protocolo de BRIDGE. El motor algorítmico agrupa el monitoreo de redes y televisión en 45 segundos y genera el mapa de actores afectados. A las 07:15 AM, el analista senior asignado revisa las exigencias del protocolo de la SISS, ajusta los mensajes de vocería y define la línea roja institucional. A las 07:45 AM (30 minutos después), el CCO y el Gerente General cuentan con el brief ejecutivo completo en sus teléfonos móviles, saliendo al aire con datos exactos y mitigando una crisis reputacional de proporciones.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 5.2 'Tiempos de Respuesta en Casos de Emergencia'",
+          "excerpt_short": "El caso de la empresa sanitaria demuestra que la latencia combinada (SaaS + HITL) inferior a 40 minutos en situaciones de emergencia crítica es el factor determinante para la renovación de los contratos corporativos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso modelado con precisión de tiempos y flujos en el dossier y adición de calidad de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alerta de medios",
+      "Información técnica de faenas",
+      "Ficha de emergencia SISS",
+      "Declaraciones de autoridades"
+    ],
+    "actors": [
+      "Aguas del Valle S.A.",
+      "CCO / Gerente General",
+      "Analista Senior BRIDGE",
+      "Superintendencia de Servicios Sanitarios (SISS)"
+    ],
+    "steps": [
+      "Detección y borrador inicial por BRIDGE (45 seg)",
+      "Revisión humana, cruce normativo y línea roja (30 min)",
+      "Despacho a teléfonos móviles de ejecutivos",
+      "Vocería informada y control de daños"
+    ],
+    "states": [
+      "Incidente Detectado",
+      "Briefing Algorítmico",
+      "Revisión Humana Express",
+      "Crisis Controlada"
+    ],
+    "outputs": [
+      "Brief ejecutivo de emergencia en 35 minutos",
+      "Minuta de vocería alineada"
+    ],
+    "exceptions": [
+      "Falla de conectividad móvil en terreno mitigada mediante envío de SMS con enlace seguro de contingencia"
+    ]
+  },
+  "entities": [
+    "Aguas del Valle S.A.",
+    "SISS",
+    "Delegado Presidencial",
+    "BRIDGE Tech-Enabled",
+    "Línea Roja Institucional"
+  ],
+  "relations": [
+    {
+      "from": "Aguas del Valle",
+      "to": "BRIDGE Tech-Enabled",
+      "type": "activates"
+    },
+    {
+      "from": "Analista Senior BRIDGE",
+      "to": "Definición de Línea Roja",
+      "type": "authors"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Tiempo de respuesta ante crisis",
+      "diferencia": "Agencia tradicional = 4-6 horas para convocar al equipo; BRIDGE Tech-Enabled = 35 minutos con brief completo y validado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "crisis_response_time": "35 minutos desde el incidente",
+    "reputational_damage_avoided": "Evitación de multas SISS por desinformación (hasta 1.000 UTA)"
+  },
+  "bridge_implications": "Crear una plantilla de 'Briefing de Contingencia Crítica' en BRIDGE optimizada para consumo en teléfonos móviles con botones de acceso directo a datos clave.",
+  "open_gaps": [
+    "Integrar alertas directas por WhatsApp Business API con cifrado para comités de crisis."
+  ],
+  "next_question_ids": [
+    "P08-F25",
+    "P08-F26"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

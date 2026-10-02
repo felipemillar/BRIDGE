@@ -1,0 +1,145 @@
+{
+  "question_id": "P04-F13",
+  "pilar": "P04",
+  "eje": "Ontología y relaciones",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué entidades y relaciones son necesarias para representar la memoria corporativa?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar la memoria corporativa exige un Grafo de Conocimiento (Knowledge Graph) compuesto por 7 clases maestras de entidades y sus relaciones dirigidas: 1) `org:Organization` (matriz, filiales, subsidiarias con RUT/LEI); 2) `corp:FacilityProject` (faenas operacionales, plantas industriales o proyectos con resoluciones ambientales); 3) `corp:PersonSpokesperson` (directores, ejecutivos y voceros con cargos y fechas de acreditación); 4) `corp:DocumentArtifact` (memorias, hechos esenciales, políticas, comunicados); 5) `corp:Statement` (declaraciones cualitativas y posturas); 6) `corp:Commitment` (metas cuantificadas y compromisos formales); y 7) `corp:Outcome` y `corp:Verification` (resultados anuales medidos y dictámenes de aseguramiento). Las relaciones indispensables incluyen: `org:hasSubOrganization`, `corp:operatesFacility`, `corp:wasStatedIn`, `prov:wasAttributedTo`, `prov:wasApprovedBy`, `corp:reportsProgressFor` y `corp:isAssuredBy`.",
+  "findings": [
+    {
+      "claim_id": "P04-F13-C1",
+      "claim": "El esquema ontológico para memoria corporativa requiere 7 clases de entidades maestras y relaciones dirigidas de atribución, operación, jerarquía y aseguramiento basadas en Schema.org, FIBO y W3C PROV-O.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura Ontológica P04"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.2: Ontología Corporativa: Entidades y Relaciones",
+          "excerpt_short": "Clases maestras: org:Organization, corp:DocumentArtifact, corp:Statement, corp:Commitment, corp:Outcome, corp:Verification, combinando Schema.org, FIBO y PROV-O.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "43848084-9400-43b5-9c06-8e59a8796622",
+          "source_title": "Schema.org: Organization Vocabulary and Entities",
+          "original_url": "https://schema.org/Organization",
+          "locator": "Properties: subOrganization, parentOrganization, member, employee",
+          "excerpt_short": "Defines semantic hierarchy between parent corporations, subsidiaries, departments and spokespersons.",
+          "source_date": "2024-03-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de estándares formales Schema.org, FIBO y ontología de arquitectura P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus documental corporativo"
+    ],
+    "actors": [
+      "Ontology Engineer",
+      "Entity Extractor",
+      "Graph DB Administrator"
+    ],
+    "steps": [
+      "Mapeo de esquema RDF/OWL",
+      "Extracción de entidades y atributos",
+      "Población y enlace de nodos en Neo4j / RDF TripleStore"
+    ],
+    "states": [
+      "Schema_Defined",
+      "Graph_Populated",
+      "Linked_Memory"
+    ],
+    "outputs": [
+      "Grafo de conocimiento corporativo consultable mediante Cypher / SPARQL"
+    ],
+    "exceptions": [
+      "Ambigüedad en denominación de filiales o acrónimos operativos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CORP_ONTOLOGY",
+      "type": "ontologia",
+      "name": "Ontología Maestra de Memoria Corporativa",
+      "aliases": [
+        "Corporate Memory Master Ontology"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CORP_ONTOLOGY",
+      "predicate": "estructura_grafo_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo conceptual",
+      "Base relacional tabular clásica": "Tablas aisladas de documentos sin modelar la red de filiales, vocerías e impactos.",
+      "Grafo Ontológico Semántico": "Red explícita de relaciones causales y jerárquicas navegable en múltiples saltos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe implementar este grafo como columna vertebral de conocimiento para resolver consultas complejas de múltiples entidades.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

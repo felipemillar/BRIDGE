@@ -1,0 +1,146 @@
+{
+  "question_id": "P04-F26",
+  "pilar": "P04",
+  "eje": "Ingesta y extracción",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué unidades de fragmentación preservan contexto y citas sin mezclar versiones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La arquitectura óptima de fragmentación es el 'Chunking Jerárquico de Dos Niveles' (Parent Document Retrieval): 1) Fragmentos Hijo (Child Chunks, 128 a 256 tokens): segmentos atómicos altamente enfocados en proposiciones individuales, métricas o filas de tabla, optimizados para coincidencia densa vectorial (embeddings) y búsqueda léxica (BM25); 2) Fragmentos Padre (Parent Chunks, 1.024 a 2.048 tokens o sección temática completa): conservan la totalidad del contexto discursivo, los supuestos de cálculo, el año del reporte y las notas al pie; 3) Regla de Enlace: la búsqueda semántica localiza el fragmento hijo pero entrega el fragmento padre al modelo de generación para redactar la respuesta; y 4) Aislamiento Estricto de Versiones: ningún fragmento puede combinar texto de dos documentos diferentes o de ejercicios contables distintos; cada fragmento hereda el `document_id` unívoco y el hash criptográfico del PDF de origen.",
+  "findings": [
+    {
+      "claim_id": "P04-F26-C1",
+      "claim": "El chunking jerárquico (Parent Document Retrieval) resuelve la tensión entre precisión de recuperación de fragmentos breves y completitud contextual de fragmentos extensos, evitando la contaminación cruzada entre versiones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Técnicas Avanzadas de RAG"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Fase 2: Parsing Estructurado y Segmentación Multi-Nivel",
+          "excerpt_short": "Parent-Document Chunking: segmentos pequeños de 128-256 tokens para recuperación densa precisa, mapeados a segmentos padre de 1.024-2.048 tokens para preservar contexto y notas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "93cd6e04-48bd-4b62-b39f-6784d75351da",
+          "source_title": "RAG for Large Language Models: A Survey (Gao et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2312.10997",
+          "locator": "Sección 2.1.2: Chunking Strategies",
+          "excerpt_short": "Hierarchical chunking methods like parent-child indexing maintain fine-grained retrieval sensitivity while providing rich surrounding context for generation.",
+          "source_date": "2023-12-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de literatura académica líder en RAG y arquitectura del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento estructurado en secciones"
+    ],
+    "actors": [
+      "Hierarchical Chunker",
+      "Vector Indexer",
+      "Context Assembly Worker"
+    ],
+    "steps": [
+      "División en secciones padre",
+      "Sub-segmentación en fragmentos hijo",
+      "Indexación cruzada mediante clave foránea parent_id",
+      "Alineación de metadatos de versión"
+    ],
+    "states": [
+      "Sectioned",
+      "Hierarchically_Chunked",
+      "Indexed"
+    ],
+    "outputs": [
+      "Índice vectorial y léxico jerárquico listo para recuperación"
+    ],
+    "exceptions": [
+      "Sección padre extremadamente extensa que excede la ventana de contexto"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_HIERARCHICAL_CHUNKER",
+      "type": "metodologia",
+      "name": "Chunking Jerárquico Parent-Child",
+      "aliases": [
+        "Parent Document Retrieval"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_HIERARCHICAL_CHUNKER",
+      "predicate": "organiza_fragmentos_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F26-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Comportamiento del recuperador",
+      "Chunking ciego de 500 tokens": "Corta párrafos a la mitad y separa la cifra del porcentaje de la meta final.",
+      "Chunking jerárquico": "Encuentra la cifra exacta y le proporciona al generador toda la sección con sus notas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe implementar chunking jerárquico para garantizar que las respuestas a voceros contengan todos los matices y advertencias legales de la sección.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

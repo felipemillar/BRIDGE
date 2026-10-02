@@ -1,0 +1,125 @@
+{
+  "question_id": "P05-F16",
+  "pilar": "P05",
+  "eje": "Niveles de métricas de comunicación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar niveles de métricas de comunicación de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar los niveles de métricas de comunicación de forma estructurada exige las siguientes especificaciones técnicas: 1) Variables formales: `metric_id`, `amec_tier` (1_Activity_Output, 2_Reach_Exposure, 3_Reception_Outtake, 4_Perception_Outcome, 5_Organizational_Impact), `indicator_name` (e.g. Menciones_Prensa, OTS_Estimado, Recall_Mensajes, Pulse_Score, Tasa_Litigiosidad_RCA), `denominator_type` (Contable_Observable, Muestra_Probabilistica, Estimacion_Modelada), `time_period`, `raw_value`, `normalized_score`, `causal_attribution_score` (0.0 a 1.0); 2) Categorías: Esfuerzo de comunicación (Outputs), Interacción de audiencia (Out-takes), Juicio actitudinal (Outcomes) y Desempeño institucional (Impact); 3) Relaciones formales: `precede_en_cadena_causal_a` (Nivel_i -> Nivel_i+1), `atribuye_resultado_a` (Outcome -> Estrategia), `controlado_por_variable` (Impacto -> FactoresExternos); 4) Condiciones de consistencia: Ningún reporte ejecutivo puede mostrar métricas de impacto de negocio (Nivel 5) sin enlazar los outcomes de percepción (Nivel 4) que justifican la cadena causal; proscripción total del campo `AVE` o `AdvertisingValue` en el esquema de la base de datos.",
+  "findings": [
+    {
+      "claim_id": "P05-F16-C1",
+      "claim": "El esquema estructurado de métricas de comunicación exige modelar explícitamente el nivel jerárquico AMEC y el tipo de soporte empírico del denominador.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Datos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "51cad286-c7a4-424e-a375-87ea9a1b660e",
+          "source_title": "AMEC: Integrated Evaluation Framework (IEF) & Taxonomy",
+          "original_url": "https://amecorg.com/amecframework/",
+          "locator": "Estructura del Framework Interactivo IEF",
+          "excerpt_short": "Organiza objetivos organizacionales, inputs, actividades, outputs, out-takes, outcomes e impacto en un esquema estructurado auditable.",
+          "source_date": "2022-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en la taxonomía oficial de AMEC integrada en la arquitectura de datos de BRIDGE.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Diccionario de datos de indicadores comunicacionales",
+      "Reglas de validación AMEC"
+    ],
+    "actors": [
+      "Administrador de Base de Datos",
+      "Especialista en Evaluación de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Definición de tablas relacionales de métricas",
+      "Configuración de llaves foráneas causales",
+      "Validación de esquemas JSON Schema"
+    ],
+    "states": [
+      "Schema_Drafted",
+      "Rules_Enforced",
+      "Table_Deployed"
+    ],
+    "outputs": [
+      "Esquema de métricas relacionales con restricciones de nivel"
+    ],
+    "exceptions": [
+      "Ingesta de datos de agencias externas que incluyen campos AVE no conformes"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_AMEC_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Métricas AMEC",
+      "aliases": [
+        "AMEC Database Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_AMEC_SCHEMA",
+      "predicate": "estructura_taxonomia_de",
+      "object_id": "ENT_AMEC_TAXONOMY",
+      "valid_from": "2022",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F16-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Modelo de Datos",
+      "implication": "BRIDGE debe codificar en su esquema SQL/ORM los 5 niveles AMEC como un tipo ENUM estricto, impidiendo la mezcla errónea de indicadores.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

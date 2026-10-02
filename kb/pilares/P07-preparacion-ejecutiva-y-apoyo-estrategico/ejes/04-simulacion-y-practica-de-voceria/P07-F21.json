@@ -1,0 +1,125 @@
+{
+  "question_id": "P07-F21",
+  "pilar": "P07",
+  "eje": "Simulación y práctica de vocería",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Cómo medir preparación del portavoz antes y después de la práctica?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se mide mediante un índice compuesto de madurez de vocería (Spokesperson Readiness Score, 0-100) evaluado en un protocolo Pre/Post práctica: 1) Medición Pre-Práctica (Baseline): Se somete al vocero a 3 preguntas adversariales sin preparación previa para registrar su tasa basal de aceptación de premisas falsas, tiempo de titubeo y desvío del Message House; 2) Intervención Formativa: Se le proporciona el brief ejecutivo de una página, los guiones de bridging y los datos auditados; 3) Medición Post-Práctica: Se reitera el ejercicio con variantes de preguntas para evaluar cuatro métricas cuantitativas: Delta de Adherencia al Mensaje (incremento porcentual en uso de proof points), Tasa de Salida de Trampas (% de puentes exitosos), Reducción de Latencia (segundos ahorrados para iniciar la respuesta) y Cumplimiento Normativo (cero incidentes de filtración bajo Ley 18.045); y 4) Umbral de Certificación: Se exige un score mínimo de 85/100 para autorizar al portavoz a conceder entrevistas en medios de alcance nacional.",
+  "findings": [
+    {
+      "claim_id": "P07-F21-C1",
+      "claim": "La efectividad del entrenamiento de vocería se valida científicamente comparando métricas objetivas de disciplina discursiva y neutralización de trampas en un diseño pre/post intervención.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "readiness_measurement",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 7 (Criterios de Calidad, Utilidad y Trazabilidad)",
+          "excerpt_short": "El índice de preparación del portavoz compara el desempeño pre y post práctica en cuatro variables: 1) Apego al Message House (de < 40% a > 80%); 2) Evasión de trampas capciosas (de < 30% a > 85%); 3) Reducción de afirmaciones no verificadas (de > 25% a 0%); y 4) Dominio del tiempo de soundbite (< 25 segundos).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "AMEC: Integrated Evaluation Framework for Public Affairs",
+          "source_id": "634ebc1c-dd54-453f-8187-2975050e8760",
+          "locator": "Sección 'Out-takes & Outcomes in Executive Preparedness', p. 6-9",
+          "excerpt_short": "Evaluation in executive communications requires measuring behavioral progression: assessing whether training interventions systematically improve organizational message delivery under crisis or scrutiny.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación de los principios de medición de AMEC (Barcelona Principles 3.0) y la rúbrica cuantitativa del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "protocolo_medicion_pre_post": {
+      "Fase_1_Baseline": "3 preguntas hostiles en frío -> Cálculo de Baseline Readiness Score.",
+      "Fase_2_Estudio_Brief": "Revisión guiada del brief de 1 página y datos del Message House (10 minutos).",
+      "Fase_3_Simulacion_Post": "Batería adversarial con 3 inyectores nuevos -> Cálculo de Post Readiness Score.",
+      "Formula_Delta": "Delta_Score = Post_Score - Pre_Score (meta institucional: Delta >= +25 puntos y Post_Score >= 85)."
+    }
+  },
+  "entities": [
+    "AMEC Framework",
+    "Spokesperson Readiness Score",
+    "Message Discipline Index",
+    "Baseline Pre-Test"
+  ],
+  "relations": [
+    {
+      "from": "AMEC Framework",
+      "to": "Spokesperson Readiness Score",
+      "type": "methodologically_grounds"
+    },
+    {
+      "from": "Delta_Score",
+      "to": "Certificación de Vocería",
+      "type": "validates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Opinión del Asesor vs Delta Cuantitativo Pre/Post",
+      "diferencia": "La opinión del asesor suele ser complaciente; el delta cuantitativo evidencia con datos si el vocero asimiló los mensajes clave o repite vicios discursivos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "target_post_score": ">= 85 / 100 puntos",
+    "minimum_delta_improvement": ">= +25 puntos respecto a la línea base"
+  },
+  "bridge_implications": "Incorporar en el módulo de vocería de BRIDGE el registro histórico de evolución del Spokesperson Readiness Score para cada ejecutivo de la compañía.",
+  "open_gaps": [
+    "Correlación longitudinal entre altos scores en simulación y coberturas periodísticas efectivas en el mundo real."
+  ],
+  "next_question_ids": [
+    "P07-F22",
+    "P07-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

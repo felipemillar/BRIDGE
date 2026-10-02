@@ -1,0 +1,135 @@
+{
+  "question_id": "P02-X03",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Adquisiciones y estructura de grupos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué filas deben fusionarse, conservarse como marca o quedar con propiedad no verificada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La reconciliación del atlas establece la categorización taxonómica de las 70 entidades comerciales: 1) Filas que deben fusionarse bajo su matriz comercial: Limbik (se consolida dentro de la fila de Burson Global / Burson Decipher); Memo (se consolida dentro de Signal AI); Converlens y Social Point (se consolidan bajo la fila matriz de Open Point Group); Darzin Software (se consolida bajo Simply Stakeholders, al ser la misma persona jurídica); 2) Entidades que deben conservarse como marcas comerciales separadas pero con anotación de grupo: Brandwatch (mantiene fila propia con nota de control por Cision / Platinum Equity, al operar interfaces y plataformas segregadas); Talkwalker (mantiene fila propia con nota de control por Hootsuite); Borealis (mantiene fila propia con nota de control por Irth Solutions); 3) Entidades que deben quedar con propiedad no verificada: Direct Signal (permanece clasificada con bandera de advertencia 'propiedad y sede legal no verificada' por falta de registro mercantil público).",
+  "findings": [
+    {
+      "claim_id": "P02-X03-C1",
+      "claim": "El atlas de mercado aplica reglas rigurosas de consolidación de filas: absorción completa para tecnologías integradas (Limbik, Memo), conservación de marcas con advertencia de grupo para plataformas segregadas (Brandwatch, Talkwalker, Borealis), y bandera de no verificación para Direct Signal.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Atlas de Reconciliación P02"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Entity Consolidation and Group Annotation Rules",
+          "excerpt_short": "Rules defining when acquired brands merge into a single row vs remaining as separate commercial entries with parent group metadata.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:48:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de las reglas de normalización del atlas de mercado.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo bruto de marcas y proveedores",
+      "Reglas de consolidación del atlas",
+      "Fichas de producto activo"
+    ],
+    "actors": [
+      "Auditor de Datos Maestros",
+      "Investigador de Mercado"
+    ],
+    "steps": [
+      "Identificación de filiales integradas",
+      "Fusión de registros tecnológicos",
+      "Anotación de relaciones de grupo económico",
+      "Marcado de entidades no verificadas"
+    ],
+    "states": [
+      "Registros_Brutos",
+      "Reglas_Aplicadas",
+      "Catalogo_Normalizado"
+    ],
+    "outputs": [
+      "Estructura canónica de 70 proveedores comerciales clasificados"
+    ],
+    "exceptions": [
+      "Empresas con múltiples marcas comerciales vendidas bajo la misma razón social"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CATALOGO_CANONICO_70",
+      "type": "catalogo_maestro",
+      "name": "Catálogo Maestro Canónico 70 Vendors P02",
+      "aliases": [
+        "Canonical 70 Atlas"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CATALOGO_CANONICO_70",
+      "predicate": "aplica_regla_de_fusion_a",
+      "object_id": "Limbik_y_Memo",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fusión Completa vs Marca Conservada con Grupo",
+      "Fusión Completa": "El producto adquirido ya no se vende por separado (e.g. Memo absorbido en Signal AI).",
+      "Marca Conservada con Grupo": "El cliente aún contrata y usa la plataforma bajo su nombre histórico (e.g. Brandwatch)."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Esta clasificación permite a BRIDGE entender si compite contra una startup ágil o contra una unidad de negocio de un conglomerado de PE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:48:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

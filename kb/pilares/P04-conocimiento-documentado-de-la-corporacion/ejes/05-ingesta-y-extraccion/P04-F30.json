@@ -1,0 +1,134 @@
+{
+  "question_id": "P04-F30",
+  "pilar": "P04",
+  "eje": "Ingesta y extracción",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra ingesta y extracción sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Canónico: Ingesta de la 'Tabla de Emisiones de GEI y Consumo Energético' (pág. 92 de la Memoria Integrada 2025). Entradas documentadas: PDF con tabla compleja que abarca dos páginas, con columnas para 'Alcance 1 (tCO2e)', 'Alcance 2 (tCO2e)', 'Intensidad Energética (GJ/ton)' para los años 2023, 2024 y 2025, incluyendo una nota al pie número (3): 'Emisiones de Alcance 2 calculadas según enfoque basado en mercado; excluye faena en cierre temporal'. Proceso de ingesta: 1) El layout parser identifica la tabla continua en dos páginas y la unifica; 2) Se extraen las celdas en formato Markdown estructurado con sus encabezados de columna intactos; 3) El validador aritmético comprueba que la suma de Alcance 1 + Alcance 2 coincida con la fila 'Total Emisiones Directas e Indirectas'; 4) El detector de notas resuelve la llamada (3) y la adosa como metadato al fragmento padre. Resultado esperado: El fragmento tabular se indexa sin errores; y ante la consulta '¿cuál fue la emisión Alcance 2 en 2025?', el sistema entrega la cifra exacta (e.g. '84.500 tCO2e') citando pág. 92 e incorporando textualmente la aclaración de la nota (3), sin alucinar que incluye la faena en cierre.",
+  "findings": [
+    {
+      "claim_id": "P04-F30-C1",
+      "claim": "El caso empírico de extracción tabular de GEI evidencia cómo la reconciliación multipágina y el anclaje de notas al pie previenen la generación de cifras erróneas o descontextualizadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Caso Extracción GEI Memoria 2025"
+      },
+      "evidence": [
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2: Limitaciones Metodológicas y Tecnológicas",
+          "excerpt_short": "Las tablas financieras consolidadas y las matrices de indicadores ESG frecuentemente abarcan múltiples páginas, con celdas combinadas y notas numeradas al pie.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso representativo de la dificultad real de ingesta identificada en P04_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tabla de emisiones multipágina de Memoria 2025"
+    ],
+    "actors": [
+      "Multi-Page Table Stitcher",
+      "Footnote Attacher",
+      "QA Auditor"
+    ],
+    "steps": [
+      "Costura de tabla en dos páginas",
+      "Comprobación de sumatorias",
+      "Adhesión de notas al pie",
+      "Generación de chunk jerárquico"
+    ],
+    "states": [
+      "Disjointed_Pages",
+      "Stitched_Table",
+      "Verified_And_Indexed"
+    ],
+    "outputs": [
+      "Chunk tabular con notas al pie listas para recuperación precisa"
+    ],
+    "exceptions": [
+      "Diferencia en número de columnas entre página 1 y página 2 de la tabla"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASE_TABLE_INGEST",
+      "type": "caso_empirico",
+      "name": "Caso Extracción Tabular Multipágina GEI",
+      "aliases": [
+        "Multi-Page Table Extraction Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASE_TABLE_INGEST",
+      "predicate": "valida_resiliencia_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F30-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Resultado de extracción",
+      "Parser estándar": "Omite la nota (3) y reporta la cifra como si cubriera la faena en cierre.",
+      "Parser sensible al layout": "Entrega la cifra correcta e incluye la restricción operativa de la nota (3)."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incluir la costura multipágina de tablas en su pipeline para manejar memorias CMF complejas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

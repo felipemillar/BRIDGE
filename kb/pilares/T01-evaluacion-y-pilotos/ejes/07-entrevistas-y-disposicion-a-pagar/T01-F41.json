@@ -1,0 +1,145 @@
+{
+  "question_id": "T01-F41",
+  "pilar": "T01",
+  "eje": "Entrevistas y disposición a pagar",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre entrevistas y disposición a pagar?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El diseño de entrevistas, diagnóstico de disposición a pagar y validación comercial se respalda en fuentes metodológicas primarias catalogadas en T01: 1) Van Westendorp (Price Sensitivity Meter Methodology, 1976, Fuente 6f83ad5e): Respalda la formulación de las 4 preguntas canónicas y la determinación del rango de precios aceptables; 2) SurveyMonkey (How To Use The Van Westendorp Price Sensitivity Meter, 2024, Fuente b62914e1): Respalda las reglas de monotonicidad de datos, limpieza de respuestas invertidas y cálculo del Point of Marginal Cheapness e Indifference Price Point; 3) Cooper (The Stage-Gate System, 2016-2025, Fuente 773f1a85): Respalda los criterios de compuerta comercial Gate 3, la identificación de presupuesto real y la detección de sesgos de complacencia y clientes complacientes; y 4) T01_QUALITY_ADDENDUM (Fuente 45782049, Sección 7): Respalda el requerimiento de uso semanal activo (WAP >= 70%) como precondición para validar cualquier testimonio cualitativo favorable.",
+  "findings": [
+    {
+      "claim_id": "T01-F41-C1",
+      "claim": "Las cuatro fuentes metodológicas principales proporcionan el 100% de la justificación técnica, econométrica y de gestión para estructurar las entrevistas de clientes y la prueba ácida de compra en el cuaderno T01.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1976-2026",
+        "region": "Global",
+        "actor": "Van Westendorp, SurveyMonkey, Cooper, T01 Addendum"
+      },
+      "evidence": [
+        {
+          "source_id": "6f83ad5e-474a-4e5a-b90f-89bc5cdc62f5",
+          "source_title": "Van Westendorp (1976) - Price Sensitivity Meter (PSM) Methodology",
+          "original_url": null,
+          "locator": "Full Methodology",
+          "excerpt_short": "Foundational methodology for indirect price sensitivity analysis.",
+          "source_date": "1976",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & Agile Integration",
+          "original_url": null,
+          "locator": "Gate 3 Implementation Protocols",
+          "excerpt_short": "Defines rigid criteria for commercial validation and budget verification.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el inventario canónico de fuentes de T01.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus bibliográfico T01",
+      "Catálogo de pasajes canónicos"
+    ],
+    "actors": [
+      "Auditor Antigravity"
+    ],
+    "steps": [
+      "Identificar citas textuales y números de fuente para cada principio",
+      "Verificar coherencia entre reglas de Van Westendorp y protocolos de Stage-Gate",
+      "Consolidar la tabla de fuentes del Eje 7",
+      "Asegurar trazabilidad absoluta para la síntesis de T01"
+    ],
+    "states": [
+      "VERIFICACION_CITAS",
+      "REVISION_COHERENCIA",
+      "TABLA_CONSOLIDADA"
+    ],
+    "outputs": [
+      "Tabla canónica de evidencia para entrevistas y pricing"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "PSM_SOURCES",
+      "type": "documento",
+      "name": "Corpus Van Westendorp y Cooper",
+      "aliases": [
+        "Fuentes 6f83ad5e y 773f1a85"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "PSM_SOURCES",
+      "predicate": "fundamenta_pricing_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F41-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de citación verificada en Eje 7",
+      "denominator": "Total afirmaciones metodológicas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Otorga credibilidad institucional frente a fondos de inversión y comités de adquisiciones.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

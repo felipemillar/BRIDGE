@@ -1,0 +1,182 @@
+{
+  "question_id": "P01-F48",
+  "pilar": "P01",
+  "eje": "Descubrimiento y validación de usuarios",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra descubrimiento y validación de usuarios sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso práctico de una PoC con una empresa minera o energética del IPSA en Chile ilustra el tema: con entradas de repositorios internos confidenciales (Memorias CMF NCG 461, RCA de faena, actas de directorio e InfoLobby histórico) y señales externas dinámicas (prensa regional, proyectos en el Congreso y alertas sociales), el sistema opera en una VPC privada aislada; el CCO valida que la minuta responde preguntas difíciles en 12 minutos cruzando compromisos de la RCA y la CMF sin contradicciones (validando HT-1 y HT-2); y el CISO y Fiscal Legal aprueban la arquitectura al constatar cero fuga de datos fuera del perímetro y pleno apego a la reserva legal (validando HT-3).",
+  "findings": [
+    {
+      "claim_id": "P01-F48-C1",
+      "claim": "En la PoC con una corporación minero-energética del IPSA, las entradas del piloto integran repositorios internos confidenciales (Memoria CMF NCG 461, RCA ambiental y actas previas de InfoLobby) cruzadas con señales dinámicas de prensa regional y seguimiento legislativo en tiempo real.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Empresa Minera / Energética IPSA"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 6: Configuración del Caso Práctico de Validación PoC",
+          "excerpt_short": "Entradas del piloto PoC: repositorios internos confidenciales (CMF NCG 461, RCA, InfoLobby) y señales externas en tiempo real.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:06:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño de caso práctico en el dossier P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F48-C2",
+      "claim": "Los resultados medidos en la PoC validan empíricamente las tres hipótesis de trabajo: HT-1 se valida al lograr 100% de coherencia verificable con compromisos históricos; HT-2 se valida al reducir el tiempo de elaboración de 4 horas a 12 minutos con 100% de citas trazables y cero alucinaciones; y HT-3 se valida al obtener la aprobación formal del CISO y Fiscal Legal en la matriz B2B mediante arquitectura VPC aislada.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "CCO, CISO y Fiscal Legal"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 6: Resultados Medidos en PoC que Validan Hipótesis HT-1 a HT-3",
+          "excerpt_short": "Validación empírica en PoC: 100% coherencia fáctica (HT-1), reducción a 12 min (HT-2) y aprobación formal de CISO/Legal en VPC (HT-3).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:06:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación de resultados medidos en el dossier.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria CMF NCG 461",
+      "RCA faena",
+      "InfoLobby histórico",
+      "Monitoreo social y de prensa"
+    ],
+    "actors": [
+      "CCO / Gerente de Asuntos Públicos",
+      "Gerente General",
+      "Fiscal Legal",
+      "CISO"
+    ],
+    "steps": [
+      "Despliegue de PoC en entorno VPC privado aislado",
+      "Cruce automatizado en 12 minutos de repositorios internos con señales externas",
+      "Generación de Briefing con Q&A y citas exactas a la RCA y Memoria CMF",
+      "Auditoría técnica de no-fuga y compliance por CISO y Fiscal Legal",
+      "Aprobación formal de compra B2B y validación de hipótesis HT-1, HT-2 y HT-3"
+    ],
+    "states": [
+      "Piloto_Iniciado",
+      "Briefing_Generado_12min",
+      "Auditoría_CISO_Exitosa",
+      "Hipótesis_Validadas"
+    ],
+    "outputs": [
+      "Briefing ejecutivo trazable",
+      "Informe de validación de HT-1 a HT-3",
+      "Acta de aprobación técnica CISO"
+    ],
+    "exceptions": [
+      "Detección de alucinación en modelo generativo no anclado a fuentes"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_POC_MINERA_IPSA",
+      "type": "caso_estudio",
+      "name": "Prueba de Concepto en Corporación Minero-Energética IPSA",
+      "aliases": [
+        "PoC de Validación P01-F48"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_POC_MINERA_IPSA",
+      "predicate": "valida_empiricamente",
+      "object_id": "HT-1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F48-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tiempo de elaboración de briefing medido en PoC",
+      "value": "12 minutos",
+      "denominator": "Tiempo previo artesanal de 4 horas",
+      "source_claim_id": "P01-F48-C2"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Actuar",
+      "implication": "Tomar la PoC de Minería/Energía IPSA como referencia metodológica estándar para los pilotos de implementación de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-C01",
+    "P01-C02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:06:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

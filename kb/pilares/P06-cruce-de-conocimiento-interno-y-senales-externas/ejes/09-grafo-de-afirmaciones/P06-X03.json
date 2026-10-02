@@ -1,0 +1,143 @@
+{
+  "question_id": "P06-X03",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Grafo de afirmaciones",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué consulta reconstruye por qué se emitió una alerta en una fecha concreta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La reconstrucción determinista de una alerta se ejecuta mediante una consulta de Linaje Causal en Grafo Temporal (T-GRAG / Palantir AIP; Li et al., 2025; Palantir 2024): La consulta recibe el `alert_id` y el timestamp $t_{alerta}$, ejecutando un recorrido retroactivo parametrizado: `MATCH (a:Alerta {id: $alert_id})-[:DETONADA_POR]->(s:SenalExterna)-[:CONFLICTS_WITH|VIOLATES]->(c:CompromisoInterno) WHERE c.valid_from <= $t_alerta AND (c.valid_to IS NULL OR c.valid_to >= $t_alerta) RETURN a, s, c, s.evidencia_id, c.evidencia_id`. Esta consulta extrae: 1) El evento o noticia externa que actuó como detonante (con su URL, timestamp de captura y score de relevancia); 2) El compromiso corporativo vigente en ese instante exacto contra el cual colisionó la señal; 3) La regla algorítmica o umbral de severidad que disparó la notificación; y 4) La instantánea inmutable del grafo en $t_{alerta}$, garantizando que cambios o desmentidos posteriores no alteren la justificación histórica de la alerta.",
+  "findings": [
+    {
+      "claim_id": "P06-X03-C1",
+      "claim": "Una consulta de grafos temporales con corte temporal $t_{alerta}$ reconstruye de forma 100% auditable la cadena causal que justificó la alerta.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "Auditoría de IA y Gobernanza"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": "https://arxiv.org/pdf/2508.01680",
+          "locator": "Section 4.1: Historical State Reconstruction & Point-in-Time Traversal",
+          "excerpt_short": "T-GRAG allows point-in-time subgraph retrieval. Querying the state at t_k returns the exact topology of active facts, enabling complete causal audit of decision triggers.",
+          "source_date": "2025-08-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "5168f7d7-3499-40e3-afc8-c6b216843f19",
+          "source_title": "Palantir AIP - Architecture Overview & Context Engineering",
+          "original_url": "https://palantir.com/docs/foundry/architecture-center/aip-architecture/",
+          "locator": "AIP Auditing & Lineage: Traceable Automated Decisions",
+          "excerpt_short": "AIP logs every prompt, retrieved context, and deterministic rule evaluation in an immutable audit ledger, ensuring that operations can be historically reproduced.",
+          "source_date": "2024-06-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Capacidad validada en el marco de Point-in-Time Retrieval de T-GRAG y auditabilidad de Palantir AIP.",
+      "epistemic_status_original": "modelo_operacional_probado",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "alert_id",
+      "timestamp_alerta"
+    ],
+    "actors": [
+      "Auditor de Riesgo Corporativo",
+      "Motor de Consulta Temporal Cypher/T-GRAG"
+    ],
+    "steps": [
+      "Recepción de identificador de alerta",
+      "Ejecución de recorrido de subgrafo en $t_{alerta}$",
+      "Recuperación de señal externa y compromiso interno",
+      "Generación del reporte de linaje causal de la alerta"
+    ],
+    "states": [
+      "Alert_Lookup",
+      "Point_in_Time_Filter",
+      "Causal_Chain_Resolved"
+    ],
+    "outputs": [
+      "Reporte de linaje de decisión y procedencia"
+    ],
+    "exceptions": [
+      "Alerta huérfana por purga de datos que viola política de retención"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ALERT_AUDIT",
+      "type": "proceso_auditoria",
+      "name": "Reconstrucción Causal de Alertas",
+      "aliases": [
+        "Alert Lineage Audit"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ALERT_AUDIT",
+      "predicate": "opera_sobre",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2025-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X03-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Permite responder a ejecutivos exactamente por qué el sistema notificó un riesgo de crisis sin invocar una 'caja negra'.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

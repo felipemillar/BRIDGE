@@ -1,0 +1,147 @@
+{
+  "question_id": "P05-F37",
+  "pilar": "P05",
+  "eje": "Doble materialidad y regulación",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Cómo se relacionan impactos sociales o ambientales con consecuencias financieras y reputacionales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La relación causal entre impactos sociales o ambientales y sus consecuencias financieras y reputacionales se articula formalmente a través del principio de Doble Materialidad consagrado en los estándares europeos EFRAG ESRS (IG 1) y en la regulación chilena CMF NCG 461: 1) Materialidad de Impacto (Inside-Out): Analiza los impactos reales o potenciales, positivos o negativos, que las operaciones de la firma generan sobre las personas, las comunidades o los ecosistemas (evaluados por su gravedad: Escala x Alcance x Carácter Irremediable); 2) Materialidad Financiera (Outside-In): Analiza los riesgos y oportunidades originados en factores de sostenibilidad que alteran los flujos de caja, el costo de financiamiento, la valoración de activos o la licencia social a corto, mediano o largo plazo; 3) Mecanismo de Transmutación Causal: Tradicionalmente, las corporaciones trataban los impactos sociales o ecológicos como externalidades inocuas mientras no hubiese una ley prohibitiva. Sin embargo, en el entorno contemporáneo, un impacto no financiero severo (e.g. contaminación no mitigada, precarización laboral o discriminación) actúa como catalizador reputacional que se transmuta rápidamente en materialidad financiera catastrófica: desata litigios masivos, multas de la SMA o CMF, suspensión de faenas por tribunales ambientales, desinversión forzada de fondos ESG globales (PRI/MSCI) y encarecimiento del endeudamiento corporativo.",
+  "findings": [
+    {
+      "claim_id": "P05-F37-C1",
+      "claim": "Los impactos socioambientales externos y los riesgos financieros corporativos convergen causalmente a través de la doble materialidad, donde la afectación al entorno detona pérdida de valor de mercado y barreras regulatorias.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Europa / Chile / Global",
+        "actor": "EFRAG / CMF / Empresas Reguladas"
+      },
+      "evidence": [
+        {
+          "source_id": "432f26cd-3292-4459-8239-eef44bcf1527",
+          "source_title": "EFRAG: Implementation Guidance 1 (IG 1) Materiality Assessment for ESRS",
+          "original_url": "https://www.efrag.org/",
+          "locator": "Sección 3: Double Materiality Conceptual Framework",
+          "excerpt_short": "Impact materiality and financial materiality are interconnected. A sustainability matter can trigger financial effects through reputation, regulation, and stakeholder action.",
+          "source_date": "2024-05-31",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "11ce6bf4-9dcf-4933-bf0b-d6a7579da3ac",
+          "source_title": "CMF Chile: Norma de Carácter General NCG 461 (Gobierno Corporativo y ESG)",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Capítulo II: Divulgación de Riesgos ESG y Sostenibilidad",
+          "excerpt_short": "Exige reportar factores de sostenibilidad que puedan tener un impacto significativo en la viabilidad, estrategia y desempeño financiero de los emisores.",
+          "source_date": "2021-11-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco regulatorio vinculante en la Unión Europea y normativa vigente obligatoria de la CMF en Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Matriz de riesgos operacionales y ambientales",
+      "Reporte de sostenibilidad NCG 461",
+      "Modelos financieros de costo de capital"
+    ],
+    "actors": [
+      "Gerente de Finanzas (CFO)",
+      "Director de Asuntos Corporativos (CCO)",
+      "Oficial de Sostenibilidad (CSO)"
+    ],
+    "steps": [
+      "Evaluación de severidad de impactos socioambientales (Inside-Out)",
+      "Estimación de exposición a pasivos financieros y regulatorios (Outside-In)",
+      "Cálculo de intersección de doble materialidad"
+    ],
+    "states": [
+      "Impact_Assessed",
+      "Financial_Risk_Modelled",
+      "Double_Materiality_Mapped"
+    ],
+    "outputs": [
+      "Matriz de Doble Materialidad para la Memoria Anual"
+    ],
+    "exceptions": [
+      "Omisión deliberada de pasivos ambientales en la memoria, sancionable como falta de revelación por la CMF"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DOUBLE_MATERIALITY",
+      "type": "marco_regulatorio",
+      "name": "Principio de Doble Materialidad",
+      "aliases": [
+        "Double Materiality Framework"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DOUBLE_MATERIALITY",
+      "predicate": "vincula_impacto_con",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2021",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F37-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Perspectiva de evaluación",
+      "Materialidad Financiera (ISSB / SASB)": "Foco exclusivo en el inversor: ¿cómo afecta el clima o la sociedad el valor bursátil de la empresa?",
+      "Doble Materialidad (EFRAG / GRI / CMF)": "Foco integral multistakeholder: evalúa tanto el impacto de la empresa en el mundo como los riesgos financieros que el entorno impone a la empresa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Analizador de Doble Materialidad",
+      "implication": "BRIDGE debe permitir registrar tanto la severidad de un impacto comunitario como el valor financiero en riesgo para modelar la convergencia exigida por la CMF.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F38"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

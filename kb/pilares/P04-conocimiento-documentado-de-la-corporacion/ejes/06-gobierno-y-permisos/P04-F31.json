@@ -1,0 +1,146 @@
+{
+  "question_id": "P04-F31",
+  "pilar": "P04",
+  "eje": "Gobierno y permisos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Quién puede crear, aprobar, corregir, leer o retirar cada clase de información?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La gobernanza del corpus corporativo se estructura en una Matriz RACI estricta por tipo documental: 1) Hechos Esenciales e Información Privilegiada (Ley 18.045): Creación exclusiva por Secretaría General / Fiscalía Legal; Aprobación mandatoria por Directorio o Gerente General; Lectura restringida a la mesa de crisis acreditada hasta el depósito formal en CMF; Corrección únicamente por nuevo hecho esencial rectificatorio; Retiro prohibido por ley; 2) Memoria Anual Integrada (CMF NCG 461): Elaboración por Asuntos Corporativos y Sostenibilidad; Aprobación formal por Directorio; Lectura pública irrestricta tras su publicación oficial; Corrección vía Fe de Erratas; 3) Minutas de Vocería y Q&A Internos: Redacción por Comunicaciones / Prensa; Aprobación por Gerente de Asuntos Corporativos; Lectura para voceros acreditados; Retiro por caducidad de contingencia; y 4) Políticas Corporativas: Creación por áreas funcionales (Cumplimiento, RRHH, Medio Ambiente); Aprobación por Directorio; Lectura para colaboradores y contratistas; Modificación mediante reemplazo formal bitemporal.",
+  "findings": [
+    {
+      "claim_id": "P04-F31-C1",
+      "claim": "El ciclo de vida de los artefactos corporativos exige una matriz de segregación de funciones (SoD) y roles aprobadores colegiados según la criticidad legal y regulatoria de cada clase de información.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Gobierno Corporativo y Cumplimiento"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.1: Taxonomía Canónica y Sección 4: Proceso de Actualización y Gobierno",
+          "excerpt_short": "Define propietarios, órganos de aprobación (Directorio, Comité de Sostenibilidad, Gerencia) y audiencias para cada uno de los 8 tipos documentales.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "fd693c3a-4d50-47c4-a56c-1c431193d0f9",
+          "source_title": "Auditing LLMs: Governance and Risk Management (Mökander et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2303.12719",
+          "locator": "Sección 3: Governance Frameworks and Accountability",
+          "excerpt_short": "Examines clear allocation of responsibility, separation of duties, and audit trails for corporate AI deployments.",
+          "source_date": "2023-03-21",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de regulación societaria y mejores prácticas de gobernanza en Mökander et al.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud de acción sobre un documento (crear, visar, leer, corregir, retirar)",
+      "Perfil de usuario"
+    ],
+    "actors": [
+      "Identity Provider",
+      "RACI Policy Enforcer",
+      "Audit Logger"
+    ],
+    "steps": [
+      "Verificación de rol y credenciales",
+      "Comprobación de matriz RACI",
+      "Ejecución de acción y registro en bitácora inmutable"
+    ],
+    "states": [
+      "Requested",
+      "Authorized",
+      "Executed_And_Logged"
+    ],
+    "outputs": [
+      "Acción de gobierno autorizada o denegada con registro de auditoría"
+    ],
+    "exceptions": [
+      "Intento de usuario no autorizado de aprobar una política o hecho esencial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RACI_MATRIX",
+      "type": "gobernanza",
+      "name": "Matriz RACI de Conocimiento Corporativo",
+      "aliases": [
+        "Corporate Knowledge RACI Matrix"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RACI_MATRIX",
+      "predicate": "regula_permisos_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F31-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Control de cambios",
+      "Repositorio sin control de roles": "Cualquier usuario puede editar o borrar documentos sin dejar rastro de quién autorizó el cambio.",
+      "Matriz RACI con trazabilidad": "Cada cambio requiere firma formal de aprobación del órgano estatutario competente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe implementar estos roles en su capa de API para asegurar que solo los usuarios autorizados puedan visar contenido.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F32"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

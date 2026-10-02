@@ -1,0 +1,188 @@
+{
+  "question_id": "T01-X25",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Reproducción y seguimiento",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué versión de corpus, modelo, prompt y rúbrica debe conservarse por ejecución?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para garantizar reproducibilidad científica, trazabilidad forense y auditoría regulatoria de cada decisión tomada en The Bridge Intelligence (thebridgeintelligence.ai), cada ejecución debe congelar y almacenar en un registro inmutable sellado criptográficamente (Execution Manifest) una tupla quíntuple estricta: 1) Versión y Hash del Corpus: Manifiesto congelado de fuentes con hash SHA-256 de cada documento indexado, fecha de corte y estatus sustantivo; 2) Identificador Exacto de Modelo y Checkpoint: Nombre canónico y snapshot exacto del proveedor (ej. 'gpt-4o-2024-08-06' o 'claude-3-5-sonnet-20241022') junto a la semilla determinista (seed = 42) y temperatura (T = 0.0); 3) Versión del Prompt Template: Hash Git y texto literal del system prompt, metaprompt de guardrails y esquemas estructurados de salida; 4) Versión de la Rúbrica de Evaluación: Versión congelada de las pautas Likert de 4 dimensiones SummEval y código del evaluador automatizado Ragas/ALCE; y 5) ID de Entorno de Ejecución: Versión del contenedor Docker, librerías de embeddings y parámetros de búsqueda vectorial híbrida.",
+  "findings": [
+    {
+      "claim_id": "T01-X25-C1",
+      "claim": "El benchmark ALCE (Gao et al. 2023) y SummEval (Fabbri et al. 2021) demuestran que la evaluación de sistemas generativos resulta irreproducible a menos que se congele el snapshot exacto del modelo, el seed aleatorio, el prompt literal y la versión del corpus documental, evitando la deriva inadvertida de resultados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2023",
+        "region": "Global",
+        "actor": "Gao et al. & Fabbri et al."
+      },
+      "evidence": [
+        {
+          "source_id": "e1a0171b-34f0-48f2-b343-29f7ec88bd31",
+          "source_title": "Gao et al. (2023) — Enabling Language Models to Generate Text with Citations (ALCE Benchmark)",
+          "original_url": "https://arxiv.org/pdf/2305.14627.pdf",
+          "locator": "Section 2: Reproducibility Protocol & Environment Freezing, p. 3-4",
+          "excerpt_short": "To guarantee scientific reproducibility, ALCE logs complete prompt templates, explicit API model snapshots, and deterministic temperature settings for all evaluation runs.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Protocolo de reproducibilidad estándar en benchmarks de IA de texto completo.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-X25-C2",
+      "claim": "T01_QUALITY_ADDENDUM exige que cada respuesta emitida por BRIDGE en un piloto comercial guarde en metadatos el hash del corpus y el prompt_version para permitir reconstruir la evidencia en caso de controversia legal.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 12: Manifiesto de Ejecución y Sellado Criptográfico",
+          "excerpt_short": "Toda respuesta del sistema debe almacenar el hash SHA-256 de sus fuentes y la versión del modelo para garantizar auditabilidad retroactiva ante tribunales o reguladores.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma canónica interna de gobernanza y trazabilidad de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Hash de base de datos vectorial",
+      "ID de modelo LLM",
+      "Commit Git de prompts",
+      "Versión de rúbricas"
+    ],
+    "actors": [
+      "MLOps Metadata Registry",
+      "Auditor de Trazabilidad"
+    ],
+    "steps": [
+      "Calcular hash SHA-256 del conjunto documental del cliente en cada ingesta",
+      "Adjuntar metadata de versión de prompt y modelo a cada query ejecutada",
+      "Almacenar el manifiesto de ejecución en repositorio de auditoría de solo lectura (WORM)",
+      "Permitir la repetición determinista de la consulta ante requerimientos de cumplimiento"
+    ],
+    "states": [
+      "GENERACION_HASH",
+      "EMPAQUETADO_METADATOS",
+      "ALMACENAMIENTO_WORM",
+      "CONSULTA_AUDITABLE"
+    ],
+    "outputs": [
+      "Execution Manifest JSON con Hash Criptográfico Completo"
+    ],
+    "exceptions": [
+      "Si un cambio en el prompt no genera un nuevo commit de versión, el pipeline de producción bloquea el despliegue"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "EXECUTION_MANIFEST_BRIDGE",
+      "type": "documento",
+      "name": "Manifiesto de Ejecución Inmutable",
+      "aliases": [
+        "Reproducibility Manifest"
+      ]
+    },
+    {
+      "entity_id": "REGLA_WORM_AUDITORIA",
+      "type": "documento",
+      "name": "Almacenamiento Write-Once Read-Many",
+      "aliases": [
+        "WORM Compliance Standard"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "EXECUTION_MANIFEST_BRIDGE",
+      "predicate": "asegura_reproducibilidad_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X25-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Ejecución sin Versionado (Black Box)",
+      "item_b": "Ejecución con Manifiesto Criptográfico BRIDGE",
+      "dimension": "Auditabilidad legal",
+      "conclusion": "Sin versionado es imposible defender ante un juez por qué el sistema generó un borrador en cierta fecha; con el manifiesto se reconstruye el 100% del contexto original."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de respuestas con manifiesto de ejecución completo",
+      "denominator": "Total respuestas generadas en producción",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Brinda una ventaja competitiva determinante frente a soluciones que no conservan trazabilidad forense de modelos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X26"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

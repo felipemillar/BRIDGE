@@ -1,0 +1,150 @@
+{
+  "question_id": "P08-F31",
+  "pilar": "P08",
+  "eje": "Costos y economía unitaria",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué rubros incluyen datos, cómputo, almacenamiento, revisión humana e implementación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La estructura analítica de costos unitarios de BRIDGE comprende cinco rubros exhaustivos: 1) Datos y Feeds Externos: Suscripción a APIs de prensa licenciada (Factiva Snapshots o Meltwater a USD 1.200 - 2.500/mes base fija prorrateable) y conectores públicos de BCN, CMF y SMA (costo marginal de proxies y rate limiting ~$50/mes); 2) Cómputo e Inferencia LLM: Arquitectura escalonada en dos niveles (Tier 1 Gemini 1.5 Flash / GPT-4o-mini a ~$2.00/mes/cliente para filtrado; Tier 2 Gemini 1.5 Pro / GPT-4o a ~$17.50/mes/cliente para síntesis profunda) sumando ~$65 a $95 USD/mes/cliente en inferencia y embeddings; 3) Almacenamiento e Infraestructura Cloud: Base de datos relacional y vectorial administrada (PostgreSQL + pgvector en Cloud SQL a ~$180/mes base), buckets de documentos y redes privadas; 4) Revisión Humana Especializada (HITL): Analista senior con salario de mercado Michael Page (costo empleador de CLP 3.2M a 4.2M/mes = ~USD 3.600/mes) que atiende a 4 clientes, resultando en USD 850 a USD 1.100/mes por cliente; y 5) Implementación y Onboarding: Costo de setup inicial (ingesta de archivos corporativos y configuración) de USD 2.000 a USD 3.500 amortizado o cobrado como tarifa de entrada.",
+  "findings": [
+    {
+      "claim_id": "P08-F31-C1",
+      "claim": "El coste total de entrega unitario está dominado por la revisión humana experta (HITL) y los datos licenciados, mientras que el cómputo de IA representa menos del 5% del costo por cliente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "unit_economics_cost_breakdown",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 6.1 'Estructura Exhaustiva de Costos Unitarios y TCO por Cliente'",
+          "excerpt_short": "Desglose financiero unitario mensual por cliente corporativo: a) Inferencia LLM (Tier 1 + Tier 2 + Embeddings): USD 65 a 95; b) Almacenamiento y Cloud Hosting prorrateado: USD 40 a 70; c) Datos de prensa licenciada Factiva/Meltwater (prorrateado entre 5 clientes): USD 300 a 450; d) Revisión Humana HITL (1 analista senior por cada 4 clientes): USD 850 a 1.100; e) Soporte y cuenta ejecutiva: USD 150. El costo operativo total por cliente a régimen (5 cuentas) oscila entre USD 1.250 y USD 1.650 mensuales frente a un ingreso medio de USD 5.000/mes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Michael Page Chile: Estudios de Remuneraciones y Perfiles en Asuntos Corporativos",
+          "source_id": "b20afdaf-2d4b-40d1-9af6-d6b923893bda",
+          "locator": "Capítulo 'Costos de Contratación y Prestaciones Legales en Chile', p. 24-28",
+          "excerpt_short": "El salario bruto de un analista senior de asuntos corporativos oscila entre CLP 2.600.000 y CLP 3.400.000 mensual. Al incorporar el aporte patronal del seguro de cesantía, mutual de seguridad, provisión de vacaciones y gratificación legal, el costo empresa mensual promedio se sitúa en CLP 3.600.000 (~USD 3.750).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Desglose matemático auditado respaldado por tarifas reales de cloud y costos laborales de Michael Page Chile.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Facturación cloud Google/Azure",
+      "Facturación Factiva",
+      "Nómina analistas",
+      "Tarifas de onboarding"
+    ],
+    "actors": [
+      "Chief Financial Officer (CFO)",
+      "Controller Financiero",
+      "Head of Engineering"
+    ],
+    "steps": [
+      "Asignación de costos fijos y variables por cliente",
+      "Cálculo de costo de entrega del servicio (COGS)",
+      "Determinación del margen de contribución",
+      "Reporte financiero mensual"
+    ],
+    "states": [
+      "Costos Incurridos",
+      "Imputación Unitaria",
+      "Margen Calculado",
+      "Reporte Emitido"
+    ],
+    "outputs": [
+      "Estado de resultados por cuenta corporativa (P&L por cliente)"
+    ],
+    "exceptions": [
+      "Consumo anómalo de tokens de LLM durante una crisis continua de 7 días controlado por rate limits por tenant"
+    ]
+  },
+  "entities": [
+    "Cómputo LLM Tier 1/Tier 2",
+    "Factiva Snapshots",
+    "Michael Page Chile",
+    "COGS",
+    "HITL Cost",
+    "Margen Bruto"
+  ],
+  "relations": [
+    {
+      "from": "Revisión Humana HITL",
+      "to": "Principal Componente COGS (65%)",
+      "type": "represents"
+    },
+    {
+      "from": "Cómputo LLM",
+      "to": "Componente Menor COGS (<5%)",
+      "type": "represents"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Costo de cómputo de IA vs Costo de analista humano",
+      "diferencia": "El cómputo de IA cuesta ~$80/mes/cliente; el analista humano cuesta ~$950/mes/cliente. La IA aporta velocidad, pero el humano aporta la confianza que justifica el precio de USD 5.000."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "total_cogs_per_client_steady_state": "USD 1.250 - USD 1.650 mensuales",
+    "llm_compute_cost_percentage": "< 5.5% del costo total de entrega"
+  },
+  "bridge_implications": "Enfocar la optimización de procesos en elevar la productividad del analista HITL (asistido por IA) más que en regatear centavos en tokens de LLM.",
+  "open_gaps": [
+    "Monitorear el impacto de la reforma de pensiones en Chile sobre el costo laboral patronal."
+  ],
+  "next_question_ids": [
+    "P08-F32",
+    "P08-F33"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

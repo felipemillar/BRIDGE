@@ -1,0 +1,164 @@
+{
+  "question_id": "P10-F43",
+  "pilar": "P10",
+  "eje": "Indicadores y límites normativos",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué mide tiempo de aprobación, tasa de corrección, error factual y reutilización segura?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El rendimiento, seguridad y madurez operativa del sistema de comunicaciones se evalúa mediante 4 indicadores nucleares de gestión complementados por los Principios de Barcelona 3.0 de AMEC: 1) Tiempo de Aprobación (Approval Lead Time / Latency): Mide la mediana de horas o minutos transcurridos desde la creación del ticket en DRAFT_INGESTION hasta la emisión de la firma ejecutiva en EXECUTIVE_SIGN_OFF, desglosado por régimen (Target Ordinario < 24h; Target Emergencia < 30 min); 2) Tasa de Corrección (Correction / Erratum Rate): Porcentaje de mensajes en PUBLISHED_LIVE que requieren transitar a UNDER_AMENDMENT o emitir una Fe de Erratas v2.0 (Target < 1% de la producción total); 3) Tasa de Error Factual (Factual Inaccuracy Rate): Porcentaje de declaraciones públicas que contienen discrepancias numéricas, de fechas o de compromisos respecto al Shared Fact Record certificado (Target Invariable = 0.0%); y 4) Índice de Reutilización Segura (Safe Reusability Index): Porcentaje de afirmaciones, módulos argumentales y cifras que son reutilizados en nuevas piezas comunicacionales a partir de posturas ya validadas sin necesidad de abrir un nuevo ciclo de peritaje técnico; todo ello alineado con el rechazo explícito de métricas vanidosas como el AVE (Advertising Value Equivalency) exigido por AMEC.",
+  "findings": [
+    {
+      "claim_id": "P10-F43-C1",
+      "claim": "La medición de la gestión comunicacional exige sustituir métricas vanidosas (AVE) por indicadores objetivos de proceso: tiempo de ciclo, tasa de corrección, error factual cero y reutilización segura de activos fácticos certificados, en conformidad con AMEC Barcelona Principles 3.0.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "governance_kpis_and_amec_metrics",
+      "evidence": [
+        {
+          "source_title": "AMEC: Barcelona Principles 3.0 Communications Measurement Standard",
+          "source_id": "8702eaf4-718b-4c51-932c-29f0907db863",
+          "locator": "Principles 1 to 7",
+          "retrieved_at": null,
+          "excerpt_short": "Setting goals is the prerequisite to communications planning and measurement. Measurement and evaluation should identify outputs, outcomes, and potential impact. AVEs are not the value of communication.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "AMEC: Integrated Evaluation Framework for PR and Communications",
+          "source_id": "b79a534f-1f53-43ff-b1e3-b967b1e7e0d6",
+          "locator": "Section 'From Outputs to Organizational Outcomes'",
+          "retrieved_at": null,
+          "excerpt_short": "The framework tracks the progression from inputs and activities through outputs to outtakes, outcomes, and organizational impact, providing a verifiable logic model.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 7 'Métricas de Gestión, Rendimiento y Calidad'",
+          "retrieved_at": null,
+          "excerpt_short": "KPIs de gobernanza: Tiempo de ciclo de aprobación por régimen, Tasa de correcciones post-publicación (<1%), Tasa de error fáctico (0%), Índice de reutilización segura (>60%). Descarte total de AVE.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares de medición AMEC 3.0 y el sistema de KPIs del dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tiempos de transición de FSM",
+      "Historial de versiones",
+      "Registros de fe de erratas",
+      "Módulos de texto reutilizados"
+    ],
+    "actors": [
+      "Director de Asuntos Corporativos",
+      "Auditor de Calidad",
+      "Motor Analítico BRIDGE"
+    ],
+    "steps": [
+      "Cálculo automático de latencia entre creación de ticket y sign-off",
+      "Monitoreo de ratio entre versiones mayores correctivas y total de piezas emitidas",
+      "Cálculo de error fáctico mediante auditorías de sampleo sobre el Shared Fact Record",
+      "Medición de reutilización de fragmentos de texto certificados vía embeddings",
+      "Publicación de dashboard de gobernanza mensual"
+    ],
+    "states": [
+      "DATA_COLLECTED",
+      "KPIS_COMPUTED",
+      "AMEC_ALIGNED",
+      "DASHBOARD_RENDERED"
+    ],
+    "outputs": [
+      "Panel de control de calidad y eficiencia de gobernanza comunicacional"
+    ],
+    "exceptions": [
+      "Un aumento en la tasa de correcciones dispara una auditoría obligatoria sobre los revisores del estado FACT_CHECKING"
+    ]
+  },
+  "entities": [
+    "AMEC Principles 3.0",
+    "AVE Repudiation",
+    "Approval Lead Time",
+    "Error Factual Cero",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "AMEC Principles 3.0",
+      "to": "Evaluación de Outcomes",
+      "type": "MANDATES"
+    },
+    {
+      "from": "Error Factual Cero",
+      "to": "Shared Fact Record",
+      "type": "ANCHORED_IN"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Métricas vanidosas de AVE (valor publicitario equivalente) vs KPIs de rigor AMEC",
+      "diferencia": "El AVE es una cifra ficticia sin respaldo científico repudiada por la industria; los KPIs de AMEC y BRIDGE miden eficiencia real, blindaje normativo e impacto reputacional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "monthly_correction_rate": "Ratio de comunicados con fe de erratas respecto al total de comunicados del mes (Target < 1%)",
+    "factual_integrity_kpi": "100% - (afirmaciones erróneas / afirmaciones totales) (Target 100%)"
+  },
+  "bridge_implications": "BRIDGE debe calcular estos indicadores de forma nativa en su panel de administración, permitiendo a los directores justificar el ROI y la mitigación de riesgo legal ante el Directorio.",
+  "open_gaps": [
+    "Correlación econométrica directa entre la velocidad de aprobación en crisis y el valor de la acción en bolsa."
+  ],
+  "next_question_ids": [
+    "P10-F44",
+    "P10-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

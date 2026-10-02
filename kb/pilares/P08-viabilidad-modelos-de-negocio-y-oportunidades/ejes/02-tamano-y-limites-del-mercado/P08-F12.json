@@ -1,0 +1,150 @@
+{
+  "question_id": "P08-F12",
+  "pilar": "P08",
+  "eje": "Tamaño y límites del mercado",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra tamaño y límites del mercado sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado es la 'Evaluación de Expansión Comercial del Holding Energético Andes-Sur': Entradas: 1) Holding con 4 filiales (generación hidroeléctrica, transmisión, parques solares y distribución eléctrica); 2) Exposición regulatoria ante la Superintendencia de Electricidad y Combustibles (SEC) y la CMF; 3) Intento previo de cotizar en el sector público municipal que fracasó por un ciclo de licitación de 14 meses y cobros impagos; y 4) Consulta sobre si contratar una plataforma global pura (FiscalNote a USD 35K/año) o el servicio Tech-Enabled de BRIDGE. Resultado Esperado: La empresa descarta el sector municipal confirmando la matriz de exclusión, y adopta BRIDGE para sus 4 filiales bajo un contrato corporativo multi-entidad de USD 7.500/mes (~CLP 7.200.000/mes), con 1 analista senior dedicado para el holding, logrando monitoreo continuo de permisos de transmisión y mitigando el riesgo de multas de la SEC.",
+  "findings": [
+    {
+      "claim_id": "P08-F12-C1",
+      "claim": "El caso del holding energético ilustra de forma práctica la aplicación de las fronteras de mercado, la exclusión del sector público municipal y la captura de valor en grandes grupos multisectoriales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "market_boundaries_case_study",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 2.5 'Caso de Validación de Fronteras de Mercado: Holding Energético'",
+          "excerpt_short": "Caso de aplicación: Un holding de energía con activos en generación y distribución evalúa expandir su capacidad de asuntos corporativos. Inicialmente se exploró comercializar servicios de monitoreo a municipalidades locales, pero la experiencia arrojó tiempos de tramitación burocrática inaceptables (> 14 meses) y nula rentabilidad. Al reenfocarse en el holding privado y sus filiales, se contrata una licencia multi-filial de USD 7.500 mensuales que consolida las alertas regulatorias de la SEC y la CMF en un único canal ejecutivo, atendido por un analista especializado.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 3.2 'Límites de Captura y Multi-Tenant'",
+          "excerpt_short": "El modelo holding multi-filial permite elevar el ACV medio por grupo económico a USD 90.000 anuales manteniendo un único analista asignado, lo que maximiza la economía unitaria dentro de los límites del SAM.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso modelado detalladamente en el dossier de investigación y addendum de calidad de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Activos energéticos del holding",
+      "Marco normativo SEC",
+      "Alertas territoriales de servidumbres de transmisión"
+    ],
+    "actors": [
+      "Holding Energético Andes-Sur",
+      "Gerente de Asuntos Corporativos y Regulatorios",
+      "Equipo BRIDGE"
+    ],
+    "steps": [
+      "Descarte formal de canales municipales",
+      "Configuración de tenant multi-filial en BRIDGE",
+      "Asignación de analista senior",
+      "Puesta en marcha del sistema"
+    ],
+    "states": [
+      "Dispersión Inicial",
+      "Exclusión Aplicada",
+      "Tenant Activo",
+      "Operación Consolidada"
+    ],
+    "outputs": [
+      "Reporte consolidado del holding",
+      "Mitigación de contingencias SEC"
+    ],
+    "exceptions": [
+      "Discrepancias de intereses entre filiales de generación y distribución resueltas mediante vistas segregadas"
+    ]
+  },
+  "entities": [
+    "Holding Energético Andes-Sur",
+    "SEC",
+    "CMF",
+    "ChileCompra",
+    "BRIDGE Multi-Tenant"
+  ],
+  "relations": [
+    {
+      "from": "Holding Energético",
+      "to": "BRIDGE Multi-Tenant",
+      "type": "contracts"
+    },
+    {
+      "from": "BRIDGE Multi-Tenant",
+      "to": "Monitoreo SEC",
+      "type": "executes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Venta filial por filial vs Contrato Holding Multi-Entidad",
+      "diferencia": "Vender por separado multiplica el costo de venta; el contrato a nivel holding centraliza la negociación legal y eleva el ACV a USD 90K con alta eficiencia."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "holding_acv": "USD 90.000 anuales (USD 7.500/mes)",
+    "subsidiaries_covered": "4 filiales bajo un mismo analista asignado"
+  },
+  "bridge_implications": "Estructurar en la oferta comercial de BRIDGE un plan especial para Holdings y Grupos Económicos con múltiples filiales reguladas.",
+  "open_gaps": [
+    "Definir el marco de precios cuando un holding supera las 5 filiales operativas."
+  ],
+  "next_question_ids": [
+    "P08-F13",
+    "P08-F14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

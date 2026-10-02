@@ -1,0 +1,128 @@
+{
+  "question_id": "P07-C06",
+  "pilar": "P07",
+  "eje": "Mensajes y líneas aprobadas",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué sigue sin prueba sobre mensajes y líneas aprobadas, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba concluyente la tasa de retención cognitiva del vocero humano bajo presión (si un directivo sometido a estrés mediático recuerda los pilares del Message House estructurado o si sufre un 'apagón mental' retornando a la intuición). En este eje falló la fuente 'IPR & CIPR: Ethics Guide for Artificial Intelligence in PR' (UUID `abe770ff-31f7-401a-941c-a3954e851a0d`, fallida), siendo sustituida formalmente por 'PR Council: Ethical Standards and Guidelines for Generative AI' (`f377819a-f643-4b8b-8c72-e531bd9d01ca`) y 'NIST AI RMF 1.0' (`3e70b28e-2295-4ce6-9f9f-efc2bfd4a5bf`). La validación mínima requerida es un ensayo psicofisiológico con 15 ejecutivos corporativos midiendo frecuencia cardíaca y cortisol salival durante una simulación adversarial para correlacionar nivel de estrés con apego a los soundbites aprobados.",
+  "findings": [
+    {
+      "claim_id": "P07-C06-C1",
+      "claim": "La retención y ejecución de mensajes aprobados bajo estrés fisiológico agudo no está suficientemente investigada y requiere validación experimental con biomarcadores.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "stress_retention_gap",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 1 (Brecha 3: Los Límites Cognitivos y Emocionales de los LLMs)",
+          "excerpt_short": "Brecha de Rendimiento Bajo Estrés: Un ejecutivo puede aprobar un guion perfecto en el software, pero perder el control ante cámaras en vivo. La preparación cognitiva asistida por IA carece de validación psicométrica sobre la retención real de soundbites bajo taquicardia o interrupciones violentas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "IPR & CIPR: Ethics Guide for Artificial Intelligence in PR",
+          "source_id": "abe770ff-31f7-401a-941c-a3954e851a0d",
+          "locator": "Fuente abe770ff-31f7-401a-941c-a3954e851a0d",
+          "text_status": "fallida",
+          "excerpt_short": "IPR & CIPR Ethics Guide catalogada como fallida (status_code: 3), sustituida por PR Council Ethical Standards y NIST AI RMF 1.0.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "relationship": "apoya",
+          "text_status_original": "fallida_o_bloqueada",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de la fuente fallida en el manifiesto P07 y de la brecha psicométrica en P07_GAPS.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "fuente_no_sustantiva",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "estudio_estres_mensajes": {
+      "hipotesis": "Los voceros entrenados con el sistema de soundbites en 4 bloques de BRIDGE mantienen un 40% más de fidelidad al mensaje bajo estrés que con argumentarios tradicionales en prosa.",
+      "fuente_fallida": "IPR & CIPR Ethics Guide (abe770ff-31f7-401a-941c-a3954e851a0d)",
+      "fuente_sustituta": "PR Council Ethical Standards (f377819a-f643-4b8b-8c72-e531bd9d01ca)",
+      "prueba_minima": "Ensayo de laboratorio con 15 directivos y medición de variabilidad de frecuencia cardíaca (HRV) durante rueda de prensa simulada."
+    }
+  },
+  "entities": [
+    "IPR & CIPR",
+    "PR Council",
+    "NIST AI RMF",
+    "Biomarcadores de Estrés",
+    "P07_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "PR Council",
+      "to": "IPR & CIPR",
+      "type": "substitutes_for"
+    },
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "Ensayo Psicométrico",
+      "type": "proposes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Preparación Intelectual vs Capacidad Fisiológica",
+      "diferencia": "La preparación intelectual provee los datos; la capacidad fisiológica determina si el directivo logra decirlos sin temblor de voz ni agresividad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "sample_executives_count": "15 ejecutivos C-Suite",
+    "biometric_markers": "HRV y cortisol salival"
+  },
+  "bridge_implications": "Diseñar los soundbites de BRIDGE con un límite estricto de menos de 25 palabras para facilitar su memorización bajo estrés.",
+  "open_gaps": [
+    "Dificultad de reclutar ejecutivos de primer nivel para ensayos de laboratorio con tomas de muestras fisiológicas."
+  ],
+  "next_question_ids": [
+    "P07-C07",
+    "P07-C08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T06:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

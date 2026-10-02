@@ -1,0 +1,139 @@
+{
+  "question_id": "P05-F17",
+  "pilar": "P05",
+  "eje": "Niveles de métricas de comunicación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre niveles de métricas de comunicación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos relativos a los niveles de métricas de comunicación están respaldados por cuatro fuentes primarias del corpus: 1) AMEC Barcelona Principles 3.0 (2020, Asociación Internacional para la Medición y Evaluación de la Comunicación, ámbito: estándar profesional global): respalda el Principio 2 (medir outputs, out-takes, outcomes e impacto) y el Principio 5 (desacreditación definitiva del AVE); 2) AMEC Integrated Evaluation Framework (IEF) & Taxonomy (2022, documento metodológico y taxonomía digital, ámbito: planificación y evaluación de PR): respalda la definición operativa de la cadena lógica de 5 pasos desde los objetivos corporativos hasta el impacto en el negocio; 3) P05_RESEARCH_DOSSIER (2026, Sección 3: Taxonomía Métrica Rigurosa, ámbito: síntesis canónica de asuntos corporativos): respalda el análisis detallado de las fórmulas, indicadores clave y limitaciones severas de cada nivel; y 4) P05_EVIDENCE_MAP (2026, Eje 2: Jerarquía Métrica y Falacia Sentimiento=Reputación, ámbito: mapa de certezas epistemológicas): respalda la calificación de confianza MUY ALTA y DEFINITIVA respecto al abandono del AVE y la no equiparación de redes sociales con la reputación estructural.",
+  "findings": [
+    {
+      "claim_id": "P05-F17-C1",
+      "claim": "La jerarquía de métricas de comunicación cuenta con respaldo documental inequívoco en los estándares internacionales promulgados por AMEC y las síntesis internas del programa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "AMEC / Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "c8249017-0397-4799-aacc-c1c53ee4662d",
+          "source_title": "AMEC: Barcelona Principles 3.0 (Global Standard for PR & Comms Measurement)",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principios 1 a 7",
+          "excerpt_short": "Estándar global consensuado por profesionales de más de 80 países que formaliza la medición rigurosa de las relaciones públicas.",
+          "source_date": "2020-07-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "51cad286-c7a4-424e-a375-87ea9a1b660e",
+          "source_title": "AMEC: Integrated Evaluation Framework (IEF) & Taxonomy",
+          "original_url": "https://amecorg.com/amecframework/",
+          "locator": "Marco y Guía de Implementación",
+          "excerpt_short": "Taxonomía estructurada que alinea las actividades de comunicación con los resultados organizacionales reales.",
+          "source_date": "2022-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fuentes originales normativas vigentes y reconocidas universalmente en la disciplina.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Estándares publicados por AMEC",
+      "Documentos de trabajo de evaluación"
+    ],
+    "actors": [
+      "Especialista de Calidad Metodológica",
+      "Bibliotecario de Conocimiento"
+    ],
+    "steps": [
+      "Extracción y verificación de citas textuales",
+      "Asignación de identificadores de evidencia",
+      "Verificación de precedencia editorial"
+    ],
+    "states": [
+      "Citations_Retrieved",
+      "Integrity_Verified",
+      "Catalog_Updated"
+    ],
+    "outputs": [
+      "Registro de fuentes primarias para métricas de comunicación"
+    ],
+    "exceptions": [
+      "Uso de literatura obsoleta anterior al año 2010 que promovía equivalencias publicitarias"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_AMEC_SOURCES",
+      "type": "corpus_fuentes",
+      "name": "Fuentes Normativas de Medición AMEC",
+      "aliases": [
+        "AMEC Standards Base"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_AMEC_SOURCES",
+      "predicate": "respalda_taxonomia_de",
+      "object_id": "ENT_AMEC_TAXONOMY",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F17-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gestor Documental",
+      "implication": "BRIDGE debe incluir en su ayuda interactiva la referencia canónica a los Principios de Barcelona 3.0 cuando capacite a los analistas sobre diseño de dashboards.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

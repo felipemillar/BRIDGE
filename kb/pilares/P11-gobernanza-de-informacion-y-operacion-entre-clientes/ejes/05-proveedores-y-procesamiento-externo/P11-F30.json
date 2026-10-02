@@ -1,0 +1,157 @@
+{
+  "question_id": "P11-F30",
+  "pilar": "P11",
+  "eje": "Proveedores y procesamiento externo",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra proveedores y procesamiento externo sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto: Generación de Resumen Ejecutivo Asistido por IA mediante API Enterprise de AWS Bedrock para Minera Candelaria. Entradas: 1) Activo documental: 'Informe de Diagnóstico Social y Relaciones Laborales de Faena Candelaria' clasificado como D2 Interno por el Gerente de Recursos Humanos; 2) Requerimiento del usuario: Generar un resumen ejecutivo en viñetas para la Gerencia General utilizando el modelo Claude 3.5 Sonnet a través de AWS Bedrock; 3) Configuración de seguridad de BRIDGE: Conexión mediante AWS PrivateLink a la región `us-east-1`, contrato enterprise con exclusión de entrenamiento activo, y clave CMK del cliente aplicada en almacenamiento. Proceso: El pipeline de inferencia de BRIDGE extrae el texto del documento; ejecuta el linter de sanitización reemplazando nombres propios de dirigentes y salarios individuales por seudónimos (`DIRIGENTE_A`, `SUELDO_TIPO_1`); empaqueta el prompt sin ninguna cabecera que identifique a Minera Candelaria; despacha la llamada vía TLS 1.3 a la API de Bedrock; AWS Bedrock procesa la inferencia en un enclave seguro con retención cero (`Zero-Retention`); retorna el resumen generado; el sistema de BRIDGE efectúa la destokenización local en memoria volátil reinsertando los nombres correctos para el usuario autorizado; registra en la bitácora WORM que se consumieron 1.450 tokens sin exposición de datos confidenciales. Resultado Esperado: El resumen se entrega al usuario en 2.4 segundos con fidelidad fáctica del 100%; los servidores de AWS no retienen el texto ni lo utilizan para re-entrenar modelos fundacionales; ningún dato sensible salió sin protección a la nube pública, cumpliendo con la Ley 19.628 / 21.719 y los términos de servicio de AWS Bedrock.",
+  "findings": [
+    {
+      "claim_id": "P11-F30-C1",
+      "claim": "El caso operacionaliza una llamada de inferencia a AWS Bedrock para un documento interno de minería, demostrando la sanitización previa de PII, el despacho sin metadatos de tenant, el procesamiento zero-retention y la destokenización local segura.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_external_provider_execution",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 1 'Escenario de Referencia: Inferencia Segura en Proveedor Cloud Externo'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de resumen con Bedrock: Sanitización previa de entidades salriales y nombres -> Despacho a Bedrock us-east-1 bajo Zero Data Retention -> Destokenización en memoria volátil de BRIDGE -> Registro WORM de tokens.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AWS Documentation: Amazon Bedrock Data Protection and Privacy Controls",
+          "source_id": "c1ccc227-9c35-4fc2-af02-7163f1ebc49d",
+          "locator": "Section 'Data Privacy Architecture and Inference Isolation'",
+          "retrieved_at": null,
+          "excerpt_short": "Customer inputs and model outputs are not stored permanently by AWS and are never shared with third-party model providers or used to improve foundation models.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los controles de aislamiento de AWS Bedrock y el escenario documentado en el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Informe social interno de Faena Candelaria",
+      "Petición de resumen asistido",
+      "Configuración enterprise de AWS Bedrock"
+    ],
+    "actors": [
+      "Gerente de RRHH",
+      "Sanitizador de Salida BRIDGE",
+      "API AWS Bedrock",
+      "Destokenizador Local"
+    ],
+    "steps": [
+      "Extracción del texto del informe",
+      "Detección y tokenización de 8 nombres de personas y 4 cifras de remuneraciones",
+      "Ensamblaje del prompt anonimizado",
+      "Transmisión vía PrivateLink a AWS Bedrock (Claude 3.5)",
+      "Procesamiento en memoria efímera de AWS",
+      "Recepción del resumen sintético",
+      "Re-inserción local de las entidades reales en la sesión del usuario",
+      "Persistencia de la tupla de auditoría con volumen de tokens consumidos"
+    ],
+    "states": [
+      "PROMPT_ASSEMBLED",
+      "ENTITIES_TOKENIZED",
+      "BEDROCK_INFERENCE_RUN",
+      "LOCAL_RESTORE_DONE",
+      "DELIVERED_SAFELY"
+    ],
+    "outputs": [
+      "Resumen ejecutivo entregado con entidades restauradas",
+      "0% de datos personales o secretos retenidos en servidores de AWS",
+      "Registro de auditoría completado"
+    ],
+    "exceptions": [
+      "Si la conexión PrivateLink con AWS falla, la petición no conmuta a internet público y se reintenta en canal seguro"
+    ]
+  },
+  "entities": [
+    "Faena Candelaria",
+    "AWS Bedrock",
+    "Claude 3.5 Sonnet",
+    "Tokenización Local",
+    "Zero Data Retention",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Prompt Anonimizado",
+      "to": "AWS Bedrock",
+      "type": "PROCESSED_IN_EPHEMERAL_MEMORY"
+    },
+    {
+      "from": "Destokenizador Local",
+      "to": "Resumen Final",
+      "type": "RESTORES_ENTITIES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Pegar el informe en un chatbot web comercial vs Inferencia enterprise sanitizada en BRIDGE",
+      "diferencia": "Pegar en el chatbot comercial filtra sueldos y nombres a bases de datos públicas de entrenamiento; la inferencia enterprise sanitizada garantiza que AWS solo vea variables abstractas sin valor comercial."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "external_inference_pii_exposure_rate": "0% de PII expuesta en texto plano a proveedores cloud",
+    "inference_turnaround_time_seconds": "< 3 segundos de latencia total incluyendo sanitización y destokenización"
+  },
+  "bridge_implications": "Demuestra la viabilidad técnica y operativa de BRIDGE para ofrecer capacidades de IA generativa de vanguardia con salvaguardas de privacidad de nivel bancario y militar.",
+  "open_gaps": [
+    "Monitoreo de posibles cambios de enrutamiento interno de tráfico en centros de datos de AWS."
+  ],
+  "next_question_ids": [
+    "P11-F31",
+    "P11-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "question_id": "P07-C04",
+  "pilar": "P07",
+  "eje": "Preguntas difíciles y escenarios",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué sigue sin prueba sobre preguntas difíciles y escenarios, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba científica la efectividad de las técnicas clásicas de Bridging (pivotar con frases hechas como 'lo importante es...') ante entrevistadores contemporáneos hiper-críticos, quienes frecuentemente denuncian el puente al aire como evasión corporativa ('no me cambie de tema'). En este eje falló la fuente 'DINFOS: Five Key Things to Prep Your Subject Matter Expert' (UUID `7ed2eb90-1f62-42d0-bd97-2def6536115d`, fallida), siendo sustituida formalmente por 'Comms Manoeuvres: Media Training for CEOs' (`234523c8-725c-4d7c-be22-086db78823a0`). La validación mínima requerida es un experimento de percepción ciudadana con 500 personas expuestas a dos versiones de respuesta: una con bridging mecánico tradicional y otra con reconocimiento empático profundo y datos duros de ingeniería.",
+  "findings": [
+    {
+      "claim_id": "P07-C04-C1",
+      "claim": "El impacto contraproducente del bridging mecánico ante audiencias escépticas no está suficientemente cuantificado y requiere experimentos controlados de percepción.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "bridging_effectiveness_gap",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 3 (Matriz Sintética de Separación Ontológica)",
+          "excerpt_short": "Afirmación: 'Los voceros entrenados con Bridging obtienen coberturas más favorables'. Veredicto: Válido con Condiciones. Si el puente se utiliza como evasiva sin responder el punto fáctico, detona una crisis de credibilidad y acusaciones de arrogancia.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "DINFOS: Five Key Things to Prep Your Subject Matter Expert (Bridging & Flagging)",
+          "source_id": "7ed2eb90-1f62-42d0-bd97-2def6536115d",
+          "locator": "Fuente 7ed2eb90-1f62-42d0-bd97-2def6536115d",
+          "text_status": "fallida",
+          "excerpt_short": "DINFOS Five Key Things catalogada como fuente fallida (status_code: 3), sustituida por Comms Manoeuvres Media Training for CEOs.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "relationship": "apoya",
+          "text_status_original": "fallida_o_bloqueada",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de la fuente fallida en el manifiesto P07 y de la advertencia crítica sobre el bridging en P07_EVIDENCE_MAP.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "fuente_no_sustantiva",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "experimento_validacion_bridging": {
+      "problema": "El bridging obvio provoca irritación en el periodista y desconfianza en la audiencia.",
+      "fuente_fallida": "DINFOS (7ed2eb90-1f62-42d0-bd97-2def6536115d)",
+      "fuente_sustituta": "Comms Manoeuvres (234523c8-725c-4d7c-be22-086db78823a0)",
+      "protocolo_prueba": "A/B test con panel de 500 ciudadanos evaluando credibilidad de vocero ante preguntas hostiles."
+    }
+  },
+  "entities": [
+    "DINFOS",
+    "Comms Manoeuvres",
+    "Bridging Mecánico",
+    "P07_EVIDENCE_MAP"
+  ],
+  "relations": [
+    {
+      "from": "Comms Manoeuvres",
+      "to": "DINFOS",
+      "type": "substitutes_for"
+    },
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Bridging Mecánico",
+      "type": "flags_risk_of"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Bridging Tradicional Militar (DINFOS) vs Bridging Moderno con Datos",
+      "diferencia": "El bridging militar fuerza el mensaje institucional; el moderno exige responder brevemente la premisa antes de transitar al dato auditado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "experiment_panel_size": "500 participantes estratificados",
+    "credibility_penalty_risk": "Medición de pérdida de confianza por evasión percibida"
+  },
+  "bridge_implications": "Programar en los guiones de BRIDGE la regla obligatoria: 'Primero desmarque empático breve, luego el puente fáctico'.",
+  "open_gaps": [
+    "Diferencias generacionales en la tolerancia al bridging discursivo entre audiencias mayores y jóvenes en redes."
+  ],
+  "next_question_ids": [
+    "P07-C05",
+    "P07-C06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T06:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

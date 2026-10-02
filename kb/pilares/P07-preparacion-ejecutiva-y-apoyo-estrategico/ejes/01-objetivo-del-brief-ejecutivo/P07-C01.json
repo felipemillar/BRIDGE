@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-C01",
+  "pilar": "P07",
+  "eje": "Objetivo del brief ejecutivo",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre objetivo del brief ejecutivo, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en la finalidad fundamental del documento: los vendors globales de media monitoring (Cision, Brandwatch) presentan el brief ejecutivo como un 'Clipping Digest' o agregador automatizado de menciones y gráficos de sentimiento; mientras que las síntesis internas (P07_RESEARCH_DOSSIER, P07_EVIDENCE_MAP) y Page Society demuestran que un volcado pasivo de noticias satura al C-Suite y no habilita decisiones. Prevalece la versión de las síntesis internas: el brief debe ser un instrumento cognitivo de decisión de 1 página que fija objetivos estratégicos, líneas rojas inadmisibles y protocolos legales obligatorios (Ley 20.730 de Lobby y Ley 18.045 de Valores).",
+  "findings": [
+    {
+      "claim_id": "P07-C01-C1",
+      "claim": "El objetivo del brief ejecutivo no es informar pasivamente de lo ocurrido en medios sino articular decisiones operativas y blindaje legal previo a una interacción de alto riesgo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "epistemic_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje A) y Sección 3",
+          "excerpt_short": "Discrepancia Eje A: Vendors promueven el brief como resumen automático de sentimiento; P07_EVIDENCE_MAP y Page Society corrigen que la analítica de sentimiento sin cruce de compromisos internos induce a error. Prevalece el brief de decisión estructurada en dos capas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Page Society: Beyond Communication - CCO Leadership",
+          "source_id": "a6960a92-7998-4092-ab5b-ed3a91374b5e",
+          "locator": "Capítulo 'The Strategic CCO', p. 14-16",
+          "excerpt_short": "Executive briefings must abandon the passive clipping paradigm. Decision-makers require actionable guardrails that delineate strategic intent from unsupportable claims.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia editorial explícita en P07_EVIDENCE_MAP respaldada por la doctrina ejecutiva de Page Society.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "resolucion_discrepancia_objetivo": {
+      "postura_vendors_comerciales": "Digest pasivo de noticias con volumen y sentimiento general.",
+      "postura_bridge_p07": "Instrumento de decisión de 1 página con líneas rojas, mensajes aprobados y alertas legales.",
+      "version_prevalente": "BRIDGE / P07_EVIDENCE_MAP (Prevalencia editorial vinculante)."
+    }
+  },
+  "entities": [
+    "Cision",
+    "Brandwatch",
+    "Page Society",
+    "P07_EVIDENCE_MAP",
+    "Ley 20.730"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Cision Clipping",
+      "type": "corrects"
+    },
+    {
+      "from": "Page Society",
+      "to": "Brief de Decisión",
+      "type": "endorses"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Clipping Digest vs Brief de Decisión",
+      "diferencia": "El clipping acumula texto sin jerarquía; el brief de decisión prescribe límites de acción y protección legal."
+    }
+  ],
+  "contradictions": [
+    {
+      "source_a": "Cision Executive Briefings",
+      "source_b": "P07_EVIDENCE_MAP",
+      "conflict": "Volcado de menciones informativas vs Delimitación de líneas rojas fiduciarias.",
+      "resolution": "Prevalece P07_EVIDENCE_MAP por mandato de gobernanza."
+    }
+  ],
+  "metrics_and_denominators": {
+    "compression_ratio": "De 20 páginas de clipping a 1 página ejecutiva (< 400 palabras)",
+    "decision_enablement_score": "100% accionable"
+  },
+  "bridge_implications": "Diseñar la plantilla principal de BRIDGE como un 'Decision Memo' ejecutivo, eliminando gráficos decorativos de sentimiento.",
+  "open_gaps": [
+    "Definición de formatos ultra-sintéticos para consumo por audio o podcast privado en traslados matinales."
+  ],
+  "next_question_ids": [
+    "P07-C02",
+    "P07-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

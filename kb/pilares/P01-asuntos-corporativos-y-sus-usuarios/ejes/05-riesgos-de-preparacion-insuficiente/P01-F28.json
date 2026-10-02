@@ -1,0 +1,225 @@
+{
+  "question_id": "P01-F28",
+  "pilar": "P01",
+  "eje": "Riesgos de preparación insuficiente",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar riesgos de preparación insuficiente de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de riesgos de preparación insuficiente se define mediante: 4 variables de falla de inteligencia (asimetría interna/externa, fragmentación de repositorios en silos, desfase temporal fuera de la Golden Hour, y procesamiento artesanal); 4 categorías en la taxonomía de errores (contradicción discursiva, improvisación sin lines to take, omisión de antecedentes, y especulación por sesgos); cadenas causales de 5 pasos desde el punto ciego directivo hasta la judicialización y pérdida de SLO; y 4 condiciones de contención (conexión bidireccional, trazabilidad con citas obligatorias, gobernanza integrada en C-Suite y distribución de vocería unificada en <30 min).",
+  "findings": [
+    {
+      "claim_id": "P01-F28-C1",
+      "claim": "Las fallas de inteligencia surgen de cuatro variables estructurales: asimetría entre conocimiento interno y señales externas, dispersión documental en silos aislados, pérdida de la ventana temporal de la Golden Hour (<30-60 min) y dependencia de recopilaciones manuales artesanales propensas a fatiga cognitiva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Gerencias de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3: Variables de Falla y Asimetría de Información",
+          "excerpt_short": "Cuatro variables de falla: asimetría interna/externa, silos documentales, desfase de Golden Hour y recopilación artesanal.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F28-C2",
+      "claim": "La cadena causal de impacto directivo opera en 5 eslabones: 1) preparación artesanal fragmentada; 2) contradicción del vocero ante preguntas incisivas; 3) registro de la contradicción en plataformas públicas (InfoLobby/CMF); 4) movilización comunitaria y judicialización ambiental; y 5) daño reputacional y pérdida de legitimidad en el C-Suite.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Empresas con presencia territorial y reguladas"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3: Cadena Causal de Impacto Reputacional y Regulatorio",
+          "excerpt_short": "Eslabones de la cadena causal: de la preparación fragmentada al litigio ambiental y desvalorización bursátil.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F28-C3",
+      "claim": "Las cuatro condiciones de contención son: conexión bidireccional entre archivo interno y entorno, verificación estricta de citas directas, asiento formal del CCO en el Comité Ejecutivo y distribución unificada de lines to take en menos de 30 minutos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Diseño de Inteligencia Corporativa"
+      },
+      "evidence": [
+        {
+          "source_id": "059b0334-329a-41a0-8dd9-44d7ea87aeca",
+          "source_title": "P01_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 4: Condiciones de Contención HT-1 y HT-2",
+          "excerpt_short": "Condiciones de contención: trazabilidad documental estricta, integración de repositorios y distribución acelerada de lines to take.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Mapa de evidencia del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorios dispersos",
+      "Señales de crisis incipiente",
+      "Demandas de prensa o reguladores"
+    ],
+    "actors": [
+      "Analista Táctico",
+      "Vocero Oficial",
+      "Fiscal Legal",
+      "Oficial de Enlace Comunitario"
+    ],
+    "steps": [
+      "Detección de asimetría informativa",
+      "Activación de conexión bidireccional",
+      "Verificación cruzada de citas",
+      "Alineamiento C-Suite",
+      "Emisión de vocería blindada"
+    ],
+    "states": [
+      "Vulnerabilidad_Detectada",
+      "Protocolo_Contención_Activo",
+      "Vocería_Trazable",
+      "Riesgo_Neutralizado"
+    ],
+    "outputs": [
+      "Briefing verificado con citas",
+      "Líneas discursivas alineadas",
+      "Registro transparente"
+    ],
+    "exceptions": [
+      "Uso de modelos de IA sin conexión a la memoria interna corporativa"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CADENA_CAUSAL_ASIMETRIA",
+      "type": "modelo_causal",
+      "name": "Cadena Causal de Falla de Inteligencia",
+      "aliases": [
+        "Eslabones de Riesgo de Vocería"
+      ]
+    },
+    {
+      "entity_id": "ENT_CONDICIONES_CONTENCION",
+      "type": "condiciones_exito",
+      "name": "Condiciones de Contención e Inteligencia Estructurada",
+      "aliases": [
+        "Pilares de Blindaje Reputacional"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CONDICIONES_CONTENCION",
+      "predicate": "interrumpe",
+      "object_id": "ENT_CADENA_CAUSAL_ASIMETRIA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F28-C3"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Implementar la conexión bidireccional obligatoria entre repositorios documentales internos y monitoreo exterior para romper silos.",
+      "status": "evidencia"
+    },
+    {
+      "module": "Actuar",
+      "implication": "Garantizar trazabilidad documental con citas obligatorias en cada línea de briefing para evitar alucinaciones y especulaciones.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F29",
+    "P01-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:52:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

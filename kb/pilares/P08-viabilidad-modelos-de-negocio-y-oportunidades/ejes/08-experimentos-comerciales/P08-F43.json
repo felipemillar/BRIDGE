@@ -1,0 +1,151 @@
+{
+  "question_id": "P08-F43",
+  "pilar": "P08",
+  "eje": "Experimentos comerciales",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué entrevista, piloto guiado y prueba de disposición a pagar propone el corpus?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus prescribe una secuencia experimental rigurosa en tres fases para validar el modelo antes de escalar inversiones comerciales: 1) Fase de Entrevistas de Descubrimiento (Problem Discovery): 15 a 20 entrevistas semiestructuradas con tomadores de decisión reales (CCOs, VPs de Asuntos Corporativos y CISOs del IPSA) enfocadas en desentrañar el costo del error y la dinámica del comité de compras, sin mostrar demos de software para evitar sesgos de cortesía; 2) Fase de Piloto Guiado Pagado (Paid Proof of Value): Despliegue de 60 días con 3 a 5 corporaciones seleccionadas a una tarifa de compromiso de USD 2.500/mes (~CLP 2.400.000), con ingesta de 3 fuentes regulatorias chilenas (BCN, SMA, InfoLobby) y sus propios compromisos ambientales, asistido por un analista HITL; y 3) Prueba de Disposición a Pagar (WTP Conversion Test): Al día 45 del piloto, presentación formal del contrato anual a tarifa plena (USD 5.000/mes = USD 60.000 anuales), midiendo la conversión real a firma de orden de compra vinculante.",
+  "findings": [
+    {
+      "claim_id": "P08-F43-C1",
+      "claim": "La metodología de validación comercial exige sustituir las encuestas de opinión por experimentos conductuales con dinero real: entrevistas de dolor, pilotos pagados y ofertas de conversión vinculante.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "commercial_experiment_design",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 8.1 'Diseño Experimental: Entrevistas, Piloto Guiado y Prueba de WTP'",
+          "excerpt_short": "El protocolo de validación comercial prohíbe el lanzamiento comercial masivo antes de superar tres experimentos empíricos: Experimento 1: 15 entrevistas en profundidad con directivos del IPSA para validar que el tiempo de respuesta ante crisis y la dispersión regulatoria son dolores de nivel Directorio; Experimento 2: Piloto de 60 días con cobro explícito de USD 2.500 mensuales a 4 empresas para medir la intensidad de uso real y la interacción con el analista HITL; Experimento 3: Test de conversión al día 45 donde se condiciona la continuidad a la firma de un contrato anual a USD 5.000/mes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 9 'Protocolo de Validación de Mercado'",
+          "excerpt_short": "Todo piloto sin compromiso financiero o de recursos senior debe descartarse como métrica de validación; únicamente el intercambio monetario o una carta de intención con penalidad constituyen prueba de tracción.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño experimental consistente y respaldado en la metodología de validación de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Pauta de entrevista cualitativa",
+      "Acuerdo de piloto pagado (60 días)",
+      "Contrato anual tipo BRIDGE"
+    ],
+    "actors": [
+      "Director Comercial",
+      "Socio Fundador",
+      "CCO Cliente",
+      "Gerente de Finanzas"
+    ],
+    "steps": [
+      "Ejecución de 15 entrevistas",
+      "Firma de 4 acuerdos de piloto pagado (USD 2.5K/mes)",
+      "Entrega de servicio y medición de NPS y uso",
+      "Oferta de conversión a contrato anual (USD 5K/mes)"
+    ],
+    "states": [
+      "Entrevistas en Curso",
+      "Pilotos Activos",
+      "Conversión Presentada",
+      "Contrato Cerrado"
+    ],
+    "outputs": [
+      "Datos de conversión empírica y contratos firmados"
+    ],
+    "exceptions": [
+      "Empresa que solicite extender el piloto 30 días adicionales pagando tarifa completa"
+    ]
+  },
+  "entities": [
+    "Experimento Comercial",
+    "Entrevista de Descubrimiento",
+    "Piloto Pagado",
+    "Prueba de WTP",
+    "Conversión Anual"
+  ],
+  "relations": [
+    {
+      "from": "Entrevistas de Descubrimiento",
+      "to": "Piloto Pagado 60d",
+      "type": "qualifies_candidates_for"
+    },
+    {
+      "from": "Piloto Pagado",
+      "to": "Prueba de WTP Anual",
+      "type": "precedes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Piloto gratuito (Free Trial) vs Piloto pagado (Skin in the Game)",
+      "diferencia": "El piloto gratuito no genera compromiso en el cliente y arroja falso interés; el piloto pagado obliga a la gerencia a usar el producto y evaluar su ROI."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "discovery_interviews_target": "15 a 20 entrevistas con CCOs de grandes empresas",
+    "pilot_commitment_fee": "USD 2.500 mensuales durante 60 días",
+    "target_conversion_rate": "> 60% de pilotos a contrato anual de USD 5.000/mes"
+  },
+  "bridge_implications": "Nunca ofrecer pilotos gratuitos de BRIDGE; establecer el fee de USD 2.500/mes como el filtro innegociable de seriedad del prospecto.",
+  "open_gaps": [
+    "Diseñar el borrador de 'Acuerdo de Piloto de Evaluación Rápida' con cláusulas de confidencialidad reforzadas."
+  ],
+  "next_question_ids": [
+    "P08-F44",
+    "P08-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

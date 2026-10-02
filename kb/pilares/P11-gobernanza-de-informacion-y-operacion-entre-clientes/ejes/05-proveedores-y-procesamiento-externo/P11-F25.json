@@ -1,0 +1,165 @@
+{
+  "question_id": "P11-F25",
+  "pilar": "P11",
+  "eje": "Proveedores y procesamiento externo",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué datos recibe cada proveedor de IA, búsqueda, monitoreo y almacenamiento?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La arquitectura de BRIDGE aplica un principio estricto de minimización de datos (Data Minimization) que delimita con precisión el payload que recibe cada categoría de proveedor externo: 1) Proveedores de Inferencia de IA (AWS Bedrock, Azure OpenAI Service, Google Cloud Vertex AI, Anthropic Commercial y OpenAI API): Reciben exclusivamente el prompt estructurado y fragmentos contextuales previamente sanitizados (con PII tokenizada y secretos D3/D5 enmascarados), sin identificadores directos del cliente, bajo acuerdos enterprise de 'Zero Training Data Retention'; 2) Proveedores de Búsqueda Vectorial (Qdrant): Reciben vectores densos de flotantes (embeddings numéricos) y metadatos de payload no confidenciales (`tenant_id`, `document_type`, fecha, hash de procedencia); 3) Proveedores de Monitoreo y Telemetría (Datadog / CloudWatch): Reciben métricas de latencia, códigos de respuesta HTTP, contadores de uso de tokens y trazas de error sin payloads de mensajes ni contenido textual; y 4) Proveedores de Almacenamiento en la Nube (AWS S3 / Google Cloud Storage): Reciben los archivos binarios cifrados en reposo mediante AES-256-GCM con claves CMK administradas por el cliente, de modo que el proveedor de infraestructura solo aloja datos matemáticamente opacos.",
+  "findings": [
+    {
+      "claim_id": "P11-F25-C1",
+      "claim": "El principio de minimización delimita los datos enviados a proveedores: los LLMs reciben prompts anonimizados sin metadatos de tenant, Qdrant recibe embeddings numéricos, el monitoreo recibe telemetría pura y el almacenamiento recibe blobs cifrados con CMK.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "third_party_data_flows",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 8 'Términos de Proveedores Cloud de IA y Flujos de Datos'",
+          "retrieved_at": null,
+          "excerpt_short": "Flujo de datos segregado: Inferencia de IA recibe prompts sin PII; Qdrant recibe vectores de números reales y tenant_id; almacenamiento S3 aloja blobs cifrados con KMS CMK; monitoreo solo recibe telemetría de rendimiento.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AWS Documentation: Amazon Bedrock Data Protection and Privacy Controls",
+          "source_id": "c1ccc227-9c35-4fc2-af02-7163f1ebc49d",
+          "locator": "Section 'Data Protection and Zero-Retention Inferences'",
+          "retrieved_at": null,
+          "excerpt_short": "Amazon Bedrock does not use customer prompts or completions to train any AWS models, and data is processed within dedicated, isolated runtime environments in designated cloud regions.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Google Cloud Vertex AI: Generative AI Data Governance & Enterprise Privacy",
+          "source_id": "9610ffd6-198c-4eb2-8970-9b959828277c",
+          "locator": "Section 'Customer Data Governance and Privacy Commitments'",
+          "retrieved_at": null,
+          "excerpt_short": "Your prompts, completions, and fine-tuning data are not used to train foundation models, and Google does not log customer content across unauthorized services.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la documentación oficial de privacidad de AWS Bedrock, Google Cloud Vertex AI y las especificaciones del dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta de usuario",
+      "Documentos contextuales de soporte",
+      "Canal de salida externo"
+    ],
+    "actors": [
+      "Sanitizador de Salida BRIDGE",
+      "API Gateway",
+      "Proveedor LLM",
+      "Proveedor Almacenamiento"
+    ],
+    "steps": [
+      "Extracción de fragmentos de texto en memoria",
+      "Paso obligatorio por el sanitizador de PII (reemplazo de nombres y teléfonos por tokens)",
+      "Eliminación de cabeceras de cliente antes de invocar la API del LLM",
+      "Envío del payload anonimizado a través de túnel TLS 1.3 con mutua autenticación",
+      "Recepción de la respuesta sintética y re-inyección local de entidades",
+      "Registro del volumen de tokens procesados en el proveedor sin guardar el texto en logs de terceros"
+    ],
+    "states": [
+      "PAYLOAD_SCRUBBED",
+      "ANONYMIZED_REQUEST_SENT",
+      "COMPLETION_RECEIVED",
+      "LOCAL_UNMASKING"
+    ],
+    "outputs": [
+      "Respuesta generada sin haber expuesto identidades ni secretos corporativos a terceros"
+    ],
+    "exceptions": [
+      "Si el escáner detecta que el prompt contiene claves API o credenciales de sistema, el request al proveedor se aborta de inmediato"
+    ]
+  },
+  "entities": [
+    "AWS Bedrock",
+    "Vertex AI",
+    "Data Minimization",
+    "Sanitizador de Salida",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Prompt Sanitizado",
+      "to": "Proveedor LLM",
+      "type": "DISPATCHED_TO"
+    },
+    {
+      "from": "Almacenamiento S3",
+      "to": "Blobs Cifrados",
+      "type": "STORES_EXCLUSIVELY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Envío de documentos completos con metadatos a la API de IA vs Minimización de payload",
+      "diferencia": "El envío de documentos completos regala información estratégica al proveedor de nube; la minimización de payload envía solo fragmentos desprovistos de identidad y contexto comercial."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "third_party_pii_leakage_rate": "0% de PII o identificadores de tenant transmitidos a APIs de proveedores",
+    "provider_egress_inspection_coverage": "100% de llamadas externas auditadas por el sanitizador"
+  },
+  "bridge_implications": "Permite demostrar ante los oficiales de seguridad corporativa que BRIDGE opera como un escudo de anonimización frente a proveedores de nube extranjeros.",
+  "open_gaps": [
+    "Medición de posibles ataques de inversión de embeddings (reconstrucción de texto original a partir de vectores)."
+  ],
+  "next_question_ids": [
+    "P11-F26",
+    "P11-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

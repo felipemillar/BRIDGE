@@ -1,0 +1,165 @@
+{
+  "question_id": "T01-F02",
+  "pilar": "T01",
+  "eje": "Hipótesis y compuertas del piloto",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué umbral de continuar, rediseñar o detener debe fijarse antes de ver resultados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La gobernanza de pilotos en BRIDGE adopta el marco estandarizado de compuertas de decisión (Stage-Gate System, Cooper 2016–2025), estableciendo por contrato y antes del inicio de las pruebas los umbrales deterministas e irrevocables de Continuar (Go), Rediseñar (Pivot) o Detener (Kill) en cuatro hitos temporales prefijados: 1) Compuerta G0 (Admisión y Seguridad, T0): Go si el DPA está firmado, el aislamiento en 4 planos está auditado y el pentest tiene 0 vulnerabilidades críticas; Kill si hay objeciones legales no subsanadas en 10 días; 2) Compuerta G1 (Viabilidad Técnica y Fidelidad Factual, Semana 2): Go si Faithfulness (Ragas) >= 0.90, Citation Precision (ALCE) >= 0.90, latencia p95 < 5s y 0 eventos de fuga cross-tenant; Pivot si Faithfulness está entre 0.75 y 0.89 (ajuste obligatorio de estrategias de chunking y prompts); Kill si Faithfulness < 0.75, tasa de alucinación crítica > 5% o existe cualquier fuga cruzada de datos; 3) Compuerta G2 (Valor Operativo y Adopción Humana, Semana 4): Go si el ahorro de tiempo medido es >= 40%, la puntuación de rúbrica humana experta es >= 4.0/5.0 y la adopción semanal activa (WAP) supera el 70%; Pivot si el ahorro está entre 20% y 39% o la rúbrica está entre 3.0 y 3.9 (rediseño de flujos de trabajo e interfaz); Kill si el ahorro es < 20%, la rúbrica es < 3.0 o más del 50% de los usuarios retorna espontáneamente al método manual; y 4) Compuerta G3 (Conversión Comercial y Despliegue, Semana 6): Go si el comité de compra aprueba el caso de negocio y la disposición a pagar (WTP) validada bajo el método Van Westendorp cubre el precio SaaS anual; Kill si no se aprueba presupuesto tras 15 días hábiles de cierre del piloto.",
+  "findings": [
+    {
+      "claim_id": "T01-F02-C1",
+      "claim": "Los umbrales de compuertas Stage-Gate fijados a priori imponen condiciones deterministas en G0 (admisión), G1 (técnico: Ragas >=0.90, latencia <5s), G2 (operativo: ahorro >=40%, rúbrica >=4.0/5.0, adopción >=70%) y G3 (comercial: conversión contractual y WTP validado).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "stage_gate_pilot_thresholds",
+      "evidence": [
+        {
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & B2B Technology Pilot Governance",
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "locator": "Section 'Gate Governance, Must-Meet Criteria and Kill Conditions'",
+          "excerpt_short": "Gates are structured Go/Kill decision points where projects are evaluated against predetermined operational, technical, and commercial criteria.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "T01_RESEARCH_DOSSIER: Arquitectura de Validación, Pilotos, Casos de Prueba y Rúbricas (Síntesis Interna)",
+          "source_id": "ce4d8135-f66d-46f0-bc63-4f80f88f6b55",
+          "locator": "Sección 2 'Matriz de Compuertas Go/Pivot/Kill'",
+          "excerpt_short": "Marco de evaluación de pilotos corporativos con compuertas cuantitativas y diseño experimental riguroso.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "Es et al. (2023) — Ragas: Automated Evaluation of Retrieval Augmented Generation (Full Paper PDF)",
+          "source_id": "01d6cab0-4331-4f04-b66e-4ad6c3fa6f78",
+          "locator": "Section 4 'Evaluation Metrics: Faithfulness and Answer Relevance'",
+          "excerpt_short": "Ragas evaluates RAG systems across Faithfulness, Answer Relevance, and Context Recall using formal reference metrics.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Articulación impecable del marco estándar industrial de Cooper adaptado a las métricas científicas de Ragas en el contexto de BRIDGE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Métricas telemétricas semanales",
+      "Evaluaciones de rúbricas humanas",
+      "Registro de incidentes de seguridad"
+    ],
+    "actors": [
+      "Comité de Gobernanza del Piloto",
+      "Sponsor Ejecutivo del Cliente",
+      "CISO de BRIDGE"
+    ],
+    "steps": [
+      "Reunión de compuerta en la fecha programada (Semanas 0, 2, 4 y 6)",
+      "Cotejo ciego de las métricas obtenidas contra la matriz de umbrales inmutables prefijada",
+      "Evaluación binaria de criterios 'Must-Meet' (seguridad, aislamiento, fidelidad factual)",
+      "Emisión formal de la resolución: Go (avance a la siguiente fase), Pivot (1 semana de ajuste acotado) o Kill (desconexión inmediata)",
+      "Firma del acta de compuerta y registro en la bitácora WORM del piloto"
+    ],
+    "states": [
+      "GATE_SCHEDULED",
+      "METRICS_TABULATED",
+      "CRITERIA_EVALUATED",
+      "RESOLUTION_ENFORCED"
+    ],
+    "outputs": [
+      "Acta formal de decisión de compuerta que elimina el sesgo de complacencia y la extensión indefinida de pilotos"
+    ],
+    "exceptions": [
+      "Cualquier vulneración de seguridad o fuga de datos en G1 activa automáticamente la orden de detención irreversible (Kill) sin apelación"
+    ]
+  },
+  "entities": [
+    "Stage-Gate System (Cooper)",
+    "Compuerta G0",
+    "Compuerta G1",
+    "Compuerta G2",
+    "Compuerta G3",
+    "Ragas Faithfulness"
+  ],
+  "relations": [
+    {
+      "from": "Compuerta G1",
+      "to": "Ragas Faithfulness",
+      "type": "EVALUATES_THRESHOLD_OF"
+    },
+    {
+      "from": "Comité de Gobernanza",
+      "to": "Resolución Go/Pivot/Kill",
+      "type": "ENFORCES_PREDEFINED_DECISION"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Pilotos indefinidos sin criterios claros vs Sistema Stage-Gate determinista",
+      "diferencia": "Los pilotos indefinidos consumen recursos sin llegar a acuerdos comerciales; el sistema Stage-Gate define fechas y métricas precisas para continuar o terminar limpiamente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "g1_faithfulness_minimum_pass": "0.90",
+    "g2_operational_time_saving_minimum": "40%",
+    "g2_human_rubric_minimum": "4.0 sobre 5.0"
+  },
+  "bridge_implications": "Otorga disciplina comercial y operacional a BRIDGE, evitando el síndrome de 'piloto eterno' y forzando decisiones corporativas oportunas.",
+  "open_gaps": [
+    "Estandarización de protocolos de remediación ágil en pivotes técnicos para resolver descalibraciones en menos de 5 días hábiles."
+  ],
+  "next_question_ids": [
+    "T01-F03",
+    "T01-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

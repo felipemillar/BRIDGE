@@ -1,0 +1,151 @@
+{
+  "question_id": "P08-F37",
+  "pilar": "P08",
+  "eje": "Diferenciación como hipótesis",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué flujo completo podría distinguir la propuesta frente a alternativas existentes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El flujo completo que distingue a BRIDGE frente a cualquier alternativa existente articula cuatro cuadrantes sinérgicos (Saber, Escuchar, Hablar y Relacionar): 1) Escuchar: Ingesta algorítmica de señales del entorno externo (prensa, boletines del Congreso BCN, resoluciones de la SMA y Hechos Esenciales CMF); 2) Saber: Indexación y comprensión de la memoria corporativa interna (compromisos de RCAs ambientales, reportes CMF NCG 461, actas y compromisos de sostenibilidad); 3) Relacionar: Trazabilidad del historial de interacciones y audiencias institucionales registradas bajo la Ley 20.730 de Lobby (InfoLobby); y 4) Hablar: Síntesis ejecutiva 'En 60 Segundos' que genera automáticamente la postura institucional, delimita la Línea Roja corporativa y provee la batería de preguntas difíciles (Q&A) certificada por un analista HITL antes de cada interacción pública.",
+  "findings": [
+    {
+      "claim_id": "P08-F37-C1",
+      "claim": "La propuesta de valor diferencial de BRIDGE reside en la integración en bucle cerrado de señales externas, compromisos corporativos internos y memoria relacional institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "differential_value_flow",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 7.1 'El Flujo Integral Diferenciador: Saber, Escuchar, Hablar y Relacionar'",
+          "excerpt_short": "La hipótesis central de diferenciación de BRIDGE postula que el valor no proviene de añadir otro canal de monitoreo de noticias, sino de conectar en un único flujo operativo tres mundos que hoy viven desconectados: lo que pasa afuera (Escuchar), lo que la empresa prometió o tiene documentado adentro (Saber), y con quién se ha interactuado previamente (Relacionar), entregando como resultado un producto accionable para la alta dirección (Hablar: brief con líneas rojas en 60 segundos). Ningún competidor actual en América Latina ofrece esta integración.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Arthur W. Page Society: Building Belief - Activating Corporate Character",
+          "source_id": "5647e9b0-94ad-4c6b-8be8-129d1bfe2094",
+          "locator": "Capítulo 'The Enterprise Alignment Flow', p. 16-20",
+          "excerpt_short": "Authentic corporate communication requires closing the gap between external advocacy and internal operational reality. Systems that correlate institutional behavior with external sentiment are the cornerstone of contemporary corporate affairs.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la doctrina de coherencia corporativa de Page Society y el flujo operacional de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas (BCN, SMA, Medios)",
+      "Compromisos internos (RCAs, Políticas)",
+      "Historial de Lobby (InfoLobby)"
+    ],
+    "actors": [
+      "Módulo Escuchar",
+      "Módulo Saber",
+      "Módulo Relacionar",
+      "Módulo Hablar (Analista HITL + CCO)"
+    ],
+    "steps": [
+      "Detección de señal externa",
+      "Cruce con compromisos internos y actores",
+      "Generación de brief ejecutivo con línea roja",
+      "Entrega y habilitación de decisión"
+    ],
+    "states": [
+      "Señal Detectada",
+      "Conocimiento Cruzado",
+      "Brief Generado",
+      "Decisión Habilitada"
+    ],
+    "outputs": [
+      "Brief ejecutivo de 1 página con respaldo navegable"
+    ],
+    "exceptions": [
+      "Ausencia de documentos internos del cliente mitigada por inferencia sobre compromisos públicos regulatorios"
+    ]
+  },
+  "entities": [
+    "Flujo The Bridge",
+    "Saber",
+    "Escuchar",
+    "Hablar",
+    "Relacionar",
+    "Línea Roja",
+    "InfoLobby"
+  ],
+  "relations": [
+    {
+      "from": "Escuchar (Señales)",
+      "to": "Saber (Memoria Interna)",
+      "type": "cross_references_with"
+    },
+    {
+      "from": "Cruce Integrado",
+      "to": "Hablar (Brief Ejecutivo)",
+      "type": "synthesizes_into"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Monitoreo tradicional vs Flujo BRIDGE",
+      "diferencia": "El monitoreo tradicional solo entrega recortes de prensa; BRIDGE entrega el cruce de la noticia con la RCA interna y la línea roja para el vocero."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "integrated_dimensions_count": "4 módulos integrados (Saber, Escuchar, Hablar, Relacionar)",
+    "brief_reading_time": "< 60 segundos para la vista ejecutiva frontal"
+  },
+  "bridge_implications": "Preservar la identidad de los 4 módulos como la arquitectura fundacional de la interfaz y del marketing de BRIDGE.",
+  "open_gaps": [
+    "Validar la experiencia de usuario (UX) del cruce de los 4 módulos en pantallas móviles de ejecutivos."
+  ],
+  "next_question_ids": [
+    "P08-F38",
+    "P08-F39"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

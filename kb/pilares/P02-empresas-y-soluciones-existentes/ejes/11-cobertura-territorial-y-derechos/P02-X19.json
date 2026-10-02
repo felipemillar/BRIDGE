@@ -1,0 +1,136 @@
+{
+  "question_id": "P02-X19",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Cobertura territorial y derechos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué licencias de contenido o restricciones de exportación podrían impedir integrar una solución?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Existen dos barreras legales y contractuales determinantes: 1) Licencias de derechos de autor y reproducción de prensa: entidades de gestión colectiva (como NLA en Reino Unido, CFC en Francia, CEDRO en España, y normativas de la ANP en Chile) prohíben la redistribución, almacenamiento masivo o extracción comercial de textos completos de artículos de prensa sin el pago de aranceles de copyright; violar estos acuerdos expone a la empresa y al software a demandas millonarias por infracción de propiedad intelectual; 2) Soberanía de datos y restricciones de exportación: normativas como el RGPD en Europa, la Ley 21.096 / nueva ley de protección de datos en Chile y regulaciones de ciberseguridad para infraestructura crítica (minería, energía, telecomunicaciones) prohíben alojar o transferir documentos internos confidenciales, expedientes de litigios o datos personales de dirigentes vecinales a servidores en el extranjero sin cifrado soberano (BYOK) y cláusulas de residencia local de datos.",
+  "findings": [
+    {
+      "claim_id": "P02-X19-C1",
+      "claim": "La integración de soluciones de asuntos corporativos está estrictamente limitada por los derechos de autor de las organizaciones de prensa y por las leyes de soberanía y residencia de datos en industrias estratégicas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Entidades de Copyright y Ciberseguridad"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Copyright Licensing and Data Residency Compliance",
+          "excerpt_short": "Redistributing full-text media clips requires collective licensing agreements (NLA/CFC/CEDRO). Critical infrastructure clients enforce strict local data residency.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de marcos normativos de propiedad intelectual y ciberseguridad corporativa.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Contratos de licencia de prensa",
+      "Políticas de seguridad del cliente corporativo",
+      "Regulaciones de protección de datos"
+    ],
+    "actors": [
+      "Oficial de Privacidad (DPO)",
+      "Abogado de Propiedad Intelectual",
+      "Arquitecto de Infraestructura Cloud"
+    ],
+    "steps": [
+      "Auditoría de derechos de ingesta de medios",
+      "Configuración de retención de datos limitada (30 días)",
+      "Despliegue de instancias en regiones de nube locales (e.g. AWS/GCP Santiago de Chile)",
+      "Habilitación de cifrado BYOK"
+    ],
+    "states": [
+      "Licencia_Auditada",
+      "Instancia_Local_Desplegada",
+      "Cumplimiento_Certificado"
+    ],
+    "outputs": [
+      "Arquitectura conforme a normativas de copyright y soberanía"
+    ],
+    "exceptions": [
+      "Proveedores de noticias que bloquean completamente el uso de sus textos para entrenamiento de RAG"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_LICENCIAS_PRENSA",
+      "type": "marco_regulatorio",
+      "name": "Licencias Colectivas de Reproducción de Prensa",
+      "aliases": [
+        "Press Copyright"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LICENCIAS_PRENSA",
+      "predicate": "limita_redistribucion_de",
+      "object_id": "Textos_Completos_Noticias",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X19-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Almacenamiento Ilegal de Textos vs Ingesta Licenciada con Resumen",
+      "Almacenamiento Ilegal": "Guardar PDFs y textos íntegros en bases de datos abiertas; riesgo de litigio por copyright.",
+      "Ingesta Licenciada": "Almacenar fragmentos, metadatos y resúmenes con enlaces profundos a la fuente original."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe suscribir convenios de prensa y garantizar despliegues en servidores locales en Chile para clientes mineros y bancarios.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X20"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:52:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

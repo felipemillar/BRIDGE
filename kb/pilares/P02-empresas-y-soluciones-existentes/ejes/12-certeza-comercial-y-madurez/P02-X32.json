@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-X32",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Certeza comercial y madurez",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre certeza comercial y madurez, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba el Costo Total de Propiedad (TCO) real y los costos ocultos de implementación de las grandes suites de corporate affairs en corporaciones multinacionales: 1) Brecha: Aunque los vendors cotizan licencias de software anuales, los clientes reportan sobrecostos masivos en 'servicios profesionales de consultoría', cargos por exceso de volumen de menciones, tarifas adicionales por conectores de API y meses de retraso en la puesta en marcha; 2) Fuentes fallidas/parciales: Las cotizaciones comerciales y casos de marketing omiten deliberadamente las facturas de servicios de consultoría asociados y el tiempo hombre interno dedicado al onboarding; 3) Validación mínima: Diseñar una encuesta confidencial de auditoría de adquisiciones con 15 directores financieros y de asuntos corporativos en América Latina que hayan implementado Meltwater, Cision, Quorum o AlphaSense en los últimos 24 meses, levantando los costos reales de contrato, servicios de integración, costos de conectores y horas de consultoría incurridas durante el primer año de operación.",
+  "findings": [
+    {
+      "claim_id": "P02-X32-C1",
+      "claim": "El Costo Total de Propiedad (TCO), los cargos por exceso de menciones y los costos ocultos de servicios profesionales de implementación de las suites empresariales carecen de transparencia y documentación pública verificable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "América Latina / Global",
+        "actor": "Suites Empresariales P02"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Hidden Implementation Costs and Real TCO Gap",
+          "excerpt_short": "True enterprise TCO remains opaque due to confidential professional onboarding service fees, API call surcharges, and mention overage penalties omitted from marketing sheets.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:54:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de vacíos de costos y contratación en el atlas de validación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario confidencial de TCO",
+      "Panel de 15 directores financieros de empresas clientes",
+      "Facturas de software y servicios profesionales"
+    ],
+    "actors": [
+      "Auditor de Costos de Software",
+      "Director Financiero (CFO)"
+    ],
+    "steps": [
+      "Recopilación de facturación anual total",
+      "Desglose entre licencia de software y consultoría de onboarding",
+      "Cálculo del multiplicador real de TCO"
+    ],
+    "states": [
+      "Cuestionario_Desplegado",
+      "Facturas_Anonimizadas",
+      "Multiplicador_Calculado"
+    ],
+    "outputs": [
+      "Estudio de TCO real y costos ocultos en software de asuntos corporativos"
+    ],
+    "exceptions": [
+      "Cláusulas de confidencialidad en contratos de software que prohíben revelar precios bajo pena de cancelación"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTUDIO_TCO_REAL",
+      "type": "estudio_financiero",
+      "name": "Estudio de TCO Real y Costos Ocultos de Software",
+      "aliases": [
+        "Real TCO Audit"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESTUDIO_TCO_REAL",
+      "predicate": "cuantifica_costos_ocultos_de",
+      "object_id": "Suites_Empresariales_P02",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X32-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Costo Nominal de Licencia vs Costo Total de Propiedad (TCO)",
+      "Costo Nominal": "Cotización de $30,000 USD/año por la licencia de software.",
+      "Costo Total de Propiedad": "$75,000 USD/año al sumar $25,000 de consultores de onboarding, $10,000 por excedentes de noticias y $10,000 de horas internas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe basar su propuesta comercial en un TCO todo incluido sin cobros ocultos por onboarding ni sobrecargos por volumen de menciones.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_REAL_TCO_COSTS",
+      "description": "Falta de transparencia sobre costos ocultos de onboarding y TCO real",
+      "action": "Ejecutar encuesta confidencial con 15 CFOs"
+    }
+  ],
+  "next_question_ids": [
+    "P03-F01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:54:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

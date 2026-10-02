@@ -1,0 +1,136 @@
+{
+  "question_id": "P02-F36",
+  "pilar": "P02",
+  "eje": "Flujo editorial y servicios expertos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra flujo editorial y servicios expertos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso de prueba concreto y verificable: 'Aprobación urgente y despliegue de declaración corporativa ante corte de suministro por falla de transmisión eléctrica'. Entradas: 1) Requerimiento urgente de prensa de tres canales de televisión solicitando cuña en vivo sobre la causa del apagón; 2) Ficha del tema crítico (Issue) preexistente en el sistema: 'Plan de Contingencia ante Fallas en Sistema de Transmisión Troncal', con mensajes aprobados de marzo 2026; 3) Informe preliminar de operaciones que confirma corte por caída de torre debido a temporal en la Región del Maule. Proceso: a) El Jefe de Prensa redacta una actualización del holding statement vinculada al Issue; b) El sistema envía notificación prioritaria de aprobación vía app móvil al Gerente de Asuntos Legales y al Director de Asuntos Corporativos; c) Ambos revisan en paralelo las modificaciones en un visor de control de cambios unificado; d) En 8 minutos se registran las dos firmas digitales de aprobación con sello de tiempo criptográfico inmutable; e) El sistema genera una ficha de briefing en PDF cifrado enviada al teléfono del Vocero Regional Autorizado, detallando: hechos confirmados que se pueden mencionar, compromisos de reposición horaria, y advertencia explícita de NO especular sobre responsabilidades de terceros antes del informe del Coordinador Eléctrico Nacional. Resultado esperado: Emisión de la declaración en televisión con alineación institucional del 100%, registro auditable de la aprobación disponible para el directorio, y archivo de la versión exacta emitida.",
+  "findings": [
+    {
+      "claim_id": "P02-F36-C1",
+      "claim": "El flujo estructurado de aprobación digital con control de versiones y asignación explícita de vocero permite reducir a menos de 10 minutos el tiempo de respuesta ante crisis operacionales críticas sin riesgo de contradicción institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Caso Operativo Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "bc46f4e1-79fa-4fca-86f0-6192709c7b7f",
+          "source_title": "Broadsight System of Record for Corporate Communications and Issues Management",
+          "original_url": "https://www.broadsight.com/solutions/issues-management/",
+          "locator": "Use Case: Rapid Crisis Approval and Spokesperson Briefing",
+          "excerpt_short": "Streamlines crisis communication response from hours to minutes using pre-approved message blocks and mobile multi-tier sign-offs.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de trabajo operacional documentado y replicable.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta de medios televisivos en vivo",
+      "Holding statement previo en Broadsight",
+      "Informe de terreno de operaciones"
+    ],
+    "actors": [
+      "Jefe de Prensa",
+      "Gerente Legal",
+      "Director de Asuntos Corporativos",
+      "Vocero Regional"
+    ],
+    "steps": [
+      "Ajuste de declaración en visor de cambios",
+      "Revisión móvil paralela Legal/Comunicaciones",
+      "Aprobación criptográfica",
+      "Despacho de briefing cifrado a vocero"
+    ],
+    "states": [
+      "Solicitud_Recibida",
+      "Modificacion_En_Revision",
+      "Declaracion_Aprobada",
+      "Cuña_Emitida"
+    ],
+    "outputs": [
+      "Cuña de prensa fáctica emitida sin contradicciones y con trazabilidad legal"
+    ],
+    "exceptions": [
+      "Falta de conexión móvil de un aprobador que activa protocolo de sustitución por delegado de turno"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_APAGON",
+      "type": "caso_prueba",
+      "name": "Caso Prueba Contingencia Eléctrica Maule",
+      "aliases": [
+        "Caso Eléctrico P02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_APAGON",
+      "predicate": "valida_flujo_de",
+      "object_id": "Gobernanza_Voceria_Express",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F36-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Aprobación Tradicional por Correo vs Workflow Digital Especializado",
+      "Aprobación Tradicional por Correo": "Cadenas interminables de emails, múltiples versiones Word con control de cambios desincronizado, retrasos de horas.",
+      "Workflow Digital Especializado": "Documento único centralizado, notificaciones push, firmas instantáneas y trazabilidad auditable."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Este caso valida la arquitectura del módulo Hablar de BRIDGE, demostrando su utilidad en contingencias de alta presión pública.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F37"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:38:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

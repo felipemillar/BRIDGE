@@ -1,0 +1,147 @@
+{
+  "question_id": "P07-F47",
+  "pilar": "P07",
+  "eje": "Calidad y evaluación de briefs",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre calidad y evaluación de briefs?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se respaldan en cinco fuentes canónicas del corpus: 1) Estándares Globales de Medición en Comunicación: AMEC Integrated Evaluation Framework (Barcelona Principles 3.0, 2020/2023) sobre medición de valor decisional e impacto organizacional; 2) Marcos de Gestión de Riesgo y Evaluación de IA: NIST AI Risk Management Framework 1.0 (2023, función MEASURE) y NIST Generative AI Profile (NIST AI 600-1, 2024); 3) Deontología Profesional y Estándares Éticos: PR Council (2024, 'Ethical Standards and Guidelines for Generative AI in PR'); 4) Liderazgo y Eficacia del CCO: Page Society (2021, 'The CCO as Pacesetter'; 2023, 'Beyond Communication'); y 5) Síntesis Metodológica Rectora: P07_RESEARCH_DOSSIER y P07_GAPS_AND_VALIDATION (Septiembre 2026).",
+  "findings": [
+    {
+      "claim_id": "P07-F47-C1",
+      "claim": "Los criterios de calidad, la compuerta anti-alucinación y los protocolos de comparación de briefs se fundamentan en marcos reconocidos de medición de comunicaciones y gobernanza algorítmica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_grounding",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje A y Eje E) y Sección 3",
+          "excerpt_short": "Respaldado por AMEC Framework (2023), NIST AI RMF 1.0 (2023), PR Council (2024) y Page Society (2023). Se consolida la exigencia de que todo entregable de preparación ejecutiva sea evaluado contra métricas científicas de trazabilidad, concisión y salvaguardas fiduciarias.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "AMEC: Integrated Evaluation Framework for Public Affairs",
+          "source_id": "634ebc1c-dd54-453f-8187-2975050e8760",
+          "locator": "Sección 'Organizational Impact', p. 12-15",
+          "excerpt_short": "Measuring executive intelligence requires proving that informed decision-making mitigated operational friction, preserved regulatory licenses to operate, and maintained institutional trust.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada directa contra el mapa de evidencia y la literatura metodológica de AMEC y NIST.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_fuentes_calidad_brief": [
+      {
+        "ambito": "Medición de Comunicaciones",
+        "fuente": "AMEC Framework (2023)",
+        "aporte": "Medición de efectividad discursiva y valor organizacional."
+      },
+      {
+        "ambito": "Evaluación Algorítmica",
+        "fuente": "NIST AI RMF 1.0 / NIST AI 600-1",
+        "aporte": "Métricas cuantitativas de anclaje fáctico y mitigación de alucinaciones."
+      },
+      {
+        "ambito": "Deontología Ética",
+        "fuente": "PR Council (2024)",
+        "aporte": "Criterios de no-engaño, transparencia y prohibición de salidas no visadas."
+      },
+      {
+        "ambito": "Efectividad del C-Suite",
+        "fuente": "Page Society (2021, 2023)",
+        "aporte": "Definición de concisión ejecutiva y preparación de directorios."
+      },
+      {
+        "ambito": "Síntesis Metodológica",
+        "fuente": "P07_RESEARCH_DOSSIER / GAPS_AND_VALIDATION",
+        "aporte": "Rúbrica de 6 criterios y tabla de fallos críticos invalidantes."
+      }
+    ]
+  },
+  "entities": [
+    "AMEC Framework",
+    "NIST AI RMF",
+    "PR Council",
+    "Page Society",
+    "P07_EVIDENCE_MAP"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "AMEC Framework",
+      "type": "incorporates_metrics_from"
+    },
+    {
+      "from": "NIST AI RMF",
+      "to": "Control de Calidad",
+      "type": "governs"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Métricas de Vanity (Clipping/AVE) vs Métricas de Calidad Decisional AMEC",
+      "diferencia": "Las métricas de vanidad cuentan menciones irrelevantes; las métricas AMEC evalúan si el brief blindó la reputación y la licencia social de la empresa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "authoritative_sources_count": "5 cuerpos metodológicos canónicos",
+    "methodological_robustness": "Nivel 1 de evidencia verificada"
+  },
+  "bridge_implications": "Incorporar estas referencias en los informes de auditoría metodológica que BRIDGE genera para los comités de auditoría de los directorios.",
+  "open_gaps": [
+    "Actualización de la rúbrica ante futuras directrices de la norma ISO para evaluación de sistemas de IA generativa."
+  ],
+  "next_question_ids": [
+    "P07-F48",
+    "P07-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

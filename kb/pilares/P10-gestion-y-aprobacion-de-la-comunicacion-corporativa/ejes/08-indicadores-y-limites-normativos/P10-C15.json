@@ -1,0 +1,166 @@
+{
+  "question_id": "P10-C15",
+  "pilar": "P10",
+  "eje": "Indicadores y límites normativos",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre indicadores y límites normativos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia más severa de toda la investigación de P10 residía en el alcance de la cobertura legal: Síntesis preliminares (P10_QUALITY_ADDENDUM y borradores iniciales) postulaban erróneamente una 'cobertura legal universal del 100%', pretendiendo que una empresa podía dar cumplimiento simultáneo y global a normativas chilenas, estadounidenses y europeas en un solo flujo indivisible, e invocando la Propuesta de Directiva de Green Claims de la UE como si fuese derecho vigente vinculante; en fuerte contraste, las fuentes jurídicas auténticas y la directiva canónica rectora delimitan estrictamente la territorialidad legal. Conforme a P10_VERIFICATION_CORRECTIONS (f043631e), que ejerce prevalencia canónica indiscutible sobre cualquier síntesis anterior, prevalece la rectificación obligatoria: Se retractan formalmente las afirmaciones de cobertura legal universal; se establece que rigen la Ley 18.045, NCG 30 y NCG 461 exclusivamente para el mercado chileno, SEC Reg FD y Rule 10b-5 exclusivamente para emisores en EE.UU. o con ADRs, y se declara expresamente que la Green Claims Directive de la UE (COM(2023) 166) es una propuesta legislativa no vinculante que no puede citarse como obligación jurídica corporativa.",
+  "findings": [
+    {
+      "claim_id": "P10-C15-C1",
+      "claim": "P10_VERIFICATION_CORRECTIONS prevalece de forma taxativa sobre P10_QUALITY_ADDENDUM, retractando la falsa afirmación de cobertura legal universal del 100% y deslindando con rigor la territorialidad jurídica de Chile, EE.UU. y la propuesta no vinculante de la UE.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "canonical_precedence_and_jurisdiction",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Prevalencia Canónica Rectora y Retractación de Cobertura Legal Universal'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica rectora: P10_VERIFICATION_CORRECTIONS prevalece de forma absoluta sobre P10_QUALITY_ADDENDUM. Se retracta formalmente la afirmación de 'cobertura legal 100%': CMF/leyes chilenas rigen en Chile; SEC rige para emisores EE.UU.; la directiva Green Claims de la UE es propuesta legislativa parlamentaria no vigente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "European Commission: Green Claims Directive Proposal (Single Market)",
+          "source_id": "09b89326-c438-4e2d-a2a3-c8932482ff0e",
+          "locator": "COM(2023) 166 final",
+          "retrieved_at": null,
+          "excerpt_short": "Proposal for a Directive of the European Parliament and of the Council. Legislative procedure ongoing.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 18.045 de Mercado de Valores (Hechos Esenciales)",
+          "source_id": "737c1e8d-4a41-4178-8259-fd4d44800419",
+          "locator": "Artículos 9 y 10",
+          "retrieved_at": null,
+          "excerpt_short": "Norma jurídica vinculante en el territorio de la República de Chile para entidades fiscalizadas por la CMF.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual directa del mandato de prevalencia canónica rectora y deslinde formal de la Comisión Europea.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 1.0,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Perfil corporativo del cliente",
+      "Matriz territorial de compliance",
+      "Directiva P10_VERIFICATION_CORRECTIONS"
+    ],
+    "actors": [
+      "Fiscal Corporativo",
+      "Auditor de Cumplimiento",
+      "Motor Jurisdiccional BRIDGE"
+    ],
+    "steps": [
+      "Descarte automático de la etiqueta 'cobertura legal universal 100%' en reportes comerciales",
+      "Evaluación territorial: Asignación de normas vinculantes chilenas (Ley 18.045 / NCG 30 / NCG 461)",
+      "Asignación de normas SEC únicamente si la entidad transa activamente en mercados estadounidenses",
+      "Clasificación de directivas europeas en negociación como referencias de benchmarking voluntario",
+      "Emisión de dictamen de cumplimiento territorialmente acotado y jurídicamente defendible"
+    ],
+    "states": [
+      "PREVIOUS_ADDENDUM_SUPERSEDED",
+      "JURISDICTIONS_SEGREGATED",
+      "TERRITORIAL_COMPLIANCE_ESTABLISHED"
+    ],
+    "outputs": [
+      "Matriz de gobernanza jurídica rigurosa y libre de sobre-afirmaciones falsas"
+    ],
+    "exceptions": [
+      "Ninguna; la rectificación canónica rectora es mandatoria e inapelable"
+    ]
+  },
+  "entities": [
+    "Prevalencia Canónica",
+    "Retractación Cobertura Universal",
+    "Ley 18.045",
+    "Green Claims Proposal",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "P10_QUALITY_ADDENDUM",
+      "type": "SUPERSEDES_CANONICALLY"
+    },
+    {
+      "from": "Ley 18.045",
+      "to": "Chile",
+      "type": "APPLIES_EXCLUSIVELY_AS_BINDING"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Vender cobertura legal universal falsa vs Ofrecer blindaje regulatorio territorial exacto",
+      "diferencia": "Vender cobertura universal es publicidad engañosa y negligencia profesional; el blindaje territorial exacto brinda certezas jurídicas reales al directorio."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Cobertura legal universal vs Delimitación territorial",
+      "resolution": "Prevalece la delimitación territorial de P10_VERIFICATION_CORRECTIONS; se retracta la cobertura universal."
+    }
+  ],
+  "metrics_and_denominators": {
+    "jurisdictional_accuracy_score": "100% de apego a la vigencia territorial real de cada norma"
+  },
+  "bridge_implications": "Blinda reputacional y legalmente a BRIDGE frente a cualquier auditoría externa o cuestionamiento de compliance.",
+  "open_gaps": [
+    "Seguimiento trimestral del boletín de legislación europea para detectar la promulgación definitiva de la directiva."
+  ],
+  "next_question_ids": [
+    "P10-C16",
+    "P11-F01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

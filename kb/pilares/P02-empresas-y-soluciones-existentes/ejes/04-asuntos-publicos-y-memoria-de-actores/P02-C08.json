@@ -1,0 +1,141 @@
+{
+  "question_id": "P02-C08",
+  "pilar": "P02",
+  "eje": "Asuntos públicos y memoria de actores",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre asuntos públicos y memoria de actores, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la capacidad de anticipar con precisión matemática la parálisis de un proyecto o el rechazo de un permiso ambiental a partir del análisis cruzado de relaciones comunitarias y audiencias de lobby: 1) Brecha: Borealis y Open Point documentan la gestión eficiente de quejas (grievances) y compromisos de RCA, pero carecen de modelos predictivos que alerten cuándo la acumulación de reclamos vecinales no resueltos alcanzará una masa crítica capaz de judicializar el proyecto; 2) Fuentes fallidas/parciales: Las fichas de marketing de SRM comunitario prometen 'preservar la licencia social para operar', pero no aportan datos empíricos de reducción cuantitativa de paralizaciones de obras en faenas mineras o energéticas; 3) Validación mínima: Realizar un estudio retrospectivo sobre 10 proyectos de inversión paralizados judicialmente en Chile en los últimos 5 años, cruzando sus bitácoras de quejas comunitarias con las alertas de prensa y reuniones de lobby para determinar si un algoritmo de grafos habría predicho el conflicto con al menos 30 días de anticipación.",
+  "findings": [
+    {
+      "claim_id": "P02-C08-C1",
+      "claim": "Las soluciones de gestión comunitaria (Borealis, Open Point) operan como repositorios de registro administrativo sin capacidad demostrada de predicción temprana de judicialización de proyectos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Borealis, Open Point"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Predictive Capability Gap in Stakeholder Management",
+          "excerpt_short": "Stakeholder engagement software functions as an administrative system of record; predictive correlation with project halting risks remains unverified.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:44:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Auditoría de capacidades analíticas en los manuales de Borealis y Open Point.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Historial de quejas de faena",
+      "Fechas de fallos de tribunales ambientales",
+      "Registros de prensa comunitaria"
+    ],
+    "actors": [
+      "Analista de Riesgo Socioambiental",
+      "Investigador Algorítmico"
+    ],
+    "steps": [
+      "Recopilación de bitácoras históricas",
+      "Modelación temporal de eventos",
+      "Prueba de correlación estadística entre quejas y litigios",
+      "Evaluación de poder predictivo"
+    ],
+    "states": [
+      "Datos_Historicos_Reunidos",
+      "Modelo_Calibrado",
+      "Poder_Predictivo_Medido"
+    ],
+    "outputs": [
+      "Estudio de validación empírica de predicción de crisis territoriales"
+    ],
+    "exceptions": [
+      "Incompletitud en los registros de terreno llevados manualmente por faenas antiguas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTUDIO_PREDICCION",
+      "type": "estudio_validacion",
+      "name": "Estudio Retrospectivo Predicción Litigios Socioambientales",
+      "aliases": [
+        "Litigation Prediction Study"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESTUDIO_PREDICCION",
+      "predicate": "necesario_para_validar",
+      "object_id": "Modulo_Relacionar_Predictivo",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C08-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Registro Administrativo (Borealis) vs Predicción Anticipada (Hipótesis BRIDGE)",
+      "Registro Administrativo": "Almacena la queja y avisa que pasaron 15 días sin respuesta al vecino.",
+      "Predicción Anticipada": "Alerta que 5 quejas del mismo tenor en una cuenca hídrica activarán un recurso de protección ante la Corte de Apelaciones."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Relacionar",
+      "implication": "BRIDGE debe pasar de ser una simple bitácora a un motor de analítica prescriptiva sobre el riesgo de judicialización.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_PREDICTION_RISK",
+      "description": "Falta de validación predictiva de conflictos territoriales",
+      "action": "Ejecutar estudio retrospectivo"
+    }
+  ],
+  "next_question_ids": [
+    "P02-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:44:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

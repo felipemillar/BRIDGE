@@ -1,0 +1,167 @@
+{
+  "question_id": "P01-F47",
+  "pilar": "P01",
+  "eje": "Descubrimiento y validación de usuarios",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre descubrimiento y validación de usuarios?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El tema se respalda en 10 fuentes primarias analizadas bajo 4 niveles epistemológicos: Hechos Documentados (BCN Ley 20.730 de Lobby; CMF NCG 461/519; Dircom ECE 2025: 54,4% reporte al CEO y 32,3% en Comité; LCM/EUPRERA 2022-2024; Cadem Marcas Ciudadanas 2026; Merco Chile 2025/2026); Evidencia Académica (Page Society The New CCO 2022/2023; Global Capability Framework 2021; PRSA Code of Ethics con cláusula de confidencialidad); Afirmaciones Comerciales (McKinsey Oct 2025); e Hipótesis de Trabajo (HT-1, HT-2, HT-3). Se reiteran 4 vacíos críticos de evidencia del documento P01_GAPS_AND_VALIDATION.",
+  "findings": [
+    {
+      "claim_id": "P01-F47-C1",
+      "claim": "El Código de Ética de la PRSA (Disposiciones sobre Salvaguarda de Confidencias) y los estándares de gobernanza obligan a proteger información privilegiada y confidencial de la organización, sustentando la legitimidad del veto del CISO ante modelos públicos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "PRSA Board of Ethics"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 6: Deontología PRSA y Salvaguarda de Confidencias",
+          "excerpt_short": "PRSA Code of Ethics: Salvaguarda obligatoria de confidencias y protección de información privilegiada frente a terceros.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:06:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma deontológica profesional internacional de la PRSA.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F47-C2",
+      "claim": "El documento metodológico formal P01_GAPS_AND_VALIDATION fija los 4 vacíos de evidencia del corpus (horas-hombre exactas de briefings, impacto longitudinal en SLO, opacidad de objeciones CISO y trazabilidad en InfoLobby) como marco de control para no confundir hipótesis con hechos probados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Corpus P01"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1: Cuatro Vacíos Críticos de Evidencia del Corpus P01",
+          "excerpt_short": "Delimitación epistemológica estricta de los 4 vacíos de evidencia del pilar P01.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:06:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Documento canónico de control epistemológico del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Normas deontológicas",
+      "Marcos legales BCN y CMF",
+      "Estándares profesionales globales"
+    ],
+    "actors": [
+      "Auditor Epistemológico",
+      "Investigador Legal"
+    ],
+    "steps": [
+      "Cotejo de fuentes primarias",
+      "Catalogación de niveles epistémicos",
+      "Registro de gaps no resueltos"
+    ],
+    "states": [
+      "Fuentes_Verificadas",
+      "Niveles_Asignados",
+      "Gaps_Fijados"
+    ],
+    "outputs": [
+      "Tabla de Fuentes del Descubrimiento de Clientes"
+    ],
+    "exceptions": [
+      "Uso de afirmaciones comerciales no corroboradas empíricamente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DEONTOLOGIA_PRSA",
+      "type": "norma_etica",
+      "name": "Código de Ética y Salvaguarda de Confidencias PRSA",
+      "aliases": [
+        "PRSA Code of Ethics"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DEONTOLOGIA_PRSA",
+      "predicate": "fundamenta_veto_de",
+      "object_id": "ENT_CISO",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F47-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporar en el motor de BRIDGE un filtro deontológico que garantice la salvaguarda de confidencias según estándares PRSA.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F48",
+    "P01-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:06:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

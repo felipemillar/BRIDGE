@@ -1,0 +1,166 @@
+{
+  "question_id": "T01-F01",
+  "pilar": "T01",
+  "eje": "Hipótesis y compuertas del piloto",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué hipótesis falsable corresponde a Saber, Escuchar, Hablar y Relacionar?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cada uno de los cuatro módulos de la metodología canónica de The Bridge Intelligence (`thebridgeintelligence.ai`, excluyendo terminantemente a la agencia externa `bridgestudio.mx` conforme a la rectificación rectora T01_VERIFICATION_CORRECTIONS) se gobierna en el piloto por una hipótesis falsable precisa sujeta a umbrales cuantitativos estrictos: 1) Módulo Saber (Knowledge & Grounding): 'El módulo Saber reduce el tiempo de búsqueda, cruce y contextualización de hechos corporativos internos y regulatorios en al menos un 60% comparado con la línea base manual del analista, manteniendo una precisión de citas (ALCE Citation Precision) >= 95% y una tasa de alucinación no detectada (SelfCheckGPT) <= 1.0%'; 2) Módulo Escuchar (Early Warning & Media Triage): 'El módulo Escuchar detecta señales débiles de riesgo corporativo, controversias gremiales y conflictos comunitarios con un recall >= 90% en un horizonte de anticipación >= 48 horas frente a la cobertura de medios masivos, reduciendo la fatiga de alertas mediante una tasa de falsos positivos <= 15% frente a palabras clave estáticas'; 3) Módulo Hablar (Executive Messaging & Governance): 'El módulo Hablar reduce el tiempo de ciclo de redacción y validación colegiada de posturas corporativas y respuestas de crisis en al menos un 50%, asegurando un 100% de trazabilidad a fuentes autorizadas y cero contradicciones lógicas frente a declaraciones oficiales previas'; y 4) Módulo Relacionar (Stakeholder Engagement & SRM): 'El módulo Relacionar elimina la amnesia institucional al registrar el 100% de los acuerdos y compromisos territoriales con asignación nominal única (Single Point of Accountability), alcanzando una tasa de cumplimiento en plazo >= 85% y disminuyendo en >= 40% las quejas comunitarias derivadas de acuerdos informales olvidados tras rotación de ejecutivos'.",
+  "findings": [
+    {
+      "claim_id": "T01-F01-C1",
+      "claim": "Los cuatro módulos canónicos de The Bridge Intelligence cuentan con hipótesis falsables ancladas en métricas cuantitativas reproducibles: Saber (60% ahorro, >=95% citas, <=1% alucinación), Escuchar (>=90% recall, 48h anticipación, <=15% falsos positivos), Hablar (50% reducción de ciclo, 100% trazabilidad, 0 contradicciones) y Relacionar (100% compromisos nominales, >=85% cumplimiento, 40% reducción de quejas).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "pilot_falsifiable_hypotheses_four_modules",
+      "evidence": [
+        {
+          "source_title": "The Bridge Intelligence - Official Reference Website (Saber, Escuchar, Hablar, Relacionar)",
+          "source_id": "6eca40e5-dfef-4b44-a26e-8b7af8c57e8c",
+          "locator": "Sección 'Metodología: Saber, Escuchar, Hablar, Relacionar'",
+          "excerpt_short": "The Bridge Intelligence structures corporate affairs intelligence across four interconnected modules: Saber, Escuchar, Hablar, and Relacionar.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "T01_RESEARCH_DOSSIER: Arquitectura de Validación, Pilotos, Casos de Prueba y Rúbricas (Síntesis Interna)",
+          "source_id": "ce4d8135-f66d-46f0-bc63-4f80f88f6b55",
+          "locator": "Sección 1 'Hipótesis Falsables por Módulo de Inteligencia Corporativa'",
+          "excerpt_short": "Marco de evaluación de pilotos corporativos con compuertas cuantitativas y diseño experimental riguroso.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "T01_VERIFICATION_CORRECTIONS: Reconciliación de Tareas y Recuperación Full-Text (Síntesis Interna)",
+          "source_id": "f5a15f9d-310f-4bfc-ae19-70ff8cc2bdcf",
+          "locator": "Sección 4.1 'Deslinde Crítico: The Bridge Intelligence vs. Bridge Studio'",
+          "excerpt_short": "Prevalencia de textos completos de ArXiv y exclusión absoluta de bridgestudio.mx en favor de thebridgeintelligence.ai.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la definición oficial de The Bridge Intelligence, el dossier metodológico de T01 y las correcciones canónicas rectoras.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Protocolo de prueba de piloto",
+      "Muestra documental corporativa",
+      "Línea base manual pre-piloto"
+    ],
+    "actors": [
+      "Director del Piloto",
+      "Analista de Asuntos Corporativos",
+      "Equipo de Evaluación de BRIDGE"
+    ],
+    "steps": [
+      "Definición formal de las cuatro hipótesis falsables en el acuerdo de piloto antes del despliegue",
+      "Captura de la línea base manual contemporánea (tiempo por tarea, tasa de error basal)",
+      "Despliegue escalonado de los módulos Saber, Escuchar, Hablar y Relacionar",
+      "Medición semanal de las métricas primarias mediante telemetría continua y rúbricas humanas",
+      "Evaluación formal de falsabilidad al cierre del período de prueba"
+    ],
+    "states": [
+      "HYPOTHESES_SEALED",
+      "BASELINE_RECORDED",
+      "PILOT_TELEMETRY_STREAMING",
+      "FALSIFICATION_EVALUATED"
+    ],
+    "outputs": [
+      "Dictamen estadístico riguroso sobre si cada hipótesis fue validada, refutada o requiere rediseño"
+    ],
+    "exceptions": [
+      "Si un módulo no alcanza el umbral mínimo fijado, no se enmascara el resultado; se activa inmediatamente la compuerta de rediseño (Pivot)"
+    ]
+  },
+  "entities": [
+    "Módulo Saber",
+    "Módulo Escuchar",
+    "Módulo Hablar",
+    "Módulo Relacionar",
+    "The Bridge Intelligence",
+    "T01_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "Módulo Saber",
+      "to": "Hipótesis Falsable H1",
+      "type": "GOVERNED_BY"
+    },
+    {
+      "from": "T01_VERIFICATION_CORRECTIONS",
+      "to": "The Bridge Intelligence",
+      "type": "ESTABLISHES_CANONICAL_ANCHOR"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Promesas comerciales etéreas ('la IA aumentará su productividad') vs Hipótesis falsables cuantitativas",
+      "diferencia": "Las promesas etéreas no permiten evaluar el fracaso; las hipótesis falsables fijan umbrales numéricos medibles que determinan la continuidad objetiva de la solución."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "saber_time_reduction_target": ">= 60%",
+    "escuchar_early_warning_horizon": ">= 48 horas",
+    "hablar_approval_acceleration": ">= 50%",
+    "relacionar_nominal_accountability": "100% compromisos asignados"
+  },
+  "bridge_implications": "Permite estructurar los pilotos no como demostraciones cosméticas, sino como experimentos científicos controlados de alto impacto comercial.",
+  "open_gaps": [
+    "Estandarización de herramientas de medición de tiempo activo en pantalla (dwell time) en clientes con entornos VDI bloqueados."
+  ],
+  "next_question_ids": [
+    "T01-F02",
+    "T01-F03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

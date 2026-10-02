@@ -1,0 +1,139 @@
+{
+  "question_id": "P05-F29",
+  "pilar": "P05",
+  "eje": "Actores y prominencia",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre actores y prominencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos documentados sobre actores y prominencia están respaldados por cinco fuentes primarias del corpus: 1) Mitchell, Agle & Wood (1997, Academy of Management Review, 22(4), pp. 853-886 / Umbrex 2024, ámbito: teoría organizacional y dirección estratégica): respalda la definición de poder, legitimidad y urgencia y la tipología de 7 clases de stakeholders; 2) Boutilier & Thomson (2011, Modelling and Measuring the SLO, ámbito: minería e industrias extractivas en América Latina): respalda el modelo piramidal de 4 niveles y 3 umbrales de la Licencia Social para Operar; 3) AccountAbility (2015, AA1000 Stakeholder Engagement Standard - AA1000SES, ámbito: estándar internacional auditable): respalda los principios de inclusividad, materialidad, capacidad de respuesta e impacto en el relacionamiento corporativo; 4) BCN Chile: Ley 20.730 de Lobby (2014/2026, ámbito: regulación chilena de transparencia): respalda la obligatoriedad de registro público de reuniones de gestión de intereses particulares; y 5) BCN Chile: Decreto 236 Promulga Convenio 169 OIT (2008/2026, ámbito: derecho internacional y pueblos indígenas en Chile): respalda la consulta previa libre e informada como fuente obligatoria de legitimidad territorial.",
+  "findings": [
+    {
+      "claim_id": "P05-F29-C1",
+      "claim": "Los principios de prominencia y relacionamiento con actores se fundamentan en literatura teórica canónica y normativas vinculantes del marco institucional chileno e internacional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1997-2026",
+        "region": "Chile / Internacional",
+        "actor": "Marco Regulatorio y Teórico"
+      },
+      "evidence": [
+        {
+          "source_id": "dbb37605-2cb8-49a6-a1e4-babcce7f5dda",
+          "source_title": "AccountAbility: AA1000 Stakeholder Engagement Standard (AA1000SES)",
+          "original_url": "https://www.accountability.org/standards/aa1000-stakeholder-engagement",
+          "locator": "Estándar AA1000SES (2015), Principios Rectores",
+          "excerpt_short": "Provides a globally accepted framework for an organization to assess, design, implement and communicate their stakeholder engagement to support sustainability.",
+          "source_date": "2015-11-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "537a7618-1e79-4747-ad6b-6e492a4a15b7",
+          "source_title": "BCN Chile: Ley 20.730 Regula el Lobby y las Gestiones que Representen Intereses Particulares",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=1060115",
+          "locator": "Artículos 1 a 8",
+          "excerpt_short": "Regula la publicidad en la actividad de lobby y demás gestiones que representen intereses particulares ante autoridades y funcionarios del Estado.",
+          "source_date": "2014-03-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Textos legales oficiales de la República de Chile y estándares internacionales auditables.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Leyes de la República de Chile",
+      "Normas técnicas de AccountAbility"
+    ],
+    "actors": [
+      "Curador Legal",
+      "Investigador de Políticas Públicas"
+    ],
+    "steps": [
+      "Verificación de vigencia jurídica en la Biblioteca del Congreso Nacional (BCN)",
+      "Cotejo de artículos aplicables",
+      "Registro en catálogo de fuentes normativas"
+    ],
+    "states": [
+      "Legislation_Verified",
+      "Articles_CrossReferenced",
+      "Registry_Updated"
+    ],
+    "outputs": [
+      "Catálogo de fuentes normativas de actores"
+    ],
+    "exceptions": [
+      "Reformas legales pendientes de publicación en el Diario Oficial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ACTOR_LEGAL_SOURCES",
+      "type": "corpus_fuentes",
+      "name": "Fuentes Normativas de Actores",
+      "aliases": [
+        "Stakeholder Legal Bases"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ACTOR_LEGAL_SOURCES",
+      "predicate": "respalda_normativamente_a",
+      "object_id": "ENT_ACTOR_SCHEMA",
+      "valid_from": "2008",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F29-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Módulo de Cumplimiento Legal",
+      "implication": "BRIDGE debe permitir registrar el cumplimiento de la Ley 20.730 y del Convenio 169 OIT como indicadores auditables de legitimidad institucional.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

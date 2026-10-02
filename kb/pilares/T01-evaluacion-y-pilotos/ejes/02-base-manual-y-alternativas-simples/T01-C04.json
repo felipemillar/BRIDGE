@@ -1,0 +1,139 @@
+{
+  "question_id": "T01-C04",
+  "pilar": "T01",
+  "eje": "Base manual y alternativas simples",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre base manual y alternativas simples, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal la curva de degradación cognitiva y fatiga del analista manual cuando debe revisar más de 20 documentos densos bajo presión de crisis: 1) Vacío Identificado: No existen estudios psicométricos en el corpus que midan la tasa de error por agotamiento en la lectura de memorias de 300 páginas vs la tasa de error al auditar las citas generadas por BRIDGE; 2) Fuente Fallida / Parcial: El estudio ArXiv (2025 f57279c5) solo modela costos computacionales y financieros, omitiendo variables neurocognitivas y estrés humano; y 3) Validación Mínima Necesaria: Experimento controlado de fatiga con 10 analistas resolviendo 10 casos bajo límite de tiempo de 2 horas, registrando tasa de omisiones fácticas y carga mental con el índice estandarizado NASA-TLX.",
+  "findings": [
+    {
+      "claim_id": "T01-C04-C1",
+      "claim": "El corpus documental carece de mediciones controladas de fatiga cognitiva en analistas corporativos, impidiendo cuantificar con exactitud cuántos errores factuales son evitados puramente por la reducción de la sobrecarga de lectura documental.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "The Bridge Intelligence Research"
+      },
+      "evidence": [
+        {
+          "source_id": "f57279c5-07ed-4e50-900a-5fa7c66f6a0e",
+          "source_title": "ArXiv (2025) - A Cost-Benefit Analysis of On-Premise LLM Deployment vs Cloud APIs",
+          "original_url": null,
+          "locator": "Section 5: Human Factors Limitations",
+          "excerpt_short": "Our cost-benefit analysis focuses exclusively on monetary token economics and hardware amortizations, leaving cognitive ergonomics and fatigue-induced human error rates for future empirical study.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Limitación explícita declarada en el paper económico de ArXiv 2025.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Batería de 10 casos complejos de lectura intensiva",
+      "Escala psicométrica NASA-TLX"
+    ],
+    "actors": [
+      "Investigador de Ergonomía Cognitiva",
+      "10 Analistas Corporativos de Prueba"
+    ],
+    "steps": [
+      "Someter al Grupo A a lectura manual de 20 PDFs y Grupo B a revisión de citas con BRIDGE",
+      "Medir omisiones de hechos esenciales tras 90 minutos de trabajo continuo",
+      "Aplicar cuestionario NASA-TLX de esfuerzo mental, frustración y fatiga",
+      "Calcular la reducción porcentual de errores inducidos por fatiga"
+    ],
+    "states": [
+      "EXPERIMENTO_FATIGA",
+      "CAPTURA_NASA_TLX",
+      "ANALISIS_OMISIONES",
+      "RESOLUCION_VACIO"
+    ],
+    "outputs": [
+      "Reporte Ergonómico de Fatiga Cognitiva en Asuntos Corporativos"
+    ],
+    "exceptions": [
+      "Si la revisión asistida genera igual nivel de frustración por citas rotas, se reestructura la UI del visualizador"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "NASA_TLX_INDEX",
+      "type": "metrica",
+      "name": "Índice de Carga Mental NASA-TLX",
+      "aliases": [
+        "Cognitive Workload Index"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "NASA_TLX_INDEX",
+      "predicate": "mide_impacto_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C04-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Reducción de carga mental percibida (NASA-TLX)",
+      "denominator": "Puntaje basal de lectura manual",
+      "target": ">= 35%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Permite cuantificar el beneficio de salud laboral y bienestar del analista además del mero ahorro monetario de horas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Medición empírica de fatiga cognitiva y tasa de omisión fáctica por agotamiento en analistas manuales vs asistidos",
+      "minimum_validation": "Experimento controlado con 10 profesionales utilizando protocolo estandarizado NASA-TLX",
+      "priority": "media"
+    }
+  ],
+  "next_question_ids": [
+    "T01-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

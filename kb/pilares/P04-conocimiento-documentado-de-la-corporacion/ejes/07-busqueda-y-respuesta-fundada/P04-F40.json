@@ -1,0 +1,132 @@
+{
+  "question_id": "P04-F40",
+  "pilar": "P04",
+  "eje": "Búsqueda y respuesta fundada",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar búsqueda y respuesta fundada de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar de forma estructurada la búsqueda y respuesta fundada exige: 1) Variables de respuesta (`response_id`, `query_text`, `generated_text`, `epistemic_status`: 'fact_supported', 'inference_supported', 'abstention_no_evidence'; `groundedness_score`, `citation_precision_score`); 2) Estructura de citas asociadas (`citations`: array de objetos con `source_id`, `document_title`, `edition_year`, `page_number`, `exact_quote`, `hash_sha256`); 3) Relaciones de derivación (`derivedFromChunks`, `verifiedAgainstGraph`, `auditedByRAGAS`); y 4) Condiciones de certificación (Condición 1: toda respuesta clasificada como 'fact_supported' debe poseer un `groundedness_score ≥ 0.95`; Condición 2: no puede emitirse una respuesta con citas vacías si contiene cifras numéricas; Condición 3: si se detecta contradicción interna, el array `contradictions` debe contener las fuentes enfrentadas y el `epistemic_status` debe transicionar a 'conflict_alert').",
+  "findings": [
+    {
+      "claim_id": "P04-F40-C1",
+      "claim": "El payload estructurado de una respuesta fundada exige métricas de fidelidad factual, array de citas verificables con hash y condiciones lógicas que gobiernen la certificación o abstención.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Generación Fundada"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Matriz Consolidada de Criterios de Evaluación",
+          "excerpt_short": "Fidelidad Factual (Faithfulness) ≥ 0.95; Precisión de Cita ≥ 0.98; Recall ≥ 0.95; Abstención Segura ≥ 0.98.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Métricas cuantitativas e integración de arquitectura formalizadas en el dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Respuesta generada y evaluada algorítmicamente"
+    ],
+    "actors": [
+      "Response Serializer",
+      "Quality Gatekeeper"
+    ],
+    "steps": [
+      "Verificación de condiciones de certificación",
+      "Serialización en schema de respuesta",
+      "Entrega a la interfaz de usuario"
+    ],
+    "states": [
+      "Validating_Metrics",
+      "Certified_Passed",
+      "Delivered_To_User"
+    ],
+    "outputs": [
+      "Objeto JSON de respuesta certificada con metadata de auditoría completa"
+    ],
+    "exceptions": [
+      "Respuesta con fidelidad factual inferior a 0.95"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RESPONSE_SCHEMA",
+      "type": "schema",
+      "name": "Esquema Estructurado de Respuesta Corporativa Fundada",
+      "aliases": [
+        "Grounded Response Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RESPONSE_SCHEMA",
+      "predicate": "define_contrato_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F40-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Naturaleza de la salida",
+      "Salida de chat convencional": "Cadena de texto Markdown sin metadatos de auditoría ni puntuación de certeza.",
+      "Salida estructurada fundada": "JSON completo con citas ancladas, puntuación de fidelidad y estado epistémico."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe entregar sus respuestas bajo este contrato JSON para permitir trazabilidad e integración con dashboards ejecutivos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

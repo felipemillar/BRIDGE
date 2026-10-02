@@ -1,0 +1,137 @@
+{
+  "question_id": "P02-F40",
+  "pilar": "P02",
+  "eje": "Mapa mundial y diferencias regionales",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar mapa mundial y diferencias regionales de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo de datos con las siguientes especificaciones: 1) Variables: Código de país (`country_iso`), división político-administrativa (`region_id`, `comuna_id`), tipo de medio disponible (`prensa_nacional`, `prensa_provincial`, `radio_fm_am`, `radio_comunitaria`, `tv_abierta`, `tv_cable`, `web_digital`), tipo de acceso regulatorio (`gaceta_nacional_api`, `boletin_legislativo`, `portal_cmf_scraped`), idioma/dialecto (`language_iso`), método de captura (`feed_sindicado_lexisnexis`, `antena_receptora_local`, `crawler_web`, `convenio_licencia_prensa`), y latencia de disponibilidad (`minutos`, `horas`, `diario`); 2) Categorías: Cobertura cosmopolita centralizada, cobertura provincial de terreno, y zonas de silencio informativo; 3) Relaciones: `Proveedor -> Ofrece_Captura_En -> [Medio_Local]`, `Medio_Local -> Ubicado_En -> Comuna`, `Faena_Industrial -> Expuesta_A -> [Medio_Local]`; 4) Condiciones de frontera: Regla de validación que prohíbe clasificar una fuente como 'monitoreada' si su última captura exitosa data de más de 48 horas sin reporte de falla.",
+  "findings": [
+    {
+      "claim_id": "P02-F40-C1",
+      "claim": "La modelación estructurada de diferencias regionales requiere vincular la geolocalización de las faenas del cliente con el inventario granular de emisoras y medios de su radio de influencia territorial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Datos Territoriales"
+      },
+      "evidence": [
+        {
+          "source_id": "5556e455-7c2c-458c-bcad-e0910d9ccc4e",
+          "source_title": "P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1",
+          "original_url": null,
+          "locator": "Data Model Specifications for Regional Media Ingestion",
+          "excerpt_short": "Defines entities and relational schemas for regional coverage mapping, distinguishing between syndicated feeds and local RF/terrestrial broadcast capture.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación arquitectónica de cobertura regional.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catastro de medios por comuna",
+      "Coordenadas GPS de faenas del cliente",
+      "Logs de ingesta telemétrica de emisoras"
+    ],
+    "actors": [
+      "Ingeniero de Datos Geoespaciales",
+      "Analista de Inteligencia Territorial"
+    ],
+    "steps": [
+      "Georreferenciación de activos corporativos",
+      "Definición del polígono de influencia informativa",
+      "Verificación de telemetría de medios locales",
+      "Generación de matriz de cobertura verificada"
+    ],
+    "states": [
+      "Faena_Mapeada",
+      "Poligono_Definido",
+      "Medios_Asociados",
+      "Monitoreo_Validado"
+    ],
+    "outputs": [
+      "Tablero de cobertura de medios y riesgos regulatorios por jurisdicción"
+    ],
+    "exceptions": [
+      "Emisora comunitaria que cambia de frecuencia o suspende transmisiones sin previo aviso"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODELO_REGIONAL",
+      "type": "modelo_datos",
+      "name": "Esquema Estructurado Cobertura Territorial",
+      "aliases": [
+        "Schema Regional"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODELO_REGIONAL",
+      "predicate": "vincula_faena_con",
+      "object_id": "Poligono_Medios_Locales",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F40-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo Geoespacial Territorial vs Búsqueda Genérica por Palabras Clave",
+      "Modelo Geoespacial Territorial": "Prioriza señales originadas en las cuencas y comunas directamente afectadas por la operación.",
+      "Búsqueda Genérica por Palabras Clave": "Recoge menciones aisladas en internet sin ponderar la cercanía geográfica ni el impacto comunitario real."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "El módulo Escuchar de BRIDGE debe incorporar metadatos geoespaciales de cobertura regional en su canal de ingesta.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F41",
+    "P02-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

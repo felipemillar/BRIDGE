@@ -1,0 +1,150 @@
+{
+  "question_id": "P07-F04",
+  "pilar": "P07",
+  "eje": "Objetivo del brief ejecutivo",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar objetivo del brief ejecutivo de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un schema formal compuesto por: 1) Variables de contexto (Tipo de interacción: Reunión Ley Lobby / Entrevista / Directorio / Crisis; Nivel de urgencia; Ventana temporal); 2) Entidad interlocutora (Institución, cargo, perfil conductual, postura previa frente a la empresa); 3) Objetivos jerarquizados (Objetivo Primario, Secundario, Línea Roja de no-concesión); 4) Núcleo discursivo Message House (Mensaje central general, 3 pilares de soporte con evidencia verificada); 5) Gobernanza (Revisor humano responsable, timestamp de aprobación, estado de vigencia); y 6) Condición de obligatoriedad (restricción booleana de bloqueo si no cuenta con aprobación formal de CCO/Legal).",
+  "findings": [
+    {
+      "claim_id": "P07-F04-C1",
+      "claim": "El objetivo del brief debe modelarse mediante un esquema estructurado (JSON-Schema) que capture metadatos de contexto, objetivos primarios y secundarios, líneas rojas y gobernanza de aprobación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "data_schema",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 1 y Sección 6 (Plantillas 1 y 2)",
+          "excerpt_short": "Variables esenciales para el modelo estructurado del brief: Event_Type (lobby_meeting, press_interview, board_prep, crisis_inject); Counterpart_Profile (id, name, organization, public_stance_rating); Strategic_Objectives (primary_goal, secondary_goal, red_line); Message_House_Ref (umbrella_statement, pillars[]); Legal_Governance (lobby_law_applicable, approved_by, approval_timestamp).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Umbrex: The Message House Framework for Executive Messaging",
+          "source_id": "40c71d89-2265-4bc4-9437-f06891eff48a",
+          "locator": "Guía metodológica Message House, p. 3-7",
+          "excerpt_short": "A structured message house separates the foundational proof points (data, facts, case studies) from core messaging pillars and the overarching umbrella statement, ensuring structural integrity across diverse communication formats.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Articulación formal entre el marco Umbrex Message House y los requisitos de metadatos del Dossier técnico P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "schema_brief_ejecutivo": {
+      "contexto": [
+        "tipo_evento",
+        "fecha_hora",
+        "canal",
+        "urgencia"
+      ],
+      "interlocutor": [
+        "nombre",
+        "institucion",
+        "cargo",
+        "historial_infolobby",
+        "postura_estimada"
+      ],
+      "objetivos": [
+        "objetivo_primario",
+        "objetivo_secundario",
+        "linea_roja_no_negociable"
+      ],
+      "discurso": [
+        "umbrella_message",
+        "pilares_soporte",
+        "citas_documentadas"
+      ],
+      "gobernanza": [
+        "estado_aprobacion",
+        "revisor_id",
+        "vigencia_hasta",
+        "alertas_legales"
+      ]
+    }
+  },
+  "entities": [
+    "ExecutiveBriefSchema",
+    "MessageHouse",
+    "InfoLobbyRecord",
+    "ApprovalGate"
+  ],
+  "relations": [
+    {
+      "from": "ExecutiveBriefSchema",
+      "to": "MessageHouse",
+      "type": "embeds"
+    },
+    {
+      "from": "ExecutiveBriefSchema",
+      "to": "ApprovalGate",
+      "type": "validated_by"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Texto Libre vs Esquema Estructurado",
+      "diferencia": "El texto libre permite omisiones críticas de líneas rojas; el esquema estructurado fuerza la validación obligatoria de cada campo antes del despacho."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "schema_completeness": "100% de campos obligatorios poblados",
+    "validation_rule": "Sin 'linea_roja' ni 'approved_by', el brief permanece en estado DRAFT"
+  },
+  "bridge_implications": "Implementar este schema canónico en la base relacional/documental de BRIDGE para gobernar la generación y consumo de briefs ejecutivos.",
+  "open_gaps": [
+    "Automatización de la inferencia de la contraparte mediante sincronización de calendarios corporativos (Google Calendar / Microsoft Graph)."
+  ],
+  "next_question_ids": [
+    "P07-F05",
+    "P07-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T04:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

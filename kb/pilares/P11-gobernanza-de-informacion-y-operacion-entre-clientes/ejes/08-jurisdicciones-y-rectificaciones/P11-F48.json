@@ -1,0 +1,165 @@
+{
+  "question_id": "P11-F48",
+  "pilar": "P11",
+  "eje": "Jurisdicciones y rectificaciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra jurisdicciones y rectificaciones sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La aplicación práctica de jurisdicciones y rectificaciones canónicas se ilustra en el caso concreto 'Reconciliación Jurídica y Despliegue de un Flujo de Datos Transfronterizo entre Santiago y São Paulo bajo Correcciones Canónicas'. En este escenario: 1) Entradas: Cliente Corporativo Minero Multinacional ('Minera del Cono Sur', con operaciones en Antofagasta, Chile y Belo Horizonte, Brasil); el cliente solicita desplegar un módulo de BRIDGE para procesar actas de directorio confidenciales (D3) y datos de relaciones comunitarias con datos personales de dirigentes locales (D4); el contrato inicial borrador contenía cláusulas genéricas afirmando que 'BRIDGE opera bajo cumplimiento universal del GDPR y garantiza cero retención contractual en base a términos web de OpenAI'; 2) Proceso y Rectificación Canónica: a) El motor de gobernanza y el Oficial Legal de BRIDGE intervienen el contrato bajo las directrices rectoras de `P11_VERIFICATION_CORRECTIONS` (49d7882a) y `P11_2026_LAW_AND_PROVIDER_CORRECTION` (0716e04e); b) Se elimina la cláusula de 'cumplimiento universal del GDPR', deslindando que la operación principal en Santiago se rige por el derecho chileno (Ley 21.663 vigente con plazo de notificación de 3 horas al CSIRT; Ley 19.628 vigente supletoria y adecuación técnica a la Ley 21.719 en vacatio legis de 24 meses hacia fines de 2026); c) Para los datos de las comunidades de Belo Horizonte, se activa el Addendum específico de Brasil rigiéndose por la Lei Nº 13.709 (LGPD) actualizada al 25 de febrero de 2026 por la Lei Nº 15.352 (Câmara dos Deputados); d) Se desecha de plano toda referencia a WIPO Lex como base de la LGPD, sustituyéndola por los textos parlamentarios oficiales; e) Se retiran las afirmaciones absolutas de 'garantía de privacidad' basadas en marketing web de OpenAI y se reemplazan por la referencia a los PDFs oficiales vigentes al 01-01-2026 (Services Agreement 8d9a7ceb, Sec. 4.2 y DPA 1bc87361), estipulando que dichas cláusulas son compromisos legales que se complementan obligatoriamente con el aislamiento técnico local en PostgreSQL 18 RLS, índices vectoriales dedicados en Qdrant y claves KMS CMK exclusivas para el cliente; y 3) Resultado esperado: DPA corporativo formal firmado sin objeciones por los departamentos legales de Chile y Brasil; aprovisionamiento de un pipeline segregado donde los datos chilenos y brasileños cuentan con claves CMK diferenciadas en sus respectivas regiones cloud; cumplimiento estricto de las 3 horas ante el CSIRT chileno y plazos de la ANPD en Brasil; y 0% de observaciones en la auditoría de debida diligencia.",
+  "findings": [
+    {
+      "claim_id": "P11-F48-C1",
+      "claim": "El caso operacional de reconciliación transfronteriza demuestra que la aplicación de las correcciones canónicas 49d7882a y 0716e04e permite sustituir cláusulas erróneas de GDPR y marketing por contratos precisos bajo la Ley 21.663, Ley 21.719 (vacatio legis), LGPD 2026 (Lei 15.352) y aislamiento local comprobado.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "cross_border_jurisdictional_case_study",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Deslinde Jurisdiccional y Prevalencia Normativa'",
+          "retrieved_at": null,
+          "excerpt_short": "Reconciliación contractual: Prohibición de afirmar cumplimiento universal del GDPR para operaciones en Chile; aplicación de la Ley 21.663 y calibración de la vacatio legis de la Ley 21.719.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'OpenAI y Cláusulas Contractuales'",
+          "retrieved_at": null,
+          "excerpt_short": "Sustitución de páginas HTML por PDFs oficiales en vigor al 1 de enero de 2026. Separación estricta entre cláusulas contractuales de procesador y aislamiento técnico operativo en PostgreSQL y Qdrant.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Câmara dos Deputados: Lei Nº 15.352/2026 (Altera a LGPD)",
+          "source_id": "ea76a1ee-ec7a-4180-8d2a-716758dd60c7",
+          "locator": "Publicação Oficial de 25/02/2026",
+          "retrieved_at": null,
+          "excerpt_short": "Disposições atualizadas de governança de dados pessoais sob a LGPD.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución práctica impecable de un conflicto contractual y operativo transfronterizo aplicando estrictamente la doctrina rectora del proyecto.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borrador de DPA con cláusulas genéricas de GDPR",
+      "Requerimiento de ingesta de actas D3 y datos comunitarios D4",
+      "Directrices de P11_VERIFICATION_CORRECTIONS y P11_2026_LAW_AND_PROVIDER_CORRECTION"
+    ],
+    "actors": [
+      "Oficial Legal de Minera del Cono Sur",
+      "Oficial Legal de BRIDGE",
+      "CISO de BRIDGE"
+    ],
+    "steps": [
+      "Identificación de las cláusulas defectuosas en el borrador (mención errónea a GDPR universal y citas a marketing de OpenAI)",
+      "Aplicación de la plantilla rectora canónica de BRIDGE: reemplazo por legislación chilena y LGPD actualizada (Lei 15.352/2026)",
+      "Inserción de los anexos técnicos de aislamiento: PostgreSQL 18 RLS, índices Qdrant dedicados y políticas de KMS CMK",
+      "Estipulación formal del compromiso de notificación de incidentes al CSIRT Nacional en menos de 3 horas (Ley 21.663)",
+      "Firma del DPA revisado por ambas direcciones jurídicas",
+      "Despliegue de los entornos de procesamiento con llaves segregadas"
+    ],
+    "states": [
+      "DRAFT_CONTRACT_AUDITED",
+      "CANONICAL_RECTIFICATIONS_INJECTED",
+      "ISOLATION_ARCHITECTURE_ATTACHED",
+      "DPA_FULLY_EXECUTED"
+    ],
+    "outputs": [
+      "Contrato y arquitectura plenamente armonizados con la ley aplicable y blindados contra riesgos de auditoría"
+    ],
+    "exceptions": [
+      "Ninguna. El cliente aceptó la sustitución al comprobar que la formulación canónica era jurídicamente superior a las cláusulas genéricas"
+    ]
+  },
+  "entities": [
+    "Minera del Cono Sur",
+    "P11_VERIFICATION_CORRECTIONS",
+    "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+    "Ley 21.663",
+    "Lei 15.352/2026",
+    "PostgreSQL 18 RLS"
+  ],
+  "relations": [
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "DPA Minero",
+      "type": "RECTIFIES_LEGAL_TERMS_OF"
+    },
+    {
+      "from": "Minera del Cono Sur",
+      "to": "PostgreSQL 18 RLS",
+      "type": "PROTECTED_TECHNICALLY_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Contratos 'copy-paste' con términos genéricos extranjeros vs DPA formal calibrado canónicamente",
+      "diferencia": "El contrato genérico confunde a los reguladores y crea obligaciones imposibles de cumplir; el DPA calibrado canónicamente responde con precisión quirúrgica a las leyes vigentes y a la técnica real del sistema."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "legal_negotiation_turnaround_days": "Firma en 5 días hábiles sin reparos de abogados externos",
+    "cross_border_data_isolation_level": "100% de segregación de llaves criptográficas entre operaciones de Chile y Brasil"
+  },
+  "bridge_implications": "Constituye el estándar de oro para la expansión multinacional de BRIDGE en América Latina con pleno rigor ético, legal y tecnológico.",
+  "open_gaps": [
+    "Definición de modelos de contrato espejo para clientes con matrices en Estados Unidos y operaciones locales en Chile."
+  ],
+  "next_question_ids": [
+    "P11-C15",
+    "P11-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

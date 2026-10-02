@@ -1,0 +1,247 @@
+{
+  "question_id": "P01-F05",
+  "pilar": "P01",
+  "eje": "Mandato y fronteras de asuntos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre mandato y fronteras de asuntos corporativos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos están respaldados por el informe censal Dircom ECE 2025 (25-sep-2025; reporte al CEO), el Global Capability Framework (2021; 11 capacidades), la Ley N° 20.730 de Lobby de Chile (texto actualizado a abr-2026), la NCG 461 de la CMF (nov-2021/nov-2025), el informe McKinsey 2025 (08-oct-2025), los marcos Page Society (2022/2024) y el Ethical Standards Advisory #22 de PRSA (jul-2026).",
+  "findings": [
+    {
+      "claim_id": "P01-F05-C1",
+      "claim": "Dircom ECE 2025 (25 de septiembre de 2025, N=565) respalda el 54,4% de reporte directo al CEO y 32,3% en Comité Ejecutivo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-09-25",
+        "region": "España",
+        "actor": "Dircoms"
+      },
+      "evidence": [
+        {
+          "source_id": "11566961-aace-42d0-bdcc-6b9171cecded",
+          "source_title": "Dircom - El Estado de la Comunicación en España (ECE 2025): Reporte al CEO y Comité Ejecutivo",
+          "original_url": "https://www.dircom.org/2025/09/25/mas-de-la-mitad-de-los-dircoms-reportan-al-ceo-y-uno-de-cada-tres-esta-en-el-comite-ejecutivo-segun-el-estado-de-la-comunicacion-en-espana-2025/",
+          "locator": "Página oficial Dircom y resumen ejecutivo del estudio",
+          "excerpt_short": "54,4% de los dircoms reportan al CEO y uno de cada tres está en el Comité Ejecutivo.",
+          "source_date": "2025-09-25",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fuente original auditada con fecha y localizador exactos.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F05-C2",
+      "claim": "La Ley N° 20.730 de Chile (actualizada al 02-abr-2026 con Ley 21.771) respalda la obligación legal de registrar audiencias y gestiones de lobby ante autoridades públicas (sujetos pasivos Arts. 3 y 4).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2014-2026",
+        "region": "Chile",
+        "actor": "BCN Chile"
+      },
+      "evidence": [
+        {
+          "source_id": "87978287-38ec-4b0f-bd60-e724e02362aa",
+          "source_title": "Biblioteca del Congreso Nacional de Chile - Ley N° 20.730 que Regula el Lobby y Gestiones de Intereses Particulares",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=1060115",
+          "locator": "Artículos 2°, 3°, 4°, 5°, 7° y 8°",
+          "excerpt_short": "Regula la publicidad en la actividad de lobby y en la gestión de intereses particulares, estableciendo registros de agenda pública.",
+          "source_date": "2026-04-02",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto íntegro oficial de la Biblioteca del Congreso Nacional de Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F05-C3",
+      "claim": "La CMF NCG 461 (noviembre 2021 y evaluación de noviembre 2025) respalda la obligatoriedad de reportar factores ASG/ESG en memorias anuales bajo estándares SASB/TCFD.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2025",
+        "region": "Chile",
+        "actor": "CMF Chile"
+      },
+      "evidence": [
+        {
+          "source_id": "72c69269-a06e-4c45-a916-1cd68b9af0be",
+          "source_title": "Comisión para el Mercado Financiero (CMF Chile) - NCG 461 y 519: Sostenibilidad y Gobierno Corporativo",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Evaluación de aprendizajes NCG 461",
+          "excerpt_short": "Supervisión de la divulgación de sostenibilidad en memorias integradas obligatorias para emisores de valores.",
+          "source_date": "2025-11-26",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Fuente primaria del regulador financiero chileno.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F05-C4",
+      "claim": "McKinsey (08 de octubre de 2025, N=898 ejecutivos en 77 países) respalda la adopción de AI Lighthouses para briefings ejecutivos y advierte la necesidad de complementarla con conocimiento fáctico humano.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-10-08",
+        "region": "Global",
+        "actor": "McKinsey & Company"
+      },
+      "evidence": [
+        {
+          "source_id": "b6f21f15-0ec9-4e85-b6ae-aca2f29e1ed1",
+          "source_title": "McKinsey & Company - Upgrading corporate affairs for a new geopolitical era",
+          "original_url": "https://www.mckinsey.com/capabilities/geopolitics/our-insights/upgrading-corporate-affairs-for-a-new-geopolitical-era",
+          "locator": "Sección Using gen AI to create briefings",
+          "excerpt_short": "Teams can use gen AI to create briefings combining external insight with internal policy positions... teams need to supplement it with direct knowledge only humans can provide.",
+          "source_date": "2025-10-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Publicación insignia de McKinsey & Company.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fuentes normativas oficiales",
+      "Reportes empíricos censales"
+    ],
+    "actors": [
+      "Investigadores",
+      "Analistas de Inteligencia Corporativa"
+    ],
+    "steps": [
+      "Verificación de autenticidad de fuentes",
+      "Extracción de citas y localizadores",
+      "Calibración de fechas y versiones"
+    ],
+    "states": [
+      "Fuente_Identificada",
+      "Pasaje_Verificado",
+      "Vigencia_Comprobada"
+    ],
+    "outputs": [
+      "Manifiesto de fuentes trazable",
+      "Matriz de evidencias empíricas"
+    ],
+    "exceptions": [
+      "Uso de enlaces rotos o fuentes bloqueadas por paywall"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DIRCOM",
+      "type": "organizacion",
+      "name": "Asociación de Directivos de Comunicación (Dircom)"
+    },
+    {
+      "entity_id": "ENT_BCN",
+      "type": "organizacion",
+      "name": "Biblioteca del Congreso Nacional de Chile"
+    },
+    {
+      "entity_id": "ENT_CMF",
+      "type": "organizacion",
+      "name": "Comisión para el Mercado Financiero"
+    },
+    {
+      "entity_id": "ENT_MCKINSEY",
+      "type": "organizacion",
+      "name": "McKinsey & Company"
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BCN",
+      "predicate": "publica_y_actualiza",
+      "object_id": "Ley_20730",
+      "valid_from": "2014",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F05-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Todo dato incorporado a la base de conocimiento debe contar con identificador de fuente y localizador textual verificable.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F06",
+    "P01-F07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T00:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

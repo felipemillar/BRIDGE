@@ -1,0 +1,145 @@
+{
+  "question_id": "P06-X11",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Resolución de contradicciones complejas",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué umbral obliga revisión humana antes de señalar públicamente una contradicción?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El umbral que fuerza la revisión humana obligatoria (*Human-in-the-Loop Gatekeeper*) antes de divulgar o imputar públicamente una contradicción se define conforme al benchmark SABER (Zhu et al., 2026; ArXiv 2605.18792), CoVe (Dhuliawala et al., 2023) y P06_QUALITY_ADDENDUM (Sección 3.2): 1) Regla de Tolerancia Cero en Materias Reguladas: Si la contradicción involucra hechos esenciales CMF, compromisos de RCA ambiental en el SNIFA de la SMA, o cifras de balances auditados, NINGUNA alerta o desmentido puede publicarse de forma automatizada; el umbral de delegación autónoma es $0.00$ (revisión humana 100% obligatoria por el Director Legal o CCO); 2) Umbral de Confianza Algorítmica en Medios Generales: Para contradicciones en prensa general o redes sociales, se exige que la probabilidad calibrada del clasificador NLI (Natural Language Inference) sea $\\ge 0.95$ y que el índice de abstención pedagógica de SABER confirme ausencia de colisión semántica o ambigüedad de entidades; si la confianza es $< 0.95$, el sistema debe abstenerse de emitir acusaciones de falsedad y generar una solicitud de peritaje humano; 3) Principio de Precaución Reputacional: Se prohíbe que el agente de IA publique cartas al director o comunicados sin firma y aprobación expresa de una persona natural con rol DACI 'Approver'.",
+  "findings": [
+    {
+      "claim_id": "P06-X11-C1",
+      "claim": "Toda contradicción en materias reguladas o con confianza algorítmica < 0.95 exige revisión humana obligatoria antes de cualquier acción pública externa.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Dirección de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "8efce53c-a1b5-4416-b399-3a615f36b2b5",
+          "source_title": "Zhu et al. (2026) - SABER: Trust or Abstain? (Texto Completo HTML v1)",
+          "original_url": "https://arxiv.org/html/2605.18792v1",
+          "locator": "Section 4.3: Abstention Thresholds & Risk-Aware Deployment",
+          "excerpt_short": "When epistemic confidence falls below the critical threshold theta=0.95, the system must trigger pedagocical abstention and route the conflict to expert human verifiers.",
+          "source_date": "2026-05-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 3.2: Protocolo de Abstención Obligatoria y Umbrales de Confianza",
+          "excerpt_short": "Queda terminantemente prohibido imputar falsedad o contradicción pública de forma automática sin revisión del Director de Asuntos Corporativos y Asesoría Jurídica.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio cardinal de gobernanza de IA y mitigación de daño reputacional severo.",
+      "epistemic_status_original": "regla_control_riesgo_reputacional",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Conflicto detectado",
+      "Confianza del modelo",
+      "Clasificación de materia (regulada vs no regulada)"
+    ],
+    "actors": [
+      "Guardrail de Conflicto",
+      "CCO / Director Legal",
+      "Sistema de Notificación"
+    ],
+    "steps": [
+      "Evaluación de criticidad de materia",
+      "Comprobación de umbral de confianza theta >= 0.95",
+      "Si materia es regulada o theta < 0.95, bloquear emisión pública",
+      "Enrutamiento a bandeja de aprobación humana DACI"
+    ],
+    "states": [
+      "Conflict_Detected",
+      "Gatekeeper_Triggered",
+      "Blocked_for_Human_Review"
+    ],
+    "outputs": [
+      "Alerta interna restringida para revisión humana"
+    ],
+    "exceptions": [
+      "Publicación bypass no autorizada considerada incidente grave de ciberseguridad"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_HUMAN_GATEKEEPER",
+      "type": "control_gobernanza",
+      "name": "Gatekeeper Humano de Contradicciones",
+      "aliases": [
+        "Human-in-the-Loop Conflict Gate"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_HUMAN_GATEKEEPER",
+      "predicate": "bloquea_emision_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X11-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Protege a la empresa de demandar o acusar en prensa basándose en alucinaciones o errores de cruce de la IA.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "question_id": "P06-X16",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Resolución de contradicciones complejas",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué sigue sin prueba sobre resolución de contradicciones complejas, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal la precisión de los modelos de arbitraje automatizado cuando se enfrentan a contradicciones retórico-legales implícitas en español con jerga regulatoria chilena (ej. diferencias entre 'suspensión provisoria' y 'clausura definitiva' en resoluciones de la SMA, o formulación de cargos de la CMF) (P06_GAPS_AND_VALIDATION, Sección 3.3). Las fuentes disponibles (SABER, CoVe, FEVER) evalúan exclusivamente corpus en inglés basados en Wikipedia o noticias anglosajonas estructuradas, no habiendo evaluado resoluciones de la administración pública latinoamericana. La validación mínima necesaria consiste en construir un Golden Set de 100 pares de afirmaciones regulatorias chilenas reales (SMA, CMF, SERNAC, prensa económica) etiquetadas por tres abogados corporativos chilenos, midiendo la tasa de falsos positivos y falsos negativos de CoVe y clasificadores NLI adaptados.",
+  "findings": [
+    {
+      "claim_id": "P06-X16-C1",
+      "claim": "El rendimiento de los algoritmos de resolución de contradicciones en lenguaje regulatorio y jurídico chileno permanece como vacío empírico sin validar.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Derecho Regulatorio y NLP en Español"
+      },
+      "evidence": [
+        {
+          "source_id": "8801b08d-0b93-40cc-b2ed-ad1d3978cd68",
+          "source_title": "P06_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación Empírica (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 3.3: Transferencia de Benchmarks Anglosajones al Derecho Administrativo Chileno",
+          "excerpt_short": "Los modelos entrenados en FEVER o benchmarks en inglés no captan los matices del derecho administrativo sancionador chileno, produciendo errores en la interpretación de estados procesales.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío metodológico evidente en el análisis de cobertura geográfica y de dominio del corpus de P06.",
+      "epistemic_status_original": "vacio_empirico_documentado",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "100 pares de afirmaciones regulatorias en español"
+    ],
+    "actors": [
+      "Comité de Abogados Corporativos",
+      "Equipo de Evaluación de Modelos"
+    ],
+    "steps": [
+      "Construcción del testset legal chileno",
+      "Ejecución de CoVe / NLI",
+      "Medición de F1-Score y tasa de error",
+      "Calibración de umbrales"
+    ],
+    "states": [
+      "Testset_Design",
+      "Annotation_Pending"
+    ],
+    "outputs": [
+      "Reporte de validación empírica en derecho chileno"
+    ],
+    "exceptions": [
+      "Desacuerdo entre evaluadores jurídicos que exige método Delphi"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "GAP_LEGAL_CHILE_NLP",
+      "type": "vacio_investigacion",
+      "name": "Resolución de Conflictos en Derecho Administrativo Chileno",
+      "aliases": [
+        "Chilean Regulatory NLP Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "GAP_LEGAL_CHILE_NLP",
+      "predicate": "limita_automatizacion_en",
+      "object_id": "ENT_HUMAN_GATEKEEPER",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X16-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Refuerza la necesidad ineludible del revisor humano chileno mientras no se desarrolle y calibre el testset local.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Inexistencia de un benchmark público de contradicciones en derecho administrativo sancionador y materias regulatorias chilenas.",
+      "minimum_validation": "Creación y etiquetado de 100 pares de prueba de resoluciones SMA/CMF con métricas de F1 >= 0.85.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "P06-X17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

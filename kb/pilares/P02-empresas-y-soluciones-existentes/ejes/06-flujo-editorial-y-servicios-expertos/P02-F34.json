@@ -1,0 +1,137 @@
+{
+  "question_id": "P02-F34",
+  "pilar": "P02",
+  "eje": "Flujo editorial y servicios expertos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar flujo editorial y servicios expertos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo de datos con las siguientes especificaciones: 1) Variables: Identificador de postura (`issue_id`), título del tema crítico (`topic_name`), versión de declaración (`version_number`), estado del ciclo de vida (`borrador`, `revision_interna`, `revision_legal`, `aprobado_dircom`, `vencido`, `archivado`), vigencia temporal (`fecha_aprobacion`, `validez_hasta`), nivel de sensibilidad (`publico`, `restringido`, `crisis_alta`), vocero autorizado (`spokesperson_id`), canal objetivo (`prensa_escrita`, `television`, `comunicado_web`, `redes_sociales`), y pista de auditoría (`aprobador_id`, `timestamp_utc`, `firma_digital_hash`); 2) Categorías: Temas corporativos (Issues), Respuestas oficiales (Q&A Items), Posiciones de contingencia (Holding Statements), Briefings de portavoces, y Solicitudes de medios entrantes (Media Inquiries); 3) Relaciones: `Issue -> Agrupa -> [Holding_Statement]`, `Holding_Statement -> Requiere_Aprobacion_De -> [Rol_Legal, Rol_DirCom]`, `Vocero -> Asignado_A -> Issue`, `Declaracion_Emitida -> Vinculada_A -> Solicitud_Medio`; 4) Condiciones de frontera: Bloqueo algorítmico que impide el envío de cualquier declaración que no cuente con la doble firma (Legal y Comunicaciones) y cuya fecha de validez haya expirado.",
+  "findings": [
+    {
+      "claim_id": "P02-F34-C1",
+      "claim": "La gobernanza del flujo editorial exige esquemas relacionales inmutables que impidan la divulgación de posturas no autorizadas y mantengan trazabilidad legal de cada versión emitida.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Software Corporativo"
+      },
+      "evidence": [
+        {
+          "source_id": "aa740e56-0ff0-4124-afe0-77f33236f456",
+          "source_title": "Broadsight Product Workflow and Communications Knowledge Management",
+          "original_url": "https://www.broadsight.com/solutions/knowledge-management/",
+          "locator": "Data Model: Issues, Statements, Approvals and Audit Trails",
+          "excerpt_short": "Structured schema enforcing multi-step approvals, version locking, and complete audit logging for corporate statements.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación arquitectónica de System of Record corporativo.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Petición de declaración",
+      "Borrador de holding statement",
+      "Directiva de compliance"
+    ],
+    "actors": [
+      "Redactor de Prensa",
+      "Abogado Revisor",
+      "Director de Comunicaciones",
+      "Vocero Asignado"
+    ],
+    "steps": [
+      "Creación del artefacto en estado borrador",
+      "Solicitud de revisión paralela",
+      "Estampado de firma digital de aprobación",
+      "Distribución de briefing cifrado al vocero"
+    ],
+    "states": [
+      "Borrador",
+      "Revision_Legal",
+      "Aprobado",
+      "Distribuido"
+    ],
+    "outputs": [
+      "Artefacto editorial inmutable listo para uso comunicacional"
+    ],
+    "exceptions": [
+      "Rechazo legal que devuelve el borrador a fase de redacción con comentarios obligatorios"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODELO_HABLAR",
+      "type": "modelo_datos",
+      "name": "Esquema Estructurado Flujo Editorial y Vocerías",
+      "aliases": [
+        "Schema Hablar"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODELO_HABLAR",
+      "predicate": "aplica_condicion_de",
+      "object_id": "Doble_Firma_Obligatoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F34-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Flujo Estructurado con Auditoría vs Flujo Informal (Email/WhatsApp)",
+      "Flujo Estructurado": "Pista de auditoría legal, versionado único, fechas de caducidad y roles definidos.",
+      "Flujo Informal": "Riesgo de enviar versiones preliminares, desalineación entre voceros, sin trazabilidad jurídica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "BRIDGE debe implementar este modelo de datos como núcleo del módulo Hablar para ser el System of Record de las vocerías de la empresa.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F35",
+    "P02-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:38:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

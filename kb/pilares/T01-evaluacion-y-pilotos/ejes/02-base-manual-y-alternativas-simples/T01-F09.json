@@ -1,0 +1,161 @@
+{
+  "question_id": "T01-F09",
+  "pilar": "T01",
+  "eje": "Base manual y alternativas simples",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué ahorro solo existe si se mantiene la calidad de la decisión?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el marco de la economía de la toma de decisiones corporativas, el ahorro aparente de tiempo en la generación de textos o informes mediante IA constituye una 'ilusión de eficiencia' o una pérdida económica neta catastrófica si la calidad objetiva de la decisión no se preserva invariable o superior: 1) Costo Asimétrico del Error Corporativo: Ahorrar 4 horas de trabajo de un analista (\\$100 a \\$200 USD) al redactar una declaración oficial carece de valor si el borrador omite una reserva legal inscrita ante la CMF, genera una contradicción con una declaración de impacto ambiental (RCA) o filtra inadvertidamente un secreto industrial, desencadenando multas regulatorias de hasta 20.000 UTM (bajo la Ley 21.719), litigios mercantiles o caídas del 2% al 5% en la capitalización bursátil de la compañía por daño reputacional irreversible (Deephouse 2000); 2) Principio 2 y 5 de AMEC Barcelona Principles 3.0: Establece de forma categórica que la velocidad, el volumen o el costo por página producida son métricas de actividad (outputs) que no prueban impacto positivo; el ahorro solo existe si los resultados cualitativos y la solidez institucional (outcomes) se mantienen protegidos; y 3) Condición Económica de Decisión: En la metodología de BRIDGE, todo cálculo de retorno de inversión (ROI) descuenta penalizaciones teóricas por error factual: una sola alucinación crítica en un documento publicado anula estadísticamente el ahorro acumulado de 1.000 horas de redacción asistida.",
+  "findings": [
+    {
+      "claim_id": "T01-F09-C1",
+      "claim": "El ahorro de tiempo en asuntos corporativos solo se consolida si la calidad de la decisión es constante o superior; conforme a AMEC Barcelona Principles 3.0 y Deephouse (2000), una sola alucinación crítica pre-publicación anula económicamente el ahorro de miles de horas de analista.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "decision_quality_and_economic_tradeoffs",
+      "evidence": [
+        {
+          "source_title": "AMEC - Barcelona Principles 3.0 for Communications Measurement and Evaluation",
+          "source_id": "92dfdc7c-83e6-4439-b476-56af1da92d1b",
+          "locator": "Principles 2 & 5",
+          "excerpt_short": "Principle 2 dictates that communication value requires integrity and quality of outcomes rather than mere velocity or volume.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "Deephouse (2000) - Media Reputation as a Strategic Resource: Integration and Measurement",
+          "source_id": "8ec6c7d7-468f-40cc-9c65-e06bac476223",
+          "locator": "Section 'Reputational Capital as Strategic Asset'",
+          "excerpt_short": "Media reputation directly influences corporate legitimacy, while critical factual errors cause severe and asymmetric market capitalization losses.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "T01_RESEARCH_DOSSIER: Arquitectura de Validación, Pilotos, Casos de Prueba y Rúbricas (Síntesis Interna)",
+          "source_id": "ce4d8135-f66d-46f0-bc63-4f80f88f6b55",
+          "locator": "Sección 3 'Línea Base y Costos de Calidad Decisional'",
+          "excerpt_short": "Marco de evaluación de pilotos corporativos con compuertas cuantitativas y diseño experimental riguroso.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio fundamental de economía de la información respaldado por la literatura estándar de reputación corporativa y evaluación estratégica.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tiempo invertido por consulta",
+      "Índice de precisión factual",
+      "Severidad de errores detectados pre-publicación"
+    ],
+    "actors": [
+      "Auditor de Calidad de BRIDGE",
+      "CFO del Cliente",
+      "Director de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Registro del tiempo bruto ahorrado por el uso de BRIDGE en cada tarea",
+      "Inspección de las salidas por evaluadores expertos aplicando la rúbrica de calidad",
+      "Aplicación de la función de penalización económica: Costo_Neto = (Tiempo_Ahorrado * Tarifa_Hora) - (Errores_Criticos * Costo_Impacto_Riesgo)",
+      "Si la tasa de error es 0%, el ahorro bruto se certifica como ahorro neto real",
+      "Presentación del informe de ahorro ajustado por riesgo ante el comité de presupuesto"
+    ],
+    "states": [
+      "GROSS_SAVINGS_CALCULATED",
+      "RISK_PENALTY_EVALUATED",
+      "NET_VALUE_CERTIFIED"
+    ],
+    "outputs": [
+      "Informe financiero de ROI prudente y matemáticamente veraz que convence a la alta dirección"
+    ],
+    "exceptions": [
+      "Si un entregable contiene un error factual no detectado por el analista, el ahorro atribuido a ese caso se fija automáticamente en \\$0.00"
+    ]
+  },
+  "entities": [
+    "AMEC Barcelona Principles 3.0",
+    "Deephouse (2000)",
+    "Costo Asimétrico del Error",
+    "ROI Ajustado por Calidad"
+  ],
+  "relations": [
+    {
+      "from": "AMEC Barcelona Principles 3.0",
+      "to": "ROI Ajustado por Calidad",
+      "type": "GOVERNS_VALIDATION_OF"
+    },
+    {
+      "from": "Costo Asimétrico del Error",
+      "to": "Ahorro de Tiempo",
+      "type": "CONSTRAINS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Eficiencia ciega de velocidad vs Eficiencia prudente ajustada por calidad decisional",
+      "diferencia": "La eficiencia ciega celebra generar 100 páginas en 5 minutos sin importar errores; la eficiencia prudente celebra entregar información 100% verificada que previene errores regulatorios."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "unverified_claim_penalty_factor": "100% de penalización de ahorro ante error crítico",
+    "factual_integrity_hurdle": "0 errores tolerados en cifras de balances o hechos reservados"
+  },
+  "bridge_implications": "Blindaje del argumento de venta de BRIDGE como un 'seguro de precisión corporativa' y no como un generador de contenido superficial.",
+  "open_gaps": [
+    "Modelación actuarial del valor financiero específico de evitar una sanción de la CMF en compañías abiertas a bolsa."
+  ],
+  "next_question_ids": [
+    "T01-F10",
+    "T01-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "question_id": "P10-C08",
+  "pilar": "P10",
+  "eje": "RACI, DACI y cadena de aprobación",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué sigue sin prueba sobre rACI, DACI y cadena de aprobación, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "1) Lo que sigue sin prueba empírica de campo es la efectividad de las cadenas de aprobación colegiadas multijurisdiccionales durante incidentes transfronterizos simultáneos (e.g., ciberataque con afectación de faenas en Chile y cotización simultánea en NYSE, coordinando aprobaciones legales entre Santiago y Nueva York bajo diferencias horarias); 2) Fuentes fallidas o parciales: La fuente City of Oshawa (b634cc27) es parcial al circunscribirse a un municipio canadiense de estructura jerárquica piramidal simple, la cual no contempla matrices DACI complejas de corporaciones multilatinas con holdings y filiales; y 3) Validación mínima para resolver la incertidumbre: Conducir un 'Tabletop Exercise' de gobierno corporativo simulando un incidente de filtración de datos que involucre a los equipos legales de Chile y EE.UU., midiendo la latencia de concurrencia de firmas bajo un DAG de aprobación distribuido y evaluando la tasa de deadlocks organizacionales.",
+  "findings": [
+    {
+      "claim_id": "P10-C08-C1",
+      "claim": "La coordinación de cadenas de aprobación transfronterizas bajo contingencias bursátiles carece de mediciones de campo; City of Oshawa es parcial a estructuras municipales, requiriendo un ejercicio de simulación de gobierno corporativo (Tabletop).",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "governance_chain_gaps_tabletop",
+      "evidence": [
+        {
+          "source_title": "P10_GAPS_AND_VALIDATION: Vacios, Hipotesis y Validacion",
+          "source_id": "1bdee7c1-95df-4848-ba8e-74ff3eaca685",
+          "locator": "Sección 'Brechas en Gobernanza Multijurisdiccional'",
+          "retrieved_at": null,
+          "excerpt_short": "Vacío en aprobación transfronteriza: No hay datos de latencia para firmas concurrentes entre abogados locales y foráneos en crisis bursátiles. Protocolo: Tabletop exercise con simulación de ciberincidente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "City of Oshawa: Corporate Communications Policy (Spokespersons & Approval)",
+          "source_id": "b634cc27-b43f-4d8d-849c-fdb9b0cfebe8",
+          "locator": "Sección 'Approval Authority Limitations'",
+          "retrieved_at": null,
+          "excerpt_short": "Policy governs local municipal departments; it does not model matrixed multi-entity cross-border governance environments.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación precisa de las limitaciones estructurales de fuentes municipales y sustento en P10_GAPS_AND_VALIDATION.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Guion de simulacro de incidente transfronterizo",
+      "Matriz DACI multijurisdiccional",
+      "Mesa legal Santiago - NY"
+    ],
+    "actors": [
+      "Fiscal Santiago",
+      "Legal Counsel NY",
+      "Director Asuntos Corporativos",
+      "Facilitador BRIDGE"
+    ],
+    "steps": [
+      "Lanzamiento de alerta de incidente con impacto dual (CMF / SEC)",
+      "Disparo paralelo de solicitudes de revisión a Santiago y NY",
+      "Medición del tiempo para reconciliar discrepancias entre NCG 30 y Reg FD",
+      "Emisión de sign-offs digitales mancomunados",
+      "Evaluación de puntos de fricción y cuellos de botella en la plataforma"
+    ],
+    "states": [
+      "DRILL_LAUNCHED",
+      "CROSS_BORDER_ROUTING",
+      "CONCURRENT_REVIEW",
+      "DUAL_SIGN_OFF_SEALED"
+    ],
+    "outputs": [
+      "Reporte de lecciones aprendidas y calibración de flujos transfronterizos"
+    ],
+    "exceptions": [
+      "Si uno de los países se encuentra fuera de horario de oficina, se evalúa la eficacia de la regla de subrogancia por huso horario"
+    ]
+  },
+  "entities": [
+    "Tabletop Exercise",
+    "Cross-Border Governance",
+    "City of Oshawa Policy",
+    "P10_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Simulacro Transfronterizo",
+      "to": "Matriz DACI",
+      "type": "STRESS_TESTS"
+    },
+    {
+      "from": "Tabletop Exercise",
+      "to": "Incertidumbre",
+      "type": "RESOLVES_EMPIRICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Flujos pensados para una sola oficina vs Gobernanza transfronteriza probada",
+      "diferencia": "Los flujos mono-oficina colapsan ante reguladores foráneos; la gobernanza probada en simulacros articula abogados de múltiples países sin fricción."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cross_border_approval_latency_minutes": "Target < 90 minutos para lograr doble visado Santiago-NY"
+  },
+  "bridge_implications": "Permite posicionar a BRIDGE como la plataforma líder para multinacionales con doble cotización en bolsa.",
+  "open_gaps": [
+    "Compatibilidad horaria con filiales operativas en Asia-Pacífico (China / Japón)."
+  ],
+  "next_question_ids": [
+    "P10-C09",
+    "P10-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

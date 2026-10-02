@@ -1,0 +1,145 @@
+{
+  "question_id": "P06-X02",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Grafo de afirmaciones",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Cómo expresar relación de apoyo, conflicto, modificación y caducidad sin perder procedencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La expresión de relaciones dinámicas entre afirmaciones se implementa mediante bordes reificados y tipados en el grafo de conocimiento temporal (Li et al., 2025; Thorne et al., 2018): 1) Relación de Apoyo (SUPPORTS): Conecta dos afirmaciones o una evidencia con una afirmación cuando los hechos son consistentes y corroborativos, conservando el UUID de la fuente primaria; 2) Relación de Conflicto (CONFLICTS_WITH): Vincula afirmaciones contradictorias, requiriendo anotación de la dimensión en discrepancia (cifra, fecha o postura regulatoria) y activación de alerta de divergencia; 3) Relación de Modificación (SUPERSEDES / MODIFIES): Registra una actualización legítima de postura o renegociación de metas, vinculando la afirmación posterior con la anterior e inyectando un puntero de vigencia; 4) Relación de Caducidad (EXPIRES): Marca el vencimiento formal de un compromiso, plazo o vigencia legal (ej. término de permiso provisorio ambiental). Cada borde almacena obligatoriamente metadatos de procedencia: `edge_id`, `source_uuid`, `timestamp_created`, `created_by_actor_id` y `validity_window` ([t0, t1]). Al preservar estos atributos en el borde mismo, ninguna mutación destruye el linaje histórico.",
+  "findings": [
+    {
+      "claim_id": "P06-X02-C1",
+      "claim": "Los bordes temporales tipados (apoyo, conflicto, modificación, caducidad) preservan procedencia inmutable y resuelven el problema de la sobreescritura destructiva.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2023-2025",
+        "region": "Global",
+        "actor": "NLP y Razonamiento Temporal"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": "https://arxiv.org/pdf/2508.01680",
+          "locator": "Section 3.2: Edge Semantics and Temporal Evolution",
+          "excerpt_short": "Edges represent semantic and temporal dependencies including conflict, support, and superseding. Instead of overwriting facts, new edges record temporal transitions while retaining full source provenance.",
+          "source_date": "2025-08-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "e9a21c25-7298-43fb-aa5e-153957fb1850",
+          "source_title": "Thorne et al. (2018) - FEVER: Fact Extraction & VERification",
+          "original_url": "https://arxiv.org/abs/1803.05355",
+          "locator": "Section 2: Task Formulation and Label Space",
+          "excerpt_short": "Claims are categorized into SUPPORTS, REFUTES, or NOT ENOUGH INFO with respect to extracted evidence sentences, providing a formal triad for verification.",
+          "source_date": "2018-03-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en la taxonomía clásica FEVER extendida temporalmente por T-GRAG.",
+      "epistemic_status_original": "modelo_computacional_probado",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Afirmación A y Afirmación B",
+      "Documentos de respaldo",
+      "Fechas de vigencia"
+    ],
+    "actors": [
+      "Detector de Contradicciones y Evolución",
+      "Grafo Temporal",
+      "Auditor de Procedencia"
+    ],
+    "steps": [
+      "Comparación semántica de proposiciones",
+      "Clasificación de relación (apoyo, conflicto, modificación, caducidad)",
+      "Inyección de borde con ventana de validez [t0, t1]",
+      "Almacenamiento del hash del documento originador"
+    ],
+    "states": [
+      "Pairwise_Comparison",
+      "Relation_Classified",
+      "Temporal_Edge_Recorded"
+    ],
+    "outputs": [
+      "Borde de relación temporal persistido en grafo"
+    ],
+    "exceptions": [
+      "Imposibilidad de datar afirmación que fuerza estado 'indeterminada_temporalmente'"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_FEVER_TAXONOMY",
+      "type": "marco_metodologico",
+      "name": "Taxonomía de Verificación FEVER / T-GRAG",
+      "aliases": [
+        "FEVER Relational Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_FEVER_TAXONOMY",
+      "predicate": "define_relaciones_para",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2018-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X02-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Permite distinguir cuándo una empresa cambió de postura intencionalmente versus cuándo incurre en contradicción inadvertida.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "question_id": "P11-F11",
+  "pilar": "P11",
+  "eje": "Separación entre clientes",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre separación entre clientes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos, mecanismos y requerimientos de separación entre clientes se fundamentan en fuentes primarias verificadas: 1) Arquitectura y Políticas de Aislamiento SaaS: AWS Whitepapers (2023-2025) 'SaaS Tenant Isolation Strategies', que formaliza los modelos Silo vs Pool y la propagación de contexto de inquilino en cada capa; 2) Mecanismos Nativos de Base de Datos Relacional: PostgreSQL 18 Documentation (Sección 5.9 'Row Security Policies'), detallando la sintaxis y comportamiento de RLS para aislamiento determinista en motores transaccionales; 3) Aislamiento en Motores Vectoriales: Qdrant Documentation (2024) 'Multitenancy and Payload-based Partitioning', estableciendo el uso de filtros de payload obligatorios para prevenir fugas en RAG; 4) Certificación de Seguridad y Controles de Confidencialidad: AICPA SOC 2 (Trust Services Criteria, CC6.1 y CC6.3) y Cloud Security Alliance (CCM v4, Dominio IAM-07); y 5) Riesgos de Seguridad en IA Generativa: OWASP GenAI Top 10 2025 (vulnerabilidades LLM06 y LLM08 sobre fugas de información sensible y seguridad vectorial).",
+  "findings": [
+    {
+      "claim_id": "P11-F11-C1",
+      "claim": "El marco de separación de tenencia descansa en la integración de especificaciones técnicas de bases de datos (PostgreSQL 18, Qdrant), guías de arquitectura SaaS de referencia (AWS) y estándares de auditoría SOC 2 y OWASP.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_base_tenant_separation",
+      "evidence": [
+        {
+          "source_title": "P11_SOURCE_INDEX",
+          "source_id": "4608d794-4538-48e8-94fb-da95fb84e1e4",
+          "locator": "Sección 'Cluster 2: Arquitectura Multi-Tenant y Seguridad Lógica'",
+          "retrieved_at": null,
+          "excerpt_short": "Mapeo de fuentes clave: AWS SaaS Isolation, PostgreSQL 18 RLS, Qdrant Multitenancy, SOC 2 Criteria, OWASP GenAI 2025.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AWS Whitepapers: SaaS Tenant Isolation Strategies",
+          "source_id": "9c4732c4-ab75-4496-bbe6-f62334e3de5f",
+          "locator": "Section 'Enforcing Isolation in Multi-Tenant Environments'",
+          "retrieved_at": null,
+          "excerpt_short": "Isolation must be viewed as a foundational requirement that cannot be compromised by convenience or architectural shortcuts.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "PostgreSQL 18 Documentation: Section 5.9 Row Security Policies (RLS)",
+          "source_id": "2bac776e-1375-4cee-9097-117f74f1d9e1",
+          "locator": "Section 5.9",
+          "retrieved_at": null,
+          "excerpt_short": "When row security is active for a table, all normal queries for selecting or modifying rows must be allowed by row security policies.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en la documentación técnica oficial y concordancia con el catálogo de fuentes activas de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes indexadas en fuentes/P11.json",
+      "Validación cruzada de citas"
+    ],
+    "actors": [
+      "Auditor Bibliográfico",
+      "Investigador de Seguridad BRIDGE"
+    ],
+    "steps": [
+      "Cotejo de postulados operacionales contra textos de AWS, PostgreSQL y Qdrant",
+      "Verificación de que las fuentes estén activas en el cuaderno",
+      "Mapeo de correspondencia en el índice de fuentes",
+      "Sistematización de citas en las respuestas de P11"
+    ],
+    "states": [
+      "SOURCES_INSPECTED",
+      "CITATIONS_ALIGNED",
+      "TECHNICAL_BACKING_CONFIRMED"
+    ],
+    "outputs": [
+      "Cuerpo probatorio inexpugnable para la arquitectura de aislamiento"
+    ],
+    "exceptions": [
+      "Ninguna; las fuentes documentan textualmente los mecanismos de aislamiento"
+    ]
+  },
+  "entities": [
+    "AWS SaaS Strategies",
+    "PostgreSQL 18",
+    "Qdrant",
+    "SOC 2",
+    "P11_SOURCE_INDEX"
+  ],
+  "relations": [
+    {
+      "from": "AWS SaaS Strategies",
+      "to": "Aislamiento Lógico",
+      "type": "ESTABLISHES_BEST_PRACTICES"
+    },
+    {
+      "from": "PostgreSQL 18",
+      "to": "RLS",
+      "type": "IMPLEMENTS_MECHANICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Afirmaciones de marketing sobre 'nube segura' vs Respaldos técnicos de PostgreSQL y AWS",
+      "diferencia": "Las afirmaciones de marketing no resisten una auditoría de seguridad; los respaldos en PostgreSQL RLS y whitepapers de AWS demuestran controles comprobables."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "technical_citation_coverage": "100% de controles de aislamiento sustentados en documentación oficial de vendors"
+  },
+  "bridge_implications": "Otorga certeza probatoria a los clientes sobre la viabilidad y solidez técnica del aislamiento ofrecido por BRIDGE.",
+  "open_gaps": [
+    "Seguimiento de nuevas características de seguridad en próximas versiones de PostgreSQL (PostgreSQL 19)."
+  ],
+  "next_question_ids": [
+    "P11-F12",
+    "P11-F13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

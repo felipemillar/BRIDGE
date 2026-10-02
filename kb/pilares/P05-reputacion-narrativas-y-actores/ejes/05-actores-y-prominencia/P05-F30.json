@@ -1,0 +1,148 @@
+{
+  "question_id": "P05-F30",
+  "pilar": "P05",
+  "eje": "Actores y prominencia",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra actores y prominencia sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado en el corpus que ilustra la clasificación y mutación de prominencia de actores es la tramitación y paralización de megaproyectos de inversión en Chile (e.g. Proyecto Minero-Portuario Dominga y Central Termoeléctrica Barrancones / Pascua Lama, documentados en P05_RESEARCH_DOSSIER Sección 6 y marco SEIA/Convenio 169 OIT): 1) Entradas del Sistema: a) Fase Inicial: La empresa categoriza a la Asociación Gremial de Pescadores y Comunidad Indígena Changos de la caleta local como Actor 'Discrecional' o 'Dependiente' (alta legitimidad por residencia ancestral y urgencia por impacto en la biósfera marina, pero clasificados como carentes de poder económico o político); la empresa enfoca sus esfuerzos de lobby (Ley 20.730) exclusivamente en las autoridades políticas y ministeriales del Comité de Ministros (clasificados como Actores 'Dominantes' con Poder y Legitimidad); b) Hito de Ruptura: La comunidad territorial, al percibir que sus acuerdos de compensación no cumplen el umbral de credibilidad socio-política de la Licencia Social (SLO de Boutilier & Thomson), interpone un recurso judicial en el Primer Tribunal Ambiental y la Corte de Apelaciones denunciando omisión de consulta indígena reglada bajo Convenio 169 de la OIT (Decreto 236) y afectación a reservas marinas protegidas; 2) Proceso y Resultado Observado: El Tribunal acoge el reclamo y decreta la suspensión cautelar de la RCA. En ese instante, la comunidad adquiere Poder Coercitivo formal transferido por el poder judicial, transmutándose inmediatamente en Actor Definitivo (Poder + Legitimidad + Urgencia). El resultado esperado demuestra que subestimar la legitimidad y urgencia de un actor dependiente provoca la judicialización y colapso de la viabilidad del proyecto de inversión.",
+  "findings": [
+    {
+      "claim_id": "P05-F30-C1",
+      "claim": "La historia de judicialización ambiental en Chile comprueba empíricamente cómo comunidades locales dependientes mutan a actores definitivos al canalizar sus reclamos a través de tribunales ambientales e instrumentos internacionales vinculantes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2018-2026",
+        "region": "Chile",
+        "actor": "Tribunales Ambientales / SEA / Comunidades Costeras"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 6: Caso 2 (Conflictos Socioambientales y la Pérdida de la SLO en Chile)",
+          "excerpt_short": "Las organizaciones operaron bajo el supuesto de que la aprobación formal del Estado bastaba, omitiendo la Licencia Social. Las comunidades articularon su reclamo en tribunales ambientales bajo Convenio 169 OIT logrando la paralización.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "a2bbed13-4e5a-4e3d-816b-3bb36f738bb0",
+          "source_title": "BCN Chile: Decreto 236 Promulga el Convenio 169 OIT sobre Pueblos Indígenas y Tribales",
+          "original_url": "https://www.bcn.cl/leychile/Navegar?idNorma=279441",
+          "locator": "Artículos 6 y 7",
+          "excerpt_short": "Obliga a los gobiernos a consultar a los pueblos interesados, mediante procedimientos apropiados y en particular a través de sus instituciones representativas, cada vez que se prevean medidas legislativas o administrativas susceptibles de afectarles directamente.",
+          "source_date": "2008-10-02",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Jurisprudencia reiterada de la Corte Suprema y Tribunales Ambientales de Chile en materia de evaluación ambiental de proyectos de inversión.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Estudio de Impacto Ambiental (EIA)",
+      "Recurso de protección interpuesto",
+      "Sentencia del Tribunal Ambiental"
+    ],
+    "actors": [
+      "Comunidad Territorial",
+      "Titular del Proyecto",
+      "Tribunal Ambiental",
+      "Comité de Ministros"
+    ],
+    "steps": [
+      "Ignorar demandas comunitarias en etapa temprana",
+      "Interposición de acción contenciosa ambiental",
+      "Dictación de orden de no innovar y suspensión de faenas"
+    ],
+    "states": [
+      "Dependent_Ignored",
+      "Litigation_Triggered",
+      "Definitive_Injunction_Granted"
+    ],
+    "outputs": [
+      "Paralización de obras e inicio forzado de mesas de diálogo bajo estándar AA1000SES"
+    ],
+    "exceptions": [
+      "Empresa que ejecuta consulta previa voluntaria temprana logrando copropiedad psicológica"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TERRITORIAL_CASE",
+      "type": "caso_analitico",
+      "name": "Caso Judicialización Territorial en Chile",
+      "aliases": [
+        "Mutación a Actor Definitivo en SEIA"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TERRITORIAL_CASE",
+      "predicate": "evidencia_dinamica_de",
+      "object_id": "ENT_MITCHELL_SALIENCE",
+      "valid_from": "2018",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F30-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Error de gestión",
+      "Supuesto tradicional de la gerencia": "Gestionar exclusivamente al actor dominante (reguladores) garantiza la aprobación del proyecto.",
+      "Realidad del entorno socioambiental": "El actor dependiente se alía con el poder judicial y suspende el proyecto, convirtiéndose en el actor más crítico."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Simulador de Riesgo Territorial",
+      "implication": "BRIDGE debe alertar preventivamente cuando un actor territorial con Legitimidad y Urgencia no cuenta con canales de diálogo institucional, calificándolo como riesgo inminente de mutación a Actor Definitivo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

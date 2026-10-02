@@ -1,0 +1,144 @@
+{
+  "question_id": "P09-F40",
+  "pilar": "P09",
+  "eje": "Herramientas existentes",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar herramientas existentes de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del ecosistema de herramientas existentes exige: 1) Entidad de Solución SRM: `Entity_SRMSolution` con atributos (solution_id, name, vendor, primary_domain [mining, public_sector, pr_media, civic_engagement], deployment_model [cloud_saas, on_premise], pricing_tier); 2) Entidad de Matriz de Capacidades: `Entity_CapabilityMatrix` con atributos (capability_id, solution_id, commitment_tracking_score, grievance_mechanism_score, gis_spatial_score, audit_trail_immutability_flag, chilian_regulatory_fit_flag); 3) Relaciones Grafo: `PROVIDES_CAPABILITY`, `INTEGRATES_WITH`, `BENCHMARKED_AGAINST`; 4) Condiciones de Integridad: Evaluación booleana estricta de capacidades auditables (e.g., la bandera `audit_trail_immutability_flag` solo es verdadera si el software cuenta con hashes o logs de base de datos no editables por usuarios ordinarios).",
+  "findings": [
+    {
+      "claim_id": "P09-F40-C1",
+      "claim": "El esquema de benchmark estructura las capacidades de las soluciones existentes en el mercado, auditando su idoneidad para compromisos, quejas, mapas espaciales y cumplimiento de regulaciones chilenas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_srm_benchmarking",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 4 'Modelo de Datos del Benchmark de Herramientas'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades del benchmark: Entity_SRMSolution y Entity_CapabilityMatrix. Permite auditar qué herramientas del mercado cumplen con los requisitos de compliance minero, trazabilidad de lobby y normativas ambientales de Chile.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: Top 10 Secure Stakeholder Tools for Government and Public Sector",
+          "source_id": "da35828d-1b2b-4ede-8143-38784d7fc927",
+          "locator": "Section 'Feature Matrix and Security Compliance', p. 10-15",
+          "retrieved_at": null,
+          "excerpt_short": "Security, access tiering, role-based permissions, and unbroken audit trails form the core criteria for evaluating enterprise-grade public affairs software.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Tractivity y la matriz comparativa de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dossier de comparación",
+      "Hojas de producto de fabricantes"
+    ],
+    "actors": [
+      "Analista de Producto BRIDGE",
+      "Comité de Arquitectura"
+    ],
+    "steps": [
+      "Carga de perfiles de soluciones",
+      "Puntuación de capacidades según rúbrica",
+      "Generación de gráficos de radar comparativos"
+    ],
+    "states": [
+      "Soluciones Catalogadas",
+      "Capacidades Evaluadas",
+      "Benchmark Disponible"
+    ],
+    "outputs": [
+      "Tabla estructurada de benchmark tecnológico"
+    ],
+    "exceptions": [
+      "Soluciones sin documentación pública verificable no son incluidas en el ranking principal"
+    ]
+  },
+  "entities": [
+    "Entity_SRMSolution",
+    "Entity_CapabilityMatrix",
+    "Tractivity",
+    "P09_RESEARCH_DOSSIER",
+    "Radar Comparativo"
+  ],
+  "relations": [
+    {
+      "from": "Entity_SRMSolution",
+      "to": "Entity_CapabilityMatrix",
+      "type": "EVALUATED_BY"
+    },
+    {
+      "from": "BRIDGE",
+      "to": "Entity_SRMSolution",
+      "type": "COMPARED_TO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Evaluación subjetiva de folleto vs Matriz estructurada de capacidades",
+      "diferencia": "El folleto promete todo; la matriz estructurada verifica si existe la funcionalidad probatoria real en el software."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "evaluation_criteria_count": "7 criterios objetivos ponderados",
+    "security_certification_standards": "SOC 2 Type II / ISO 27001"
+  },
+  "bridge_implications": "Utilizar la matriz de benchmark para guiar el roadmap de desarrollo de características diferenciales de BRIDGE.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F41",
+    "P09-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

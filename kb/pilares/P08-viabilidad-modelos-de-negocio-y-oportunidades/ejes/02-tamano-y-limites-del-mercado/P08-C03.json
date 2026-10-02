@@ -1,0 +1,155 @@
+{
+  "question_id": "P08-C03",
+  "pilar": "P08",
+  "eje": "Tamaño y límites del mercado",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre tamaño y límites del mercado, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia se centra en la inclusión del sector público y las empresas medianas dentro del mercado accesible (SAM): Las primeras versiones de las síntesis internas incluían a municipalidades y servicios públicos como compradores potenciales, inflando el SAM chileno a más de 400 entidades. Sin embargo, las fuentes regulatorias oficiales (Mercado Público / ChileCompra) y el P08_QUALITY_ADDENDUM corrigen drásticamente esta postura: el sector público licitado presenta plazos de adjudicación inviables (> 14 meses) y alta morosidad, mientras que las medianas empresas carecen de presupuesto. Prevalece la regla del QUALITY_ADDENDUM: el mercado SAM en Chile está restringido estrictamente a entre 120 y 150 grandes corporaciones privadas y empresas públicas con régimen de sociedad anónima de derecho privado.",
+  "findings": [
+    {
+      "claim_id": "P08-C03-C1",
+      "claim": "Conforme al P08_QUALITY_ADDENDUM, se descarta el sector público estatal licitado del SAM, acotando el mercado chileno a 120-150 corporaciones de primer nivel.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "market_size_reconciliation",
+      "evidence": [
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 3 'Límites de Mercado y Exclusiones Regulatorias'",
+          "excerpt_short": "Precedencia canónica: Se elimina del cálculo del SAM a los organismos del Estado sujetos a la Ley de Compras Públicas (Ley 19.886). La dilación en los procesos de licitación y los riesgos de objeción presupuestaria destruyen la economía unitaria. El SAM oficial queda fijado entre 120 y 150 corporaciones con estructura corporativa privada.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "CMF Chile: Hechos Esenciales y Divulgación de Información al Mercado Financiero",
+          "source_id": "3afc11c2-56db-41bc-8e22-e6fbaafcc7de",
+          "locator": "Registro de Emisores de Valores",
+          "excerpt_short": "El registro de sociedades anónimas abiertas activas con alta bursatilidad y gobierno corporativo regulado no supera las 150 corporaciones de gran tamaño en el país.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las restricciones del QUALITY_ADDENDUM y los registros oficiales de la CMF.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "P08_RESEARCH_DOSSIER",
+      "P08_QUALITY_ADDENDUM",
+      "Registro CMF"
+    ],
+    "actors": [
+      "Auditor de Mercado",
+      "CRO",
+      "Comité de Dirección"
+    ],
+    "steps": [
+      "Identificación de sobreestimación del SAM en borradores",
+      "Depuración de organismos públicos licitados",
+      "Fijación del SAM canónico en 120-150 cuentas"
+    ],
+    "states": [
+      "SAM Inflado",
+      "Depuración Aplicada",
+      "SAM Canónico Validado"
+    ],
+    "outputs": [
+      "Definición oficial del tamaño de mercado para BRIDGE"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P08_QUALITY_ADDENDUM",
+    "SAM Oficial",
+    "Ley 19.886",
+    "CMF Registro",
+    "ChileCompra"
+  ],
+  "relations": [
+    {
+      "from": "QUALITY_ADDENDUM",
+      "to": "SAM Oficial (120-150)",
+      "type": "defines"
+    },
+    {
+      "from": "Sector Público Licitado",
+      "to": "Exclusión Comercial",
+      "type": "subjects_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "SAM preliminar vs SAM rectificado",
+      "diferencia": "Preliminar: 400 entidades (incluyendo municipios). Rectificado: 120-150 grandes empresas (foco exclusivo y rentable)."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P08-F07-C1",
+        "P08-C03-C1"
+      ],
+      "difference": "Discrepancia entre el dimensionamiento preliminar no filtrado y el SAM estricto empresarial.",
+      "resolution": "resuelta",
+      "reason": "El QUALITY_ADDENDUM formaliza la exclusión del sector público licitado para preservar la viabilidad comercial."
+    }
+  ],
+  "metrics_and_denominators": {
+    "reconciled_sam_chile": "120 a 150 corporaciones de primer nivel"
+  },
+  "bridge_implications": "Enfocar el 100% de los esfuerzos de prospección comercial en las 150 corporaciones privadas del padrón CMF/IPSA.",
+  "open_gaps": [
+    "Monitorear si la reforma a la Ley de Compras Públicas flexibiliza la contratación de innovación tecnológica."
+  ],
+  "next_question_ids": [
+    "P08-C04",
+    "P08-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

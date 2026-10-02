@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F03",
+  "pilar": "P09",
+  "eje": "Mapa de actores y relaciones",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Cómo evitar atribuir a una persona la postura de un grupo entero?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para evitar la falacia de atribución y el sesgo de representatividad espuria, el corpus establece cuatro salvaguardas metodológicas y de datos: 1) Desacoplamiento Ontológico entre Persona y Entidad Colectiva: Las posturas manifestadas por un individuo en una reunión se registran estrictamente en su ficha individual (`Entity_Person`), requiriéndose un acta formal de asamblea comunitaria, votación ratificada o personería jurídica vigente para asociar esa postura a la organización (`Entity_Org`); 2) Registro de Disenso Interno: El sistema permite documentar posturas divergentes de múltiples facciones dentro de una misma comunidad indígena o junta vecinal, prohibiendo el supuesto de consenso automático; 3) Campo 'Grado de Representatividad Formal': Califica si la persona habla a título personal, como delegado provisional, como presidente estatutario con mandato vigente o como disidente; y 4) Auditoría de Quórum en Actas: En reuniones comunitarias bajo el Convenio 169 OIT, se exige adjuntar la nómina de asistencia firmada para verificar la representatividad efectiva.",
+  "findings": [
+    {
+      "claim_id": "P09-F03-C1",
+      "claim": "El sistema separa formalmente la postura de dirigentes individuales de la voluntad colectiva de la comunidad, evitando imputaciones indebidas y mitigando la fragmentación social.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "representativeness_safeguards",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades' y Sección 5 'Criterios de Calidad'",
+          "retrieved_at": null,
+          "excerpt_short": "Regla contra la representatividad espuria: La plataforma distingue nítidamente entre la declaración de un líder o vocero individual y la posición institucional de la comunidad. Las declaraciones individuales no pueden heredarse automáticamente al nodo de la organización sin evidencia de un mandato asambleario o poder legal formal.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "AccountAbility: AA1000 Stakeholder Engagement Standard (AA1000SES)",
+          "source_id": "cddb1ad1-e88f-463e-bc4d-a2ef585c7a20",
+          "locator": "Section 4.3 'Inclusivity and Legitimate Representation', p. 18-22",
+          "retrieved_at": null,
+          "excerpt_short": "Organizations must ensure that stakeholder engagement accounts for internal diversity and does not mistake the voice of prominent individuals for the collective consent of marginalized community factions.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre el estándar internacional AA1000SES y las reglas de modelado de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Minuta de asamblea",
+      "Poder o acta de directiva comunitaria",
+      "Declaraciones de vocero"
+    ],
+    "actors": [
+      "Relacionador Comunitario",
+      "Analista de Inteligencia Social",
+      "Líder Comunitario"
+    ],
+    "steps": [
+      "Registro de declaración en ficha de la persona",
+      "Verificación de personería jurídica y vigencia en registro público",
+      "Calificación del grado de representatividad",
+      "Alerta de disenso interno si existen posturas opuestas registradas"
+    ],
+    "states": [
+      "Declaración Individual",
+      "Mandato en Verificación",
+      "Postura Colectiva Ratificada / Disenso Mapeado"
+    ],
+    "outputs": [
+      "Mapa de facciones y posturas de la comunidad"
+    ],
+    "exceptions": [
+      "Comunidades sin directiva formal donde se mapean múltiples interlocutores como red de influencia difusa"
+    ]
+  },
+  "entities": [
+    "AA1000SES",
+    "Representatividad Espuria",
+    "Mandato Asambleario",
+    "Disenso Interno",
+    "Convenio 169 OIT"
+  ],
+  "relations": [
+    {
+      "from": "Declaración Individual",
+      "to": "Postura Colectiva",
+      "type": "requires_asamblea_validation_to_bind"
+    },
+    {
+      "from": "AA1000SES",
+      "to": "Inclusividad de Facciones",
+      "type": "mandates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir que el presidente comunal representa a todos vs Mapeo de facciones",
+      "diferencia": "Asumir representatividad total genera sorpresas cuando la base bloquea el proyecto; mapear facciones permite una negociación territorial robusta."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "internal_dissent_tracking": "Soporte de múltiples posturas por organización",
+    "mandate_verification_requirement": "Acta de asamblea obligatoria para acuerdos vinculantes"
+  },
+  "bridge_implications": "Incorporar en el perfil de cada dirigente un selector de representatividad ('Voz Individual', 'Delegado Técnico', 'Presidente Estatutario con Mandato').",
+  "open_gaps": [
+    "Verificar la interoperabilidad con el Registro de Comunidades y Asociaciones Indígenas de CONADI."
+  ],
+  "next_question_ids": [
+    "P09-F04",
+    "P09-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

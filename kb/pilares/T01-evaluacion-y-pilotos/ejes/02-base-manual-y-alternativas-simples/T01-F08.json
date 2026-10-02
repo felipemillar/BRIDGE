@@ -1,0 +1,163 @@
+{
+  "question_id": "T01-F08",
+  "pilar": "T01",
+  "eje": "Base manual y alternativas simples",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué alternativas de menor complejidad deben servir de control?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para evitar atribuir falsamente a la arquitectura de BRIDGE beneficios que podrían obtenerse con tecnologías sustancialmente más económicas o simples, un piloto riguroso debe evaluar el desempeño de la plataforma frente a cuatro niveles de control tecnológico alternativo de menor complejidad: 1) Control 0 (Línea Base Manual Pura): Analista humano operando exclusivamente con búsqueda en explorador de archivos de Windows/Mac, Google Search y lectura de PDFs de prensa tradicionales; 2) Control 1 (Búsqueda Léxica Sintáctica BM25 / Elasticsearch): Motor de búsqueda tradicional de texto completo basado en coincidencia exacta de palabras clave sobre el repositorio corporativo, sin embeddings vectoriales ni modelos de lenguaje generativos; 3) Control 2 (LLM Comercial de Propósito General sin RAG Gobernado): Analista utilizando interfaces web de ChatGPT Enterprise o Claude.ai copiando y pegando manualmente extractos de texto, sin integración RLS a bases de datos internas, sin índices vectoriales y sin control de alucinaciones algorítmico; y 4) Control 3 (Servicio de Consultoría y Clipping Externo Tradicional): Servicio tercerizado contratado a agencias tradicionales de relaciones públicas y monitoreo de medios (ej. Cision, agencias locales) que provee resúmenes estáticos diarios con 24 horas de desfase temporal.",
+  "findings": [
+    {
+      "claim_id": "T01-F08-C1",
+      "claim": "La evaluación de valor exige comparar BRIDGE contra cuatro alternativas de control de menor complejidad: Control 0 (manual puro), Control 1 (búsqueda léxica BM25), Control 2 (LLMs comerciales web sin RAG) y Control 3 (agencias tradicionales de clipping externo).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "simpler_control_alternatives",
+      "evidence": [
+        {
+          "source_title": "T01_RESEARCH_DOSSIER: Arquitectura de Validación, Pilotos, Casos de Prueba y Rúbricas (Síntesis Interna)",
+          "source_id": "ce4d8135-f66d-46f0-bc63-4f80f88f6b55",
+          "locator": "Sección 3 'Alternativas Simples y Grupos de Control'",
+          "excerpt_short": "Marco de evaluación de pilotos corporativos con compuertas cuantitativas y diseño experimental riguroso.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "ArXiv (2025) - A Cost-Benefit Analysis of On-Premise LLM Deployment vs Cloud APIs",
+          "source_id": "f57279c5-07ed-4e50-900a-5fa7c66f6a0e",
+          "locator": "Section 2 'Baseline Architectures and Comparative Controls'",
+          "excerpt_short": "Inference unit economics and cloud token costs must be evaluated against operational latency and human review expense.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "NVIDIA - How Much Does Your LLM Inference Cost? Benchmarking and TCO Estimation",
+          "source_id": "499b45d0-2c64-4e6a-8d21-e96fd1666758",
+          "locator": "Section 'TCO Comparison Across Architectural Alternatives'",
+          "excerpt_short": "Los hechos esenciales y balances oficiales auditados revisten fe pública y acarrean responsabilidad legal estricta ante el mercado.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño experimental impecable alineado con las mejores prácticas de econometría tecnológica y benchmarking de IA corporativa.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Muestra idéntica de 50 preguntas de prueba",
+      "Entornos de prueba de las 4 alternativas de control",
+      "Entorno productivo de BRIDGE"
+    ],
+    "actors": [
+      "Equipo Evaluador Ciego",
+      "Analistas de Grupo Control",
+      "Analistas con BRIDGE"
+    ],
+    "steps": [
+      "Configuración simultánea de los cuatro entornos de control y de la plataforma BRIDGE",
+      "Inyección del mismo lote de 50 casos de prueba en los cinco entornos en paralelo",
+      "Medición de tiempo de ejecución, precisión de recuperación y costo por consulta en cada entorno",
+      "Evaluación ciega de las respuestas por especialistas externos de asuntos corporativos",
+      "Elaboración de la matriz comparativa de costo-efectividad incremental"
+    ],
+    "states": [
+      "CONTROLS_PROVISIONED",
+      "BENCHMARK_PARALLEL_DISPATCHED",
+      "METRICS_COLLECTED",
+      "COST_BENEFIT_CALCULATED"
+    ],
+    "outputs": [
+      "Matriz de ventaja competitiva que demuestra por qué las alternativas simples no resuelven el problema empresarial"
+    ],
+    "exceptions": [
+      "Si en una tarea simple de búsqueda léxica BM25 empata en calidad con BRIDGE a menor costo, se documenta transparentemente el resultado"
+    ]
+  },
+  "entities": [
+    "Control 0 (Manual)",
+    "Control 1 (BM25)",
+    "Control 2 (Commodity LLM)",
+    "Control 3 (Agencia Clipping)",
+    "BRIDGE Multi-Tenant RAG"
+  ],
+  "relations": [
+    {
+      "from": "BRIDGE Multi-Tenant RAG",
+      "to": "Control 1 (BM25)",
+      "type": "PROVES_INCREMENTAL_VALUE_OVER"
+    },
+    {
+      "from": "BRIDGE Multi-Tenant RAG",
+      "to": "Control 2 (Commodity LLM)",
+      "type": "SURPASSES_IN_DATA_ISOLATION_AND_FAITHFULNESS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Comparar solo contra el trabajo manual vs Comparar contra BM25 y ChatGPT web",
+      "diferencia": "Comparar solo contra trabajo manual infla artificialmente el mérito del software; comparar contra BM25 y ChatGPT demuestra si la arquitectura RAG gobernada aporta un valor técnico insustituible."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "retrieval_f1_gain_over_bm25": ">= 35% de mejora en recuperación semántica",
+    "hallucination_reduction_vs_commodity_llm": ">= 80% de reducción de afirmaciones no fundadas"
+  },
+  "bridge_implications": "Otorga argumentos técnicos aplastantes al equipo comercial de BRIDGE para neutralizar objeciones del tipo 'podemos resolver esto con ChatGPT de \\$20 USD o con SharePoint'.",
+  "open_gaps": [
+    "Medición del costo de licencias de software de búsqueda léxica corporativa preexistente en clientes medianos."
+  ],
+  "next_question_ids": [
+    "T01-F09",
+    "T01-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

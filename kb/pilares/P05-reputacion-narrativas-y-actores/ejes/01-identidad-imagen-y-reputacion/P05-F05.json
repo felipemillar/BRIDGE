@@ -1,0 +1,139 @@
+{
+  "question_id": "P05-F05",
+  "pilar": "P05",
+  "eje": "Identidad, imagen y reputación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre identidad, imagen y reputación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos fundamentales sobre identidad, imagen y reputación están respaldados por cinco fuentes canónicas del corpus, con sus respectivos pasajes, fechas y ámbitos: 1) Fombrun & Shanley (1990, Academy of Management Journal, 33(2), pp. 233-258, ámbito: gestión estratégica global): respalda la definición de reputación como juicio colectivo acumulativo sobre impactos financieros y sociales que reduce incertidumbre en los mercados; 2) Fombrun & van Riel (1997, Corporate Reputation Review, 1(1), pp. 5-13, ámbito: comunicación corporativa): respalda la distinción tripartita entre identidad interna, imagen externa y reputación agregada; 3) Arthur W. Page Society (2023, The Page Principles, ámbito: ética de dirección corporativa): respalda el principio de que el 90% de la reputación proviene de la conducta real y solo el 10% del discurso ('Prove it with action'); 4) Deephouse (2000, Journal of Management, 26(6), pp. 1091-1112, ámbito: teoría de recursos y capacidades VRIO): respalda que la reputación mediática favorable es un recurso estratégico inimitable que genera ventaja competitiva sostenible; y 5) AMEC Barcelona Principles 3.0 (2020, Principios 2 y 5, ámbito: medición global de comunicaciones): respalda la separación obligatoria entre outputs de actividad y outcomes de reputación, proscribiendo el valor publicitario equivalente (AVE).",
+  "findings": [
+    {
+      "claim_id": "P05-F05-C1",
+      "claim": "La fundamentación empírica y conceptual de la reputación corporativa descansa en investigaciones peer-reviewed y estándares profesionales internacionales de medición auditables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1990-2026",
+        "region": "Global",
+        "actor": "Comunidad Científica y Profesional"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 1: Eje 1 (Fundamentos y Medición) y Eje 2 (Jerarquía Métrica)",
+          "excerpt_short": "Cita y consolida los hallazgos de Fombrun & Shanley (1990), Fombrun & van Riel (1997), Deephouse (2000), Page Society (2023) y AMEC (2020) con niveles de confianza alto y muy alto.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "8283e403-bd32-4a0f-91bf-a9a4587725f7",
+          "source_title": "Deephouse: Media Reputation as a Strategic Resource (Journal of Management)",
+          "original_url": "https://journals.sagepub.com/doi/10.1177/014920630002600602",
+          "locator": "Journal of Management, 26(6), pp. 1091-1112",
+          "excerpt_short": "Media reputation meets the criteria of being valuable, rare, and imperfectly imitable, and can be viewed as an intangible strategic resource.",
+          "source_date": "2000-12-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Trazabilidad completa con citas primarias académicas y estándares internacionales de la industria.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Artículos de revistas académicas indexadas",
+      "Estándares publicados de asociaciones profesionales"
+    ],
+    "actors": [
+      "Curador de Evidencia",
+      "Investigador de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Verificación de autenticidad de fuentes primarias",
+      "Extracción de citas y localizadores específicos",
+      "Indexación en el catálogo documental de P05"
+    ],
+    "states": [
+      "Sources_Verified",
+      "Citations_Mapped",
+      "Evidence_Locked"
+    ],
+    "outputs": [
+      "Matriz de fuentes primarias verificadas"
+    ],
+    "exceptions": [
+      "Uso de literatura secundaria que tergiverse las definiciones originales de Fombrun o AMEC"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CANONICAL_SOURCES_P05",
+      "type": "corpus_fuentes",
+      "name": "Fuentes Canónicas de Reputación P05",
+      "aliases": [
+        "P05 Literature Base"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CANONICAL_SOURCES_P05",
+      "predicate": "respalda_fundamentos_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "1990",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F05-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Motor de Citación",
+      "implication": "BRIDGE debe fundamentar toda recomendación estratégica sobre reputación en la literatura canónica documentada, evitando generalizaciones no respaldadas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

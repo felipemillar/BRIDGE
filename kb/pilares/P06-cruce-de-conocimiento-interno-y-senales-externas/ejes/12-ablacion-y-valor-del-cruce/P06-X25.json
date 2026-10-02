@@ -1,0 +1,145 @@
+{
+  "question_id": "P06-X25",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Ablación y valor del cruce",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Cómo comparar un brief generado solo con fuentes externas contra uno con cruce interno?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La comparación rigurosa entre un brief generado exclusivamente con fuentes externas (clipping tradicional / social listening) y uno con cruce de conocimiento interno se estructura mediante un experimento de ablación ciega controlada (Ragas; TruLens; P06_QUALITY_ADDENDUM, Sección 5.1): 1) Protocolo Experimental Doble Ciego: Se alimenta un mismo evento externo de crisis o noticia regulatoria a dos variantes del sistema: Variante A (Ablada: RAG externo puro con noticias y redes) y Variante B (Completa: RAG con cruce de conocimiento interno, memorias, hechos esenciales y RCA); 2) Evaluación Multidimensional: Tres evaluadores humanos expertos (especialistas en asuntos corporativos y directores de comunicaciones) y métricas automatizadas (Ragas Faithfulness y TruLens Groundedness) califican ambos briefs en cuatro dimensiones: Contextualización Corporativa (0-5), Precisión Fáctica respecto a Posturas Oficiales (0-5), Utilidad Accionable para el Vocero (0-5) y Tasa de Alucinaciones o Inexactitudes (%); 3) Hipótesis de Valor: El brief con cruce interno debe demostrar superioridad estadísticamente significativa ($p < 0.01$) en contextualización y eliminar contradicciones inadvertidas con compromisos vigentes.",
+  "findings": [
+    {
+      "claim_id": "P06-X25-C1",
+      "claim": "El estudio de ablación doble ciego mide el valor incremental del cruce interno demostrando reducción drástica de respuestas genéricas y prevención de contradicciones.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Evaluación de Sistemas de IA"
+      },
+      "evidence": [
+        {
+          "source_id": "7b706c54-6b44-48fe-a0ba-be07e722be6b",
+          "source_title": "Es et al. (2023) - Ragas: Automated Evaluation of RAG",
+          "original_url": "https://arxiv.org/abs/2309.15217",
+          "locator": "Section 3: Evaluation Metrics for Retrieval and Generation",
+          "excerpt_short": "Ablation studies comparing retrieval configurations reveal that multi-source contextual groundings significantly improve faithfulness and answer relevance over single-domain pipelines.",
+          "source_date": "2023-09-27",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 5.1: Protocolo de Ablación para Medir el Retorno de Inversión del Cruce",
+          "excerpt_short": "El valor del cruce no se mide por longitud de texto sino por evitar que el vocero declare cosas incompatibles con la verdad interna documentada.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Metodología estándar de ablación experimental respaldada en el marco científico de Ragas.",
+      "epistemic_status_original": "diseno_experimental_formal",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Noticia externa de prueba",
+      "Corpus interno del cliente"
+    ],
+    "actors": [
+      "Comité de Evaluación Humana",
+      "Pipeline Variante A",
+      "Pipeline Variante B"
+    ],
+    "steps": [
+      "Ejecución paralela de brief sin cruce y con cruce",
+      "Anonimización y presentación aleatorizada a jueces",
+      "Calificación en rúbrica",
+      "Análisis estadístico t-test / Wilcoxon"
+    ],
+    "states": [
+      "Ablation_Triggered",
+      "Briefs_Generated",
+      "Blinded_Scoring",
+      "Statistical_Significance_Assessed"
+    ],
+    "outputs": [
+      "Reporte de ablación experimental"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ABLATION_SUITE",
+      "type": "marco_evaluacion",
+      "name": "Suite de Ablación Experimental del Cruce",
+      "aliases": [
+        "Cross-Source Ablation Framework"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ABLATION_SUITE",
+      "predicate": "evalua_calidad_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2023-09-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X25-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Demuestra cuantitativamente al cliente corporativo por qué un agregador de noticias tradicional es insuficiente.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X26"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

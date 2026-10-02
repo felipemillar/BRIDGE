@@ -1,0 +1,125 @@
+{
+  "question_id": "P03-F46",
+  "pilar": "P03",
+  "eje": "Derechos, costos y calidad de ingesta",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar derechos, costos y calidad de ingesta de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada exige: 1) Variables técnicas y comerciales: `regimen_licencia` (publico_abierto, comercial_sindicado, api_restringida, scraping_condicionado), `costo_licencia_anual_usd`, `limite_consultas_minuto`, `permite_entrenamiento_ia` (booleano), `precision_auditada` (0.0 a 1.0), y `tasa_fallos_captura`; 2) Categorías de fuente: Oficial_Abierta, Comercial_Sindicada, Red_Protocolo_Abierto y Medio_Protegido_OptOut; 3) Relaciones en grafo: `licenciado_bajo` (Términos de Servicio / Licencia), `proveedor_comercial_es` (Vendor), `restringe_entrenamiento_de` (Modelos IA), y `monitorea_sla_de` (Conector Técnico); y 4) Condiciones de integridad: registrar el indicador `permite_entrenamiento_ia: false` en toda fuente sindicada de Factiva o Reddit, bloqueando automáticamente su uso como datos de entrenamiento en los pipelines de fine-tuning de la plataforma.",
+  "findings": [
+    {
+      "claim_id": "P03-F46-C1",
+      "claim": "El modelado estructurado debe gobernar variables de derechos de uso, regímenes de licencia y restricciones de entrenamiento de IA como restricciones duras en el catálogo de fuentes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Modelado Estructurado P03"
+      },
+      "evidence": [
+        {
+          "source_id": "6d444b42-f740-4b1f-877f-61ea4703e485",
+          "source_title": "Reddit Data API Terms, Wiki & Rate Limits",
+          "original_url": "https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki",
+          "locator": "API Policy & Developer Terms",
+          "excerpt_short": "Commercial users must maintain clear documentation of data usage rights and adhere to strict restrictions on secondary distribution and model training.",
+          "source_date": "2023",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación con especificaciones de términos de uso de APIs y políticas de gobernanza.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Metadatos de licencia de fuente",
+      "Parámetros contractuales"
+    ],
+    "actors": [
+      "Contract Ontologist",
+      "Governance Policy Enforcer"
+    ],
+    "steps": [
+      "Extracción de cláusulas de derechos",
+      "Modelado en grafo de fuentes",
+      "Aplicación de reglas de acceso"
+    ],
+    "states": [
+      "Raw_Contract",
+      "Rights_Mapped",
+      "Enforced_In_Catalog"
+    ],
+    "outputs": [
+      "Catálogo estructurado de fuentes con gobernanza de derechos integrada"
+    ],
+    "exceptions": [
+      "Modificación unilateral de términos de servicio por parte de plataformas sociales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DATA_GOVERNANCE_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Gobernanza de Fuentes",
+      "aliases": [
+        "Data Governance Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DATA_GOVERNANCE_SCHEMA",
+      "predicate": "regula_uso_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F46-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Incorporar banderas booleanas de derechos de autor y entrenamiento en el catálogo de conectores de BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

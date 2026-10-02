@@ -1,0 +1,152 @@
+{
+  "question_id": "P05-C01",
+  "pilar": "P05",
+  "eje": "Identidad, imagen y reputación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre identidad, imagen y reputación, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia central identificada entre la práctica comercial tradicional y la literatura científica rigurosa radica en la equiparación errónea entre imagen de corto plazo y reputación acumulada. Ciertas fuentes comerciales y agencias de relaciones públicas promueven que una ráfaga de menciones favorables o una campaña publicitaria de imagen en redes sociales equivale a construir reputación corporativa. En contraste, las fuentes canónicas académicas (Fombrun & Shanley 1990; Fombrun & van Riel 1997; Deephouse 2000; Page Society 2023) y las síntesis internas canónicas (P05_EVIDENCE_MAP Eje 1 y P05_RESEARCH_DOSSIER Sección 1.1) demuestran que la imagen es efímera, superficial y altamente volátil ante cualquier estímulo de coyuntura, mientras que la reputación es un juicio evaluativo colectivo, agregado y sostenido en el tiempo que actúa como reserva de capital moral en mercados con asimetría de información. De acuerdo con las reglas de precedencia editorial del mandato, prevalece de forma absoluta la versión rigurosa de P05_EVIDENCE_MAP y Fombrun: la plataforma BRIDGE debe tratar la identidad como atributo intrínseco documentado, la imagen como señal de coyuntura y la reputación como activo estructural duradero.",
+  "findings": [
+    {
+      "claim_id": "P05-C01-C1",
+      "claim": "Prevalece la distinción canónica que rechaza la equivalencia entre imagen de redes sociales y reputación estructural acumulada, conforme a la regla de precedencia editorial de P05.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1990-2026",
+        "region": "Global",
+        "actor": "Curaduría Epistémica P05"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2: Matriz de Tensiones Epistemológicas, Tensión 2",
+          "excerpt_short": "Separar analíticamente Sentimiento de Reputación. Tratar el sentimiento como señal de alerta temprana (out-take) y la reputación como activo acumulado (outcome/impact).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "19dae3b0-2400-447a-a840-0cf2c0ec5fd1",
+          "source_title": "Fombrun & van Riel: The Reputational Landscape (Corporate Reputation Review)",
+          "original_url": "https://link.springer.com/article/10.1057/crr.1997.1",
+          "locator": "Corporate Reputation Review, 1(1), pp. 5-13",
+          "excerpt_short": "Image is what is perceived immediately; reputation is the historical accumulation of images and experiences over time.",
+          "source_date": "1997-04-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución explícita de tensión epistemológica consagrada en la síntesis interna rectora de P05.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Monitoreo de imagen coyuntural",
+      "Series históricas de reputación"
+    ],
+    "actors": [
+      "Comité Editorial",
+      "Arquitecto de BRIDGE"
+    ],
+    "steps": [
+      "Detección de afirmaciones comerciales que confunden imagen con reputación",
+      "Aplicación de la regla de precedencia editorial",
+      "Configuración de algoritmos desacoplados"
+    ],
+    "states": [
+      "Discrepancy_Identified",
+      "Precedence_Applied",
+      "Standard_Enforced"
+    ],
+    "outputs": [
+      "Arquitectura analítica conforme a la regla rectora de P05"
+    ],
+    "exceptions": [
+      "Campañas publicitarias que pretenden adjudicarse incrementos estructurales de reputación"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRECEDENCE_P05",
+      "type": "regla_editorial",
+      "name": "Regla de Precedencia Editorial P05",
+      "aliases": [
+        "P05 Editorial Precedence"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRECEDENCE_P05",
+      "predicate": "resuelve_discrepancia_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C01-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Resolución de discrepancia",
+      "Versión Comercial Desestimada": "Campañas de imagen equivalen a construir reputación.",
+      "Versión Canónica Prevaleciente": "La reputación requiere conducta fáctica verificada sostenida en el tiempo y no se altera por meras campañas de relaciones públicas."
+    }
+  ],
+  "contradictions": [
+    {
+      "issue": "Equiparación de imagen y reputación",
+      "source_a": "Agencias de marketing digital",
+      "source_b": "P05_EVIDENCE_MAP / Fombrun & Shanley",
+      "resolution": "Prevalece P05_EVIDENCE_MAP: la reputación es un constructo evaluativo longitudinal no reducible a imagen inmediata."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Motor Analítico",
+      "implication": "BRIDGE debe rechazar interfaces que colapsen el monitoreo de redes sociales con la evaluación estructural de reputación.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-C02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

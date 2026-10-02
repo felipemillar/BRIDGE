@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C01",
+  "pilar": "P03",
+  "eje": "Taxonomía de señales externas",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre taxonomía de señales externas, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radicaba en que las síntesis internas iniciales equiparaban implícitamente la detección de patrones de coordinación temporal y presencia de bots con ataques maliciosos de desinformación. Prevalece de forma absoluta la rectificación formal de la P03_QUALITY_ADDENDUM (Sección 2.3): la coordinación temporal (Pacheco et al. 2020) es un patrón topológico neutral de sincronía que ocurre legítimamente en campañas ciudadanas, alertas de emergencia y relaciones públicas; y los bots (Sayyadiharikandeh et al. 2020) son agentes de software de múltiples naturalezas. En consecuencia, la taxonomía de señales debe reportar 'anomalías de coordinación temporal' y 'probabilidad de automatización', prohibiendo catalogar automáticamente un contenido como 'falso' o 'desinformación' sin verificación analítica humana bajo el marco DISARM.",
+  "findings": [
+    {
+      "claim_id": "P03-C01-C1",
+      "claim": "Prevalece la rectificación de la adenda de calidad P03 que desvincula taxativamente la coordinación de publicaciones y la automatización por bots de juicios automáticos de falsedad discursiva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría Editorial P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.3: Desacoplamiento Estricto: Coordinación != Falsedad y Bots != Desinformación",
+          "excerpt_short": "Coordinación es una estructura de red, no un juicio de veracidad... nunca etiquetar automáticamente un evento como 'campaña de desinformación' o 'contenido falso' sin verificación humana.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación vinculante de la regla de precedencia editorial del pilar P03.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Detección de sincronía temporal",
+      "Regla editorial de desacoplamiento"
+    ],
+    "actors": [
+      "Editorial Auditor",
+      "Taxonomy Classifier"
+    ],
+    "steps": [
+      "Identificación de co-acción",
+      "Verificación de regla de adenda",
+      "Asignación de etiqueta neutral"
+    ],
+    "states": [
+      "Discrepancy_Identified",
+      "Precedence_Applied",
+      "Neutral_Label_Enforced"
+    ],
+    "outputs": [
+      "Clasificación taxonómica calibrada libre de sesgos de censura"
+    ],
+    "exceptions": [
+      "Presión de directivos corporativos para etiquetar de 'desinformación' a críticos legítimos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DESACOPLAMIENTO_EPISTEMICO",
+      "type": "regla_editorial",
+      "name": "Regla de Desacoplamiento Coordinación-Falsedad",
+      "aliases": [
+        "Epistemic Decoupling Rule"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DESACOPLAMIENTO_EPISTEMICO",
+      "predicate": "corrige_sesgo_en",
+      "object_id": "Taxonomia_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C01-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Versión en síntesis inicial vs Versión corregida prevaleciente",
+      "Síntesis Inicial No Calibrada": "Equiparaba coordinación temporal y cuentas automatizadas con ataques de desinformación.",
+      "Versión Prevaleciente (Adenda P03)": "Coordinación es patrón topológico neutral; requiere verificación humana y mapeo DISARM."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Coordinación de red y veracidad discursiva",
+      "initial_claim": "Las redes de cuentas coordinadas temporalmente constituyen ataques de desinformación.",
+      "corrected_claim": "La coordinación es una propiedad estructural neutral observada también en activismo legítimo y relaciones públicas.",
+      "resolution": "Prevalece la P03_QUALITY_ADDENDUM por regla de precedencia editorial."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Incorporar en el motor de BRIDGE la prohibición algorítmica de emitir juicios de veracidad basados únicamente en sincronía temporal.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

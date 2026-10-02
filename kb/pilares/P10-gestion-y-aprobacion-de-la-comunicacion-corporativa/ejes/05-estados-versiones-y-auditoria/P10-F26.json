@@ -1,0 +1,164 @@
+{
+  "question_id": "P10-F26",
+  "pilar": "P10",
+  "eje": "Estados, versiones y auditoría",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Cómo se conservan versiones, motivos de cambio y firmas de aprobación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La conservación y auditabilidad de versiones se rige por un esquema de libro mayor inmutable (append-only ledger) y control semántico de cambios: 1) Numeración Semántica de Versiones: Se dividen en Versiones Menores (v1.x: ajustes estilísticos, ortografía, formato de canal; aprobables por Jefe de Prensa) y Versiones Mayores (v2.0: alteración de cifras, fechas, plazos, encuadre legal o adición de compromisos; invalidan firmas previas y exigen re-aprobación tripartita completa); 2) Justificación Obligatoria de Cambio: Todo cambio entre versiones exige un campo estructurado de motivo (change_reason: [FACTUAL_CORRECTION, LEGAL_AMENDMENT, CHANNEL_REFORMATTING, STAKEHOLDER_FEEDBACK]) y un diff textual formal (JSON Patch / Git diff); y 3) Registro de Firmas Criptográficas: Cada aprobación captura el user_id autenticado por SSO, rol formal, timestamp sincronizado por NTP UTC, hash SHA-256 del contenido exacto visado y certificado digital de no repudio, impidiendo cualquier edición silenciosa posterior sin generar una nueva versión.",
+  "findings": [
+    {
+      "claim_id": "P10-F26-C1",
+      "claim": "El control de cambios exige versionado semántico formal (v1.x vs v2.0), registro de diffs textuales con motivos tipificados y firmas criptográficas inmutables vinculadas al hash del contenido.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "version_control_and_audit_log",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Reglas de Versionado y Re-aprobación'",
+          "retrieved_at": null,
+          "excerpt_short": "Versión Menor (v1.x): Ajustes de forma o sintaxis sin alterar datos fácticos. Versión Mayor (v2.0): Nuevos datos, cambio de cifras o plazos. Invalida automáticamente aprobaciones previas. Bitácora inmutable: Registro append-only con SHA-256 de texto, autor y revisor.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Cryptographic Audit Integrity and Version Tracking'",
+          "retrieved_at": null,
+          "excerpt_short": "Every edit generates a discrete semantic version with calculated cryptographic hashes and explicit rationale tagging, eliminating retroactive tampering or untracked modifications.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Presspage: Content Approval Workflow and Newsroom FAQ",
+          "source_id": "8758af9a-a962-4c5f-b878-886efa72e458",
+          "locator": "Section 'Version History and Approval Traceability'",
+          "retrieved_at": null,
+          "excerpt_short": "The platform preserves the complete evolutionary chain of each press asset, providing instant side-by-side diff comparisons across approval cycles.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre estándares de trazabilidad de sistemas de registro y el dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Versión base v1.0",
+      "Texto modificado propuesto",
+      "Credenciales de revisor"
+    ],
+    "actors": [
+      "Editor",
+      "Sistema de Auditoría",
+      "Motor Diff BRIDGE"
+    ],
+    "steps": [
+      "Cálculo del diff sintáctico y semántico entre versiones",
+      "Clasificación automática del cambio: si afecta números/compromisos se marca como Versión Mayor (v2.0)",
+      "Exigencia de ingreso obligatorio de 'change_reason' en UI",
+      "Cálculo del nuevo hash SHA-256 sobre la versión resultante",
+      "Persistencia inmutable en la tabla de historial de auditoría",
+      "Si es v2.0: Revocación de firmas previas y retorno a UNDER_REVIEW"
+    ],
+    "states": [
+      "COMPARING_VERSIONS",
+      "DIFF_TAGGED",
+      "HASH_GENERATED",
+      "AUDIT_APPENDED"
+    ],
+    "outputs": [
+      "Registro de versión inmutable con metadata completa"
+    ],
+    "exceptions": [
+      "Ediciones directas sobre la base de datos sin generar versión disparan alertas de integridad de seguridad"
+    ]
+  },
+  "entities": [
+    "Versionado Semántico",
+    "Hash SHA-256",
+    "Audit Ledger",
+    "JSON Patch",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Nueva Versión",
+      "to": "Versión Previa",
+      "type": "LINKED_VIA_DIFF"
+    },
+    {
+      "from": "Versión Mayor",
+      "to": "Firmas Previas",
+      "type": "INVALIDATES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Sobreescritura destructiva de archivos vs Registro append-only de versiones",
+      "diferencia": "La sobreescritura pierde la prueba de lo que se dijo originalmente; el registro append-only preserva cada paso para defensas legales y regulatorias."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "audit_trail_completeness": "100% de versiones con hash SHA-256, autor, fecha y motivo de cambio",
+    "major_version_reapproval_rate": "100% de versiones mayores re-aprobadas formalmente"
+  },
+  "bridge_implications": "BRIDGE debe implementar tablas inmutables en base de datos (con triggers que prohíban UPDATE o DELETE) para el historial de versiones de comunicaciones.",
+  "open_gaps": [
+    "Mecanismo de estampillado de tiempo con Autoridad Certificadora Externa (RFC 3161) para mayor fuerza probatoria en litigios."
+  ],
+  "next_question_ids": [
+    "P10-F27",
+    "P10-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

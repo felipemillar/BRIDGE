@@ -1,0 +1,153 @@
+{
+  "question_id": "P04-C09",
+  "pilar": "P04",
+  "eje": "Ingesta y extracción",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre ingesta y extracción, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: La mayoría de tutoriales y frameworks de desarrollo rápido de RAG recomiendan segmentación por longitud fija (e.g. 500 tokens con overlap de 50) como receta universal. Por el contrario, la investigación especializada de Gao et al. (2023) y la síntesis P04_EVIDENCE_MAP demuestran que el chunking de longitud fija destruye de forma catastrófica las tablas financieras y matrices ESG de las memorias corporativas, fracturando números a la mitad y desvinculando notas explicativas de sus celdas de origen. Versión que prevalece: Prevalece el estándar de Chunking Jerárquico de Dos Niveles (Parent Document Retrieval) combinado con extracción estructurada sensible al layout (Table-Aware Extraction). La búsqueda indexa fragmentos atómicos de 128-256 tokens pero provee al generador el fragmento padre de 1.024-2.048 tokens con su tabla completa y notas al pie.",
+  "findings": [
+    {
+      "claim_id": "P04-C09-C1",
+      "claim": "El chunking por longitud fija queda descartado para memorias corporativas por evidencia de Gao et al. y P04_EVIDENCE_MAP, prevaleciendo el chunking jerárquico Parent-Child y la extracción layout-aware.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global",
+        "actor": "Arquitectura de Pre-recuperación RAG"
+      },
+      "evidence": [
+        {
+          "source_id": "005e6819-75c5-40e4-b0a2-39b00ec373eb",
+          "source_title": "P04_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 3: Matriz de Tensiones Metodológicas (Fragmentación de Texto)",
+          "excerpt_short": "Segmentación por longitud fija destruye el significado de tablas financieras y notas. Adopción de Chunking Estructurado Jerárquico (Parent Document Retrieval + extracción tabular).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "93cd6e04-48bd-4b62-b39f-6784d75351da",
+          "source_title": "RAG for Large Language Models: A Survey (Gao et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2312.10997",
+          "locator": "Sección 2.1.2: Chunking Optimization",
+          "excerpt_short": "Fixed-size chunking fails on tabular data and complex layouts, necessitating structure-aware hierarchical decomposition.",
+          "source_date": "2023-12-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución de tensión metodológica formalmente documentada en P04_EVIDENCE_MAP.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria corporativa compleja"
+    ],
+    "actors": [
+      "Layout-Aware Chunker",
+      "Parent Document Linker"
+    ],
+    "steps": [
+      "Descarte de chunking ciego",
+      "Aplicación de segmentación jerárquica",
+      "Preservación de tablas íntegras en chunks padre"
+    ],
+    "states": [
+      "Raw_Document",
+      "Hierarchical_Parsed",
+      "Safe_Context_Indexed"
+    ],
+    "outputs": [
+      "Corpus fragmentado jerárquicamente sin pérdida de estructura tabular"
+    ],
+    "exceptions": [
+      "Documentos planos sin tablas donde el chunking jerárquico agrega sobrecosto de tokens"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_HIERARCHICAL_RESOLUTION",
+      "type": "decision_diseno",
+      "name": "Resolución de Chunking Jerárquico Estructurado",
+      "aliases": [
+        "Hierarchical Chunking Design Decision"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_HIERARCHICAL_RESOLUTION",
+      "predicate": "resuelve_tension_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Integridad de datos",
+      "Chunking ciego de 500 tokens": "Rompe la relación entre el número '1.040' y su unidad 'l/s' o su año '2025'.",
+      "Chunking jerárquico parent-child": "Conserva la fila completa con todos sus encabezados y notas metodológicas."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Método de fragmentación de texto para RAG corporativo",
+      "claim_a": "La fragmentación por longitud fija con overlap de 50 tokens es adecuada y suficiente.",
+      "source_a": "Tutoriales genéricos de LangChain / LlamaIndex básicos",
+      "claim_b": "El chunking fijo destruye tablas y notas; se requiere chunking jerárquico estructurado (Parent Document).",
+      "source_b": "Gao et al. (2023) / P04_EVIDENCE_MAP",
+      "resolution_or_status": "Prevalece Claim B: adopción obligatoria de Parent Document Retrieval."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe configurar sus indexadores exclusivamente bajo este esquema jerárquico para proteger la exactitud de los datos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

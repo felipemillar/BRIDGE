@@ -1,0 +1,155 @@
+{
+  "question_id": "P10-F30",
+  "pilar": "P10",
+  "eje": "Estados, versiones y auditoría",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra estados, versiones y auditoría sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto: Detección y Rectificación de Error en Cifra de Emisiones en Comunicado de Sostenibilidad. Entradas: 1) Comunicado v1.0 publicado hace 48 horas anunciando 'Reducción del 35% en emisiones de alcance 1 en Faena Centinela'; 2) Hallazgo de auditoría técnica interna: La cifra auditada certificada por el SME en el Shared Fact Record correspondía a '35% de reducción en intensidad de emisiones por tonelada de mineral tratado', mientras que las emisiones absolutas se redujeron un 12%; 3) Ticket de discrepancia fáctica generado por Auditor de Sostenibilidad solicitando corrección inmediata; 4) Flujo de enmienda activado. Proceso: El mensaje v1.0 pasa de PUBLISHED_LIVE a UNDER_AMENDMENT; el redactor prepara v2.0 con el texto corregido; Legal Counsel revisa y califica el cambio como Versión Mayor (Major); el Director de Asuntos Corporativos emite nueva firma criptográfica de re-aprobación; se genera Fe de Erratas oficial enlazada. Resultado Esperado: El comunicado v1.0 se mantiene publicado pero se le inserta banner destacado con marca de agua 'MODIFICADO: Ver Fe de Erratas v2.0'; la Fe de Erratas v2.0 se publica con enlace al documento original; el libro de auditoría registra el diff exacto, autor, revisor y las firmas de ambas versiones sin borrado alguno.",
+  "findings": [
+    {
+      "claim_id": "P10-F30-C1",
+      "claim": "El caso operacionaliza el tránsito de estados desde PUBLISHED_LIVE hasta RETRACTED_CORRECTED / RE-APPROVED_V2, demostrando cómo se corrigen cifras sin incurrir en borrado destructivo ni pérdida de trazabilidad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_version_correction",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 6 'Escenarios Sintéticos de Ejecución Integral (Escenario A: Reporte NCG 461 / Emisión)'",
+          "retrieved_at": null,
+          "excerpt_short": "Ante discrepancia en cifra de emisiones de GEI: se detecta error en borrador -> conciliación con SFR -> elevación de versión mayor v2.0 -> invalidación de visados previos -> re-aprobación ejecutiva -> publicación de fe de erratas trazable.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "COPE: Committee on Publication Ethics - Retraction & Correction Guidelines",
+          "source_id": "d0f9e6c9-5476-410e-886f-4bbb38556d95",
+          "locator": "Section 'Handling Inadvertent Errors in Published Content'",
+          "retrieved_at": null,
+          "excerpt_short": "Honest errors should be corrected promptly by publishing an erratum or corrigendum, linked directly to the original work while maintaining the historical version accessible.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los protocolos éticos de corrección y el escenario modelado en el dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Comunicado v1.0 con cifra errónea (35% absoluto)",
+      "Informe pericial con cifra real (35% intensidad, 12% absoluto)",
+      "Petición formal de enmienda"
+    ],
+    "actors": [
+      "Auditor Técnico",
+      "Redactor de Comunicaciones",
+      "Legal Counsel",
+      "Director Asuntos Corporativos"
+    ],
+    "steps": [
+      "Transición de v1.0 a UNDER_AMENDMENT",
+      "Generación de borrador v2.0 con fe de erratas explícita",
+      "Revisión legal tripartita (clasificación como Versión Mayor)",
+      "Firma ejecutiva de re-aprobación del Director de Asuntos Corporativos",
+      "Inyección de banner de advertencia en v1.0",
+      "Publicación de v2.0 con enlaces canónicos bidireccionales",
+      "Cierre de ticket en libro mayor de auditoría"
+    ],
+    "states": [
+      "PUBLISHED_LIVE",
+      "UNDER_AMENDMENT",
+      "RE_DRAFTING_V2",
+      "RE_APPROVED_V2",
+      "RETRACTED_CORRECTED"
+    ],
+    "outputs": [
+      "Versión v1.0 marcada con fe de erratas",
+      "Fe de Erratas oficial v2.0 publicada",
+      "Historial de auditoría inmutable con diff completo"
+    ],
+    "exceptions": [
+      "Si la empresa enfrenta escrutinio mediático activo, la fe de erratas se despacha de inmediato a la mesa de prensa sectorial"
+    ]
+  },
+  "entities": [
+    "Emisiones GEI",
+    "Fe de Erratas",
+    "Versión Mayor v2.0",
+    "COPE Guidelines",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Comunicado v1.0",
+      "to": "Fe de Erratas v2.0",
+      "type": "LINKED_CANONICALLY"
+    },
+    {
+      "from": "Auditoría Interna",
+      "to": "Transición UNDER_AMENDMENT",
+      "type": "TRIGGERS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Corrección encubierta sin aviso vs Fe de erratas institucional estructurada",
+      "diferencia": "La corrección encubierta expone a la compañía a acusaciones graves de greenwashing y manipulación; la fe de erratas formal demuestra transparencia y rigurosidad técnica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "correction_execution_time_hours": "Tiempo total transcurrido desde detección del error hasta publicación de fe de erratas",
+    "historical_link_integrity": "100% de enlaces bidireccionales funcionando sin enlaces rotos"
+  },
+  "bridge_implications": "Valida la capacidad operativa de BRIDGE para gestionar incidentes de corrección reputacional de alto impacto con total auditabilidad técnica.",
+  "open_gaps": [
+    "Automatización del envío de la fe de erratas a agencias de calificación ESG internacionales."
+  ],
+  "next_question_ids": [
+    "P10-F31",
+    "P10-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

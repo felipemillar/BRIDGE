@@ -1,0 +1,141 @@
+{
+  "question_id": "T01-C14",
+  "pilar": "T01",
+  "eje": "Entrevistas y disposición a pagar",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre entrevistas y disposición a pagar, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica la elasticidad de demanda y disposición a pagar en empresas medianas no cotizadas en bolsa (ventas anuales entre $5M y $20M USD): 1) Vacío Identificado: Todo el corpus de T01 asume clientes del perfil gran corporación minera o banco regulado con presupuestos de asuntos corporativos > $100.000 USD/año; se desconoce si una empresa mediana pagaría una suscripción de entrada de $1.500 USD/mes o si percibe el producto como un lujo innecesario; 2) Fuente Fallida / Parcial: Ninguna fuente en T01 incluye encuestas de pricing en el segmento mid-market latinoamericano; y 3) Validación Mínima Necesaria: Conducir un estudio Van Westendorp con 20 gerentes generales de empresas medianas chilenas (agrícolas, constructoras, retail local) para evaluar la viabilidad de un Tier 'BRIDGE Growth'.",
+  "findings": [
+    {
+      "claim_id": "T01-C14-C1",
+      "claim": "El modelo de precios de The Bridge Intelligence está calibrado exclusivamente para el segmento enterprise de gran escala, existiendo un vacío empírico sobre la elasticidad de precio y la disposición a pagar en el segmento de medianas empresas en Chile.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "The Bridge Intelligence Commercial Research"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 7: Alcance de Segmentación de Clientes",
+          "excerpt_short": "Los pilotos están diseñados para corporaciones complejas con múltiples subsidiarias; la viabilidad económica en el segmento mediano requiere validación de mercado separada.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Límite de segmentación de mercado formalmente documentado.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario Van Westendorp adaptado a mid-market",
+      "Muestra de 20 gerentes generales de medianas empresas"
+    ],
+    "actors": [
+      "Market Research Analyst",
+      "Líder de Estrategia de Crecimiento"
+    ],
+    "steps": [
+      "Seleccionar 20 empresas medianas chilenas con exposición regulatoria moderada",
+      "Demostrar el caso de uso del módulo Saber y Hablar en una sesión de 30 minutos",
+      "Aplicar las 4 preguntas de Van Westendorp",
+      "Determinar si existe un punto óptimo de precio viable (> $1.000 USD/mes)"
+    ],
+    "states": [
+      "SELECCION_MUESTRA",
+      "DEMO_PRODUCTO",
+      "ENTREVISTA_PSM",
+      "ANALISIS_VIABILIDAD"
+    ],
+    "outputs": [
+      "Reporte de Viabilidad de Tier Mid-Market BRIDGE"
+    ],
+    "exceptions": [
+      "Si el OPP resulta inferior a $500 USD/mes, se descarta el segmento mediano para preservar el posicionamiento enterprise"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "TIER_MID_MARKET",
+      "type": "producto",
+      "name": "Tier BRIDGE Growth (Mid-Market)",
+      "aliases": [
+        "SaaS Tier PYME/Mediana"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "TIER_MID_MARKET",
+      "predicate": "evalua_expansion_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C14-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Punto óptimo de precio en segmento mediano (OPP)",
+      "denominator": "Encuestas Van Westendorp mid-market",
+      "target": ">= $1.200 USD/mes"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Define si la empresa debe mantener una estrategia de ventas puramente Enterprise o abrir un canal comercial de volumen.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Disposición a pagar y rango de precios aceptables en empresas medianas no cotizadas en bolsa en Chile",
+      "minimum_validation": "Estudio Van Westendorp con 20 gerentes generales del segmento mid-market",
+      "priority": "media"
+    }
+  ],
+  "next_question_ids": [
+    "T01-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

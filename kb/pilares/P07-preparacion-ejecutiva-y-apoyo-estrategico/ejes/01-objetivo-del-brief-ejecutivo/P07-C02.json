@@ -1,0 +1,127 @@
+{
+  "question_id": "P07-C02",
+  "pilar": "P07",
+  "eje": "Objetivo del brief ejecutivo",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué sigue sin prueba sobre objetivo del brief ejecutivo, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba empírica suficiente la tasa real de adherencia del directivo al brief durante la fricción de una interacción en vivo (si el CEO realmente respeta la línea roja o improvisa ante la presión psicológica). En este eje falló la fuente 'IPR: Communicator's Guide to Research, Analysis, and Evaluation' (UUID `c1105d8b-4367-4fce-9787-a339e4e48d3e`, inaccesible), la cual fue sustituida formalmente por 'AMEC: Integrated Evaluation Framework for Public Affairs' (`634ebc1c-dd54-453f-8187-2975050e8760`). La validación mínima requerida es una prueba empírica de 30 días con 10 directores corporativos contrastando las transcripciones de sus reuniones reales con las directrices del brief para medir la tasa de desvío discursivo.",
+  "findings": [
+    {
+      "claim_id": "P07-C02-C1",
+      "claim": "La adherencia conductual del directivo a las directrices del brief en situaciones de estrés carece de medición empírica automatizada y requiere validación mediante cotejo de transcripciones.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "empirical_validation_gap",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 1 (Brecha 1: El Vacío de Atribución Causal) y Sección 4",
+          "excerpt_short": "Brecha Crítica: No existen estudios sistemáticos que correlacionen la lectura de un brief de IA con el éxito real de una reunión de directorio o entrevista. Las suites asumen que entregar el dato garantiza su uso correcto. Validación requerida: Protocolo en Fase 2 de cotejo de transcripciones post-reunión.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "IPR: Communicator's Guide to Research, Analysis, and Evaluation",
+          "source_id": "c1105d8b-4367-4fce-9787-a339e4e48d3e",
+          "locator": "Fuente c1105d8b-4367-4fce-9787-a339e4e48d3e",
+          "text_status": "fallida",
+          "excerpt_short": "IPR Communicator's Guide catalogada como fallida (status_code: 3, word_count: null), sustituida por AMEC Integrated Evaluation Framework.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "relationship": "apoya",
+          "text_status_original": "fallida_o_bloqueada",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación documental exacta de la fuente fallida en el manifiesto P07 y de la brecha en P07_GAPS.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "fuente_no_sustantiva",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "protocolo_validacion_adherencia": {
+      "hipotesis_a_probar": "Los directivos que leen el brief estructurado de BRIDGE mantienen un 85% más de fidelidad a las líneas rojas que quienes asisten con preparación tradicional.",
+      "fuente_fallida": "IPR Communicator's Guide (c1105d8b-4367-4fce-9787-a339e4e48d3e)",
+      "fuente_sustituta": "AMEC Integrated Evaluation Framework (634ebc1c-dd54-453f-8187-2975050e8760)",
+      "prueba_minima": "Análisis comparativo de 20 entrevistas reales grabadas frente al brief entregado."
+    }
+  },
+  "entities": [
+    "IPR",
+    "AMEC",
+    "P07_GAPS_AND_VALIDATION",
+    "Adherencia Conductual"
+  ],
+  "relations": [
+    {
+      "from": "AMEC",
+      "to": "IPR",
+      "type": "substitutes_for"
+    },
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "Prueba Mínima",
+      "type": "formulates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asunción Teórica vs Validación Empírica de Adherencia",
+      "diferencia": "La asunción teórica cree que el directivo repite el texto; la validación empírica mide cuánto se distorsiona el mensaje bajo tensión."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "failed_sources_count": "1 fuente fallida documentada en este eje",
+    "validation_sample_size": "20 entrevistas o reuniones bilaterales"
+  },
+  "bridge_implications": "Incorporar en el roadmap de producto de BRIDGE un módulo post-reunión de 'Debrief & Alignment' para registrar si se cumplió la línea roja.",
+  "open_gaps": [
+    "Aspectos éticos y de privacidad en la grabación o transcripción de reuniones confidenciales para fines de feedback."
+  ],
+  "next_question_ids": [
+    "P07-C03",
+    "P07-C04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T06:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F19",
+  "pilar": "P08",
+  "eje": "Modelos de entrega",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué actividades corresponden a consultoría, SaaS y servicio apoyado por tecnología?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus distribuye con precisión las actividades según los tres modelos de entrega: 1) SaaS Puro (Software Desatendido): Ingesta continua multi-fuente (BCN, SMA, CMF, medios), clasificación temática algorítmica, deduplicación de noticias, indexación vectorial y dashboards de autoservicio; 2) Consultoría Tradicional Pura: Acompañamiento presencial al CEO, diseño de alianzas políticas, negociación reservada con stakeholders, entrenamiento de vocería física y arbitraje de conflictos societarios; y 3) Tech-Enabled Services (Modelo BRIDGE): Orquestación algorítmica que redacta el primer borrador de brief ejecutivo en 60 segundos cruzado con compromisos internos, supervisado, editado y verificado por un analista humano senior (HITL) que entrega un producto final certificado en menos de 2 horas con SLA garantizado.",
+  "findings": [
+    {
+      "claim_id": "P08-F19-C1",
+      "claim": "El modelo Tech-Enabled Service integra la velocidad y cobertura del SaaS con el juicio crítico y la responsabilidad profesional de la consultoría estratégica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "delivery_models_breakdown",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 4.1 'Desglose de Actividades por Modelo de Entrega'",
+          "excerpt_short": "La frontera entre modelos es nítida: El SaaS puro automatiza la ingesta masiva de datos y el cálculo de métricas pero fracasa al formular recomendaciones estratégicas por falta de contexto institucional. La consultoría artesanal provee criterio experto pero es lenta, costosa y adolece de sesgos de memoria. El modelo Tech-Enabled Service de BRIDGE fusiona ambos mundos: la plataforma procesa millones de señales del entorno y genera el borrador estructurado en 60 segundos; el analista humano senior verifica las fuentes primarias, ajusta el tono institucional y firma la entrega ejecutiva en menos de dos horas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Arthur W. Page Society: Beyond Communication & AI in Enterprise Comms",
+          "source_id": "113b111f-209b-4a18-a443-c626ae392cce",
+          "locator": "Capítulo 'Technology-Enabled Advisory Models', p. 9-13",
+          "excerpt_short": "Leading corporate communication departments are replacing traditional labor-intensive clipping retainers with technology-enabled services. In this architecture, AI handles continuous environmental scanning and narrative tracking, while specialized human advisors validate strategic implications before presenting to the board.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia total entre la doctrina de Page Society y el diseño del servicio Tech-Enabled de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales del entorno",
+      "Repositorio de compromisos corporativos",
+      "Solicitud de brief ejecutivo"
+    ],
+    "actors": [
+      "Plataforma BRIDGE (Capa SaaS)",
+      "Analista Senior Asignado (Capa HITL)",
+      "CCO / Directorio (Usuario Final)"
+    ],
+    "steps": [
+      "Ingesta y generación automática del borrador (60s)",
+      "Alerta a analista en cola de validación",
+      "Verificación de citas y ajuste de líneas rojas (30-60m)",
+      "Entrega de brief firmado"
+    ],
+    "states": [
+      "Ingesta SaaS",
+      "Borrador Generado",
+      "Revisión Humana Activa",
+      "Brief Entregado"
+    ],
+    "outputs": [
+      "Brief ejecutivo validado en < 2 horas"
+    ],
+    "exceptions": [
+      "Detección de una discrepancia legal crítica en el borrador que active escalamiento al CCO"
+    ]
+  },
+  "entities": [
+    "SaaS Puro",
+    "Consultoría Tradicional",
+    "Tech-Enabled Services",
+    "Page Society",
+    "HITL"
+  ],
+  "relations": [
+    {
+      "from": "Plataforma SaaS",
+      "to": "Ingesta y Síntesis Inicial",
+      "type": "automates"
+    },
+    {
+      "from": "Analista Senior",
+      "to": "Validación Factual y Tono",
+      "type": "certifies"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "SaaS Puro vs Tech-Enabled Service",
+      "diferencia": "El SaaS puro deja la responsabilidad de interpretar y verificar en el cliente ya sobrecargado; el Tech-Enabled entrega la respuesta masticada y verificada."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "draft_generation_time_saas": "< 60 segundos",
+    "hitl_validation_window": "30 a 90 minutos",
+    "total_delivery_sla": "< 2 horas"
+  },
+  "bridge_implications": "Diseñar la interfaz de BRIDGE con dos vistas: una para el cliente (vista limpia ejecutiva) y otra para el analista HITL (panel de control y verificación de citas).",
+  "open_gaps": [
+    "Definir el sistema de ticketing interno para gestionar la cola de validación entre analistas."
+  ],
+  "next_question_ids": [
+    "P08-F20",
+    "P08-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

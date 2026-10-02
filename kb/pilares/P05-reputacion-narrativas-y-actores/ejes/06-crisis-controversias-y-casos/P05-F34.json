@@ -1,0 +1,139 @@
+{
+  "question_id": "P05-F34",
+  "pilar": "P05",
+  "eje": "Crisis, controversias y casos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar crisis, controversias y casos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar crisis, controversias y casos de forma estructurada exige las siguientes especificaciones técnicas: 1) Variables formales: `case_id`, `incident_type`, `scct_cluster` (Victim_Cluster, Accidental_Cluster, Preventable_Intentional_Cluster), `attribution_level` (Minima, Moderada, Severa/Dolosa), `crisis_posture_adopted` (Denial, Diminishment, Justification, Rebuilding_Apology, Compensation), `monetary_sanction_uf`, `compensation_amount_usd`, `board_turnover_rate` (0% a 100%), `compliance_program_certified` (bool), `time_to_reputation_recovery_months`; 2) Categorías: Jurisdicción legal (Antimonopolio_FNE, Ambiental_SMA_Tribunales, Valores_CMF, Consumo_SERNAC); 3) Relaciones formales: `atribuye_responsabilidad_segun_scct` (Caso -> SCCT_Cluster), `aplica_estrategia_de` (Empresa -> EstrategiaRespuesta), `resulta_en_sentencia` (Caso -> FalloJudicial), `reconstruye_confianza_con` (Empresa -> MedidaGobernanza); 4) Condiciones de integridad lógica: Si el cluster es 'Preventable_Intentional' y la postura elegida es 'Denial', el sistema debe emitir automáticamente una alerta roja de 'Riesgo Crítico de Agravamiento Reputacional'; todo registro de sanción debe contener número de rol judicial o resolución verificable.",
+  "findings": [
+    {
+      "claim_id": "P05-F34-C1",
+      "claim": "El modelado estructurado de casos de crisis requiere tipificar la atribución causal de Coombs, la postura comunicacional adoptada y las resoluciones judiciales vinculantes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Software BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7.1: Módulo 4: Calibrador de Atribución de Crisis (SCCT Classifier)",
+          "excerpt_short": "Evalúa incidentes frente a clusters Víctima, Accidental o Prevenible, recomendando posturas de respuesta según evidencia de Coombs.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "dc1ff35e-06c0-42f7-9284-2663804eb4cc",
+          "source_title": "Coombs: Situational Crisis Communication Theory (SCCT) — Reputation Threat & Response",
+          "original_url": "https://doi.org/10.1111/j.1468-2885.2007.00296.x",
+          "locator": "Guidelines for SCCT Application",
+          "excerpt_short": "Prescribes decision tree matching crisis responsibility clusters with primary and secondary response postures.",
+          "source_date": "2007-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en la taxonomía canónica de Coombs y los requerimientos del módulo de crisis de BRIDGE.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fichas estructuradas de casos históricos de estudio",
+      "Parámetros del modelo SCCT"
+    ],
+    "actors": [
+      "Diseñador de Algoritmos",
+      "Analista de Crisis"
+    ],
+    "steps": [
+      "Definición de tablas relacionales de crisis",
+      "Creación de reglas de inferencia prescriptivas",
+      "Almacenamiento de expedientes históricos"
+    ],
+    "states": [
+      "Schema_Implemented",
+      "Rules_Validated",
+      "Historical_Cases_Loaded"
+    ],
+    "outputs": [
+      "Base de datos de casos de estudio de crisis estructurados"
+    ],
+    "exceptions": [
+      "Casos híbridos donde coexisten fallas operacionales accidentales con negligencias de gobernanza"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CRISIS_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Crisis y SCCT",
+      "aliases": [
+        "SCCT Case Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CRISIS_SCHEMA",
+      "predicate": "modela_dinamicas_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F34-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Motor SCCT",
+      "implication": "BRIDGE debe codificar en un motor de reglas las prescripciones de Coombs para asistir al Comité de Crisis en tiempo real ante contingencias.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

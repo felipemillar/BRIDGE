@@ -1,0 +1,163 @@
+{
+  "question_id": "P11-C07",
+  "pilar": "P11",
+  "eje": "Ciclo de vida y retención",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre ciclo de vida y retención, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal sobre ciclo de vida y retención radica en la rigidez de los plazos y en la viabilidad técnica del borrado en IA: las síntesis preliminares del dossier (`P11_RESEARCH_DOSSIER`) proponían plazos estáticos arbitrarios de retención (ej. 'retener 5 años todo documento de cliente') y prometían 'eliminación total de memoria en modelos de IA tras el borrado del usuario'. Las fuentes legales primarias (Ley 21.719 en vacatio legis, Ley 19.628, Código de Comercio de Chile), los estándares federales de sanitización (NIST SP 800-88 Rev. 2) y la síntesis canónica rectora `P11_VERIFICATION_CORRECTIONS` (49d7882a) demuestran que: 1) Los plazos de retención son obligatoriamente diferenciados según la naturaleza jurídica del activo: los datos personales (D4) exigen purga inmediata una vez agotada la finalidad del tratamiento (principio de minimización de la Ley 21.719 y GDPR), mientras que los libros de contabilidad y contratos comerciales exigen retención forzosa de 5 a 6 años bajo las leyes mercantiles y tributarias chilenas; 2) Una vez que los pesos de una red neuronal son actualizados mediante entrenamiento continuo, es matemáticamente imposible 'des-entrenar' selectivamente un dato (Machine Unlearning es imperfecto y experimental); por ende, la única garantía de purga radica en no permitir jamás el entrenamiento en modelos fundacionales y aplicar Crypto-shredding (destrucción de DEK) y borrado síncrono en bases vectoriales locales; y 3) Prevalece de forma absoluta `P11_VERIFICATION_CORRECTIONS`, rigiendo la política de retención modular diferenciada y sanitización criptográfica demostrable bajo NIST SP 800-88 Rev. 2.",
+  "findings": [
+    {
+      "claim_id": "P11-C07-C1",
+      "claim": "Existe discrepancia entre la retención arbitraria y promesas de borrado en modelos del dossier, versus la prevalencia canónica de P11_VERIFICATION_CORRECTIONS y NIST SP 800-88 r2 que imponen retención diferenciada por tipo legal (minimización D4 vs 6 años tributarios) y purga por Crypto-shredding.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "lifecycle_retention_discrepancy_and_precedence",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Ciclo de Vida y Sanitización de Medios'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia rectora: Se prohíbe prometer des-entrenamiento de modelos comerciales. La purga se ejecuta localmente mediante Crypto-shredding de DEKs en KMS y eliminación síncrona en Qdrant según NIST SP 800-88 r2.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization",
+          "source_id": "eeffc975-0a8f-470f-80c9-13435bf0efd8",
+          "locator": "Section 2.4 'Cryptographic Erase (Crypto-shredding)'",
+          "retrieved_at": null,
+          "excerpt_short": "Cryptographic Erase leverages the sanitization of target data by destroying the cryptographic keys required to decrypt the ciphertext, rendering the data inaccessible and unrecoverable.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Artículo 3 (Principio de Limitación del Plazo de Conservación)",
+          "retrieved_at": null,
+          "excerpt_short": "Los datos deberán ser conservados por no más tiempo del necesario para los fines del tratamiento para los cuales han sido recogidos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia indiscutible entre estándares federales de sanitización de medios de almacenamiento y principios rectores de protección de datos.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Plazos estáticos del dossier inicial",
+      "Disposiciones legales de retención",
+      "Directiva de P11_VERIFICATION_CORRECTIONS"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "Oficial de Datos",
+      "Motor de Ciclo de Vida"
+    ],
+    "steps": [
+      "Identificación y anulación de plazos uniformes de retención en la configuración de plataforma",
+      "Implementación de políticas diferenciadas de retención: TTL por categoría D1 a D5",
+      "Integración del protocolo de Crypto-shredding para borrados inmediatos solicitados por clientes",
+      "Auditoría técnica de destrucción de claves DEK en KMS",
+      "Emisión de certificados de sanitización conforme a NIST SP 800-88 r2"
+    ],
+    "states": [
+      "UNIFORM_RETENTION_OVERRIDDEN",
+      "MODULAR_POLICY_ENFORCED",
+      "CRYPTO_SHREDDING_ACTIVE"
+    ],
+    "outputs": [
+      "Gobernanza de retención legalmente precisa que previene la conservación excesiva de PII"
+    ],
+    "exceptions": [
+      "Si un tribunal chileno notifica una orden de congelamiento probatorio (Legal Hold), se suspende la purga para ese tenant específico"
+    ]
+  },
+  "entities": [
+    "NIST SP 800-88 Rev. 2",
+    "Crypto-shredding",
+    "Ley 21.719 Principio de Conservación",
+    "P11_VERIFICATION_CORRECTIONS",
+    "Legal Hold"
+  ],
+  "relations": [
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "Crypto-shredding",
+      "type": "ESTABLISHES_AS_CANONICAL_PURGE_METHOD"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Prometer 'des-entrenamiento' de modelos de IA vs Aplicar Crypto-shredding comprobado en repositorios locales",
+      "diferencia": "Prometer des-entrenamiento es un engaño técnico; aplicar Crypto-shredding en KMS y purga en vector DB destruye matemáticamente el acceso al dato de forma verificable."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Eliminación en Modelos de IA",
+      "dossier_claim": "Purga total de memoria en modelos entrenados",
+      "canonical_resolution": "Inviable en redes neuronales entrenadas; la purga se garantiza mediante Zero-Training de origen y Crypto-shredding en almacenamiento local."
+    }
+  ],
+  "metrics_and_denominators": {
+    "crypto_shredding_destruction_success": "100% de llaves DEK eliminadas irreversiblemente",
+    "statutory_retention_differentiation": "1.0"
+  },
+  "bridge_implications": "Blinda a BRIDGE frente a multas por retención ilícita de datos personales y demuestra a los clientes un mecanismo irrefutable de derecho al olvido.",
+  "open_gaps": [
+    "Validación de certificados criptográficos automáticos exportables en formato PDF con firma digital para los clientes."
+  ],
+  "next_question_ids": [
+    "P11-C08",
+    "P11-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

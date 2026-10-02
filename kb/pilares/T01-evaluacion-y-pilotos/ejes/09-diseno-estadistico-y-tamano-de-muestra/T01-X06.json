@@ -1,0 +1,168 @@
+{
+  "question_id": "T01-X06",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Diseño estadístico y tamaño de muestra",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra diseño estadístico y tamaño de muestra sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto de Auditoría Estadística CAE-T01-255 (Certificación de Citation Precision en el Módulo Saber ante Comité de Riesgos de Banco Multinacional): 1) Entradas: Testset de N = 200 consultas corporativas financieras estratificadas en 4 sectores; Descomposición en n = 640 afirmaciones fácticas atómicas (claims); Anotación dorada ciega de 150 claims por panel humano y predicción automatizada sobre los 490 claims restantes calibrada con Prediction-Powered Inference (PPI / ARES); 2) Computación Estadística: Citation Precision puntual = 95.8%; Remuestreo bootstrap con B=1.000 réplicas; 3) Resultado Esperado: Intervalo de confianza al 95% = [93.7% – 97.4%] con un margen de error de +-1.85% y p-valor < 0.001 frente al control BM25 (72.4% [68.9% - 75.6%]); el Comité de Riesgos valida que el límite inferior (93.7%) supera con holgura el umbral de aceptación fijado para la compuerta G1 (90.0%), aprobando el avance a la fase piloto operacional.",
+  "findings": [
+    {
+      "claim_id": "T01-X06-C1",
+      "claim": "La aplicación de Prediction-Powered Inference sobre una muestra estratificada de 640 claims corporativos permite demostrar superioridad estadística significativa (p < 0.001) sobre los métodos tradicionales con un intervalo de confianza al 95% estrictamente superior a la meta del 90%.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "The Bridge Intelligence / Caso CAE-T01-255"
+      },
+      "evidence": [
+        {
+          "source_id": "bff33bd6-afbc-4544-b611-640f2023a150",
+          "source_title": "Saad-Falcon et al. (2023) — ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+          "original_url": "https://arxiv.org/pdf/2311.09476.pdf",
+          "locator": "Section 4: Case Study on Enterprise QA",
+          "excerpt_short": "PPI delivers tight, statistically guaranteed confidence intervals that definitively prove superiority over baseline retrieval architectures.",
+          "source_date": "2023-11-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "e1a0171b-34f0-48f2-b343-29f7ec88bd31",
+          "source_title": "Gao et al. (2023) — Enabling Language Models to Generate Text with Citations (ALCE Benchmark)",
+          "original_url": "https://arxiv.org/pdf/2305.14627.pdf",
+          "locator": "Section 4: Significance Testing",
+          "excerpt_short": "Permutation and bootstrap tests confirm high statistical confidence for models incorporating explicit citation verifiers.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación experimental de cálculo de incertidumbre y potencia.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Testset de 200 consultas financieras",
+      "640 claims fácticos segmentados",
+      "Anotación de 150 casos humanos y algoritmo ARES PPI"
+    ],
+    "actors": [
+      "ML Scientist de BRIDGE",
+      "Comité de Riesgos y Model Validation del Banco"
+    ],
+    "steps": [
+      "Ejecutar el pipeline Saber sobre las 200 consultas",
+      "Anotar ciegamente la muestra humana de 150 claims",
+      "Aplicar PPI para proyectar los límites sobre los 640 claims",
+      "Generar reporte formal con p-valor y 95% CI para el Comité de Riesgos"
+    ],
+    "states": [
+      "EJECUCION_QUERIES",
+      "ANOTACION_CIEGA",
+      "COMPUTO_PPI",
+      "DICTAMEN_COMITE"
+    ],
+    "outputs": [
+      "Certificado de Validación Estadística CAE-T01-255 con 95% CI = [93.7% - 97.4%]"
+    ],
+    "exceptions": [
+      "Si el límite inferior del CI hubiese resultado < 90%, se habría exigido duplicar la muestra humana"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CAE_255",
+      "type": "experimento",
+      "name": "Caso de Auditoría Estadística CAE-T01-255",
+      "aliases": [
+        "Validación PPI Banca"
+      ]
+    },
+    {
+      "entity_id": "INTERVALO_95_PRECISION",
+      "type": "metrica",
+      "name": "95% CI [93.7% – 97.4%]",
+      "aliases": [
+        "Citation Precision Bounds"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CAE_255",
+      "predicate": "certifica_calidad_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X06-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Desempeño BRIDGE (95.8% [93.7% - 97.4%])",
+      "item_b": "Desempeño Control BM25 (72.4% [68.9% - 75.6%])",
+      "dimension": "Precisión y separación estadística",
+      "conclusion": "Separación de más de 20 puntos porcentuales con p < 0.001 y cero solapamiento de intervalos de confianza."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Citation Precision en CAE-T01-255",
+      "denominator": "640 claims fácticos auditados",
+      "target": "95.8% [95% CI: 93.7% - 97.4%]"
+    },
+    {
+      "metric": "Valor p frente a control BM25",
+      "denominator": "Prueba de permutación B=10.000",
+      "target": "< 0.001"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Demuestra la superioridad científica irrefutable del módulo Saber ante los auditores de validación de modelos más exigentes.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

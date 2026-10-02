@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F38",
+  "pilar": "P08",
+  "eje": "Diferenciación como hipótesis",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué parte del valor depende de integrar datos internos, externos y memoria relacional?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus documenta que más del 70% del valor percibido y de la disposición a pagar (WTP) de los clientes corporativos depende exclusivamente de la integración entre datos internos y memoria relacional, y no del monitoreo externo por sí solo. El monitoreo externo puro es percibido como un commodity ('algo que ya hace la agencia o Google Alerts por poco dinero'). El verdadero valor surge cuando el sistema: 1) Cruza una alerta regulatoria externa de la SMA con la cláusula específica de la RCA ambiental interna de la empresa; 2) Cruza una moción parlamentaria con el historial de audiencias de InfoLobby sostenidas con ese diputado específico; y 3) Alerta al CCO sobre inconsistencias flagrantes entre lo que el CEO va a declarar a la prensa y lo reportado en la Memoria Integrada CMF NCG 461.",
+  "findings": [
+    {
+      "claim_id": "P08-F38-C1",
+      "claim": "El monitoreo externo aislado es un commodity de bajo valor; la ventaja económica insustituible reside en el cruce contextual con los compromisos internos y la memoria de relaciones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "value_distribution_analysis",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 7.2 'Desglose de la Percepción de Valor: Datos Internos vs Señales Externas'",
+          "excerpt_short": "La descomposición del valor en entrevistas con tomadores de decisión arroja un patrón contundente: Las señales externas explican apenas el 25-30% de la disposición a pagar, siendo vistas como un servicio estandarizado. El 70-75% restante de la valoración se concentra en la capacidad de cruzar esa señal con la documentación propia del cliente: expedientes de cumplimiento ambiental, historial de reuniones de lobby registradas en InfoLobby y compromisos con comunidades locales. Este cruce evita contradicciones públicas y multas, justificando plenamente el fee corporativo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 8 'Jerarquía de Valor en la Propuesta Comercial'",
+          "excerpt_short": "Si BRIDGE se vende únicamente como un software de monitoreo de prensa o legislativo, competirá a la baja contra herramientas de USD 200 mensuales. La prima de precio a USD 5.000 mensuales se sostiene exclusivamente en el motor de cruce interno.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evidencia corroborada entre los resultados de entrevistas del dossier y la jerarquía de valor del addendum de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Noticia sobre nuevo proyecto de ley",
+      "RCA ambiental minera",
+      "Registro de audiencias InfoLobby"
+    ],
+    "actors": [
+      "Motor Semántico de Cruce",
+      "Analista Senior HITL",
+      "CCO"
+    ],
+    "steps": [
+      "Detección de proyecto de ley que restringe uso de aguas",
+      "Búsqueda de compromisos de consumo hídrico en RCA interna",
+      "Cotejo de reuniones previas con parlamentarios autores del proyecto",
+      "Generación de alerta de inconsistencia o riesgo"
+    ],
+    "states": [
+      "Noticia Aislada",
+      "Cruce Interno Ejecutado",
+      "Inconsistencia Detectada",
+      "Brief con Línea Roja Emitido"
+    ],
+    "outputs": [
+      "Alerta temprana de riesgo de incoherencia institucional"
+    ],
+    "exceptions": [
+      "Empresas con baja digitalización de sus archivos internos asistidas por servicio de digitalización inicial"
+    ]
+  },
+  "entities": [
+    "Cruce Semántico",
+    "RCA Ambiental",
+    "InfoLobby",
+    "Memoria CMF NCG 461",
+    "Valor Percibido"
+  ],
+  "relations": [
+    {
+      "from": "Cruce Interno/Relacional",
+      "to": "70% de Disposición a Pagar",
+      "type": "accounts_for"
+    },
+    {
+      "from": "Monitoreo Externo Puro",
+      "to": "Commodity de Bajo Margen",
+      "type": "classifies_as"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Monitoreo externo puro vs Inteligencia integrada BRIDGE",
+      "diferencia": "El monitoreo dice: 'El diputado Pérez presentó un proyecto de ley'; BRIDGE dice: 'El diputado Pérez presentó un proyecto de ley que contradice lo conversado en la reunión de lobby del 14 de marzo y amenaza el compromiso 4.2 de su RCA'."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "internal_cross_value_share": "70% a 75% del valor percibido por el comprador",
+    "external_signals_value_share": "25% a 30% del valor percibido"
+  },
+  "bridge_implications": "Enfocar los mensajes de marketing y las demos comerciales en el cruce de compromisos internos y no en la cantidad de medios monitoreados.",
+  "open_gaps": [
+    "Medir el tiempo requerido para indexar los archivos internos de un cliente típico en la fase de onboarding."
+  ],
+  "next_question_ids": [
+    "P08-F39",
+    "P08-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

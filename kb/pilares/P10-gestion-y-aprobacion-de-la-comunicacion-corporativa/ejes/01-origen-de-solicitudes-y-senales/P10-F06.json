@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F06",
+  "pilar": "P10",
+  "eje": "Origen de solicitudes y señales",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra origen de solicitudes y señales sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto Documentado: 'Ingesta y Triaje Urgente ante Requerimiento de Diario Financiero sobre Proyecto de Expansión Minera'. Entradas: 1) Canal: Correo electrónico recibido a las 09:15 h en la casilla de prensa corporativa; 2) Solicitante: Periodista Tomás Vergara (Diario Financiero); 3) Requerimiento Textual: 'Tomamos conocimiento de que el SEA Región de Antofagasta emitió un informe con observaciones críticas al EIA del proyecto Expansión Norte. Solicitamos respuesta a tres preguntas: ¿Se modificará el monto de inversión de USD 1.200 millones? ¿Se atrasará la fecha estimada de puesta en marcha? ¿Cuáles son las medidas comprometidas para resguardar la cuenca hídrica?'; 4) Deadline Fatal: 12:30 h del mismo día (hora de cierre de edición); 5) Registro y Triaje: Sistema BRIDGE genera automáticamente el expediente COMM-2026-0412, clasificándolo en el Cuadrante B (Hecho Operacional / Ambiental) con criticidad Alta; 6) Asignación: Response Leader: Jefa de Prensa Minera; SLA interno de borrador preliminar fijado en 60 minutos (10:15 h). Resultado Esperado: Expediente admitido, notificación instantánea vía Slack al Gerente de Medio Ambiente y al Abogado Regulatorio con enlaces directos a las respuestas fácticas pre-aprobadas de P04 y a la RCA en P09.",
+  "findings": [
+    {
+      "claim_id": "P10-F06-C1",
+      "claim": "El caso documentado ilustra la captura completa del intake periodístico: generación de ticket unificado, clasificación en cuadrante de prioridad, cálculo de SLA ante deadline perentorio y notificación automatizada a la cadena de aprobación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "concrete_case_request_origin",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 6 'Escenarios Sintéticos Detallados (Escenario de Consulta de Prensa con Deadline Corto)'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de Intake: Consulta periodística formal con plazo de 3 horas. El sistema genera ticket COMM, clasifica prioridad, calcula SLA y dispara alertas a los revisores multidisciplinarios con grounding directo en P04.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "City of Oshawa: Corporate Communications Policy (Spokespersons, Approvals, Retractions)",
+          "source_id": "b634cc27-b43f-4d8d-849c-fdb9b0cfebe8",
+          "locator": "Section 'Deadline Management and Emergency Escalation', p. 7-10",
+          "retrieved_at": null,
+          "excerpt_short": "When media outlets impose tight deadlines under four hours, the intake system must instantly alert designated departmental experts to prevent default responses or deadline failures.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de las especificaciones del dossier y de políticas de prensa probadas.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Email del periodista",
+      "Texto de la consulta",
+      "Archivos adjuntos"
+    ],
+    "actors": [
+      "Tomás Vergara (Periodista)",
+      "Jefa de Prensa",
+      "Motor de Alertas BRIDGE"
+    ],
+    "steps": [
+      "Extracción de entidades y deadline del correo",
+      "Creación de COMM-2026-0412",
+      "Asignación de revisores SME y Legal",
+      "Disparo de alertas push de alta prioridad"
+    ],
+    "states": [
+      "Ticket Creado",
+      "SLA Calculado",
+      "Revisores Notificados"
+    ],
+    "outputs": [
+      "Expediente COMM-2026-0412 en estado TRIAGED"
+    ],
+    "exceptions": [
+      "Si ningún revisor confirma lectura en 15 minutos, el sistema escala telefónicamente al DirCom"
+    ]
+  },
+  "entities": [
+    "Caso Diario Financiero",
+    "COMM-2026-0412",
+    "Diario Financiero",
+    "City of Oshawa Policy",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "COMM-2026-0412",
+      "to": "Diario Financiero",
+      "type": "ORIGINATED_BY_INQUIRY_FROM"
+    },
+    {
+      "from": "COMM-2026-0412",
+      "to": "Jefa de Prensa",
+      "type": "ASSIGNED_TO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Periodista esperando en el buzón sin respuesta vs Trazabilidad con SLA activo",
+      "diferencia": "Sin trazabilidad, el periodista publica 'la empresa no contestó los llamados'; con BRIDGE, el equipo responde antes del deadline con datos blindados."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "deadline_window_hours": "3 horas y 15 minutos",
+    "sla_first_draft_minutes": "60 minutos"
+  },
+  "bridge_implications": "Configurar temporizadores regresivos en tiempo real en la pantalla de tickets de BRIDGE ('Tiempo restante: 02h:14m').",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F07",
+    "P10-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

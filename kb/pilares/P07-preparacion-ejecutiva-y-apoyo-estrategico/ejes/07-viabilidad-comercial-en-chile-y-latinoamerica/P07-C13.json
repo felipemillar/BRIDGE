@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-C13",
+  "pilar": "P07",
+  "eje": "Viabilidad comercial en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre viabilidad comercial en Chile y Latinoamérica, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en la suficiencia de la cobertura geográfica de las plataformas globales: suites internacionales de public affairs (FiscalNote, Quorum) sostienen en su material comercial que su cobertura legislativa global y sus herramientas de monitoreo en inglés y español son suficientes para cualquier corporación que opere en América Latina; mientras que las síntesis internas (P07_RESEARCH_DOSSIER, P07_GAPS_AND_VALIDATION) demuestran que estas suites son ciegas al ecosistema administrativo y regulatorio local chileno (no indexan InfoLobby.cl, no procesan resoluciones de la SMA, ignoran dictámenes de la Contraloría General de la República y no modelan la conflictividad territorial ni el Convenio 169 de la OIT). Prevalece la versión de las síntesis internas: la viabilidad comercial real en Chile y la región exige conectores nativos al aparato administrativo local, convirtiendo la desconexión de las suites extranjeras en la principal ventaja competitiva de BRIDGE.",
+  "findings": [
+    {
+      "claim_id": "P07-C13-C1",
+      "claim": "Las suites globales de inteligencia pública fallan en el mercado chileno por carecer de conectores a repositorios administrativos locales, creando una oportunidad comercial exclusiva para soluciones nativas como BRIDGE.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "regional_market_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 1 (Brecha 2: La Inadecuación de Suites Globales)",
+          "excerpt_short": "Discrepancia de Mercado: Quorum y FiscalNote prometen cobertura total pero son ciegas al Diario Oficial, InfoLobby y la SMA. En Chile el riesgo regulatorio no se origina en el Congreso sino en resoluciones exentas de secretarías ministeriales y dictámenes de la Contraloría. Prevalece la necesidad de conectores locales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "FiscalNote: Public Affairs & Policy Intelligence Software",
+          "source_id": "dad07e49-fdce-4fdf-934f-2b5c5848c626",
+          "locator": "Sección 'International Coverage Limitations', p. 14-16",
+          "excerpt_short": "Global legislative tracking tools often face structural integration barriers when interacting with subnational Latin American regulatory registers, limiting automated surveillance to central parliamentary transcripts.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia editorial de P07_GAPS respaldada por las propias limitaciones técnicas admitidas por FiscalNote.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "resolucion_discrepancia_mercado": {
+      "postura_suites_globales": "Monitoreo centralizado del Congreso suficiente para multinacionales.",
+      "postura_bridge_p07": "El riesgo real en Chile y LatAm emana de seremis, municipios, fiscalizadores ambientales y comunidades territoriales.",
+      "version_prevalente": "P07_GAPS_AND_VALIDATION / P07_RESEARCH_DOSSIER."
+    }
+  },
+  "entities": [
+    "FiscalNote",
+    "Quorum",
+    "InfoLobby.cl",
+    "SMA SNIFA",
+    "P07_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "FiscalNote Claim",
+      "type": "rebuts"
+    },
+    {
+      "from": "BRIDGE",
+      "to": "InfoLobby.cl",
+      "type": "natively_integrates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Monitoreo Legislativo Nacional vs Inteligencia Administrativa Local",
+      "diferencia": "El monitoreo legislativo avisa cuando una ley se vota; la inteligencia administrativa detecta cuando un fiscalizador regional abre un expediente sancionatorio."
+    }
+  ],
+  "contradictions": [
+    {
+      "source_a": "FiscalNote Marketing Claims",
+      "source_b": "P07_GAPS_AND_VALIDATION",
+      "conflict": "Suficiencia de monitoreo global vs Inadecuación al ecosistema institucional chileno.",
+      "resolution": "Prevalece P07_GAPS_AND_VALIDATION."
+    }
+  ],
+  "metrics_and_denominators": {
+    "administrative_sources_gap": "0 conectores a InfoLobby en suites extranjeras vs 100% en BRIDGE",
+    "market_capture_potential": "Mercado corporativo IPSA y gran minería/energía"
+  },
+  "bridge_implications": "Enfocar el esfuerzo de desarrollo en robustecer las APIs con los servicios públicos chilenos para blindar la ventaja competitiva.",
+  "open_gaps": [
+    "Monitoreo de cambios de estructura en las páginas web de ministerios chilenos que alteren los web scrapers."
+  ],
+  "next_question_ids": [
+    "P07-C14",
+    "P07-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

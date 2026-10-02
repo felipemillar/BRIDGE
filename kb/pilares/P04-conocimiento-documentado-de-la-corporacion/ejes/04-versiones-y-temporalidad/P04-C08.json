@@ -1,0 +1,150 @@
+{
+  "question_id": "P04-C08",
+  "pilar": "P04",
+  "eje": "Versiones y temporalidad",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué sigue sin prueba sobre versiones y temporalidad, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Vacío e Incertidumbre: Sigue sin prueba empírica formal la resolución algorítmica de 'reexpresiones implícitas o silenciosas de líneas base' cuando una empresa altera una cifra histórica en una tabla comparativa sin añadir una nota técnica explícita al pie de página ni emitir una fe de erratas. Fuente Parcial: IFRS S2 (2023) exige la divulgación de las razones de cualquier recálculo de año base, pero no norma cómo un sistema automatizado debe reaccionar cuando el emisor incumple esta obligación y reexpresa la cifra de forma tácita. Validación Mínima Requerida: Implementar un validador de series temporales históricas que compare celda por celda los valores de años anteriores reportados en memorias consecutivas (e.g. comparar las emisiones 2022 reportadas en la Memoria 2022 vs las reportadas para 2022 en la Memoria 2025) y alerte automáticamente sobre discrepancias mayores al 1% sin nota aclaratoria.",
+  "findings": [
+    {
+      "claim_id": "P04-C08-C1",
+      "claim": "La detección de reexpresiones tácitas sin nota aclaratoria representa una brecha en los estándares contables que requiere validadores algorítmicos de series temporales consecutivas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Auditoría de Consistencia Temporal"
+      },
+      "evidence": [
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1.2: El Desafío de la Reexpresión Silenciosa de Metas y Líneas Base",
+          "excerpt_short": "Las empresas frecuentemente modifican el año base... en los reportes suele explicarse en una nota técnica o pasar inadvertida, exponiendo a la corporación a acusaciones de falsedad.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "3d670aa0-fc8d-48ca-8c2d-26879dc45378",
+          "source_title": "IFRS S2: Climate-related Disclosures",
+          "original_url": "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/ifrs-s2-climate-related-disclosures/",
+          "locator": "Párrafos 34-36: Recalculation Disclosures",
+          "excerpt_short": "Mandates disclosure of recalculation reasons but does not provide algorithmic resolution for silent omissions.",
+          "source_date": "2023-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío metodológico identificado formalmente en P04_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Series históricas extraídas de memorias consecutivas"
+    ],
+    "actors": [
+      "Historical Series Reconciler",
+      "Silent Reexpression Detector"
+    ],
+    "steps": [
+      "Comparación de matriz año vs año de reporte",
+      "Cálculo de delta porcentual",
+      "Alerta de reexpresión tácita no documentada"
+    ],
+    "states": [
+      "Series_Aligned",
+      "Discrepancy_Detected",
+      "Silent_Change_Flagged"
+    ],
+    "outputs": [
+      "Reporte de discrepancia temporal histórica para revisión del equipo legal"
+    ],
+    "exceptions": [
+      "Cambio en unidades de medida no declarado en encabezado"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GAP_SILENT_REEXPRESSION",
+      "type": "vacio_epistemico",
+      "name": "Vacío de Detección de Reexpresiones Tácitas de Línea Base",
+      "aliases": [
+        "Silent Reexpression Detection Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GAP_SILENT_REEXPRESSION",
+      "predicate": "amenaza_coherencia_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C08-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Detección de cambios",
+      "Lectura documental aislada": "El lector asume que la cifra histórica siempre fue la reportada en el último año.",
+      "Reconciliación algorítmica BRIDGE": "Detecta que la cifra del año 2022 cambió entre la memoria 2023 y la memoria 2025."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incluir esta comparación cruzada interanual para evitar que un vocero cite cifras que variaron silenciosamente.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP-P04-04",
+      "description": "Falta de mecanismos automatizados para conciliar reexpresiones no declaradas de cifras históricas entre reportes consecutivos.",
+      "missing_information": "Algoritmo de reconciliación de series temporales multi-reporte con tolerancia a cambios de unidades."
+    }
+  ],
+  "next_question_ids": [
+    "P04-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

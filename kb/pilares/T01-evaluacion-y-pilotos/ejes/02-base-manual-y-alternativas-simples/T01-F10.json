@@ -1,0 +1,150 @@
+{
+  "question_id": "T01-F10",
+  "pilar": "T01",
+  "eje": "Base manual y alternativas simples",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar base manual y alternativas simples de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la línea base manual y los grupos de control de menor complejidad exige un modelo de datos formal de benchmarking experimental y análisis de productividad, compuesto por seis entidades principales: 1) `BaselineWorkflowDef`: Define el proceso de trabajo tradicional (`workflow_id`, `task_category` [briefing_press, regulatory_memo, stakeholder_tracking, crisis_response], `baseline_tooling` [SharePoint_manual, Outlook, Local_Excel], `median_duration_hours`, `typical_hourly_cost_usd`, `error_rate_historical`); 2) `ComparativeControlCohort`: Modela las alternativas evaluadas en paralelo (`cohort_id`, `cohort_type` [control_0_manual, control_1_bm25, control_2_commodity_llm, control_3_agency, treatment_bridge], `technology_stack`, `infrastructure_monthly_cost_usd`); 3) `BenchmarkedTaskExecution`: Registra cada ejecución experimental de prueba (`execution_id`, `pilot_id`, `cohort_id`, `task_id`, `analyst_id`, `prompt_time_minutes`, `system_latency_seconds`, `verification_time_minutes`, `total_duration_minutes`); 4) `FactualQualityAssessment`: Almacena la evaluación ciega de calidad (`assessment_id`, `execution_id`, `evaluator_nominal`, `factual_accuracy_score` [1-5], `citation_grounding_score` [1-5], `critical_error_detected` [boolean], `omission_penalty_applied`); 5) `CostBenefitCalculation`: Consolida la rentabilidad incremental (`calc_id`, `execution_id`, `gross_labor_cost_usd`, `software_token_cost_usd`, `risk_weighted_net_benefit_usd`, `incremental_gain_vs_bm25_pct`); y 6) `AnalystCognitiveLoadSurvey`: Captura el desgaste subjetivo del operador (`survey_id`, `execution_id`, `nasa_tlx_mental_demand`, `frustration_level`, `trust_in_output` [1-5]). Las relaciones de integridad imponen que cada tarea de prueba ejecutada por BRIDGE cuente con ejecuciones espejo en los grupos de control contemporáneos.",
+  "findings": [
+    {
+      "claim_id": "T01-F10-C1",
+      "claim": "El modelo relacional para línea base y controles estructura flujos tradicionales, cohortes de control (manual, BM25, commodity LLM, agencia, BRIDGE), ejecuciones de tareas cronometradas, calidad factual ciega, beneficio neto y carga cognitiva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_baseline_and_controls",
+      "evidence": [
+        {
+          "source_title": "T01_RESEARCH_DOSSIER: Arquitectura de Validación, Pilotos, Casos de Prueba y Rúbricas (Síntesis Interna)",
+          "source_id": "ce4d8135-f66d-46f0-bc63-4f80f88f6b55",
+          "locator": "Sección 8 'Modelo de Datos para Evaluación y Pilotos'",
+          "excerpt_short": "Marco de evaluación de pilotos corporativos con compuertas cuantitativas y diseño experimental riguroso.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "ArXiv (2025) - A Cost-Benefit Analysis of On-Premise LLM Deployment vs Cloud APIs",
+          "source_id": "f57279c5-07ed-4e50-900a-5fa7c66f6a0e",
+          "locator": "Section 4 'Measurement Variables for TCO and Task Completion'",
+          "excerpt_short": "Inference unit economics and cloud token costs must be evaluated against operational latency and human review expense.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño relacional estructurado que plasma las metodologías de economía del trabajo y testing de software.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Especificación de tareas de prueba",
+      "Asignación de cohortes de control",
+      "Mediciones de tiempo y calidad"
+    ],
+    "actors": [
+      "Administrador de Pruebas",
+      "Analistas de Control",
+      "Evaluador Ciego"
+    ],
+    "steps": [
+      "Definición de las tareas estándar en 'BaselineWorkflowDef'",
+      "Registro de las 5 cohortes en 'ComparativeControlCohort'",
+      "Cronometraje y registro de cada intento en 'BenchmarkedTaskExecution'",
+      "Calificación ciega por evaluador independiente en 'FactualQualityAssessment'",
+      "Cálculo del beneficio incremental en 'CostBenefitCalculation'",
+      "Generación de reportes cruzados de rendimiento y costo"
+    ],
+    "states": [
+      "WORKFLOW_DEFINED",
+      "COHORTS_ENROLLED",
+      "TASKS_CHRONOMETRICALLY_LOGGED",
+      "QUALITY_SCORED"
+    ],
+    "outputs": [
+      "Esquema estructurado consultable mediante SQL que alimenta la justificación comercial de la plataforma"
+    ],
+    "exceptions": [
+      "Si un analista de control no registra el tiempo de verificación, la tarea se invalida y se reasigna a otro operador"
+    ]
+  },
+  "entities": [
+    "BaselineWorkflowDef",
+    "ComparativeControlCohort",
+    "BenchmarkedTaskExecution",
+    "FactualQualityAssessment",
+    "CostBenefitCalculation"
+  ],
+  "relations": [
+    {
+      "from": "BenchmarkedTaskExecution",
+      "to": "ComparativeControlCohort",
+      "type": "BELONGS_TO"
+    },
+    {
+      "from": "FactualQualityAssessment",
+      "to": "BenchmarkedTaskExecution",
+      "type": "EVALUATES_OUTPUT_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Registros informales en hojas de cálculo vs Modelo relacional formal de benchmarking",
+      "diferencia": "Las hojas de cálculo permiten inconsistencias metodológicas; el modelo estructurado impone trazabilidad experimental rigurosa entre tareas y cohortes."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "comparative_cohort_coverage": "5 cohortes evaluadas simultáneamente",
+    "time_measurement_precision_seconds": "1 segundo"
+  },
+  "bridge_implications": "Permite demostrar empíricamente ante clientes sofisticados la superioridad de BRIDGE frente a cualquier otra solución tecnológica del mercado.",
+  "open_gaps": [
+    "Integración de cronómetros automáticos en la interfaz de usuario para capturar tiempos de lectura sin intervención humana."
+  ],
+  "next_question_ids": [
+    "T01-F11",
+    "T01-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

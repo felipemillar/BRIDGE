@@ -1,0 +1,133 @@
+{
+  "question_id": "T01-X04",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Diseño estadístico y tamaño de muestra",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar diseño estadístico y tamaño de muestra de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del diseño estadístico exige un modelo de datos formal compuesto por: 1) Entidad Experimento_Estadistico: ID unívoco, hipótesis nula y alternativa formalizadas matemáticamente, nivel alfa (0.05), potencia estadística (1 - beta = 0.80), y tamaño de efecto mínimo detectable (MDE); 2) Entidad Estrato_Muestral: Identificador de celda, sector industrial, nivel de complejidad epistémica, y cuota n fijada; 3) Entidad Estimador_Incertidumbre: Métrica objetivo (Citation Precision, Ragas Faithfulness), método de cálculo de intervalo (Wilson, Bootstrap B=1000, PPI), estimador puntual, límite inferior (CI_inf), límite superior (CI_sup) y error estándar (SE); 4) Relaciones de Agregación: Conexión entre los resultados a nivel de claim y la inferencia agregada del módulo; y 5) Condiciones de Integridad: Validación de que CI_inf <= Estimador_Puntual <= CI_sup y de que la suma de las cuotas de los estratos coincida con el tamaño muestral total N sin solapamiento.",
+  "findings": [
+    {
+      "claim_id": "T01-X04-C1",
+      "claim": "El modelamiento estructurado de la inferencia estadística garantiza que cada reporte de desempeño de The Bridge Intelligence sea auditable de forma computacional e independiente por parte de equipos de riesgos de los clientes corporativos.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global",
+        "actor": "ARES & ALCE Schema Standards"
+      },
+      "evidence": [
+        {
+          "source_id": "bff33bd6-afbc-4544-b611-640f2023a150",
+          "source_title": "Saad-Falcon et al. (2023) — ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+          "original_url": "https://arxiv.org/pdf/2311.09476.pdf",
+          "locator": "Section 3: Statistical Schema Representation",
+          "excerpt_short": "Structured representation of confidence bounds and sample stratifications ensures transparency and programmatic verifiability in RAG benchmarking.",
+          "source_date": "2023-11-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar de representación formal en literatura especializada.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de JSON-Schema de Diseño Estadístico",
+      "Resultados brutos de evaluación"
+    ],
+    "actors": [
+      "Data Architect",
+      "Auditor Estadístico"
+    ],
+    "steps": [
+      "Publicar el esquema estructurado con validación de tipos e invariantes de intervalos",
+      "Ingestar datos de pruebas y computar los estimadores por estrato",
+      "Comprobar las restricciones de límites matemáticos de los intervalos de confianza",
+      "Exportar dataset estructurado de auditoría estadística"
+    ],
+    "states": [
+      "CONFIGURACION_ESQUEMA",
+      "INGESTA_DATOS_PRUEBA",
+      "VALIDACION_INVARIANTES",
+      "DATASET_PUBLICADO"
+    ],
+    "outputs": [
+      "Catálogo Estructurado de Diseño Estadístico T01-X04"
+    ],
+    "exceptions": [
+      "Si el intervalo computado viola CI_inf > Estimador, la ejecución se bloquea por corrupción numérica"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SCHEMA_DISENO_ESTADISTICO",
+      "type": "documento",
+      "name": "Esquema Estructurado de Diseño Estadístico",
+      "aliases": [
+        "Statistical Experiment Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SCHEMA_DISENO_ESTADISTICO",
+      "predicate": "formaliza_experimentos_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X04-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Completitud de invariantes de intervalos de confianza",
+      "denominator": "Total métricas con reporte de incertidumbre",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite integrar la telemetría evaluativa directamente en sistemas de gestión de riesgos corporativos (GRC).",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F09",
+  "pilar": "P09",
+  "eje": "Historial de interacción",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué resumen histórico necesita un nuevo responsable antes de hablar con un actor?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para eliminar la 'amnesia institucional' ante la rotación de gerentes, jefes territoriales o agencias externas, el sistema debe proveer una 'Ficha de Inteligencia Previa' (Briefing Ejecutivo Automatizado) que sintetice en 1 sola vista: 1) Perfil formal del actor (nombre, organización que representa, período de vigencia de su directiva y rol estatutario); 2) Posición y antecedentes en materias clave (issues críticos, postura histórica en asambleas y temas de alta sensibilidad); 3) Historial de interacciones previas (últimas 5 reuniones con fechas, interlocutores corporativos anteriores y actas firmadas); 4) Matriz de compromisos vigentes e históricos (promesas activas, compromisos cumplidos con evidencia y, crucialmente, compromisos vencidos o pendientes); 5) Registro de quejas activas o resueltas (bajo el Principio 31 de la ONU); y 6) Protocolo de relacionamiento sugerido (sensibilidades territoriales y compromisos mutuos de gobernanza).",
+  "findings": [
+    {
+      "claim_id": "P09-F09-C1",
+      "claim": "El briefing ejecutivo pre-reunión consolida el perfil del actor, su historial de minutas, el estado de compromisos vigentes y las quejas abiertas para garantizar continuidad y evitar que el nuevo responsable reabra temas zanjados o prometa sin contexto.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "pre_meeting_intelligence_brief",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo en 6 Fases (Fase 1: Preparar Reunión)'",
+          "retrieved_at": null,
+          "excerpt_short": "Fase 1: Preparar Reunión. Generación automática del Brief Ejecutivo: antecedentes del interlocutor, acuerdos previos firmados, estado de compromisos adquiridos por ejecutivos anteriores, alertas de vencimiento pendientes y quejas comunitarias activas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "RiuNet: A Methodology for Avoiding Corporate Amnesia — Knowledge Loss Prevention",
+          "source_id": "de77d867-8aeb-4d70-8e3a-410697b15a2a",
+          "locator": "Chapter 4 'Mitigating Organizational Amnesia in Stakeholder-Facing Roles', p. 45-52",
+          "retrieved_at": null,
+          "excerpt_short": "When turnover occurs, the incoming relationship manager must inherit an objective chronological log of past interactions and outstanding promises; otherwise, the organization loses credibility and repeats already rejected proposals.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre RiuNet y el flujo operativo de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "ID del actor",
+      "Fecha de reunión agendada",
+      "Historial de grafo relacional"
+    ],
+    "actors": [
+      "Nuevo Gerente de Asuntos Públicos",
+      "Consultor de Agencia",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Consulta al grafo por el ID de la persona y su organización",
+      "Filtrado de compromisos pendientes y actas históricas",
+      "Generación de PDF/Dashboard de 1 página con semáforo de riesgo",
+      "Envío al dispositivo del ejecutivo 24h antes del encuentro"
+    ],
+    "states": [
+      "Brief Solicitado",
+      "Brief Generado",
+      "Visto por el Ejecutivo"
+    ],
+    "outputs": [
+      "Dossier ejecutivo 'Executive Pre-Meeting Brief'"
+    ],
+    "exceptions": [
+      "Actores con alertas de conflicto judicializado activas incluyen banner de advertencia con directrices legales aprobadas"
+    ]
+  },
+  "entities": [
+    "Amnesia Institucional",
+    "RiuNet",
+    "Briefing Ejecutivo",
+    "Trazabilidad de Promesas",
+    "Principio 31 ONU"
+  ],
+  "relations": [
+    {
+      "from": "Nuevo Responsable",
+      "to": "Briefing Ejecutivo",
+      "type": "consumes"
+    },
+    {
+      "from": "Briefing Ejecutivo",
+      "to": "Entity_Commitment",
+      "type": "aggregates_status_of"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Traspaso de cartera oral/informal vs Brief estructurado de sistema",
+      "diferencia": "El traspaso informal omite el 60-80% de los compromisos no documentados; el sistema provee una auditoría inmutable de actas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "brief_generation_time": "< 3 segundos",
+    "historical_commitments_coverage": "100% de compromisos históricos asociados al actor y su comunidad"
+  },
+  "bridge_implications": "Construir en BRIDGE la función 'Generar Brief de Actor' con descarga offline a smartphone antes de ingresar a reuniones comunitarias en terreno.",
+  "open_gaps": [
+    "Establecer si los compromisos caducados hace más de 5 años se muestran condensados o completos."
+  ],
+  "next_question_ids": [
+    "P09-F10",
+    "P09-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

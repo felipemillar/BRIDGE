@@ -1,0 +1,130 @@
+{
+  "question_id": "P03-F36",
+  "pilar": "P03",
+  "eje": "Desambiguación y análisis de señales",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra desambiguación y análisis de señales sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso: Detección y desambiguación de una polémica sobre el uso de salmueras en el Salar de Atacama que involucra a una filial y a un competidor. Entradas: 1) Nota de prensa que menciona 'la empresa minera SQM Salar' y a su ejecutivo 'Patricio Contesse'; 2) Modelo BLINK procesando la mención: el bi-encoder recupera las entidades 'SQM Salar S.A. (filial)' y 'Sociedad Química y Minera de Chile (matriz)'; el cross-encoder resuelve con un 98% de confianza que la entidad operativa responsable es la filial `SQM_SALAR_CHILE`; 3) Módulo BERTopic analizando el flujo no nominal de 200 comentarios y cartas al director: descubre un clúster emergente `CLUSTER_SALMUERA_LITIO` centrado en 'derechos de extracción de salmuera y evaporación' sin que los textos nombren directamente a las corporaciones; y 4) Módulo de postura evaluando las cartas: detecta postura 'Adversa a la extracción intensiva' (Stance -0.85) sin catalogar los textos como 'desinformación' (al no haber coordinación artificial ni vulneración de tácticas DISARM). Resultado esperado: El sistema genera una ficha de inteligencia unificada que enlaza la mención desambiguada de la filial con el tópico emergente de salmueras, alertando a asuntos corporativos sobre el riesgo reputacional y regulatorio derivado de la discusión sobre el recurso hídrico.",
+  "findings": [
+    {
+      "claim_id": "P03-F36-C1",
+      "claim": "Un caso de desambiguación y análisis avanzado combina BLINK para aislar filiales corporativas y BERTopic para capturar debates sobre salmueras no nominales, evaluando posturas sin estigmatizar el disenso legítimo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Salar de Atacama)",
+        "actor": "Caso Desambiguación P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.5: Desafíos de NLP - Hipótesis Operativa",
+          "excerpt_short": "Se debe reemplazar el análisis de sentimiento genérico por un motor de Detección de Postura y Riesgo Reputacional... evaluando tres vectores: atribución de responsabilidad, impacto operacional y polarización del emisor.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los modelos operativos documentados del mapa de evidencia.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Noticia cruda con mención de filial",
+      "Comentarios públicos sobre salmueras"
+    ],
+    "actors": [
+      "BLINK Disambiguator",
+      "BERTopic Clusterer",
+      "Stance Classifier"
+    ],
+    "steps": [
+      "Desambiguación de filial",
+      "Descubrimiento de clúster de tópicos",
+      "Evaluación de postura",
+      "Generación de ficha"
+    ],
+    "states": [
+      "Raw_Inputs",
+      "Entity_Linked",
+      "Topic_Mapped",
+      "Intelligence_Card_Emitted"
+    ],
+    "outputs": [
+      "Ficha de inteligencia que vincula la filial desambiguada con el tópico emergente de salmuera"
+    ],
+    "exceptions": [
+      "Nombres idénticos de ejecutivos en múltiples empresas del holding"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_SALAR_DESAMBIGUACION",
+      "type": "caso_de_uso",
+      "name": "Caso Demostrativo Desambiguación Salar",
+      "aliases": [
+        "Salar Disambiguation Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_SALAR_DESAMBIGUACION",
+      "predicate": "demuestra_integracion_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F36-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Integrar BLINK y BERTopic en el backend analítico de BRIDGE para dotar a la corporación de visión temprana no nominal y resolución ontológica de filiales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

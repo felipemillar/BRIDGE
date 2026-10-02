@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-C03",
+  "pilar": "P07",
+  "eje": "Preguntas difíciles y escenarios",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre preguntas difíciles y escenarios, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en la promesa de capacidad predictiva: plataformas comerciales de social listening y analítica de crisis (Brandwatch, Zignal, Meltwater) afirman predecir crisis y preguntas periodísticas con 'hasta 95% de exactitud' mediante modelos de procesamiento de lenguaje natural y picos de sentimiento; mientras que las síntesis internas (P07_EVIDENCE_MAP, P07_RESEARCH_DOSSIER) y la literatura de wargaming con LLMs (ArXiv:2404.11446) desmienten esta afirmación como una sobrepromesa comercial no probada. Prevalece la versión de P07_EVIDENCE_MAP: no existe predicción determinista del comportamiento humano o periodístico; los reactivos hostiles deben tratarse estrictamente como 'Escenarios de Plausibilidad Condicional (What-If Injects)' priorizados por severidad fiduciaria y no por probabilidades ilusorias.",
+  "findings": [
+    {
+      "claim_id": "P07-C03-C1",
+      "claim": "Se rechaza la afirmación comercial de que la IA puede predecir preguntas de crisis con 95% de exactitud, prevaleciendo el modelo de escenarios condicionales de wargaming.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "predictive_claims_rebuttal",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 3 (Matriz Sintética de Separación Ontológica)",
+          "excerpt_short": "Afirmación: 'La IA puede predecir crisis reputacionales con 95% de exactitud analizando sentimiento en redes'. Clasificación: Afirmación Comercial de Vendor. Veredicto Crítico: Incierto / Sobreprometido. Se rechaza. Las preguntas difíciles deben modelarse como ejercicios de simulación adversarial (Murder Boards) basados en vulnerabilidades documentadas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "ArXiv: Open-Ended Wargames with Large Language Models (Tabletop & Simulations)",
+          "source_id": "07c18a0c-d503-4a4d-ab67-1f5151b04d7c",
+          "locator": "Sección 'Probabilistic Scenario Modeling', p. 4-7",
+          "excerpt_short": "Predicting exact human actions in conflict scenarios remains fundamentally intractable. LLM simulation serves as heuristic exploration of exposure rather than precise forecasting.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Rechazo explícito y categórico de la sobrepromesa comercial en la matriz ontológica de P07_EVIDENCE_MAP.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "resolucion_discrepancia_prediccion": {
+      "afirmacion_comercial": "Predicción determinista de crisis al 95%.",
+      "correccion_epistemica": "Escenarios condicionales What-If basados en brechas de datos internos y severidad regulatoria.",
+      "version_prevalente": "P07_EVIDENCE_MAP / ArXiv:2404.11446."
+    }
+  },
+  "entities": [
+    "Brandwatch",
+    "Meltwater",
+    "ArXiv:2404.11446",
+    "P07_EVIDENCE_MAP",
+    "Murder Board"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Brandwatch Claim",
+      "type": "rebuts"
+    },
+    {
+      "from": "ArXiv:2404.11446",
+      "to": "Wargaming Condicional",
+      "type": "supports"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Predicción de Vendor vs Simulación Heurística",
+      "diferencia": "La predicción de vendor genera falsa seguridad o pánico innecesario; la simulación heurística entrena la resiliencia técnica del vocero."
+    }
+  ],
+  "contradictions": [
+    {
+      "source_a": "Brandwatch Marketing Claims",
+      "source_b": "P07_EVIDENCE_MAP",
+      "conflict": "Predicción determinista de crisis vs Simulación heurística de escenarios.",
+      "resolution": "Prevalece P07_EVIDENCE_MAP por rigor metodológico."
+    }
+  ],
+  "metrics_and_denominators": {
+    "false_certainty_mitigation": "0 afirmaciones predictivas en la UI de BRIDGE",
+    "scenario_coverage": "3 niveles de severidad (Alta, Media, Baja)"
+  },
+  "bridge_implications": "Rotular en BRIDGE toda batería Q&A como 'Simulación de Escenarios Probables' y no como 'Preguntas que le harán con certeza'.",
+  "open_gaps": [
+    "Medición de falsos positivos en alertas de crisis generadas por modelos de procesamiento de redes."
+  ],
+  "next_question_ids": [
+    "P07-C04",
+    "P07-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

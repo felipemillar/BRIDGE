@@ -1,0 +1,137 @@
+{
+  "question_id": "P02-F22",
+  "pilar": "P02",
+  "eje": "Asuntos públicos y memoria de actores",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar asuntos públicos y memoria de actores de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo ontológico en cuatro bloques: 1) Variables de Actores (Entidades): Nombre, Organización, Cargo, Tipo de Actor (legislador, regulador, dirigente vecinal, periodista, ONG), Jurisdicción/Región geográfica, Matriz de Influencia y Postura (aliado, neutral, adversario) y trayectoria histórica; 2) Categorías Temáticas y Objetos Normativos: Taxonomía de Controversias (issues: hídrico, emisiones, empleo, impuestos), Objetos Normativos (proyectos de ley, indicaciones parlamentarias, órdenes ejecutivas, Resoluciones de Calificación Ambiental - RCA, dictámenes regulatorios) y Eventos (audiencias Ley de Lobby, mesas de diálogo, intervenciones en comisiones); 3) Relaciones del Grafo Bipartito: Actor <-> Controversia (postura y criticidad), Actor <-> Compromiso (quién exigió y quién suscribió), Compromiso <-> Documento Interno (enlace a cláusula de contrato o RCA) y Señal Externa Hoy <-> Memoria Corporativa Histórica (noticia de hoy cruzada con discursos previos); 4) Condiciones de Calidad y Seguridad: Citación Estricta (grounding hipervinculado a párrafo y página para evitar alucinaciones), Gobernanza Bitemporal (fecha de asunción del compromiso vs fecha de emisión de señal) y Aislamiento por Tenant con RBAC para proteger actas confidenciales y estrategias legales.",
+  "findings": [
+    {
+      "claim_id": "P02-F22-C1",
+      "claim": "La modelación de memoria de actores exige un grafo bitemporal que registre tanto el momento en que se adquiere un compromiso socioambiental como el momento en que se genera una señal externa de prensa o fiscalización, garantizando trazabilidad histórica completa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Diseño Ontológico BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Sección: Variables y Relaciones del Modelo de Asuntos Públicos",
+          "excerpt_short": "Grafo bitemporal que articula actores, compromisos, posturas aprobadas y señales del entorno.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:34:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación formal de ingeniería ontológica de P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fichas de actores",
+      "Líneas de tiempo de proyectos",
+      "Repositorios de compromisos legales"
+    ],
+    "actors": [
+      "Grafo de Conocimiento",
+      "Analista de Asuntos Públicos",
+      "CISO Corporativo"
+    ],
+    "steps": [
+      "Extracción de entidades y fechas de validez",
+      "Creación de nodos de actor y compromiso",
+      "Enlace con documentos fuente internos",
+      "Control de permisos de visualización por RBAC"
+    ],
+    "states": [
+      "Nodo_Creado",
+      "Arista_Enlazada",
+      "Permisos_RBAC_Aplicados"
+    ],
+    "outputs": [
+      "Grafo Bitemporal de Asuntos Públicos y Relaciones"
+    ],
+    "exceptions": [
+      "Actas reservadas accesibles únicamente por el Fiscal General y CCO"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ONT_ASUNTOS_PUBLICOS",
+      "type": "modelo_datos",
+      "name": "Ontología de Asuntos Públicos y Stakeholders",
+      "aliases": [
+        "Stakeholder Memory Graph"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ONT_ASUNTOS_PUBLICOS",
+      "predicate": "estructura_informacion_de",
+      "object_id": "Actores_Compromisos_y_Normas",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F22-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "CRM Tradicional de Ventas vs Grafo de Asuntos Públicos",
+      "CRM de Ventas (Salesforce/HubSpot)": "Foco en transacciones comerciales, pipelines de ingresos y etapas de cierre.",
+      "Grafo de Asuntos Públicos": "Foco en legitimidad, cumplimiento de compromisos, posturas ante leyes y riesgo reputacional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Relacionar",
+      "implication": "Descartar la adaptación de CRMs comerciales de ventas para el módulo Relacionar; construir sobre la ontología bitemporal de compromisos y actores regulatorios.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F23",
+    "P02-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:34:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

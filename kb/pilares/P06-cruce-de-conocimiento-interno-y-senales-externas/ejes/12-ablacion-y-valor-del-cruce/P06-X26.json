@@ -1,0 +1,141 @@
+{
+  "question_id": "P06-X26",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Ablación y valor del cruce",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué errores nuevos introduce la integración aunque aumente cobertura?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La integración y cruce de fuentes heterogéneas introduce cuatro riesgos y patologías epistémicas nuevas que no existen en los sistemas monofuente (P06_QUALITY_ADDENDUM, Sección 5.2; Calamai et al., 2025; Zhu et al., 2026): 1) Sincretismo Espurio (Alucinación de Falsa Reconciliación): El modelo generativo intenta armonizar dos fuentes que en realidad se contradicen, inventando hechos intermedios que ninguna fuente contiene para complacer al usuario; 2) Colisión de Homónimos y Fusión Errónea de Entidades: Al cruzar prensa con bases de datos internas, empresas filiales con nombres parecidos o proyectos homónimos en distintas regiones pueden fusionarse en un solo registro (error de Splink / Entity Resolution); 3) Contaminación Contextual por Documentos Desactualizados: Incorporar borradores o minutas antiguas puede llevar al modelo a revivir compromisos ya cancelados como si estuvieran vigentes; 4) Dilución de Señales Críticas (*Lost in the Middle*): Sobrecargar la ventana de contexto con decenas de páginas internas puede provocar que el LLM pase por alto la advertencia clave del hecho esencial. Mitigar estos errores exige fragmentación densa, ranking bitemporal y guardrails deterministas.",
+  "findings": [
+    {
+      "claim_id": "P06-X26-C1",
+      "claim": "El cruce de fuentes introduce riesgos específicos de sincretismo espurio, errores de desambiguación y dilución de atención que exigen defensas desacopladas.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "Investigación RAG Avanzada"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 5.2: Patologías Específicas de la Integración Multi-Fuente",
+          "excerpt_short": "Aumentar la cobertura cruzando datos no garantiza mejor calidad: introduce el peligro del sincretismo espurio donde el modelo alucina compromisos para 'suavizar' tensiones.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "8efce53c-a1b5-4416-b399-3a615f36b2b5",
+          "source_title": "Zhu et al. (2026) - SABER: Trust or Abstain? (Texto Completo HTML v1)",
+          "original_url": "https://arxiv.org/html/2605.18792v1",
+          "locator": "Section 5: Spurious Reconciliations in Multi-Document RAG",
+          "excerpt_short": "When presented with conflicting external and internal sources, LLMs often fabricate synthetic justifications rather than identifying the precise factual divide.",
+          "source_date": "2026-05-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Patología ampliamente estudiada en la literatura de vanguardia sobre RAG multi-documento.",
+      "epistemic_status_original": "patologia_epistemica_documentada",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Contexto multi-fuente complejo"
+    ],
+    "actors": [
+      "Detector de Sincretismo",
+      "Filtro de Re-ranking Bitemporal"
+    ],
+    "steps": [
+      "Verificación de citas cruzadas en salida del LLM",
+      "Comprobación de que cada afirmación provenga de exactamente una fuente sin fusiones híbridas no sustentadas",
+      "Alerta de sincretismo si el claim carece de fuente directa"
+    ],
+    "states": [
+      "Context_Assembled",
+      "Output_Scrutinized",
+      "Spurious_Sync_Filtered"
+    ],
+    "outputs": [
+      "Texto limpio de reconciliaciones artificiales"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SPURIOUS_SYNCRETISM",
+      "type": "patologia_modelo",
+      "name": "Sincretismo Espurio Multi-Documento",
+      "aliases": [
+        "Spurious Reconciliation Hallucination"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SPURIOUS_SYNCRETISM",
+      "predicate": "degrada_calidad_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2026-05-18",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X26-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Impide que el sistema recomiende soluciones 'salomónicas' inventadas que contradigan las políticas de la empresa.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

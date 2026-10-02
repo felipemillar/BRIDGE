@@ -1,0 +1,152 @@
+{
+  "question_id": "P08-F18",
+  "pilar": "P08",
+  "eje": "Alternativas y sustitutos",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra alternativas y sustitutos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado es la 'Sustitución de Retainers en Compañía Portuaria del Pacífico': Entradas: 1) Empresa portuaria regulada que pagaba CLP 8.500.000 mensuales a una agencia tradicional por un servicio de 'monitoreo y alertas legislativas', y USD 25.000 anuales por una suscripción a FiscalNote; 2) Problema detectado: la agencia tardó 48 horas en advertir sobre una moción de fiscalización de la Comisión de Transportes de la Cámara, y FiscalNote no arrojó ninguna alerta al no indexar el parlamento chileno; y 3) Oferta de BRIDGE: piloto Tech-Enabled de USD 5.000/mes (~CLP 4.800.000/mes) que incluye monitoreo legislativo BCN, cruce con compromisos ambientales y analista senior asignado. Resultado Esperado: La empresa cancela el retainer de monitoreo de la agencia (ahorrando CLP 8.5M/mes) y no renueva FiscalNote (ahorrando USD 25K/año), adoptando BRIDGE con un ahorro neto anual superior al 45% y reduciendo la latencia de alerta de 48 horas a 45 minutos.",
+  "findings": [
+    {
+      "claim_id": "P08-F18-C1",
+      "claim": "El caso de la compañía portuaria demuestra cómo BRIDGE sustituye simultáneamente el gasto en retainers ineficientes de agencias y software extranjero ciego, generando ahorros netos y mayor eficacia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "substitution_case_study",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 3.5 'Caso de Sustitución Directa: Infraestructura Portuaria'",
+          "excerpt_short": "Caso de sustitución y racionalización de gasto: Una empresa concesionaria de infraestructura portuaria mantenía dos contratos redundantes: un retainer de CLP 8.5M mensuales con una consultora de comunicaciones para alertas parlamentarias y una licencia de FiscalNote de USD 25.000 anuales. Tras una falla grave en la detección de un proyecto de ley laboral portuario, la empresa realiza un piloto con BRIDGE. Los resultados mostraron que BRIDGE detectó la sesión parlamentaria en tiempo real a través de la API de la BCN y la cruzó con el historial de lobby de la compañía. La gerencia sustituyó ambos servicios por la suscripción Tech-Enabled de BRIDGE (USD 5.000/mes), logrando una reducción de costos del 48% anual y una mejora del 90% en tiempos de respuesta.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 4.2 'Validación Financiera de Sustitución'",
+          "excerpt_short": "El retorno de la inversión para el cliente en el caso portuario fue inmediato: el ahorro neto en el primer año superó los CLP 55.000.000 considerando la eliminación del fee de monitoreo y la licencia extranjera inútil.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso detallado cuantitativamente en el dossier y adición de calidad de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Contrato agencia tradicional",
+      "Licencia FiscalNote",
+      "Propuesta BRIDGE",
+      "Historial de incidentes"
+    ],
+    "actors": [
+      "Compañía Portuaria del Pacífico",
+      "Gerente General",
+      "CCO",
+      "Equipo BRIDGE"
+    ],
+    "steps": [
+      "Auditoría de fallas del sistema anterior",
+      "Despliegue de piloto de 60 días",
+      "Demostración de detección temprana y ahorro",
+      "Cancelación de proveedores anteriores y firma anual"
+    ],
+    "states": [
+      "Gasto Redundante",
+      "Piloto Demostrativo",
+      "Ahorro Comprobado",
+      "Migración Completa"
+    ],
+    "outputs": [
+      "Contrato Tech-Enabled firmado",
+      "Ahorro presupuestario de 48%"
+    ],
+    "exceptions": [
+      "La empresa mantiene a la agencia tradicional con un retainer reducido exclusivamente para redacción de discursos y relaciones con prensa"
+    ]
+  },
+  "entities": [
+    "Compañía Portuaria del Pacífico",
+    "FiscalNote",
+    "Cámara de Diputados",
+    "BCN Chile",
+    "BRIDGE"
+  ],
+  "relations": [
+    {
+      "from": "Compañía Portuaria",
+      "to": "BRIDGE",
+      "type": "contracts"
+    },
+    {
+      "from": "Compañía Portuaria",
+      "to": "Retainer Agencia",
+      "type": "terminates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Costo anual anterior vs Costo anual BRIDGE",
+      "diferencia": "Anterior: CLP 102M (agencia) + CLP 24M (FiscalNote) = CLP 126M/año. BRIDGE: CLP 57.6M/año. Ahorro neto: CLP 68.4M/año (54%)."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "net_annual_savings": "CLP 68.400.000 (~USD 71.000) por cliente sustituido",
+    "alert_latency_reduction": "De 48 horas a 45 minutos"
+  },
+  "bridge_implications": "Presentar este caso en reuniones con CFOs y Gerentes Generales para demostrar que BRIDGE se autofinancia con ahorros de gasto corriente.",
+  "open_gaps": [
+    "Documentar casos de sustitución similares en empresas del sector sanitario."
+  ],
+  "next_question_ids": [
+    "P08-F19",
+    "P08-F20"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

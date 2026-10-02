@@ -1,0 +1,273 @@
+{
+  "question_id": "P02-F01",
+  "pilar": "P02",
+  "eje": "Universo comercial y deduplicación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué organizaciones, marcas y productos son entidades distintas y cuáles pertenecen al mismo grupo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La investigación corporativa y la fe de erratas (00_P02_GLOBAL_READ_ME_AND_ERRATA) distinguen grupos matrices, entidades legales y marcas de producto: 1) WPP plc es matriz de Burson Global, que adquirió Limbik (12 agosto 2026) operando bajo la suite Burson Decipher; 2) FGS Global pertenece a Kite Bidco Inc. (KKR), habiendo vendido WPP su participación mayoritaria el 3 diciembre 2024; 3) Platinum Equity es matriz de Cision Ltd., que consolida Brandwatch, PR Newswire, Falcon.io y Paladin (PROV-002); 4) Signal AI Ltd. es matriz y absorbió a Memo (20 abril 2026); 5) Open Point Group unifica Consultation Manager, Social Point y Converlens (julio 2024); 6) Darzin Software Pty Ltd y Simply Stakeholders son la misma entidad legal; 7) Symphony Technology Group (STG) es matriz de Onclusive (fusiona Kantar Rep Intelligence, PRgloo, Critical Mention, Digimind); 8) Hootsuite adquirió Talkwalker (abril 2024); 9) Irth Solutions es matriz de Borealis Software; 10) Stagwell engloba a PRophet AI y UNICEPTA; 11) Access Group engloba a Isentia y Vuelio. Entidades operativamente vinculadas pero jurídicamente independientes: Contrlr y Third Hemisphere comparten dirección pero no fusión demostrada; Direct Signal mantiene sede no verificada; Entual opera con servicio humano bespoke sobre datos públicos abiertos.",
+  "findings": [
+    {
+      "claim_id": "P02-F01-C1",
+      "claim": "En la estructura de propiedad global, FGS Global pertenece a Kite Bidco Inc. (controlada por fondos de KKR) tras el cierre de venta formal de WPP el 3 de diciembre de 2024 (SEC Form 6-K), por lo que WPP ya no es su matriz.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-12-03",
+        "region": "Global / Reino Unido / EE. UU.",
+        "actor": "WPP plc / KKR / Kite Bidco"
+      },
+      "evidence": [
+        {
+          "source_id": "3cd556b0-adad-4a02-9088-9f21a1b2b1b3",
+          "source_title": "SEC Form 6-K WPP Sale of FGS Global to KKR Kite Bidco",
+          "original_url": "https://www.sec.gov/Archives/edgar/data/1072379/000107237924000045/a5017o.htm",
+          "locator": "Filing Form 6-K WPP plc: Completion of transaction with Kite Bidco Inc.",
+          "excerpt_short": "WPP announces completion of the sale of its majority stake in FGS Global to Kite Bidco Inc., an entity controlled by KKR.",
+          "source_date": "2024-12-03",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        },
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Sección: Corrección de Propiedad de Grupos Económicos (FGS Global / WPP / KKR)",
+          "excerpt_short": "FGS Global ya no pertenece a WPP ni a Mayfair como matriz actual, sino a Kite Bidco Inc. (KKR).",
+          "source_date": "2026-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Presentación regulatoria vinculante ante la SEC de EE. UU. y fe de erratas canónica.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P02-F01-C2",
+      "claim": "Platinum Equity controla Cision Ltd. (PROV-002), holding que consolidó bajo una sola entidad económica a Brandwatch (adquirida en junio de 2021), PR Newswire, Falcon.io y Paladin.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "EE. UU. / Global",
+        "actor": "Platinum Equity / Cision Ltd."
+      },
+      "evidence": [
+        {
+          "source_id": "420e830e-dd53-4597-a51d-827824c4ce38",
+          "source_title": "Cision Brandwatch Acquisition Announcement PR Newswire",
+          "original_url": "https://www.prnewswire.com/news-releases/cision-closes-brandwatch-acquisition-301302866.html",
+          "locator": "Sección: Cision Closes Brandwatch Acquisition",
+          "excerpt_short": "Cision closes Brandwatch acquisition to create a global leader in PR, marketing and social consumer intelligence.",
+          "source_date": "2021-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Comunicado oficial de cierre de transacción corporativa.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P02-F01-C3",
+      "claim": "Burson Global (WPP) adquirió la firma de IA cognitiva Limbik el 12 de agosto de 2026, integrando sus capacidades predictivas en la suite Burson Decipher dentro de la infraestructura WPP Open.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-08-12",
+        "region": "EE. UU. / Global",
+        "actor": "Burson Global / Limbik / WPP"
+      },
+      "evidence": [
+        {
+          "source_id": "e63cb0e1-84a9-4ca8-80d5-36ec84c18b16",
+          "source_title": "Burson Acquisition of Cognitive AI Firm Limbik",
+          "original_url": "https://www.bursonglobal.com/newsroom/global/burson-acquires-cognitive-ai-company-limbik",
+          "locator": "Burson Newsroom: Burson acquires cognitive AI company Limbik",
+          "excerpt_short": "Burson acquires cognitive AI company Limbik to enhance predictive media and audience engagement.",
+          "source_date": "2026-08-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Confirmación oficial en newsroom de Burson y corrección explícita de fe de erratas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Estructuras de capital",
+      "Filings de la SEC",
+      "Notas de prensa de M&A"
+    ],
+    "actors": [
+      "Holdings Matrices",
+      "Filiales Operativas",
+      "Marcas Comerciales"
+    ],
+    "steps": [
+      "Verificación de entidad jurídica",
+      "Rastreo de transacciones de M&A",
+      "Deduplicación bajo holding de control",
+      "Asignación de ID único de proveedor"
+    ],
+    "states": [
+      "Entidad_Identificada",
+      "Holding_Verificado",
+      "Registro_Consolidado"
+    ],
+    "outputs": [
+      "Catálogo deduplicado de proveedores independientes"
+    ],
+    "exceptions": [
+      "Empresas con alianzas comerciales pero sin fusión accionaria demostrada (ej. Contrlr y Third Hemisphere)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "GRP_CISION",
+      "type": "holding_corporativo",
+      "name": "Cision Ltd. (Platinum Equity)",
+      "aliases": [
+        "Brandwatch",
+        "PR Newswire",
+        "Falcon.io"
+      ]
+    },
+    {
+      "entity_id": "GRP_KKR_FGS",
+      "type": "holding_corporativo",
+      "name": "Kite Bidco Inc. (KKR)",
+      "aliases": [
+        "FGS Global"
+      ]
+    },
+    {
+      "entity_id": "GRP_WPP_BURSON",
+      "type": "holding_corporativo",
+      "name": "WPP plc / Burson Global",
+      "aliases": [
+        "Limbik",
+        "Burson Decipher"
+      ]
+    },
+    {
+      "entity_id": "GRP_SIGNAL_AI",
+      "type": "holding_corporativo",
+      "name": "Signal AI Ltd.",
+      "aliases": [
+        "Signal AI AIQ",
+        "Memo"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "GRP_KKR_FGS",
+      "predicate": "adquirio_participacion_controladora_de",
+      "object_id": "FGS Global",
+      "valid_from": "2024-12-03",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F01-C1"
+    },
+    {
+      "subject_id": "GRP_CISION",
+      "predicate": "consolida_operativamente_a",
+      "object_id": "Brandwatch",
+      "valid_from": "2021-06-01",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F01-C2"
+    },
+    {
+      "subject_id": "GRP_WPP_BURSON",
+      "predicate": "adquirio",
+      "object_id": "Limbik",
+      "valid_from": "2026-08-12",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F01-C3"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Independencia Comercial vs Pertenencia a Holding",
+      "Entidades Aparentes Separadas": "Brandwatch, PR Newswire, Falcon.io y Paladin parecían 4 competidores en listas públicas.",
+      "Estructura Real Verificada": "Pertenecen a un solo grupo comercial (Cision Ltd. / Platinum Equity), computando como 1 solo proveedor en N_comm."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric_name": "Denominador de Proveedores Comerciales Independientes Reconciliado",
+      "value": 70,
+      "unit": "empresas_independientes",
+      "denominator": "Total de proveedores comerciales verificados tras deduplicar holdings y excluir entidades no comerciales",
+      "evidence_claim_id": "P02-F01-C1"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Evaluar la competencia en BRIDGE considerando grupos corporativos y no marcas aisladas, evitando sobredimensionar la fragmentación de mercado.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F02",
+    "P02-F03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

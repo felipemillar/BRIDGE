@@ -1,0 +1,133 @@
+{
+  "question_id": "T01-X28",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Reproducción y seguimiento",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar reproducción y seguimiento de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la reproducción y el seguimiento exige un modelo de datos formal compuesto por: 1) Entidad Registro_Ejecucion_Reproducible: ID de corrida, timestamp ISO-8601, hash SHA-256 del corpus documental, commit Git del código y prompts, identificador exacto de checkpoint del LLM, temperatura y semilla aleatoria; 2) Entidad Dictamen_Compuerta: ID de compuerta (G0, G1, G2, G3), fecha de decisión, dictamen formal (Go, Kill, Hold, Pivot), tabla de cumplimiento de criterios Must-Meet, y lista de evaluadores con sus firmas digitales; 3) Entidad Regresion_Comparativa: ID de línea base previa, ID de nueva ejecución, deltas porcentuales en precisión, latencia y costo unitario; 4) Relaciones de Linaje: Grafo dirigido que conecta cada decisión de compuerta con los manifiestos de ejecución que la sustentan; y 5) Condiciones de Integridad: Validación de que los hashes de corpus sean no nulos de 64 caracteres hexadecimales y prohibición de transiciones de estado a 'Producción' sin un dictamen 'Go' debidamente firmado.",
+  "findings": [
+    {
+      "claim_id": "T01-X28-C1",
+      "claim": "El modelamiento relacional estructurado de la reproducibilidad y el linaje de auditoría permite automatizar la verificación de cumplimiento de compuertas en el pipeline de CI/CD de The Bridge Intelligence.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Cooper Stage-Gate & MLOps Standards"
+      },
+      "evidence": [
+        {
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & Agile Integration",
+          "original_url": null,
+          "locator": "Digital Stage-Gate Governance Models",
+          "excerpt_short": "Automating gate tracking through structured relational entities provides immutable audit trails for complex multi-stakeholder product launches.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar de arquitectura de datos para gobernanza de compuertas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de JSON-Schema de Reproducción y Linaje",
+      "Trazas de CI/CD y actas de compuerta"
+    ],
+    "actors": [
+      "MLOps Platform Architect",
+      "Compliance Officer"
+    ],
+    "steps": [
+      "Configurar el esquema de entidades de ejecución y compuerta",
+      "Capturar metadatos criptográficos en cada corrida de evaluación",
+      "Enlazar el acta de decisión de compuerta con los hashes de ejecución",
+      "Generar catálogo estructurado de reproducibilidad para auditorías externas"
+    ],
+    "states": [
+      "CONFIGURACION_SCHEMA",
+      "CAPTURA_HASHES",
+      "VINCULACION_DICTAMEN",
+      "REGISTRO_INMUTABLE"
+    ],
+    "outputs": [
+      "Catálogo Estructurado de Reproducción y Seguimiento T01-X28"
+    ],
+    "exceptions": [
+      "Si un commit de producción no tiene un acta de compuerta asociada, el despliegue es bloqueado por CI/CD"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SCHEMA_REPRODUCIBILIDAD",
+      "type": "documento",
+      "name": "Esquema Estructurado de Reproducibilidad",
+      "aliases": [
+        "Reproducibility & Lineage Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SCHEMA_REPRODUCIBILIDAD",
+      "predicate": "formaliza_linaje_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X28-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Completitud de linaje en decisiones de compuerta",
+      "denominator": "Total compuertas ejecutadas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Elimina el riesgo de discrepancias operacionales entre lo prometido en el piloto y lo entregado en producción.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

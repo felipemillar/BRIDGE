@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-C05",
+  "pilar": "P07",
+  "eje": "Mensajes y líneas aprobadas",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre mensajes y líneas aprobadas, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en la generalización del uso de mensajes corporativos: las guías tradicionales de relaciones públicas asumen que un 'Message House' aprobado puede ser utilizado libremente por cualquier portavoz en cualquier soporte; mientras que las síntesis internas (P07_RESEARCH_DOSSIER, P07_EVIDENCE_MAP) y los marcos de gobierno corporativo (OCDE, Ley 18.045) corrigen que los mensajes exigen una estricta matriz de perimetraje por rol y canal. Prevalece la versión de las síntesis internas: ciertas afirmaciones técnicas o financieras solo están autorizadas para minutas escritas o audiencias de lobby, y su uso desatendido por voceros generales en televisión abierta puede gatillar investigaciones de la CMF o sanciones penales por revelación indebida de hechos reservados.",
+  "findings": [
+    {
+      "claim_id": "P07-C05-C1",
+      "claim": "Los mensajes corporativos no son de uso indiscriminado; requieren segregación por rol de vocero y canal autorizado para proteger el cumplimiento bursátil y regulatorio.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "message_governance_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje C) y Sección 3",
+          "excerpt_short": "Discrepancia Eje C: Prácticas de RRPP convencionales promueven mensajes monolíticos; P07_EVIDENCE_MAP y Ley 18.045 corrigen que las líneas deben llevar permisos por canal y rol. Si un mensaje técnico se improvisa en televisión en vivo sin datos de respaldo, se destruye la defensa jurídica de la empresa.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Umbrex: The Message House Framework for Executive Messaging",
+          "source_id": "40c71d89-2265-4bc4-9437-f06891eff48a",
+          "locator": "Sección 'Channel Constraints', p. 11-13",
+          "excerpt_short": "Spokesperson discipline requires strict channel-role gating. Foundational evidence points appropriate for written regulatory filings must not be paraphrased carelessly in live broadcast settings.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia editorial de P07_EVIDENCE_MAP alineada con la doctrina de Umbrex y la Ley de Valores chilena.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "resolucion_discrepancia_mensajes": {
+      "enfoque_tradicional_rrpp": "Un mismo argumentario Word para toda la empresa.",
+      "enfoque_bridge_p07": "Matriz relacional de mensajes con permisos diferenciados por vocero, medio y vigencia temporal.",
+      "version_prevalente": "P07_EVIDENCE_MAP / Umbrex."
+    }
+  },
+  "entities": [
+    "Umbrex",
+    "Ley 18.045",
+    "P07_EVIDENCE_MAP",
+    "Message House",
+    "Canal de Vocería"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Argumentario Tradicional",
+      "type": "replaces"
+    },
+    {
+      "from": "Ley 18.045",
+      "to": "Permisos de Mensaje",
+      "type": "constrains"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Argumentario Monolítico vs Matriz Relacional por Canal",
+      "diferencia": "El monolítico causa accidentes regulatorios; la matriz relacional restringe técnicamente qué frases pueden decirse en vivo."
+    }
+  ],
+  "contradictions": [
+    {
+      "source_a": "Guías Tradicionales de RRPP",
+      "source_b": "P07_EVIDENCE_MAP",
+      "conflict": "Uso universal del mensaje vs Perimetraje estricto por canal y rol.",
+      "resolution": "Prevalece P07_EVIDENCE_MAP."
+    }
+  ],
+  "metrics_and_denominators": {
+    "channel_restriction_coverage": "100% de líneas con canales asignados",
+    "regulatory_violation_rate": "0 incidentes"
+  },
+  "bridge_implications": "Implementar restricciones automáticas en la UI de BRIDGE para que cada usuario solo vea los mensajes autorizados para su perfil.",
+  "open_gaps": [
+    "Mecanismos de autorización rápida para adaptar mensajes durante conferencias de prensa híbridas."
+  ],
+  "next_question_ids": [
+    "P07-C06",
+    "P07-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

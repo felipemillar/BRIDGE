@@ -1,0 +1,164 @@
+{
+  "question_id": "P11-F03",
+  "pilar": "P11",
+  "eje": "Inventario y clasificación de datos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué regla decide si una fuente puede incluirse en búsqueda y respuesta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La admisibilidad de una fuente en el motor de búsqueda semántica y RAG de BRIDGE se rige por la 'Regla de las 4 Compuertas Copulativas': 1) Legitimidad y Procedencia Verificada: La fuente debe haber ingresado por un canal corporativo acreditado con hash de procedencia, prohibiendo datos extraídos de filtraciones anónimas o scraping sin licencia; 2) Compatibilidad de Clasificación y Propósito: Fuentes D1 (Público) y D2 (Interno) son indexables de forma general dentro del tenant; fuentes D3 (Confidencial Estratégico) solo pueden indexarse en colecciones aisladas y consultadas por usuarios con autorización explícita; fuentes D4 (Datos Personales) solo son indexables tras pasar por tokenización o pseudonimización de PII; y fuentes D5 (Secretos de Terceros bajo NDA) quedan excluidas de índices compartidos; 3) Ausencia de Datos Sensibles No Disociados: Prohibición absoluta de indexar textos que contengan datos íntimos de salud, creencias religiosas o biometría conforme a la Ley 21.719 y 19.628; y 4) Validación de Tenant Criptográfica: La fuente debe poseer un `tenant_id` validado criptográficamente contra el contexto de la sesión, impidiendo físicamente que fuentes de un cliente participen en consultas de otro.",
+  "findings": [
+    {
+      "claim_id": "P11-F03-C1",
+      "claim": "La admisibilidad en índices RAG exige cuatro condiciones copulativas: procedencia legítima, clasificación compatible con permisos, ausencia de datos sensibles íntimos y validación criptográfica de pertenencia al tenant.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "rag_ingestion_admissibility_rule",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 2.2 'Regla de Admisibilidad para Búsqueda y RAG'",
+          "retrieved_at": null,
+          "excerpt_short": "Cuatro compuertas obligatorias para vectorización: 1. Procedencia legítima documentada; 2. Nivel de clasificación compatible (D1/D2 general, D3 restringido, D4 anonimizado, D5 vetado); 3. Cero datos sensibles privados; 4. Coincidencia criptográfica estricta de tenant_id.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "OWASP GenAI: Top 10 for Large Language Model Applications 2025",
+          "source_id": "83d92341-65c3-4adf-877a-8cf4b4cd29f2",
+          "locator": "LLM06: Sensitive Information Disclosure & LLM08: Vector and Embedding Security",
+          "retrieved_at": null,
+          "excerpt_short": "Implement robust data classification and access controls in the ingestion pipeline to ensure sensitive or unauthorized data is not included in RAG vector stores.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Qdrant Documentation: Multitenancy and Payload-based Partitioning",
+          "source_id": "1c6d441b-79bd-430c-9e06-48a208a341e5",
+          "locator": "Section 'Payload-based Tenant Filtering'",
+          "retrieved_at": null,
+          "excerpt_short": "Ensure vector search requests strictly filter by tenant_id payloads, preventing cross-tenant nearest-neighbor vector leakages at the database engine level.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares de seguridad de OWASP GenAI 2025, la documentación oficial de Qdrant y la arquitectura del dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fuente candidata a indexación",
+      "Contexto de sesión del usuario",
+      "Reglas de compuerta"
+    ],
+    "actors": [
+      "Pipeline de Ingesta BRIDGE",
+      "Detector de PII",
+      "Motor de Embeddings / Qdrant"
+    ],
+    "steps": [
+      "Revisión de procedencia legítima y hash del documento",
+      "Inspección de etiqueta de clasificación (D1 a D5)",
+      "Escaneo de datos sensibles; si detecta PII, aplica tokenización previa",
+      "Verificación de token de sesión y aislamiento por `tenant_id`",
+      "Si supera las 4 compuertas: Generación de embeddings e inserción en Qdrant con payload `tenant_id`",
+      "Si falla alguna compuerta: Rechazo de indexación y registro en log de anomalías"
+    ],
+    "states": [
+      "GATE_EVALUATION",
+      "PII_SANITIZATION",
+      "EMBEDDINGS_GENERATED",
+      "VECTOR_INSERTED"
+    ],
+    "outputs": [
+      "Vector admitido en la base vectorial del tenant correspondiente"
+    ],
+    "exceptions": [
+      "Archivos marcados como D5 o con sospecha de filtración ilegal son bloqueados y puestos en cuarentena preventiva"
+    ]
+  },
+  "entities": [
+    "OWASP GenAI 2025",
+    "Qdrant Multitenancy",
+    "Compuertas Copulativas",
+    "RAG Admissibility",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Fuente Candidata",
+      "to": "4 Compuertas",
+      "type": "EVALUATED_AGAINST"
+    },
+    {
+      "from": "Qdrant Payload",
+      "to": "tenant_id",
+      "type": "FILTERS_STRICTLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Vectorización indiscriminada de todos los archivos vs Compuertas de admisibilidad",
+      "diferencia": "La vectorización indiscriminada filtra contraseñas, PII y secretos en las respuestas de la IA; las compuertas garantizan que solo el conocimiento seguro y autorizado participe en RAG."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "inadmissible_vector_rejection_rate": "100% de documentos no conformes rechazados previo a vectorización",
+    "cross_tenant_vector_filter_pass_rate": "100% de consultas vectoriales ejecutadas con filtro de tenant"
+  },
+  "bridge_implications": "Obliga a BRIDGE a implementar middleware de filtrado previo a la vectorización y a inyectar siempre `tenant_id` como filtro de payload mandatorio en Qdrant.",
+  "open_gaps": [
+    "Medición del impacto en latencia de vectorización al incorporar escaneo profundo de PII mediante LLMs locales."
+  ],
+  "next_question_ids": [
+    "P11-F04",
+    "P11-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

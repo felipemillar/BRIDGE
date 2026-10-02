@@ -1,0 +1,164 @@
+{
+  "question_id": "T01-F39",
+  "pilar": "T01",
+  "eje": "Entrevistas y disposición a pagar",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué señales de complacencia o sesgo de selección afectan las conclusiones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En la evaluación cualitativa de pilotos de IA corporativa intervienen sesgos sistemáticos que distorsionan gravemente las conclusiones si no se detectan y neutralizan activamente: 1) Sesgo de Complacencia y Cortesía Social (Social Desirability Bias): Usuarios y directivos que elogian efusivamente la plataforma en entrevistas presenciales para no incomodar al equipo fundador, pero cuya telemetría real revela un uso casi nulo (WAP < 30%) o abandono en la segunda semana; 2) Sesgo de Selección de Usuarios (Friendly User Bias): Incluir en el piloto exclusivamente a analistas entusiastas de la tecnología ('early adopters' tecnófilos) o departamentos amigos, ignorando a los analistas escépticos o al área de cumplimiento legal donde residen los verdaderos bloqueos organizacionales; y 3) 'Efecto Novedad' Transitorio (Novelty Bias): Picos artificiales de uso durante los primeros 5 días impulsados por la curiosidad de 'probar la IA', que decaen abruptamente cuando el analista debe enfrentar tareas de alta complejidad fáctica y responsabilidad regulatoria.",
+  "findings": [
+    {
+      "claim_id": "T01-F39-C1",
+      "claim": "Cooper (2016-2025) y T01_QUALITY_ADDENDUM estipulan que los pilotos corporativos deben contrastar siempre la opinión declarada contra el comportamiento observado por telemetría, tratando la discrepancia entre elogios verbales y bajo uso real como un síntoma inequívoco de fracaso funcional o complacencia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Cooper & T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & Agile Integration",
+          "original_url": null,
+          "locator": "Pitfalls in Field Trials: The Courtesy and Selection Bias",
+          "excerpt_short": "Testing with 'friendly' customers who shower praise but fail to integrate the tool into daily operations leads to disastrous commercial launches.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 7: Detección de Sesgos en Pilotos Comerciales",
+          "excerpt_short": "Si la tasa de uso semanal (WAP) es inferior al 70%, cualquier puntaje cualitativo favorable queda invalidado por presunción de sesgo de complacencia.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Consenso metodológico explícito sobre mitigación de sesgos.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registros semanales de telemetría de login y queries",
+      "Transcripciones de entrevistas de feedback"
+    ],
+    "actors": [
+      "Auditor de Piloto",
+      "Investigador de Producto"
+    ],
+    "steps": [
+      "Cruzar los minutos de uso efectivo por analista contra su valoración en la entrevista",
+      "Identificar la brecha 'decir vs hacer' (Say/Do Ratio)",
+      "Incluir obligatoriamente en la cohorte del piloto a usuarios escépticos y al área jurídica",
+      "Aislar la métrica WAP de la semana 4 (post-efecto novedad) para la decisión de compuerta G2"
+    ],
+    "states": [
+      "CRUCE_TELEMETRIA_ENTREVISTA",
+      "DETECCION_SAY_DO_GAP",
+      "AUDITORIA_SESGOS",
+      "DICTAMEN_ADOPCION"
+    ],
+    "outputs": [
+      "Reporte de Adopción Real Descontado de Sesgos",
+      "Métrica Say/Do Ratio"
+    ],
+    "exceptions": [
+      "Si un analista con alta calificación cualitativa presenta cero consultas en las últimas 2 semanas, su testimonio se excluye del informe comercial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SESGO_COMPLACENCIA",
+      "type": "riesgo",
+      "name": "Sesgo de Complacencia y Cortesía Social",
+      "aliases": [
+        "Courtesy Bias"
+      ]
+    },
+    {
+      "entity_id": "SAY_DO_RATIO",
+      "type": "metrica",
+      "name": "Ratio Decir vs Hacer",
+      "aliases": [
+        "Say/Do Metric"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SESGO_COMPLACENCIA",
+      "predicate": "amenaza_validez_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F39-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Opinión Declarada (Entrevista)",
+      "item_b": "Acción Observada (Telemetría)",
+      "dimension": "Veracidad de adopción",
+      "conclusion": "La telemetría es objetiva e inmune a la cortesía; la opinión declarada tiende a sobrestimar la utilidad para agradar."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de actividad semanal profesional (WAP) en Semana 4",
+      "denominator": "Total licencias activadas en el piloto",
+      "target": ">= 70%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Protege a los fundadores e inversionistas de BRIDGE de autoengañarse con pilotos falsamente positivos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F40",
+    "T01-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

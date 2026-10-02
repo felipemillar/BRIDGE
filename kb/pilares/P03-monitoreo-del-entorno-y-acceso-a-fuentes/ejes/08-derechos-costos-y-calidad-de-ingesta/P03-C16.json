@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C16",
+  "pilar": "P03",
+  "eje": "Derechos, costos y calidad de ingesta",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué sigue sin prueba sobre derechos, costos y calidad de ingesta, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba pública el Costo Total de Propiedad (TCO) real y los cargos ocultos en la contratación de suites de monitoreo comercial de medios (Factiva, Meltwater, Cision, TVEyes) para empresas con operaciones en Chile: 1) Brecha: Los contratos comerciales operan bajo estrictas cláusulas de confidencialidad (NDA), ocultando sobrecostos recurrentes por exceso de volumen de menciones, tarifas de activación de conectores de API y gastos en horas de consultoría de onboarding; 2) Fuente fallida/parcial: Las cotizaciones públicas y casos de éxito de marketing omiten deliberadamente estos sobrecostos contractuales; 3) Validación mínima: Diseñar y ejecutar una encuesta de auditoría de adquisiciones confidencial y anonimizada con 15 directores de finanzas y de asuntos corporativos en América Latina que hayan licitado e implementado suites de inteligencia de medios en los últimos 24 meses, levantando los costos reales de licenciamiento, cargos por sobreuso, costos de infraestructura interna y tiempo real de puesta en marcha para modelar el multiplicador empírico del TCO frente al precio de lista nominal.",
+  "findings": [
+    {
+      "claim_id": "P03-C16-C1",
+      "claim": "Sigue sin prueba el Costo Total de Propiedad (TCO) real y los sobrecostos ocultos de las grandes suites de monitoreo de medios, requiriendo una encuesta de adquisiciones confidencial con 15 directores corporativos en América Latina.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "América Latina / Chile",
+        "actor": "Auditoría de TCO P03"
+      },
+      "evidence": [
+        {
+          "source_id": "443e6667-3d26-48ad-b56a-bb825e9ea387",
+          "source_title": "P03_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2.2: Barreras Económicas y Asimetrías de Acceso Corporativo",
+          "excerpt_short": "El acceso legal y programático... requiere contratos directos de sindicación o licencias enterprise... con costos anuales que superan las decenas de miles de dólares.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de los vacíos de contratación identificados en P03_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario de costos de adquisición",
+      "Panel de 15 directores corporativos"
+    ],
+    "actors": [
+      "Procurement Auditor",
+      "TCO Modeler"
+    ],
+    "steps": [
+      "Encuesta confidencial bajo NDA",
+      "Recopilación de facturas anonimizadas",
+      "Cálculo de multiplicador de TCO real"
+    ],
+    "states": [
+      "Survey_Designed",
+      "Interviews_Completed",
+      "TCO_Model_Published"
+    ],
+    "outputs": [
+      "Modelo de TCO real y costos ocultos en suites de inteligencia de medios"
+    ],
+    "exceptions": [
+      "Negativa de ejecutivos a compartir datos contractuales por temor a penalizaciones"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTUDIO_TCO_MONITOREO",
+      "type": "estudio_financiero",
+      "name": "Estudio de TCO Real en Monitoreo de Medios",
+      "aliases": [
+        "Real TCO Media Ingest Study"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESTUDIO_TCO_MONITOREO",
+      "predicate": "resuelve_incertidumbre_de",
+      "object_id": "Eje_Derechos_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C16-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Multiplicador de TCO Real sobre Licencia Nominal",
+      "numerator": "Costo total pagado en año 1 (licencia + consultoría + sobreuso de API)",
+      "denominator": "Costo nominal de la cotización inicial de software",
+      "context": "Evaluación empírica de sobrecostos ocultos de suites de monitoreo"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Posicionar la propuesta comercial de BRIDGE con una tarifa plana sin costos ocultos por volumen ni cobros sorpresivos por consultas a la base de datos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_P03_REAL_TCO_MONITORING",
+      "description": "Falta de transparencia sobre el TCO real y sobrecostos en suites de medios",
+      "action": "Ejecutar encuesta de adquisiciones con 15 directores corporativos"
+    }
+  ],
+  "next_question_ids": [
+    "P04-F01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "question_id": "T01-X08",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Diseño estadístico y tamaño de muestra",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre diseño estadístico y tamaño de muestra, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal el cálculo de la correlación intra-clúster (ICC - Intra-Cluster Correlation) en respuestas generadas para un mismo cliente corporativo: 1) Vacío Identificado: Cuando se evalúan múltiples claims generados para una misma empresa minera que comparte un repositorio común de documentos, los errores no son estrictamente independientes (efecto clúster o diseño anidado), lo cual puede inflar artificialmente el tamaño de muestra efectivo si no se ajusta por el Factor de Inflación de la Varianza (VIF); 2) Fuente Fallida / Parcial: Ni ARES (bff33bd6) ni ALCE (e1a0171b) modelan datos agrupados en clústeres jerárquicos multi-tenant; y 3) Validación Mínima Necesaria: Conducir un análisis de modelos mixtos jerárquicos (Hierarchical Linear Models / Mixed-Effects) sobre 10 tenants distintos con al menos 50 claims por tenant para estimar el ICC y calibrar el multiplicador de ajuste de tamaño de muestra.",
+  "findings": [
+    {
+      "claim_id": "T01-X08-C1",
+      "claim": "La independencia estadística de las afirmaciones fácticas evaluadas dentro de un mismo tenant corporativo es un supuesto no verificado en el corpus, existiendo riesgo de correlación intra-clúster que podría reducir el tamaño muestral efectivo real de las pruebas de piloto.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "The Bridge Intelligence Biostatistics"
+      },
+      "evidence": [
+        {
+          "source_id": "bff33bd6-afbc-4544-b611-640f2023a150",
+          "source_title": "Saad-Falcon et al. (2023) — ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+          "original_url": "https://arxiv.org/pdf/2311.09476.pdf",
+          "locator": "Section 5: Limitations and Independent Sampling Assumptions",
+          "excerpt_short": "ARES assumes independent and identically distributed (i.i.d.) observations; hierarchical clustering of queries within dedicated organizational sub-corpora remains an open statistical problem.",
+          "source_date": "2023-11-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Limitación del supuesto de independencia i.i.d. en ARES.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos de evaluación de 10 clientes corporativos distintos (50 claims c/u)",
+      "Software estadístico para modelos lineales jerárquicos (lme4 en R / statsmodels en Python)"
+    ],
+    "actors": [
+      "Bioestadístico de BRIDGE",
+      "Auditor de ML"
+    ],
+    "steps": [
+      "Ajustar un modelo de efectos mixtos con intercepto aleatorio por cliente",
+      "Calcular el coeficiente de correlación intra-clúster (ICC = sigma_entre / (sigma_entre + sigma_intra))",
+      "Determinar el Factor de Inflación de Varianza (VIF = 1 + (m - 1) * ICC)",
+      "Ajustar el tamaño de muestra requerido multiplicando n_simple por VIF"
+    ],
+    "states": [
+      "EXTRACCION_DATOS_MULTITENANT",
+      "MODELO_EFECTOS_MIXTOS",
+      "CALCULO_ICC_VIF",
+      "AJUSTE_TAMANO_MUESTRA"
+    ],
+    "outputs": [
+      "Reporte de Correlación Intra-Clúster y Muestreo Jerárquico"
+    ],
+    "exceptions": [
+      "Si el ICC es mayor a 0.25, el tamaño de muestra efectivo se reduce a la mitad y exige duplicar el número de clientes en prueba"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CORRELACION_INTRA_CLUSTER",
+      "type": "metrica",
+      "name": "Coeficiente de Correlación Intra-Clúster (ICC)",
+      "aliases": [
+        "Hierarchical Clustering Factor"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CORRELACION_INTRA_CLUSTER",
+      "predicate": "ajusta_muestreo_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X08-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Coeficiente ICC en claims de un mismo tenant",
+      "denominator": "Varianza total observada",
+      "target": "<= 0.15"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Asegura que los tamaños de muestra de los pilotos no subestimen la varianza entre diferentes sectores industriales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Estimación empírica del coeficiente de correlación intra-clúster (ICC) en evaluaciones multi-tenant de asuntos corporativos",
+      "minimum_validation": "Análisis de efectos mixtos sobre 500 claims provenientes de 10 organizaciones heterogéneas",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "T01-X09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

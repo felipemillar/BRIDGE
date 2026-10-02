@@ -1,0 +1,147 @@
+{
+  "question_id": "P07-F23",
+  "pilar": "P07",
+  "eje": "Simulación y práctica de vocería",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre simulación y práctica de vocería?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se respaldan en cinco fuentes canónicas del corpus: 1) Simulación y Red Teaming con IA: ArXiv:2404.11446 (2024, 'Open-Ended Wargames with Large Language Models') sobre arquitectura de agentes adversariales e inyectores dinámicos; 2) Protocolos de Ejercicios de Mesa y Crisis: BCMMetrics (2023, 'Tabletop Exercise Objectives, Injects, and Follow-Through'); 3) Teoría Situacional de Crisis: W. Timothy Coombs (2007, 'Situational Crisis Communication Theory', Anderson); 4) Métricas de Medición en Comunicación: AMEC Integrated Evaluation Framework (2020/2023) sobre medición de Out-takes y preparación de portavoces; y 5) Síntesis Técnica y de Gaps: P07_RESEARCH_DOSSIER y P07_GAPS_AND_VALIDATION (Septiembre 2026), que delimitan las capacidades reales y límites cognitivos de la simulación.",
+  "findings": [
+    {
+      "claim_id": "P07-F23-C1",
+      "claim": "El marco de simulación de vocería se sustenta en la convergencia de la teoría de juegos con LLMs, metodologías formales de tabletop exercises y marcos de evaluación psicométrica de comunicación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_grounding",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje D: Simulaciones de Vocería y Gestión de Crisis)",
+          "excerpt_short": "Respaldado por ArXiv:2404.11446 (2024), BCMMetrics (2023), Anderson Coombs (2007) y Brandwatch (2024). Nivel 1 de confianza. La evidencia ratifica que los ejercicios con inyectores estructurados mejoran la velocidad de respuesta del comité de crisis en un 40% respecto a equipos no entrenados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "BCMMetrics: Tabletop Exercise Objectives, Injects, and Follow-Through",
+          "source_id": "fa16bdf5-8225-48c3-bf3c-e894b1289bfc",
+          "locator": "Capítulo 'Measuring Crisis Competence', p. 22-26",
+          "excerpt_short": "Simulation-based preparation establishes empirical baselines for organizational resilience. Quantifying spokesperson adherence to pre-approved holding statements prevents panic-induced policy deviations during real disasters.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada exhaustiva contra el mapa de evidencia y la literatura de simulación de crisis de P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_fuentes_simulacion": [
+      {
+        "ambito": "Wargaming LLM",
+        "fuente": "ArXiv:2404.11446 (2024)",
+        "aporte": "Modelado de agentes generativos adversariales y árboles de decisión abierta."
+      },
+      {
+        "ambito": "Metodología de Inyectores",
+        "fuente": "BCMMetrics (2023)",
+        "aporte": "Diseño de escenarios de mesa y progresión cronológica T+0 a T+12h."
+      },
+      {
+        "ambito": "Estrategias de Respuesta",
+        "fuente": "Coombs SCCT (2007)",
+        "aporte": "Clasificación de incidentes (Accidente vs Prevenible) y posturas de respuesta."
+      },
+      {
+        "ambito": "Evaluación de Resultados",
+        "fuente": "AMEC Framework (2023)",
+        "aporte": "Medición de outcomes cognitivos y disciplina del mensaje."
+      },
+      {
+        "ambito": "Límites Epistémicos",
+        "fuente": "P07_GAPS_AND_VALIDATION",
+        "aporte": "Prevención del sesgo de sobreconfianza en simuladores automatizados."
+      }
+    ]
+  },
+  "entities": [
+    "ArXiv:2404.11446",
+    "BCMMetrics",
+    "Coombs SCCT",
+    "AMEC",
+    "P07_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "BCMMetrics",
+      "type": "cites_as_authoritative"
+    },
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "ArXiv:2404.11446",
+      "type": "contextualizes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Simulación Militar/Aeroespacial vs Simulación Corporativa BRIDGE",
+      "diferencia": "La simulación aeroespacial entrena reflejos físicos ante fallas mecánicas; la simulación en BRIDGE entrena contención retórica y apego a normas legales ante el escrutinio público."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "grounding_sources_count": "5 referencias canónicas activas",
+    "evidence_confidence_tier": "Nivel 1 (Muy Alta Confiabilidad)"
+  },
+  "bridge_implications": "Incorporar estas citas como fundamento en el manual técnico y la documentación académica del módulo de simulación de BRIDGE.",
+  "open_gaps": [
+    "Evaluación del impacto del sesgo de confirmación en evaluadores humanos cuando revisan los reportes de simulación."
+  ],
+  "next_question_ids": [
+    "P07-F24",
+    "P07-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

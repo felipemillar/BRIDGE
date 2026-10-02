@@ -1,0 +1,153 @@
+{
+  "question_id": "P10-F24",
+  "pilar": "P10",
+  "eje": "RACI, DACI y cadena de aprobación",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra rACI, DACI y cadena de aprobación sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto: Autorización y Despacho de Hecho Esencial por Modificación de Cronograma de Inversión (Minera Los Bronces). Entradas: 1) Solicitud de Prensa recibida por rumor en Bloomberg sobre paralización de planta; 2) Ficha técnica del Shared Fact Record (P04) certificada por el Gerente de Proyectos: detención programada de concentrador por mantenimiento mayor de 72 horas, sin impacto en meta anual de producción (320.000 ton); 3) Borrador v0.1 redactado por el Especialista de Comunicaciones (Driver); 4) Revisión cruzada de Fiscal Legal y Gerente de Finanzas (Contributors); 5) Puerta de Aprobación asignada a Gerente General (Approver). Proceso: El Driver genera v0.1 citando la ficha del SFR; Fiscal revisa y añade safe harbor y cláusula de reserva conforme a NCG 30; se eleva a v0.9; el Gerente General recibe la solicitud y emite su firma criptográfica en el sistema. Resultado Esperado: El mensaje pasa al estado APPROVED_STAGED; el Operador de Canal despacha el Hecho Esencial a la CMF y simultáneamente libera el comunicado de prensa a los medios, registrando en la bitácora inmutable las identidades de autor, revisores, aprobador y el hash del texto final.",
+  "findings": [
+    {
+      "claim_id": "P10-F24-C1",
+      "claim": "El caso documenta la ejecución end-to-end de una cadena de aprobación regulada, verificando el rol de cada participante y el cumplimiento de las condiciones de no alteración y segregación de funciones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_approval_execution",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 6 'Escenarios Sintéticos de Ejecución Integral (Escenario A: Reporte NCG 461 / Emisión)'",
+          "retrieved_at": null,
+          "excerpt_short": "Secuencia: Redactor prepara borrador anclado al SFR -> Asesor legal certifica cumplimiento de NCG 30 -> Gerente General emite sign-off digital -> Difusión simultánea a CMF y medios.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "CMF Chile: Norma de Caracter General NCG 30 (Difusion de Hechos Esenciales)",
+          "source_id": "9b7c3a77-f239-472f-b2c3-d19e464a44ec",
+          "locator": "Sección II 'Instrucciones sobre difusión simultánea'",
+          "retrieved_at": null,
+          "excerpt_short": "La difusión al público de hechos esenciales debe realizarse en forma simultánea a su transmisión a la Comisión para el Mercado Financiero, asegurando que ningún sector reciba trato privilegiado.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los requerimientos normativos de la CMF y el caso modelado en el dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Rumor de prensa solicitando aclaración inmediata",
+      "Datos de producción y mantenimiento certificados",
+      "Borrador v0.1 generado por redactor"
+    ],
+    "actors": [
+      "Redactor (Driver)",
+      "Gerente Legal (Contributor)",
+      "Gerente General (Approver)",
+      "Operador Prensa (Publisher)"
+    ],
+    "steps": [
+      "Generación de borrador con cotejo automático contra SFR",
+      "Revisión y adición de safe harbor por Legal",
+      "Firma digital del Gerente General en el portal de aprobación",
+      "Generación de hash SHA-256 del contenido final",
+      "Despacho simultáneo a CMF SEIL y distribución a medios de prensa"
+    ],
+    "states": [
+      "INGESTION",
+      "FACT_VERIFICATION",
+      "LEGAL_REVIEW",
+      "EXECUTIVE_APPROVAL",
+      "SIMULTANEOUS_RELEASE"
+    ],
+    "outputs": [
+      "Hecho Esencial CMF publicado",
+      "Comunicado de Prensa oficial en portal corporativo",
+      "Registro de auditoría cerrado e inmutable"
+    ],
+    "exceptions": [
+      "Si la detención excediera 72 horas con impacto en EBITDA, se requiere convocatoria de Directorio extraordinario"
+    ]
+  },
+  "entities": [
+    "Hecho Esencial",
+    "CMF SEIL",
+    "Shared Fact Record",
+    "Gerente General",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Borrador v0.1",
+      "to": "Firma Digital Gerente General",
+      "type": "REQUIRES_AUTHORIZATION"
+    },
+    {
+      "from": "Mensaje Aprobado",
+      "to": "CMF y Prensa",
+      "type": "DISPATCHED_SIMULTANEOUSLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta desarticulada ante rumor vs Flujo gobernado de hecho esencial",
+      "diferencia": "La respuesta desarticulada genera volatilidad bursátil y multas de la CMF; el flujo gobernado neutraliza el rumor con datos verificados y respaldo institucional unánime."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "case_execution_latency_minutes": "Tiempo total desde rumor hasta comunicado oficial (Target < 60 min)",
+    "factual_integrity_score": "100% de coincidencia numérica entre SFR y comunicado emitido"
+  },
+  "bridge_implications": "Demuestra la viabilidad práctica del motor de flujos de BRIDGE para orquestar respuestas corporativas complejas bajo presión de tiempo y rigor normativo.",
+  "open_gaps": [
+    "Automatización de la prueba de entrega (proof of delivery) ante agencias internacionales de noticias."
+  ],
+  "next_question_ids": [
+    "P10-F25",
+    "P10-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

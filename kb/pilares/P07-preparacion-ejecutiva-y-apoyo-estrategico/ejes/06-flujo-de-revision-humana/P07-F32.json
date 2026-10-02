@@ -1,0 +1,134 @@
+{
+  "question_id": "P07-F32",
+  "pilar": "P07",
+  "eje": "Flujo de revisión humana",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Cómo se registran cambios y razones de aprobación o rechazo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se registran mediante una pista de auditoría inmutable basada en Event Sourcing y control de versiones semántico: 1) Cada edición de texto genera un diff estructurado (redlining) que almacena el valor anterior, el valor modificado, el identificador del usuario, el rol y el timestamp UTC; 2) En caso de rechazo de un borrador o de una cifra sugerida por la IA, el sistema exige un campo obligatorio de 'Justificación / Razón de Rechazo' (ej. 'Cifra desactualizada; usar reporte Q3 auditado'); 3) Los estados de transición (Draft -> In Review -> Approved / Rejected) quedan firmados digitalmente; y 4) Todos los registros se archivan de modo append-only con encadenamiento de hashes SHA-256 para garantizar su valor probatorio ante auditorías internas o fiscalizaciones regulatorias.",
+  "findings": [
+    {
+      "claim_id": "P07-F32-C1",
+      "claim": "Los flujos de revisión humana deben registrarse en pistas de auditoría inmutables que capturen las justificaciones de rechazo y las modificaciones textuales para asegurar total trazabilidad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "audit_trail_mechanisms",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 4.1 y Sección 7",
+          "excerpt_short": "Trazabilidad y Atribución: Cada cambio efectuado por un revisor humano sobre el borrador generado por la IA debe persistir en el registro de auditoría con la justificación del cambio, el timestamp exacto y la firma de usuario. Se prohíbe la sobreescritura destructiva de versiones.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "NIST: AI Risk Management Framework (AI RMF 1.0)",
+          "source_id": "3e70b28e-2295-4ce6-9f9f-efc2bfd4a5bf",
+          "locator": "Función GOVERN 1.2, p. 22-26",
+          "excerpt_short": "Maintaining comprehensive logs of human decisions, modifications to model suggestions, and explicit override justifications creates accountable feedback loops and mitigates institutional liability.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares de trazabilidad de NIST AI RMF y la arquitectura de logs inmutables de P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "registro_pista_auditoria": {
+      "audit_entry_id": "AUD-2026-10-01-992",
+      "brief_id": "BRF-SMA-LOS-SALARES",
+      "timestamp_utc": "2026-10-01T07:15:30Z",
+      "usuario": "mrodriguez_cco",
+      "accion": "REVISE_AND_APPROVE",
+      "cambio_realizado": {
+        "campo": "Mensaje_Clave_1",
+        "texto_original": "No tenemos responsabilidad en la sequía de los regantes.",
+        "texto_aprobado": "Minera Los Salares opera al 100% con agua de mar desalada y no extrae agua continental, según acreditan las auditorías de la DGA.",
+        "motivo_cambio": "Eliminar tono defensivo y reemplazar por dato auditable DGA."
+      },
+      "hash_integridad": "sha256:7f8a92...b3c"
+    }
+  },
+  "entities": [
+    "NIST AI RMF",
+    "Event Sourcing",
+    "Audit Trail",
+    "Redlining",
+    "SHA-256"
+  ],
+  "relations": [
+    {
+      "from": "Audit Trail",
+      "to": "Brief Ejecutivo",
+      "type": "tracks_modifications_of"
+    },
+    {
+      "from": "Revisor Humano",
+      "to": "Motivo de Cambio",
+      "type": "submits"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Historial de Cambios de Word vs Audit Trail Criptográfico",
+      "diferencia": "El historial de Word puede alterarse o borrarse; el audit trail criptográfico garantiza inmutabilidad y valor legal ante litigios corporativos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "audit_completeness": "100% de ediciones con autor, timestamp y motivo",
+    "log_immutability": "Append-only con encadenamiento de hashes"
+  },
+  "bridge_implications": "Implementar este mecanismo en la base de datos de BRIDGE para soportar el historial de versiones de cada brief.",
+  "open_gaps": [
+    "Cálculo del costo de almacenamiento a largo plazo de diffs completos para miles de borradores corporativos diarios."
+  ],
+  "next_question_ids": [
+    "P07-F33",
+    "P07-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

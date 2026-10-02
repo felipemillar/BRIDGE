@@ -1,0 +1,148 @@
+{
+  "question_id": "P10-F46",
+  "pilar": "P10",
+  "eje": "Indicadores y límites normativos",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar indicadores y límites normativos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de indicadores de desempeño y límites regulatorios exige modelar: 1) Entidad GovernanceKPI (kpi_id, metric_name: [APPROVAL_LEAD_TIME, CORRECTION_RATE, FACTUAL_INACCURACY_RATE, SAFE_REUSABILITY_INDEX], calculation_formula, measurement_unit, current_value, target_value, evaluation_frequency); 2) Entidad RegulatoryBoundary (boundary_id, regulation_code: [LEY_18045, CMF_NCG_30, CMF_NCG_461, LEY_19496, LEY_20730, SEC_REG_FD, SEC_RULE_10B5, EU_GREEN_CLAIMS_PROPOSAL], jurisdiction: [CL, US, EU], binding_status: [LEGALLY_ENFORCEABLE, PROPOSED_LEGISLATION, VOLUNTARY_STANDARD], affected_business_entities: list, penal_sanction_risk: boolean); 3) Relaciones Operacionales (ENFORCES_BOUNDARY, MONITORED_BY_KPI, SUBJECT_TO_REGULATION); y 4) Condiciones Booleanas de Seguridad (factual_inaccuracy_rate == 0.0, if (jurisdiction == 'CL' and security_type == 'LISTED_EQUITY') -> enforce(CMF_NCG_30), if (regulation == 'EU_GREEN_CLAIMS_PROPOSAL') -> set_attribute(binding_status = 'PROPOSED_LEGISLATION')).",
+  "findings": [
+    {
+      "claim_id": "P10-F46-C1",
+      "claim": "El modelamiento estructurado exige esquemas formales para métricas de gobernanza y límites regulatorios territoriales, asegurando que las reglas de negocio informen el estatus vinculante de cada norma.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_schema_kpis_and_boundaries",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 7 'Modelo de Datos para Métricas y Límites Normativos'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades requeridas: GovernanceMetric, RegulatoryScope, ComplianceCheckResult. Validación: Si la entidad no tiene ADRs en EE.UU., desactivar obligatoriedad de filings SEC pero mantener mejores prácticas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "AMEC: Integrated Evaluation Framework for PR and Communications",
+          "source_id": "b79a534f-1f53-43ff-b1e3-b967b1e7e0d6",
+          "locator": "Section 'Metric Schemas and Evaluation Logic'",
+          "retrieved_at": null,
+          "excerpt_short": "Evaluation architectures require consistent taxonomies distinguishing operational outputs from behavioral outcomes, binding performance indicators to organizational accountability.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño relacional consistente con las especificaciones de software de cumplimiento y gobernanza corporativa.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de esquemas de base de datos",
+      "Datos telemétricos de uso",
+      "Mapeo jurisdiccional"
+    ],
+    "actors": [
+      "Administrador de Cumplimiento",
+      "Motor de Reglas BRIDGE",
+      "Auditor Externo"
+    ],
+    "steps": [
+      "Persistencia de métricas operacionales agregadas en tablas dedicadas",
+      "Cruce periódico de piezas comunicacionales contra límites normativos territoriales",
+      "Generación de reportes de alerta ante desviaciones de SLAs o tasas de corrección",
+      "Exportación de esquemas en formato JSON validado para auditorías de sistemas"
+    ],
+    "states": [
+      "SCHEMAS_REGISTERED",
+      "METRICS_TRACKED",
+      "BOUNDARIES_EVALUATED",
+      "REPORT_EMITTED"
+    ],
+    "outputs": [
+      "Estructura de auditoría y monitoreo continuo de calidad"
+    ],
+    "exceptions": [
+      "Superar el umbral máximo de tasa de corrección (1%) bloquea temporalmente la publicación de bajo riesgo hasta revisión de directores"
+    ]
+  },
+  "entities": [
+    "GovernanceKPI",
+    "RegulatoryBoundary",
+    "AMEC Framework",
+    "JSON Schema",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "RegulatoryBoundary",
+      "to": "GovernanceKPI",
+      "type": "SETS_COMPLIANCE_THRESHOLD"
+    },
+    {
+      "from": "GovernanceKPI",
+      "to": "Proceso de Publicación",
+      "type": "MONITORS_HEALTH"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Métricas aisladas en hojas de cálculo vs Esquema de base de datos relacional",
+      "diferencia": "Las hojas de cálculo se desactualizan y permiten manipulación; el esquema relacional calcula indicadores automáticamente desde los logs de producción inmutables."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "kpi_calculation_engine_uptime": "99.9% de disponibilidad en el cómputo de métricas",
+    "regulatory_mapping_completeness": "100% de normas vinculantes categorizadas con jurisdicción explícita"
+  },
+  "bridge_implications": "Permite a BRIDGE ofrecer tableros de gobernanza en tiempo real a los comités de auditoría de los directorios corporativos.",
+  "open_gaps": [
+    "Integración con plataformas de gestión de riesgos de gobernanza corporativa (e.g., Diligent, Nasdaq Boardvantage)."
+  ],
+  "next_question_ids": [
+    "P10-F47",
+    "P10-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

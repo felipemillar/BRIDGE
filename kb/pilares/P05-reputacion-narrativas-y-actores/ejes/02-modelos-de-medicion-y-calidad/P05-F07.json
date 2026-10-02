@@ -1,0 +1,177 @@
+{
+  "question_id": "P05-F07",
+  "pilar": "P05",
+  "eje": "Modelos de medición y calidad",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué dimensiones y poblaciones usan los modelos de reputación revisados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los cinco modelos de medición analizados en el corpus operan con dimensiones y poblaciones marcadamente diferenciadas: 1) RepTrak (The RepTrak Company): Evalúa a la población informada y público general mediante encuestas online representativas; se estructura en 7 drivers racionales (Productos/Servicios, Innovación, Lugar de Trabajo, Gobernanza, Ciudadanía, Liderazgo, Desempeño Financiero) que explican el vínculo emocional Pulse (admiración, respeto, confianza, buena estima); 2) Merco (Monitor Empresarial de Reputación Corporativa): Modelo multistakeholder híbrido y secuencial que evalúa a directivos empresariales (empresas con facturación > US$ 30M), expertos independientes (analistas financieros, periodistas económicos, ONGs, sindicatos, académicos, asociaciones de consumidores) y población general, evaluando estrategia comercial, gobierno corporativo, ESG, talento e innovación, complementado con auditoría de méritos objetivos bajo norma ISAE 3000 por KPMG; 3) Cadem Marcas Ciudadanas (Chile): Evalúa una muestra nacional representativa de consumidores y ciudadanos en Chile en 3 pilares clave: Presencia Positiva, Relevancia en el día a día y Aporte a la sociedad; 4) Group Caliber: Evalúa paneles continuos diarios en tiempo real de consumidores e inversores minoristas, midiendo el índice Trust & Like y tracking diario ESG; y 5) AMEC (Integrated Evaluation Framework): No utiliza una población fija predeterminada sino las audiencias objetivo del plan comunicacional, midiendo la cadena causal de resultados (Inputs, Actividades, Outputs, Out-takes, Outcomes e Impacto Organizacional) sin colapsar en un índice numérico único.",
+  "findings": [
+    {
+      "claim_id": "P05-F07-C1",
+      "claim": "Los modelos de reputación divergen sustancialmente en sus poblaciones objetivo y dimensiones analíticas, abarcando desde encuestas normativas de consumidores hasta paneles multistakeholder auditados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2026",
+        "region": "Global / Chile",
+        "actor": "Proveedores de Medición de Reputación"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2: Comparativa Metodológica de Modelos de Medición de Reputación",
+          "excerpt_short": "Tabla comparativa de RepTrak, Merco, Cadem Chile, Group Caliber y AMEC detallando público evaluado, dimensiones clave, métrica de salida, auditoría externa y limitaciones.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "e31c5482-91a2-4920-8b1b-60f9aa5e1c6f",
+          "source_title": "Merco: Metodología Multistakeholder del Monitor Empresarial de Reputación Corporativa",
+          "original_url": "https://www.merco.info/cl/metodologia",
+          "locator": "Sección: Fases de la Evaluación Merco",
+          "excerpt_short": "Evaluación secuencial: directivos, expertos (financieros, periodistas, ONG, sindicatos, catedráticos), público general y evaluación directa de méritos objetivos. Auditado por KPMG bajo norma ISAE 3000.",
+          "source_date": "2024-05-10",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Metodologías públicas documentadas por los propios organismos emisores y sintetizadas en el dossier canónico.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionarios estructurados",
+      "Paneles de expertos",
+      "Muestras de consumidores",
+      "Indicadores de mérito empresarial"
+    ],
+    "actors": [
+      "The RepTrak Company",
+      "Merco / KPMG",
+      "Cadem Chile",
+      "Group Caliber",
+      "AMEC"
+    ],
+    "steps": [
+      "Diseño muestral y selección de informantes",
+      "Aplicación de encuestas y paneles",
+      "Ponderación por dimensiones",
+      "Normalización y publicación de índices"
+    ],
+    "states": [
+      "Fieldwork_Active",
+      "Data_Cleaned",
+      "Scored_and_Audited"
+    ],
+    "outputs": [
+      "Rankings de reputación, índices de favorabilidad y scorecards multidimensionales"
+    ],
+    "exceptions": [
+      "Baja tasa de respuesta en paneles de directivos o sesgos de deseabilidad social"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REPTRAK",
+      "type": "modelo_medicion",
+      "name": "The RepTrak Company",
+      "aliases": [
+        "RepTrak 100",
+        "RepTrak Pulse"
+      ]
+    },
+    {
+      "entity_id": "ENT_MERCO",
+      "type": "modelo_medicion",
+      "name": "Merco",
+      "aliases": [
+        "Monitor Empresarial de Reputación Corporativa"
+      ]
+    },
+    {
+      "entity_id": "ENT_CADEM_MC",
+      "type": "modelo_medicion",
+      "name": "Cadem Marcas Ciudadanas",
+      "aliases": [
+        "Marcas Ciudadanas Chile"
+      ]
+    },
+    {
+      "entity_id": "ENT_CALIBER",
+      "type": "modelo_medicion",
+      "name": "Group Caliber",
+      "aliases": [
+        "Caliber Real-Time Intelligence"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MERCO",
+      "predicate": "aplica_auditoria_de",
+      "object_id": "KPMG_ISAE_3000",
+      "valid_from": "2010",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F07-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de informantes",
+      "RepTrak / Cadem": "Primacía de la opinión pública general y consumidores informados.",
+      "Merco": "Ponderación jerárquica con primacía de directivos corporativos, paneles de expertos y méritos duros.",
+      "AMEC": "Audiencias a medida sin panel universal predefinido."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Configuración de Modelos",
+      "implication": "BRIDGE debe permitir registrar qué modelo o índice externo está consultando el usuario corporativo para no comparar erróneamente un score de Cadem con uno de Merco.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

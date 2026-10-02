@@ -1,0 +1,137 @@
+{
+  "question_id": "P07-F19",
+  "pilar": "P07",
+  "eje": "Simulación y práctica de vocería",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué roles y situaciones pueden simularse sin confundir ensayo con reacción real de actores?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Pueden simularse roles arquetípicos de contrapartes parametrizados con posturas estilizadas: 1) Periodista de investigación inquisitivo (obsesionado con contradicciones y cifras); 2) Fiscalizador regulador estricto (enfocado en expedientes SMA o CMF); 3) Dirigente social vecinal (con alta carga emocional y desconfianza comunitaria); y 4) Parlamentario en comisión (que busca posicionamiento político en prensa). Las situaciones simulables incluyen conferencias de prensa de crisis, entrevistas en estudio de televisión y ejercicios de mesa (Tabletop) con inyectores temporales secuenciales. Para evitar la falacia de confundir ensayo con reacción real, el sistema debe etiquetar todo ejercicio como 'Simulación de Patrones Discursivos Sintéticos', advirtiendo que los LLMs no modelan dinámicas emocionales humanas complejas, alianzas de poder informales ni reacciones sociopolíticas contingentes en terreno.",
+  "findings": [
+    {
+      "claim_id": "P07-F19-C1",
+      "claim": "Los simuladores de vocería basados en LLM modelan eficazmente árboles de argumentos adversariales pero no sustituyen la imprevisibilidad política y psicológica de los actores reales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "role_simulation_boundaries",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 1 (Brecha 3: Los Límites Cognitivos y Emocionales de los LLMs en Simulaciones)",
+          "excerpt_short": "Los agentes LLM son capaces de emular preguntas inquisitivas basadas en argumentos lógicos o retórica conocida, pero no capturan la volatilidad emocional genuina, el lenguaje no verbal ni las dinámicas de poder informal de un interrogatorio en vivo. Tratar el ensayo de IA como un pronóstico exacto de la reacción de comunidades u autoridades constituye un riesgo epistémico severo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "ArXiv: Open-Ended Wargames with Large Language Models (Tabletop & Simulations)",
+          "source_id": "07c18a0c-d503-4a4d-ab67-1f5151b04d7c",
+          "locator": "Sección 'Limitations of LLM Roleplay', p. 8-11",
+          "excerpt_short": "LLMs tend toward stylized archetypes and conform to trained politeness or simulated aggression patterns. They should be utilized as adversarial stress-testing tools rather than predictive behavioral oracles.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Advertencia epistémica obligatoria consagrada en el documento de Gaps de P07 y respaldada por la literatura de wargaming con LLMs.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "arquetipos_simulacion": [
+      {
+        "arquetipo": "Periodista Inquisitivo",
+        "conducta": "Insiste en preguntas cerradas (Sí/No), interrumpe el guion y busca contradicciones temporales."
+      },
+      {
+        "arquetipo": "Fiscalizador SMA",
+        "conducta": "Cita normas exactas, exige resoluciones RCA y rechaza argumentarios no fundamentados en informes técnicos."
+      },
+      {
+        "arquetipo": "Líder Vecinal Afectado",
+        "conducta": "Enfoca en sufrimiento comunitario, daño ambiental percibido y pérdida de confianza."
+      },
+      {
+        "arquetipo": "Inversionista ESG",
+        "conducta": "Indaga en riesgos materiales NCG 461, litigios pendientes y provisión contable de contingencias."
+      }
+    ]
+  },
+  "entities": [
+    "ArXiv:2404.11446",
+    "P07_GAPS_AND_VALIDATION",
+    "Tabletop Exercise",
+    "Roleplay Archetype"
+  ],
+  "relations": [
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "Simulación Sintética",
+      "type": "sets_epistemic_limits_for"
+    },
+    {
+      "from": "ArXiv:2404.11446",
+      "to": "Tabletop Exercise",
+      "type": "formalizes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Simulación como Entrenamiento vs Simulación como Oráculo",
+      "diferencia": "El entrenamiento fortalece la disciplina de mensajes del vocero; el oráculo asume falsamente predecir cómo reaccionará la persona real."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "disclaimer_display_rate": "100% de pantallas de simulación con aviso de limitación cognitiva",
+    "archetypes_available": "4 perfiles arquetípicos implementados"
+  },
+  "bridge_implications": "Incorporar en el módulo de vocería de BRIDGE una advertencia visible que encuadre la práctica como gimnasia discursiva y no como predicción conductual.",
+  "open_gaps": [
+    "Incorporación de análisis de tono de voz y prosodia en la interacción con el LLM."
+  ],
+  "next_question_ids": [
+    "P07-F20",
+    "P07-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

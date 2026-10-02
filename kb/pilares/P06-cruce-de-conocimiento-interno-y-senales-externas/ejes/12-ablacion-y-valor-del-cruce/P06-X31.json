@@ -1,0 +1,150 @@
+{
+  "question_id": "P06-X31",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Ablación y valor del cruce",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre ablación y valor del cruce, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en ablación y valor del cruce: 1) Discrepancia: El documento preliminar P06_RESEARCH_DOSSIER afirmaba que 'cualquier cruce de datos internos añade un 100% de valor garantizado a las decisiones corporativas', utilizando métricas genéricas de volumen de citas y asumiendo que más documentos siempre equivale a mejor juicio ejecutivo; 2) Prevalencia canónica: Conforme a P06_QUALITY_ADDENDUM (Sección 5.5) y la literatura de evaluación Ragas/TruLens, PREVALECE el principio de que el cruce mal calibrado puede DEGRADAR la toma de decisiones al introducir ruido irrelevante, sobrecarga cognitiva y mayor riesgo de alucinación sincretista (*The Retrieval Overhead Penalty*). Se establece formalmente que el cruce solo aporta valor si cumple dos condiciones indispensables: a) Alta precisión semántica en el filtrado de documentos relevantes (Context Precision $\\ge 0.90$), y b) Trazabilidad explícita de citas primarias hacia compromisos verificables.",
+  "findings": [
+    {
+      "claim_id": "P06-X31-C1",
+      "claim": "P06_QUALITY_ADDENDUM anula la asunción de que más contexto siempre añade valor, advirtiendo sobre la penalización por sobrecarga y alucinación de ruido.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Gobernanza Editorial P06"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 5.5: La Falacia de la Acumulación Indiscriminada de Contexto",
+          "excerpt_short": "Inyectar documentos internos sin filtro degrada la respuesta del LLM. El cruce solo aporta valor neto si la precisión del contexto supera el 90%.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "7b706c54-6b44-48fe-a0ba-be07e722be6b",
+          "source_title": "Es et al. (2023) - Ragas: Automated Evaluation of RAG",
+          "original_url": "https://arxiv.org/abs/2309.15217",
+          "locator": "Section 3.2: Context Precision and Context Recall",
+          "excerpt_short": "Low context precision directly degrades LLM generation quality by introducing distractor passages that trigger extraneous hallucinations.",
+          "source_date": "2023-09-27",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio técnico corroborado empíricamente por los creadores de Ragas.",
+      "epistemic_status_original": "prevalencia_editorial_correccion",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dossier preliminar",
+      "Addendum de calidad",
+      "Paper Ragas"
+    ],
+    "actors": [
+      "Comité de Arquitectura RAG"
+    ],
+    "steps": [
+      "Identificación de asunción errónea de acumulación de contexto",
+      "Aplicación de prevalencia de Addendum",
+      "Ajuste de filtros de precisión de recuperación"
+    ],
+    "states": [
+      "Context_Maximalism_Deprecating",
+      "Precision_First_Enforced"
+    ],
+    "outputs": [
+      "Política de contexto conciso y de alta relevancia"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRECISION_POLICY",
+      "type": "politica_rag",
+      "name": "Política de Precisión Pre-Generación",
+      "aliases": [
+        "Context Precision Filter"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRECISION_POLICY",
+      "predicate": "reemplaza_estrategia_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X31-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P06-X31-C1"
+      ],
+      "difference": "Dossier asumía que más documentos siempre mejoran la decisión; Addendum demuestra que el exceso de contexto distractor degrada la fidelidad.",
+      "resolution": "resuelta",
+      "reason": "Prevalece P06_QUALITY_ADDENDUM conforme a las normas del mandato."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Optimiza la ingesta de documentos limitándola a fuentes autorizadas y reduciendo el consumo de tokens.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X32"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

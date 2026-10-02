@@ -1,0 +1,145 @@
+{
+  "question_id": "P08-F23",
+  "pilar": "P08",
+  "eje": "Modelos de entrega",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre modelos de entrega?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos sobre modelos de entrega se fundamentan en cinco fuentes principales del corpus: 1) Arthur W. Page Society ('Beyond Communication', 2024-2026), que conceptualiza los servicios apoyados por tecnología y la nueva relación de confianza con el CCO; 2) PRSA Guidance on AI & Ethics (2024-2026), que fundamenta la necesidad ética y jurídica de la supervisión humana no delegable; 3) Michael Page Chile (2025-2026), que sustenta la estructura de costos y viabilidad de asignar analistas a tiempo parcial por cliente; 4) Google Cloud Vertex AI Enterprise Privacy (2025-2026), que certifica las capacidades de aislamiento y seguridad técnica para pipelines empresariales; y 5) Microsoft Azure OpenAI Security & Compliance (2025-2026), que valida la gobernanza de datos en arquitecturas híbridas.",
+  "findings": [
+    {
+      "claim_id": "P08-F23-C1",
+      "claim": "Los fundamentos del modelo Tech-Enabled se apoyan en estándares internacionales de gobernanza comunicacional (Page Society, PRSA) y arquitecturas empresariales de nube segura (Google Cloud, Microsoft Azure).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "bibliographic_delivery_evidence",
+      "evidence": [
+        {
+          "source_title": "Google Cloud Vertex AI: Generative AI Data Governance & Enterprise Privacy",
+          "source_id": "99ed7566-0ecf-45dd-b475-8b81c1429419",
+          "locator": "Sección 'Customer Data Isolation and Model Fine-Tuning Guarantees', p. 4-7",
+          "excerpt_short": "Customer inputs, prompts, and completions are strictly isolated. Data processed through enterprise endpoints is not used to train or fine-tune foundational models, enabling compliant human-in-the-loop application design.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Microsoft Azure: Security, Privacy and Compliance for Azure OpenAI Service",
+          "source_id": "1c53dc20-55e2-40fa-bb33-4aef71148406",
+          "locator": "Compliance Overview 'HIPAA, ISO 27001, SOC 2 and Enterprise Boundary', p. 2-5",
+          "excerpt_short": "Enterprise workloads operate within private virtual networks with role-based access control, ensuring human reviewers and automated pipelines maintain full data confidentiality.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación documental de las garantías de privacidad de Google y Microsoft en el corpus P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documentación de privacidad de proveedores cloud",
+      "Directrices de asociaciones profesionales"
+    ],
+    "actors": [
+      "Arquitecto de Seguridad",
+      "Investigador",
+      "Compliance Officer"
+    ],
+    "steps": [
+      "Revisión de acuerdos de procesamiento de datos (DPA)",
+      "Verificación de cumplimiento Ley 21.719",
+      "Validación cruzada de fuentes"
+    ],
+    "states": [
+      "Fuentes Verificadas",
+      "Cláusulas Auditadas",
+      "Cumplimiento Certificado"
+    ],
+    "outputs": [
+      "Respaldo bibliográfico y de seguridad para clientes"
+    ],
+    "exceptions": [
+      "Actualizaciones periódicas de las políticas de términos de servicio de los proveedores de nube"
+    ]
+  },
+  "entities": [
+    "Google Cloud Vertex AI",
+    "Microsoft Azure",
+    "Arthur W. Page Society",
+    "PRSA",
+    "Ley 21.719"
+  ],
+  "relations": [
+    {
+      "from": "Vertex AI / Azure",
+      "to": "Aislamiento de Datos Corporativos",
+      "type": "guarantees"
+    },
+    {
+      "from": "PRSA / Page Society",
+      "to": "Doctrina de Supervisión Humana",
+      "type": "articulates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "APIs públicas abiertas vs Endpoints Enterprise con Zero Data Retention",
+      "diferencia": "Las APIs públicas pueden retener datos para reentrenamiento; los endpoints empresariales de Azure y Vertex garantizan retención cero y aislamiento total."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "enterprise_compliance_standards": "SOC 2 Type II, ISO 27001, Ley 21.719",
+    "data_retention_agreement": "Zero Data Retention en capa de inferencia LLM"
+  },
+  "bridge_implications": "Suscribir exclusivamente contratos enterprise con Google Cloud y Microsoft Azure bajo acuerdos de no-retención para respaldar el servicio de BRIDGE ante los CISOs.",
+  "open_gaps": [
+    "Monitorear la publicación de los reglamentos de la nueva Agencia de Datos de Chile."
+  ],
+  "next_question_ids": [
+    "P08-F24",
+    "P08-F25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

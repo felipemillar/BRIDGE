@@ -1,0 +1,142 @@
+{
+  "question_id": "P07-F36",
+  "pilar": "P07",
+  "eje": "Flujo de revisión humana",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra flujo de revisión humana sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso documentado en la Plantilla 1 del Dossier P07 ilustra el flujo de revisión colegiada del Briefing Matinal para el Directorio y Comité Ejecutivo de Minera Los Salares S.A. ante la detección de un video viral en redes sociales (1.200 menciones, 62% sentimiento negativo) sobre turbiedad en la cuenca. Entradas: 1) Ingesta automatizada a las 05:30 AM: Cruce de la alerta en redes con el Informe Técnico de Sustentabilidad Q3 (100% agua desalinizada de mar) y la Memoria CMF NCG 461; 2) Borrador generado a las 05:45 AM en estado 'PENDING_HUMAN_REVIEW'; 3) Etapa 1 (06:15 AM): El Ingeniero de Medio Ambiente revisa la telemetría, confirma que los sensores operan normales y valida la cifra de 84% de agua de mar; 4) Etapa 2 (06:50 AM): El Abogado Jefe verifica que la cita informal solicitada por un concejal califica como gestión sujeta a Ley 20.730 de Lobby, insertando la advertencia de registro obligatorio; 5) Etapa 3 (07:30 AM): El CCO aprueba la síntesis ejecutiva, ajusta el Message House y firma digitalmente el despacho. Resultado esperado: Brief de una página entregado al Directorio a las 07:45 AM con: 100% de datos verificados, alerta de Ley de Lobby activa, sin alucinaciones, y con pista de auditoría inmutable firmada en 45 minutos de latencia total.",
+  "findings": [
+    {
+      "claim_id": "P07-F36-C1",
+      "claim": "El flujo de revisión secuencial colegiado garantiza que el brief ejecutivo final entregado al C-Suite cuente con validación técnica, blindaje legal y consistencia comunicacional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "human_review_case",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 6 (Plantilla 1: Briefing Ejecutivo Matinal - Caso Minera Los Salares)",
+          "excerpt_short": "Workflow HITL documentado en Plantilla 1: Contacto técnico con periodista a las 08:30 AM; Monitoreo de lista de invitados a Comisión de Minería; Revisión y Aprobación: Validado por CCO (07:30 AM). Copia a Gerencia Legal y Gerencia General. Brief entregado con estado APPROVED y registro inmutable.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso canónico completamente estructurado y documentado en la Plantilla 1 del Dossier técnico P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "caso_flujo_matinal_salares": {
+      "evento_entorno": "Video viral en X sobre supuesta turbiedad por faena minera (05:00 AM).",
+      "cronologia_flujo_bridge": [
+        {
+          "hora": "05:30 AM",
+          "evento": "Cálculo de radar de señales y cruce con balances hídricos Q3."
+        },
+        {
+          "hora": "05:45 AM",
+          "evento": "Emisión de borrador estructurado con marca de agua 'PENDIENTE APROBACIÓN'."
+        },
+        {
+          "hora": "06:15 AM",
+          "evento": "Firma 1 (Técnica): Ingeniero confirma 84% de agua desalinizada."
+        },
+        {
+          "hora": "06:50 AM",
+          "evento": "Firma 2 (Legal): Abogado inserta protocolo de registro InfoLobby Ley 20.730."
+        },
+        {
+          "hora": "07:30 AM",
+          "evento": "Firma 3 (Estratégica): CCO aprueba mensaje y autoriza exportación."
+        },
+        {
+          "hora": "07:45 AM",
+          "evento": "Recepción en iPad/móvil del CEO y Directores con badges verdes."
+        }
+      ],
+      "indicadores_salida": {
+        "tiempo_total_revision": "45 minutos",
+        "errores_facticos_filtrados": 0,
+        "estado_final": "OFFICIALLY_APPROVED"
+      }
+    }
+  },
+  "entities": [
+    "Minera Los Salares S.A.",
+    "Directorio",
+    "CEO",
+    "CCO",
+    "Gerencia Legal",
+    "InfoLobby"
+  ],
+  "relations": [
+    {
+      "from": "Borrador IA",
+      "to": "Cadena HITL",
+      "type": "submitted_to"
+    },
+    {
+      "from": "Cadena HITL",
+      "to": "Directorio",
+      "type": "delivers_approved_brief_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Briefing Sin Filtro Humano vs Briefing con Cadena HITL",
+      "diferencia": "El briefing sin filtro arriesga inducir al CEO a errores técnicos ante el directorio; el briefing con cadena HITL garantiza respaldo probatorio e inmunidad legal."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "total_workflow_duration": "45 minutos de punta a punta",
+    "signoff_signatures_collected": "3 firmas obligatorias"
+  },
+  "bridge_implications": "Utilizar este caso como modelo de referencia para la interfaz de seguimiento de aprobaciones de BRIDGE.",
+  "open_gaps": [
+    "Optimización de la experiencia de usuario móvil para que los directivos firmen con un solo tap biométrico."
+  ],
+  "next_question_ids": [
+    "P07-F37",
+    "P07-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

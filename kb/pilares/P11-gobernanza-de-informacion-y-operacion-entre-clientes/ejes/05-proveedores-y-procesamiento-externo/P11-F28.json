@@ -1,0 +1,149 @@
+{
+  "question_id": "P11-F28",
+  "pilar": "P11",
+  "eje": "Proveedores y procesamiento externo",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar proveedores y procesamiento externo de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El modelamiento estructurado de proveedores externos y transferencias de datos exige representar: 1) Entidad CloudProvider (provider_id, provider_name: [AWS_BEDROCK, AZURE_OPENAI, VERTEX_AI, ANTHROPIC, OPENAI_API, QDRANT_CLOUD], contract_tier: [ENTERPRISE_B2B, STANDARD], dpa_signed: boolean, no_training_guarantee: boolean, liability_cap_type: [12_MONTHS_FEES, UNCAPPED], processing_regions: list); 2) Entidad ExternalDataFlow (flow_id, source_tenant_id, provider_id, payload_sanitization_tier: [ANONYMIZED_PROMPT, VECTOR_DENSE_NUMERIC, RAW_METADATA], pii_stripped: boolean, encryption_in_transit: 'TLS_1_3_MUTUAL', timestamp_utc); 3) Entidad CompensatingControl (control_id, provider_id, risk_addressed, control_type: [CLIENT_SIDE_ENCRYPTION, ENVELOPE_KMS, CYBER_INSURANCE_POLICY]); 4) Relaciones de Grafo (PROCESSED_BY_PROVIDER, PROTECTED_BY_CONTROL, GOVERNED_BY_DPA); y 5) Condiciones Lógicas de Seguridad Invariables (dpa_signed == true, no_training_guarantee == true, if (provider_tier != 'ENTERPRISE_B2B') -> block_all_payloads(), pii_stripped == true).",
+  "findings": [
+    {
+      "claim_id": "P11-F28-C1",
+      "claim": "El procesamiento externo requiere esquemas estructurados para perfiles de proveedores, flujos de datos salientes, controles compensatorios e invariantes que bloqueen llamadas a APIs sin DPA firmado o sin cláusula de no entrenamiento.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_provider_governance_schema",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 8.3 'Modelo de Datos de Proveedores y Transferencias'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de esquema: ExternalProvider, OutboundFlowRecord, VendorRiskAssessment. Invariante: Bloqueo de API si dpa_signed = FALSE o no_training_clause = FALSE.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Cloud Security Alliance: Cloud Controls Matrix (CCM v4) and Shared Responsibility",
+          "source_id": "f6cdbafa-a8d6-4918-97f5-a8d6bf03341b",
+          "locator": "Domain STA-01 & STA-02 'Supply Chain and Third-Party Management'",
+          "retrieved_at": null,
+          "excerpt_short": "Maintain an inventory of all third-party cloud services, documenting contract terms, processing regions, data flows, and security requirements to manage supply chain risks.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño relacional consistente con las especificaciones de gestión de riesgos de terceros de CSA CCM v4 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de proveedores cloud",
+      "Contratos DPA vigentes",
+      "Inspección de llamadas API"
+    ],
+    "actors": [
+      "Administrador de Seguridad",
+      "Egress Gateway BRIDGE",
+      "Base de Datos"
+    ],
+    "steps": [
+      "Registro del proveedor en la tabla `cloud_providers` con verificación de DPA",
+      "Evaluación en tiempo de ejecución en el Egress Gateway antes de enviar prompts",
+      "Verificación de que el proveedor tenga `dpa_signed = true` y `no_training = true`",
+      "Registro de la transacción en `external_data_flows` con hash de auditoría",
+      "Bloqueo y alerta si se intenta invocar una API externa no homologada"
+    ],
+    "states": [
+      "PROVIDER_AUDITED",
+      "GATEWAY_INSPECTED",
+      "FLOW_RECORDED",
+      "COMPLIANCE_ENFORCED"
+    ],
+    "outputs": [
+      "Estructura estructurada que audita y gobierna las conexiones con terceros"
+    ],
+    "exceptions": [
+      "Cualquier cambio en el estatus del DPA suspende de inmediato el tráfico hacia ese proveedor"
+    ]
+  },
+  "entities": [
+    "CloudProvider",
+    "ExternalDataFlow",
+    "CompensatingControl",
+    "CSA CCM v4",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "CloudProvider",
+      "to": "ExternalDataFlow",
+      "type": "TARGETS"
+    },
+    {
+      "from": "CompensatingControl",
+      "to": "CloudProvider",
+      "type": "MITIGATES_RISK_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Llamadas directas a librerías de Python sin control vs Egress Gateway gobernado",
+      "diferencia": "Las llamadas directas pueden enviar accidentalmente datos a cuentas de prueba no protegidas; el Egress Gateway verifica contractualmente cada petición saliente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "unauthorized_api_egress_blocks": "100% de llamadas a APIs no autorizadas bloqueadas en el gateway",
+    "dpa_contractual_compliance_rate": "100% de proveedores externos con DPA vigente registrado"
+  },
+  "bridge_implications": "Garantiza un control centralizado e inviolable sobre todas las dependencias tecnológicas externas de BRIDGE.",
+  "open_gaps": [
+    "Monitoreo automatizado de cambios en las IPs y certificados TLS de las APIs de proveedores."
+  ],
+  "next_question_ids": [
+    "P11-F29",
+    "P11-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

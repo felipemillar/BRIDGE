@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-C12",
+  "pilar": "P10",
+  "eje": "Reglas para automatizar o abstenerse",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué sigue sin prueba sobre reglas para automatizar o abstenerse, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "1) Lo que sigue sin prueba definitiva es la calibración de umbrales cuantitativos de 'dwell time' ante revisores expertos que conocen previamente el caso (e.g., determinar si un revisor que leyó el informe pericial 10 minutos antes requiere forzosamente permanecer 3 minutos adicionales en la pantalla del comunicado para validar el texto); 2) Fuentes fallidas o parciales: Las directrices del PR Council (493c8ec0) y de la PRSA (13ceba58) son parciales porque formulan principios cualitativos de debida diligencia sin especificar algoritmos matemáticos ni telemetrías comprobatorias para medir la atención humana en plataformas web; y 3) Validación mínima para resolver la incertidumbre: Realizar un estudio empírico de seguimiento ocular (eye-tracking) y telemetría de interacción con 25 aprobadores corporativos reales enfrentados a 20 borradores de comunicación con discrepancias fácticas ocultas, midiendo la correlación entre el tiempo de permanencia, las áreas de fijación visual y la tasa de detección efectiva de errores.",
+  "findings": [
+    {
+      "claim_id": "P10-C12-C1",
+      "claim": "La correlación entre métricas telemétricas de lectura (dwell time) y la detección real de inconsistencias carece de calibración psicométrica cuantitativa; PR Council y PRSA son cualitativos, requiriéndose un estudio de eye-tracking y telemetría.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "human_oversight_telemetry_gaps",
+      "evidence": [
+        {
+          "source_title": "P10_GAPS_AND_VALIDATION: Vacios, Hipotesis y Validacion",
+          "source_id": "1bdee7c1-95df-4848-ba8e-74ff3eaca685",
+          "locator": "Sección 'Brechas en Telemetría y Detección de Rubber-Stamping'",
+          "retrieved_at": null,
+          "excerpt_short": "Vacío en calibración de dwell time: Se desconoce el umbral mínimo exacto que discrimina lectura atenta de rubber-stamping simulado. Protocolo: Estudio experimental con eye-tracking.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "PRSA: Code of Ethics and Professional Standards",
+          "source_id": "13ceba58-340a-43ab-b46a-6a7fb9211c8d",
+          "locator": "Provisions of Conduct",
+          "retrieved_at": null,
+          "excerpt_short": "Code mandates honest and accurate communications; technical parameters for digital telemetry monitoring are outside its scope.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación de vacíos técnicos en estándares éticos cualitativos y respaldo en P10_GAPS_AND_VALIDATION.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "20 borradores de prueba con errores fácticos sutiles",
+      "25 aprobadores corporativos",
+      "Dispositivo de Eye-Tracking"
+    ],
+    "actors": [
+      "Investigador de UX/Gobernanza",
+      "Panel de Revisores",
+      "Analista de Telemetría"
+    ],
+    "steps": [
+      "Exposición de revisores a tareas de aprobación en la UI de BRIDGE",
+      "Captura paralela de fijaciones de mirada y tiempo en pantalla",
+      "Registro de errores detectados y de errores aprobados inadvertidamente",
+      "Cálculo de la curva ROC para determinar el umbral óptimo de dwell time",
+      "Incorporación del algoritmo calibrado en el motor de políticas de BRIDGE"
+    ],
+    "states": [
+      "EXPERIMENT_SET",
+      "DATA_CAPTURED",
+      "ROC_CURVE_CALCULATED",
+      "THRESHOLD_OPTIMIZED"
+    ],
+    "outputs": [
+      "Modelo de dwell time calibrado psicométricamente"
+    ],
+    "exceptions": [
+      "Revisores que demuestren lectura rápida excepcional validada pueden solicitar exención personalizada en su perfil"
+    ]
+  },
+  "entities": [
+    "Eye-Tracking",
+    "Dwell Time Psicométrico",
+    "PRSA Code of Ethics",
+    "P10_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Eye-Tracking",
+      "to": "Telemetría de Lectura",
+      "type": "CALIBRATES_ACCURACY"
+    },
+    {
+      "from": "Estudio Psicométrico",
+      "to": "Incertidumbre",
+      "type": "RESOLVES_EMPIRICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Umbrales arbitrarios de tiempo vs Calibración psicométrica por eye-tracking",
+      "diferencia": "Los umbrales arbitrarios frustran a los usuarios y bloquean flujos; la calibración científica optimiza la seguridad sin ralentizar innecesariamente al equipo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "error_detection_sensitivity": "Target > 95% de errores fácticos detectados por revisores sobre el umbral calibrado"
+  },
+  "bridge_implications": "Permitirá a BRIDGE patentar un algoritmo propio de verificación de control humano no nominal aplicable a industrias reguladas.",
+  "open_gaps": [
+    "Diferencias cognitivas en velocidad de lectura entre idiomas nativos (español vs inglés)."
+  ],
+  "next_question_ids": [
+    "P10-C13",
+    "P10-C14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

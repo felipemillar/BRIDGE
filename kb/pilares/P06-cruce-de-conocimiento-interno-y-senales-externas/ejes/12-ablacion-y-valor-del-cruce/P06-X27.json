@@ -1,0 +1,156 @@
+{
+  "question_id": "P06-X27",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Ablación y valor del cruce",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué resultado demostraría que el cruce mejora la decisión y no solo añade texto?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Demostrar que el cruce mejora la decisión y no meramente el volumen de texto exige evaluar métricas de *Outcome Decisional* conforme a los Principios AMEC Barcelona 3.0 (Principio 2: Out-takes and Outcomes) y Arthur W. Page Society (Principio 2: Prove it with Action; P06_QUALITY_ADDENDUM, Sección 5.3): 1) Indicador Cuantitativo Duro: Reducción comprobada de al menos $40\\%$ en el tiempo de ciclo para la toma de decisión estratégica del comité de crisis (ej. pasar de 4 horas a menos de 45 minutos para emitir una minuta oficial aprobada con citas verificadas); 2) Tasa de Error Fáctico Cero: Ausencia absoluta ($0.00\\%$) de contradicciones inadvertidas entre las declaraciones formuladas por el vocero y los compromisos vigentes formalizados en el pasado; 3) Tasa de Adopción Real por Ejecutivos (Decision Uptake): Que en al menos el $75\\%$ de las reuniones de contingencia, los argumentos y evidencias cruzadas aportadas por BRIDGE sean incorporados de forma textual en la postura oficial de la corporación. Si un sistema genera 10 páginas más de contexto pero el comité demora lo mismo y comete los mismos errores, el valor incremental es nulo.",
+  "findings": [
+    {
+      "claim_id": "P06-X27-C1",
+      "claim": "El valor del cruce se demuestra exclusivamente en métricas de outcome decisional (ahorro de tiempo de aprobación, tasa cero de contradicciones y adopción de evidencia), no en longitud de texto.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Medición de Comunicaciones y Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 5.3: Métricas de Outcome Decisional frente a Métricas de Actividad",
+          "excerpt_short": "Añadir texto no es agregar valor. El éxito del cruce se manifiesta cuando el CCO toma una decisión más rápida, respaldada en pruebas y sin contradicciones regulatorias.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "7cd9051b-dbba-48eb-878c-a17631e47d3d",
+          "source_title": "Arthur W. Page Society - The Page Principles",
+          "original_url": "https://page.org/who-we-are/page-principles/",
+          "locator": "Principle 2: Prove It with Action",
+          "excerpt_short": "Enterprise communications must be grounded in real operational facts. Decisions driven by verifiable truth protect institutional reputation far more than eloquent messaging.",
+          "source_date": "2024-01-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio fundamental de la medición moderna de relaciones públicas y asuntos corporativos (AMEC/Page Society).",
+      "epistemic_status_original": "principio_de_impacto_amec",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tiempo de ciclo de decisión previo",
+      "Tiempo con BRIDGE",
+      "Registro de contradicciones en vocerías"
+    ],
+    "actors": [
+      "Gerente General",
+      "Director de Asuntos Corporativos",
+      "Auditor de Procesos"
+    ],
+    "steps": [
+      "Medición de tiempo desde alerta hasta comunicado aprobado",
+      "Conteo de errores factuales detectados post-publicación",
+      "Cálculo de tasa de adopción de briefs"
+    ],
+    "states": [
+      "Baseline_Established",
+      "Platform_Operating",
+      "Metrics_Tracked",
+      "Value_Demonstrated"
+    ],
+    "outputs": [
+      "KPIs de outcome decisional corporativo"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DECISION_OUTCOMES",
+      "type": "marco_metricas",
+      "name": "Métricas de Outcome Decisional AMEC/Page",
+      "aliases": [
+        "Decision-Centric Evaluation"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DECISION_OUTCOMES",
+      "predicate": "justifica_inversion_en",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2024-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X27-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric_name": "Crisis Response Cycle Time Reduction",
+      "denominator": "Tiempo medio de respuesta previa sin plataforma",
+      "target_value": ">= 40%"
+    },
+    {
+      "metric_name": "Inadvertent Contradiction Rate",
+      "denominator": "Total de declaraciones públicas emitidas",
+      "target_value": "0.00%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Permite justificar la contratación del software ante el CFO y CEO con retornos operacionales tangibles.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

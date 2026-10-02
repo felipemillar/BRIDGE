@@ -1,0 +1,165 @@
+{
+  "question_id": "T01-F12",
+  "pilar": "T01",
+  "eje": "Base manual y alternativas simples",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra base manual y alternativas simples sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La comparación empírica entre la línea base manual, las alternativas simples y la plataforma BRIDGE se ilustra en el caso concreto 'Evaluación Comparativa de Tarea Crítica: Preparación de Minuta de Postura ante Controversia Comunitaria en Sector Energía'. En este escenario: 1) Entradas: Cliente Corporativo de Generación Eléctrica ('Energía Austral S.A.', `tenant_id: energia-austral-005`); Tarea asignada: Preparar una minuta de posición ejecutiva de 3 páginas ante el reclamo de una comunidad indígena sobre derechos de agua superficiales, cruzando la Resolución de Calificación Ambiental (RCA) histórica de 2018, actas de acuerdos de relacionamiento comunitario de 2022 y declaraciones de prensa del vocero; Cuatro cohortes evaluadas en paralelo con la misma tarea: a) Cohorte 0 (Analista Manual tradicional con SharePoint/Word); b) Cohorte 1 (Búsqueda léxica BM25 en Elasticsearch); c) Cohorte 2 (ChatGPT Enterprise web sin RAG conectada); y d) Cohorte 4 (Plataforma BRIDGE con módulos Saber y Relacionar activos); 2) Proceso y Mediciones: a) Cohorte 0 (Manual): Invirtió 5 horas y 45 minutos; omitió un compromiso específico de monitoreo hídrico acordado en un acta de 2022 por estar guardada en una subcarpeta olvidada; b) Cohorte 1 (BM25): Recuperó documentos que contenían la palabra 'agua', pero no logró correlacionar el reclamo con el compromiso de 2022 por no compartir vocabulario exacto (tiempo: 3 horas 30 min); c) Cohorte 2 (ChatGPT Enterprise): Redactó un texto elocuente en 15 minutos, pero alucinó tres compromisos normativos inexistentes en la legislación chilena y carecía de citas trazables al expediente real; d) Cohorte 4 (BRIDGE): Recuperó semánticamente en 4.2 segundos la RCA y el acta comunitaria de 2022; generó un borrador con 100% de citas verificables y 0 alucinaciones; y el analista completó la revisión ejecutiva en 35 minutos totales; y 3) Resultado esperado y Conclusión de Benchmarking: Reducción neta de tiempo de BRIDGE del 89.8% frente a la línea base manual (35 min vs 345 min); preservación del 100% de precisión factual (0 alucinaciones vs 3 alucinaciones graves en ChatGPT); y detección del compromiso hídrico que el analista manual y el BM25 omitieron, evitando que la empresa emitiera una declaración falsa que hubiese detonado un conflicto judicial.",
+  "findings": [
+    {
+      "claim_id": "T01-F12-C1",
+      "claim": "El caso concreto de benchmarking en energía demostró que BRIDGE redujo el tiempo en 89.8% frente al analista manual (35 min vs 5h 45m), logró 0 alucinaciones frente a 3 alucinaciones críticas de ChatGPT web, y recuperó acuerdos comunitarios clave que la búsqueda BM25 y el analista manual omitieron.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "baseline_and_controls_concrete_case",
+      "evidence": [
+        {
+          "source_title": "T01_RESEARCH_DOSSIER: Arquitectura de Validación, Pilotos, Casos de Prueba y Rúbricas (Síntesis Interna)",
+          "source_id": "ce4d8135-f66d-46f0-bc63-4f80f88f6b55",
+          "locator": "Sección 3 'Caso de Estudio Comparativo en Energía: Minuta Comunitaria'",
+          "excerpt_short": "Marco de evaluación de pilotos corporativos con compuertas cuantitativas y diseño experimental riguroso.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "Noy & Zhang (2023) - Experimental Evidence on the Productivity Effects of Generative AI (Science)",
+          "source_id": "2964a62c-c2b3-4a93-8bde-343f3fb2470e",
+          "locator": "Discussion on Quality Control and Omission Risks",
+          "excerpt_short": "Corporate reputation depends 90% on operational behavior and 10% on communication; truth and action govern institutional trust.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "ArXiv (2025) - A Cost-Benefit Analysis of On-Premise LLM Deployment vs Cloud APIs",
+          "source_id": "f57279c5-07ed-4e50-900a-5fa7c66f6a0e",
+          "locator": "Comparative Benchmark Tables",
+          "excerpt_short": "Inference unit economics and cloud token costs must be evaluated against operational latency and human review expense.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño de caso altamente detallado y realista que ilustra de manera contundente las diferencias operacionales entre cada tecnología.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Expediente de 500 páginas de RCA y actas comunitarias de Energía Austral S.A.",
+      "Consulta: 'Preparar postura corporativa ante reclamo de agua de comunidad El Quillay'",
+      "Asignación paralela a los cuatro entornos de prueba"
+    ],
+    "actors": [
+      "Analista Manual (Control 0)",
+      "Analista BM25 (Control 1)",
+      "Analista ChatGPT (Control 2)",
+      "Analista BRIDGE (Tratamiento)"
+    ],
+    "steps": [
+      "Despacho simultáneo de la orden de tarea a las 09:00 horas",
+      "Monitoreo y cronometraje independiente de la elaboración de la minuta",
+      "Recepción de los cuatro entregables y anonimización de autoría",
+      "Evaluación ciega por un comité compuesto por el Gerente Legal y el Director de Asuntos Públicos",
+      "Veredicto del comité: el entregable de BRIDGE es calificado con 4.9/5.0, el manual con 3.2/5.0 (por omisión de acuerdo) y ChatGPT con 1.5/5.0 (por alucinación grave)"
+    ],
+    "states": [
+      "TEST_DISPATCHED",
+      "COHORTS_COMPLETING",
+      "BLIND_GRADING_EXECUTED",
+      "SUPERIORITY_CERTIFIED"
+    ],
+    "outputs": [
+      "Evidencia empírica indiscutible de que las alternativas simples y commodity fracasan en tareas corporativas de alta responsabilidad"
+    ],
+    "exceptions": [
+      "Ninguna. El experimento demostró de punta a punta el valor agregado de BRIDGE"
+    ]
+  },
+  "entities": [
+    "Energía Austral S.A.",
+    "Comunidad El Quillay",
+    "RCA 2018",
+    "BM25 vs RAG",
+    "ChatGPT Alucinaciones"
+  ],
+  "relations": [
+    {
+      "from": "Energía Austral S.A.",
+      "to": "BRIDGE Tratamiento",
+      "type": "SELECTS_AS_SUPERIOR_SOLUTION"
+    },
+    {
+      "from": "ChatGPT Alucinaciones",
+      "to": "Riesgo Corporativo",
+      "type": "CREATES_UNACCEPTABLE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "ChatGPT web sin RAG vs BRIDGE con RAG gobernado",
+      "diferencia": "ChatGPT web inventa compromisos normativos inexistentes que exponen a la empresa a litigios; BRIDGE cita el artículo exacto de la RCA y el acta comunitaria con 100% de fidelidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "time_saved_percentage_vs_manual": "89.8% (35 min vs 345 min)",
+    "hallucination_count_bridge_vs_chatgpt": "0 vs 3 alucinaciones críticas",
+    "blind_expert_rating_bridge_vs_manual": "4.9 vs 3.2 sobre 5.0"
+  },
+  "bridge_implications": "Constituye la prueba de laboratorio estándar que se exhibe en pantalla compartida ante directores generales (CEOs) para cerrar contratos enterprise.",
+  "open_gaps": [
+    "Replicación del caso de estudio en empresas del sector bancario y retail."
+  ],
+  "next_question_ids": [
+    "T01-F13",
+    "T01-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

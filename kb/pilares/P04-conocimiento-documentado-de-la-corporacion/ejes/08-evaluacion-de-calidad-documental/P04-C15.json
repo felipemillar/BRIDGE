@@ -1,0 +1,153 @@
+{
+  "question_id": "P04-C15",
+  "pilar": "P04",
+  "eje": "Evaluación de calidad documental",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre evaluación de calidad documental, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: Múltiples proveedores y prácticas informales de evaluación de LLMs consideran que una evaluación global binaria o subjetiva ('thumbs up / thumbs down' o evaluación cualitativa con LLM-as-a-judge de un párrafo entero) es suficiente para medir la calidad de un asistente. En fuerte oposición, la literatura científica especializada (Min et al., 2023, FActScore; Es et al., 2023, RAGAS) y la síntesis P04_RESEARCH_DOSSIER demuestran que las evaluaciones globales son ciegas a las alucinaciones microscópicas de cifras, porcentajes y fechas, donde un texto fluido puede contener errores numéricos críticos que comprometan legalmente a la empresa. Versión que prevalece: Prevalece la regla de 'Descomposición Atómica de Proposiciones Factuales' (FActScore) y la matriz multidimensional con 5 umbrales cuantitativos mínimos obligatorios: Fidelidad Factual ≥ 0.95, Precisión de Cita ≥ 0.98, Recall de Cita ≥ 0.95, Detección de Caducidad Temporal 100% y Aislamiento ABAC 100.0%.",
+  "findings": [
+    {
+      "claim_id": "P04-C15-C1",
+      "claim": "La evaluación cualitativa global es rechazada por FActScore y RAGAS, prevaleciendo la descomposición en hechos atómicos individuales y la matriz de 5 umbrales mínimos obligatorios.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global",
+        "actor": "Aseguramiento de Calidad de LLMs"
+      },
+      "evidence": [
+        {
+          "source_id": "bb0b173a-5888-4c00-9392-9768bed7824c",
+          "source_title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision (Min et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2305.14251",
+          "locator": "Sección 1 and 2: Motivation for Atomic Evaluation",
+          "excerpt_short": "Global human evaluations and naive LLM judges miss critical fine-grained factual errors in generated texts, requiring atomic sentence breakdown.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Matriz Consolidada de Criterios de Evaluación",
+          "excerpt_short": "Fidelidad Factual ≥ 0.95, Precisión de Cita ≥ 0.98, Coherencia Temporal 100%, Abstención Segura ≥ 0.98, ABAC Enforcement 100.0%.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución de discrepancia metodológica respaldada por Min et al. y dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Respuesta generada evaluada contra contexto"
+    ],
+    "actors": [
+      "Atomic Decomposer",
+      "Threshold Gatekeeper"
+    ],
+    "steps": [
+      "Descomposición en hechos atómicos",
+      "Cálculo de porcentaje de soporte literal",
+      "Evaluación de pase booleano contra umbrales mínimos"
+    ],
+    "states": [
+      "Output_Received",
+      "Atoms_Scored",
+      "Thresholds_Enforced"
+    ],
+    "outputs": [
+      "Calificación certificada con auditoría atómica de cada afirmación"
+    ],
+    "exceptions": [
+      "Respuesta con 94% de fidelidad que queda bloqueada por caer bajo el umbral de 0.95"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ATOMIC_EVAL_RESOLUTION",
+      "type": "decision_diseno",
+      "name": "Resolución de Evaluación Atómica FActScore",
+      "aliases": [
+        "Atomic Evaluation Design Decision"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ATOMIC_EVAL_RESOLUTION",
+      "predicate": "gobierna_auditoria_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Sensibilidad de evaluación",
+      "Evaluación global cualitativa": "Aprueba una respuesta que tiene un tono convincente pero una cifra errónea.",
+      "Evaluación atómica FActScore": "Detecta la cifra errónea como un átomo falso y rechaza la respuesta."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Metodología de evaluación de calidad en sistemas generativos empresariales",
+      "claim_a": "La evaluación holística subjetiva es suficiente para validar la calidad del sistema.",
+      "source_a": "Prácticas tradicionales de aseguramiento de software",
+      "claim_b": "Se requiere descomposición atómica FActScore con umbrales cuantitativos mínimos no negociables.",
+      "source_b": "Min et al. (2023) / Es et al. (2023) / P04_RESEARCH_DOSSIER",
+      "resolution_or_status": "Prevalece Claim B: auditoría atómica rigurosa con umbral mínimo de 0.95."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe implementar este motor de evaluación atómica en sus pruebas continuas para asegurar que ninguna cifra inexacta pase a producción.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

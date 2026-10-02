@@ -1,0 +1,131 @@
+{
+  "question_id": "P03-F21",
+  "pilar": "P03",
+  "eje": "Radio, televisión, video y podcasts",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Cuándo una noticia audiovisual debe tratarse como evidencia original y cuándo como resumen secundario?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La distinción se rige por la trazabilidad del registro de voz y la intermediación editorial: 1) Evidencia original primaria: grabaciones de audio/video sin cortes donde se emiten declaraciones directas, conferencias de prensa oficiales, comisiones legislativas en vivo o entrevistas directas a voceros corporativos y autoridades; en estos casos, el archivo audiovisual y su transcripción directa con marca temporal exacta constituyen la fuente primaria fáctica; 2) Resumen secundario: notas de noticieros donde un presentador lee una síntesis editada, resúmenes de clipping preparados por agencias, o paneles de comentaristas opinando sobre un hecho; en estos casos, la nota es tratada como interpretación derivada, requiriendo rastrear el documento oficial o la declaración primaria original antes de certificar el hecho en la base corporativa.",
+  "findings": [
+    {
+      "claim_id": "P03-F21-C1",
+      "claim": "El contenido audiovisual es evidencia primaria únicamente cuando contiene declaraciones directas o transmisiones oficiales sin edición; las síntesis de presentadores y paneles son fuentes secundarias derivadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Criterio Epistémico P03"
+      },
+      "evidence": [
+        {
+          "source_id": "5eaa5b99-624c-4877-87be-66c339c7b6d4",
+          "source_title": "AMEC Barcelona Principles 3.0 & Integrated Evaluation Framework",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principle 7: Measurement and Evaluation Should be Transparent, Consistent and Rigorous",
+          "excerpt_short": "Rigorous measurement requires distinguishing direct source evidence from filtered secondary interpretations or commentary.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación con estándares AMEC de transparencia y rigor de fuentes.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Pieza audiovisual",
+      "Metadatos de emisión"
+    ],
+    "actors": [
+      "Evidence Evaluator",
+      "Source Classifier"
+    ],
+    "steps": [
+      "Detección de voz directa de autoridad",
+      "Evaluación de corte editorial",
+      "Asignación de estatus primario o secundario"
+    ],
+    "states": [
+      "Raw_Broadcast",
+      "Editorial_Filter_Assessed",
+      "Classified_Source_Type"
+    ],
+    "outputs": [
+      "Metadato de nivel de evidencia: Primario vs Secundario"
+    ],
+    "exceptions": [
+      "Declaraciones sacadas de contexto por edición televisiva sesgada"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_AUDIOVISUAL_EVIDENCE_RULES",
+      "type": "regla_epistemica",
+      "name": "Reglas de Evidencia Audiovisual",
+      "aliases": [
+        "Audiovisual Evidence Rules"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_AUDIOVISUAL_EVIDENCE_RULES",
+      "predicate": "califica_fuentes_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F21-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de evidencia audiovisual",
+      "Evidencia Primaria": "Voz viva en entrevista no editada, punto de prensa o sesión parlamentaria.",
+      "Resumen Secundario": "Comentario de panelistas, titulares leídos por conductor o clipping resumido."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Exigir en el pipeline de BRIDGE que toda alerta audiovisual marque explícitamente si se basa en declaración directa o en síntesis editorial secundaria.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

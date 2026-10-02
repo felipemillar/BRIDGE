@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F25",
+  "pilar": "P09",
+  "eje": "Territorio y participación",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué diferencias presentan actores comunitarios, reguladores, municipios y organizaciones indígenas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El sistema modela cuatro perfiles ontológicos y jurídicos marcadamente diferenciados en el territorio chileno: 1) Organizaciones Indígenas y Comunidades GHPPI (Grupos Humanos Pertenecientes a Pueblos Indígenas): Sujetas al régimen especial del Convenio 169 de la OIT (Decreto 236 BCN Chile) y Art. 86 del RSEIA; poseen derechos colectivos específicos, gobernanza ancestral consuetudinaria (asambleas de comuneros, lonkos, presidentes de comunidad indígena bajo Ley 19.253) y exigencia de Consulta Indígena o susceptibilidad de afectación directa; 2) Actores Comunitarios Vecinales: Juntas de vecinos y uniones comunales regidas por la Ley 19.418; personería jurídica municipal, liderazgos democráticos electos periódicamente y enfoque en calidad de vida, empleo local y mitigación de externalidades operacionales; 3) Municipios (Gobiernos Locales): Sujetos pasivos de la Ley 20.730 de Lobby; representados por alcaldes, concejales y directores de obras (DOM/DIDECO), con atribuciones territoriales, cobro de patentes, convenios de colaboración y fiscalización comunal; y 4) Organismos Reguladores del Estado: SEA, SMA, DGA, Sernageomin; actúan con potestades públicas regladas e imperativas, emiten resoluciones sancionatorias o instrucciones técnicas y no participan en transacciones voluntarias informales.",
+  "findings": [
+    {
+      "claim_id": "P09-F25-C1",
+      "claim": "El modelamiento territorial diferencia los derechos colectivos y el estatus consuetudinario de las comunidades indígenas bajo el Convenio 169 OIT de las juntas de vecinos vecinales, las autoridades edilicias y los fiscalizadores del Estado.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "territorial_stakeholder_differentiation",
+      "evidence": [
+        {
+          "source_title": "BCN Chile: Decreto N° 236 Promulga el Convenio 169 de la OIT sobre Pueblos Indígenas y Tribales",
+          "source_id": "65fedfa1-07ba-47e6-95fd-4e583549d3b9",
+          "locator": "Artículos 6, 7 y 15",
+          "retrieved_at": null,
+          "excerpt_short": "Los gobiernos deberán consultar a los pueblos interesados, mediante procedimientos apropiados y en particular a través de sus instituciones representativas, cada vez que se prevean medidas legislativas o administrativas susceptibles de afectarles directamente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "SEA Chile: Instructivos de Evaluación Ambiental y Reuniones con Grupos Humanos Pertenecientes a Pueblos Indígenas",
+          "source_id": "f519980d-f5bd-46cd-b78e-952fd63fbdd3",
+          "locator": "Capítulo 'Distinción entre Comunidades Indígenas y Organizaciones Territoriales Funcionales', p. 12-16",
+          "retrieved_at": null,
+          "excerpt_short": "Los GHPPI no pueden asimilarse a meras juntas de vecinos o clubes sociales; sus derechos sobre recursos naturales, uso ancestral del territorio y sistemas de vida y costumbres exigen protocolos específicos de diálogo y levantamiento de compromisos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre el Convenio 169 de la OIT y los instructivos del SEA.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catastro CONADI",
+      "Registro de JJVV en Secretaría Municipal",
+      "Padrón de autoridades públicas"
+    ],
+    "actors": [
+      "Relacionador Comunitario Indígena",
+      "Especialista Ambiental",
+      "Jefe de Asuntos Públicos"
+    ],
+    "steps": [
+      "Clasificación ontológica del actor",
+      "Asignación de régimen jurídico aplicable",
+      "Habilitación de campos específicos (e.g., pertenencia a pueblo originario, comunidad CONADI)",
+      "Vinculación con el marco SEA / RCA"
+    ],
+    "states": [
+      "Actor Caracterizado",
+      "Régimen Jurídico Asignado",
+      "Protocolo Activado"
+    ],
+    "outputs": [
+      "Perfil enriquecido en el directorio territorial de BRIDGE"
+    ],
+    "exceptions": [
+      "Comunidades indígenas de hecho sin personería CONADI formal registradas con etiqueta 'GHPPI No Formalizado' conforme a jurisprudencia del SEA"
+    ]
+  },
+  "entities": [
+    "Convenio 169 OIT",
+    "GHPPI",
+    "SEA Chile",
+    "Ley 19.418",
+    "CONADI"
+  ],
+  "relations": [
+    {
+      "from": "Comunidad Indígena",
+      "to": "Convenio 169 OIT",
+      "type": "PROTECTED_BY"
+    },
+    {
+      "from": "Municipio",
+      "to": "Ley 20.730",
+      "type": "REGULATED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Trato homogéneo a vecinos vs Enfoque diferenciado por derechos",
+      "diferencia": "Tratar a una comunidad indígena como junta de vecinos anula el proceso de consulta y arriesga la paralización del proyecto en Tribunales Ambientales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "actor_archetypes_count": "4 arquetipos territoriales principales",
+    "indigenous_rights_framework": "Convenio 169 OIT y Ley 19.253"
+  },
+  "bridge_implications": "Incorporar en el módulo de 'Territorio' de BRIDGE selectores dinámicos que adapten los campos del formulario según el tipo de actor (indígena, vecinal, municipal, regulatorio).",
+  "open_gaps": [
+    "Integrar la base de datos de comunidades y asociaciones indígenas de CONADI en el onboarding."
+  ],
+  "next_question_ids": [
+    "P09-F26",
+    "P09-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

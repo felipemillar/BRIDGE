@@ -1,0 +1,132 @@
+{
+  "question_id": "P04-F16",
+  "pilar": "P04",
+  "eje": "Ontología y relaciones",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar ontología y relaciones de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la ontología corporativa y sus relaciones exige: 1) Variables de nodo (`node_id`, `node_type`, `canonical_name`, `jurisdiction_rut_lei`, `valid_period`); 2) Propiedades de arista (`edge_id`, `predicate`, `source_node`, `target_node`, `epistemic_status`, `confidence_score`, `provenance_chunk_id`); 3) Categorías ontológicas normalizadas (Organizaciones, Instalaciones, Personas/Roles, Documentos, Compromisos, Métricas, Contingencias); y 4) Condiciones de integridad estructural (Condición 1: todo nodo de tipo `Commitment` debe tener una arista `prov:wasApprovedBy` a un nodo de tipo `Agent/Board`; Condición 2: ninguna arista de tipo `hecho_documentado` puede existir sin un `provenance_chunk_id` válido con hash criptográfico; Condición 3: las relaciones de jerarquía societaria `hasSubsidiary` deben mantener temporalidad estricta para reflejar compras o ventas de activos).",
+  "findings": [
+    {
+      "claim_id": "P04-F16-C1",
+      "claim": "La estructura formal de la ontología corporativa requiere definición explícita de esquemas de nodos, propiedades de aristas con estatus epistémico y tres condiciones de integridad ontológica estricta.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Modelado Semántico P04"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.2: Ontología Corporativa: Entidades y Relaciones",
+          "excerpt_short": "Ontología corporativa define clases maestras y propiedades con control bitemporal y W3C PROV-O, asegurando integridad en las relaciones de causalidad y jerarquía societaria.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación ontológica formalizada en el dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición formal en formato RDF Schema / SHACL / Neo4j Constraints"
+    ],
+    "actors": [
+      "SHACL Validator",
+      "Schema Engine"
+    ],
+    "steps": [
+      "Carga de restricciones ontológicas",
+      "Validación de grafos poblados contra SHACL shapes",
+      "Reporte de infracciones de esquema"
+    ],
+    "states": [
+      "Draft_Schema",
+      "Shapes_Compiled",
+      "Strict_Enforcement"
+    ],
+    "outputs": [
+      "Base de grafos con validación de restricciones en tiempo de inserción"
+    ],
+    "exceptions": [
+      "Inserción de arista sin nodo de procedencia asociado"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SHACL_CONSTRAINTS",
+      "type": "esquema_validacion",
+      "name": "Restricciones SHACL de Integridad Ontológica",
+      "aliases": [
+        "Corporate KG SHACL Shapes"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SHACL_CONSTRAINTS",
+      "predicate": "restringe_mutaciones_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F16-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Garantía de integridad",
+      "Grafo de propiedades sin esquema": "Permite cualquier etiqueta y arista sin validación de tipos ni consistencia.",
+      "Grafo validado por SHACL": "Asegura que cada entidad cumpla rigurosamente los atributos mínimos de gobernanza y procedencia."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe compilar estas reglas SHACL para rechazar en la ingesta nodos corruptos o relaciones ilegítimas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

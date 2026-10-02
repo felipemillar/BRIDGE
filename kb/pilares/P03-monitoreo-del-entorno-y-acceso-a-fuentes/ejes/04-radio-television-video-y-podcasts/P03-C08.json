@@ -1,0 +1,146 @@
+{
+  "question_id": "P03-C08",
+  "pilar": "P03",
+  "eje": "Radio, televisión, video y podcasts",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué sigue sin prueba sobre radio, televisión, video y podcasts, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba empírica formal la precisión de reconocimiento de nombres de entidades corporativas y términos regulatorios en español chileno coloquial mediante modelos Whisper sin fine-tuning local: 1) Brecha: No existe un benchmark público publicado de Word Error Rate (WER) ni de extracción de entidades nombradas (NER) específico para el habla de radioemisoras provinciales chilenas; 2) Fuente fallida/parcial: Los papers fundacionales de Whisper (Radford et al. 2022) evalúan español neutro estándar (Common Voice), omitiendo dialectos de elocución rápida y aspiración de fonemas; 3) Validación mínima: Ejecutar la Etapa 3 del protocolo empírico de P03 ('Benchmark de Audio Chileno'), grabando 100 horas de programación radial chilena (noticiarios matutinos, entrevistas a autoridades y programas de debate) y evaluando Whisper Large-v3 en dos configuraciones (zero-shot estándar vs fine-tuneado con vocabulario local), con la meta de reducir el WER por debajo del 12% y recuperar al menos el 95% de las entidades nombradas corporativas críticas.",
+  "findings": [
+    {
+      "claim_id": "P03-C08-C1",
+      "claim": "Sigue sin prueba formal el rendimiento de Whisper en radioemisoras provinciales chilenas, requiriendo la ejecución de la Etapa 3 del protocolo empírico con 100 horas de audio para alcanzar WER < 12% y 95% de recuperación de entidades.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Protocolo de Validación P03"
+      },
+      "evidence": [
+        {
+          "source_id": "443e6667-3d26-48ad-b56a-bb825e9ea387",
+          "source_title": "P03_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 4: Etapa 3 - Benchmark de Latencia y Pérdida de Información en Audio Chileno",
+          "excerpt_short": "Grabar 100 horas de programación radial chilena... Someter las grabaciones a Whisper Large-v3... Criterio: Reducción del WER por debajo del 12% y recuperación del 95% de entidades críticas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del protocolo formal de benchmark de audio en P03_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "100 horas de audio de radios chilenas",
+      "Transcripción de referencia humana anotada"
+    ],
+    "actors": [
+      "Speech Benchmark Evaluator",
+      "Whisper Fine-Tuning Worker"
+    ],
+    "steps": [
+      "Grabación de 100h de audio",
+      "Evaluación zero-shot vs fine-tuning",
+      "Cálculo de WER y recall de NER"
+    ],
+    "states": [
+      "Audio_Collected",
+      "Evaluated_ZeroShot",
+      "Benchmark_Passed_Under_12WER"
+    ],
+    "outputs": [
+      "Reporte empírico de rendimiento ASR en audio chileno"
+    ],
+    "exceptions": [
+      "Radios locales con mala calidad de transmisión o compresión con artefactos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BENCHMARK_AUDIO_CHILENO",
+      "type": "benchmark_tecnico",
+      "name": "Benchmark de Transcripción de Audio Radial Chileno",
+      "aliases": [
+        "Chilean Audio Benchmark"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BENCHMARK_AUDIO_CHILENO",
+      "predicate": "resuelve_incertidumbre_de",
+      "object_id": "Eje_Broadcast_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C08-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Word Error Rate (WER) en Audio Chileno",
+      "numerator": "Errores de palabras (sustituciones + omisiones + inserciones)",
+      "denominator": "Total de palabras en transcripción humana de referencia",
+      "context": "Meta de validación: WER < 12% tras fine-tuning local"
+    },
+    {
+      "metric": "Recuperación de Entidades Nombradas Corporativas (NER Recall)",
+      "numerator": "Entidades corporativas correctamente extraídas",
+      "denominator": "Total de entidades corporativas mencionadas en el audio",
+      "context": "Meta de validación: Recall >= 95%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Desarrollar un modelo de fine-tuning fonético para Whisper en BRIDGE antes de comercializar el monitoreo de radio regional.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_P03_CHILEAN_ASR_WER",
+      "description": "Falta de benchmark formal de WER en dialecto chileno",
+      "action": "Ejecutar Etapa 3 del protocolo empírico con 100 horas de radio"
+    }
+  ],
+  "next_question_ids": [
+    "P03-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

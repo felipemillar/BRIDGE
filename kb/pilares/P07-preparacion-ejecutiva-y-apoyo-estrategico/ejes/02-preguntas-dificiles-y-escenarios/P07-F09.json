@@ -1,0 +1,135 @@
+{
+  "question_id": "P07-F09",
+  "pilar": "P07",
+  "eje": "Preguntas difíciles y escenarios",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Cómo preparar respuestas para escenarios de confirmación, contradicción e incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se estructuran tres protocolos discursivos diferenciados: 1) Escenario de Confirmación (hechos comprobados y alineados con compromisos): Uso de datos auditados duros, ratificación de avances y técnica de Flagging para fijar el impacto positivo de la empresa; 2) Escenario de Contradicción (conflicto entre acusación externa y datos internos): Desmarque sereno e inmediato de la premisa falsa, empatía institucional con la preocupación planteada, y técnica de Bridging hacia la verdad operacional verificada (informes de ingeniería, ISAE 3000 o telemetría); y 3) Escenario de Incertidumbre (hechos sobrevinientes en desarrollo o vacíos de información en faena): Prohibición de especular o inventar respuestas, reconocimiento transparente de la complejidad técnica, activación de protocolo de peritaje interno y compromiso de entregar resultados en un plazo acotado y verificable.",
+  "findings": [
+    {
+      "claim_id": "P07-F09-C1",
+      "claim": "La respuesta ejecutiva debe modularse según el grado de certeza epistémica: reafirmación con datos en confirmación, puenteo hacia evidencia en contradicción y abstención transparente en incertidumbre.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "spokesperson_playbook",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 2.2 y Sección 6 (Plantilla 3)",
+          "excerpt_short": "En contradicciones: Desmarque sereno ('no es correcto atribuir esa causa...') seguido de Bridging hacia el dato auditado. En incertidumbre técnica: Jamás especular; aplicar la fórmula: 'En este momento nuestros equipos técnicos están en terreno realizando el peritaje hidrológico; comunicaremos los datos exactos en cuanto concluya la medición oficial'.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Anderson: Situational Crisis Communication Theory (SCCT) by W. Timothy Coombs",
+          "source_id": "03e9602d-694c-4ff0-98ff-55171d2640cd",
+          "locator": "Capítulo 'Guidelines for Crisis Response', p. 138-142",
+          "excerpt_short": "When organizations face ambiguous crises, false claims or premature certainty severely compound reputational damage. Providing instructing information and admitting investigative proceedings preserves stakeholder trust far more effectively than defensive denial.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Articulación entre la teoría de crisis situacional (SCCT) de Coombs y las plantillas tácticas de vocería del Dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "protocolo_tripartito_respuestas": {
+      "Confirmacion": {
+        "accion": "Validación con prueba documental.",
+        "formula": "Dato duro auditado + Flagging ('Lo medular es...') + Beneficio sistémico."
+      },
+      "Contradiccion": {
+        "accion": "Desmarque de premisa falsa y redirección.",
+        "formula": "Empatía con preocupación pública + Rechazo sereno de la imputación + Bridging a evidencia auditable + Cierre institucional."
+      },
+      "Incertidumbre": {
+        "accion": "Abstención estratégica informada.",
+        "formula": "Reconocimiento del hecho + Estado de peritaje en curso + Compromiso de entrega pública de informe con fecha fijada."
+      }
+    }
+  },
+  "entities": [
+    "SCCT",
+    "Timothy Coombs",
+    "Bridging",
+    "Flagging",
+    "Peritaje Técnico",
+    "Incertidumbre Epistémica"
+  ],
+  "relations": [
+    {
+      "from": "Escenario Epistémico",
+      "to": "Protocolo de Respuesta",
+      "type": "determines"
+    },
+    {
+      "from": "SCCT",
+      "to": "Gestión de Incertidumbre",
+      "type": "theorizes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Especulación vs Reconocimiento de Incertidumbre",
+      "diferencia": "La especulación destruye la credibilidad legal ante un tribunal; el reconocimiento de la investigación en curso mantiene la legitimidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "speculation_rate": "0% de conjeturas en guiones aprobados",
+    "factual_anchor_ratio": "> 1 fuente documental por respuesta formulada"
+  },
+  "bridge_implications": "Programar en los generadores de guiones de BRIDGE árboles de decisión discursiva que obliguen al LLM a elegir entre Confirmación, Puenteo o Abstención con peritaje.",
+  "open_gaps": [
+    "Manejo de situaciones de crisis donde la incertidumbre se prolonga por meses sin peritaje concluyente."
+  ],
+  "next_question_ids": [
+    "P07-F10",
+    "P07-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T04:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

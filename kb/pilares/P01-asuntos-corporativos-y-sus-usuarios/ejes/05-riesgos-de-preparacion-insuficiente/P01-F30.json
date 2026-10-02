@@ -1,0 +1,183 @@
+{
+  "question_id": "P01-F30",
+  "pilar": "P01",
+  "eje": "Riesgos de preparación insuficiente",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra riesgos de preparación insuficiente sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso práctico contrasta dos flujos ante una audiencia urgente de Lobby (Ley 20.730) y punto de prensa por presunta contingencia hídrica en una empresa de energía en Chile: En el Flujo A (tradicional/fragmentado), tras 4 horas de búsqueda manual desarticulada, el vocero improvisa negando la extracción de agua subterránea, contradiciendo la Memoria CMF NCG 461 (que declaraba 12% de derechos); esto detona imputación por falta de probidad en InfoLobby, acusaciones de greenwashing, desplome en Cadem/Merco y paralización cautelar de faena. En el Flujo B (asistido estructurado), el sistema cruza la Memoria CMF, la RCA y actas previas en 15 minutos, alertando sobre la cláusula de reserva hídrica y proveyendo un argumentario blindado con citas exactas, logrando 100% de coherencia fáctica, desarticulación de la controversia y preservación de la Licencia Social.",
+  "findings": [
+    {
+      "claim_id": "P01-F30-C1",
+      "claim": "En el Flujo Tradicional Fallido (Flujo A), la falta de indexación unificada lleva al vocero a negar públicamente el uso de derechos de agua subterránea en faena, ignorando que la Memoria Integrada CMF NCG 461 de la propia firma reportaba un 12% de derechos de extracción en esa cuenca, provocando sanciones y litigio ambiental.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Empresa de Infraestructura / Energía"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3: Caso Práctico Comparativo Flujo A vs Flujo B",
+          "excerpt_short": "Flujo A: Búsqueda manual de 4 horas, contradicción con Memoria CMF NCG 461, imputación en InfoLobby y paralización de faena.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso comparativo detallado en el dossier P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F30-C2",
+      "claim": "En el Flujo Asistido Estructurado (Flujo B), el cruce automatizado en 15 minutos genera alertas críticas sobre las cláusulas de reserva de la Memoria CMF y los compromisos de agua desalada asumidos en actas previas de InfoLobby, proveyendo lines to take que protegen la Licencia Social para Operar.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "C-Suite y Asuntos Públicos"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3: Resultados Esperados del Flujo B Asistido",
+          "excerpt_short": "Flujo B: Síntesis en 15 minutos, alertas críticas de consistencia fáctica, 100% coherencia con CMF y blindaje de SLO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación del caso comparativo en el dossier.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Notificación de audiencia urgente",
+      "Denuncias ciudadanas de extracción de agua",
+      "Repositorio documental histórico"
+    ],
+    "actors": [
+      "Gerente de Asuntos Públicos",
+      "Gerente de Operaciones",
+      "Regulador Ambiental",
+      "Diputado"
+    ],
+    "steps": [
+      "Recepción de citación a audiencia y punto de prensa",
+      "Cruce de Memoria CMF NCG 461, RCA y actas de InfoLobby en sistema asistido",
+      "Detección de alertas de contradicción fáctica en 15 minutos",
+      "Validación de lines to take por CCO y Legal",
+      "Comparecencia con citas exactas y neutralización de la crisis"
+    ],
+    "states": [
+      "Notificación_Recibida",
+      "Procesamiento_15_Min",
+      "Alertas_Resueltas",
+      "Audiencia_Exitosa",
+      "SLO_Blindada"
+    ],
+    "outputs": [
+      "Briefing ejecutivo de 1 página con citas",
+      "Lines to take para prensa",
+      "Acta consistente en InfoLobby"
+    ],
+    "exceptions": [
+      "Declaración de un vocero de faena que no utilizó la minuta oficial validada"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_COMPARATIVO_HIDRICO",
+      "type": "caso_estudio",
+      "name": "Caso Comparativo de Contingencia Hídrica Flujo A vs B",
+      "aliases": [
+        "Benchmark Flujo Fallido vs Asistido"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_COMPARATIVO_HIDRICO",
+      "predicate": "valida_hipotesis",
+      "object_id": "HT-2",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F30-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Flujo A (Tradicional) vs Flujo B (Asistido BRIDGE)",
+      "Entradas": "Flujo A: Búsqueda manual caótica en correos y WhatsApp | Flujo B: Repositorio unificado CMF, RCA e InfoLobby.",
+      "Tiempo": "Flujo A: 3 a 5 horas manuales | Flujo B: Menos de 15 minutos con síntesis trazable.",
+      "Trazabilidad": "Flujo A: Nula (alto riesgo de especulación) | Flujo B: 100% con citas al documento corporativo origen.",
+      "Resultado": "Flujo A: Imputación, litigio ambiental y desvalorización | Flujo B: Coherencia fáctica, desarticulación de crisis y blindaje de SLO."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Actuar",
+      "implication": "Implementar el motor de resolución asistida de BRIDGE reflejando la arquitectura del Flujo B para neutralizar riesgos antes de la emisión de vocerías.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F31",
+    "P01-F32"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:52:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

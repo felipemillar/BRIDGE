@@ -1,0 +1,175 @@
+{
+  "question_id": "P02-F31",
+  "pilar": "P02",
+  "eje": "Flujo editorial y servicios expertos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué ofrecen Broadsight, Prezly, Entual, Contrlr y agencias para mensajes, briefings y aprobaciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Ofrecen soluciones escalonadas entre software especializado de flujo editorial y consultoría estratégica humana: 1) Broadsight (Broadsight Technologies Inc.): plataforma pionera de 'System of Record for Corporate Communications and Issues Management'; centraliza temas críticos (issues), bibliotecas de Q&A oficiales y declaraciones aprobadas (holding statements), con flujos de aprobación formal (comunicaciones, legal, comité ejecutivo), asignación de voceros y minutas de briefing seguras; brecha: no incluye escucha de medios masivos ni CRM de lobby; 2) Prezly (Prezly SPRL): software de CRM de relaciones públicas y salas de prensa digitales multimedia (online newsrooms), distribución de notas de prensa bajo embargo y registro de contactos con periodistas; brecha: sin gestión de Q&A confidenciales internos ni flujos de gobernanza de crisis; 3) Entual (Entual B.V.): servicio boutique híbrido en los Países Bajos enfocado en inteligencia de políticas públicas y partes interesadas, donde analistas humanos curan resúmenes diarios personalizados y análisis de impacto regulatorio; brecha: consultoría humana sobre fuentes abiertas sin software para vocería ni conexión a repositorios internos; 4) Contrlr: plataforma de IA para PR centrada en la generación asistida de notas de prensa, optimización de pitches a medios y colaboración interna; 5) Agencias globales (FGS Global, Burson, Edelman, Brunswick): asesoría experta humana para crisis, M&A y litigios complejos, talleres de mensajes clave y entrenamiento de portavoces, utilizando herramientas propietarias en desarrollo (e.g. Burson Decipher con Limbik) combinadas con consultoría intensiva.",
+  "findings": [
+    {
+      "claim_id": "P02-F31-C1",
+      "claim": "Broadsight lidera la categoría de software como System of Record para la gobernanza editorial de mensajes corporativos y Q&A aprobados, mientras que Prezly resuelve la distribución externa y las agencias globales aportan servicios humanos estratégicos de alto valor pero sin plataformas SaaS unificadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Broadsight, Prezly, Entual, Agencias"
+      },
+      "evidence": [
+        {
+          "source_id": "bc46f4e1-79fa-4fca-86f0-6192709c7b7f",
+          "source_title": "Broadsight System of Record for Corporate Communications and Issues Management",
+          "original_url": "https://www.broadsight.com/solutions/issues-management/",
+          "locator": "Platform Overview: System of Record for Messaging, Q&A and Approvals",
+          "excerpt_short": "Broadsight acts as the definitive single source of truth for approved messaging, issues tracking, executive briefings, and legal sign-offs.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        },
+        {
+          "source_id": "c4de85cf-571d-4f7f-ba31-a56c3cab3b48",
+          "source_title": "Prezly PR Software Newsrooms and Stakeholder CRM",
+          "original_url": "https://www.prezly.com/product",
+          "locator": "Core Features: Newsrooms, PR CRM and Story Distribution",
+          "excerpt_short": "Online newsrooms, multimedia press release publishing, and contact relationship management for PR teams.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de especificaciones funcionales en portales oficiales y atlas del mercado.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta de periodista o regulador",
+      "Repositorio de posturas previas",
+      "Criterio de gobernanza de la empresa"
+    ],
+    "actors": [
+      "Jefe de Prensa",
+      "Director de Asuntos Corporativos",
+      "Abogado Corporativo / Compliance",
+      "Vocero Autorizado"
+    ],
+    "steps": [
+      "Búsqueda de Q&A aprobado en System of Record",
+      "Redacción o ajuste de holding statement",
+      "Enrutamiento de aprobación por workflow digital",
+      "Emisión de briefing al vocero designado"
+    ],
+    "states": [
+      "Borrador",
+      "En_Revision_Legal",
+      "Aprobado",
+      "Emitido"
+    ],
+    "outputs": [
+      "Declaración corporativa oficial con sello de aprobación y vocero autorizado"
+    ],
+    "exceptions": [
+      "Urgencia de crisis que exige procedimiento de aprobación verbal de contingencia"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BROADSIGHT",
+      "type": "system_of_record_voceria",
+      "name": "Broadsight Technologies Inc.",
+      "aliases": [
+        "Broadsight"
+      ]
+    },
+    {
+      "entity_id": "ENT_PREZLY",
+      "type": "pr_crm_newsroom",
+      "name": "Prezly SPRL",
+      "aliases": [
+        "Prezly"
+      ]
+    },
+    {
+      "entity_id": "ENT_ENTUAL",
+      "type": "consultoria_inteligencia",
+      "name": "Entual B.V.",
+      "aliases": [
+        "Entual"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BROADSIGHT",
+      "predicate": "opera_como_system_of_record_de",
+      "object_id": "Mensajes_Aprobados_y_Issues",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F31-C1"
+    },
+    {
+      "subject_id": "ENT_PREZLY",
+      "predicate": "especializado_en",
+      "object_id": "Salas_de_Prensa_Digitales",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F31-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "System of Record Interno (Broadsight) vs Distribución Externa (Prezly)",
+      "System of Record Interno": "Gobernanza de posturas confidenciales, gestión de crisis, aprobaciones legales y biblioteca de Q&A.",
+      "Distribución Externa": "Publicación abierta de notas de prensa, relación con periodistas y salas de prensa multimedia."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "El módulo Hablar de BRIDGE debe adoptar la arquitectura de Broadsight (repositorio inmutable de Q&A y flujos de aprobación multi-rol).",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F32",
+    "P02-F33"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:38:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

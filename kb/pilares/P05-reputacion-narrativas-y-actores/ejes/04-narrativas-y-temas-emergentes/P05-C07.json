@@ -1,0 +1,140 @@
+{
+  "question_id": "P05-C07",
+  "pilar": "P05",
+  "eje": "Narrativas y temas emergentes",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre narrativas y temas emergentes, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia central radica en la concepción del origen y evolución de las narrativas corporativas. Enfoques reactivos tradicionales sostienen que las crisis y narrativas hostiles son eventos fortuitos, caóticos e impredecibles que estallan de forma súbita ('cisnes negros') y que deben gestionarse únicamente con control de daños cuando ya copan las portadas de la prensa. En contraste, las síntesis canónicas (P05_RESEARCH_DOSSIER Sección 4.1 y P05_EVIDENCE_MAP Eje 3) y la literatura de gestión estratégica de temas (Entman 1993; Shiller 2017; MDPI 2026) demuestran que las narrativas corporativas siguen una dinámica evolutiva estructurada: transitan por fases predecibles (Señales Débiles -> Emergente -> Mainstream -> Cristalización Regulatoria) y su viralización obedece a modelos de contagio epidemiológico SIR gobernados por arquetipos morales y funciones de encuadre (Framing). De acuerdo con las correcciones del mandato, prevalece la versión científica de P05: las controversias no son eventos fortuitos sino procesos que pueden detectarse en fase de señal débil, permitiendo intervenir tempranamente antes de que adquieran fuerza regulatoria o judicial irreversible.",
+  "findings": [
+    {
+      "claim_id": "P05-C07-C1",
+      "claim": "Prevalece la concepción evolutiva y predecible del ciclo de vida de temas y encuadres de Entman frente a la creencia reactiva de que las crisis narrativas son eventos caóticos impredecibles.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1993-2026",
+        "region": "Global",
+        "actor": "Gestión Estratégica de Temas"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 1: Eje 3, Hallazgo 3.3 (Ciclo de Vida de los Temas Emergentes)",
+          "excerpt_short": "Los temas corporativos evolucionan a través de fases predictibles desde señales débiles hasta cristalización regulatoria e institucionalización. Nivel de confianza ALTO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco teórico consolidado respaldado por la teoría del framing y economía narrativa.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Monitoreo de señales tempranas",
+      "Registros legislativos y mediáticos"
+    ],
+    "actors": [
+      "Analista de Temas Emergentes",
+      "Director de Asuntos Públicos"
+    ],
+    "steps": [
+      "Mapeo del tema en la curva del ciclo de vida",
+      "Detección de aceleración de contagio SIR",
+      "Diseño de intervención preventiva"
+    ],
+    "states": [
+      "Signal_Tracked",
+      "Stage_Diagnosed",
+      "Preventive_Strategy_Executed"
+    ],
+    "outputs": [
+      "Plan de Gestión Proactiva de Asuntos Críticos"
+    ],
+    "exceptions": [
+      "Desastres naturales o accidentes de fuerza mayor no precedidos por incubación"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PREDICTABLE_LIFECYCLE",
+      "type": "principio_teorico",
+      "name": "Principio de Predictibilidad del Ciclo de Vida de Temas",
+      "aliases": [
+        "Issue Life Cycle Predictability"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PREDICTABLE_LIFECYCLE",
+      "predicate": "reemplaza_modelo_reactivo_de",
+      "object_id": "ENT_NARRATIVE_SCHEMA",
+      "valid_from": "1993",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C07-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de gestión de temas",
+      "Paradigma Reactivo Tradicional": "Esperar a que el tema esté en la portada del diario para llamar a una agencia de gestión de crisis.",
+      "Paradigma Predictivo BRIDGE": "Detectar la señal débil en el SEIA o foros locales y resolver operativamente la causa 12 meses antes del salto mediático."
+    }
+  ],
+  "contradictions": [
+    {
+      "issue": "Predecibilidad de las controversias",
+      "source_a": "Práctica corporativa tradicional reactiva",
+      "source_b": "P05_RESEARCH_DOSSIER / Entman / Shiller",
+      "resolution": "Prevalece P05: los temas siguen un ciclo de vida reconocible que admite detección y gestión preventiva."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Rastreador de Ciclo de Vida",
+      "implication": "BRIDGE debe alertar visualmente cuando un tema transite de Señal Débil a Emergente para activar planes de mitigación temprana.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-C08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

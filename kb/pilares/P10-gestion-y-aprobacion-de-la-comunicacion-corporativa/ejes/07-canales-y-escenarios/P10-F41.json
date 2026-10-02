@@ -1,0 +1,158 @@
+{
+  "question_id": "P10-F41",
+  "pilar": "P10",
+  "eje": "Canales y escenarios",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre canales y escenarios?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos, principios y requerimientos sobre canales y escenarios se fundamentan en fuentes primarias verificadas: 1) Principios éticos de coherencia y verdad institucional: Arthur W. Page Society 'The Page Principles' (2021), que establece los axiomas 'Tell the Truth' y 'Prove it with Action', prohibiendo relatos disonantes; 2) Gestión de escenarios de crisis y atribución de responsabilidad: Anderson 'Situational Crisis Communication Theory (SCCT)' (2007) y Percepture 'Crisis Communications Capabilities & Verification' (2024), detallando la respuesta empática y correctiva en incidentes ambientales; 3) Protocolos de distribución multicanal y gestión de embargos: ContentGrip 'Practical PR Workflow - Staging, Embargoes and Multi-Channel Distribution' (2024), documentando la adaptación según características de plataforma y salvaguardas de embargo; y 4) Marco regulatorio chileno de relación con autoridades: BCN Ley 20.730 de Lobby (2014) y NCG 461 de la CMF (2021), normando la formalidad de oficios a reguladores y divulgaciones de sostenibilidad.",
+  "findings": [
+    {
+      "claim_id": "P10-F41-C1",
+      "claim": "El diseño de canales y escenarios descansa en la integración de teorías consagradas de relaciones públicas (Page Society, SCCT de Anderson), prácticas técnicas de agencias (ContentGrip, Percepture) y regulaciones chilenas (Ley 20.730, NCG 461).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_base_channels_and_scenarios",
+      "evidence": [
+        {
+          "source_title": "P10_SOURCE_INDEX: Indice Maestro de Fuentes, Auditoria y Jerarquia",
+          "source_id": "1c52f005-30d5-4877-9b75-31f0785411ca",
+          "locator": "Sección 'Cluster 6: Canales, Escenarios y Distribución'",
+          "retrieved_at": null,
+          "excerpt_short": "Mapeo de fuentes: Page Principles (filosofía de una sola verdad), Anderson SCCT (estrategia de crisis), ContentGrip (distribución y embargos), Percepture (crisis ambiental), BCN Ley 20.730 (relación formal con autoridades).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Arthur W. Page Society: The Page Principles",
+          "source_id": "405cc287-6f42-46a2-b04d-dd7fa51c16a1",
+          "locator": "Principle 5 'Manage for Tomorrow'",
+          "retrieved_at": null,
+          "excerpt_short": "Anticipate stakeholder reaction and eliminate practices that create difficulties, generating goodwill through consistent and transparent institutional communication.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "ContentGrip: Practical PR Workflow - Staging, Embargoes and Multi-Channel Distribution",
+          "source_id": "4b3bd2de-e375-4ca4-a494-8adce9b0d5a5",
+          "locator": "Section 'Managing Multi-Channel Staging and Embargo Windows'",
+          "retrieved_at": null,
+          "excerpt_short": "Embargoes must be clearly communicated with explicit date, time, and timezone parameters, ensuring coordinated disclosure across varied geographic audiences.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual rigurosa y alineamiento conceptual con la bibliografía activa de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes indexadas en fuentes/P10.json",
+      "Matriz de citas sustantivas"
+    ],
+    "actors": [
+      "Auditor Epistemológico",
+      "Investigador BRIDGE"
+    ],
+    "steps": [
+      "Localización de citas textuales sobre embargos, SCCT y canales",
+      "Verificación de autenticidad en los textos capturados",
+      "Asignación de identificadores de evidencia cruzada",
+      "Registro en el modelo de respuestas de P10"
+    ],
+    "states": [
+      "SOURCES_LOCATED",
+      "QUOTES_EXTRACTED",
+      "EVIDENCE_STRUCTURED"
+    ],
+    "outputs": [
+      "Base de sustento empírico y bibliográfico"
+    ],
+    "exceptions": [
+      "Ninguna; las fuentes documentan textualmente las materias analizadas"
+    ]
+  },
+  "entities": [
+    "Page Society",
+    "Anderson SCCT",
+    "ContentGrip",
+    "Ley 20.730",
+    "P10_SOURCE_INDEX"
+  ],
+  "relations": [
+    {
+      "from": "Page Society",
+      "to": "Coherencia Reputacional",
+      "type": "ESTABLISHES_PHILOSOPHY"
+    },
+    {
+      "from": "ContentGrip",
+      "to": "Gestión de Embargos",
+      "type": "PROVIDES_OPERATIONAL_PRACTICE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Consejos informales de marketing digital vs Estándares de la Page Society",
+      "diferencia": "Los consejos de marketing buscan viralidad a cualquier costo; la Page Society y el rigor regulatorio priorizan la preservación del valor reputacional a largo plazo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "quote_traceability_score": "100% de pasajes con localización precisa en documentos originales"
+  },
+  "bridge_implications": "Garantiza solidez conceptual y defensibilidad reputacional en las decisiones de canalización adoptadas por BRIDGE.",
+  "open_gaps": [
+    "Incorporación de análisis comparado sobre plataformas de relaciones comunitarias en el sector minero canadiense y australiano."
+  ],
+  "next_question_ids": [
+    "P10-F42",
+    "P10-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

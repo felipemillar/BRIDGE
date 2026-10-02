@@ -1,0 +1,151 @@
+{
+  "question_id": "P02-F45",
+  "pilar": "P02",
+  "eje": "Posicionamiento y alianzas",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué afirmaciones diferenciales de The Bridge siguen como hipótesis sin prueba comparativa?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Todas las afirmaciones de valor diferencial atribuidas a The Bridge Intelligence permanecen estrictamente en estado de 'hipótesis de diseño' (hipotesis_diseno) al carecer de ensayos comparativos empíricos auditados: 1) Hipótesis de Integración Cuádruple: la afirmación de que unificar Saber, Escuchar, Hablar y Relacionar en un solo modelo de datos reduce los tiempos de respuesta ante contingencias en un 60% frente al uso de herramientas desconectadas; 2) Hipótesis de Detección Temprana Cruzada: la afirmación de que cruzar las actas de compromisos territoriales (RCA/Convenios) con la escucha de radio comunitaria anticipa bloqueos o paralizaciones de faena con tres semanas de ventaja; 3) Hipótesis de Consistencia de Vocería: la afirmación de que un System of Record inmutable de Q&A corporativo previene el 100% de las contradicciones entre voceros corporativos y equipos legales durante litigios o crisis públicas; 4) Estado epistémico actual: ninguna de estas proposiciones cuenta con una Prueba Operacional Realizada (POR) en clientes de producción, debiendo formularse como hipótesis arquitectónicas a verificar en pilotos de campo.",
+  "findings": [
+    {
+      "claim_id": "P02-F45-C1",
+      "claim": "Las ventajas de eficiencia, anticipación de conflictos y consistencia de vocería planteadas por The Bridge Intelligence constituyen hipótesis de diseño sin validación empírica independiente en el benchmark de mercado actual.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "The Bridge Intelligence"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Epistemic Status of The Bridge Intelligence Architecture",
+          "excerpt_short": "The Bridge Intelligence is evaluated strictly as an architectural benchmark hypothesis; claims of superior cross-module efficiency lack documented empirical verification.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:42:00-03:00"
+        },
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Gap Analysis: Unproven Hypotheses in Modern PR Intelligence",
+          "excerpt_short": "No vendor has empirically proven that fully automated cross-module linking eliminates corporate reputation risk.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:42:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Clasificación epistémica rigurosa que distingue hechos documentados de hipótesis de diseño proyectadas.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Hipótesis de diseño de BRIDGE",
+      "Métricas operacionales de referencia",
+      "Grupo de control empresarial con herramientas tradicionales"
+    ],
+    "actors": [
+      "Diseñador de Arquitectura",
+      "Auditor Epistémico Independiente"
+    ],
+    "steps": [
+      "Formulación matemática de la hipótesis",
+      "Definición de protocolo de prueba piloto (POR)",
+      "Medición de tiempos de respuesta en simulacros de crisis",
+      "Validación o refutación estadística"
+    ],
+    "states": [
+      "Hipotesis_Formulada",
+      "Piloto_Disenado",
+      "Prueba_Ejecutada",
+      "Resultado_Publicado"
+    ],
+    "outputs": [
+      "Reporte de validación empírica de hipótesis de diseño"
+    ],
+    "exceptions": [
+      "Sesgo en la selección de casos que distorsione la comparación objetiva"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_THE_BRIDGE",
+      "type": "hipotesis_arquitectonica",
+      "name": "The Bridge Intelligence Model",
+      "aliases": [
+        "BRIDGE Reference Architecture"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_THE_BRIDGE",
+      "predicate": "clasificado_epistemicamente_como",
+      "object_id": "Hipotesis_Diseno",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F45-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Hecho Documentado en Vendor (e.g. Broadsight) vs Hipótesis de Diseño (BRIDGE)",
+      "Hecho Documentado": "Broadsight tiene clientes activos y manuales de producto que certifican su software de Q&A.",
+      "Hipótesis de Diseño": "BRIDGE postula que unir Broadsight + Borealis + Meltwater + Glean generará sinergias superiores, pero aún no lo ha probado en faena."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe mantener rigor científico en su comunicación y diseñar experimentos POR para validar sus tres hipótesis clave.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F46",
+    "P02-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:42:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

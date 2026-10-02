@@ -1,0 +1,145 @@
+{
+  "question_id": "T01-X05",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Diseño estadístico y tamaño de muestra",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre diseño estadístico y tamaño de muestra?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El diseño estadístico, cálculo de muestras y reporte de incertidumbre se respaldan en textos completos primarios verificados en T01: 1) Saad-Falcon et al. (ARES, 2023-11-16, ArXiv bff33bd6, p. 3-6): Respalda la teoría de Prediction-Powered Inference (PPI) y el dimensionamiento de muestras híbridas (humana n=150-300 + sintética N=2000) con garantías estadísticas formales; 2) Gao et al. (ALCE, 2023-05-23, ArXiv e1a0171b, p. 4-7): Respalda el muestreo estratificado a nivel de afirmación fáctica (claim) y el cómputo de 95% CI mediante remuestreo bootstrap con B=1000 réplicas; 3) Fabbri et al. (SummEval, 2021-04-12, ArXiv 9df1af53, p. 2-5): Respalda la estratificación de dificultad para prevenir cherry-picking y las pruebas de significancia pareada; y 4) Zhu et al. (SABER, 2026-05, ArXiv 8663bbbe, Sec. 3): Respalda la inclusión obligatoria de cuotas de conflicto epistémico y medición de tasa de abstención.",
+  "findings": [
+    {
+      "claim_id": "T01-X05-C1",
+      "claim": "Los papers ARES, ALCE, SummEval y SABER proporcionan el 100% de los algoritmos y ecuaciones matemáticas para el dimensionamiento muestral y el reporte de incertidumbre en The Bridge Intelligence.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "ArXiv Full-Text Publications"
+      },
+      "evidence": [
+        {
+          "source_id": "bff33bd6-afbc-4544-b611-640f2023a150",
+          "source_title": "Saad-Falcon et al. (2023) — ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+          "original_url": "https://arxiv.org/pdf/2311.09476.pdf",
+          "locator": "Section 3: Statistical Foundations of PPI",
+          "excerpt_short": "Mathematical derivation of valid confidence bounds without parametric assumptions.",
+          "source_date": "2023-11-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "e1a0171b-34f0-48f2-b343-29f7ec88bd31",
+          "source_title": "Gao et al. (2023) — Enabling Language Models to Generate Text with Citations (ALCE Benchmark)",
+          "original_url": "https://arxiv.org/pdf/2305.14627.pdf",
+          "locator": "Section 4: Statistical Methodology",
+          "excerpt_short": "Formal protocols for bootstrap intervals across claim-level evaluation sets.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en los PDFs sustantivos catalogados.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus bibliográfico T01",
+      "Registro de verificaciones estadísticas"
+    ],
+    "actors": [
+      "Auditor Antigravity"
+    ],
+    "steps": [
+      "Identificar citas de fuentes primarias para cada fórmula de muestreo",
+      "Comprobar concordancia con los 9 PDFs de ArXiv",
+      "Consolidar la tabla de fuentes de profundización estadística",
+      "Asegurar la resolución del 100% de los identificadores"
+    ],
+    "states": [
+      "VERIFICACION_CITAS",
+      "REVISION_FORMULAS",
+      "CONSOLIDACION_TABLA"
+    ],
+    "outputs": [
+      "Tabla Canónica de Fuentes Estadísticas T01-X05"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CORPUS_ESTADISTICO_T01",
+      "type": "documento",
+      "name": "Corpus de Fuentes Estadísticas T01",
+      "aliases": [
+        "ARES, ALCE, SummEval, SABER"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CORPUS_ESTADISTICO_T01",
+      "predicate": "respalda_diseno_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X05-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de citación verificada en Eje X1",
+      "denominator": "Total afirmaciones metodológicas formuladas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Blindaje técnico frente a comités de científicos de datos de corporaciones multinacionales.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

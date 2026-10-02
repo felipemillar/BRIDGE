@@ -1,0 +1,387 @@
+{
+  "question_id": "P06-C12",
+  "pilar": "P06",
+  "eje": "Tipos de discrepancia y respuesta",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué sigue sin prueba sobre tipos de discrepancia y respuesta, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "En el survey de Calamai et al. (2025/2026), solo el 9% de los estudios comparó sus resultados contra baselines aleatorios o de mayoría [25], y menos de la mitad incluyó baselines basados en palabras clave [25]. El acuerdo entre anotadores humanos (*IAA*) para la clasificación de especificidad en Bingler et al. fue de \\\\(\\alpha = 0.1703\\\\) [28], mientras que para tweets de marketing fue de \\\\(\\alph",
+  "findings": [
+    {
+      "claim_id": "P06-C12-C1",
+      "claim": "En el survey de Calamai et al. (2025/2026), solo el 9% de los estudios comparó sus resultados contra baselines aleatorios o de mayoría [25], y menos de la mitad incluyó baselines basados en palabras clave [25].",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "b78c4d97-51eb-4436-9dac-d03c896c69e6",
+          "source_title": "Calamai et al. (2025-2026) - Detecting Greenwashing Survey (Texto Completo HTML v2)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C12",
+          "excerpt_short": "En el survey de Calamai et al. (2025/2026), solo el 9% de los estudios comparó sus resultados contra baselines aleatorios o de mayoría [25], y menos de la mitad incluyó baselines b...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C12-C2",
+      "claim": "El acuerdo entre anotadores humanos (*IAA*) para la clasificación de especificidad en Bingler et al. fue de \\\\(\\alpha = 0.1703\\\\) [28], mientras que para tweets de marketing fue de \\\\(\\alpha = 0.8223\\\\) (*Woloszyn et al.*) y para párrafos de reportes fue de \\\\(\\alpha = 0.47\\\\) (*Stammbach et al.*) [",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C12",
+          "excerpt_short": "El acuerdo entre anotadores humanos (*IAA*) para la clasificación de especificidad en Bingler et al. fue de \\\\(\\alpha = 0.1703\\\\) [28], mientras que para tweets de marketing fue de...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C12-C3",
+      "claim": "La adenda de calidad `P06_QUALITY_ADDENDUM` delimita que las soluciones comerciales (AlphaSense, Signal AI, Palantir) carecen de auditorías científicas públicas e independientes [19].",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C12",
+          "excerpt_short": "La adenda de calidad `P06_QUALITY_ADDENDUM` delimita que las soluciones comerciales (AlphaSense, Signal AI, Palantir) carecen de auditorías científicas públicas e independientes [1...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C12-C4",
+      "claim": "Claims de proveedores de software sobre la capacidad \"automatizada e infalible\" de detectar riesgos reputacionales en tiempo real sin requerir calibración ni ajuste fino en el dominio de la empresa. `P06_QUALITY_ADDENDUM` desmiente esto al señalar que incluso sistemas avanzados como SABER requieren ",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "32c4f737-2aea-40b3-8b5f-17c79383351c",
+          "source_title": "SABER (2026) - Trust or Abstain? Self-Aware RAG",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C12",
+          "excerpt_short": "Claims de proveedores de software sobre la capacidad \"automatizada e infalible\" de detectar riesgos reputacionales en tiempo real sin requerir calibración ni ajuste fino en el domi...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C12-C5",
+      "claim": "Inferir que la falta de baselines en estudios académicos (como *Friederich et al.* o *Sharma et al.*) invalida toda la investigación sobre NLP ambiental, cuando en realidad refleja debilidades metodológicas del área que exigen baselines constantes y métricas de incertidumbre [25, 26].",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C12",
+          "excerpt_short": "Inferir que la falta de baselines en estudios académicos (como *Friederich et al.* o *Sharma et al.*) invalida toda la investigación sobre NLP ambiental, cuando en realidad refleja...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C12-C6",
+      "claim": "Establecer el **Protocolo de Validación en Terreno de 3 Fases** (Backtesting con 10 casos chilenos, 12 entrevistas a directores IPSA y 60 días de *Shadow Running*) como condición obligatoria previa al despliegue comercial del software [33].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C12",
+          "excerpt_short": "Establecer el **Protocolo de Validación en Terreno de 3 Fases** (Backtesting con 10 casos chilenos, 12 entrevistas a directores IPSA y 60 días de *Shadow Running*) como condición o...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C12-C7",
+      "claim": "Incorporar métricas operacionales de asuntos corporativos en la evaluación del sistema: Tiempo Medio de Detección (MTTD < 15 min), Tasa de Falsos Positivos (< 8%) y 100% de trazabilidad navegable hacia los documentos fuente [34].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C12",
+          "excerpt_short": "Incorporar métricas operacionales de asuntos corporativos en la evaluación del sistema: Tiempo Medio de Detección (MTTD < 15 min), Tasa de Falsos Positivos (< 8%) y 100% de trazabi...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de medios y reguladores",
+      "Documentación corporativa interna y memorias CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "CCO / Dircom",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Extracción y normalización de afirmaciones",
+      "Resolución de entidades y contraste temporal",
+      "Evaluación de coherencia fáctica y generación de brief"
+    ],
+    "states": [
+      "ENTRADA_RECIBIDA",
+      "ENTIDADES_CANONICALIZADAS",
+      "CONTRASTE_EJECUTADO",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Evaluación estructurada y respuesta citada para P06-C12"
+    ],
+    "exceptions": [
+      "Ausencia de señal externa verificable o desfase temporal en el corte documental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_P06_CORP",
+      "type": "organizacion",
+      "name": "Corporación Emisora CMF",
+      "aliases": [
+        "Empresa Reportante"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_REG",
+      "type": "organizacion",
+      "name": "CMF / SERNAC / SMA",
+      "aliases": [
+        "Regulador Chileno"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_BRIDGE",
+      "type": "producto",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "BRIDGE Platform"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_P06_CORP",
+      "predicate": "sujeto_a_fiscalizacion_de",
+      "object_id": "ENT_P06_REG",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P06-C12-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporación en el pipeline del módulo para sustentar decisiones ejecutivas en P06-C12.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Inexistencia de benchmarks abiertos de comunicación corporativa**: No existe ningún dataset de referencia estandarizado y abierto que evalúe la ambigüedad estratégica permisible, el desacoplamiento retórico o las declaraciones prospectivas protegidas",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    },
+    {
+      "gap": "Hipótesis de postura mixta como Greenwashing**: La hipótesis de *Morio & Manning (2023)* respecto a que una postura mixta o contradictoria de la empresa hacia políticas de mitigación climática prueba *greenwashing* **sigue sin ser probada ni confirma",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

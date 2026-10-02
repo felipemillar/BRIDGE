@@ -1,0 +1,148 @@
+{
+  "question_id": "P08-F16",
+  "pilar": "P08",
+  "eje": "Alternativas y sustitutos",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar alternativas y sustitutos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar de forma estructurada las alternativas y sustitutos exige modelar: 1) Variables de Desempeño (costo mensual recurrente, tiempo de ciclo de entrega, porcentaje de falsos positivos, índice de cobertura local chilena); 2) Categorías de Solución (Agencia de Asuntos Públicos, Equipo Interno Manual, Software Puro Global, Servicio Tech-Enabled Híbrido); 3) Relaciones de Sustitución (reemplazo total de retainer de monitoreo, complementariedad con asesoría estratégica de crisis del socio de agencia, liberación de carga operativa del analista in-house); y 4) Condiciones de Transición (costo de cambio contractual, resistencia al cambio del equipo interno, aprobación del CISO para nuevas plataformas cloud).",
+  "findings": [
+    {
+      "claim_id": "P08-F16-C1",
+      "claim": "La estructura relacional de alternativas debe capturar tanto el análisis costo-beneficio financiero como las dinámicas humanas de sustitución y resistencia al cambio.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "substitute_ontology_model",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 3.4 'Modelo Ontológico de Sustitutos y Costes de Cambio'",
+          "excerpt_short": "El modelo debe clasificar cada alternativa según su capacidad de entrega ('delivery_type': manual_agency, in_house, pure_saas, tech_enabled), su grado de cobertura de fuentes críticas ('regulatory_coverage_score') y la fricción de reemplazo ('switching_cost'). La relación clave no es la eliminación del asesor senior, sino la sustitución del componente ineficiente de recolección y formateo de datos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_EVIDENCE_MAP",
+          "source_id": "1323b514-5154-49f7-b105-42766ddbcaf5",
+          "locator": "Eje 3: Alternativas y Sustitutos - Ontología de Competencia",
+          "excerpt_short": "Entidades: 'Alternativa', 'Atributo_Desempeno', 'Friccion_Transicion', 'Impacto_Presupuestario' unidas por relaciones de sustitución, subsidio y desplazamiento funcional.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estructura ontológica alineada entre el dossier técnico y el mapa de evidencia de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de proveedores de servicios",
+      "Entrevistas con Dircoms",
+      "Matrices de capacidades"
+    ],
+    "actors": [
+      "Analista de Estrategia",
+      "Comité de Producto",
+      "Consultor Comercial"
+    ],
+    "steps": [
+      "Clasificación de alternativas por categoría",
+      "Evaluación de atributos cuantitativos y cualitativos",
+      "Modelado de fricción de cambio",
+      "Definición del ángulo de posicionamiento"
+    ],
+    "states": [
+      "Alternativa Identificada",
+      "Mapeada en Ontología",
+      "Vector de Reemplazo Definido"
+    ],
+    "outputs": [
+      "Matriz de posicionamiento competitivo dinámico"
+    ],
+    "exceptions": [
+      "Agencias que establecen alianzas estratégicas para revender la plataforma BRIDGE"
+    ]
+  },
+  "entities": [
+    "Modelo Ontológico de Sustitutos",
+    "Switching Cost",
+    "Fricción de Transición",
+    "Tech-Enabled",
+    "Pure SaaS"
+  ],
+  "relations": [
+    {
+      "from": "BRIDGE Tech-Enabled",
+      "to": "Retainer Monitoreo Agencia",
+      "type": "substitutes"
+    },
+    {
+      "from": "BRIDGE Tech-Enabled",
+      "to": "Asesoría Estratégica Socio",
+      "type": "complements"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Estrategia destructiva vs Estrategia complementaria",
+      "diferencia": "Intentar destruir a las agencias genera resistencia; posicionar a BRIDGE como la herramienta que agencias y clientes usan reduce la fricción de venta."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "switching_cost_recovery_period": "< 2 meses gracias al ahorro inmediato en retainers o personal",
+    "regulatory_coverage_metric": "Porcentaje de fuentes normativas chilenas cubiertas nativamente"
+  },
+  "bridge_implications": "Ofrecer a las grandes agencias una modalidad de 'partner tecnológico' donde BRIDGE provee la infraestructura y ellos la consultoría presencial.",
+  "open_gaps": [
+    "Medir la receptividad de agencias chilenas medianas a operar como distribuidores de BRIDGE."
+  ],
+  "next_question_ids": [
+    "P08-F17",
+    "P08-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

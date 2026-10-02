@@ -1,0 +1,125 @@
+{
+  "question_id": "P03-F10",
+  "pilar": "P03",
+  "eje": "Acceso a prensa y web abierta",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar acceso a prensa y web abierta de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del acceso a prensa exige: 1) Variables técnicas: `canal_acceso` (api, rss, scraping, sindicacion), `latencia_ingesta_segundos`, `estado_paywall` (abierto, medido, duro), `restringido_por_robots_txt` (booleano), `opt_out_tdm` (booleano según Art 4 Directiva UE), y `hash_contenido` (SHA-256 inmutable); 2) Categorías de medios: Internacional, Nacional_Santiago, Regional_Provincial, Especializado_Sectorial y Gremial; 3) Relaciones de grafo: `publicado_por` (Organización de Medios), `autor_de` (Periodista), `menciona_a` (Entidad Corporativa) y `pertenece_a_consorcio` (Grupo Editorial como Copesa o El Mercurio); y 4) Condiciones de integridad: almacenar únicamente citas textuales breves y enlaces canónicos si el medio cuenta con reserva de derechos de autor expresa.",
+  "findings": [
+    {
+      "claim_id": "P03-F10-C1",
+      "claim": "El modelado estructurado de prensa debe capturar variables de estado de paywall, directivas de opt-out por robots.txt y grafos de propiedad de medios para garantizar cumplimiento normativo y trazabilidad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Modelado Estructurado P03"
+      },
+      "evidence": [
+        {
+          "source_id": "5fa48270-1540-4934-a20f-1c1a17742558",
+          "source_title": "Directiva (UE) 2019/790 sobre Derechos de Autor en el Mercado Único Digital (Art. 3 y 4 TDM)",
+          "original_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019L0790",
+          "locator": "Art. 4.3 Machine-readable opt-out",
+          "excerpt_short": "Rights holders must use machine-readable means, including metadata and terms and conditions of a website or a service.",
+          "source_date": "2019",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:05:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación con especificaciones legales de minería de textos y datos.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Metadatos de artículo ingerido",
+      "Cabeceras HTTP y robots.txt"
+    ],
+    "actors": [
+      "Metadata Parser",
+      "Compliance Engine"
+    ],
+    "steps": [
+      "Verificación de robots.txt",
+      "Extracción de consorcio editorial",
+      "Creación de registro estructurado"
+    ],
+    "states": [
+      "Raw_Article",
+      "Compliance_Checked",
+      "Structured_Record_Ready"
+    ],
+    "outputs": [
+      "Objeto JSON estructurado de artículo de prensa"
+    ],
+    "exceptions": [
+      "Medios que ocultan la fecha real de publicación en el cuerpo del HTML"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRESS_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Prensa",
+      "aliases": [
+        "Structured Press Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRESS_SCHEMA",
+      "predicate": "modela_articulos_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F10-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar campos obligatorios de robots_txt_status y opt_out_tdm en el esquema de ingesta de noticias.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:05:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

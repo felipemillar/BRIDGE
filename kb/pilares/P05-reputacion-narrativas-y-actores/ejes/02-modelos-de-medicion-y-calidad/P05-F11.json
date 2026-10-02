@@ -1,0 +1,139 @@
+{
+  "question_id": "P05-F11",
+  "pilar": "P05",
+  "eje": "Modelos de medición y calidad",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre modelos de medición y calidad?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cada hecho relativo a modelos de medición y calidad está respaldado por fuentes primarias documentadas en el corpus: 1) RepTrak (2022, 7 Ways to Quantify Reputation and 7 Drivers Model, ámbito: medición normativa internacional): respalda la estructura de 7 drivers y su vínculo causal con los comportamientos de apoyo (supportive behaviors); 2) Merco (2024, Metodología Multistakeholder del Monitor Empresarial de Reputación Corporativa / Merco Chile 2024, ámbito: rankings corporativos en Iberoamérica): respalda el proceso secuencial en cuatro etapas y la certificación independiente bajo norma ISAE 3000 por KPMG; 3) Cadem Chile (2024, Marcas Ciudadanas — Metodología de Impacto y Relevancia Social, ámbito: mercado de consumo y ciudadanía en Chile): respalda la evaluación semestral de Presencia Positiva, Relevancia Cotidiana y Aporte Comunitario; 4) Group Caliber (2024, Real-Time Stakeholder Intelligence & Reputation Monitoring Platform, ámbito: SaaS de telemetría continua): respalda el seguimiento diario 365 días al año del vínculo emocional e indicadores ESG; y 5) AMEC (2020/2022, Barcelona Principles 3.0 e Integrated Evaluation Framework, ámbito: taxonomía global de evaluación de comunicaciones): respalda la jerarquía causal estricta de Outputs, Out-takes, Outcomes e Impacto.",
+  "findings": [
+    {
+      "claim_id": "P05-F11-C1",
+      "claim": "Los estándares metodológicos y modelos de calidad disponen de especificaciones técnicas publicadas por sus organizaciones matrices con trazabilidad pericial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Chile / Internacional",
+        "actor": "Organizaciones Metodológicas"
+      },
+      "evidence": [
+        {
+          "source_id": "9345d275-3d3f-4a23-933b-beafacded60c",
+          "source_title": "RepTrak: 7 Ways to Quantify Reputation and 7 Drivers Model",
+          "original_url": "https://www.reptrak.com/blog/7-ways-to-quantify-reputation/",
+          "locator": "Publicación corporativa RepTrak 2022",
+          "excerpt_short": "Documenta los 7 drivers y la metodología de regresión para explicar el Pulse Score y la propensión a recomendar o comprar.",
+          "source_date": "2022-04-10",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "71599e71-f733-4c27-b88c-50c851b04fb8",
+          "source_title": "Merco Chile: Ranking de Empresas y Criterios de Evaluación Multistakeholder",
+          "original_url": "https://www.merco.info/cl/ranking-merco-empresas",
+          "locator": "Ficha metodológica Merco Chile 2024",
+          "excerpt_short": "Muestra compuesta por más de 1.000 directivos y paneles de expertos sectoriales con dictamen pericial ISAE 3000 de KPMG.",
+          "source_date": "2024-06-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación documental completa con reportes metodológicos oficiales vigentes.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Publicaciones técnicas originales",
+      "Registros metodológicos públicos"
+    ],
+    "actors": [
+      "Curador de Fuentes",
+      "Auditor de Información"
+    ],
+    "steps": [
+      "Verificación de URL y texto sustantivo",
+      "Comprobación de dictámenes de auditoría externa",
+      "Registro en base de evidencias de P05"
+    ],
+    "states": [
+      "Sources_Indexed",
+      "Verifications_Completed",
+      "Manifest_Frozen"
+    ],
+    "outputs": [
+      "Catálogo de fuentes primarias auditadas"
+    ],
+    "exceptions": [
+      "Documentos con enlaces rotos sustituidos por memorias técnicas verificadas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_METHODOLOGY_SOURCES",
+      "type": "corpus_fuentes",
+      "name": "Fuentes de Metodología de Reputación",
+      "aliases": [
+        "Reputation Methodology Sources"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_METHODOLOGY_SOURCES",
+      "predicate": "respalda_modelos_de",
+      "object_id": "ENT_MODEL_REGISTRY",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F11-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Auditoría de Fuentes",
+      "implication": "BRIDGE debe proveer enlaces directos a las metodologías oficiales cuando presente evaluaciones comparadas de RepTrak, Merco o Cadem.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

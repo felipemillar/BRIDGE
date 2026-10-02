@@ -1,0 +1,419 @@
+{
+  "question_id": "P06-C14",
+  "pilar": "P06",
+  "eje": "Evaluación con casos de referencia",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué sigue sin prueba sobre evaluación con casos de referencia, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Inexistencia de Datasets Abiertos Verificados de Greenwashing Corporativo:** La literatura sobre NLP confirma la ausencia de conjuntos de datos públicos basados en casos reales de greenwashing validados por terceros independientes (reguladores, tribunales o investigaciones periodísticas) [16, 17]. Los estudios actuales se limitan a evaluar tareas sustitutas (*proxy tasks*) como clasificación TCFD,",
+  "findings": [
+    {
+      "claim_id": "P06-C14-C1",
+      "claim": "Inexistencia de Datasets Abiertos Verificados de Greenwashing Corporativo:** La literatura sobre NLP confirma la ausencia de conjuntos de datos públicos basados en casos reales de greenwashing validados por terceros independientes (reguladores, tribunales o investigaciones periodísticas) [16, 17]. L",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "33d0f555-7934-4af8-913b-89920a2514ac",
+          "source_title": "SERNAC Chile - Circular sobre Consumo Sostenible y Greenwashing",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C14",
+          "excerpt_short": "Inexistencia de Datasets Abiertos Verificados de Greenwashing Corporativo:** La literatura sobre NLP confirma la ausencia de conjuntos de datos públicos basados en casos reales de ...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C14-C2",
+      "claim": "Deficiencias y Parcialidades en la Literatura de NLP Aplicada:**",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C14",
+          "excerpt_short": "Deficiencias y Parcialidades en la Literatura de NLP Aplicada:**...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C14-C3",
+      "claim": "Falta de Baselines*: Menos del 9% de los estudios de la literatura comparan sus resultados contra baselines aleatorios o de clase mayoritaria (ej. Friederich et al., 2021 reportó precisión <50% sin baseline aleatorio; Sharma et al., 2024 y Bronzini et al., 2023 predijeron scores ESG sin reportar bas",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C14",
+          "excerpt_short": "Falta de Baselines*: Menos del 9% de los estudios de la literatura comparan sus resultados contra baselines aleatorios o de clase mayoritaria (ej. Friederich et al., 2021 reportó p...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C14-C4",
+      "claim": "Las plataformas de inteligencia externa (Signal AI, Dataminr, AlphaSense, Palantir AIP) afirman identificar riesgos reputacionales e inconsistencias mediante ontologías de decisión y monitoreo en tiempo real [9, 24], pero no presentan auditorías empíricas públicas sobre su tasa real de falsos positi",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "98f72019-62a8-4781-a211-2ce2cccaf4eb",
+          "source_title": "Palantir Foundry - Why Create an Ontology: Decision-Centric System",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C14",
+          "excerpt_short": "Las plataformas de inteligencia externa (Signal AI, Dataminr, AlphaSense, Palantir AIP) afirman identificar riesgos reputacionales e inconsistencias mediante ontologías de decisión...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C14-C5",
+      "claim": "Dado que los modelos evaluados en entornos limpios sufren degradación al enfrentarse al ruido e imbalances de datos del mundo real, la falta de estimadores de incertidumbre y de validación en terreno sugiere que la tasa real de falsos positivos en monitoreo corporativo continuo será mayor a la repor",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C14",
+          "excerpt_short": "Dado que los modelos evaluados en entornos limpios sufren degradación al enfrentarse al ruido e imbalances de datos del mundo real, la falta de estimadores de incertidumbre y de va...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C14-C6",
+      "claim": "La aplicación de mecanismos de abstención algorítmica sin calibración con datos del dominio corporativo (ej. SABER con un *threshold* genérico) puede causar sobre-abstención en situaciones de crisis de alta velocidad, privando a la gerencia de alertas tempranas sobre narrativas hostiles emergentes [",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "32c4f737-2aea-40b3-8b5f-17c79383351c",
+          "source_title": "SABER (2026) - Trust or Abstain? Self-Aware RAG",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C14",
+          "excerpt_short": "La aplicación de mecanismos de abstención algorítmica sin calibración con datos del dominio corporativo (ej. SABER con un *threshold* genérico) puede causar sobre-abstención en sit...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C14-C7",
+      "claim": "Protocolo de Validación Empírica en Terreno (Chile/LatAm):** Para resolver la incertidumbre metodológica, se define un protocolo de validación en 3 fases [28]:",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C14",
+          "excerpt_short": "Protocolo de Validación Empírica en Terreno (Chile/LatAm):** Para resolver la incertidumbre metodológica, se define un protocolo de validación en 3 fases [28]:...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C14-C8",
+      "claim": "Fase 1 (Backtesting Retrospectivo)*: Procesar 10 casos históricos documentados de controversias corporativas en Chile (2018–2025) que hayan involucrado reportes CMF NCG 461, formulaciones de cargos de la SMA (SNIFA) y oficios de SERNAC, midiendo si el pipeline habría detectado la brecha con antelaci",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "589b1b7c-6049-4b3a-9f0d-1fa8990a7a1d",
+          "source_title": "CMF Chile - Sostenibilidad y Norma de Carácter General N° 461",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C14",
+          "excerpt_short": "Fase 1 (Backtesting Retrospectivo)*: Procesar 10 casos históricos documentados de controversias corporativas en Chile (2018–2025) que hayan involucrado reportes CMF NCG 461, formul...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de medios y reguladores",
+      "Documentación corporativa interna y memorias CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "CCO / Dircom",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Extracción y normalización de afirmaciones",
+      "Resolución de entidades y contraste temporal",
+      "Evaluación de coherencia fáctica y generación de brief"
+    ],
+    "states": [
+      "ENTRADA_RECIBIDA",
+      "ENTIDADES_CANONICALIZADAS",
+      "CONTRASTE_EJECUTADO",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Evaluación estructurada y respuesta citada para P06-C14"
+    ],
+    "exceptions": [
+      "Ausencia de señal externa verificable o desfase temporal en el corte documental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_P06_CORP",
+      "type": "organizacion",
+      "name": "Corporación Emisora CMF",
+      "aliases": [
+        "Empresa Reportante"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_REG",
+      "type": "organizacion",
+      "name": "CMF / SERNAC / SMA",
+      "aliases": [
+        "Regulador Chileno"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_BRIDGE",
+      "type": "producto",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "BRIDGE Platform"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_P06_CORP",
+      "predicate": "sujeto_a_fiscalizacion_de",
+      "object_id": "ENT_P06_REG",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P06-C14-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporación en el pipeline del módulo para sustentar decisiones ejecutivas en P06-C14.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Incertidumbre o vacío documental registrado para ¿Qué sigue sin prueba sobre evaluación con casos de referencia, qué fuente falló.",
+      "minimum_validation": "Prueba de campo o auditoría independiente de consistencia.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "question_id": "P01-F02",
+  "pilar": "P01",
+  "eje": "Mandato y fronteras de asuntos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué actividades recaen realmente en el CCO o Dircom y cuáles se delegan a especialistas o agencias?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El CCO retiene de forma directa la asesoría estratégica al CEO, la alineación transversal del C-Suite, la gobernanza ética y la fijación de posturas institucionales; delega en especialistas internos el monitoreo técnico regulatorio y el reporte ASG; y externaliza a agencias el clipping mediático 24/7, el media training y la producción de eventos.",
+  "findings": [
+    {
+      "claim_id": "P01-F02-C1",
+      "claim": "El CCO mantiene responsabilidades directas e indelegables: asesoría de crisis al Directorio, diplomacia corporativa, integración funcional y gobierno ético.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2025",
+        "region": "Global",
+        "actor": "Arthur W. Page Society / Global Alliance"
+      },
+      "evidence": [
+        {
+          "source_id": "a17ab259-1c1f-43de-bc95-7a6b87c9251c",
+          "source_title": "Page Society - Beyond Communication: CCO Leadership in Navigating New Complexity",
+          "original_url": "https://page.org/knowledge-base/beyond-communication-cco-leadership-in-navigating-new-complexity/",
+          "locator": "Liderazgo Directo del CCO",
+          "excerpt_short": "El rol de asesor ético y consejero estratégico en complejidad geopolítica recae directamente en el CCO y no puede externalizarse.",
+          "source_date": "2023",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco normativo y competencial estándar de la Page Society.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F02-C2",
+      "claim": "Las agencias externas asumen distribución táctica de comunicados, monitoreo 24/7 y estudios de percepción, pero McKinsey advierte que no pueden sustituir la postura directa de la empresa ante reguladores.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025",
+        "region": "Global / Chile",
+        "actor": "Agencias de PR y Consultoría"
+      },
+      "evidence": [
+        {
+          "source_id": "b6f21f15-0ec9-4e85-b6ae-aca2f29e1ed1",
+          "source_title": "McKinsey & Company - Upgrading corporate affairs for a new geopolitical era",
+          "original_url": "https://www.mckinsey.com/capabilities/geopolitics/our-insights/upgrading-corporate-affairs-for-a-new-geopolitical-era",
+          "locator": "Sección In-house vs Agency capabilities",
+          "excerpt_short": "External PR agencies cannot substitute for the company's direct voice and substantive technical standing when engaging regulators or lawmakers.",
+          "source_date": "2025-10-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Reporte estratégico de consultoría de gestión de McKinsey & Company.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F02-C3",
+      "claim": "En América Latina, la baja madurez interna en competencias digitales y CommTech (<30%) genera una dependencia excesiva de consultoras externas para analítica avanzada de señales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2024",
+        "region": "América Latina",
+        "actor": "EUPRERA / LCM"
+      },
+      "evidence": [
+        {
+          "source_id": "64f69761-40f4-4f00-82b4-5878cf7be69d",
+          "source_title": "EUPRERA - Latin American Communication Monitor (LCM) Portal y Resultados",
+          "original_url": "https://latincommunicationmonitor.com/",
+          "locator": "Competencias digitales y analítica de datos en LatAm",
+          "excerpt_short": "Menos de un tercio de los departamentos de comunicación en Latinoamérica cuenta con competencias maduras de análisis de datos estructurados.",
+          "source_date": "2024",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estudio académico regional de EUPRERA Latin American Communication Monitor.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F02-C4",
+      "claim": "La externalización de minutas ejecutivas en agencias externas aumenta el riesgo de contradicción fáctica debido a la falta de acceso fluido a actas y memoria confidencial.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "América Latina / Global",
+        "actor": "Equipos de Asuntos Públicos"
+      },
+      "evidence": [
+        {
+          "source_id": "059b0334-329a-41a0-8dd9-44d7ea87aeca",
+          "source_title": "P01_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 4, Hipótesis HT-2",
+          "excerpt_short": "HT-2: La dependencia de agencias para minutas de voceros crea brechas de veracidad por restricciones de acceso a información interna confidencial.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:25:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Inferencia operacional fundamentada en gobernanza de datos y confidencialidad.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Demandas de crisis",
+      "Agenda regulatoria de lobby",
+      "Campañas corporativas"
+    ],
+    "actors": [
+      "CCO",
+      "Equipos internos de Asuntos Públicos/ESG",
+      "Agencias externas de relaciones públicas"
+    ],
+    "steps": [
+      "1. Definición interna del marco ético y la postura (Lines to Take) por el CCO",
+      "2. Asignación técnica de reportes e indicadores a gerencias internas",
+      "3. Contratación de monitoreo, medios y eventos a agencias externas",
+      "4. Validación y control de calidad por el CCO antes de vocerías"
+    ],
+    "states": [
+      "Planificacion_Estrategica",
+      "Distribucion_Operativa",
+      "Ejecucion_Tactica",
+      "Auditoria_Final"
+    ],
+    "outputs": [
+      "Estrategia institucional ejecutada",
+      "Auditoría de medios",
+      "Informes de percepción"
+    ],
+    "exceptions": [
+      "Agencia externa emite comunicado sin aprobación previa del CCO",
+      "Fuga de información confidencial en agencia externa"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CCO",
+      "type": "persona_rol",
+      "name": "Chief Communications Officer",
+      "aliases": [
+        "Dircom"
+      ]
+    },
+    {
+      "entity_id": "ENT_EUPRERA_LCM",
+      "type": "organizacion",
+      "name": "EUPRERA Latin American Communication Monitor",
+      "aliases": [
+        "LCM"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CCO",
+      "predicate": "supervisa",
+      "object_id": "Agencias_PR",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F02-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de control",
+      "responsabilidades_directas": "Totalmente bajo el CCO (consejería al CEO, posturas políticas y crisis)",
+      "responsabilidades_delegadas": "Compartido con gerencias internas (reportes ASG, monitoreo regulatorio)",
+      "responsabilidades_externalizadas": "Supervisado con SLA estricto (clipping, difusión masiva, media training)"
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P01-F02-C1",
+        "P01-F02-C3"
+      ],
+      "difference": "Los marcos de la Page Society prescriben la internalización de la inteligencia analítica, mientras que la realidad en América Latina muestra carencia de competencias y alta dependencia de terceros.",
+      "resolution": "abierta",
+      "reason": "Déficit de formación analítica en profesionales de comunicación de la región documentado por LCM 2024."
+    }
+  ],
+  "metrics_and_denominators": [
+    {
+      "metric": "Madurez digital y analítica en departamentos de comunicación en LatAm",
+      "value": "<30%",
+      "denominator": "Departamentos evaluados en el estudio LCM de EUPRERA"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Proveer una herramienta in-house para que el equipo interno elabore minutas sin depender de agencias externas.",
+      "status": "hipotesis"
+    },
+    {
+      "module": "Hablar",
+      "implication": "Mantener una cadena de custodia sobre borradores de comunicados antes de su distribución.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Medición del sobrecosto por ineficiencia en traspasos de minutas entre clientes y agencias de comunicación.",
+      "minimum_validation": "Auditoría de procesos de agencias vs equipos in-house.",
+      "priority": "baja"
+    }
+  ],
+  "next_question_ids": [
+    "P01-F03",
+    "P01-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:26:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

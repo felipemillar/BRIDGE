@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X02",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Adquisiciones y estructura de grupos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fecha distingue anuncio, aprobación y cierre de cada operación documentada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La cronología verificable distingue estrictamente las fases de cada transacción: 1) FGS Global / KKR: Anuncio público en agosto de 2024; aprobaciones regulatorias antimonopolio en EE. UU. y UE en octubre-noviembre de 2024; Cierre formal y transferencia de acciones el 3 de diciembre de 2024 (notificado formalmente en SEC Form 6-K a5017o.htm); 2) Burson Global / Limbik: Cierre definitivo ejecutado y anunciado el 12 de agosto de 2026 como adquisición privada de tecnología; 3) Signal AI / Memo: Cierre completado el 20 de abril de 2026, fecha en que Memo transfirió sus operaciones e infraestructura técnica; 4) Hootsuite / Talkwalker: Anuncio inicial en abril de 2024; cierre operacional y aprobación en Q2 2024; 5) Cision / Brandwatch: Anuncio en febrero de 2021 por 450M USD; cierre formal el 1 de junio de 2021; 6) Open Point Group: Formación y cierre de la adquisición de Converlens completado en julio de 2024.",
+  "findings": [
+    {
+      "claim_id": "P02-X02-C1",
+      "claim": "La auditoría temporal fija con exactitud documental las fechas de cierre societario: FGS/KKR (3-dic-2024), Brandwatch/Cision (1-jun-2021), Open Point/Converlens (jul-2024), Memo/Signal AI (20-abr-2026) y Limbik/Burson (12-ago-2026).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Cronología M&A P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 3: Timeline and Closing Dates Rectification",
+          "excerpt_short": "Authoritative timeline: FGS/KKR closed Dec 3, 2024; Limbik/Burson closed Aug 12, 2026; Memo/Signal AI closed Apr 20, 2026.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:48:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de fuentes primarias y directivas de errata.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Comunicados de prensa de anuncio",
+      "Resoluciones de órganos antimonopolio",
+      "Registros finales de transferencia de capital"
+    ],
+    "actors": [
+      "Auditor Cronológico",
+      "Analista de Inteligencia"
+    ],
+    "steps": [
+      "Mapeo de hitos: Anuncio -> Aprobación -> Cierre",
+      "Asignación de fecha efectiva de control",
+      "Registro en base temporal"
+    ],
+    "states": [
+      "Anuncio_Detectado",
+      "Aprobacion_Confirmada",
+      "Cierre_Registrado"
+    ],
+    "outputs": [
+      "Línea de tiempo auditada de M&A del sector"
+    ],
+    "exceptions": [
+      "Transacciones donde el anuncio y el cierre se realizan en el mismo acto"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TIMELINE_MA",
+      "type": "registro_temporal",
+      "name": "Cronología Auditada M&A Corporate Affairs",
+      "aliases": [
+        "M&A Timeline"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TIMELINE_MA",
+      "predicate": "fija_fecha_cierre_fgs",
+      "object_id": "2024-12-03",
+      "valid_from": "2024-12-03",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X02-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fecha de Anuncio vs Fecha de Cierre Definitivo",
+      "Fecha de Anuncio": "Declaración de intenciones sujeta a aprobaciones y auditorías de compra (due diligence).",
+      "Fecha de Cierre Definitivo": "Transferencia real del control societario, fondos y gobierno corporativo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La precisión temporal en los análisis competitivos previene anacronismos y errores de evaluación en el mercado.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:48:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

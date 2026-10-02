@@ -1,0 +1,138 @@
+{
+  "question_id": "P02-F43",
+  "pilar": "P02",
+  "eje": "Posicionamiento y alianzas",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué trabajos conviene construir, comprar o integrar según las capacidades documentadas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis documental de las capacidades de los 70 proveedores define una matriz estratégica de 'Build, Buy or Partner': 1) Integrar / Partner (Adquisición de datos y conectividad): Ingesta de prensa y broadcast nacional/regional (Litoralpress en Chile, LexisNexis/Meltwater a nivel global); conectores de búsqueda empresarial interna sobre SaaS (Glean API o conectores nativos de M365/Google Workspace); y fuentes de inteligencia financiera pública (filings SEC, CMF); reconstruir redes de captura de radio RF o indexadores de 100 herramientas corporativas resulta técnica y financieramente inviable; 2) Construir (Build propio de alto valor): La capa de inteligencia unificada que correlaciona los cuatro módulos (Saber, Escuchar, Hablar, Relacionar); el grafo de relaciones entre compromisos territoriales (RCA/SLO) y alertas de prensa; el motor de consistencia de vocería y System of Record inmutable de Q&A corporativo; y los agentes de alerta temprana ante riesgos regulatorios y de lobby; 3) Comprar / White-Label (Opcional): Motores de salas de prensa públicas externas (tipo Prezly) si el cliente requiere un portal de distribución masiva a periodistas.",
+  "findings": [
+    {
+      "claim_id": "P02-F43-C1",
+      "claim": "La ventaja competitiva de BRIDGE radica en construir el motor de correlación y gobernanza entre los cuatro módulos, integrando mediante alianzas y APIs la captura masiva de medios locales y la indexación de repositorios internos.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Estrategia Tecnológica BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "b5217662-c6f0-4529-8282-f5d17339b7fa",
+          "source_title": "P02_GLOBAL_MARKET_MAP_V1",
+          "original_url": null,
+          "locator": "Strategic Architecture: Build vs Buy Analysis",
+          "excerpt_short": "Commoditized layers (data collection, broadcast recording, generic enterprise search) should be partnered/integrated, while the core value lies in unified cross-module intelligence.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:42:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Análisis estratégico fundado en la matriz de capacidades de los 70 proveedores del mercado.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de proveedores de datos",
+      "Requerimientos funcionales de los 4 módulos",
+      "Costos de desarrollo vs licenciamiento"
+    ],
+    "actors": [
+      "Director de Tecnología (CTO)",
+      "Arquitecto de Producto",
+      "Gerente de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Evaluación de costos y tiempos de captura propia",
+      "Identificación de socios de datos estratégicos (APIs)",
+      "Desarrollo del motor de correlación cruzada propietario",
+      "Integración continua de feeds de terceros"
+    ],
+    "states": [
+      "Analisis_Completado",
+      "Socio_Seleccionado",
+      "Core_Desarrollado",
+      "Plataforma_Integrada"
+    ],
+    "outputs": [
+      "Arquitectura híbrida óptima que maximiza el valor del software propietario"
+    ],
+    "exceptions": [
+      "Proveedor de datos clave que altera sus tarifas o bloquea el acceso a su API"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTRATEGIA_BUILD_BUY",
+      "type": "marco_estrategico",
+      "name": "Estrategia Build Buy Partner BRIDGE",
+      "aliases": [
+        "Build Buy Framework"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESTRATEGIA_BUILD_BUY",
+      "predicate": "recomienda_integrar_datos_de",
+      "object_id": "Litoralpress_y_Glean",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F43-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque Construir Todo (Full Build) vs Enfoque Orquestación Inteligente (BRIDGE)",
+      "Enfoque Construir Todo": "Requiere desplegar infraestructura masiva de antenas de radio y crawlers web globales; alto riesgo y costo excesivo.",
+      "Enfoque Orquestación Inteligente": "Se enfoca en el valor diferencial: unir los datos existentes en un flujo operativo único para el tomador de decisiones."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe centrar su esfuerzo de ingeniería en la orquestación y cruce de datos, evitando reinventar capas comoditizadas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F44",
+    "P02-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:42:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

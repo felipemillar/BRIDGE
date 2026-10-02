@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F04",
+  "pilar": "P10",
+  "eje": "Origen de solicitudes y señales",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar origen de solicitudes y señales de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del origen de solicitudes y señales exige: 1) Entidad de Solicitud: `Entity_CommunicationRequest` con atributos (request_id, origin_channel [media_inquiry, social_listening_alert, regulatory_notice, community_demand], requester_person_id, requester_org_id, intake_timestamp, deadline_timestamp, verbatim_text, initial_priority [low, medium, high, critical]); 2) Entidad de Señal de Monitoreo: `Entity_ExternalSignal` con atributos (signal_id, source_url, reach_estimate, sentiment_raw, virality_velocity, detected_issue_taxonomy); 3) Relaciones Grafo: `DETECTED_AS_SIGNAL`, `TRIGGERED_REQUEST`, `CONSTRAINED_BY_DEADLINE`; 4) Condiciones de Integridad: Validación de que `deadline_timestamp` sea estrictamente posterior a `intake_timestamp`, prohibición de solicitudes anónimas sin canal formal registrado, y enlace obligatorio a la taxonomía de temas críticos de la empresa.",
+  "findings": [
+    {
+      "claim_id": "P10-F04-C1",
+      "claim": "El modelo relacional formaliza la captura estructurada de solicitudes y señales externas con atributos de origen, requirentes normalizados, marcas temporales ISO 8601 y restricciones de integridad referencial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_request_origin",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Flujo de Trabajo Integral (Fase 1: Ingesta)' y Sección 4 'Máquina de Estados'",
+          "retrieved_at": null,
+          "excerpt_short": "El modelo de datos modela la entidad Entity_CommunicationRequest con campos de ID, origen, requirente, timestamps y taxonomía. El estado inicial es DRAFT_INGESTION, transitando deterministamente a TRIAGED.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: Product Workflow and Communications Knowledge Management",
+          "source_id": "02051e28-a4c6-4597-b381-8763e0d81aec",
+          "locator": "Section 'Structuring Intake Requests for Corporate Affairs', p. 3-7",
+          "retrieved_at": null,
+          "excerpt_short": "A structured system of record captures communication triggers with normalized metadata fields, ensuring that inquiries from regulators, journalists, and public officials are instantly cataloged with audit trails.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Broadsight y el modelo de datos de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Payload JSON de webhook o formulario de entrada",
+      "Catálogo de canales",
+      "Taxonomía de riesgos"
+    ],
+    "actors": [
+      "API Gateway BRIDGE",
+      "Base de Datos PostgreSQL",
+      "Motor de Validación Pydantic"
+    ],
+    "steps": [
+      "Parsing del payload JSON",
+      "Validación contra Pydantic schema",
+      "Inserción transaccional en tabla `communication_requests`",
+      "Disparo de evento en bus de mensajería Redis/RabbitMQ"
+    ],
+    "states": [
+      "Payload Recibido",
+      "Validación Exitosa",
+      "Registro Persistido"
+    ],
+    "outputs": [
+      "Registro normalizado en PostgreSQL"
+    ],
+    "exceptions": [
+      "Payloads con fechas inválidas o textos vacíos son rechazados con HTTP 422"
+    ]
+  },
+  "entities": [
+    "Entity_CommunicationRequest",
+    "Entity_ExternalSignal",
+    "Broadsight",
+    "Pydantic Schema",
+    "PostgreSQL"
+  ],
+  "relations": [
+    {
+      "from": "Entity_ExternalSignal",
+      "to": "Entity_CommunicationRequest",
+      "type": "ORIGINATES"
+    },
+    {
+      "from": "Entity_CommunicationRequest",
+      "to": "Entity_Person",
+      "type": "REQUESTED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Bandeja de correo caótica vs Base de datos relacional de solicitudes",
+      "diferencia": "El correo dispersa la información entre casillas personales; la base de datos relacional garantiza visibilidad corporativa e inmutabilidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "schema_required_fields": "8 campos con constraint NOT NULL",
+    "ingestion_latency": "< 100 ms"
+  },
+  "bridge_implications": "Construir el modelo SQLAlchemy `CommunicationRequest` en el backend de BRIDGE para almacenar todos los eventos detonantes.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F05",
+    "P10-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "question_id": "P06-X01",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Grafo de afirmaciones",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué esquema mínimo relaciona afirmación, evidencia, organización, actor, compromiso y evento?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El esquema ontológico mínimo para relacionar conocimiento en The Bridge Intelligence se estructura conforme a los principios de T-GRAG (Li et al., 2025; ArXiv 2508.01680), GraphRAG (Edge et al., 2024; ArXiv 2404.16130) y Palantir Foundry (Doc 'Why Ontology'): 1) Nodos Entidad: Organización (empresa matriz, filial o contraparte con RUT/tax_id unívoco), Actor (persona con rol institucional, vigencia y delegación de autoridad), Compromiso (obligación contractual, regulatoria o social con fecha de exigibilidad y estado), Evento (acontecimiento espaciotemporal con timestamp y coordenadas); 2) Nodos Epistémicos: Afirmación (proposición factual atómica sujeta a validación y clasificación epistémica) y Evidencia (fragmento documental con hash criptográfico SHA-256, localizador de página/párrafo y URI canónico); 3) Relaciones Dirigidas Tipadas: EMITIDA_POR (Afirmación -> Actor), SUSTENTADA_EN (Afirmación -> Evidencia), VINCULADA_A (Afirmación -> Compromiso | Evento) y PERTENECE_A (Actor -> Organización). Este grafo permite vincular cualquier aseveración pública con el compromiso histórico subyacente y su evidencia documental inmutable.",
+  "findings": [
+    {
+      "claim_id": "P06-X01-C1",
+      "claim": "El esquema mínimo de grafo de afirmaciones integra seis clases de entidades tipadas y cuatro relaciones cardinales con metadatos temporales de validez.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global / Chile",
+        "actor": "Arquitectura de Grafos de Conocimiento"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": "https://arxiv.org/pdf/2508.01680",
+          "locator": "Section 3.1: Temporal Knowledge Graph Schema & Entity Grounding",
+          "excerpt_short": "We define a temporal knowledge graph where nodes encompass entities, claims, and time-bounded events, interconnected by directional edges annotated with validity intervals [t_start, t_end] to resolve non-stationary information.",
+          "source_date": "2025-08-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "98f72019-62a8-4781-a211-2ce2cccaf4eb",
+          "source_title": "Palantir Foundry - Why Create an Ontology: Decision-Centric System",
+          "original_url": "https://palantir.com/docs/foundry/ontology/why-ontology/",
+          "locator": "Foundry Ontology Overview: Connecting Data, Models and Actions",
+          "excerpt_short": "The Foundry Ontology binds data to actionable enterprise concepts—organizations, commitments, assets, and events—allowing semantic queries and operational tracking rather than raw tabular lookups.",
+          "source_date": "2024-05-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Arquitectura fundamentada en el paper formal de T-GRAG y en los principios de ontología operacional de Palantir Foundry.",
+      "epistemic_status_original": "propuesta_arquitectura_formal",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento oficial o noticia",
+      "Entidades extraídas por NER",
+      "Timestamps de emisión"
+    ],
+    "actors": [
+      "Extractor de Entidades y Relaciones",
+      "Grafo Temporal T-GRAG",
+      "Analista de Inteligencia"
+    ],
+    "steps": [
+      "Extracción de afirmaciones atómicas",
+      "Resolución de entidades unívocas contra el grafo",
+      "Creación de nodos Claim, Actor, Evento y Compromiso",
+      "Asignación de bordes dirigidos con intervalo de validez temporal [t_start, t_end]"
+    ],
+    "states": [
+      "Raw_Text",
+      "Claims_Extracted",
+      "Entities_Resolved",
+      "Graph_Linked"
+    ],
+    "outputs": [
+      "Subgrafo ontológico indexado"
+    ],
+    "exceptions": [
+      "Ambigüedad de entidad no resuelta que exige intervención de desambiguación"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TGRAG_SCHEMA",
+      "type": "esquema_grafo",
+      "name": "Esquema Ontológico T-GRAG",
+      "aliases": [
+        "Temporal Claim Graph",
+        "Ontología de Asuntos Corporativos"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TGRAG_SCHEMA",
+      "predicate": "estructura_datos_de",
+      "object_id": "ENT_AFIRMACION",
+      "valid_from": "2025-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X01-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric_name": "Entity Resolution Accuracy",
+      "denominator": "Total de entidades extraídas en documentos",
+      "target_value": ">= 95%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Permite navegación estructurada de compromisos y posturas históricas enlazadas a hechos concretos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

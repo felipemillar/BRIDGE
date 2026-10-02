@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-C10",
+  "pilar": "P09",
+  "eje": "Territorio y participación",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué sigue sin prueba sobre territorio y participación, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Brecha sin Prueba: El corpus no documenta la tasa de adopción y efectividad de los mecanismos de quejas digitales (vía formulario web o código QR) en comunidades rurales con baja alfabetización digital o nula conectividad a internet en Chile, desconociéndose si los canales puramente digitales excluyen a los sectores más vulnerables de la población. Fuentes Fallidas: La referencia del Portal INDH (`fb02f5bf`) no contenía datos descargables sobre quejas locales y el archivo PDF (`285ff668`) presentó fallas de acceso, siendo reemplazados canónicamente por Kancha Investigación (`c726d144`) y el estándar del Principio 31 de la ONU (`50659ff3`). Validación Mínima Requerida: Implementar en un proyecto piloto dos modalidades paralelas de recepción de quejas (canal web móvil vs buzón físico sellado en sede comunitaria con levantamiento semanal por actuario), comparando durante 6 meses el volumen de reclamos recibidos y la representatividad sociodemográfica de los usuarios de cada canal.",
+  "findings": [
+    {
+      "claim_id": "P09-C10-C1",
+      "claim": "La accesibilidad de canales digitales de quejas en comunidades rurales carece de prueba empírica en el corpus; los enlaces de INDH fueron sustituidos por Kancha y ONU Principio 31; se requiere test comparativo físico vs digital.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "contrast_territory_participation_gaps",
+      "evidence": [
+        {
+          "source_title": "United Nations: Guiding Principles on Business and Human Rights (Principle 31)",
+          "source_id": "50659ff3-c2f9-48f6-b128-2410ce50e83a",
+          "locator": "Principle 31 (b) 'Accessibility Criteria'",
+          "retrieved_at": null,
+          "excerpt_short": "A grievance mechanism must be known to all stakeholder groups for whose use they are intended, providing adequate assistance to those who may face particular barriers to access such as literacy or technology constraints.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Kancha Investigación: Conflictos Socioambientales en Chile — Causas e Indicadores de Seguimiento",
+          "source_id": "c726d144-a69c-4dde-8409-26a5af7593d5",
+          "locator": "Sección 'Brechas de Conectividad en Zonas Mineras', p. 30-34",
+          "retrieved_at": null,
+          "excerpt_short": "La imposición de canales exclusivamente digitales suele ser percibida por comunidades rurales como una barrera burocrática deliberada para invisibilizar sus reclamos ambientales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los criterios de accesibilidad de la ONU y los estudios de Kancha.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.92,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registro de quejas canal web",
+      "Libro de quejas físico en sede vecinal",
+      "Actas de apertura"
+    ],
+    "actors": [
+      "Encargado Comunitario",
+      "Presidente Junta de Vecinos",
+      "Auditor Social"
+    ],
+    "steps": [
+      "Habilitación de ambos canales en localidad rural",
+      "Apertura semanal del buzón físico con ministro de fe vecinal",
+      "Digitalización e indexación en BRIDGE con etiqueta 'Origen: Buzón Físico'",
+      "Comparación estadística de uso y demografía"
+    ],
+    "states": [
+      "Canales Activos",
+      "Quejas Recopiladas",
+      "Evaluación Comparativa Emitida"
+    ],
+    "outputs": [
+      "Reporte de accesibilidad efectiva de mecanismos de queja"
+    ],
+    "exceptions": [
+      "Quejas urgentes sobre contaminación hídrica inmediata recibidas por cualquier vía activan protocolo de emergencia en < 12 horas"
+    ]
+  },
+  "entities": [
+    "Principio 31 ONU",
+    "Kancha Investigación",
+    "Buzón Físico vs Digital",
+    "Brecha Digital Rural",
+    "P09_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Mecanismo de Quejas",
+      "to": "Principio 31",
+      "type": "MUST_COMPLY_WITH_ACCESSIBILITY"
+    },
+    {
+      "from": "Buzón Físico",
+      "to": "BRIDGE",
+      "type": "DIGITIZED_INTO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Solo formulario web corporativo vs Sistema multicanal (físico + digital)",
+      "diferencia": "El formulario web excluye a adultos mayores y comunidades rurales; el sistema multicanal asegura cumplimiento del principio de no discriminación de la ONU."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "pilot_duration_months": "6 meses de seguimiento",
+    "physical_vs_digital_ratio_target": "Medir proporción real de adopción"
+  },
+  "bridge_implications": "Diseñar en BRIDGE el módulo de quejas para admitir la carga y trazabilidad de 'Reclamos Físicos Digitalizados' con adjunto de acta escaneada.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C11",
+    "P09-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

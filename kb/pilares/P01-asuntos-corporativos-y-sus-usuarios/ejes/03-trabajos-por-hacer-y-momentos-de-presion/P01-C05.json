@@ -1,0 +1,200 @@
+{
+  "question_id": "P01-C05",
+  "pilar": "P01",
+  "eje": "Trabajos por hacer y momentos de presión",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre trabajos por hacer y momentos de presión, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en dos frentes: 1) Las fuentes originales de consultoría (Page Society, McKinsey) retratan al CCO como un consejero estratégico de alto nivel enfocado en narrativa e integración geopolítica, mientras que la síntesis interna (P01_EVIDENCE_MAP, P01_RESEARCH_DOSSIER), respaldada por ECM 2023 y LCM, demuestra la Tensión 1: más del 60% de la jornada está absorbida por tareas tácticas reactivas y redacción artesanal bajo presión de madrugada. 2) Reportes comerciales promueven la confección desatendida de briefings con IA, pero la síntesis interna advierte la Tensión 2: una alucinación fáctica ante un regulador o tribunal destruye irreversiblemente la credibilidad corporativa. Prevalece la síntesis interna: el software debe reducir la carga táctica pero exigir validación humana y trazabilidad documental estricta.",
+  "findings": [
+    {
+      "claim_id": "P01-C05-C1",
+      "claim": "Existe una discrepancia estructural entre la aspiración estratégica declarada en reportes de consultoría y el atrapamiento táctico real: estudios empíricos (ECM 2023 y LCM EUPRERA) demuestran que más del 60% del tiempo operativo del equipo de asuntos corporativos se gasta en labores reactivas de bajo valor analítico (redacción manual de comunicados, monitoreo de redes y minutas urgentes).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2025",
+        "region": "Europa / América Latina",
+        "actor": "Equipos de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "059b0334-329a-41a0-8dd9-44d7ea87aeca",
+          "source_title": "P01_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Tensión 1: Discurso Estratégico vs. Atrapamiento Táctico",
+          "excerpt_short": "Más del 60% de la jornada se consume en tareas operativas reactivas de bajo valor agregado.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:13:00-03:00"
+        },
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección: Taxonomía de JTBD y flujos bajo presión",
+          "excerpt_short": "Fricciones en la preparación artesanal de minutas en horarios nocturnos.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:13:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia entre encuestas empíricas internacionales y síntesis crítica de los dossiers de investigación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C05-C2",
+      "claim": "Frente a la promoción comercial de automatización total de briefings mediante IA generativa, la síntesis interna corrige que una imprecisión fáctica o alucinación de un modelo de lenguaje reproducida por un vocero ante un fiscalizador destruye la reputación institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "C-Suite y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "059b0334-329a-41a0-8dd9-44d7ea87aeca",
+          "source_title": "P01_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Tensión 2: Promesa de Automatización IA vs. Riesgo de Crisis Alucinatoria",
+          "excerpt_short": "El valor del conocimiento recopilado por IA exige validación humana y respaldo en hechos verificables.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:13:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia editorial de los documentos de síntesis y corrección de P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Demandas urgentes de información",
+      "Monitoreo de prensa y redes",
+      "Peticiones del C-Suite"
+    ],
+    "actors": [
+      "Vocero",
+      "Equipo de Prensa",
+      "Analista de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Recepción de requerimiento",
+      "Recopilación manual de antecedentes",
+      "Redacción bajo presión",
+      "Validación jerárquica",
+      "Entrega de minuta"
+    ],
+    "states": [
+      "Emergencia_Activada",
+      "Recopilacion_Manual",
+      "Minuta_Liberada"
+    ],
+    "outputs": [
+      "Briefing ejecutivo para reunión o comparecencia"
+    ],
+    "exceptions": [
+      "Alucinación o inconsistencia detectada en vivo durante la reunión"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_JTBD_CRISIS",
+      "type": "trabajo_operativo",
+      "name": "Preparación de Minuta de Crisis",
+      "aliases": [
+        "Briefing Book Urgente"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_JTBD_CRISIS",
+      "predicate": "consume_tiempo_de",
+      "object_id": "Equipo_Asuntos_Corporativos",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C05-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Visión de Fuentes Originales vs Síntesis Interna en JTBD",
+      "Fuentes Originales": "CCO como estratega de alto nivel que delega todo lo operativo y lidera la narrativa global.",
+      "Síntesis Interna (Prevaleciente)": "CCO y equipo atrapados operativamente en más de un 60% en tareas reactivas urgentes."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P01-C05-C1",
+        "P01-C05-C2"
+      ],
+      "difference": "Discrepancia entre la promesa comercial de automatización total por IA y el imperativo operativo de evitar alucinaciones en momentos de crisis.",
+      "resolution": "resuelta",
+      "reason": "Prevalece la versión de síntesis interna: automatización asistida con trazabilidad estricta y supervisión humana."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Implementar plantillas de briefing con verificación estricta de citas internas y cálculo de coherencia antes de emisión.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-C06",
+    "P01-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:13:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "question_id": "P10-F27",
+  "pilar": "P10",
+  "eje": "Estados, versiones y auditoría",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué ocurre cuando nueva evidencia invalida un mensaje ya publicado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cuando surge nueva evidencia técnica, operacional o pericial que invalida las afirmaciones de un mensaje en estado PUBLISHED_LIVE, el protocolo corporativo prohíbe terminantemente la 'eliminación silenciosa' (silent deletion/stealth editing) y activa el flujo formal de rectificación en 5 pasos: 1) Marcado Inmediato de Alerta (Expression of Concern): El mensaje publicado en canales propios recibe un banner visible de revisión activa; 2) Prohibición de Borrado: El registro histórico original se preserva íntegro por transparencia y obligaciones regulatorias, pero se le aplica una marca de agua indeleble de 'RETRACTED' o 'OBSOLETE'; 3) Emisión de Fe de Erratas Oficial (Corrigendum / Retraction Notice): Se redacta y aprueba (vía flujo de emergencia/regulado) una nota formal que explicita qué afirmación era incorrecta, la causa del error, la nueva evidencia validada y la postura rectificada; 4) Enlace Bidireccional Permanente: La fe de erratas y el mensaje original quedan vinculados recíprocamente mediante enlaces canónicos persistentes; y 5) Notificación Proactiva a Receptores: Notificación directa a periodistas, reguladores (CMF/SEC si reviste carácter bursátil) y públicos que consumieron la información original errónea.",
+  "findings": [
+    {
+      "claim_id": "P10-F27-C1",
+      "claim": "Ante nueva evidencia invalidante, los estándares éticos internacionales (COPE) y de políticas públicas prohíben la alteración silenciosa, exigiendo el mantenimiento del registro con marca de agua, fe de erratas formal y enlace bidireccional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "retraction_and_correction_protocols",
+      "evidence": [
+        {
+          "source_title": "COPE: Committee on Publication Ethics - Retraction & Correction Guidelines",
+          "source_id": "d0f9e6c9-5476-410e-886f-4bbb38556d95",
+          "locator": "Section 'Guidance for Retracting and Correcting Published Content'",
+          "retrieved_at": null,
+          "excerpt_short": "Retractions should be published as soon as possible after the issue is identified. The original publication must not simply be removed; it must be retained, clearly watermarked as retracted, and bi-directionally linked to the retraction notice.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Shire of Serpentine Jarrahdale: Media Policy and Correction Protocols",
+          "source_id": "a3ef8553-4116-436c-85a1-12b91be54b0d",
+          "locator": "Section 'Media Corrections and Public Clarification Procedures'",
+          "retrieved_at": null,
+          "excerpt_short": "When factual inaccuracies are published, the Shire shall issue a public clarification detailing the correct facts, maintaining the transparency of the historical record without stealth deletions.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Fase 11: Mantenimiento, Retractación o Retiro'",
+          "retrieved_at": null,
+          "excerpt_short": "Prohibición de silent editing: si una cifra publicada resultó errónea, se publica fe de erratas explícita, se vinculan bidireccionalmente ambas versiones y se aplica tombstoning o marca de agua.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Plena coincidencia entre las directrices éticas de COPE, políticas públicas locales y la arquitectura de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Reporte de discrepancia fáctica",
+      "Nueva evidencia validada en Shared Fact Record",
+      "ID del mensaje publicado"
+    ],
+    "actors": [
+      "Comité de Crisis / Director Asuntos Corporativos",
+      "Legal Counsel",
+      "Operador de Medios"
+    ],
+    "steps": [
+      "Recepción del peritaje con nueva evidencia que refuta la afirmación publicada",
+      "Evaluación legal del impacto (riesgo de demanda o sanción por información engañosa)",
+      "Generación del ticket de rectificación vinculado al mensaje original",
+      "Redacción y aprobación de la Fe de Erratas / Retraction Notice",
+      "Aplicación de marca de agua 'RETRACTED' al comunicado original en la web",
+      "Publicación de la Fe de Erratas y notificación formal a medios y reguladores"
+    ],
+    "states": [
+      "PUBLISHED_LIVE",
+      "INVESTIGATING_DISCREPANCY",
+      "RETRACTION_DRAFTING",
+      "RETRACTED_CORRECTED"
+    ],
+    "outputs": [
+      "Fe de erratas pública",
+      "Registro histórico marcado y preservado"
+    ],
+    "exceptions": [
+      "Si el error constituye una infracción a la Ley de Mercado de Valores, la rectificación debe despacharse de inmediato como Hecho Esencial"
+    ]
+  },
+  "entities": [
+    "COPE Guidelines",
+    "Retraction Notice",
+    "Fe de Erratas",
+    "Tombstoning",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Fe de Erratas",
+      "to": "Mensaje Original",
+      "type": "BI_DIRECTIONALLY_LINKED_TO"
+    },
+    {
+      "from": "Nueva Evidencia",
+      "to": "Estado Mensaje",
+      "type": "TRIGGERS_RETRACTION"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Borrado silencioso en página web vs Retractación formal COPE",
+      "diferencia": "El borrado silencioso destruye la credibilidad institucional y es penalizado por buscadores y periodistas; la retractación formal exhibe madurez, rigor ético y apego a la verdad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "retraction_response_latency_hours": "Tiempo transcurrido desde confirmación de nueva evidencia hasta publicación de fe de erratas",
+    "stealth_editing_incident_count": "0 (invariante absoluto de arquitectura)"
+  },
+  "bridge_implications": "BRIDGE debe incorporar vistas públicas de comunicados con marcado semántico de retractación y soporte para enlaces canónicos persistentes bidireccionales.",
+  "open_gaps": [
+    "Gestión de desindexación o actualización de snippet en Google Search Console para comunicados retractados."
+  ],
+  "next_question_ids": [
+    "P10-F28",
+    "P10-F29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

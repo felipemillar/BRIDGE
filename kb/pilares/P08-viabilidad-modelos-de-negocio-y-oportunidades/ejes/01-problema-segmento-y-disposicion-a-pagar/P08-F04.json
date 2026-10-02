@@ -1,0 +1,150 @@
+{
+  "question_id": "P08-F04",
+  "pilar": "P08",
+  "eje": "Problema, segmento y disposición a pagar",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar problema, segmento y disposición a pagar de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar de forma estructurada este eje exige modelar una ontología de viabilidad comercial con cuatro dimensiones fundamentales: 1) Variables de Problema (frecuencia de crisis, costo del error, tiempo de ciclo de briefing, índice de fragmentación de fuentes); 2) Categorías de Segmento (sector industrial, intensidad regulatoria, facturación anual, madurez digital del equipo de Dircom); 3) Relaciones de Decisión (sponsor funcional vs aprobador de seguridad CISO vs comité presupuestario); y 4) Condiciones de Disposición a Pagar (nivel de precio mensual USD 4.5K - 6.5K, requerimiento HITL obligatorio, soberanía de datos bajo Ley 21.719, tiempo de retorno de inversión < 3 meses).",
+  "findings": [
+    {
+      "claim_id": "P08-F04-C1",
+      "claim": "El modelo ontológico de viabilidad comercial requiere integrar métricas financieras, requerimientos de gobernanza y atributos de dolor operativo en un esquema relacional coherente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "commercial_viability_ontology",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 1.4 'Ontología Estructurada de Viabilidad y Segmentación'",
+          "excerpt_short": "El esquema de viabilidad comercial exige formalizar: a) Nivel de Riesgo Operativo (alto, medio, crítico); b) Disposición a Pagar (WTP: Willingness to Pay) clasificada por tramos de cuota mensual; c) Roles del Centro de Compras (Champion, Buyer, Gatekeeper CISO, Legal Approver); y d) Condiciones de Contratación (SLA, HITL ratio, Data Protection Compliance).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_EVIDENCE_MAP",
+          "source_id": "1323b514-5154-49f7-b105-42766ddbcaf5",
+          "locator": "Eje 1: Problema, Segmento y Disposición a Pagar - Esquema de Datos",
+          "excerpt_short": "La formalización estructurada requiere mapear las entidades 'Corporación', 'Segmento_Industrial', 'Comprador_Rol', 'Dolor_Operativo' y 'Contrato_SaaS_HITL' vinculadas mediante relaciones de causalidad y dependencia económica.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación estructural entre el mapa de evidencia y el dossier de investigación de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ficha de cliente",
+      "Scoring de dolor operativo",
+      "Evaluación de compliance CISO"
+    ],
+    "actors": [
+      "CRM Comercial",
+      "Analista de Negocio",
+      "Lead Architect"
+    ],
+    "steps": [
+      "Ingreso de prospecto",
+      "Clasificación ontológica de variables",
+      "Cálculo de WTP estimada",
+      "Calificación de viabilidad"
+    ],
+    "states": [
+      "Prospecto Sin Calificar",
+      "Segmentado",
+      "Validado para Propuesta",
+      "Descartado"
+    ],
+    "outputs": [
+      "Scoring de viabilidad comercial",
+      "Propuesta económica personalizada"
+    ],
+    "exceptions": [
+      "Empresas con vetos regulatorios o bajo sanción activa que impidan contratación"
+    ]
+  },
+  "entities": [
+    "Ontología Comercial",
+    "WTP",
+    "Gatekeeper CISO",
+    "SLA",
+    "Ley 21.719"
+  ],
+  "relations": [
+    {
+      "from": "Dolor Operativo Crítico",
+      "to": "WTP Elevada",
+      "type": "correlates_with"
+    },
+    {
+      "from": "Requerimiento CISO",
+      "to": "Aprobación de Compra",
+      "type": "conditions"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Venta transaccional de software vs Venta Enterprise B2B",
+      "diferencia": "El software de tarjeta de crédito se compra por autoservicio; el Enterprise B2B exige aprobación colegiada y modelo estructurado de relaciones."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "ontology_dimensions": "4 dimensiones principales (Problema, Segmento, Roles, Condiciones)",
+    "scoring_threshold": "Mínimo 80/100 para emitir propuesta formal"
+  },
+  "bridge_implications": "Implementar este modelo relacional en la arquitectura comercial de BRIDGE para precalificar leads y no malgastar recursos de preventa.",
+  "open_gaps": [
+    "Estandarización del formulario de pre-evaluación de seguridad exigido por los CISOs del IPSA."
+  ],
+  "next_question_ids": [
+    "P08-F05",
+    "P08-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

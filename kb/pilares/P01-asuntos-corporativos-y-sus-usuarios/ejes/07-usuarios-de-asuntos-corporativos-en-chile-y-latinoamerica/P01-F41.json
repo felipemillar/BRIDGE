@@ -1,0 +1,164 @@
+{
+  "question_id": "P01-F41",
+  "pilar": "P01",
+  "eje": "Usuarios de asuntos corporativos en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre usuarios de asuntos corporativos en Chile y Latinoamérica?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El tema se sustenta en 12 fuentes primarias catalogadas en 4 niveles epistemológicos: Hechos Documentados (BCN Ley 20.730; CMF NCG 461/519; Dircom ECE 2025; LCM/EUPRERA 2022-2024; ECM Retrospectiva 2023; Cadem Marcas Ciudadanas Jun 2026; Merco Chile 2025/2026; Acción Empresas Sep 2026; ICARE); Evidencia Académica (GCF Global Alliance 2021; Page Society The New CCO); Afirmaciones Comerciales (McKinsey Oct 2025); e Hipótesis de Trabajo (HT-1, HT-2, HT-3). Se reiteran 4 vacíos de evidencia delimitados formalmente.",
+  "findings": [
+    {
+      "claim_id": "P01-F41-C1",
+      "claim": "Los estudios longitudinales de EUPRERA (LCM 2022-2024 y ECM retrospectiva 2023) confirman con muestras representativas en América Latina y Europa la brecha estructural de competencias analíticas, donde menos del 30% dispone de CommTech maduro pese a la altísima expectativa teórica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2024",
+        "region": "América Latina y Europa",
+        "actor": "EUPRERA"
+      },
+      "evidence": [
+        {
+          "source_id": "64f69761-40f4-4f00-82b4-5878cf7be69d",
+          "source_title": "EUPRERA - Latin American Communication Monitor (LCM) Portal y Resultados",
+          "original_url": "https://www.comunicacionpolitica.org/lcm-informe/",
+          "locator": "Estudio cuantitativo longitudinal de competencias digitales",
+          "excerpt_short": "Menos del 30% de los departamentos de comunicación en LatAm cuenta con herramientas maduras de CommTech.",
+          "source_date": "2024-06-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:01:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Investigación académica empírica de EUPRERA.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F41-C2",
+      "claim": "En Chile, la confluencia entre los programas de 'Territorios Sostenibles' de Acción Empresas (septiembre 2026) y los índices de Merco y Cadem constata que la confianza pública depende directamente del comportamiento ético de los líderes y del cumplimiento fáctico de los acuerdos territoriales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Chile",
+        "actor": "Acción Empresas / Merco / Cadem"
+      },
+      "evidence": [
+        {
+          "source_id": "c2dbae6a-963d-4471-ab12-823eab7384d1",
+          "source_title": "Acción Empresas Chile - Red de Sostenibilidad y Desafíos Ambientales, Sociales y Gobernanza (ASG)",
+          "original_url": "https://accionempresas.cl/",
+          "locator": "Gira Territorios Sostenibles y gestión ASG",
+          "excerpt_short": "Fortaleciendo la gestión territorial y la aplicación de estándares NIIF S1 y S2 en empresas chilenas.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:01:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Red empresarial líder de sostenibilidad en Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Bases de datos de estudios empíricos",
+      "Legislación chilena",
+      "Reportes gremiales"
+    ],
+    "actors": [
+      "Investigador Académico",
+      "Auditor de Normativa"
+    ],
+    "steps": [
+      "Verificación de registros bibliográficos",
+      "Cotejo de citas textuales",
+      "Mapeo de nivel epistemológico",
+      "Aislamiento de Knowledge Gaps"
+    ],
+    "states": [
+      "Fuentes_Identificadas",
+      "Citas_Verificadas",
+      "Gaps_Aislados"
+    ],
+    "outputs": [
+      "Matriz de Trazabilidad de Fuentes Regionales"
+    ],
+    "exceptions": [
+      "Atribución de hechos empíricos a notas de prensa secundarias"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MATRIZ_FUENTES_REGIONALES",
+      "type": "sistema_documental",
+      "name": "Matriz de Fuentes y Respaldos Regionales P01",
+      "aliases": [
+        "Evidencia de Usuarios en Chile y LatAm"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MATRIZ_FUENTES_REGIONALES",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "ENT_PERFIL_CCO_LATAM",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F41-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Indexar las 12 fuentes primarias regionales en la base documental canónica de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F42",
+    "P01-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:01:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

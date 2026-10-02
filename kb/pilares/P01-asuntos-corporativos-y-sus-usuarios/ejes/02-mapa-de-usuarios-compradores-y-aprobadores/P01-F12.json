@@ -1,0 +1,231 @@
+{
+  "question_id": "P01-F12",
+  "pilar": "P01",
+  "eje": "Mapa de usuarios, compradores y aprobadores",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra mapa de usuarios, compradores y aprobadores sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso de un conglomerado industrial e IPSA en Chile convocado por un Subsecretario a audiencia urgente bajo Ley 20.730 ilustra la interacción: el CCO (Usuario) elabora un briefing en 15 minutos cruzando compromisos de la Memoria NCG 461 CMF con audiencias previas; el CEO (Comprador) valida la coherencia reputacional; y el CISO/Legal (Aprobador) audita el entorno VPC aislado autorizando el uso sin vetos.",
+  "findings": [
+    {
+      "claim_id": "P01-F12-C1",
+      "claim": "En un escenario de contingencia regulatoria en Chile, las entradas operativas incluyen la Memoria Integrada NCG 461 CMF, el historial de audiencias en InfoLobby (Ley 20.730), la RCA ambiental y las señales exteriores de clipping mediático.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Empresa Minera / Industrial IPSA"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7: Caso Práctico de Adopción e Interacción B2B",
+          "excerpt_short": "Entradas del caso: Memoria NCG 461, actas InfoLobby Ley 20.730, RCA operacional y clipping en tiempo real.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de trabajo documentado en el caso práctico del dossier.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F12-C2",
+      "claim": "La interacción de los roles B2B resuelve la tensión entre la demanda de velocidad del CCO (minuta en 15 minutos) y las exigencias de ciberseguridad del CISO y el Fiscal Legal mediante el despliegue en nube privada (VPC) con cifrado.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "C-Suite y Soporte Técnico"
+      },
+      "evidence": [
+        {
+          "source_id": "059b0334-329a-41a0-8dd9-44d7ea87aeca",
+          "source_title": "P01_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 4, HT-2 y HT-3",
+          "excerpt_short": "Adopción viable condicionada a VPC que evita el veto del CISO garantizando reducción de tiempo de preparación de 4 horas a 15 minutos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Hipótesis operacionales HT-2 y HT-3 del mapa de evidencia.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F12-C3",
+      "claim": "El resultado esperado consiste en un briefing ejecutivo de 2 páginas con 3 líneas argumentales hipervinculadas a fuentes oficiales, consistencia fáctica total entre el acta de lobby y la memoria CMF, y aprobación de despliegue sin riesgo de veto.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Empresa Regulada"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7: Resultados Esperados del Caso Concreto",
+          "excerpt_short": "Briefing de 2 páginas con citas exactas, cero discrepancias con InfoLobby y validación técnica del CISO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación de entrega del caso documentada en el dossier.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria NCG 461 CMF",
+      "Actas InfoLobby Ley 20.730",
+      "RCA ambiental",
+      "Clipping mediático"
+    ],
+    "actors": [
+      "CCO / Gerente de Asuntos Públicos (Usuario)",
+      "CEO (Comprador)",
+      "CISO (Aprobador)",
+      "Fiscal Legal (Aprobador)"
+    ],
+    "steps": [
+      "Notificación de audiencia urgente por Subsecretario",
+      "Generación de briefing por CCO cruzando NCG 461 y actas de lobby previas",
+      "Revisión de consistencia reputacional por CEO",
+      "Auditoría técnica de VPC por CISO y revisión legal por Fiscal",
+      "Emisión de vocería y registro posterior en InfoLobby"
+    ],
+    "states": [
+      "Alerta_Recibida",
+      "Briefing_Generado",
+      "Revisión_C_Suite",
+      "VPC_Auditado",
+      "Audiencia_Completada"
+    ],
+    "outputs": [
+      "Briefing ejecutivo con citas trazables",
+      "Acta pública InfoLobby sin inconsistencias",
+      "Certificación de seguridad VPC"
+    ],
+    "exceptions": [
+      "Detección de vulnerabilidad de fuga de datos hacia LLM público (Veto CISO)",
+      "Contradicción entre declaración y Memoria CMF (Veto Fiscal)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_INFOLOBBY",
+      "type": "plataforma",
+      "name": "InfoLobby (Consejo para la Transparencia)",
+      "aliases": [
+        "Plataforma Ley de Lobby"
+      ]
+    },
+    {
+      "entity_id": "ENT_SUBSECRETARIA",
+      "type": "institucion_publica",
+      "name": "Subsecretaría de Estado",
+      "aliases": [
+        "Autoridad Sectorial"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CCO",
+      "predicate": "elabora_briefing_para",
+      "object_id": "ENT_SUBSECRETARIA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F12-C1"
+    },
+    {
+      "subject_id": "ENT_CISO",
+      "predicate": "audita_entorno",
+      "object_id": "Nube_Privada_VPC",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F12-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Actuar",
+      "implication": "Generar minutas ejecutivas estructuradas con formato de 2 páginas y citas trazables en menos de 15 minutos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F13",
+    "P01-F14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:37:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

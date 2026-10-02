@@ -1,0 +1,147 @@
+{
+  "question_id": "P04-F03",
+  "pilar": "P04",
+  "eje": "Inventario de documentos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué artefactos son fuente de verdad y cuáles solo borradores o contexto histórico?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La distinción operativa entre fuente de verdad, borrador y contexto histórico se rige por su estado de formalización legal y vigencia temporal: 1) Fuente de Verdad (Single Source of Truth - SSOT): artefactos oficiales formalmente aprobados y publicados que reflejan la postura o cifra corporativa vigente (e.g. Memoria Anual CMF NCG 461 depositada, Hechos Esenciales vigentes, Códigos de Ética aprobados por Directorio e Informes de Auditoría ISAE 3000); 2) Borradores y Versiones de Trabajo: documentos preliminares en elaboración o minutas no visadas, marcados obligatoriamente con `status: Draft` o `isVersionOf: WorkingCopy`, los cuales están estrictamente vedados para ser citados como compromisos externos o hechos consumados; y 3) Contexto Histórico: documentos que fueron fuente de verdad en su ejercicio (e.g. memorias de años previos, políticas derogadas o líneas base anteriores) marcados con la relación `dcterms:replaces` o `dcterms:isReplacedBy` (W3C DCAT-3). Si se consulta la postura histórica, se citan con advertencia cronológica explícita; si se consulta la postura vigente, quedan subordinados a la versión activa.",
+  "findings": [
+    {
+      "claim_id": "P04-F03-C1",
+      "claim": "Los artefactos corporativos se clasifican en tres estados epistémicos de autoridad: Fuente de Verdad Vigente (SSOT), Borradores (no autorizados para vocería externa) y Contexto Histórico (preservados para auditoría pero superados normativamente).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Arquitectura de Conocimiento Corporativo"
+      },
+      "evidence": [
+        {
+          "source_id": "005e6819-75c5-40e4-b0a2-39b00ec373eb",
+          "source_title": "P04_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 1 y Sección 3: Matriz de Tensiones Metodológicas",
+          "excerpt_short": "Gestión de Fe de Erratas y Reexpresiones: el documento original no se borra; se anota con dcterms:isReplacedBy y se crea un enlace de superación en el Grafo... Se adopta la taxonomía canónica de 4 estados epistémicos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "d1f9b36e-6fd4-411a-8e8a-da15aa5ed9b8",
+          "source_title": "W3C DCAT-3: Data Catalog Vocabulary Version 3",
+          "original_url": "https://www.w3.org/TR/vocab-dcat-3/",
+          "locator": "Propiedades de Versión y Relación Histórica",
+          "excerpt_short": "dcterms:replaces and dcterms:isReplacedBy define strict superseded relations between cataloged datasets and documents.",
+          "source_date": "2024-05-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar formal W3C DCAT-3 y reglas de superación documental en P04_EVIDENCE_MAP.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta del usuario",
+      "Metadatos bitemporales del documento",
+      "Grafo de versiones"
+    ],
+    "actors": [
+      "Temporal Filter Worker",
+      "Epistemic State Validator",
+      "Response Generator"
+    ],
+    "steps": [
+      "Detección de intencionalidad temporal en la consulta",
+      "Filtrado de documentos derogados",
+      "Inyección de advertencia cronológica si se cita contexto histórico"
+    ],
+    "states": [
+      "SSOT_Active",
+      "Superseded_History",
+      "Draft_Restricted"
+    ],
+    "outputs": [
+      "Respuesta con fuente de verdad vigente o advertencia de contexto histórico"
+    ],
+    "exceptions": [
+      "Consulta ambigua sin especificación de año"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SSOT_CRITERIA",
+      "type": "metodologia",
+      "name": "Criterio de Fuente de Verdad Institucional",
+      "aliases": [
+        "SSOT Corporate Model"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SSOT_CRITERIA",
+      "predicate": "clasifica_validez_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Rol de uso",
+      "Fuente de Verdad (SSOT)": "Base para minutas de vocería pública, defensas legales y reportes CMF.",
+      "Borrador de Trabajo": "Material de discusión interna; prohibido para declaraciones externas oficiales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe marcar automáticamente como 'histórico no vigente' todo documento reemplazado para evitar anacronismos en respuestas a voceros.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

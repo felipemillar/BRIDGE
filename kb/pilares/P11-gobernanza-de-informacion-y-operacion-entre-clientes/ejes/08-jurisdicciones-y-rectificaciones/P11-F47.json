@@ -1,0 +1,177 @@
+{
+  "question_id": "P11-F47",
+  "pilar": "P11",
+  "eje": "Jurisdicciones y rectificaciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre jurisdicciones y rectificaciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos, plazos y rectificaciones canónicas en el dominio de jurisdicciones están respaldados por una red exhaustiva de fuentes primarias y síntesis rectoras canónicas: 1) BCN Chile: Ley N° 21.663 (Publicada el 08-04-2024 en el Diario Oficial): Fundamenta el plazo perentorio de 3 horas para notificar incidentes de ciberseguridad significativos al CSIRT Nacional (Art. 24); 2) BCN Chile: Ley N° 21.719 (Promulgada 2024): Establece el marco general de protección de datos personales, deberes del encargado (Art. 14), plazo de 72 horas para notificar brechas a la Agencia (Art. 15) y sus disposiciones transitorias que consagran una vacatio legis de 24 meses; 3) BCN Chile: Ley N° 19.628 (Publicada 1999, texto refundido): Respalda el régimen supletorio y transitorio vigente durante la vacatio legis; 4) Câmara dos Deputados do Brasil: Lei Nº 15.352 (Publicación oficial de 25-02-2026): Acredita la última modificación sustantiva de la Lei 13.709 (LGPD) fortaleciendo la gobernanza y facultades sancionatorias de la ANPD; 5) Presidência da República do Brasil: Lei Nº 13.709 (Texto compilado oficial 2026): Respalda las definiciones de controlador, operador, DPO y derechos de los titulares en Brasil; 6) EUR-Lex: Regulation (EU) 2016/679 (GDPR) y Regulation (EU) 2024/1689 (EU AI Act): Sustentan los principios de responsabilidad proactiva y clasificación de sistemas de IA en derecho comparado; 7) P11_VERIFICATION_CORRECTIONS (49d7882a, síntesis interna con prevalencia rectora complementaria, 01-10-2026): Formaliza el descarte de WIPO Lex (4caa2cda) como directorio no sustantivo, el deslinde del GDPR frente al derecho chileno y la prohibición de atribuir valor de prueba técnica a los contratos de proveedores; y 8) P11_2026_LAW_AND_PROVIDER_CORRECTION (0716e04e, síntesis rectora, 01-10-2026): Respalda la sustitución de HTMLs de OpenAI por los PDFs oficiales en vigor al 01-01-2026 (Services Agreement 8d9a7ceb y DPA 1bc87361).",
+  "findings": [
+    {
+      "claim_id": "P11-F47-C1",
+      "claim": "Los hechos de jurisdicciones y rectificaciones descansan en textos oficiales de Chile (Leyes 21.663, 21.719, 19.628), Brasil (Lei 13.709 y Lei 15.352/2026), UE (GDPR/AI Act) y en las directrices canónicas P11_VERIFICATION_CORRECTIONS y P11_2026_LAW_AND_PROVIDER_CORRECTION.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "sources_lineage_jurisdictions_and_corrections",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Reconciliación de Fuentes Legislativas y Proveedores'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica rectora: Descarte de WIPO Lex como no sustantiva; Ley 21.719 en vacatio legis de 24 meses; Ley 19.628 vigente transitoria; Ley 21.663 vigente con plazo de 3 horas; GDPR no vinculante directamente en Chile.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'Prevalencia Canónica sobre LGPD y Proveedores'",
+          "retrieved_at": null,
+          "excerpt_short": "LGPD sustentada en Lei 13.709 actualizada a Lei 15.352 de 2026 vía Câmara dos Deputados. OpenAI sustentado en PDFs oficiales (Services Agreement y DPA) con vigencia 1 de enero de 2026.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.663 Ley Marco de Ciberseguridad e Infraestructura Crítica",
+          "source_id": "ee032cb3-abe5-4440-948f-815a9b4fbe78",
+          "locator": "Artículo 24",
+          "retrieved_at": null,
+          "excerpt_short": "Las instituciones y operadores deberán notificar al CSIRT Nacional los ciberataques e incidentes de ciberseguridad que puedan tener efectos significativos en el plazo máximo de tres horas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Câmara dos Deputados: Lei Nº 15.352/2026 (Altera a LGPD)",
+          "source_id": "ea76a1ee-ec7a-4180-8d2a-716758dd60c7",
+          "locator": "Texto Original Publicado 25/02/2026",
+          "retrieved_at": null,
+          "excerpt_short": "Altera a Lei nº 13.709, de 14 de agosto de 2018 (LGPD), para estabelecer novas regras de fiscalização e governança.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación exhaustiva y cruzada entre textos legales oficiales de congresos nacionales y síntesis canónicas rectoras de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Diarios oficiales de Chile y Brasil",
+      "Publicaciones en EUR-Lex",
+      "Textos de síntesis rectoras canónicas"
+    ],
+    "actors": [
+      "Investigador de BRIDGE",
+      "Oficial Legal",
+      "Auditor de Integridad Documental"
+    ],
+    "steps": [
+      "Revisión de textos legislativos en repositorios parlamentarios oficiales",
+      "Verificación de fechas exactas de publicación y períodos de vacatio legis",
+      "Validación de UUIDs de síntesis rectoras y descarte de fuentes no sustantivas",
+      "Registro de pasajes textuales exactos y localizadores en el catálogo de fuentes de P11",
+      "Aprobación de la trazabilidad documental para respaldar los 64 registros del pilar"
+    ],
+    "states": [
+      "PRIMARY_LAW_FETCHED",
+      "CANONICAL_SYNTHESIS_VERIFIED",
+      "EXCLUSION_APPLIED",
+      "CATALOG_SEALED"
+    ],
+    "outputs": [
+      "Matriz de respaldo documental inatacable que confiere solidez jurídica a la plataforma"
+    ],
+    "exceptions": [
+      "Se rechaza de plano cualquier cita que pretenda utilizar WIPO Lex como fuente sustantiva de la LGPD brasileña"
+    ]
+  },
+  "entities": [
+    "Ley N° 21.663",
+    "Ley N° 21.719",
+    "Lei Nº 15.352/2026",
+    "P11_VERIFICATION_CORRECTIONS",
+    "P11_2026_LAW_AND_PROVIDER_CORRECTION"
+  ],
+  "relations": [
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "WIPO Lex",
+      "type": "DISQUALIFIES_AS_NON_SUBSTANTIVE"
+    },
+    {
+      "from": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+      "to": "OpenAI PDFs",
+      "type": "ESTABLISHES_AS_CANONICAL"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citar fuentes no sustantivas (WIPO Lex) vs Citar textos oficiales de la Câmara dos Deputados",
+      "diferencia": "WIPO Lex solo contenía enlaces navegacionales rotos o desactualizados; la Câmara dos Deputados aporta el texto legal vigente al 25 de febrero de 2026 con fuerza vinculante."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "statutory_lineage_traceability_rate": "100% de afirmaciones de derecho positivo verificadas en fuentes primarias",
+    "canonical_rectification_precedence_rate": "100% de adhesión a 49d7882a y 0716e04e"
+  },
+  "bridge_implications": "Protege a los directores y ejecutivos de clientes de BRIDGE contra responsabilidades legales derivadas del uso de información regulatoria desactualizada.",
+  "open_gaps": [
+    "Seguimiento de la publicación del texto refundido y sistematizado de la LGPD por parte del Senado Federal de Brasil tras la Lei 15.352."
+  ],
+  "next_question_ids": [
+    "P11-F48",
+    "P11-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

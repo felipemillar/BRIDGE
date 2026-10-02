@@ -1,0 +1,166 @@
+{
+  "question_id": "P11-F19",
+  "pilar": "P11",
+  "eje": "Ciclo de vida y retención",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Cómo se ingesta, versiona, archiva, corrige y elimina información según su tipo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El ciclo de vida de la información en BRIDGE se modula dinámicamente según la clasificación del activo (D1 a D5): 1) Ingesta: D1 y D2 ingresan por pipelines estándar de texto/metadatos; D3 exige cifrado en tránsito TLS 1.3 y sellado con clave KMS dedicada; D4 pasa por escaneo y tokenización de PII; D5 ingresa en bóvedas aisladas bajo NDA; 2) Versionado: Todo cambio sobre D2 o D3 genera una versión inmutable con diff estruturado (v1.x menor para estilo, v2.0 mayor para cifras), recalculando el hash SHA-256; 3) Archivo: Al expirar el período operativo activo, los documentos D1/D2 pasan a almacenamiento en frío de solo lectura (S3 Glacier / Object Lock); 4) Corrección: Prohibida la sobrescritura silenciosa; las correcciones fácticas generan una nueva versión enlazada a la fe de erratas conforme al estándar COPE; y 5) Eliminación y Purgado Seguro: D1 se elimina por política interna; D4 se suprime a solicitud del titular o fin de finalidad (Ley 21.719 / 19.628); D3 y D5 se purgan mediante destrucción criptográfica (Crypto-shredding según NIST SP 800-88 r2), destruyendo la clave KMS asociada y purgando síncronamente los puntos vectoriales en Qdrant y las claves de Redis.",
+  "findings": [
+    {
+      "claim_id": "P11-F19-C1",
+      "claim": "El ciclo de vida del dato modula sus etapas (ingesta, versionado, archivo, corrección y eliminación) según su nivel de clasificación, aplicando sanitización criptográfica conforme a NIST SP 800-88 r2 y estándares COPE.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "data_lifecycle_by_classification",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 4 'Ciclo de Vida del Dato y Sanitización'",
+          "retrieved_at": null,
+          "excerpt_short": "Ciclo de vida por tipo de dato: D1 permanente; D2 versionado v1/v2; D3 cifrado con KMS y purga crypto-shredding; D4 supresión por Ley 21.719; D5 eliminación según plazo de NDA.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization",
+          "source_id": "eeffc975-0a8f-470f-80c9-13435bf0efd8",
+          "locator": "Section 2.4 'Sanitization and Disposal Decisions' & Section 4.5 'Cryptographic Erase'",
+          "retrieved_at": null,
+          "excerpt_short": "Cryptographic Erase (CE) leverages the sanitization of target data by sanitizing the cryptographic key(s) used to encrypt the data, rendering the target data unrecoverable.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Cloud Security Alliance: Cloud Controls Matrix (CCM v4) and Shared Responsibility",
+          "source_id": "f6cdbafa-a8d6-4918-97f5-a8d6bf03341b",
+          "locator": "Domain DSP-06 'Data Retention and Disposal'",
+          "retrieved_at": null,
+          "excerpt_short": "Data retention and disposal policies must be defined and enforced according to regulatory requirements, classification level, and business needs across all multi-tenant layers.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares de sanitización NIST SP 800-88 r2, los controles de retención CSA CCM v4 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Activo documental",
+      "Evento de ciclo de vida (crear, editar, archivar, purgar)",
+      "Directiva de retención"
+    ],
+    "actors": [
+      "Data Custodian",
+      "Motor de Ciclo de Vida BRIDGE",
+      "Servicio KMS",
+      "Qdrant Vector DB"
+    ],
+    "steps": [
+      "Identificación del tipo de evento y clasificación del activo",
+      "Si es edición: Cálculo de nuevo hash SHA-256 e incremento de versión semántica",
+      "Si es archivo: Cambio de estado a DEPRECATED_ARCHIVED y traslado a almacenamiento WORM",
+      "Si es eliminación de D3/D4: Ejecución de Crypto-shredding (destrucción de clave en KMS)",
+      "Llamada síncrona a Qdrant `delete_points` filtrado por `resource_id`",
+      "Invalidación de llaves residuales en Redis y registro inmutable del certificado de purga"
+    ],
+    "states": [
+      "INGESTED",
+      "ACTIVE_VERSIONED",
+      "ARCHIVED_COLD",
+      "CRYPTO_SHREDDED",
+      "PURGE_CERTIFIED"
+    ],
+    "outputs": [
+      "Activo procesado o purgado con certificado de sanitización criptográfica"
+    ],
+    "exceptions": [
+      "Archivos sujetos a litigio activo o investigación fiscal (Legal Hold) tienen suspendida la eliminación automática"
+    ]
+  },
+  "entities": [
+    "Ciclo de Vida",
+    "NIST SP 800-88 r2",
+    "Crypto-shredding",
+    "Legal Hold",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Activo D3",
+      "to": "Crypto-shredding",
+      "type": "SANITIZED_BY"
+    },
+    {
+      "from": "Legal Hold",
+      "to": "Eliminación Automática",
+      "type": "SUSPENDS_TEMPORARILY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Borrado simple con comando DELETE SQL vs Sanitización Crypto-shredding",
+      "diferencia": "El borrado simple deja rastros recuperables en disco y copias en bases vectoriales; el crypto-shredding destruye la llave matemática garantizando la imposibilidad absoluta de reconstrucción."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cryptographic_purge_verification_rate": "100% de purgas ejecutadas con destrucción comprobada de clave en KMS",
+    "vector_orphan_residual_ratio": "0% de vectores huérfanos remanentes en Qdrant tras purga de documento"
+  },
+  "bridge_implications": "Permite emitir certificados de destrucción segura de datos con validez jurídica internacional ante auditores de compliance y clientes salientes.",
+  "open_gaps": [
+    "Automatización del protocolo de verificación de sanitización física en nubes públicas mediante atestación de vendors."
+  ],
+  "next_question_ids": [
+    "P11-F20",
+    "P11-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

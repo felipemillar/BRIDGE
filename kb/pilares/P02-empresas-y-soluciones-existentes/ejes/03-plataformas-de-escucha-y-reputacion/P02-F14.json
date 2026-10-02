@@ -1,0 +1,137 @@
+{
+  "question_id": "P02-F14",
+  "pilar": "P02",
+  "eje": "Plataformas de escucha y reputación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde terminan la captura y análisis de señales y comienzan la preparación o gestión de decisiones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La frontera entre captura/análisis y preparación/decisión constituye el 'abismo de conocimiento' del mercado: 1) Dónde termina la captura (Sensing): concluye en la alerta o métrica del exterior (notificación de pico de 500 menciones, nubes de palabras, alertas de incidentes en Dataminr o polaridad negativa en Signal AI). Las herramientas dicen 'qué pasó afuera', pero se detienen ahí sin entregar la postura institucional; 2) Dónde comienza la preparación/decisión (Memory): inicia cuando el CCO o CEO debe responder preguntas institucionales críticas: '¿qué dijimos nosotros oficialmente sobre este asunto, qué compromiso asumimos en la RCA ambiental, qué ejecutivos están autorizados para hablar y cuáles son las 3 respuestas aprobadas para la prensa?'; 3) Falla del mercado: ante una crisis, los equipos sufren una parálisis operativa de 2 a 6 horas buscando manualmente archivos en SharePoint o correos; 4) Fronteras de software existentes: Broadsight actúa como System of Record para posturas internas pero no ingesta medios masivos; Burson Decipher simula impacto cognitivo pero es un servicio cerrado de agencia; AlphaSense hace RAG en SharePoint pero está orientado a finanzas/M&A sin flujos de crisis para prensa; The Bridge Intelligence plantea la hipótesis de unir ambos mundos mediante el Grafo Bipartito Bitemporal.",
+  "findings": [
+    {
+      "claim_id": "P02-F14-C1",
+      "claim": "Existe una desconexión operacional crítica entre las plataformas de monitoreo externo y los repositorios corporativos internos: las herramientas de escucha alertan de la controversia externa pero no pueden verificar si la imputación contradice o cumple los compromisos institucionales previos de la empresa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Direcciones de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Sección: The Knowledge-Sensing Chasm",
+          "excerpt_short": "Desconexión absoluta entre la escucha del entorno exterior y la memoria corporativa interna documental.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:31:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diagnóstico de arquitectura de mercado documentado en los informes analíticos del pilar.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alerta de controversia externa",
+      "Repositorio documental interno",
+      "Directorio de portavoces"
+    ],
+    "actors": [
+      "CCO",
+      "Director de Asuntos Públicos",
+      "Vocero Asignado"
+    ],
+    "steps": [
+      "Recepción de alerta volumétrica",
+      "Búsqueda manual en carpetas de red (parálisis de 2-6 horas)",
+      "Identificación de postura previa",
+      "Redacción de minuta para vocero"
+    ],
+    "states": [
+      "Alerta_Recibida",
+      "Busqueda_Manual_En_Curso",
+      "Briefing_Elaborado"
+    ],
+    "outputs": [
+      "Minuta de posición directiva para medios"
+    ],
+    "exceptions": [
+      "Desalineamiento entre vocero y compromiso legal previo por no encontrar el documento a tiempo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "GAP_KNOWLEDGE_SENSING",
+      "type": "vacio_estructural",
+      "name": "The Knowledge-Sensing Chasm",
+      "aliases": [
+        "Brecha entre Escucha y Decisión"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "GAP_KNOWLEDGE_SENSING",
+      "predicate": "causa_retraso_de",
+      "object_id": "Paralisis_Operativa_2_a_6_Horas",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F14-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Dashboard Volumétrico vs Executive Briefing Asistido",
+      "Dashboard Tradicional (Meltwater/Brandwatch)": "Gráficos de barras y nubes de palabras que el CEO no puede usar en una entrevista.",
+      "Executive Briefing BRIDGE": "Dossier sintético de 1 página con datos contrastados, citas legales y Q&A de preguntas difíciles."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Diseñar BRIDGE como el puente activo entre la señal externa y el archivo interno, generando Executive Briefs con Q&A en < 5 minutos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F15",
+    "P02-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:31:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

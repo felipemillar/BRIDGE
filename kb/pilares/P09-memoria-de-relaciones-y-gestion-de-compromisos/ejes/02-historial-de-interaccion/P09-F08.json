@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F08",
+  "pilar": "P09",
+  "eje": "Historial de interacción",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Cómo se distinguen hecho observado, minuta aprobada, interpretación y dato sensible?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La integridad epistemológica y el cumplimiento regulatorio exigen una rigurosa separación en cuatro capas de información en cada registro: 1) Hecho Observado: Registro fáctico, empírico y objetivo de lo ocurrido (e.g., 'El dirigente asistió a las 10:15 h y entregó una carta firmada con 3 peticiones'); 2) Minuta Aprobada: Documento formal consensuado o firmado por ambas partes que goza de presunción probatoria; 3) Interpretación o Juicio de Valor: Análisis contextual o hipótesis del analista (e.g., 'Se percibe tensión por desacuerdo en plazos'), el cual DEBE etiquetarse expresamente como 'Análisis Interno Subjetivo', segregado de los hechos y sujeto a acceso restringido; y 4) Dato Sensible: Datos protegidos por la Ley 21.719 sobre Protección de la Vida Privada (origen étnico íntimo no estatutario, ideología política personal, creencias religiosas, salud, orientación sexual), cuya captura y almacenamiento en el sistema está TAXATIVAMENTE PROHIBIDA.",
+  "findings": [
+    {
+      "claim_id": "P09-F08-C1",
+      "claim": "El sistema BRIDGE prohíbe el registro de datos sensibles bajo Ley 21.719 y segrega taxativamente las interpretaciones subjetivas del acta fáctica y de los hechos observados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "data_segregation_and_privacy",
+      "evidence": [
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R1 'Cumplimiento Estricto de Ley 21.719 sobre Datos Sensibles'",
+          "retrieved_at": null,
+          "excerpt_short": "Se ratifica la prohibición taxativa de registrar, procesar o almacenar datos sensibles personales (salud, creencias religiosas, ideología política, vida privada) de líderes comunitarios o autoridades. El sistema debe operar exclusivamente con atributos profesionales, estatutarios y de rol público.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Diccionario de Datos y Reglas de Entrada'",
+          "retrieved_at": null,
+          "excerpt_short": "Campos de interacción deben diferenciar: text_factual_summary (hechos), text_analysis_notes (interpretación subjetiva interna) y minutes_document_ref (acta probatoria firmada). Queda bloqueada cualquier inferencia automatizada de perfiles psicológicos o de afinidad política privada.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia canónica rectora de P09_VERIFICATION_CORRECTIONS sobre protección de datos.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Relato de reunión",
+      "Carta comunitaria",
+      "Observaciones del relacionador"
+    ],
+    "actors": [
+      "Relacionador Comunitario",
+      "Oficial de Protección de Datos (DPO)",
+      "Motor de Linting BRIDGE"
+    ],
+    "steps": [
+      "Digitación en campos diferenciados (Hechos vs Análisis)",
+      "Filtro automatizado contra patrones de datos sensibles (Ley 21.719)",
+      "Almacenamiento segregado con permisos diferenciales"
+    ],
+    "states": [
+      "Validación de Privacidad Exitosa",
+      "Advertencia de Datos Sensibles Bloqueada",
+      "Publicado en Sistema"
+    ],
+    "outputs": [
+      "Registro fáctico limpio y conforme a compliance"
+    ],
+    "exceptions": [
+      "Detección de palabras clave vinculadas a salud o creencias activa bloqueo preventivo del guardado"
+    ]
+  },
+  "entities": [
+    "Ley 21.719",
+    "P09_VERIFICATION_CORRECTIONS",
+    "Hecho Observado",
+    "Minuta Aprobada",
+    "Dato Sensible Prohibido"
+  ],
+  "relations": [
+    {
+      "from": "Interpretación Subjetiva",
+      "to": "Hecho Observado",
+      "type": "segregated_from"
+    },
+    {
+      "from": "Dato Sensible",
+      "to": "Ley 21.719",
+      "type": "prohibited_by"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Notas informales en WhatsApp vs Registro gobernado",
+      "diferencia": "WhatsApp mezcla chismes y datos íntimos con pasivos legales; el SRM corporativo audita y depura la información institucional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "prohibited_sensitive_fields": "100% excluidos del schema",
+    "access_tier_levels": "3 niveles (Público corporativo, Confidencial asuntos públicos, Restringido legal)"
+  },
+  "bridge_implications": "Incorporar un validador léxico previo al guardado que alerte si un usuario intenta ingresar información médica o íntima de dirigentes comunitarios.",
+  "open_gaps": [
+    "Mapear el catálogo de palabras sensibles para el léxico minero y territorial chileno."
+  ],
+  "next_question_ids": [
+    "P09-F09",
+    "P09-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

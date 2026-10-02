@@ -1,0 +1,164 @@
+{
+  "question_id": "P11-C11",
+  "pilar": "P11",
+  "eje": "Controles comprobables",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre controles comprobables, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal sobre controles comprobables radica en la suficiencia probatoria atribuida a informes estáticos versus pruebas dinámicas en código: las versiones exploratorias del dossier (`P11_RESEARCH_DOSSIER`) asumían que contar con una certificación ISO 27001 o un informe SOC 2 Type I de un proveedor cloud (IaaS) era suficiente para declarar que los controles de BRIDGE estaban 'probados'. Las fuentes primarias de auditoría (AICPA SOC 2 Trust Services Criteria, NIST SP 800-53 Rev. 5) y las síntesis canónicas rectoras `P11_VERIFICATION_CORRECTIONS` (49d7882a) y `P11_2026_LAW_AND_PROVIDER_CORRECTION` (0716e04e) establecen que: 1) Los certificados de IaaS (AWS o Google) cubren únicamente la infraestructura física y de hipervisor bajo el modelo de responsabilidad compartida, no el software SaaS de BRIDGE; 2) Un informe SOC 2 Type I solo audita la idoneidad del diseño a un momento puntual en el tiempo sin probar su funcionamiento real; solo un SOC 2 Type II audita la efectividad operativa continua durante 6 a 12 meses; 3) Las afirmaciones comerciales carecen de valor probatorio ante auditorías técnicas; y 4) Prevalece de forma absoluta `P11_VERIFICATION_CORRECTIONS`, rigiendo la regla de que los controles deben demostrarse empíricamente mediante suites automatizadas de CI/CD (RLS forzado, pruebas de penetración y atestación Type II específica de BRIDGE).",
+  "findings": [
+    {
+      "claim_id": "P11-C11-C1",
+      "claim": "Existe discrepancia entre asumir que los certificados de la nube o informes SOC 2 Type I prueban el sistema, versus la prevalencia canónica de P11_VERIFICATION_CORRECTIONS y AICPA SOC 2 que exigen auditoría de efectividad operativa Type II en 6-12 meses y aserciones automatizadas en código.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "verifiable_controls_discrepancy_and_precedence",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Calibración Epistémica de Controles y Términos Comerciales'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia rectora: Se exige separar afirmaciones comerciales de controles verificados y certificaciones vigentes. Los certificados de infraestructura de terceros no prueban la seguridad de la capa de aplicación propia.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AICPA: System and Organization Controls (SOC 2) Trust Services Criteria",
+          "source_id": "11c7c827-b3a4-4207-925a-f5bac2493a7b",
+          "locator": "Sección 'SOC 2 Type I vs Type II'",
+          "retrieved_at": null,
+          "excerpt_short": "Operating effectiveness of controls can only be tested and opined on within a Type 2 examination covering a defined evaluation period.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Cloud Security Alliance: Cloud Controls Matrix (CCM v4) and Shared Responsibility",
+          "source_id": "f6cdbafa-a8d6-4918-97f5-a8d6bf03341b",
+          "locator": "Section 'Shared Responsibility Model in SaaS'",
+          "retrieved_at": null,
+          "excerpt_short": "SaaS providers remain fully responsible for application logic, access control, tenant isolation, and customer data handling regardless of underlying IaaS certifications.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los marcos de auditoría de AICPA, CSA y la doctrina rectora del proyecto BRIDGE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Informes SOC 2 de proveedores cloud",
+      "Especificaciones de controles de BRIDGE",
+      "Prevalencia canónica de P11_VERIFICATION_CORRECTIONS"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "CISO",
+      "Auditor Independiente SOC 2"
+    ],
+    "steps": [
+      "Revisión de la matriz de responsabilidad compartida (CSA CCM v4)",
+      "Deslinde estricto: la infraestructura cloud provee el cómputo físico, pero BRIDGE debe certificar su propia capa SaaS",
+      "Configuración del período de auditoría continua de 6 meses para la atestación SOC 2 Type II de BRIDGE",
+      "Integración de aserciones automáticas en CI/CD que testean RLS y aislamiento de tenant en cada build",
+      "Publicación del informe de atestación propio para los clientes enterprise"
+    ],
+    "states": [
+      "SHARED_RESPONSIBILITY_MAPPED",
+      "SAAS_CONTROLS_ISOLATED",
+      "TYPE2_EVALUATION_ACTIVE",
+      "CONTINUOUS_PROOFS_SEALED"
+    ],
+    "outputs": [
+      "Evidencia de seguridad irrefutable centrada en la capa de software de BRIDGE"
+    ],
+    "exceptions": [
+      "Ninguna. No se acepta citar el SOC 2 de AWS como sustituto del SOC 2 propio de la aplicación"
+    ]
+  },
+  "entities": [
+    "AICPA SOC 2 Type II",
+    "CSA CCM v4",
+    "NIST SP 800-53 r5",
+    "P11_VERIFICATION_CORRECTIONS",
+    "Shared Responsibility Model"
+  ],
+  "relations": [
+    {
+      "from": "P11_VERIFICATION_CORRECTIONS",
+      "to": "AICPA SOC 2 Type II",
+      "type": "ESTABLISHES_AS_PROBATORY_STANDARD"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Ampararse en el SOC 2 de AWS vs Obtener atestación SOC 2 Type II propia de BRIDGE",
+      "diferencia": "Ampararse en AWS no cubre los fallos de programación en BRIDGE; obtener atestación propia acredita que el código y operaciones de BRIDGE son seguros y confiables."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Validez de Certificaciones de Nube",
+      "dossier_claim": "SOC 2 de AWS certifica la seguridad de BRIDGE",
+      "canonical_resolution": "AWS solo certifica la nube subyacente; BRIDGE debe auditar y certificar su propia capa SaaS."
+    }
+  ],
+  "metrics_and_denominators": {
+    "soc2_type2_operating_period_months": "Mínimo 6 meses de efectividad operativa auditada",
+    "ci_cd_automated_assertion_coverage": "100% de controles técnicos probados por software"
+  },
+  "bridge_implications": "Dota a BRIDGE de credenciales de seguridad de nivel bancario, indispensables para contratar con corporaciones del IPSA y multinacionales.",
+  "open_gaps": [
+    "Completar el período de auditoría formal de 6 meses con una firma auditora Big Four."
+  ],
+  "next_question_ids": [
+    "P11-C12",
+    "P11-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

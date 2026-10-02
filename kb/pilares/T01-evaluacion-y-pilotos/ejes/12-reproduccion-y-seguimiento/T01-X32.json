@@ -1,0 +1,148 @@
+{
+  "question_id": "T01-X32",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Reproducción y seguimiento",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre reproducción y seguimiento, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal la reproducibilidad forense a muy largo plazo (> 2 años) cuando los proveedores de nube deprecian o retiran checkpoints de modelos cerrados (ej. OpenAI retira definitivamente GPT-4o-2024-08-06 de sus servidores): 1) Vacío Identificado: Aunque BRIDGE almacene el Execution Manifest y el hash del corpus, si la API del proveedor deja de existir en 2028, no se puede re-ejecutar el checkpoint exacto para reproducir la salida; 2) Fuente Fallida / Parcial: Ninguna literatura en T01 resuelve la garantía de longevidad de APIs de modelos propietarios cerrados a 3 o 5 años vista; y 3) Validación Mínima Necesaria: Implementar un subsistema de Archivo Criptográfico Completo de Ejecución (Full Prompt-Completion Cryptographic Vault) que almacene no solo los hashes sino el par entrada/salida firmado digitalmente con sello de tiempo calificado (Ley N° 19.799 sobre Documentos Electrónicos y Firma Digital en Chile), confiriéndole plena validez probatoria pericial sin depender de la existencia del servidor del LLM.",
+  "findings": [
+    {
+      "claim_id": "T01-X32-C1",
+      "claim": "La dependencia de APIs cerradas de LLM expone a las organizaciones al riesgo de no reproducibilidad por depreciación de checkpoints a largo plazo (> 2 años), requiriendo bóvedas criptográficas con firma digital conforme a la Ley 19.799 para preservar el valor probatorio de las respuestas corporativas.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026-2030",
+        "region": "Chile / Global",
+        "actor": "The Bridge Intelligence Legal Tech Lab"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 12: Riesgo de Obsolescencia de APIs Propietarias",
+          "excerpt_short": "La depreciación de versiones de LLM por parte de OpenAI o Anthropic impide la re-ejecución física de consultas tras 2 años, obligando al archivo de sellos de tiempo calificados.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Riesgo tecnológico y normativo de largo plazo documentado en el addendum rector.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Par Prompt/Completion generado",
+      "Certificado de Firma Digital Avanzada (Ley 19.799)",
+      "Autoridad de Sellado de Tiempo (TSA)"
+    ],
+    "actors": [
+      "Custodio Notarial Digital",
+      "Legal Compliance Engineer"
+    ],
+    "steps": [
+      "Empaquetar la consulta, el contexto recuperado y la respuesta generada con sus citas",
+      "Generar sello de tiempo calificado mediante autoridad certificadora acreditada en Chile",
+      "Almacenar el paquete firmado en bóveda WORM de archivo judicial",
+      "Acreditar ante tribunales la autenticidad e inmutabilidad del registro histórico independientemente del estado de la API de OpenAI"
+    ],
+    "states": [
+      "EMPAQUETADO_EVIDENCIA",
+      "SELLADO_TIEMPO_TSA",
+      "ARCHIVADO_WORM_LEGAL",
+      "VALIDEZ_JUDICIAL_PERMANENTE"
+    ],
+    "outputs": [
+      "Bóveda Criptográfica de Evidencia Corporativa con Validez Ley 19.799"
+    ],
+    "exceptions": [
+      "Si el sello de tiempo falla por caída de la TSA, se activa autoridad de sellado redundante"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "BOVEDA_LEY_19799",
+      "type": "producto",
+      "name": "Bóveda Criptográfica Ley 19.799",
+      "aliases": [
+        "Long-Term Legal Evidence Vault"
+      ]
+    },
+    {
+      "entity_id": "OBSOLESCENCIA_APIS",
+      "type": "riesgo",
+      "name": "Riesgo de Depreciación y Retiro de APIs",
+      "aliases": [
+        "LLM Checkpoint Sunset Risk"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "BOVEDA_LEY_19799",
+      "predicate": "mitiga_riesgo_de",
+      "object_id": "OBSOLESCENCIA_APIS",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X32-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de respuestas con sello de tiempo legal archivado",
+      "denominator": "Consultas oficiales emitidas a stakeholders",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Otorga valor probatorio pleno en juicios y fiscalizaciones a cualquier declaración o reporte asistido por BRIDGE a lo largo de décadas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Protocolo de preservación pericial a largo plazo (> 2 años) ante la depreciación y retiro de checkpoints de modelos por proveedores propietarios de nube",
+      "minimum_validation": "Implementación de bóveda de sellado de tiempo calificado conforme a la Ley N° 19.799 con autoridad certificadora acreditada",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

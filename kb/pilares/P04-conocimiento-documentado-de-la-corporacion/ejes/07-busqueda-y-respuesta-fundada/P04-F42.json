@@ -1,0 +1,132 @@
+{
+  "question_id": "P04-F42",
+  "pilar": "P04",
+  "eje": "Búsqueda y respuesta fundada",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra búsqueda y respuesta fundada sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Canónico: Consulta de prensa sobre compromisos de diversidad de género en cargos directivos. Entradas documentadas: 1) Pregunta recibida: '¿Cuál es la meta de participación femenina en el Directorio y cuánto se avanzó en 2025?'; 2) Documento en base: Memoria Integrada 2025 (pág. 54, Capítulo Gobierno Corporativo CMF NCG 461): 'El Directorio aprobó la meta de alcanzar un 30% de participación de mujeres en el Directorio al 2027 (línea base 2022: 11%). Al cierre del ejercicio 2025, la participación femenina alcanzó el 22% (2 de 9 directores)'. Proceso en el sistema: 1) El router híbrido ejecuta BM25 para 'participación femenina' y búsqueda vectorial para 'meta diversidad de género'; 2) El reranker ColBERT prioriza el fragmento de la pág. 54; 3) El verificador de atribución descompone la respuesta en dos hechos atómicos: [Meta: 30% al 2027] y [Avance 2025: 22%]; 4) Se comprueba que ambas proposiciones están 100% sustentadas en el texto. Resultado esperado: La respuesta emitida indica textualmente: 'La compañía tiene como meta aprobada por el Directorio alcanzar un 30% de mujeres en el Directorio para 2027 (línea base 2022: 11%). Al cierre de 2025, el avance reportado fue del 22%, correspondiente a 2 directoras sobre un total de 9 miembros (Memoria Integrada 2025, pág. 54, hash SHA-256 e3b0c442...)'. Cero alucinación de metas no aprobadas o cifras inferidas.",
+  "findings": [
+    {
+      "claim_id": "P04-F42-C1",
+      "claim": "El caso empírico de diversidad de género demuestra la capacidad del sistema para extraer cifras precisas, año base, metas intermedias y cita exacta de página sin añadir proyecciones no documentadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Caso Diversidad NCG 461"
+      },
+      "evidence": [
+        {
+          "source_id": "62bbf73f-3262-466f-9b1c-feb81c69d6dd",
+          "source_title": "CMF Chile: NCG N° 461 Memoria Anual Integrada y Sostenibilidad",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Capítulo II: Gobierno Corporativo y Diversidad",
+          "excerpt_short": "Exige reportar indicadores de diversidad por género, edad y antigüedad en el Directorio y cargos ejecutivos.",
+          "source_date": "2021-11-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso de prueba estructurado conforme a las exigencias normativas de la CMF y del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta sobre diversidad",
+      "Fragmento pág. 54 Memoria 2025"
+    ],
+    "actors": [
+      "Hybrid Search",
+      "ColBERT Reranker",
+      "Attributed Generator"
+    ],
+    "steps": [
+      "Recuperación de fragmento",
+      "Reranking semántico",
+      "Generación con citas atómicas a nivel de oración"
+    ],
+    "states": [
+      "Query_Received",
+      "Context_Retrieved",
+      "Factually_Grounded_Delivered"
+    ],
+    "outputs": [
+      "Minuta de respuesta institucional con citas verificables a página y hash"
+    ],
+    "exceptions": [
+      "Consulta adicional sobre sueldos que no está contemplada en la memoria"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASE_GENDER_DIVERSITY",
+      "type": "caso_empirico",
+      "name": "Caso de Consulta sobre Diversidad de Género NCG 461",
+      "aliases": [
+        "Gender Diversity Query Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASE_GENDER_DIVERSITY",
+      "predicate": "valida_precision_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F42-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Calidad de respuesta",
+      "LLM desalineado": "Genera frases vagas como 'la empresa promueve activamente a las mujeres' sin dar cifras ni citas.",
+      "Respuesta fundada BRIDGE": "Entrega el 22% alcanzado vs 30% comprometido con cita textual a pág. 54 de la Memoria 2025."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe replicar este estándar de precisión métrica en todas sus respuestas de asuntos corporativos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

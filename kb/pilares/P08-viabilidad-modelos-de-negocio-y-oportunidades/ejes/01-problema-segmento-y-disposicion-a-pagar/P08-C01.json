@@ -1,0 +1,155 @@
+{
+  "question_id": "P08-C01",
+  "pilar": "P08",
+  "eje": "Problema, segmento y disposición a pagar",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre problema, segmento y disposición a pagar, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radica en la disposición a pagar (WTP) y el alcance de la demanda corporativa: Las síntesis preliminares del Research Dossier asumían optimistamente que cualquier gran empresa pagaría USD 6.000 a USD 8.000/mes por una plataforma de IA desatendida. En contraste, las fuentes originales de doctrina corporativa (Arthur W. Page Society, PRSA) y el P08_QUALITY_ADDENDUM corrigen este supuesto: los directivos no confían en software desatendido para decisiones críticas y no pagan más de USD 500/mes por un dashboard pasivo. Prevalece la versión rectificada del QUALITY_ADDENDUM: el mercado real solo paga cuotas de USD 4.500 a USD 6.500/mes cuando la tecnología está integrada con un analista senior humano (HITL) que asume la responsabilidad de la precisión factual.",
+  "findings": [
+    {
+      "claim_id": "P08-C01-C1",
+      "claim": "Conforme a la regla de precedencia editorial, prevalece el P08_QUALITY_ADDENDUM que descarta la WTP por software desatendido y valida exclusivamente el precio corporativo para el modelo Tech-Enabled con supervisión humana.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "editorial_precedence_reconciliation",
+      "evidence": [
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 1 'Precedencia Editorial y Rectificaciones Metodológicas'",
+          "excerpt_short": "Precedencia obligatoria en P08: El QUALITY_ADDENDUM prevalece sobre las afirmaciones iniciales del Research Dossier. Se rectifica el supuesto de disposición a pagar: las corporaciones no pagan tarifas enterprise por software desatendido; la disposición de pago observada de USD 4.500 a USD 6.500 mensuales solo se materializa bajo la modalidad Tech-Enabled con analista humano certificado.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 1.2 'Diferenciación entre Hype de IA y Procurement Corporativo'",
+          "excerpt_short": "Los borradores preliminares estimaron precios de venta puramente basados en software, los cuales deben considerarse corregidos y subordinados a la validación empírica del servicio híbrido.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de la regla de precedencia editorial del mandato en P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "P08_RESEARCH_DOSSIER",
+      "P08_QUALITY_ADDENDUM",
+      "Entrevistas WTP"
+    ],
+    "actors": [
+      "Auditor Editorial",
+      "Lead Researcher",
+      "Arquitecto de BRIDGE"
+    ],
+    "steps": [
+      "Detección de contradicción en WTP",
+      "Aplicación de precedencia de QUALITY_ADDENDUM",
+      "Registro de versión canónica"
+    ],
+    "states": [
+      "Discrepancia Detectada",
+      "Precedencia Aplicada",
+      "Resuelta Canónicamente"
+    ],
+    "outputs": [
+      "Estructura de precios saneada"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P08_QUALITY_ADDENDUM",
+    "P08_RESEARCH_DOSSIER",
+    "WTP Rectificada",
+    "Arthur W. Page Society"
+  ],
+  "relations": [
+    {
+      "from": "P08_QUALITY_ADDENDUM",
+      "to": "P08_RESEARCH_DOSSIER",
+      "type": "overrules_on_pricing"
+    },
+    {
+      "from": "WTP Rectificada",
+      "to": "Modelo Tech-Enabled HITL",
+      "type": "binds_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "WTP preliminar vs WTP rectificada",
+      "diferencia": "Preliminar: USD 7K por SaaS puro (irreal). Rectificada: USD 5K por SaaS + HITL (validada empíricamente)."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P08-F02-C1",
+        "P08-C01-C1"
+      ],
+      "difference": "Discrepancia entre la valoración de software puro versus servicio híbrido asistido por analista.",
+      "resolution": "resuelta",
+      "reason": "El P08_QUALITY_ADDENDUM establece como regla de precedencia que el software puro no alcanza el precio enterprise en C-Suite sin componente humano."
+    }
+  ],
+  "metrics_and_denominators": {
+    "reconciled_wtp_range": "USD 4.500 - USD 6.500 mensuales"
+  },
+  "bridge_implications": "Nunca presentar BRIDGE a un prospecto como un software 100% automatizado, sino como un servicio asistido por analistas especializados.",
+  "open_gaps": [
+    "Monitorear si en 2027 la madurez digital del mercado eleva la confianza en software desatendido."
+  ],
+  "next_question_ids": [
+    "P08-C02",
+    "P08-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

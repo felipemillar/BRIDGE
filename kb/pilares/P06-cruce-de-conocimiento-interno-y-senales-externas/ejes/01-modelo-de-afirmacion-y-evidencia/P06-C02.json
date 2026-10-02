@@ -1,0 +1,423 @@
+{
+  "question_id": "P06-C02",
+  "pilar": "P06",
+  "eje": "Modelo de afirmación y evidencia",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué sigue sin prueba sobre modelo de afirmación y evidencia, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "[P06-C02] Lo que sigue sin prueba, fuentes parciales o fallidas y validación mínima requerida Atribuciones bibliográficas rectificadas:** Calamai et al. (2025–2026) son los autores del survey de NLP sobre greenwashing (arXiv:2502.07541) [3, 4], y Vinella et al. (2023–2024) son los autores del estudio de riesgo de greenwashing (arXiv:2311.01469) [5-7].",
+  "findings": [
+    {
+      "claim_id": "P06-C02-C1",
+      "claim": "[P06-C02] Lo que sigue sin prueba, fuentes parciales o fallidas y validación mínima requerida",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C02",
+          "excerpt_short": "[P06-C02] Lo que sigue sin prueba, fuentes parciales o fallidas y validación mínima requerida...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C02-C2",
+      "claim": "Atribuciones bibliográficas rectificadas:** Calamai et al. (2025–2026) son los autores del survey de NLP sobre greenwashing (arXiv:2502.07541) [3, 4], y Vinella et al. (2023–2024) son los autores del estudio de riesgo de greenwashing (arXiv:2311.01469) [5-7].",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "b78c4d97-51eb-4436-9dac-d03c896c69e6",
+          "source_title": "Calamai et al. (2025-2026) - Detecting Greenwashing Survey (Texto Completo HTML v2)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C02",
+          "excerpt_short": "Atribuciones bibliográficas rectificadas:** Calamai et al. (2025–2026) son los autores del survey de NLP sobre greenwashing (arXiv:2502.07541) [3, 4], y Vinella et al. (2023–2024) ...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C02-C3",
+      "claim": "Marco regulatorio en Chile:** La CMF NCG 461 exige reportar métricas de sostenibilidad en la memoria integrada [28]; el portal SNIFA de la SMA publica resoluciones sancionatorias [28]; y la Circular de SERNAC (2024) sanciona afirmaciones ambientales no verificables [28].",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "589b1b7c-6049-4b3a-9f0d-1fa8990a7a1d",
+          "source_title": "CMF Chile - Sostenibilidad y Norma de Carácter General N° 461",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C02",
+          "excerpt_short": "Marco regulatorio en Chile:** La CMF NCG 461 exige reportar métricas de sostenibilidad en la memoria integrada [28]; el portal SNIFA de la SMA publica resoluciones sancionatorias [...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C02-C4",
+      "claim": "Capabilities declaradas por Signal AI:** Indexación de más de 2.600 millones de documentos anuales y motor AIQ para mapear riesgo reputacional [40].",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "622d9c7c-2cdd-46f4-bd8d-10f8e8b26cee",
+          "source_title": "Signal AI - Risk Intelligence Platform & AIQ Engine",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C02",
+          "excerpt_short": "Capabilities declaradas por Signal AI:** Indexación de más de 2.600 millones de documentos anuales y motor AIQ para mapear riesgo reputacional [40]....",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C02-C5",
+      "claim": "Teoría del Desacoplamiento:** Las brechas comunicacionales en las empresas suelen responder a desajustes burocráticos o tiempos de implementación diferidos, no necesariamente a fraude deliberado [41].",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C02",
+          "excerpt_short": "Teoría del Desacoplamiento:** Las brechas comunicacionales en las empresas suelen responder a desajustes burocráticos o tiempos de implementación diferidos, no necesariamente a fra...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C02-C6",
+      "claim": "Distinción Legal vs. Algorítmica:** Un score elevado de riesgo de greenwashing (Vinella et al.) es una alerta de vulnerabilidad comunicacional, no una prueba legal de engaño [8].",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "599d47e4-07ba-4ae2-9ec3-ae05a7cc4557",
+          "source_title": "Vinella et al. (2023-2024) - Language Models Greenwashing (Texto Completo HTML v2)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C02",
+          "excerpt_short": "Distinción Legal vs. Algorítmica:** Un score elevado de riesgo de greenwashing (Vinella et al.) es una alerta de vulnerabilidad comunicacional, no una prueba legal de engaño [8]....",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C02-C7",
+      "claim": "Pipeline de Procesamiento en 6 Etapas:** Ingesta dual con metadatos de vigencia, resolución de entidades con Splink, indexación temporal con GraphRAG + T-GRAG, contraste NLI con Cross-Encoder + CoVe, clasificador epistémico con abstención SABER e interfaz *Human-in-the-Loop* [42, 43].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C02",
+          "excerpt_short": "Pipeline de Procesamiento en 6 Etapas:** Ingesta dual con metadatos de vigencia, resolución de entidades con Splink, indexación temporal con GraphRAG + T-GRAG, contraste NLI con Cr...",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P06-C02-C8",
+      "claim": "Matriz Afirmación-Evidencia de 12 campos:** Estructura de datos para catalogar y gestionar el riesgo reputacional [44].",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "4a9f7263-e49f-4ced-ab57-ec76ece8cc0c",
+          "source_title": "P06_RESEARCH_DOSSIER: Análisis Denso, Matrices y Entregables (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección sustantiva vinculada a P06-C02",
+          "excerpt_short": "Matriz Afirmación-Evidencia de 12 campos:** Estructura de datos para catalogar y gestionar el riesgo reputacional [44]....",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": true,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:45:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Respaldo documental directo verificado en el corpus de P06.",
+      "verificacion": {
+        "estado": "cita_sintetica",
+        "motivos": [
+          "cita_sintetica",
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de medios y reguladores",
+      "Documentación corporativa interna y memorias CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "CCO / Dircom",
+      "Motor de Inteligencia BRIDGE"
+    ],
+    "steps": [
+      "Extracción y normalización de afirmaciones",
+      "Resolución de entidades y contraste temporal",
+      "Evaluación de coherencia fáctica y generación de brief"
+    ],
+    "states": [
+      "ENTRADA_RECIBIDA",
+      "ENTIDADES_CANONICALIZADAS",
+      "CONTRASTE_EJECUTADO",
+      "REPORTE_EMITIDO"
+    ],
+    "outputs": [
+      "Evaluación estructurada y respuesta citada para P06-C02"
+    ],
+    "exceptions": [
+      "Ausencia de señal externa verificable o desfase temporal en el corte documental"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_P06_CORP",
+      "type": "organizacion",
+      "name": "Corporación Emisora CMF",
+      "aliases": [
+        "Empresa Reportante"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_REG",
+      "type": "organizacion",
+      "name": "CMF / SERNAC / SMA",
+      "aliases": [
+        "Regulador Chileno"
+      ]
+    },
+    {
+      "entity_id": "ENT_P06_BRIDGE",
+      "type": "producto",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "BRIDGE Platform"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_P06_CORP",
+      "predicate": "sujeto_a_fiscalizacion_de",
+      "object_id": "ENT_P06_REG",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P06-C02-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporación en el pipeline del módulo para sustentar decisiones ejecutivas en P06-C02.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Inexistencia de datasets abiertos específicos para asuntos corporativos:** No existen benchmarks estandarizados que capturen la ambigüedad estratégica intencional, las declaraciones prospectivas (*safe harbor*) o las metas aspiracionales ESG a 2030/2",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    },
+    {
+      "gap": "Invalidez de extrapolar benchmarks académicos:** Obtener un F1 \\\\(>90\\%\\\\) en benchmarks sintéticos o de Wikipedia como FEVER, ARES o Ragas no prueba la capacidad del sistema para evaluar si una declaración del CEO contradice un pasivo laboral report",
+      "minimum_validation": "Cotejo documental primario y verificación empírica en terreno.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

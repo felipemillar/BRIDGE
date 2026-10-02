@@ -1,0 +1,164 @@
+{
+  "question_id": "P10-F20",
+  "pilar": "P10",
+  "eje": "RACI, DACI y cadena de aprobación",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué cambia entre operación ordinaria, emergencia y asunto regulado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La cadena de aprobación se reconfigura drásticamente según tres regímenes operacionales: 1) Operación Ordinaria (comunicados de prensa de rutina, hitos comerciales, lanzamientos): Flujo estándar con SLA de 24 a 48 horas; redactor de comunicaciones, revisión secuencial de SME y Legal, y aprobación del Jefe de Prensa o Subgerente de Comunicaciones; 2) Emergencia / Crisis Operacional (derrames, fatalidades, bloqueos de planta, ciberataques): Flujo de respuesta ultrarrápida con SLA de 15 minutos a 2 horas; activación inmediata de Holding Statements pre-aprobados, mesa de crisis en sesión permanente, eliminación de revisiones intermedias redundantes y aprobación delegada unipersonal en el Director de Crisis o Director de Asuntos Corporativos; y 3) Asunto Regulado / Bursátil (Hechos Esenciales según Art. 9-10 Ley 18.045, NCG 30 CMF, o Form 6-K/8-K SEC): Flujo colegiado estricto con SLA fijado por ley (divulgación simultánea al mercado); participación obligatoria del Fiscal/Gerente Legal y Gerente General, con embargo de confidencialidad estricto (Listas de Iniciados) hasta el momento de carga en el sistema SEIL/CMF o EDGAR/SEC.",
+  "findings": [
+    {
+      "claim_id": "P10-F20-C1",
+      "claim": "Los regímenes de aprobación varían en SLA, nivel de autoridad de firma y salvaguardas de confidencialidad, distinguiendo entre rutina (24-48h), crisis operativa (15m-2h) y materia regulada bursátil (aprobación colegiada de Directorio/Alta Gerencia con estricto embargo).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "operational_regimes_comparison",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 4 'Criterios de Aprobación por Tipología de Mensaje y Nivel de Riesgo'",
+          "retrieved_at": null,
+          "excerpt_short": "Crisis Operativa Nivel 1: SLA 15-30 min, Aprobador Director de Asuntos Corporativos o CEO, Holding Statement pre-aprobado. Asunto Bursátil/Regulado: SLA estricto por plazos de ley, Aprobador Colegiado (Gerente General + Fiscal + CFO), embargo total bajo listas de iniciados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 18.045 de Mercado de Valores (Hechos Esenciales)",
+          "source_id": "737c1e8d-4a41-4178-8259-fd4d44800419",
+          "locator": "Artículos 9 y 10",
+          "retrieved_at": null,
+          "excerpt_short": "Las entidades inscritas en el Registro de Valores deberán divulgar en forma veraz, suficiente y oportuna todo hecho esencial... Los directores y administradores deberán guardar reserva de los hechos reservados hasta su divulgación.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Sprinklr: Unified Platform Release & Approval Workflows",
+          "source_id": "12dee34f-340e-4711-8b6f-c93d0403cc43",
+          "locator": "Section 'Emergency Protocol and Crisis Workflow Escalation'",
+          "retrieved_at": null,
+          "excerpt_short": "Emergency approval bypasses routine tiered approval queues, routing message assets directly to designated crisis commanders with automatic timeout escalations.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo normativo en Ley 18.045 e integración técnica en plataformas de gestión empresarial.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evaluación de severidad del evento",
+      "Matriz de categorización de incidentes",
+      "Pre-approved Holding Statement Templates"
+    ],
+    "actors": [
+      "Comité de Crisis",
+      "Fiscal Corporativo",
+      "Gerente General",
+      "Director Asuntos Corporativos"
+    ],
+    "steps": [
+      "Clasificación automática del evento (Ordinario / Emergencia / Regulado)",
+      "Ruteo de aprobación según árbol de decisión",
+      "Si es Emergencia: Inyección de Holding Statement con variables de tiempo y lugar",
+      "Si es Regulado: Convocatoria a firma mancomunada de Fiscal y Gerente General bajo secreto bursátil",
+      "Si es Ordinario: Ruteo a cola de revisión secuencial estándar"
+    ],
+    "states": [
+      "TRIAGED_REGIME",
+      "EMERGENCY_ROUTING",
+      "REGULATED_COUNCIL_REVIEW",
+      "STANDARD_ROUTING"
+    ],
+    "outputs": [
+      "Mensaje aprobado bajo régimen y canal correspondiente"
+    ],
+    "exceptions": [
+      "Un incidente ordinario que escala súbitamente a crisis viral transmuta su régimen en tiempo real a Emergencia"
+    ]
+  },
+  "entities": [
+    "Hecho Esencial",
+    "Holding Statement",
+    "Comité de Crisis",
+    "Ley 18.045",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Incidente Operacional",
+      "to": "Régimen de Aprobación",
+      "type": "TRIGGERS_SPECIFIC_WORKFLOW"
+    },
+    {
+      "from": "Asunto Regulado",
+      "to": "Fiscal Corporativo",
+      "type": "REQUIRES_MANDATORY_CONCURRENCE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Holding Statement de Crisis vs Hecho Esencial Regulado",
+      "diferencia": "El holding statement busca llenar el vacío comunicacional inmediato con empatía y medidas operativas; el hecho esencial es un documento técnico legal con impacto bursátil directo que exige precisión extrema."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "first_holding_statement_latency": "Minutos transcurridos desde reporte de crisis hasta emisión (Target < 30m)",
+    "regulatory_filing_punctuality": "% de hechos esenciales reportados dentro de la ventana de oportunidad legal"
+  },
+  "bridge_implications": "BRIDGE debe proveer selector de régimen de flujo en la creación del ticket de comunicación, ajustando dinámicamente campos requeridos, revisores y SLAs.",
+  "open_gaps": [
+    "Protocolos de sincronización con la plataforma CMF SEIL para envío automático de hechos esenciales."
+  ],
+  "next_question_ids": [
+    "P10-F21",
+    "P10-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

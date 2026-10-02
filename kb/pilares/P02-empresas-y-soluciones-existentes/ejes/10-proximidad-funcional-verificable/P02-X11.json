@@ -1,0 +1,136 @@
+{
+  "question_id": "P02-X11",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Proximidad funcional verificable",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué demostración común permitiría comparar a Broadsight, Entual, Contify y Open Point?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La demostración común de referencia para someter a prueba comparativa a estos cuatro proveedores arquetípicos es el 'Simulacro de Contingencia Territorial con Controversia Regulatoria': 1) Escenario de prueba: Una empresa minera o de energía sufre una acusación pública de dirigentes vecinales sobre afectación de napas subterráneas, con cobertura en radio comunitaria y solicitud formal de explicaciones por un diputado en el Congreso; 2) Evaluación de desempeño por vendor: a) Broadsight: sobresale en la gestión del Issue, formulación de Q&A corporativo, control de versiones y asignación de voceros con firma legal (Hablar), pero falla totalmente en detectar la alerta radial y en mapear las actas comunitarias previas; b) Entual B.V.: entrega un análisis cualitativo humano excelente de la controversia y su impacto político (Consultoría/Saber), pero no gestiona el flujo de vocería ni registra las quejas en faena; c) Contify: alerta sobre menciones en prensa web y filings regulatorios de competidores (Saber/Escuchar), pero es ciego a la radio comunitaria y carece de flujos de aprobación y memoria de acuerdos territoriales; d) Open Point Group: registra de forma impecable las actas de reuniones vecinales, los convenios firmados y el perfil de los dirigentes (Relacionar), pero es ciego a la prensa y carece de repositorio de vocerías.",
+  "findings": [
+    {
+      "claim_id": "P02-X11-C1",
+      "claim": "El benchmark de contingencia territorial demuestra que Broadsight (Hablar), Entual (Saber consultivo), Contify (Saber de mercado) y Open Point (Relacionar) resuelven nichos especializados de alta calidad pero resultan mutuamente ciegos e incapaces de orquestar el ciclo completo de respuesta.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Broadsight, Entual, Contify, Open Point"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Comparative Benchmark: The 4-Archetype Crisis Simulation",
+          "excerpt_short": "Simulating a community environmental crisis reveals specialized excellence alongside systemic blindness: Broadsight masters messaging, Open Point records grievances, Contify tracks competitors, and Entual advises, yet none bridges all four steps.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño y evaluación metodológica de caso de prueba comparativo en el cuaderno P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Escenario de contingencia hídrica territorial",
+      "Respuestas operativas de cada plataforma",
+      "Matriz de evaluación de 4 módulos"
+    ],
+    "actors": [
+      "Auditor de Benchmark",
+      "Evaluador de Respuestas de Proveedores"
+    ],
+    "steps": [
+      "Ejecución simulada del caso en cada plataforma",
+      "Medición de cobertura de pasos operacionales",
+      "Documentación de puntos ciegos por arquetipo"
+    ],
+    "states": [
+      "Escenario_Desplegado",
+      "Simulacro_Ejecutado",
+      "Brechas_Registradas"
+    ],
+    "outputs": [
+      "Cuadro comparativo de desempeño de los cuatro arquetipos de mercado"
+    ],
+    "exceptions": [
+      "Uso de servicios de consultoría manual para parchear las brechas del software en vivo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BENCHMARK_4_ARQUETIPOS",
+      "type": "benchmark_comparativo",
+      "name": "Benchmark 4 Arquetipos de Corporate Affairs",
+      "aliases": [
+        "4-Archetype Benchmark"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BENCHMARK_4_ARQUETIPOS",
+      "predicate": "evidencia_fragmentacion_de",
+      "object_id": "Mercado_Software_Asuntos_Corporativos",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X11-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Desempeño Comparado en Crisis Hídrica Territorial",
+      "Broadsight": "Excelente en gobernanza de vocería y Q&A; nulo en monitoreo de prensa comunitaria y terreno.",
+      "Open Point": "Excelente en bitácora de quejas vecinales; nulo en clipping de medios y declaraciones oficiales.",
+      "Contify": "Excelente en inteligencia competitiva; nulo en vocería y relaciones comunitarias.",
+      "Entual": "Excelente en análisis humano cualitativo; nulo en software de flujo continuo y conectores corporativos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Este benchmark demuestra con claridad meridiana el posicionamiento de BRIDGE: integrar los 4 arquetipos en una sola plataforma.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

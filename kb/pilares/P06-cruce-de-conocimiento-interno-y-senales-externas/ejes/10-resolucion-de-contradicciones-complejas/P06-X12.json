@@ -1,0 +1,130 @@
+{
+  "question_id": "P06-X12",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Resolución de contradicciones complejas",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar resolución de contradicciones complejas de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la resolución de contradicciones complejas exige un modelo relacional y de grafos con las siguientes especificaciones: 1) Variables principales: `discrepancy_id` (UUID), `claim_id_a`, `claim_id_b`, `discrepancy_type` (numérica_paramétrica, temporal_evolutiva, fáctica_directa, terminológica), `dimension_in_conflict` (cifra, fecha, actor, alcance), `confidence_score` (0.00-1.00), `severity_level` (leve, moderada, crítica_regulatoria), `resolution_status` (abierta, investigando, explicada_por_evolucion, falso_positivo_metodologico, contradiccion_confirmada), `human_reviewer_id`, `resolution_notes`, `resolved_at`; 2) Categorías de resolución: Falso Positivo por Desactualización (Superseded), Falso Positivo Dimensional (Non-Comparable Units), Descrepancia Menor Aclarada (Editorial Amending), y Conflicto Real con Riesgo de Compliance; 3) Relaciones: `CONFLICTS_WITH(claim_a, claim_b)`, `RESOLVED_BY(discrepancy, human_reviewer)`, `EXPLAINED_BY(discrepancy, evidence_document)`; 4) Condiciones de integridad: Prohibición de cerrar una discrepancia crítica sin adjuntar documento probatorio explicativo y firma digital del revisor humano.",
+  "findings": [
+    {
+      "claim_id": "P06-X12-C1",
+      "claim": "El ciclo de vida de resolución de contradicciones requiere un esquema estructurado con estados formales, trazabilidad de revisores y justificación documental obligatoria.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "Gobernanza de Datos y Riesgo"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 2.4: Esquema de Datos de Discrepancias y Protocolo de Cierre",
+          "excerpt_short": "Toda discrepancia detectada debe registrarse como objeto estructurado con identificador único, tipología de conflicto, estado de resolución y firma del analista responsable.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación detallada y gobernada en el Addendum de Calidad de P06.",
+      "epistemic_status_original": "diseno_de_datos_formal",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Par de afirmaciones en colisión"
+    ],
+    "actors": [
+      "Manejador de Discrepancias",
+      "Analista Humano Asignado"
+    ],
+    "steps": [
+      "Creación del registro Discrepancy",
+      "Asignación de severidad y tipo",
+      "Investigación y cruce probatorio",
+      "Cierre con resolución estructurada"
+    ],
+    "states": [
+      "Open",
+      "Under_Investigation",
+      "Pending_Approval",
+      "Resolved"
+    ],
+    "outputs": [
+      "Objeto de discrepancia resuelto en base de datos"
+    ],
+    "exceptions": [
+      "Reapertura de discrepancia ante aparición de nueva evidencia probatoria contraria"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DISCREPANCY_RECORD",
+      "type": "modelo_datos",
+      "name": "Registro Estructurado de Discrepancia",
+      "aliases": [
+        "Discrepancy Data Model"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DISCREPANCY_RECORD",
+      "predicate": "estructura_auditoria_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X12-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Permite auditar el histórico de incoherencias corporativas resueltas para auditorías externas o memorias de sostenibilidad.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

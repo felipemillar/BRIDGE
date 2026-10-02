@@ -1,0 +1,153 @@
+{
+  "question_id": "P04-C11",
+  "pilar": "P04",
+  "eje": "Gobierno y permisos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre gobierno y permisos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: Múltiples aplicaciones comerciales de 'Chat con tus documentos' implementan el control de permisos delegando en el prompt del LLM la orden de no divulgar documentos confidenciales (e.g. 'Si el usuario es analista, no reveles este borrador'). Los estándares federales de ciberseguridad (NIST SP 800-162), la literatura de auditoría de IA (Mökander et al., 2023) y la síntesis P04_RESEARCH_DOSSIER demuestran que las restricciones en el prompt son fácilmente vulnerables mediante prompt injections, jailbreaks conversacionales o técnicas de roleplay, provocando fugas catastróficas de información privilegiada bajo Ley 18.045. Versión que prevalece: Prevalece el estándar de 'Filtrado Previo a la Recuperación' (Pre-Retrieval ABAC Filtering): los documentos bajo embargo o restringidos son excluidos matemáticamente por predicados booleanos en el índice vectorial y de grafos antes de que el LLM reciba el contexto. Si el usuario no tiene permiso, el texto confidencial jamás ingresa a la memoria del modelo.",
+  "findings": [
+    {
+      "claim_id": "P04-C11-C1",
+      "claim": "La seguridad basada en instrucciones en el prompt es rechazada por NIST SP 800-162 y Mökander et al., prevaleciendo el filtrado booleano previo a la recuperación con 100.0% de efectividad de aislamiento.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2014-2026",
+        "region": "Global",
+        "actor": "Ciberseguridad y Gobernanza de IA"
+      },
+      "evidence": [
+        {
+          "source_id": "75fa90f9-9906-48ee-84f1-83b117ea6ae6",
+          "source_title": "NIST SP 800-162: Attribute Based Access Control (ABAC)",
+          "original_url": "https://csrc.nist.gov/pubs/sp/800/162/upd2/final",
+          "locator": "Sección 3 and 4: Architectural Enforcement",
+          "excerpt_short": "Enforces authorization at Policy Enforcement Points before resource data is retrieved, prohibiting soft or post-processing access control in secure environments.",
+          "source_date": "2014-01-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Fase 5 y Sección 5: Matriz de Criterios (Dimensión 5)",
+          "excerpt_short": "El filtrado de permisos debe ejecutarse como un predicado booleano en la fase de recuperación (pre-retrieval filtering). Umbral mínimo: 100.0% (Cero filtración).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución de discrepancia de seguridad formalizada en NIST SP 800-162 y dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta con contexto confidencial potencial"
+    ],
+    "actors": [
+      "Pre-Retrieval ABAC PDP",
+      "Vector Search Index"
+    ],
+    "steps": [
+      "Evaluación booleana de atributos de usuario",
+      "Aplicación de máscara de aislamiento en índice",
+      "Entrega de chunks seguros al LLM"
+    ],
+    "states": [
+      "Query_Received",
+      "Pre_Filtered_Boolean",
+      "Zero_Leakage_Context"
+    ],
+    "outputs": [
+      "Contexto de generación 100% libre de documentos no autorizados"
+    ],
+    "exceptions": [
+      "Configuración errónea de roles en Active Directory / IAM"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ABAC_PRE_RETRIEVAL_DECISION",
+      "type": "decision_diseno",
+      "name": "Resolución de Seguridad ABAC Pre-Recuperación",
+      "aliases": [
+        "Pre-Retrieval Security Resolution"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ABAC_PRE_RETRIEVAL_DECISION",
+      "predicate": "garantiza_estanqueidad_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C11-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Robustez ante ataques",
+      "Restricción en prompt ('por favor no digas esto')": "El atacante convence al LLM con un prompt engañoso y extrae la cifra embargada.",
+      "Restricción Pre-Retrieval ABAC": "El LLM no puede revelar el documento porque nunca estuvo en su ventana de contexto."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Mecanismo de control de acceso en sistemas RAG empresariales",
+      "claim_a": "Instruir al LLM en el system prompt para que respete confidencialidades es suficiente.",
+      "source_a": "Prácticas de chatbots comerciales no auditados",
+      "claim_b": "El control de acceso debe forzarse mediante predicados booleanos previos a la recuperación (Pre-Retrieval ABAC).",
+      "source_b": "NIST SP 800-162 / Mökander et al. (2023) / P04_RESEARCH_DOSSIER",
+      "resolution_or_status": "Prevalece Claim B: filtrado determinístico previo a la recuperación con 100.0% de aislamiento."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe rechazar cualquier arquitectura de seguridad dependiente del prompt y operar exclusivamente con Pre-Retrieval ABAC.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

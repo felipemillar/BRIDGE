@@ -1,0 +1,141 @@
+{
+  "question_id": "T01-C12",
+  "pilar": "T01",
+  "eje": "Atribución de valor e impacto",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre atribución de valor e impacto, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba actuarial empírica la cuantificación exacta del 'efecto póliza de seguros' (evitación de multas regulatorias catastróficas y de litigios por errores no forzados): 1) Vacío Identificado: Aunque se demuestra que BRIDGE previene alucinaciones que violarían la Ley de Lobby (20.730) o la Ley de Protección de Datos (21.719), no existe en el corpus un modelo actuarial que asigne una prima de ahorro probabilístico en base al valor esperado del riesgo de litigio evitado; 2) Fuente Fallida / Parcial: Las leyes chilenas catalogadas (ca08355d) definen las sanciones máximas (hasta 20.000 UTM), pero no calculan la probabilidad basal de ocurrencia en empresas que operan manualmente; y 3) Validación Mínima Necesaria: Diseñar un modelo actuarial de valor esperado (Probabilidad de Infracción x Severidad de Multa) validado por una firma auditora externa (Big Four) para incorporar el 'Ahorro por Riesgo Evitado' en la propuesta de valor.",
+  "findings": [
+    {
+      "claim_id": "T01-C12-C1",
+      "claim": "El cálculo del valor económico de The Bridge Intelligence por concepto de mitigación de riesgo regulatorio permanece como una modelación teórica no validada actuarialmente con datos históricos de litigiosidad en Chile.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "The Bridge Intelligence Risk Modeling"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 6: Valor Actuarial del Riesgo Evitado",
+          "excerpt_short": "El valor del software como seguro contra errores regulatorios es cualitativamente incuestionable, pero carece de coeficientes actuariales calibrados para el mercado chileno.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Limitación econométrica explícitamente señalada en el addendum rector.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Historial de sanciones de la CMF, SMA y Agencia de Datos",
+      "Modelo actuarial de probabilidad de fallo"
+    ],
+    "actors": [
+      "Consultor Actuarial de Riesgos",
+      "Director Legal de BRIDGE"
+    ],
+    "steps": [
+      "Recopilar base de datos de sanciones y multas en Chile de los últimos 5 años",
+      "Estimar la frecuencia basal de infracciones por errores de transcripción o citas no respaldadas",
+      "Modelar el valor monetario esperado del riesgo evitado mediante BRIDGE",
+      "Integrar la fórmula actuarial en la memoria de cálculo de ROI corporativo"
+    ],
+    "states": [
+      "RECOPILACION_SANCIONES",
+      "MODELACION_ACTUARIAL",
+      "CALCULO_VALOR_ESPERADO",
+      "VALIDACION_BIG4"
+    ],
+    "outputs": [
+      "Modelo Actuarial de Ahorro por Mitigación Regulatoria"
+    ],
+    "exceptions": [
+      "Si el cliente no está en un sector fuertemente regulado, el ROI se calcula solo con ahorro de horas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "MODELO_ACTUARIAL_RIESGO",
+      "type": "metrica",
+      "name": "Modelo Actuarial de Riesgo Evitado",
+      "aliases": [
+        "Expected Value of Compliance Insurance"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "MODELO_ACTUARIAL_RIESGO",
+      "predicate": "cuantifica_beneficio_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C12-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Valor monetario esperado del riesgo evitado",
+      "denominator": "Presupuesto anual de cumplimiento corporativo",
+      "target": ">= 2.5x costo de suscripción"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite a los CFOs justificar la compra de BRIDGE no como un gasto de comunicaciones, sino como una póliza de mitigación de riesgo corporativo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Cuantificación actuarial del valor esperado por mitigación de sanciones y multas regulatorias en Chile",
+      "minimum_validation": "Estudio empírico de frecuencias basales de sanción con firma de auditoría de riesgos externa",
+      "priority": "media"
+    }
+  ],
+  "next_question_ids": [
+    "T01-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

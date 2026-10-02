@@ -1,0 +1,164 @@
+{
+  "question_id": "P11-F32",
+  "pilar": "P11",
+  "eje": "Controles comprobables",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué diferencia una afirmación de marketing de un control probado o certificación vigente?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La distinción entre afirmaciones comerciales y garantías técnicas auditables es un pilar metodológico y epistémico de BRIDGE, ratificado canónicamente en las directrices rectoras `P11_VERIFICATION_CORRECTIONS` y `P11_2026_LAW_AND_PROVIDER_CORRECTION`: 1) Afirmación de Marketing: Es una declaración unilateral y comercial publicada en sitios web o folletos (ej. 'Enterprise-grade security', 'Privacidad 100% garantizada', 'Zero-retention AI', 'Sus datos jamás se filtrarán'). Carece de valor probatorio legal y técnico per se, no está sujeta a auditoría independiente, no establece métricas ni SLAs penalizables, y no demuestra la ausencia de bugs o vulnerabilidades operativas en tiempo de ejecución; 2) Control Probado: Es una salvaguarda de ingeniería implementada en software y hardware, cuya eficacia es reproducible y verificable mediante telemetría, código de políticas (ej. RLS mandatorio en SQL), tests unitarios y de penetración ejecutados por terceros acreditados, y aserciones matemáticas (ej. destrucción comprobada de claves criptográficas y recall 0.0% en búsquedas vectoriales); y 3) Certificación o Atestación Vigente: Es un dictamen formal e independiente emitido por una firma auditora externa calificada bajo normas estandarizadas internacionales. La atestación SOC 2 Type II (AICPA SSAE 18 / AT-C 205) no solo certifica el diseño del control (como el Type I), sino que audita rigurosamente la efectividad operativa de dichos controles a lo largo de un período continuo de 6 a 12 meses; mientras que la certificación ISO/IEC 27001:2022 o ISO/IEC 42001:2023 exige auditorías anuales de vigilancia sobre un Sistema de Gestión de Seguridad de la Información (SGSI) con alcance documentalmente formalizado (Statement of Applicability).",
+  "findings": [
+    {
+      "claim_id": "P11-F32-C1",
+      "claim": "Conforme a las correcciones canónicas rectoras P11_VERIFICATION_CORRECTIONS y P11_2026_LAW_AND_PROVIDER_CORRECTION, las promesas contractuales y afirmaciones comerciales de proveedores de IA no constituyen pruebas técnicas de aislamiento y deben diferenciarse categóricamente de controles probados en código y atestaciones SOC 2 Type II.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "epistemic_distinction_controls_vs_marketing",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Calibración Epistémica de Controles y Términos Comerciales'",
+          "retrieved_at": null,
+          "excerpt_short": "Las declaraciones públicas de 'cero retención' o 'privacidad enterprise' de proveedores son afirmaciones comerciales o cláusulas contractuales con alcance limitado. No constituyen prueba matemática ni técnica de aislamiento operativo. Se exige separar afirmaciones comerciales de controles verificados y certificaciones vigentes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'Distinción entre Términos Contractuales y Aislamiento Técnico'",
+          "retrieved_at": null,
+          "excerpt_short": "Services Agreement y DPA son compromisos legales entre partes. No prueban por sí solos ausencia operacional de fuga de datos ni garantizan infalibilidad técnica en entornos multi-tenant del proveedor.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AICPA: System and Organization Controls (SOC 2) Trust Services Criteria",
+          "source_id": "11c7c827-b3a4-4207-925a-f5bac2493a7b",
+          "locator": "Sección 'SOC 2 Type I vs Type II Reports and Period of Operating Effectiveness'",
+          "retrieved_at": null,
+          "excerpt_short": "A Type 2 report includes management's description of a service organization's system and the suitability of the design and operating effectiveness of controls over a period of time, typically minimum six months.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia canónica explícita de P11_VERIFICATION_CORRECTIONS y P11_2026_LAW_AND_PROVIDER_CORRECTION respaldada por el estándar oficial de AICPA.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dossier comercial de proveedor",
+      "Informe SOC 2 Type II",
+      "Resultados de pentest",
+      "Código de control en repositorio"
+    ],
+    "actors": [
+      "Oficial de Riesgo Tecnológico",
+      "Auditor Independiente",
+      "Comité de Seguridad de Datos"
+    ],
+    "steps": [
+      "Recepción del reclamo de seguridad o privacidad",
+      "Clasificación categorial inmediata: ¿Es declaración unilateral (marketing), cláusula contractual o informe de atestación independiente?",
+      "Si es atestación: verificar la vigencia temporal (máximo 12 meses), la firma del auditor calificado (CPA acreditado) y la ausencia de excepciones no remediadas en la Sección IV del informe",
+      "Si es control interno propio: ejecutar suite de pruebas de laboratorio para comprobar que la denegación de acceso opera en código antes de aceptar la premisa",
+      "Incorporación de la evidencia clasificada al Registro de Riesgo Operativo"
+    ],
+    "states": [
+      "CLAIM_RECEIVED",
+      "CATEGORICALLY_TAGGED",
+      "INDEPENDENT_AUDIT_EXAMINED",
+      "OPERATIONAL_TEST_VALIDATED"
+    ],
+    "outputs": [
+      "Calificación epistémica rigurosa que impide tomar atajos o asumir falsas seguridades basadas en marketing"
+    ],
+    "exceptions": [
+      "Si un proveedor solo ofrece un informe Type I o una carta de adhesión sin pruebas operativas, no se le clasifica como 'control probado' sino como 'control diseñado pendiente de atestación'"
+    ]
+  },
+  "entities": [
+    "P11_VERIFICATION_CORRECTIONS",
+    "AICPA SOC 2 Type II",
+    "ISO/IEC 27001",
+    "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+    "Marketing Claim"
+  ],
+  "relations": [
+    {
+      "from": "SOC 2 Type II",
+      "to": "Efectividad Operativa",
+      "type": "CERTIFIES_ACROSS_TIME"
+    },
+    {
+      "from": "Afirmación Comercial",
+      "to": "Control Probado",
+      "type": "CANNOT_SUBSTITUTE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Afirmación de marketing vs Informe SOC 2 Type II vs Control probado en código",
+      "diferencia": "El marketing promete intenciones; el informe SOC 2 Type II demuestra que un auditor independiente verificó los controles durante meses; el control probado en código permite ejecutar un script en tiempo real y observar la denegación matemática de fuga."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "audit_evidence_rigor_score": "100% de controles clasificados según su estatus epistémico real",
+    "soc2_audit_period_coverage": "Mínimo 6 meses corridos sin interrupción en atestación Type II"
+  },
+  "bridge_implications": "Protege la reputación técnica de BRIDGE al garantizar que nunca se trasladen promesas vacías de marketing a los clientes corporativos como si fueran garantías técnicas comprobadas.",
+  "open_gaps": [
+    "Falta de estándares de certificación específicos para modelos de lenguaje de frontera (la norma ISO 42001 es reciente y carece aún de adopción masiva en proveedores cloud de 2026)."
+  ],
+  "next_question_ids": [
+    "P11-F33",
+    "P11-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

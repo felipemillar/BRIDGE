@@ -1,0 +1,166 @@
+{
+  "question_id": "P02-X01",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Adquisiciones y estructura de grupos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué adquisiciones cambian el grupo económico de Memo, Talkwalker, Limbik, FGS Global y otras marcas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Siete transacciones corporativas documentadas han reconfigurado el mapa del mercado: 1) FGS Global: el 3 de diciembre de 2024, WPP plc completó la venta de su participación mayoritaria a fondos gestionados por KKR (Kite Bidco Inc.) por más de 775M USD, dejando a FGS bajo control de KKR (respaldado por SEC Form 6-K a5017o.htm); 2) Limbik: la firma de IA cognitiva y predicción de narrativa fue adquirida por Burson Global (WPP) el 12 de agosto de 2026 para alimentar su plataforma Burson Decipher; 3) Memo: la plataforma de medición de lectura real 'Verified Readership' fue adquirida por Signal AI el 20 de abril de 2026 para integrar telemetría de consumo editorial; 4) Talkwalker: la suite de social listening fue adquirida por Hootsuite (anunciada en abril de 2024) para fusionar monitoreo profundo con gestión de redes; 5) Brandwatch: adquirida por Cision (Platinum Equity) en junio de 2021 por 450M USD; 6) Converlens y Social Point: adquiridas por Consultation Manager para consolidar el holding Open Point Group en julio de 2024; 7) Borealis: absorbida por Irth Solutions LLC (empresa de portafolio de Blackstone) para integrar gestión comunitaria con software de integridad de activos.",
+  "findings": [
+    {
+      "claim_id": "P02-X01-C1",
+      "claim": "Las operaciones de M&A documentadas han concentrado la propiedad de soluciones clave en fondos de Private Equity (KKR con FGS, Platinum Equity con Cision/Brandwatch, Blackstone con Borealis) y en mega-grupos de comunicación (WPP con Burson/Limbik, Signal AI con Memo, Hootsuite con Talkwalker).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Grupos Corporativos P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 2 & 3: Corporate M&A and Ultimate Ownership Master Table",
+          "excerpt_short": "KKR controls FGS Global (Form 6-K, Dec 3, 2024). Burson acquired Limbik on Aug 12, 2026. Signal AI acquired Memo on Apr 20, 2026. Cision owns Brandwatch. Irth Solutions owns Borealis.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:48:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en filings de la SEC y directivas de errata inmutables.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Filings regulatorios SEC Form 6-K",
+      "Registros mercantiles de adquisiciones",
+      "Notas de prensa oficiales de cierre de transacción"
+    ],
+    "actors": [
+      "Analista de M&A Corporativo",
+      "Auditor Societario"
+    ],
+    "steps": [
+      "Verificación de fecha de cierre legal",
+      "Identificación del beneficiario final (Ultimate Beneficial Owner)",
+      "Mapeo del estado de consolidación de producto"
+    ],
+    "states": [
+      "Operacion_Anunciada",
+      "Cierre_Certificado",
+      "Grafo_Actualizado"
+    ],
+    "outputs": [
+      "Estructura societaria actualizada de los proveedores del mercado"
+    ],
+    "exceptions": [
+      "Adquisiciones donde la marca adquirida es discontinuada y absorbida completamente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_KKR",
+      "type": "fondo_pe",
+      "name": "Kohlberg Kravis Roberts & Co. (KKR)",
+      "aliases": [
+        "KKR"
+      ]
+    },
+    {
+      "entity_id": "ENT_IRTH_SOLUTIONS",
+      "type": "holding_software",
+      "name": "Irth Solutions LLC",
+      "aliases": [
+        "Irth Solutions"
+      ]
+    },
+    {
+      "entity_id": "ENT_HOOTSUITE",
+      "type": "suite_social",
+      "name": "Hootsuite Inc.",
+      "aliases": [
+        "Hootsuite"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_KKR",
+      "predicate": "controla_societariamente_a",
+      "object_id": "FGS_Global",
+      "valid_from": "2024-12-03",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X01-C1"
+    },
+    {
+      "subject_id": "ENT_IRTH_SOLUTIONS",
+      "predicate": "propietaria_de",
+      "object_id": "Borealis_Software",
+      "valid_from": "2022",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X01-C1"
+    },
+    {
+      "subject_id": "ENT_HOOTSUITE",
+      "predicate": "propietaria_de",
+      "object_id": "Talkwalker",
+      "valid_from": "2024-04-15",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X01-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Independencia Operativa vs Control por Private Equity",
+      "Independencia Operativa": "Desarrollo ágil centrado exclusivamente en el producto sin presión de márgenes financieros inmediatos.",
+      "Control por Private Equity": "Maximización de flujo de caja, empaquetamiento agresivo de ventas y consolidación de costos compartidos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La consolidación por Private Equity a menudo degrada el soporte al cliente, abriendo oportunidades para nuevos entrantes como BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:48:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

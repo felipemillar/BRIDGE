@@ -1,0 +1,164 @@
+{
+  "question_id": "P10-F25",
+  "pilar": "P10",
+  "eje": "Estados, versiones y auditoría",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué estados debe recorrer un mensaje desde borrador hasta retiro o corrección?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El ciclo de vida del mensaje institucional en un System of Record se modela mediante una Máquina de Estados Finita (FSM) rigurosa que recorre 9 estados principales y 4 estados de contingencia: 1) DRAFT_INGESTION (recepción de la solicitud y creación de ticket); 2) TRIAGED (clasificación de régimen, riesgo y asignación de SLA); 3) FACT_CHECKING (cotejo y verificación fáctica contra el Shared Fact Record); 4) DRAFTING (redacción asistida sujeta a guardrails semánticos); 5) UNDER_REVIEW (revisión tripartita concurrente por SME Operacional y Asesor Legal); 6) EXECUTIVE_SIGN_OFF (puerta de autorización con firma criptográfica); 7) APPROVED_STAGED (mensaje congelado con hash SHA-256 en cola de difusión); 8) PUBLISHED_LIVE (despacho técnico y publicación multicanal efectiva); y 9) ACTIVE_MONITORING (seguimiento de repercusión y efectividad bajo principios AMEC). Si sobrevienen anomalías o nueva evidencia, el mensaje transita a: UNDER_AMENDMENT (revisión de ajustes), RETRACTED_CORRECTED (fe de erratas pública vinculada bidireccionalmente), RE-APPROVED_V2 (re-validación mayor) o DEPRECATED_ARCHIVED / TOMBSTONE (retiro formal por expiración de vigencia TTL, preservando el registro histórico inmutable).",
+  "findings": [
+    {
+      "claim_id": "P10-F25-C1",
+      "claim": "El ciclo de vida del mensaje corporativo requiere una FSM formal que transite desde la ingesta hasta el monitoreo activo, incorporando estados explícitos de enmienda, rectificación (fe de erratas) y tombstoning histórico.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "fsm_lifecycle_states",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 5 'Máquina de Estados Finita (FSM) y Ciclo de Vida del Mensaje'",
+          "retrieved_at": null,
+          "excerpt_short": "Estados formales: DRAFT_INGESTION -> TRIAGED -> FACT_CHECKING -> DRAFTING -> UNDER_REVIEW -> EXECUTIVE_SIGN_OFF -> APPROVED_STAGED -> PUBLISHED_LIVE -> ACTIVE_MONITORING. Transiciones de contingencia: UNDER_AMENDMENT, RETRACTED_CORRECTED, RE-APPROVED_V2 y DEPRECATED_ARCHIVED (Tombstone).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Lifecycle States and Archival Preservation'",
+          "retrieved_at": null,
+          "excerpt_short": "A structured communications lifecycle dictates formal progression through drafting, verification, approval, release, and eventual deprecation, ensuring no state is bypassed without validation.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las especificaciones del dossier y las arquitecturas enterprise de comunicaciones.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud de comunicación",
+      "Motor de estados FSM",
+      "Eventos de usuario o de sistema"
+    ],
+    "actors": [
+      "Redactor",
+      "Validador Legal",
+      "Aprobador Ejecutivo",
+      "Publicador",
+      "Motor FSM BRIDGE"
+    ],
+    "steps": [
+      "Creación del mensaje en DRAFT_INGESTION",
+      "Transición automática a TRIAGED y asignación de revisores",
+      "Bloqueo de avance a UNDER_REVIEW si FACT_CHECKING detecta discrepancias no resueltas",
+      "Congelamiento de versión en APPROVED_STAGED tras sign-off",
+      "Despacho a PUBLISHED_LIVE y apertura de ventana de ACTIVE_MONITORING",
+      "Transición a RETRACTED_CORRECTED o DEPRECATED_ARCHIVED si se activa evento de corrección o fin de vida"
+    ],
+    "states": [
+      "DRAFT_INGESTION",
+      "TRIAGED",
+      "FACT_CHECKING",
+      "DRAFTING",
+      "UNDER_REVIEW",
+      "EXECUTIVE_SIGN_OFF",
+      "APPROVED_STAGED",
+      "PUBLISHED_LIVE",
+      "ACTIVE_MONITORING",
+      "RETRACTED_CORRECTED",
+      "DEPRECATED_ARCHIVED"
+    ],
+    "outputs": [
+      "Instancia de mensaje con estado actual y trazabilidad de transiciones"
+    ],
+    "exceptions": [
+      "Intentos de transición inválidos (e.g., DRAFTING -> PUBLISHED_LIVE directo) son rechazados por invariantes del sistema"
+    ]
+  },
+  "entities": [
+    "FSM (Finite State Machine)",
+    "Tombstone Record",
+    "Fe de Erratas",
+    "Broadsight System of Record",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "DRAFTING",
+      "to": "UNDER_REVIEW",
+      "type": "TRANSITIONS_TO"
+    },
+    {
+      "from": "PUBLISHED_LIVE",
+      "to": "RETRACTED_CORRECTED",
+      "type": "TRANSITIONS_UPON_INVALIDATION"
+    },
+    {
+      "from": "PUBLISHED_LIVE",
+      "to": "DEPRECATED_ARCHIVED",
+      "type": "TRANSITIONS_UPON_TTL_EXPIRY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Gestión documental en procesador de texto vs Máquina de estados FSM",
+      "diferencia": "En un documento de texto no hay garantías de orden ni bloqueos; en la FSM es técnicamente imposible publicar sin pasar por revisión y sign-off formal."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "state_transition_validity_rate": "100% de transiciones apegadas al grafo formal de estados",
+    "average_dwell_time_per_state": "Horas promedio de permanencia en cada estado"
+  },
+  "bridge_implications": "BRIDGE debe codificar la FSM como una máquina de estados determinista en backend, asegurando que las transiciones requieran firmas criptográficas y validaciones previas.",
+  "open_gaps": [
+    "Definición de políticas automáticas de expiración (TTL) según naturaleza del canal (e.g., historias efímeras vs comunicados de prensa perennes)."
+  ],
+  "next_question_ids": [
+    "P10-F26",
+    "P10-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "question_id": "P03-F06",
+  "pilar": "P03",
+  "eje": "Taxonomía de señales externas",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra taxonomía de señales externas sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso: Monitoreo regulatorio y mediático ante un nuevo proyecto de ley de royalty a la minería en Chile. Entradas: 1) Boletín oficial de la Cámara de Diputadas y Diputados de Chile anunciando el ingreso del proyecto de ley (Señal Institucional/Regulatoria); 2) Nota de prensa en portal regional de Antofagasta reportando la reacción del gremio minero (Señal de Prensa Abierta); 3) Alerta de Hecho Esencial publicado por una minera inscrita en la CMF informando impacto en inversiones proyectadas (Señal de Mercado/CMF); y 4) Transcripción de entrevista radial a dirigente sindical en radioemisora de Calama vía Whisper (Señal Broadcast Local). Resultado esperado: El clasificador taxonómico asigna la señal al tema 'Minería - Royalty', vincula las 4 entradas al mismo evento madre (`cluster_event_id`), calcula severidad 'Alta', y categoriza el impacto como 'Riesgo Regulatorio e Impositivo' sin depender de que una empresa particular haya sido nombrada en el texto original del boletín oficial.",
+  "findings": [
+    {
+      "claim_id": "P03-F06-C1",
+      "claim": "Un caso estructurado de monitoreo multidimensional integra señales institucionales, prensa regional, hechos esenciales de CMF y radio local vinculándolos a un evento madre sin requerir coincidencia léxica de marca.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Antofagasta / Calama)",
+        "actor": "Caso Operativo P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.4: Señales Institucionales y Regulatorias",
+          "excerpt_short": "Los riesgos corporativos y regulatorios más severos emergen en señales indirectas de competidores... o modificaciones normativas que jamás mencionan el nombre de la organización afectada en sus etapas iniciales.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en la síntesis de diseño y casos del mapa de evidencia.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Boletín Congreso",
+      "Prensa Regional",
+      "Hecho Esencial CMF",
+      "Transcripción Radial"
+    ],
+    "actors": [
+      "Multi-Channel Ingest",
+      "Event Clusterer",
+      "Graph Router"
+    ],
+    "steps": [
+      "Captura multicanal",
+      "Extracción semántica",
+      "Clustering temático",
+      "Enrutamiento a tablero corporativo"
+    ],
+    "states": [
+      "Raw_Inputs",
+      "Multi_Channel_Parsed",
+      "Event_Unified"
+    ],
+    "outputs": [
+      "Ficha de Evento Consolidado 'Royalty Minero' con sus 4 señales de soporte"
+    ],
+    "exceptions": [
+      "Retraso en la transcripción radial de la emisora de Calama"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_ROYALTY",
+      "type": "caso_de_uso",
+      "name": "Caso Demostrativo Monitoreo Royalty Minero",
+      "aliases": [
+        "Royalty Monitoring Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_ROYALTY",
+      "predicate": "valida_operacion_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F06-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar clustering multicanal por tema para agrupar señales oficiales, periodísticas y radiales en un único flujo de toma de decisiones.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-C09",
+  "pilar": "P07",
+  "eje": "Apoyo estratégico y límites",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre apoyo estratégico y límites, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en la delegabilidad del juicio fiduciario: proveedores comerciales de agentes inteligentes sugieren que la IA puede asumir la formulación de estrategias corporativas y respuestas en crisis de forma desatendida; mientras que las síntesis internas (P07_RESEARCH_DOSSIER, P07_EVIDENCE_MAP), los Principios de la OCDE (OECD-LEGAL-0413) y el marco NIST AI RMF establecen que la IA carece de subjetividad jurídica, responsabilidad penal y deber de lealtad, por lo que jamás puede emitir juicios de valor definitivos ni dictámenes vinculantes. Prevalece la versión de P07_EVIDENCE_MAP y la OCDE: el sistema se limita al apoyo analítico y a la modelación de escenarios condicionales, estando subordinado en todo momento a las compuertas de elevación legal y a la firma humana responsable.",
+  "findings": [
+    {
+      "claim_id": "P07-C09-C1",
+      "claim": "La responsabilidad legal y fiduciaria de las decisiones estratégicas de la empresa es indelegable en sistemas de IA, los cuales deben operar estrictamente bajo compuertas de elevación a especialistas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "fiduciary_limits_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje E) y Sección 3",
+          "excerpt_short": "Discrepancia Eje E: Soluciones comerciales difuminan la responsabilidad entre la IA y el directivo; P07_EVIDENCE_MAP y OECD Principles corrigen que el deber de cuidado del directorio es indelegable. Ninguna recomendación de la IA tiene validez operativa sin la firma explícita del C-Suite o asesor legal.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "OECD Legal Instruments: G20/OECD Principles of Corporate Governance (OECD-LEGAL-0413)",
+          "source_id": "13d8c510-9ee4-47fe-b580-51df8a77fa08",
+          "locator": "Capítulo VI, p. 48-52",
+          "excerpt_short": "Board members cannot evade fiduciary accountability by relying passively on algorithmic simulations. Ultimate decision authority rests exclusively with human corporate officers.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia editorial de P07_EVIDENCE_MAP respaldada directamente por el instrumento legal vinculante de la OCDE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "resolucion_discrepancia_fiduciaria": {
+      "postura_vendors_ia": "Decisiones estratégicas automatizadas de 'Chief AI Officer'.",
+      "postura_bridge_p07": "Asistencia cognitiva analítica subordinada al Directorio humano y sujeta a compuertas de elevación legal.",
+      "version_prevalente": "P07_EVIDENCE_MAP / OECD Principles (2023)."
+    }
+  },
+  "entities": [
+    "OECD Legal Instruments",
+    "NIST AI RMF",
+    "P07_EVIDENCE_MAP",
+    "Directorio Corporativo",
+    "Compuertas de Elevación"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Decisión Automatizada",
+      "type": "rejects"
+    },
+    {
+      "from": "OECD Principles",
+      "to": "Deber Fiduciario",
+      "type": "upholds"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Autonomía Fiduciaria de IA vs Asesoría Subordinada",
+      "diferencia": "La autonomía fiduciaria de la IA es una ficción jurídica ilegal; la asesoría subordinada entrega respaldo probatorio al directivo humano responsable."
+    }
+  ],
+  "contradictions": [
+    {
+      "source_a": "Promoción Comercial de AI Executives",
+      "source_b": "OECD Legal Instruments / P07_EVIDENCE_MAP",
+      "conflict": "Delegación de gobierno corporativo a algoritmos vs Responsabilidad humana fiduciaria indelegable.",
+      "resolution": "Prevalece OECD Legal Instruments."
+    }
+  ],
+  "metrics_and_denominators": {
+    "fiduciary_compliance_rate": "100%",
+    "algorithmic_decision_delegation": "0.0%"
+  },
+  "bridge_implications": "Explicitar en la interfaz de BRIDGE que las salidas son recomendaciones preliminares que requieren ratificación fiduciaria humana.",
+  "open_gaps": [
+    "Definición de protocolos de actuación ante discrepancias insolubles entre el análisis de la IA y el criterio del Directorio."
+  ],
+  "next_question_ids": [
+    "P07-C10",
+    "P07-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

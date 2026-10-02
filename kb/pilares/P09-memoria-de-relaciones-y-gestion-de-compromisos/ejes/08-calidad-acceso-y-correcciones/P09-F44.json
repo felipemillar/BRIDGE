@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F44",
+  "pilar": "P09",
+  "eje": "Calidad, acceso y correcciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Quién debe acceder a interacciones delicadas y cómo se audita la consulta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El acceso a interacciones delicadas (negociaciones sensibles con comunidades indígenas, audiencias reservadas de lobby o disputas en mediación) se gobierna mediante un modelo RBAC (Role-Based Access Control) con control de atributos (ABAC) en tres niveles estrictos: 1) Niveles de Clasificación: Nivel 1 (Público Corporativo: visualizable por todo el equipo de asuntos públicos y sustentabilidad), Nivel 2 (Confidencial: restringido al equipo territorial asignado y la gerencia de área), y Nivel 3 (Altamente Sensible / Restringido: accesible exclusivamente por el Gerente General, el Gerente de Asuntos Corporativos y el Director Legal); 2) Auditoría Inmutable de Consultas (Read Audit Trail): Cada vez que un usuario visualiza, exporta o descarga un registro o documento de Nivel 2 o 3, el sistema genera automáticamente un registro inmutable append-only con ID de usuario, dirección IP, fecha/hora exacta y justificación de negocio; y 3) Regla de Protección de Privacidad: Queda estrictamente prohibido que cualquier nivel de acceso almacene datos sensibles protegidos por la Ley 21.719.",
+  "findings": [
+    {
+      "claim_id": "P09-F44-C1",
+      "claim": "El acceso a registros delicados exige un modelo de permisos de 3 niveles (RBAC/ABAC) y un log inmutable append-only que registra cada lectura o descarga para evitar filtraciones y garantizar rendición de cuentas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "access_control_and_audit_logging",
+      "evidence": [
+        {
+          "source_title": "Tractivity: Top 10 Secure Stakeholder Tools for Government and Public Sector",
+          "source_id": "da35828d-1b2b-4ede-8143-38784d7fc927",
+          "locator": "Section 'Granular Permissions and Read Access Logging', p. 18-22",
+          "retrieved_at": null,
+          "excerpt_short": "Enterprise stakeholder systems require granular role-based access control. Every query, view, or export of sensitive community negotiations must be indelibly logged to ensure total accountability.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R1 y R2 'Políticas de Seguridad y Acceso'",
+          "retrieved_at": null,
+          "excerpt_short": "Segregación estricta de perfiles: el acceso a minutas de alta confidencialidad requiere justificación de consulta y queda registrado en pistas de auditoría append-only que no pueden ser borradas ni por los administradores de sistemas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Tractivity y las directrices canónicas de seguridad de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud de lectura de interacción confidencial",
+      "Token JWT de usuario autenticado",
+      "Parámetros de contexto"
+    ],
+    "actors": [
+      "Usuario Corporativo",
+      "Middleware de Seguridad BRIDGE",
+      "Servicio de Audit Log"
+    ],
+    "steps": [
+      "Verificación de permisos RBAC del usuario",
+      "Evaluación de nivel de sensibilidad del registro",
+      "Generación de evento de lectura en log inmutable",
+      "Entrega del payload descifrado al cliente"
+    ],
+    "states": [
+      "Autenticación OK",
+      "Permiso Concedido",
+      "Lectura Registrada en Audit Log"
+    ],
+    "outputs": [
+      "Datos entregados al usuario autenticado y evento indexado en log de seguridad"
+    ],
+    "exceptions": [
+      "Intentos no autorizados de acceso a registros Nivel 3 disparan alerta de seguridad al CISO"
+    ]
+  },
+  "entities": [
+    "RBAC / ABAC",
+    "Tractivity Security",
+    "P09_VERIFICATION_CORRECTIONS",
+    "Read Audit Trail",
+    "Ley 21.719"
+  ],
+  "relations": [
+    {
+      "from": "Usuario Corporativo",
+      "to": "Registro Confidencial",
+      "type": "ACCESSED_UNDER_RBAC"
+    },
+    {
+      "from": "Consulta de Lectura",
+      "to": "Audit Log",
+      "type": "LOGGED_IMMUTABLY_IN"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Acceso libre sin registro vs Acceso granular auditado por roles",
+      "diferencia": "El acceso libre provoca filtraciones a la prensa y filtración de estrategias; el acceso granular auditado disuade el mal uso y protege la confidencialidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "security_clearance_levels": "3 niveles (Público, Confidencial, Altamente Restringido)",
+    "read_audit_logging_rate": "100% de consultas a registros confidenciales registradas"
+  },
+  "bridge_implications": "Implementar interceptores en los endpoints FastAPI de BRIDGE para auditar lecturas de minutas confidenciales.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F45",
+    "P09-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

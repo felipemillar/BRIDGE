@@ -1,0 +1,134 @@
+{
+  "question_id": "P04-F18",
+  "pilar": "P04",
+  "eje": "Ontología y relaciones",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra ontología y relaciones sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Canónico: Desambiguación y trazado de responsabilidad ante una contingencia operacional en una división minera. Entradas documentadas: 1) Entidad Matriz: 'Holding Minero del Norte S.A.' (RUT matriz consolidada); 2) Entidad Filial Titular: 'Minera Cordillera Andina S.A.' (RUT filial con 100% de propiedad); 3) Instalación Física: 'Faena Desierto Alto' (identificada en RCA N° 124/2018); 4) Vocero acreditado: 'Gerente de Asuntos Corporativos División Norte' (acreditado según Minuta de Directorio N° 450); 5) Evento: Emisión de polvo en faena reportada por medios locales. Proceso en el grafo: 1) El sistema enlaza la queja con la instalación 'Faena Desierto Alto'; 2) Traza que la responsabilidad operacional directa pertenece a 'Minera Cordillera Andina S.A.'; 3) Verifica que el Holding Matriz consolida financieramente pero no opera directamente la faena; 4) Recupera la minuta de vocería vigente aprobada para esa filial. Resultado esperado: La respuesta generada indica con precisión: 'El evento ocurrió en Faena Desierto Alto, operada por la filial Minera Cordillera Andina S.A. Las declaraciones oficiales corresponden a la Gerencia de la División Norte, conforme al protocolo aprobado, sin comprometer jurídicamente a la matriz de forma indebida'.",
+  "findings": [
+    {
+      "claim_id": "P04-F18-C1",
+      "claim": "El caso empírico de desambiguación societaria demuestra cómo la ontología previene errores de vocería imputando contingencias operacionales a la persona jurídica correcta.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Caso Desambiguación Filial-Faena"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.2: Ontología Corporativa y Sección 3.2: Ejemplo Concreto",
+          "excerpt_short": "org:Organization: filiales, org:BoardOfDirectors, corp:FacilityProject (División Norte), trazando la titularidad de faena y la vocería autorizada.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso de prueba derivado directamente de la arquitectura de entidades del dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Noticia o consulta sobre evento en faena",
+      "Grafo corporativo poblado"
+    ],
+    "actors": [
+      "Entity Resolver",
+      "Attribution Router",
+      "Briefing Generator"
+    ],
+    "steps": [
+      "Resolución de la faena",
+      "Trazado de filial operadora",
+      "Generación de minuta con titularidad jurídica correcta"
+    ],
+    "states": [
+      "Alert_Received",
+      "Hierarchy_Mapped",
+      "Briefing_Dispatched"
+    ],
+    "outputs": [
+      "Minuta de respuesta institucional con correcta delimitación de matriz vs filial"
+    ],
+    "exceptions": [
+      "Doble titularidad en faenas compartidas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASE_DISAMBIGUATION",
+      "type": "caso_empirico",
+      "name": "Caso Desambiguación Societaria y Vocería en Faena",
+      "aliases": [
+        "Subsidiary Disambiguation Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASE_DISAMBIGUATION",
+      "predicate": "demuestra_utilidad_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F18-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Calidad de vocería",
+      "Sin ontología de entidades": "El vocero matriz niega el hecho o asume culpas directas de una filial no consolidada.",
+      "Con ontología formal": "Respuesta calibrada asignando el rol a la filial titular y citando los protocolos aprobados."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incorporar esta lógica de desambiguación para proteger a los directivos corporativos de declaraciones contraproducentes.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "question_id": "P09-C09",
+  "pilar": "P09",
+  "eje": "Territorio y participación",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre territorio y participación, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: En algunas síntesis iniciales se tendía a homogeneizar a todos los actores locales bajo la categoría genérica de 'comunidad vecina', aplicando los mismos procedimientos de consulta y registro de acuerdos a juntas de vecinos que a comunidades indígenas. Esta simplificación colisiona con el derecho internacional y la jurisprudencia ambiental chilena. Versión Prevalente: Prevalece el marco diferenciado de `P09_VERIFICATION_CORRECTIONS` (`f7d21328`), respaldado por el Convenio 169 de la OIT (Decreto 236 BCN Chile) y los instructivos del SEA Chile (`f519980d`): las comunidades indígenas (GHPPI) poseen un estatus jurídico reforzado, derechos colectivos inalienables y estructuras de gobernanza tradicionales que no pueden ser asimiladas a organizaciones funcionales urbanas. Todo acuerdo territorial debe respetar sus procedimientos consuetudinarios y el principio de consulta previa, libre e informada.",
+  "findings": [
+    {
+      "claim_id": "P09-C09-C1",
+      "claim": "P09_VERIFICATION_CORRECTIONS y los instructivos del SEA ratifican la prevalencia del régimen diferenciado del Convenio 169 de la OIT para pueblos originarios frente a intentos de homogeneización con juntas de vecinos comunes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "contrast_territory_participation_discrepancy",
+      "evidence": [
+        {
+          "source_title": "SEA Chile: Instructivos de Evaluación Ambiental y Reuniones con Grupos Humanos Pertenecientes a Pueblos Indígenas",
+          "source_id": "f519980d-f5bd-46cd-b78e-952fd63fbdd3",
+          "locator": "Capítulo 'Diferenciación Jurídica y Metodológica de GHPPI', p. 8-14",
+          "retrieved_at": null,
+          "excerpt_short": "La homogenización metodológica de actores indígenas con organizaciones territoriales comunes constituye un vicio sustantivo en la evaluación ambiental que acarrea la nulidad de las resoluciones administrativas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Decreto N° 236 Promulga el Convenio 169 de la OIT sobre Pueblos Indígenas y Tribales",
+          "source_id": "65fedfa1-07ba-47e6-95fd-4e583549d3b9",
+          "locator": "Artículos 6 y 7",
+          "retrieved_at": null,
+          "excerpt_short": "Las consultas a los pueblos indígenas deberán efectuarse de buena fe y de una manera apropiada a las circunstancias, con la finalidad de llegar a un acuerdo o lograr el consentimiento.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre tratados internacionales ratificados y doctrina del SEA.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catastro territorial",
+      "Fichas de organizaciones comunitarias",
+      "Marco regulatorio indígena"
+    ],
+    "actors": [
+      "Relacionador Indígena",
+      "Especialista Legal SEA",
+      "Líder Comunitario"
+    ],
+    "steps": [
+      "Verificación de origen y pertenencia a pueblo originario",
+      "Asignación de protocolo especial Convenio 169 en BRIDGE",
+      "Adecuación de plazos y mecanismos de asamblea tradicional",
+      "Validación formal de representatividad"
+    ],
+    "states": [
+      "Actor Clasificado",
+      "Protocolo Indígena Activado",
+      "Gobernanza Conforme"
+    ],
+    "outputs": [
+      "Expediente territorial con salvaguardas indígenas explícitas"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "Convenio 169 OIT",
+    "GHPPI",
+    "SEA Chile",
+    "P09_VERIFICATION_CORRECTIONS",
+    "Decreto 236"
+  ],
+  "relations": [
+    {
+      "from": "Comunidad Indígena",
+      "to": "Convenio 169",
+      "type": "PROTECTED_BY"
+    },
+    {
+      "from": "BRIDGE",
+      "to": "GHPPI Protocol",
+      "type": "ENFORCES_DIFFERENTIATED_TREATMENT"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Trato homogéneo plano vs Protocolo intercultural diferenciado",
+      "diferencia": "El trato homogéneo desencadena impugnaciones judiciales de invalidación de RCA; el protocolo diferenciado asegura viabilidad sociojurídica del proyecto."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "Síntesis previas: Proponían un modelo único de reunión comunitaria estandarizada.",
+      "claim_b": "SEA Chile e Instructivos GHPPI: Exigen protocolos adaptados culturalmente a las costumbres indígenas.",
+      "resolution": "Prevalece canónicamente el marco normativo del SEA y el Convenio 169 de la OIT."
+    }
+  ],
+  "metrics_and_denominators": {
+    "indigenous_protocols_count": "1 protocolo intercultural específico",
+    "regulatory_compliance_rate": "100% con Art. 86 RSEIA"
+  },
+  "bridge_implications": "Crear tipos de reuniones específicos ('Diálogo Intercultural GHPPI') con soporte para actas bilingües y validación por consejos ancestrales.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C10",
+    "P09-F31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

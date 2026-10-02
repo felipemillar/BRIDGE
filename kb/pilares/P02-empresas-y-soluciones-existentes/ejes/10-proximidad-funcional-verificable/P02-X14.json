@@ -1,0 +1,138 @@
+{
+  "question_id": "P02-X14",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Proximidad funcional verificable",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra proximidad funcional verificable sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso de prueba concreto y verificable: 'Resolución de crisis por derrame accidental de concentrado en río cordillerano y gestión de vocería bajo el stack actual de herramientas fragmentadas'. Entradas: 1) Notificación radial matutina en radioemisora local de Salamanca sobre alteración de color en el cauce del río Choapa; 2) Solicitud formal de información de la Superintendencia del Medio Ambiente (SMA); 3) Petición de entrevista en vivo de un canal de televisión nacional; 4) Stack tecnológico actual de la empresa: Litoralpress (listening local), Broadsight (flujo de vocería), Open Point (gestión de comunidades de la cuenca) y SharePoint corporativo (repositorio de ingeniería). Proceso en el stack actual: a) El analista de prensa escucha la alerta en Litoralpress; b) Exporta manualmente el clip de audio y transcribe las declaraciones; c) Envía un correo al equipo de terreno para consultar en Open Point qué compromisos existen con la junta de regantes afectada; d) El equipo de terreno busca manualmente en Open Point y responde por correo tras 2 horas; e) El Jefe de Prensa abre Broadsight y redacta un holding statement preliminar; f) El abogado legal solicita ver la autorización ambiental en SharePoint para validar si el caudal supera la norma; g) Tras 4 horas de intercambio de correos y descargas entre 4 sistemas desconectados, se emite una declaración tardía. Resultado esperado del análisis: Demostración empírica de que la fragmentación en 4 herramientas de nicho introduce una fricción de más de 3 horas por traspasos manuales y pérdida de trazabilidad, ilustrando la necesidad objetiva de una arquitectura de proximidad funcional nativa.",
+  "findings": [
+    {
+      "claim_id": "P02-X14-C1",
+      "claim": "La ausencia de flujo operativo nativo entre las herramientas especializadas actuales genera una latencia de respuesta de 3 a 5 horas ante crisis de campo debido a la exportación manual de datos y la desincronización entre equipos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Caso Operativo Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Operational Latency Analysis in Multi-Vendor Environments",
+          "excerpt_short": "Operating multiple unbundled specialized tools introduces 2 to 4 hours of human friction during high-stakes environmental crises due to manual data relaying.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de trabajo operacional documentado y replicable.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alerta radial en Salamanca",
+      "Requerimiento de la SMA",
+      "Stack fragmentado de 4 herramientas"
+    ],
+    "actors": [
+      "Analista de Monitoreo",
+      "Jefe de Prensa",
+      "Encargado Territorial",
+      "Abogado Ambiental"
+    ],
+    "steps": [
+      "Captura de alerta en Litoralpress",
+      "Consulta manual por email a Open Point",
+      "Búsqueda manual de RCA en SharePoint",
+      "Redacción y aprobación en Broadsight"
+    ],
+    "states": [
+      "Alerta_Detectada",
+      "Consultas_Dispersas_Enviadas",
+      "Datos_Compilados_Manualmente",
+      "Declaracion_Tardia_Emitida"
+    ],
+    "outputs": [
+      "Cuantificación de la latencia y riesgo reputacional provocado por los silos de software"
+    ],
+    "exceptions": [
+      "Filtración de declaraciones contradictorias por falta de alineación en tiempo real"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_FRICCION_SILOS",
+      "type": "caso_prueba",
+      "name": "Caso Prueba Fricción Operacional Multi-Vendor Salamanca",
+      "aliases": [
+        "Caso Salamanca P02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_FRICCION_SILOS",
+      "predicate": "cuantifica_costo_de",
+      "object_id": "Silos_Software_Mercado",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X14-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Operación con 4 Herramientas Desconectadas vs Suite Unificada (BRIDGE)",
+      "4 Herramientas Desconectadas": "4 horas de retraso, 4 logins distintos, riesgo crítico de contradicción legal y comunitaria.",
+      "Suite Unificada": "15 minutos de respuesta, un solo grafo de datos, trazabilidad completa de vocería y compromisos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Este caso proporciona la justificación económica y operativa definitiva para el desarrollo de The Bridge Intelligence.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

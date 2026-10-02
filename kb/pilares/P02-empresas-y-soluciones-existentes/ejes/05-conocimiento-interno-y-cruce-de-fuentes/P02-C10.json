@@ -1,0 +1,141 @@
+{
+  "question_id": "P02-C10",
+  "pilar": "P02",
+  "eje": "Conocimiento interno y cruce de fuentes",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre conocimiento interno y cruce de fuentes, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba técnica la capacidad de un motor RAG de procesar expedientes regulatorios y ambientales complejos (más de 10,000 páginas en PDFs escaneados con mapas y tablas de ingeniería) y cruzarlos en menos de 5 minutos con alertas de medios en tiempo real sin alucinaciones de cifras: 1) Brecha: Ningún proveedor comercial ha demostrado benchmark público de extracción exacta de parámetros de descarga de efluentes o emisiones aéreas desde anexos técnicos escaneados frente a consultas periodísticas en vivo; 2) Fuentes parciales: Las fichas de AlphaSense y Hebbia muestran búsqueda sobre tablas financieras estructuradas (filings 10-K), pero fallan al procesar expedientes del SEIA chileno con firmas manuscritas y planos escaneados; 3) Validación mínima: Cargar 20 expedientes de Resoluciones de Calificación Ambiental (RCA) chilenas reales en formato PDF rasterizado y someter el motor a una batería de 50 preguntas cuantitativas de auditoría sobre compromisos adquiridos, midiendo precisión fáctica y tiempo de respuesta.",
+  "findings": [
+    {
+      "claim_id": "P02-C10-C1",
+      "claim": "El cruce semántico en tiempo real sobre expedientes técnicos no estructurados y escaneados de gran escala (RCAs ambientales) carece de pruebas de rendimiento y tasa de alucinación auditadas en la oferta comercial actual.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Hebbia, AlphaSense, Glean"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "RAG Precision on Complex Regulatory Documents Gap",
+          "excerpt_short": "Commercial RAG solutions struggle with multi-thousand-page legacy environmental permits containing rasterized text, tabular engineering data, and unindexed maps.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:46:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de limitaciones documentadas de ingesta documental en el atlas de vacíos.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus de 20 RCAs escaneadas del SEA Chile",
+      "Batería de 50 preguntas de prueba cuantitativas",
+      "Respuestas oficiales validadas por ingenieros"
+    ],
+    "actors": [
+      "Ingeniero de OCR y RAG",
+      "Auditor de Cumplimiento Ambiental"
+    ],
+    "steps": [
+      "Ingesta y OCR de documentos rasterizados",
+      "Ejecución de consultas vía API",
+      "Cálculo de exactitud numérica y citas de página",
+      "Determinación de tasa de alucinación"
+    ],
+    "states": [
+      "Documentos_Ingestados",
+      "Consultas_Ejecutadas",
+      "Precision_Calculada"
+    ],
+    "outputs": [
+      "Reporte de benchmarking de RAG sobre expedientes ambientales complejos"
+    ],
+    "exceptions": [
+      "Documentos con resolución gráfica inferior a 150 DPI que impiden OCR legible"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BENCHMARK_RAG_RCA",
+      "type": "protocolo_evaluacion",
+      "name": "Benchmark RAG Expedientes Ambientales RCA",
+      "aliases": [
+        "RAG RCA Audit"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BENCHMARK_RAG_RCA",
+      "predicate": "evalua_viabilidad_de",
+      "object_id": "Modulo_Saber_Complejo",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C10-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "RAG Financiero Limpio (AlphaSense) vs RAG Regulatorio de Campo (BRIDGE)",
+      "RAG Financiero Limpio": "Texto digital nativo en HTML/PDF estructurado publicado por la SEC.",
+      "RAG Regulatorio de Campo": "Documentos escaneados con firmas, observaciones manuscritas y tablas complejas de monitoreo físico."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "BRIDGE debe incorporar un pipeline de OCR especializado para ingeniería y normativas ambientales en América Latina.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_RAG_COMPLEX_DOCS",
+      "description": "Falta de validación de RAG sobre expedientes escaneados",
+      "action": "Ejecutar benchmark con RCAs"
+    }
+  ],
+  "next_question_ids": [
+    "P02-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:46:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "question_id": "P03-F19",
+  "pilar": "P03",
+  "eje": "Radio, televisión, video y podcasts",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué opciones existen para transcribir, licenciar y consultar contenido audiovisual?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Existen 3 arquitecturas principales para el tratamiento de contenido audiovisual: 1) Suites de monitoreo comercial de broadcast (TVEyes y CisionOne): capturan televisión lineal y radioemisoras 24/7 mediante sintonizadores dedicados, aplicando subtítulos cerrados y ASR propietario con latencias de 5 a 30 minutos, licenciando clips de audio/video bajo contratos de copyright de difusión; 2) Pipelines de transcripción neuronal de código abierto (OpenAI Whisper): modelos de reconocimiento de voz supervisados masivamente (Radford et al. 2022) capaces de transcribir audio en español con tasas de error de palabra (WER) de 5% a 8%, procesables localmente o en la nube mediante ventanas de audio de 30 segundos; y 3) Directorios abiertos de podcasts y audio digital (Podcast Index API): catálogo de más de 4 millones de podcasts que expone metadatos y etiquetas de transcripción nativa en estándares Podcasting 2.0 vía RSS, permitiendo ingesta directa de texto sin costo de cómputo de ASR.",
+  "findings": [
+    {
+      "claim_id": "P03-F19-C1",
+      "claim": "El acceso a contenido audiovisual se estructura entre servicios comerciales de broadcast (TVEyes/Cision), modelos neuronales ASR (Whisper) y directorios abiertos de podcasts (Podcast Index).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2026",
+        "region": "Global",
+        "actor": "Ecosistema Audiovisual P03"
+      },
+      "evidence": [
+        {
+          "source_id": "1ab725af-4c91-4a60-9d00-f67db48d921a",
+          "source_title": "TVEyes Broadcast Monitoring API & Real-Time Media Feeds",
+          "original_url": "https://www.tveyes.com/api-partners/",
+          "locator": "TVEyes Developer Portal - Real-Time Search & Feeds",
+          "excerpt_short": "TVEyes captures and indexes television and radio broadcasts worldwide, providing near-real-time search via closed captions and speech-to-text engines.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:15:00-03:00"
+        },
+        {
+          "source_id": "220b90b4-c2aa-4f93-88d9-a67ace738d16",
+          "source_title": "Robust Speech Recognition via Large-Scale Weak Supervision (Radford et al. 2022)",
+          "original_url": "https://arxiv.org/abs/2212.04356",
+          "locator": "Section 3.3: Multilingual Speech Recognition Performance",
+          "excerpt_short": "Whisper models achieve competitive performance across languages without fine-tuning, reaching under 6% WER in standard Spanish benchmarks.",
+          "source_date": "2022",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica de APIs comerciales de broadcast y publicación científica fundacional de Whisper.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales lineales de radio/TV",
+      "Feeds RSS de Podcasts",
+      "Streams de audio MP3/AAC"
+    ],
+    "actors": [
+      "Audio Capture Worker",
+      "Whisper Transcriber",
+      "Podcast RSS Ingester"
+    ],
+    "steps": [
+      "Segmentación en chunks de 30s",
+      "Inferencia ASR / Extracción de tags XML",
+      "Indexación semántica"
+    ],
+    "states": [
+      "Audio_Captured",
+      "Transcribed",
+      "Text_Indexed"
+    ],
+    "outputs": [
+      "Transcripción enriquecida con timestamps y locutores"
+    ],
+    "exceptions": [
+      "Ruido de fondo severo o interferencia en señales de radio AM"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BROADCAST_PIPELINE",
+      "type": "arquitectura_audio",
+      "name": "Pipeline de Monitoreo Audiovisual",
+      "aliases": [
+        "Audiovisual Monitoring Pipeline"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BROADCAST_PIPELINE",
+      "predicate": "integra_fuentes_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F19-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de transcripción",
+      "TVEyes / Cision": "Servicio cerrado llave en mano, incluye licencias de derechos de broadcast, latencia 15-30 min.",
+      "Whisper In-House": "Control total del pipeline, inferencia configurable, requiere hardware de cómputo local/cloud."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar un pipeline de Whisper para radios locales chilenas que no son cubiertas por los proveedores internacionales de broadcast.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F20"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

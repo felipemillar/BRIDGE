@@ -1,0 +1,170 @@
+{
+  "question_id": "P11-F40",
+  "pilar": "P11",
+  "eje": "Incidentes y post-mortems",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar incidentes y post-mortems de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de incidentes y post-mortems exige un modelo de datos formal de gestión de crisis y aseguramiento de calidad, estructurado en seis entidades principales: 1) `IncidentRecord`: Modela el evento anómalo (`incident_id`, `tenant_id` [o 'multi_tenant' si afecta la plataforma], `severity` [SEV-1_Critical, SEV-2_High, SEV-3_Medium, SEV-4_Low], `category` [cross_tenant_leak, stale_permission, prompt_injection, unauthorized_data_exfiltration, denial_of_service], `detection_mechanism` [automated_scrubber, siem_alert, user_report, external_pentest], `status` [detected, contained, eradicated, closed], `detected_at`, `contained_at`, `closed_at`); 2) `IncidentTimelineEvent`: Registra cada hito cronológico inmutable (`event_id`, `incident_id`, `timestamp`, `event_type` [detection, isolation_command, forensic_snapshot, notification_sent, hotfix_deployed], `actor_id`, `description_sanitized`); 3) `RegulatoryNotification`: Registra las comunicaciones obligatorias a autoridades (`notification_id`, `incident_id`, `authority` [CSIRT_Nacional, Agencia_Proteccion_Datos, Client_CISO], `statutory_deadline_hours` [3h_csirt, 72h_agencia, 4h_client_sla], `dispatched_at`, `acknowledgement_token`, `compliance_status` [on_time, delayed]); 4) `ContainmentAction`: Modela las operaciones técnicas ejecutadas (`action_id`, `incident_id`, `action_type` [session_revoke, key_crypto_shredding, connector_sever, tenant_freeze], `target_resource_arn`, `executed_at`, `execution_latency_ms`); 5) `PostMortemAnalysis`: Almacena el análisis blameless higienizado (`postmortem_id`, `incident_id`, `root_cause_category` [software_logic, configuration_drift, third_party_outage, credential_compromise], `blameless_summary`, `five_whys_analysis`, `synthetic_test_case_id`, `approved_by_ciso`); y 6) `RemediationTask`: Tareas preventivas derivadas (`task_id`, `postmortem_id`, `jira_task_key`, `assignee_role`, `due_date`, `verified_in_ci_cd`). Las condiciones de integridad prohíben campos de texto libre con PII y fuerzan validaciones de SLA normativo en cada registro.",
+  "findings": [
+    {
+      "claim_id": "P11-F40-C1",
+      "claim": "El esquema de datos relacional para incidentes y post-mortems estructura registros de incidentes, cronología inmutable, notificaciones regulatorias (con plazos de 3h CSIRT y 72h Agencia), acciones de contención, análisis blameless y tareas de remediación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_incidents_and_postmortems",
+      "evidence": [
+        {
+          "source_title": "NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management",
+          "source_id": "1a1681bf-4024-4cbf-ab85-af3903a784ff",
+          "locator": "Appendix A 'Incident Data Fields, Metrics, and Reporting Schema'",
+          "retrieved_at": null,
+          "excerpt_short": "Structured tracking requires documenting incident vectors, severity levels, timeline timestamps, containment milestones, impact assessments, and corrective action lineage.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.663 Ley Marco de Ciberseguridad e Infraestructura Crítica",
+          "source_id": "ee032cb3-abe5-4440-948f-815a9b4fbe78",
+          "locator": "Artículos 23 y 24 (Registro y Notificación)",
+          "retrieved_at": null,
+          "excerpt_short": "El registro de incidentes deberá contener la fecha y hora de ocurrencia, el tipo de incidente, los activos afectados y las medidas inmediatas de mitigación adoptadas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 9 'Modelo de Datos para Auditoría y Controles'",
+          "retrieved_at": null,
+          "excerpt_short": "Esquema de incidentes: IncidentRecord, IncidentTimelineEvent, RegulatoryNotification, ContainmentAction, PostMortemAnalysis. Integración con plazos normativos chilenos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño exhaustivo que cumple simultáneamente con las buenas prácticas internacionales NIST y la Ley 21.663 de Chile.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Eventos del sistema",
+      "Acciones de respuesta en consola de emergencia",
+      "Comunicaciones oficiales"
+    ],
+    "actors": [
+      "Comandante de Incidente",
+      "Motor de Cumplimiento",
+      "SIEM Corporativo"
+    ],
+    "steps": [
+      "Creación de registro en 'IncidentRecord' con asignación de severidad automática",
+      "Inserción cronológica de cada acción en 'IncidentTimelineEvent'",
+      "Cálculo del temporizador regresivo de notificación regulatoria en 'RegulatoryNotification' (cuenta regresiva de 3 horas para CSIRT)",
+      "Registro de la acción técnica de aislamiento en 'ContainmentAction'",
+      "Cierre técnico y apertura del borrador en 'PostMortemAnalysis'",
+      "Mapeo de tareas de código en 'RemediationTask' ligadas al pipeline de pruebas"
+    ],
+    "states": [
+      "TIMELINE_RECORDING",
+      "SLA_COUNTDOWN_ACTIVE",
+      "CONTAINMENT_TRACKED",
+      "POSTMORTEM_LOCKED"
+    ],
+    "outputs": [
+      "Estructura relacional completa que alimenta la rendición de cuentas ante auditores y autoridades"
+    ],
+    "exceptions": [
+      "Si el temporizador de CSIRT llega a T+2h sin envío de notificación, se emite una alerta roja ejecutiva con escalamiento telefónico"
+    ]
+  },
+  "entities": [
+    "IncidentRecord",
+    "IncidentTimelineEvent",
+    "RegulatoryNotification",
+    "ContainmentAction",
+    "PostMortemAnalysis",
+    "RemediationTask"
+  ],
+  "relations": [
+    {
+      "from": "IncidentTimelineEvent",
+      "to": "IncidentRecord",
+      "type": "CHRONICLES"
+    },
+    {
+      "from": "RegulatoryNotification",
+      "to": "IncidentRecord",
+      "type": "REPORTS_LEGALLY"
+    },
+    {
+      "from": "PostMortemAnalysis",
+      "to": "IncidentRecord",
+      "type": "ANALYZES_LESSONS_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Notas informales en chats de emergencia vs Base de datos relacional de incidentes inmutable",
+      "diferencia": "Las notas en chat se pierden y carecen de valor probatorio; la base relacional inmutable demuestra trazabilidad legal precisa ante litigios o auditorías del regulador."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "incident_record_completeness": "100% de campos normativos llenados",
+    "statutory_notification_tracking_accuracy": "100% de plazos de CSIRT y Agencia monitoreados en tiempo real"
+  },
+  "bridge_implications": "Transforma la gestión de incidentes de una reacción caótica en un proceso operacional estructurado, auditable y jurídicamente impecable.",
+  "open_gaps": [
+    "Integración bidireccional automática mediante API con la plataforma de notificación electrónica del CSIRT Nacional chileno."
+  ],
+  "next_question_ids": [
+    "P11-F41",
+    "P11-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

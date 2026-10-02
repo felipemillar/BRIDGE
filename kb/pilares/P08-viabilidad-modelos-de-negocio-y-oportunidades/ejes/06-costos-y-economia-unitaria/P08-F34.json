@@ -1,0 +1,148 @@
+{
+  "question_id": "P08-F34",
+  "pilar": "P08",
+  "eje": "Costos y economía unitaria",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar costos y economía unitaria de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la economía unitaria exige formalizar: 1) Variables de Costo e Ingreso (ARPU mensual, costo de adquisición de cliente CAC, Customer Lifetime Value LTV, costo variable de inferencia por token, costo fijo de suscripciones de datos, costo empresa de analistas HITL); 2) Categorías Contables (COGS de Cómputo e Inferencia, COGS de Datos y Feeds, COGS de Talento Humano HITL, OPEX de Desarrollo y Plataforma, Gastos de Ventas y Marketing); 3) Relaciones Financieras (Ratio LTV/CAC > 4x, período de recuperación del CAC < 6 meses, función de margen bruto f(n) donde n = clientes activos); y 4) Condiciones de Salud Financiera (margen bruto objetivo > 70% a régimen, tasa de rotación anual churn < 8%, retención neta de ingresos NRR > 105% vía módulos adicionales).",
+  "findings": [
+    {
+      "claim_id": "P08-F34-C1",
+      "claim": "El esquema estructurado de economía unitaria parametriza las relaciones entre adquisición de cuentas, absorción de costos fijos y rentabilidad a largo plazo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "unit_economics_ontology",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 6.4 'Ontología Estructurada de Métricas Unitarias y Salud Financiera'",
+          "excerpt_short": "El modelo financiero se articula en un grafo de entidades: 'Metrica_Financiera' (ARPU, CAC, LTV, Churn), 'Rubro_Coste' (cómputo, datos, talento HITL), 'Cuenta_Cliente' y 'Periodo_Fiscal'. Las reglas de integridad imponen que el ratio LTV/CAC debe superar 4:1 y el tiempo de recuperación de la inversión comercial (CAC Payback) debe situarse en menos de seis meses sobre la base de contratos anuales no cancelables.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_EVIDENCE_MAP",
+          "source_id": "1323b514-5154-49f7-b105-42766ddbcaf5",
+          "locator": "Eje 6: Costos y Economía Unitaria - Definición Estructurada de Datos",
+          "excerpt_short": "Atributos clave: 'gross_margin_target_percent', 'analyst_capacity_ratio', 'breakeven_client_threshold', 'net_revenue_retention_rate'.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Esquema ontológico alineado con las mejores prácticas de métricas SaaS B2B Enterprise.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos contables de ERP",
+      "Métricas de CRM comercial",
+      "Registros de uso de cloud"
+    ],
+    "actors": [
+      "Director Financiero",
+      "Analista de BI",
+      "Inversionistas"
+    ],
+    "steps": [
+      "Consolidación de métricas de ingresos y costos",
+      "Cálculo automatizado de CAC, LTV y NRR",
+      "Actualización de dashboard de economía unitaria"
+    ],
+    "states": [
+      "Datos Ingestados",
+      "Métricas Calculadas",
+      "Dashboard Actualizado"
+    ],
+    "outputs": [
+      "Informe trimestral de economía unitaria para el Directorio"
+    ],
+    "exceptions": [
+      "Deterioro del CAC Payback por alargamiento inesperado de ciclos de venta comerciales"
+    ]
+  },
+  "entities": [
+    "ARPU",
+    "CAC",
+    "LTV",
+    "CAC Payback",
+    "NRR",
+    "Margen Bruto f(n)"
+  ],
+  "relations": [
+    {
+      "from": "Contrato Anual (USD 60K)",
+      "to": "CAC Payback < 6m",
+      "type": "enables"
+    },
+    {
+      "from": "Módulos de Crisis Adicionales",
+      "to": "NRR > 105%",
+      "type": "drives"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Métricas SaaS B2C vs Métricas Tech-Enabled B2B Enterprise",
+      "diferencia": "En B2C el CAC es bajo pero el churn es del 50%; en Enterprise el CAC es de USD 15K pero el LTV supera los USD 180K con churn < 8%."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "ltv_to_cac_ratio": "> 4:1 (LTV estimado USD 180.000 vs CAC estimado USD 20.000)",
+    "cac_payback_period": "< 5 meses"
+  },
+  "bridge_implications": "Mantener un seguimiento riguroso de la métrica NRR (Net Revenue Retention) vendiendo módulos complementarios a clientes satisfechos.",
+  "open_gaps": [
+    "Estimar el costo exacto de eventos de marketing y auspicios en foros mineros (ej. Cesco Week)."
+  ],
+  "next_question_ids": [
+    "P08-F35",
+    "P08-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

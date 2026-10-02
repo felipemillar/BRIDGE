@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-X15",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Proximidad funcional verificable",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre proximidad funcional verificable, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan sobre la existencia de suites 'all-in-one' plenamente integradas en el mercado actual: 1) Discrepancia: Fichas comerciales y presentaciones de ventas de los grandes vendors afirman ofrecer 'plataformas integradas 360 grados para asuntos corporativos'; síntesis internas preliminares aceptaban esta terminología y asumían que vendors como Meltwater o Cision competían en todos los frentes; 2) Versión que prevalece: Prevalece '00_P02_GLOBAL_READ_ME_AND_ERRATA' y 'P02_GLOBAL_ATLAS_RECONCILIATION_V1': las suites comerciales líderes presentan vacíos estructurales absolutos en el relacionamiento territorial (SLO/comunidades) y en la búsqueda sobre repositorios internos de ingeniería, limitándose primordialmente a medios externos. Prevalece la conclusión de que no existe ninguna plataforma comercial de 4 módulos en el mercado, siendo 'all-in-one' una hipérbole publicitaria no verificable.",
+  "findings": [
+    {
+      "claim_id": "P02-X15-C1",
+      "claim": "La auditoría técnica desestima la etiqueta comercial de 'plataforma todo en uno' utilizada por las suites globales de PR, catalogándola como publicidad no respaldada por la evidencia documental de producto.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría de Producto P02"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Refutation of 'All-in-One' Commercial Marketing Claims",
+          "excerpt_short": "Vendor claims of providing an 'all-in-one' corporate affairs platform are rejected under empirical scrutiny; listening platforms do not manage field community agreements or internal engineering RAG.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de documentación de producto y directivas de errata.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Folletos de ventas de suites comerciales",
+      "Auditoría de funcionalidades reales de producto",
+      "Directiva de errata P02"
+    ],
+    "actors": [
+      "Auditor Epistémico",
+      "Investigador de Mercado"
+    ],
+    "steps": [
+      "Contraste de afirmaciones publicitarias frente a especificaciones",
+      "Rechazo de conceptos de marketing sin respaldo",
+      "Registro de clasificación objetiva"
+    ],
+    "states": [
+      "Afirmacion_Publicitaria_Revisada",
+      "Brecha_Comprobada",
+      "Veredicto_Publicado"
+    ],
+    "outputs": [
+      "Clasificación rigurosa de proximidad funcional"
+    ],
+    "exceptions": [
+      "Nuevas versiones de producto lanzadas que incorporen módulos ausentes de forma nativa"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REFUTACION_ALL_IN_ONE",
+      "type": "dictamen_editorial",
+      "name": "Dictamen de Refutación de Suites All-in-One",
+      "aliases": [
+        "All-in-One Refutation"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REFUTACION_ALL_IN_ONE",
+      "predicate": "desmiente_terminologia_de",
+      "object_id": "Marketing_Suites_Globales",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Hipérbole Publicitaria vs Verdad Técnica",
+      "Hipérbole Publicitaria": "'Plataforma integrada de 360 grados que resuelve toda la comunicación corporativa'.",
+      "Verdad Técnica": "Software de monitoreo de prensa que carece de módulos de gestión territorial, legal y repositorios internos."
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "P02-CONT-07",
+      "description": "Afirmaciones de suites 'all-in-one' en marketing frente a la comprobación de silos no integrados en el atlas.",
+      "resolution": "Prevalece el atlas de reconciliación: ninguna suite existente cubre los 4 módulos de forma nativa."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe evitar utilizar terminología publicitaria vacía y fundamentar su propuesta en el estándar de los cuatro módulos definidos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

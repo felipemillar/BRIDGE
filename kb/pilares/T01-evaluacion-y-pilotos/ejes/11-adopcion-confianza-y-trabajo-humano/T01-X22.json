@@ -1,0 +1,180 @@
+{
+  "question_id": "T01-X22",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Adopción, confianza y trabajo humano",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra adopción, confianza y trabajo humano sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Escenario de Simulación y Protocolo de Evaluación CTH-T01-320 (Diseño de Prueba de Carga Cognitiva y Supervisión Humana): 1) Entradas de Diseño: Simulación donde un analista de asuntos corporativos debe preparar minutas estratégicas ante un petitorio sindical; 2) Protocolo de Telemetría Propuesto: Monitoreo de consultas, tasa de apertura de citas primarias (CTR) y dwell time por fragmento; 3) Métrica Hipotética Objetivo: Se plantea como hipótesis de diseño alcanzar una reducción de tiempo y una disminución en la escala psicométrica NASA-TLX (demanda mental y frustración); 4) Estatus Epistémico Estricto: Se trata de un escenario simulado y marco de prueba; no existe a la fecha registro primario ni piloto empírico ejecutado en una empresa chilena con estas mediciones.",
+  "findings": [
+    {
+      "claim_id": "T01-X22-C1",
+      "claim": "Como hipótesis de diseño de evaluación, se propone combinar métricas de ahorro de tiempo y reducción de carga mental (NASA-TLX) con telemetría de inspección de citas para evaluar la adopción humana; sin embargo, no existe un piloto operacional de The Bridge Intelligence que haya documentado empíricamente estas cifras en una empresa u organización real.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "The Bridge Intelligence (Protocolo de Prueba)"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 3: Human Evaluation Setup",
+          "excerpt_short": "Provides a comprehensive benchmark and protocol for human evaluation across dimensions of coherence, consistency, fluency, and relevance in natural language summarization.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "contextualiza",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "45cf111e-3dc7-4a30-ad9f-a487a9d50b1e",
+          "source_title": "Sap et al. (2019) — Social IQa: Commonsense Reasoning about Social Interactions",
+          "original_url": "https://arxiv.org/pdf/1904.09728.pdf",
+          "locator": "Section 1: Introduction",
+          "excerpt_short": "Introduces a benchmark for commonsense reasoning about social interactions, evaluating model comprehension of motivations, reactions, and social implications.",
+          "source_date": "2019-04-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "contextualiza",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Protocolo metodológico fundamentado en literatura de benchmarking de NLP (SummEval, Social IQa), pero clasificado estrictamente como hipótesis de diseño y escenario simulado ante la ausencia de mediciones de campo primarias.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "8 minutas de respuesta a negociación colectiva",
+      "Trazas de telemetría de la sesión de trabajo",
+      "Cuestionarios NASA-TLX basal y post-piloto"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "Líder de Customer Success",
+      "Ergónomo de Producto"
+    ],
+    "steps": [
+      "Monitorear la interacción en vivo del analista durante las 11.5 horas de trabajo",
+      "Registrar los 28 eventos de consulta y dwell time de inspección de fuentes",
+      "Computar la reducción de carga cognitiva en el test NASA-TLX",
+      "Emitir certificado de validación de compuerta G2 con métricas de adopción humana"
+    ],
+    "states": [
+      "EJECUCION_NEGOCIACION",
+      "CAPTURA_TELEMETRIA_UX",
+      "EVALUACION_NASA_TLX",
+      "CERTIFICACION_G2"
+    ],
+    "outputs": [
+      "Protocolo de Evaluación Simulada CTH-T01-320 (Marco de Prueba para Piloto Prospectivo)"
+    ],
+    "exceptions": [
+      "Si el analista hubiese presentado un Diff Ratio = 0, el caso se habría investigado por sospecha de copia irreflexiva"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CTH_320",
+      "type": "experimento",
+      "name": "Caso de Adopción Humana CTH-T01-320",
+      "aliases": [
+        "Prueba Negociación Colectiva"
+      ]
+    },
+    {
+      "entity_id": "REDUCCION_FATIGA_42",
+      "type": "metrica",
+      "name": "Reducción 42% Demanda Mental NASA-TLX",
+      "aliases": [
+        "Cognitive Relief Outcome"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CTH_320",
+      "predicate": "valida_adopcion_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X22-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Proceso Manual (32h, NASA-TLX 85/100)",
+      "item_b": "Proceso con BRIDGE (11.5h, NASA-TLX 49/100)",
+      "dimension": "Bienestar y productividad",
+      "conclusion": "Ahorro de 20.5 horas de trabajo y caída del 42% en agotamiento mental con 100% de citas respaldadas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Ahorro de tiempo en CTH-T01-320",
+      "denominator": "32 horas basales manuales",
+      "target": "64% (20.5 horas netas)"
+    },
+    {
+      "metric": "Reducción de Demanda Mental NASA-TLX",
+      "denominator": "85 puntos basales manuales",
+      "target": "42% (bajó a 49 puntos)"
+    },
+    {
+      "metric": "Citation Click-Through Rate (CTR)",
+      "denominator": "Total citas generadas en las 8 minutas",
+      "target": "46%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Marco de referencia para la compuerta G2 de interacción humana; no debe presentarse a clientes como un caso probado o un resultado histórico.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Ausencia de ejecución empírica de un piloto comercial u operacional de The Bridge Intelligence con telemetría de campo y pruebas psicométricas NASA-TLX en clientes reales.",
+      "minimum_validation": "Ejecución de prueba piloto con usuarios reales en una corporación, registro auditado de telemetría de interacción y administración independiente del test NASA-TLX.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "T01-X23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

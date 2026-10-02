@@ -1,0 +1,146 @@
+{
+  "question_id": "P03-F31",
+  "pilar": "P03",
+  "eje": "Desambiguación y análisis de señales",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Cómo se distinguen homónimos, filiales, productos y personas con nombres similares?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La desambiguación precisa de homónimos, filiales, marcas comerciales y ejecutivos se resuelve mediante una arquitectura de Entity Linking de dos etapas (Wu et al. 2020 - BLINK): 1) Recuperación densa de candidatos (Bi-Encoder): el contexto textual de la mención y las descripciones canónicas de la base de conocimiento corporativa (grafo de entidades) se codifican en embeddings densos en un espacio compartido, recuperando las 10 entidades candidatas más probables en menos de 50 milisegundos mediante búsqueda de vecinos cercanos (k-NN / FAISS); 2) Re-clasificación exhaustiva (Cross-Encoder): se concatena la mención en su contexto con la descripción completa de cada candidato para evaluar la atención cruzada (cross-attention), resolviendo ambigüedades entre empresas matrices y subsidiarias, o entre figuras públicas homónimas; y 3) Vinculación ontológica: la entidad confirmada se enlaza a su URI inmutable en el grafo de conocimiento corporativo junto a su código de registro oficial (RUT en Chile o CIK en la SEC).",
+  "findings": [
+    {
+      "claim_id": "P03-F31-C1",
+      "claim": "La resolución de homónimos y diferenciación entre filiales y marcas exige arquitecturas de Entity Linking en dos fases (Bi-Encoder para recuperación y Cross-Encoder para re-clasificación contextual) conectadas al grafo corporativo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Entity Linking / BLINK P03"
+      },
+      "evidence": [
+        {
+          "source_id": "1ab670b8-5d7b-41dc-bec6-71b39481b818",
+          "source_title": "Scalable Zero-shot Entity Linking with Dense Entity Retrieval (Wu et al. 2020)",
+          "original_url": "https://arxiv.org/abs/1911.03814",
+          "locator": "Section 2: Architecture - Bi-Encoder and Cross-Encoder",
+          "excerpt_short": "BLINK uses a two-stage approach: a dual-encoder that retrieves entity candidates based on dense embeddings, followed by a cross-encoder that jointly scores the mention context with candidate descriptions.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        },
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.5: Desafíos de NLP: Homonimia, Sesgo y Detección de Desinformación",
+          "excerpt_short": "Los modelos de Entity Linking de última generación (BLINK) resuelven la homonimia mediante... recuperación densa... y re-clasificación exhaustiva con cross-encoders.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica contra la publicación fundacional de BLINK y el mapa de evidencia P03.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Texto de señal con mención ambigua",
+      "Grafo de entidades corporativas"
+    ],
+    "actors": [
+      "Bi-Encoder Candidate Retriever",
+      "Cross-Encoder Disambiguator"
+    ],
+    "steps": [
+      "Extracción de mención",
+      "Búsqueda vectorial de candidatos en KG",
+      "Scoring cruzado de atención",
+      "Enlace a URI canónico"
+    ],
+    "states": [
+      "Mention_Extracted",
+      "Candidates_Retrieved",
+      "Entity_Disambiguated"
+    ],
+    "outputs": [
+      "Mención resuelta a URI inmutable (ej. http://bridge.corp/ent/entel_chile)"
+    ],
+    "exceptions": [
+      "Nuevas entidades no catalogadas previamente en el grafo (zero-shot link failure)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BLINK_FRAMEWORK",
+      "type": "modelo_nlp",
+      "name": "Arquitectura de Desambiguación BLINK",
+      "aliases": [
+        "BLINK Entity Linking"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BLINK_FRAMEWORK",
+      "predicate": "resuelve_homonimia_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F31-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Método de resolución de entidades",
+      "Coincidencia Léxica por Diccionario": "Genera falsos positivos masivos ante homónimos (ej. confundir ejecutivo con futbolista homónimo).",
+      "Entity Linking Denso (BLINK)": "Distingue el rol corporativo examinando el contexto semántico completo de la oración."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar un servicio de Entity Linking basado en bi/cross-encoders para evitar alertas basura sobre figuras públicas homónimas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F32"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

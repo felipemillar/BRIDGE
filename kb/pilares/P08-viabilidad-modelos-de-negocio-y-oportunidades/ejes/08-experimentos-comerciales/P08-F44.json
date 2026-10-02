@@ -1,0 +1,148 @@
+{
+  "question_id": "P08-F44",
+  "pilar": "P08",
+  "eje": "Experimentos comerciales",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué decisión de continuar, reformular o detener corresponde a cada resultado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus define tres compuertas de decisión matemática según los resultados de los experimentos: 1) Continuar y Escalar (Go / Scale): Si al menos el 60% de los pilotos pagados (ej. 3 de 5) convierten a contratos anuales a precio pleno (USD 5.000/mes), con un NPS superior a 50 y un uso semanal recurrente de los briefs ejecutivos, se autoriza la contratación de analistas adicionales y la inversión comercial activa; 2) Reformular e Iterar (Iterate / Pivot): Si los clientes valoran los briefs y los usan intensamente pero la disposición a pagar se estanca entre USD 2.500 y USD 3.500/mes, se reformula el empaquetamiento (ej. reducir el tiempo de analista a modelo 1:6 para proteger el margen del 65%) o se ajusta la arquitectura técnica si la objeción es el temor a compartir archivos internos; y 3) Detener y Liquidar (Kill / Stop): Si tras 15 entrevistas menos del 25% reconoce la asimetría informativa como un dolor urgente con presupuesto, o si ningún piloto pagado convierte a contrato anual, se detiene el proyecto de forma ordenada sin malgastar capital.",
+  "findings": [
+    {
+      "claim_id": "P08-F44-C1",
+      "claim": "El marco de gobernanza comercial fija umbrales numéricos incontrovertibles para escalar, ajustar o cancelar el proyecto, eliminando la persistencia irracional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "commercial_decision_rules",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 8.2 'Matriz de Decisiones: Escalar, Reformular o Detener'",
+          "excerpt_short": "Reglas de decisión vinculantes para los fundadores: a) Decisión de Continuar: Se gatilla con 3 o más conversiones a contrato anual de USD 60.000; b) Decisión de Reformular: Se activa si la conversión es del 20-40% o si el WTP se fija en USD 3.000/mes, obligando a recalibrar la estructura de costos y el ratio de analistas; c) Decisión de Detener: Se ejecuta si la tasa de conversión es 0% tras 5 pilotos pagados o si la tasa de apertura de briefs cae por debajo del 20%, evidenciando falta de encaje producto-mercado.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_GAPS_AND_VALIDATION",
+          "source_id": "b37bbf38-9c0d-4dc9-bf01-ac0b24ed0bd4",
+          "locator": "Sección 3 'Compuertas de Decisión y Gestión de Riesgo de Negocio'",
+          "excerpt_short": "El peor error financiero es subsidiar indefinidamente un producto sin demanda real; la regla de detención protege el capital y la reputación de los fundadores.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Reglas de decisión nítidas y auditables formalizadas en el corpus P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Métricas de conversión de pilotos",
+      "Registros de WTP observada",
+      "Evaluación cualitativa"
+    ],
+    "actors": [
+      "Comité de Dirección",
+      "Lead Investors",
+      "Equipo Fundador"
+    ],
+    "steps": [
+      "Cierre del período experimental de 90 días",
+      "Tabulación de conversiones frente a umbrales",
+      "Votación formal de la compuerta de decisión",
+      "Ejecución del mandato (Escalar, Pivotar o Detener)"
+    ],
+    "states": [
+      "Fase Experimental",
+      "Revisión de Compuerta",
+      "Mandato Aprobado"
+    ],
+    "outputs": [
+      "Acta oficial de decisión estratégica"
+    ],
+    "exceptions": [
+      "Acuerdo condicional de compra sujeto a una funcionalidad específica que justifique un sprint técnico de 30 días"
+    ]
+  },
+  "entities": [
+    "Compuerta de Decisión",
+    "Go/Scale",
+    "Iterate/Pivot",
+    "Kill/Stop",
+    "Encaje Producto-Mercado"
+  ],
+  "relations": [
+    {
+      "from": "Conversión >= 60%",
+      "to": "Decisión Go / Scale",
+      "type": "mandates"
+    },
+    {
+      "from": "Conversión 0% en 5 Pilotos",
+      "to": "Decisión Kill / Stop",
+      "type": "mandates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Perseverancia ciega vs Disciplina de compuertas",
+      "diferencia": "La perseverancia ciega agota el capital en productos zombies; la disciplina de compuertas fuerza la toma de decisiones basada en evidencia financiera."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "go_threshold_conversion": ">= 60% de pilotos convertidos a contrato anual",
+    "kill_threshold_conversion": "0% de conversión tras 5 pilotos pagados"
+  },
+  "bridge_implications": "Someter formalmente el avance del proyecto BRIDGE a estas compuertas numéricas tras concluir los pilotos iniciales.",
+  "open_gaps": [
+    "Definir el protocolo de terminación de contratos y devolución de datos en caso de activar la compuerta 'Detener'."
+  ],
+  "next_question_ids": [
+    "P08-F45",
+    "P08-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

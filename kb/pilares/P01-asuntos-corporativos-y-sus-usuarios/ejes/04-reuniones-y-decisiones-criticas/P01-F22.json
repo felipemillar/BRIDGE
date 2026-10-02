@@ -1,0 +1,225 @@
+{
+  "question_id": "P01-F22",
+  "pilar": "P01",
+  "eje": "Reuniones y decisiones críticas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar reuniones y decisiones críticas de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de reuniones críticas se define mediante 4 variables de criticidad (regulatoria Ley 20.730/NCG 461, reputacional/SLO, temporal Golden Hour <30-60 min, y operacional/financiera); 4 categorías de participantes (C-Suite interno, Reguladores/autoridades, Comunidades/gremios, y Medios/analistas); 3 relaciones interfuncionales clave (Tríada CCO-Legal-Sostenibilidad, Binomio CCO-CEO, y Filtro de Gobernanza CISO/Compliance); y condiciones normativas y temporales de éxito de registro oportuno y cero inconsistencias.",
+  "findings": [
+    {
+      "claim_id": "P01-F22-C1",
+      "claim": "La criticidad de una instancia decisional en Asuntos Corporativos se define a través de cuatro vectores: criticidad regulatoria (Ley 20.730 de Lobby y NCG 461 CMF), criticidad reputacional (Licencia Social para Operar), criticidad temporal (Golden Hour <30 a 60 minutos) y criticidad operacional/financiera.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Gerencias de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2: Vectores de Criticidad en Decisiones Corporativas",
+          "excerpt_short": "Cuatro vectores de criticidad: regulatoria, reputacional, temporal y operacional/financiera.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:47:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F22-C2",
+      "claim": "Las relaciones interfuncionales críticas exigen la coordinación inquebrantable de la Tríada CCO-Legal-Operaciones/Sostenibilidad para asegurar que lo declarado a medios y reguladores coincida con lo comprometido en RCA y memorias financieras.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Chile",
+        "actor": "C-Suite Interfuncional"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2: Articulación Interfuncional y Tríada de Control",
+          "excerpt_short": "Tríada CCO - Legal - Operaciones: consistencia entre prensa, contratos y compromisos en terreno.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:47:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F22-C3",
+      "claim": "Los CEOs de alto desempeño dedican aproximadamente el 30% de su tiempo laboral a relacionamiento con stakeholders externos, requiriendo del CCO inteligencia contextual sintetizada y lines to take directas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025",
+        "region": "Global",
+        "actor": "CEOs de Alto Desempeño"
+      },
+      "evidence": [
+        {
+          "source_id": "b6f21f15-0ec9-4e85-b6ae-aca2f29e1ed1",
+          "source_title": "McKinsey & Company - Upgrading corporate affairs for a new geopolitical era",
+          "original_url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/upgrading-corporate-affairs-for-a-new-geopolitical-era",
+          "locator": "Dedicación del CEO a stakeholders externos",
+          "excerpt_short": "CEOs de alto desempeño dedican alrededor del 30% de su tiempo a la gestión externa de grupos de interés.",
+          "source_date": "2025-10-29",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:47:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Publicación de McKinsey en el corpus.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Vectores de criticidad ponderados",
+      "Mapas de participantes",
+      "Restricciones temporales"
+    ],
+    "actors": [
+      "CCO",
+      "CEO",
+      "Fiscal Legal",
+      "CISO",
+      "Líder Comunitario"
+    ],
+    "steps": [
+      "Ponderación de criticidad",
+      "Convocatoria y preparación interfuncional",
+      "Validación de entorno seguro",
+      "Ejecución y registro de compromisos"
+    ],
+    "states": [
+      "Evaluación_Criticidad",
+      "Alineamiento_Tríada",
+      "Reunión_Ejecutada",
+      "Registro_InfoLobby"
+    ],
+    "outputs": [
+      "Matriz de criticidad",
+      "Briefing de 1 página",
+      "Registro de cumplimiento"
+    ],
+    "exceptions": [
+      "Objeción de seguridad del CISO ante transferencia indebida de datos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TRIADA_CONTROL",
+      "type": "concepto_operativo",
+      "name": "Tríada CCO - Legal - Operaciones",
+      "aliases": [
+        "Tríada de Consistencia Corporativa"
+      ]
+    },
+    {
+      "entity_id": "ENT_VECTORES_CRITICIDAD",
+      "type": "modelo_analisis",
+      "name": "Cuatro Vectores de Criticidad",
+      "aliases": [
+        "Dimensiones de Criticidad Decisional"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TRIADA_CONTROL",
+      "predicate": "asegura_coherencia_en",
+      "object_id": "ENT_AUDIENCIA_LOBBY",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F22-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Porcentaje de tiempo dedicado por CEOs de alto desempeño a stakeholders externos",
+      "value": "30%",
+      "denominator": "Jornada laboral total del CEO",
+      "source_claim_id": "P01-F22-C3"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Gobernanza",
+      "implication": "Incorporar la Tríada CCO-Legal-Operaciones como workflow de aprobación obligatorio en BRIDGE para declaraciones públicas y briefings.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F23",
+    "P01-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:47:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

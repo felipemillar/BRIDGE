@@ -1,0 +1,148 @@
+{
+  "question_id": "P02-F05",
+  "pilar": "P02",
+  "eje": "Universo comercial y deduplicación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre universo comercial y deduplicación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cada hecho está respaldado por fuentes primarias y documentos de errata con trazabilidad exhaustiva: 1) Venta de FGS Global a KKR por WPP: respaldada por SEC Form 6-K WPP (filing a5017o.htm del 3 dic 2024) y fe de erratas (00_P02_GLOBAL_READ_ME_AND_ERRATA); 2) Adquisición de Limbik por Burson: respaldada por comunicado oficial de Burson (12 agosto 2026) y 00_P02_GLOBAL_READ_ME_AND_ERRATA; 3) Absorción de Memo por Signal AI: respaldada por comunicado de Signal AI y Memo (anuncio 20 abril 2026) y 00_P02_GLOBAL_READ_ME_AND_ERRATA; 4) Integración de Brandwatch en Cision Ltd.: respaldada por PR Newswire Announcement (1 junio 2021) y P02_GLOBAL_SOURCE_INDEX_V1; 5) Creación de Open Point Group: respaldada por Consultation Manager Release y P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1 (adquisición de Converlens en julio 2024); 6) Exclusión de AMEC, Page Society y The Bridge del denominador comercial: respaldada por 00_P02_GLOBAL_READ_ME_AND_ERRATA y P02_GLOBAL_ATLAS_RECONCILIATION_V1 (1 octubre 2026).",
+  "findings": [
+    {
+      "claim_id": "P02-F05-C1",
+      "claim": "La trazabilidad de las transacciones societarias y exclusiones del atlas se sustenta en fuentes regulatorias formales (SEC), notas de prensa oficiales de M&A y documentos de síntesis con fechas auditables entre junio de 2021 y octubre de 2026.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Registro Oficial de Fuentes P02"
+      },
+      "evidence": [
+        {
+          "source_id": "3cd556b0-adad-4a02-9088-9f21a1b2b1b3",
+          "source_title": "SEC Form 6-K WPP Sale of FGS Global to KKR Kite Bidco",
+          "original_url": "https://www.sec.gov/Archives/edgar/data/1072379/000107237924000045/a5017o.htm",
+          "locator": "Filing Form 6-K WPP plc: Completion of transaction with Kite Bidco Inc.",
+          "excerpt_short": "Report of Foreign Private Issuer Pursuant to Rule 13a-16: Sale of majority stake in FGS Global.",
+          "source_date": "2024-12-03",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        },
+        {
+          "source_id": "420e830e-dd53-4597-a51d-827824c4ce38",
+          "source_title": "Cision Brandwatch Acquisition Announcement PR Newswire",
+          "original_url": "https://www.prnewswire.com/news-releases/cision-closes-brandwatch-acquisition-301302866.html",
+          "locator": "PR Newswire: Cision closes Brandwatch acquisition",
+          "excerpt_short": "Cision closes Brandwatch acquisition creating PR and consumer intelligence leader.",
+          "source_date": "2021-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de los documentos fuente en los repositorios de P02.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Identificadores de fuente",
+      "URLs originales",
+      "Fechas de corte de eventos de M&A"
+    ],
+    "actors": [
+      "Auditor Epistémico",
+      "Sistema de Trazabilidad"
+    ],
+    "steps": [
+      "Verificación de URL/Filing",
+      "Extracción de fecha y fragmento textual",
+      "Asociación al ID de afirmación",
+      "Publicación en matriz de fuentes"
+    ],
+    "states": [
+      "Fuente_Auditada",
+      "Pasaje_Verificado",
+      "Trazabilidad_Consolidada"
+    ],
+    "outputs": [
+      "Matriz de Trazabilidad Epistémica de P02"
+    ],
+    "exceptions": [
+      "Fuentes afectadas por errores 403 o paywall (se documenta su sustituto)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "MATRIZ_TRAZABILIDAD_P02",
+      "type": "artefacto_auditoria",
+      "name": "Matriz de Trazabilidad Epistémica de P02",
+      "aliases": [
+        "Source Traceability Matrix"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "MATRIZ_TRAZABILIDAD_P02",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "P02_UNIVERSO_COMERCIAL",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F05-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cita Genérica vs Cita Epistémica con Localizador",
+      "Cita Genérica": "Mencionar 'WPP vendió FGS' sin fecha, fuente ni número de filing.",
+      "Cita Epistémica": "Venta formal a Kite Bidco Inc. (KKR) el 3 de diciembre de 2024 según SEC Form 6-K filing a5017o.htm."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Implementar en el motor de respuesta de BRIDGE el mismo estándar de trazabilidad que exige enlazar localizadores exactos para cada hecho.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F06",
+    "P02-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

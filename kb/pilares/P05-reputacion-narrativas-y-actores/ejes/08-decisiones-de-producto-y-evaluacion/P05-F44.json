@@ -1,0 +1,140 @@
+{
+  "question_id": "P05-F44",
+  "pilar": "P05",
+  "eje": "Decisiones de producto y evaluación",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Cómo evaluar utilidad de mapas de actores y narrativas con analistas humanos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus formaliza la evaluación de la utilidad de los mapas de actores y análisis narrativos mediante un protocolo de validación empírica en tres etapas sucesivas documentado en P05_GAPS_AND_VALIDATION: 1) Validación Retrospectiva con Casos Históricos Cerrados (Backtesting): Se alimenta la plataforma con datos cronológicos de casos emblemáticos cerrados (e.g. Caso Colusión Tissue 2015-2020 en Chile o conflictos de RCAs paralizadas en el SEIA) para verificar si los grafos de prominencia de Mitchell et al. y los modelos SCCT habrían identificado a los actores críticos y previsto la escalada judicial con semanas de anticipación; 2) Prueba Piloto Ciega con Expertos en Asuntos Corporativos (Turing Test Profesional): Se presentan informes de inteligencia narrativa generados por el sistema y resúmenes elaborados por consultores humanos senior a un panel ciego de 15 directores de comunicación corporativa y asuntos públicos acreditados en Iberoamérica, evaluando relevancia estratégica, accionabilidad de las recomendaciones y ausencia de alucinaciones en escala Likert 1-5; 3) Auditoría Continua de Sesgos y Calibración Algorítmica: Medición periódica de métricas de desempeño de clasificación (Precisión, Recall y F1-Score) sobre muestras estratificadas del 10%+ de los expedientes, con feedback cualitativo de analistas humanos que ajusta las ponderaciones de legitimidad y urgencia territorial.",
+  "findings": [
+    {
+      "claim_id": "P05-F44-C1",
+      "claim": "La validación de la utilidad analítica de los mapas de actores requiere un protocolo combinado de backtesting histórico, evaluación ciega por directores corporativos y auditorías de sesgos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Iberoamérica",
+        "actor": "Expertos en Asuntos Públicos y BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 4.2: Fases del Protocolo de Validación Empírica",
+          "excerpt_short": "Fase 1: Backtesting histórico retrospectivo; Fase 2: Prueba piloto ciega con expertos (Turing Test profesional); Fase 3: Auditoría continua de sesgos y calibración algorítmica.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Protocolo riguroso de evaluación pericial establecido en el diseño de investigación de BRIDGE.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Casos de estudio históricos",
+      "Panel de evaluadores profesionales externos",
+      "Muestras de outputs del sistema"
+    ],
+    "actors": [
+      "Líder de Validación Metodológica",
+      "Panel de Directores de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Ejecución de backtesting con datos de entrenamiento congelados",
+      "Aplicación de encuestas ciegas de utilidad y precisión",
+      "Cálculo de tasas de concordancia inter-evaluador (Kappa de Fleiss)"
+    ],
+    "states": [
+      "Backtesting_Executed",
+      "Blind_Test_Completed",
+      "Calibration_Audited"
+    ],
+    "outputs": [
+      "Informe de Certificación de Utilidad Analítica del Sistema"
+    ],
+    "exceptions": [
+      "Discrepancias de criterio entre analistas sobre la urgencia de reclamos comunitarios menores"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_HUMAN_EVAL_PROTOCOL",
+      "type": "protocolo_evaluacion",
+      "name": "Protocolo de Validación Empírica y Turing Test",
+      "aliases": [
+        "Expert Evaluation Protocol"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_HUMAN_EVAL_PROTOCOL",
+      "predicate": "evalua_eficacia_de",
+      "object_id": "ENT_EXECUTIVE_BRIEF_UI",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F44-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de validación",
+      "Validación de Software Tradicional": "Pruebas unitarias de código y tiempo de respuesta de la API.",
+      "Validación Epistémica de BRIDGE": "Comprobación de que las alertas producidas mejoran la toma de decisiones reales de un CCO frente a controversias complejas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Índice de Aceptación Profesional Ciega",
+      "denominator": "Porcentaje de briefs generados por la IA calificados como 'Accionables y Relevantes' por el panel de directores.",
+      "formula": "Briefs_Aprobados / Briefs_Evaluados >= 0.85"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Entorno de Pruebas de Calidad",
+      "implication": "BRIDGE debe incorporar un banco de casos históricos para calibrar y evaluar cualquier nuevo modelo de grafos o LLM antes de su despliegue a producción.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

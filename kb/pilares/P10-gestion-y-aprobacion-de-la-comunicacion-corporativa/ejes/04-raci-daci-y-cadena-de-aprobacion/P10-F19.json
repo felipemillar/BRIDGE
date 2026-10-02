@@ -1,0 +1,157 @@
+{
+  "question_id": "P10-F19",
+  "pilar": "P10",
+  "eje": "RACI, DACI y cadena de aprobación",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué roles preparan, consultan, autorizan y publican cada tipo de mensaje?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La gobernanza de comunicaciones corporativas exige una matriz DACI/RACI formal con estricta segregación de funciones: 1) Preparación (Driver / Responsible): El Redactor de Comunicaciones Corporativas o Content Specialist redacta el borrador basándose en tickets del Shared Fact Record; 2) Consulta Técnica y Legal (Contributors / Consulted): El SME de Operaciones/Ingeniería aporta las especificaciones fácticas y el Asesor Legal/Compliance valida la conformidad regulatoria (Ley 18.045, NCG 30, Reg FD); 3) Autorización Ejecutiva (Approver / Accountable): El Director de Asuntos Corporativos (en mensajes corporativos ordinarios), el CEO junto al Comité de Crisis (en emergencias operacionales críticas) o el Gerente General y Fiscal (en hechos esenciales y materias bursátiles reservadas); y 4) Publicación y Difusión (Publisher / Operator): El Operador de Canales/Prensa ejecuta el despacho técnico en canales externos, bajo el Principio de Cuatro Ojos (segregación técnica absoluta: el redactor jamás puede autorizar ni publicar su propio contenido sin firma ejecutiva).",
+  "findings": [
+    {
+      "claim_id": "P10-F19-C1",
+      "claim": "La estructura de roles exige diferenciar tajantemente entre el redactor (Driver), los validadores técnicos/legales (Contributors), la autoridad de firma (Approver) y el operador técnico de canal, aplicando segregación de funciones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "governance_roles_matrix",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 3 'Matriz de Responsabilidad RACI / DACI en la Gobernanza de Comunicaciones'",
+          "retrieved_at": null,
+          "excerpt_short": "Driver (D): Redactor Líder de Comunicaciones. Approver (A): Director de Asuntos Corporativos o CEO (crisis). Contributors (C): Legal Counsel y Technical SME. Informed (I): Voceros autorizados y mesas sectoriales. Segregación estricta de funciones: Quien redacta no puede ser el aprobador final.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Separation of Duties and Audit Integrity'",
+          "retrieved_at": null,
+          "excerpt_short": "A robust system of record enforces technical segregation between content creators and final release sign-offs, preventing unilateral publication without documented cryptographic verification.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre el dossier de arquitectura y las especificaciones de sistemas de registro corporativo.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ticket de comunicación en ingest",
+      "Borrador de mensaje v0.1",
+      "Matriz de poderes y firmas vigentes"
+    ],
+    "actors": [
+      "Redactor (Driver)",
+      "Legal Counsel (Contributor)",
+      "SME Operacional (Contributor)",
+      "Director Asuntos Corporativos (Approver)",
+      "Operador de Canal (Publisher)"
+    ],
+    "steps": [
+      "Redactor compila borrador citando fuentes del Shared Fact Record",
+      "Envío simultáneo a revisión de SME (hechos técnicos) y Legal (conformidad normativa)",
+      "Consolidación de observaciones e incremento a v0.9",
+      "Elevación a puerta de aprobación ejecutiva (Approver emite firma criptográfica SHA-256)",
+      "Pase a estado APPROVED_STAGED y entrega a Operador de Canal para publicación"
+    ],
+    "states": [
+      "DRAFTING",
+      "UNDER_REVIEW",
+      "EXECUTIVE_SIGN_OFF",
+      "APPROVED_STAGED",
+      "PUBLISHED_LIVE"
+    ],
+    "outputs": [
+      "Registro de auditoría inmutable con firmas y roles trazables"
+    ],
+    "exceptions": [
+      "Si el Approver rechaza, el mensaje vuelve a DRAFTING con pliego fundado de correcciones"
+    ]
+  },
+  "entities": [
+    "Matriz DACI",
+    "RACI Framework",
+    "Principio de Cuatro Ojos",
+    "Director de Asuntos Corporativos",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Redactor",
+      "to": "Director Asuntos Corporativos",
+      "type": "REPORTS_TO_FOR_SIGN_OFF"
+    },
+    {
+      "from": "Legal Counsel",
+      "to": "Borrador",
+      "type": "PROVIDES_REGULATORY_CLEARANCE"
+    },
+    {
+      "from": "Operador de Canal",
+      "to": "Canales Externos",
+      "type": "DISPATCHES_UNDER_MANDATE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Flujo informal de comunicaciones vs Matriz DACI con Cuatro Ojos",
+      "diferencia": "El flujo informal permite a analistas enviar notas a la prensa sin control; la matriz DACI impide la salida de cualquier mensaje sin doble visado y aprobación ejecutiva formal."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "segregation_compliance_rate": "100% de mensajes publicados con roles de autor y aprobador disjuntos",
+    "cross_review_completion_time": "Mediana en horas para obtener visado Legal + SME"
+  },
+  "bridge_implications": "BRIDGE debe implementar control de acceso basado en roles (RBAC) y control de acceso basado en atributos (ABAC), bloqueando por software la capacidad de auto-aprobación del redactor.",
+  "open_gaps": [
+    "Integración técnica del flujo con sistemas corporativos de Single Sign-On (SSO) y proveedores de identidad SAML/OAuth2."
+  ],
+  "next_question_ids": [
+    "P10-F20",
+    "P10-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

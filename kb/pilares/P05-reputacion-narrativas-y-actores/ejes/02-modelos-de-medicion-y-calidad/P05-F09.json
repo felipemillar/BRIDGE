@@ -1,0 +1,148 @@
+{
+  "question_id": "P05-F09",
+  "pilar": "P05",
+  "eje": "Modelos de medición y calidad",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Cómo separar resultado de encuesta, análisis de medios y juicio de analista?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus exige separar taxativamente estas tres fuentes epistemológicas mediante una arquitectura de tres capas no conmensurables: 1) Resultado de Encuesta (Dato Perceptual Directo): Declaraciones expresas emitidas por sujetos muestreados probabilísticamente o en paneles calibrados bajo cuestionarios cerrados; reporta lo que la gente dice explícitamente que siente o piensa (e.g. porcentaje de favorabilidad neta o score Pulse), sujeto a margen de error estadístico y nivel de confianza formal; 2) Análisis de Medios (Dato de Difusión y Encuadre): Registro objetivo de volumen, centimetraje, cobertura, tono semántico y 'frames' periodísticos en publicaciones de prensa y plataformas públicas; reporta lo que los emisores y periodistas publican en el espacio público (e.g. modelo de reputación mediática de Deephouse); y 3) Juicio de Analista (Evaluación Pericial / SATs): Inferencia analítica estructurada generada por un experto humano o sistema pericial aplicando Técnicas Estructuradas de Análisis (SATs) como Análisis de Hipótesis Competitivas (ACH) o SCCT de Coombs; reporta la interpretación contextual, causalidad probable y nivel de amenaza institucional. La regla operativa prohíbe promediar aritméticamente un juicio cualitativo de analista con un porcentaje de encuesta o con el volumen de prensa.",
+  "findings": [
+    {
+      "claim_id": "P05-F09-C1",
+      "claim": "Encuestas, análisis de medios y juicio pericial constituyen capas de información ontológicamente incompatibles que deben presentarse en canales paralelos sin fusión indiscriminada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Analistas de Inteligencia Corporativa"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3: Taxonomía Métrica Rigurosa: Distinción entre Niveles de Medición",
+          "excerpt_short": "Distinción entre volumen de medios (Nivel 1), exposición/alcance (Nivel 2), resonancia de actores (Nivel 3), percepción en encuestas (Nivel 4) e impacto conductual/evaluativo.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "8283e403-bd32-4a0f-91bf-a9a4587725f7",
+          "source_title": "Deephouse: Media Reputation as a Strategic Resource (Journal of Management)",
+          "original_url": "https://journals.sagepub.com/doi/10.1177/014920630002600602",
+          "locator": "Journal of Management, 26(6), pp. 1091-1112",
+          "excerpt_short": "Media reputation reflects public information intermediaries' framing, distinct from direct consumer surveys or internal management evaluations.",
+          "source_date": "2000-12-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio cardinal de la inteligencia estratégica y análisis estructurado de información.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Respuestas de encuestas cuantitativas",
+      "Clips de noticias clasificados",
+      "Memos de analistas expertos"
+    ],
+    "actors": [
+      "Investigador de Opinión Pública",
+      "Especialista en Monitoreo de Medios",
+      "Analista Senior de Inteligencia"
+    ],
+    "steps": [
+      "Etiquetado de origen de cada dato con metadato epistémico",
+      "Visualización en tres paneles desacoplados en el dashboard",
+      "Evaluación de concordancias y discrepancias entre capas"
+    ],
+    "states": [
+      "Raw_Inputs_Classified",
+      "Source_Type_Tagged",
+      "Triangulated_View_Rendered"
+    ],
+    "outputs": [
+      "Matriz de Triangulación: Encuesta vs Medios vs Juicio Pericial"
+    ],
+    "exceptions": [
+      "Tentativa de generar un único número que sume menciones en prensa y notas de encuesta"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TRIANGULATION_FRAMEWORK",
+      "type": "metodologia",
+      "name": "Marco de Triangulación Epistémica",
+      "aliases": [
+        "Epistemic Triangulation"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TRIANGULATION_FRAMEWORK",
+      "predicate": "desacopla_capas_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Criterio de validación",
+      "Encuesta": "Margen de error muestral y representatividad estadística formal.",
+      "Análisis de Medios": "Cobertura de fuentes, fiabilidad del medio e indexación exhaustiva.",
+      "Juicio de Analista": "Rigor en la aplicación de SATs, ausencia de sesgos cognitivos y consistencia argumentativa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Motor de Inferencia",
+      "implication": "BRIDGE debe etiquetar cada conclusión ejecutiva indicando si deriva de encuestas, medios o síntesis del modelo analítico, impidiendo atribuciones erróneas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

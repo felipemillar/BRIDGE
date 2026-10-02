@@ -1,0 +1,165 @@
+{
+  "question_id": "P11-F33",
+  "pilar": "P11",
+  "eje": "Controles comprobables",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué evidencia necesitaría un cliente para aceptar un piloto con sus documentos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para autorizar la ingesta y procesamiento de sus documentos corporativos en un entorno de piloto productivo, un cliente enterprise (banca, minería, utilities, retail) exige un 'Paquete de Evidencia y Confianza Técnica' compuesto por seis artefactos formales indispensables: 1) Acuerdo de Procesamiento de Datos (DPA) formalmente suscrito, con estipulaciones claras de encargado/procesador según la Ley 19.628, los estándares de la Ley 21.719 (en vacatio legis) y el GDPR cuando aplique, prohibiendo expresamente la retención o uso de datos para entrenamiento; 2) Informe de Atestación SOC 2 Type II vigente (o certificación ISO/IEC 27001:2022) emitido por una firma de auditoría acreditada con opinión limpia (unqualified opinion) y sin excepciones críticas en los dominios de Seguridad y Confidencialidad; 3) Resumen Ejecutivo de Prueba de Penetración reciente (antigüedad menor a 6 meses) realizada por una firma externa de ciberseguridad, acreditando remediación total de vulnerabilidades de severidad crítica y alta; 4) Diagrama de Arquitectura de Aislamiento Multi-Tenant firmado técnicamente por el CISO de BRIDGE, demostrando segregación a nivel de PostgreSQL 18 RLS, índices vectoriales en Qdrant y claves criptográficas KMS dedicadas; 5) Demostración en Vivo de Destrucción de Datos y Purga de Vectores (Crypto-shredding en vivo bajo NIST SP 800-88 Rev. 2) demostrando que la eliminación de un documento en el piloto es irreversible y que los embeddings quedan inmediatamente inaccesibles (recall 0.0%); y 6) Procedimiento Operativo Estándar (SOP) de Notificación y Gestión de Incidentes con compromisos de tiempo de notificación que satisfagan la Ley 21.663 (3 horas para eventos calificados ante el CSIRT) y la normativa de protección de datos personales.",
+  "findings": [
+    {
+      "claim_id": "P11-F33-C1",
+      "claim": "La aceptación de un piloto enterprise con documentos reales exige un paquete de evidencias compuesto por DPA vinculante, informe SOC 2 Type II / ISO 27001, pentest externo limpio, diagrama de aislamiento firmado, demostración de crypto-shredding y protocolo de incidentes alineado a la Ley 21.663 y Ley 21.719.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "enterprise_pilot_governance_requirements",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 6 'Pruebas de Aceptación para Pilotos Enterprise'",
+          "retrieved_at": null,
+          "excerpt_short": "Paquete de evidencia para piloto: DPA formal vinculante, atestación SOC 2 vigente, pentest de terceros sin hallazgos críticos, demostración técnica de crypto-shredding de embeddings y procedimiento de respuesta a incidentes con SLAs normativos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AICPA: System and Organization Controls (SOC 2) Trust Services Criteria",
+          "source_id": "11c7c827-b3a4-4207-925a-f5bac2493a7b",
+          "locator": "Trust Services Criteria Confidentiality & Security",
+          "retrieved_at": null,
+          "excerpt_short": "The entity obtains assurance regarding its third-party service providers through formal contracts, audit reports, and security assessments to maintain data protection across customer boundaries.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Artículos 14 y 15 (Deberes del Encargado y Medidas de Seguridad)",
+          "retrieved_at": null,
+          "excerpt_short": "El mandatario o encargado solo podrá tratar los datos conforme a las instrucciones del responsable y deberá adoptar medidas técnicas y organizativas apropiadas para garantizar un nivel de seguridad adecuado al riesgo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de requisitos regulatorios de datos en Chile (Ley 21.719 / 19.628) y las prácticas corporativas consolidadas de debida diligencia de clientes corporativos.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud de piloto por el cliente",
+      "Inventario de documentos propuestos para la prueba",
+      "Cuestionario de seguridad del cliente (VSA / SIG)"
+    ],
+    "actors": [
+      "CISO del Cliente",
+      "Oficial de Cumplimiento",
+      "CISO de BRIDGE",
+      "Equipo de Despliegue"
+    ],
+    "steps": [
+      "Entrega del Paquete de Evidencia y Atestación de BRIDGE al equipo de Ciberseguridad del cliente",
+      "Revisión y firma del DPA corporativo con designación de canales de contacto de emergencia 24/7",
+      "Sesión técnica de validación en vivo: ejecución de pruebas de inyección y demostración del mecanismo de purga criptográfica",
+      "Creación de instancia aislada de tenant con CMK exclusiva y límites de retención temporal prefijados para la duración del piloto",
+      "Ingesta de muestra documental del piloto y firma del Acta de Inicio de Piloto Controlado"
+    ],
+    "states": [
+      "DOSSIER_SUBMITTED",
+      "SECURITY_ASSESSMENT_APPROVED",
+      "DPA_EXECUTED",
+      "ISOLATED_PILOT_PROVISIONED"
+    ],
+    "outputs": [
+      "Autorización formal de ingesta y despliegue del piloto en entorno controlado"
+    ],
+    "exceptions": [
+      "Si el cliente requiere procesamiento exclusivamente on-premise, se debe evaluar la viabilidad de despliegue en su propia VPC antes de autorizar la ingesta"
+    ]
+  },
+  "entities": [
+    "DPA",
+    "SOC 2 Type II",
+    "ISO/IEC 27001",
+    "Crypto-shredding",
+    "Ley 21.663",
+    "Ley 21.719"
+  ],
+  "relations": [
+    {
+      "from": "Paquete de Evidencia",
+      "to": "Aprobación de Piloto",
+      "type": "ENABLES"
+    },
+    {
+      "from": "DPA",
+      "to": "Tratamiento de Encargado",
+      "type": "GOVERNS_LEGALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Piloto informal con promesas verbales vs Piloto formal gobernado por DPA y evidencia auditable",
+      "diferencia": "El piloto informal expone a la empresa a responsabilidades legales por brechas; el piloto formal acota contractualmente el alcance, garantiza la purga y protege a ambas partes."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "pilot_security_approval_cycle_days": "Reducción de 60 a 10 días hábiles en debida diligencia gracias al paquete pre-estructurado",
+    "dpa_compliance_clause_coverage": "100% de cláusulas exigidas por leyes 19.628, 21.663 y 21.719 cubiertas"
+  },
+  "bridge_implications": "Estructurar este paquete de evidencia convierte el compliance de seguridad en una ventaja competitiva aceleradora del ciclo de ventas de BRIDGE.",
+  "open_gaps": [
+    "Definición de pólizas de seguro de ciberriesgo que indemnicen incidentes derivados de fallos en infraestructura cloud de terceros."
+  ],
+  "next_question_ids": [
+    "P11-F34",
+    "P11-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

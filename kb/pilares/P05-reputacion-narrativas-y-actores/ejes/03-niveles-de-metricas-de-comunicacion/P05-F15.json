@@ -1,0 +1,145 @@
+{
+  "question_id": "P05-F15",
+  "pilar": "P05",
+  "eje": "Niveles de métricas de comunicación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué causalidad no puede inferirse de un aumento de menciones o sentimiento?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus establece de forma categórica que ninguna de las siguientes cuatro relaciones causales puede inferirse legítimamente a partir de un aumento en el volumen de menciones o en el sentimiento neto superficial: 1) Aumento de menciones no implica mejora de reputación: Un salto en el volumen de publicaciones suele asociarse a controversias, crisis emergentes, burlas virales o ataques coordinados de desinformación (la 'falacia del volumen'); 2) Sentimiento positivo en redes sociales no causa aprobación regulatoria ni licencia social comunitaria: Los algoritmos de sentimiento en plataformas digitales reflejan dinámicas lúdicas o sesgos de cámaras de eco de usuarios urbanos activos, sin guardar relación con la evaluación formal de un fiscalizador ambiental (SMA), un tribunal de justicia o una asamblea indígena bajo Convenio 169 OIT; 3) El sentimiento positivo no explica por sí solo el desempeño financiero o bursátil: No es posible atribuir variaciones en ventas, retención de clientes o precio de la acción exclusivamente al monitoreo comunicacional sin controlar por precios, estacionalidad, inflación, tasas de interés o canales de distribución; y 4) La cobertura de relaciones públicas no equivale a publicidad pagada: Queda desestimado el AVE por asumir una falsa causalidad entre centimetraje editorial y retorno sobre la inversión.",
+  "findings": [
+    {
+      "claim_id": "P05-F15-C1",
+      "claim": "El volumen y sentimiento digital carecen de validez causal para predecir impactos estructurales de negocio o decisiones regulatorias complejas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Asuntos Corporativos y Analítica"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 1: Eje 2, Hallazgo 2.3 (La falacia Sentimiento = Reputación)",
+          "excerpt_short": "El sentimiento en redes es efímero y sesgado por minorías vocales. No equivale a la reputación corporativa ni a la licencia social para operar.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "c8249017-0397-4799-aacc-c1c53ee4662d",
+          "source_title": "AMEC: Barcelona Principles 3.0 (Global Standard for PR & Comms Measurement)",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principio 5: AVEs Are Not the Value of Communication",
+          "excerpt_short": "Advertising Value Equivalents (AVEs) do not measure the value of communications and do not provide an informative metric of future business outcomes.",
+          "source_date": "2020-07-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio metodológico fundamental para evitar falsas inferencias en comités ejecutivos.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Curvas de volumen de menciones",
+      "Tendencias de polaridad de sentimiento"
+    ],
+    "actors": [
+      "Analista de Medios",
+      "Director de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Detección de correlaciones estadísticas",
+      "Aplicación de pruebas de causalidad y variables de control",
+      "Emisión de advertencias de correlación espuria"
+    ],
+    "states": [
+      "Signals_Correlated",
+      "Spurious_Link_Identified",
+      "Cautionary_Note_Issued"
+    ],
+    "outputs": [
+      "Análisis de impacto riguroso sin inferencias causales inválidas"
+    ],
+    "exceptions": [
+      "Presión directiva para justificar el gasto comunicacional con aumentos de ventas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CAUSALITY_BOUNDS",
+      "type": "regla_inferencia",
+      "name": "Límites de Causalidad Comunicacional",
+      "aliases": [
+        "Causal Attribution Bounds"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CAUSALITY_BOUNDS",
+      "predicate": "restringe_inferencias_de",
+      "object_id": "ENT_AMEC_TAXONOMY",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de inferencia",
+      "Correlación Observada": "Las menciones aumentaron un 40% durante el lanzamiento del proyecto.",
+      "Inferencia Causal Inválida": "El aumento de menciones fue la causa directa de que el regulador no formulara cargos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Motor de Síntesis Ejecutiva",
+      "implication": "BRIDGE debe bloquear cualquier texto de recomendación que afirme causalidad directa entre volumen/sentimiento de redes sociales e impacto en resultados financieros o regulatorios.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

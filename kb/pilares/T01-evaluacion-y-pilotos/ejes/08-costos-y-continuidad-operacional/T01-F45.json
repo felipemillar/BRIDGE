@@ -1,0 +1,206 @@
+{
+  "question_id": "T01-F45",
+  "pilar": "T01",
+  "eje": "Costos y continuidad operacional",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué documentos de T01_VERIFICATION_CORRECTIONS sustituyen duplicados o fuentes parciales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El documento rector supremo T01_VERIFICATION_CORRECTIONS (UUID f5a15f9d-310f-4bfc-ae19-70ff8cc2bdcf, 3.493 caracteres) ejecuta tres acciones de sustitución y rectificación editorial con prevalencia canónica absoluta: 1) Sustitución de Fichas de Abstracts por los 9 Textos Completos en PDF de ArXiv: Reemplaza las fichas parciales de /abs/ por sus documentos PDF definitivos, recuperando 246.956 tokens de evidencia experimental directa (Ragas Es et al. 01d6cab0; ALCE Gao et al. e1a0171b; SummEval Fabbri et al. 9df1af53; SelfCheckGPT Manakul et al. c103d2e1; FreshLLMs Vu et al. 142a9e37; NeMo Guardrails Rebedea et al. dee0924c; ARES Saad-Falcon et al. bff33bd6; Social IQa Sap et al. 45cf111e; y Llama Guard Inan et al. d19f3dcf); 2) Descalificación y Exclusión de Bridge Studio MX (e315f267): Descalifica terminantemente a bridgestudio.mx por corresponder a una agencia de branding mexicana ajena al método, ratificando a thebridgeintelligence.ai (6eca40e5) como única entidad oficial; y 3) Deduplicación de Síntesis Internas Previas: Reconcilia los dos juegos de 4 síntesis previas sin contarlas como fuentes de corroboración empírica independiente.",
+  "findings": [
+    {
+      "claim_id": "T01-F45-C1",
+      "claim": "T01_VERIFICATION_CORRECTIONS convalida la sustitución de las fichas breves de abstracts de ArXiv por 9 documentos de texto completo en PDF, multiplicando por 10 el volumen de evidencia científica utilizable y dotando a las respuestas de localizadores exactos de página y sección.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_VERIFICATION_CORRECTIONS"
+      },
+      "evidence": [
+        {
+          "source_id": "f5a15f9d-310f-4bfc-ae19-70ff8cc2bdcf",
+          "source_title": "T01_VERIFICATION_CORRECTIONS: Reconciliación de Tareas y Evidencia Canónica",
+          "original_url": null,
+          "locator": "Sección 1: Convalidación de PDFs de Texto Completo",
+          "excerpt_short": "Se aprueba y convalida la incorporación de los 9 documentos PDF de texto completo de ArXiv, los cuales prevalecen jerárquicamente sobre las páginas breves de abstract catalogadas originalmente.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Mandato rector canónico del cuaderno T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F45-C2",
+      "claim": "T01_VERIFICATION_CORRECTIONS prohíbe taxativamente citar a Bridge Studio MX (e315f267) como fuente de los módulos de inteligencia corporativa de The Bridge Intelligence, corrigiendo un error histórico de catalogación en los cuadernos preliminares.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_VERIFICATION_CORRECTIONS"
+      },
+      "evidence": [
+        {
+          "source_id": "f5a15f9d-310f-4bfc-ae19-70ff8cc2bdcf",
+          "source_title": "T01_VERIFICATION_CORRECTIONS: Reconciliación de Tareas y Evidencia Canónica",
+          "original_url": null,
+          "locator": "Sección 3: Exclusión de Entidades Ajenas",
+          "excerpt_short": "La fuente bridgestudio.mx corresponde a una agencia creativa mexicana sin relación con la arquitectura Saber, Escuchar, Hablar y Relacionar. La única referencia autorizada es thebridgeintelligence.ai.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Corrección canónica explícita en documento rector.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Inventario preliminar de fuentes de T01",
+      "Dictamen T01_VERIFICATION_CORRECTIONS"
+    ],
+    "actors": [
+      "Auditor Antigravity",
+      "Gestor de Manifiesto Canónico fuentes/T01.json"
+    ],
+    "steps": [
+      "Identificar los 9 UUIDs de PDFs de ArXiv y vincularlos a sus abstracts",
+      "Marcar Bridge Studio MX (e315f267) con flag canónico de exclusión 'erronea_atribucion'",
+      "Consolidar la jerarquía de precedencia editorial en el manifiesto JSON",
+      "Auditar que el 100% de las respuestas de T01 acaten esta sustitución"
+    ],
+    "states": [
+      "REVISION_CORRECCIONES",
+      "SUSTITUCION_FUENTES",
+      "PURGA_ATRIBUCIONES_ERRONEAS",
+      "MANIFIESTO_SELLADO"
+    ],
+    "outputs": [
+      "Manifiesto fuentes/T01.json con 75 fuentes depuradas",
+      "Reglas de prevalencia verificadas"
+    ],
+    "exceptions": [
+      "Cualquier cita generada que apunte a bridgestudio.mx queda vetada y se reemplaza por thebridgeintelligence.ai (6eca40e5)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "T01_RECTOR",
+      "type": "documento",
+      "name": "T01_VERIFICATION_CORRECTIONS",
+      "aliases": [
+        "f5a15f9d"
+      ]
+    },
+    {
+      "entity_id": "THE_BRIDGE_CANONICA",
+      "type": "organizacion",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "thebridgeintelligence.ai / 6eca40e5"
+      ]
+    },
+    {
+      "entity_id": "BRIDGE_STUDIO_MX_EXCLUIDA",
+      "type": "organizacion",
+      "name": "Bridge Studio MX (Excluida)",
+      "aliases": [
+        "e315f267"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "T01_RECTOR",
+      "predicate": "descalifica_a",
+      "object_id": "BRIDGE_STUDIO_MX_EXCLUIDA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F45-C2"
+    },
+    {
+      "subject_id": "T01_RECTOR",
+      "predicate": "valida_a",
+      "object_id": "THE_BRIDGE_CANONICA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F45-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Fichas de Abstracts (/abs/)",
+      "item_b": "PDFs de Texto Completo",
+      "dimension": "Rigor de citación",
+      "conclusion": "Los abstracts solo contienen síntesis preliminares; los PDFs contienen los experimentos, fórmulas y datos reproducibles."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de sustitución canónica de fuentes en T01",
+      "denominator": "Total fuentes con corrección aplicable",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Blindaje editorial y metodológico supremo del cuaderno T01 frente a revisiones técnicas externas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F46",
+    "T01-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

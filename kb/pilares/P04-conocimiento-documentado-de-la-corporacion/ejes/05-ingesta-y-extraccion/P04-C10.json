@@ -1,0 +1,138 @@
+{
+  "question_id": "P04-C10",
+  "pilar": "P04",
+  "eje": "Ingesta y extracción",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué sigue sin prueba sobre ingesta y extracción, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Vacío e Incertidumbre: Permanece sin prueba empírica la extracción completamente desatendida de tablas multipágina con celdas fusionadas asimétricas y notas al pie en memorias de empresas chilenas, donde frecuentemente se combinan formatos contables IFRS con narrativas de sostenibilidad CMF. Fuente Parcial: Ni et al. (2023) diagnostica la fragilidad pero no evalúa modelos multimodales recientes sobre documentos en español chileno. Validación Mínima Requerida: Ejecución de la Etapa 2 de la agenda empírica en P04_GAPS_AND_VALIDATION: prueba piloto de ingesta sobre 15 memorias NCG 461 reales (2023-2025) de sectores minero, bancario, energético y retail, auditando que la precisión estructural sea ≥ 98% y que exista cero omisión de notas al pie.",
+  "findings": [
+    {
+      "claim_id": "P04-C10-C1",
+      "claim": "La extracción perfecta de tablas multipágina en PDFs de memorias CMF sigue siendo un desafío abierto que requiere validación empírica sobre un corpus piloto de 15 memorias chilenas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Agenda Empírica P04"
+      },
+      "evidence": [
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2 y Sección 4: Etapa 2: Prueba Piloto de Ingesta y Parsing",
+          "excerpt_short": "Evaluar la precisión de extracción en un corpus piloto de 15 memorias anuales integradas (2023-2025). Criterio de éxito: precisión estructural ≥ 98% y cero omisión de notas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Protocolo de validación empírica formalizado en P04_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus piloto de 15 memorias NCG 461"
+    ],
+    "actors": [
+      "Pilot Benchmark Runner",
+      "Structural Integrity Verifier"
+    ],
+    "steps": [
+      "Ejecución de parsing sobre las 15 memorias",
+      "Conteo de celdas desalineadas y notas perdidas",
+      "Cálculo de porcentaje de precisión estructural"
+    ],
+    "states": [
+      "Pilot_Running",
+      "Errors_Counted",
+      "Pass_Threshold_Evaluated"
+    ],
+    "outputs": [
+      "Informe de rendimiento del pipeline de ingesta sobre memorias CMF reales"
+    ],
+    "exceptions": [
+      "Memorias escaneadas de baja resolución de emisores pequeños"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GAP_TABLE_PARSING",
+      "type": "vacio_epistemico",
+      "name": "Vacío de Precisión en Extracción Tabular NCG 461",
+      "aliases": [
+        "NCG 461 Table Parsing Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GAP_TABLE_PARSING",
+      "predicate": "requiere_prueba_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C10-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Alcance de prueba",
+      "Pruebas sintéticas en inglés": "No capturan la estructura legal de los balances y notas de la CMF de Chile.",
+      "Piloto de 15 memorias NCG 461": "Valida el comportamiento real del software ante la tipografía y maquetación de empresas IPSA."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe ejecutar esta prueba piloto antes del lanzamiento comercial para certificar que no omite notas al pie en matrices ESG.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP-P04-05",
+      "description": "Falta de medición empírica formal de precisión estructural en tablas multipágina sobre el corpus regulatorio de la CMF NCG 461.",
+      "missing_information": "Benchmark de extracción sobre 15 memorias anuales de empresas IPSA 2023-2025."
+    }
+  ],
+  "next_question_ids": [
+    "P04-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F43",
+  "pilar": "P09",
+  "eje": "Calidad, acceso y correcciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué pruebas muestran completitud, exactitud y actualización de un registro de compromiso?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La confiabilidad y validez jurídica de un registro de compromiso se audita mediante tres pruebas formales de calidad de datos: 1) Prueba de Completitud Estructural: Verificación automatizada de que el registro contiene el 100% de los 14 campos nucleares obligatorios (código, título SMART, dueño individual único verificado, beneficiario, fecha límite válida, categoría, tipo de evidencia requerida y estado canónico), rechazando cualquier registro con campos 'N/A' o asignaciones colectivas ambiguas; 2) Prueba de Exactitud y Verificabilidad Documental: Comprobación de que el compromiso cuenta con un documento probatorio de origen adjunto (acta de reunión firmada, oficio de autoridad o RCA) con hash criptográfico SHA-256 verificado, y que para el estado CUMPLIDO_CERRADO existe la evidencia probatoria exigida (acta de recepción o comprobante SSA SMA); y 3) Prueba de Actualización Continua y Frescura: Evaluación de que la telemetría del compromiso registra actividad reciente (reporte de avances o revisión de hitos en los últimos 30 días) y que las alertas escalonadas (T-30, T-15, T-7) se encuentran activas y sincronizadas sin derivas temporales.",
+  "findings": [
+    {
+      "claim_id": "P09-F43-C1",
+      "claim": "La auditoría de calidad de un compromiso exige verificar completitud en 14 campos obligatorios, exactitud documental con hashes criptográficos y frescura operativa con revisiones en los últimos 30 días.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "data_quality_tests_commitments",
+      "evidence": [
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R3 'Auditoría de Calidad y Criterios de Completitud de Datos'",
+          "retrieved_at": null,
+          "excerpt_short": "Todo compromiso registrado debe superar la triple prueba de calidad: 1) Completitud (14 atributos obligatorios sin nulos), 2) Exactitud probatoria (hash SHA-256 de actas) y 3) Frescura (telemetría de seguimiento activa). Se rechazan compromisos huérfanos o con dueños impersonales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: The Proving Problem — Why DIY AI Can't Prove Compliance (Commitment Tracking)",
+          "source_id": "27ce9bc8-70cf-4dc0-ac19-d8787d3bccd6",
+          "locator": "Section 'Audit Verification Suite for Social Commitments', p. 16-20",
+          "retrieved_at": null,
+          "excerpt_short": "Auditors require verifiable proof that a commitment was not invented after the fact: an immutable creation timestamp, linked signed minutes, a named human owner, and signed completion certificates.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia de P09_VERIFICATION_CORRECTIONS y concordancia con Boréalis.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registro de compromiso",
+      "Archivos adjuntos",
+      "Historial de modificaciones"
+    ],
+    "actors": [
+      "Auditor Interno de Calidad",
+      "Bot de Calidad de Datos BRIDGE",
+      "Dueño del Compromiso"
+    ],
+    "steps": [
+      "Ejecución de suite de validación Pydantic",
+      "Verificación de hashes criptográficos en almacenamiento S3",
+      "Cálculo de índice de completitud y frescura",
+      "Asignación de insignia 'Audit Approved' o marcado con bandera de anomalía"
+    ],
+    "states": [
+      "Registro Evaluado",
+      "Validación Exitosa",
+      "Calidad Certificada"
+    ],
+    "outputs": [
+      "Reporte de integridad y salud de la base de datos de compromisos"
+    ],
+    "exceptions": [
+      "Registros históricos con evidencia incompleta son puestos en cuarentena administrativa hasta su regularización"
+    ]
+  },
+  "entities": [
+    "P09_VERIFICATION_CORRECTIONS",
+    "Boréalis SRM",
+    "Prueba de Completitud",
+    "Hash SHA-256",
+    "Índice de Frescura"
+  ],
+  "relations": [
+    {
+      "from": "Entity_Commitment",
+      "to": "Prueba de Completitud",
+      "type": "AUDITED_BY"
+    },
+    {
+      "from": "Entity_Commitment",
+      "to": "Hash SHA-256",
+      "type": "VERIFIED_THROUGH"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Datos asumidos como ciertos vs Verificación criptográfica y documental",
+      "diferencia": "Asumir datos ciertos crea sorpresas fatales en juicios o fiscalizaciones; la verificación criptográfica garantiza defensa probatoria indiscutible."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "data_completeness_threshold": "100% de campos obligatorios poblados",
+    "evidence_integrity_check": "100% hashes SHA-256 válidos"
+  },
+  "bridge_implications": "Implementar un widget 'Score de Calidad del Compromiso' en la vista de detalle de cada compromiso en BRIDGE.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F44",
+    "P09-F45"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

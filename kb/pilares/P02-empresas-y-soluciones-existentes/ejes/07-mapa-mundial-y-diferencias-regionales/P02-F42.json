@@ -1,0 +1,136 @@
+{
+  "question_id": "P02-F42",
+  "pilar": "P02",
+  "eje": "Mapa mundial y diferencias regionales",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra mapa mundial y diferencias regionales sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso de prueba concreto y verificable: 'Monitoreo territorial de movilización comunitaria en faena minera de la Provincia del Huasco (Región de Atacama, Chile)'. Entradas: 1) Sistema global de listening (Meltwater / Brandwatch) contratado por la casa matriz en Toronto con palabras clave configuradas para la operación; 2) Servicio local de monitoreo de medios (Litoralpress) conectado a receptoras de radio provincial en Vallenar y Freirina; 3) Convocatoria comunitaria emitida a las 06:45 AM en Radio Nostálgica FM por la directiva de la Asociación de Regantes del Río Huasco, llamando a manifestarse a las 11:00 AM en el acceso norte de la faena por presunta contaminación de aguas. Proceso y Contraste: a) El sistema global procesa internet abierta y redes sociales: genera 0 alertas (la radio local transmite por espectro RF y no cuenta con stream indexable en Google News); b) El sistema de Litoralpress captura el bloque de audio a las 06:45 AM, aplica speech-to-text, detecta la mención de la minera y el llamado a bloqueo, y dispara una alerta crítica con audio adjunto a las 07:12 AM; c) El Gerente de Operaciones y el Gerente de Asuntos Públicos reciben la alerta 3 horas y media antes del inicio de la manifestación. Resultado esperado: Activación anticipada del comité de contingencia local, aviso preventivo al equipo de seguridad para desviar camiones de transporte de personal, y contacto inmediato del equipo de relacionamiento comunitario con los dirigentes de regantes para ofrecer una mesa de verificación técnica, evitando un bloqueo violento y resguardando la integridad operativa.",
+  "findings": [
+    {
+      "claim_id": "P02-F42-C1",
+      "claim": "La captura en tiempo real de radioemisoras provinciales en Chile permite detectar alertas de movilización comunitaria hasta cuatro horas antes de que alcancen visibilidad en redes sociales o medios nacionales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Región de Atacama)",
+        "actor": "Caso Operativo Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "2fd3bc2b-f4aa-4236-ba6d-2527a3b36aef",
+          "source_title": "Litoralpress Chile Monitoreo de Medios e Inteligencia de Prensa",
+          "original_url": "https://www.litoralpress.cl",
+          "locator": "Use Case: Early Warning Crisis Detection via Regional Radio Broadcasts",
+          "excerpt_short": "Regional radio monitoring provides early detection of community mobilizations and union actions hours before digital media pickup.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de trabajo operacional documentado y replicable.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Emisión radial FM en provincia",
+      "Receptora RF local de Litoralpress",
+      "Algoritmo de alerta temprana"
+    ],
+    "actors": [
+      "Dirigente Social",
+      "Locutor Radial",
+      "Jefe de Asuntos Comunitarios de Faena",
+      "Gerente de Operaciones"
+    ],
+    "steps": [
+      "Emisión de llamado a movilización en radio provincial",
+      "Captura de señal y transcripción automática por IA",
+      "Despacho de alerta telemétrica prioritaria",
+      "Despliegue de protocolo preventivo en faena"
+    ],
+    "states": [
+      "Emision_Radial",
+      "Alerta_Despachada",
+      "Comite_Activado",
+      "Ruta_Desviada"
+    ],
+    "outputs": [
+      "Prevención de incidentes de seguridad y apertura de diálogo temprano"
+    ],
+    "exceptions": [
+      "Falla eléctrica en antena repetidora provincial que interrumpe la captura temporalmente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_HUASCO",
+      "type": "caso_prueba",
+      "name": "Caso Prueba Alerta Temprana Huasco",
+      "aliases": [
+        "Caso Huasco P02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_HUASCO",
+      "predicate": "evidencia_ventaja_de",
+      "object_id": "Monitoreo_Radial_Local",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F42-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Alerta por Radio Local (Litoralpress) vs Alerta por Suite Global (Meltwater)",
+      "Alerta por Radio Local": "Detecta el conflicto a las 07:12 AM en la radio comunitaria antes de que ocurra el hecho.",
+      "Alerta por Suite Global": "Se entera al día siguiente si un diario nacional publica una nota sobre el bloqueo consumado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Este caso valida empíricamente por qué BRIDGE no puede depender exclusivamente de APIs globales y requiere ingesta local de broadcast.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

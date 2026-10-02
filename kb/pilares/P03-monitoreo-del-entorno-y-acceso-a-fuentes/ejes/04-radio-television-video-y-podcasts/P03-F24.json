@@ -1,0 +1,130 @@
+{
+  "question_id": "P03-F24",
+  "pilar": "P03",
+  "eje": "Radio, televisión, video y podcasts",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra radio, televisión, video y podcasts sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso: Detección y alerta de una entrevista radial de última hora a un dirigente gremial del sector energía en una emisora de Concepción. Entradas: 1) Stream de audio en vivo de Radio Bío-Bío Concepción segmentado en chunks de 30 segundos; 2) Transcripción continua ejecutada con Whisper donde la palabra 'descarbonización acelerada' sufre un error de transcripción fonética debido a la velocidad del habla; 3) Módulo de búsqueda semántica vectorial densa que proyecta la transcripción ruidosa al espacio de embeddings y recupera el concepto corporativo 'Riesgo Regulatorio de Transición Energética'; y 4) Verificación de la estación y marca temporal (08:14 AM). Resultado esperado: El sistema genera una alerta institucional clasificada como 'Evidencia Primaria (Voz Viva Directa)', enlaza el fragmento de audio de 45 segundos con su transcripción corregida semánticamente, y notifica a la gerencia de asuntos públicos a las 08:22 AM (latencia de 8 minutos, dentro del límite técnico de procesamiento de streaming).",
+  "findings": [
+    {
+      "claim_id": "P03-F24-C1",
+      "claim": "Un caso de monitoreo de radio regional estructurado demuestra cómo la búsqueda vectorial densa compensa los errores fonéticos de ASR en el habla rápida chilena, generando alertas verificables con baja latencia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Concepción)",
+        "actor": "Caso Broadcast P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.3: Broadcast Audiovisual - Hipótesis Operativa",
+          "excerpt_short": "Requiere transcripción con Whisper... combinada con búsqueda vectorial semántica que capture la intención del hablante aunque la palabra técnica esté deformada o incompleta.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los modelos operacionales documentados del mapa de evidencia.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Audio Stream Radio Bío-Bío",
+      "Whisper Inference Engine",
+      "Vector Embedding Store"
+    ],
+    "actors": [
+      "Broadcast Harvester",
+      "Vector Matcher",
+      "Alert Dispatcher"
+    ],
+    "steps": [
+      "Ingesta y segmentación de audio",
+      "Inferencia ASR Whisper",
+      "Recuperación semántica por embedding",
+      "Envío de alerta"
+    ],
+    "states": [
+      "Audio_Streaming",
+      "Transcript_Vectorized",
+      "Alert_Dispatched"
+    ],
+    "outputs": [
+      "Alerta temprana de declaración gremial con fragmento de audio verificable"
+    ],
+    "exceptions": [
+      "Falla temporal de conexión de streaming de la radioemisora"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_RADIO_REGIONAL",
+      "type": "caso_de_uso",
+      "name": "Caso Demostrativo Monitoreo Radial Bío-Bío",
+      "aliases": [
+        "Regional Radio Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_RADIO_REGIONAL",
+      "predicate": "valida_resiliencia_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F24-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar recuperación vectorial sobre transcripciones de audio para blindar las alertas frente a deformaciones fonéticas locales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "question_id": "P04-F25",
+  "pilar": "P04",
+  "eje": "Ingesta y extracción",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué pasos permiten extraer tablas, anexos, cifras y notas de PDF, web y archivos ofimáticos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La extracción de tablas, anexos, cifras y notas en memorias corporativas complejas se ejecuta mediante un pipeline en 4 pasos especializados: 1) Análisis de Maquetación Sensible al Layout (Layout-Aware Document Parsing): identificación de bloques mediante detección de objetos visuales (títulos, columnas de texto, matrices tabulares e imágenes); 2) Normalización Tabular Estructurada (Table-Aware Extraction): conversión de tablas multipágina y celdas combinadas a representaciones estructuradas en Markdown enriquecido o JSON-LD, donde cada celda conserva explícitamente sus encabezados de fila y columna; 3) Anclaje de Notas al Pie (Footnote & Cross-Reference Linking): extracción y ligazón algorítmica de llamadas numéricas o asteriscos al pie de página con sus celdas de origen correspondientes; y 4) Preservación de Trazabilidad Criptográfica: asignación de un hash SHA-256 a cada fragmento extraído junto con coordenadas de bounding-box (página, coordenadas x/y) para permitir la inspección visual inmediata del PDF original.",
+  "findings": [
+    {
+      "claim_id": "P04-F25-C1",
+      "claim": "El procesamiento de memorias corporativas exige layout-aware parsing y conversión tabular estructurada con anclaje de notas al pie, superando la pérdida de datos del OCR plano tradicional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Ingeniería de Ingesta Documental"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Fase 2: Parsing Estructurado y Segmentación Multi-Nivel",
+          "excerpt_short": "Table-Aware Extraction: identificación y conversión de tablas a representaciones estructuradas (Markdown tables o JSON-LD con encabezados explícitos) y Parent-Document Chunking.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "93cd6e04-48bd-4b62-b39f-6784d75351da",
+          "source_title": "RAG for Large Language Models: A Survey (Gao et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2312.10997",
+          "locator": "Sección 2.1: Advanced RAG - Pre-retrieval Strategies",
+          "excerpt_short": "Highlights the critical need for structure-aware parsing and table extraction over naive text slicing to preserve relational integrity in complex business documents.",
+          "source_date": "2023-12-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Encuesta fundacional de RAG Gao et al. y arquitectura de ingesta del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria Anual PDF de 250 páginas con tablas complejas"
+    ],
+    "actors": [
+      "Layout-Aware Parser",
+      "Table Normalizer",
+      "Footnote Linker"
+    ],
+    "steps": [
+      "Segmentación visual de layout",
+      "Conversión tabular a Markdown estructurado",
+      "Vinculación de notas explicativas al pie",
+      "Indexación de bounding-box"
+    ],
+    "states": [
+      "Raw_PDF",
+      "Layout_Parsed",
+      "Structured_Chunks"
+    ],
+    "outputs": [
+      "Fragmentos tabulares con encabezados embebidos y notas explicativas ancladas"
+    ],
+    "exceptions": [
+      "Tablas escaneadas como imagen sin capa de texto vectorial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_LAYOUT_PARSER",
+      "type": "componente_tecnologico",
+      "name": "Extractor Sensible al Layout y Tablas",
+      "aliases": [
+        "Layout-Aware Table Parser"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LAYOUT_PARSER",
+      "predicate": "procesa_ingesta_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F25-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Preservación tabular",
+      "Extracción con OCR plano": "Convierte la tabla en una lista confusa de números desalineados de sus columnas.",
+      "Extracción estructurada layout-aware": "Mantiene cada cifra asociada a su año, indicador y notas metodológicas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incorporar este parser estructurado para evitar que los directivos reciban cifras descontextualizadas de sus notas al pie.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F26"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "question_id": "P06-X32",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Ablación y valor del cruce",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué sigue sin prueba sobre ablación y valor del cruce, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal un ensayo controlado aleatorizado longitudinal (Longitudinal RCT) que mida el impacto causal del uso continuado de The Bridge Intelligence sobre la reputación corporativa a largo plazo (RepTrak score / confianza comunitaria) tras 12 a 24 meses de operación real en empresas en Chile (P06_GAPS_AND_VALIDATION, Sección 3.5). Las fuentes del corpus (RepTrak, AMEC, Page Society) proporcionan marcos teóricos y conceptuales excelentes, pero ningún estudio empírico ha demostrado estadísticamente la atribución causal exclusiva del software sobre percepciones públicas multicausales (influenciadas por factores macroeconómicos, políticos y operacionales). La validación mínima necesaria consiste en diseñar un estudio cuasiexperimental de cohorte paralela durante 18 meses, comparando 5 corporaciones que utilizan activamente el cruce de BRIDGE contra 5 empresas de control similares, midiendo la frecuencia de crisis escaladas y la evolución del índice de litigiosidad regulatoria.",
+  "findings": [
+    {
+      "claim_id": "P06-X32-C1",
+      "claim": "La atribución causal directa del software sobre la reputación corporativa de largo plazo permanece como límite empírico insuperable en la literatura actual.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Sociología Corporativa y Reputación"
+      },
+      "evidence": [
+        {
+          "source_id": "8801b08d-0b93-40cc-b2ed-ad1d3978cd68",
+          "source_title": "P06_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación Empírica (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 3.5: Imposibilidad de Atribución Reputacional Causal Unívoca",
+          "excerpt_short": "La reputación depende de la conducta real de la empresa y variables exógenas. El software mejora la inteligencia del vocero pero no puede garantizar blindaje reputacional causal.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "708d3910-f8eb-452b-97ed-187a0a5a3338",
+          "source_title": "RepTrak - Corporate Reputation Measurement Framework",
+          "original_url": "https://www.reptrak.com/blog/5-questions-for-reputation-intelligence/",
+          "locator": "Drivers of Reputation: Products, Governance, Citizenship",
+          "excerpt_short": "Corporate reputation is driven by holistic public perceptions of enterprise actions, making isolated software causality impossible to isolate without extensive multi-year panel controls.",
+          "source_date": "2024-02-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Límite metodológico reconocido unánimemente por Page Society, AMEC y RepTrak.",
+      "epistemic_status_original": "vacio_empirico_documentado",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos de panel de 10 corporaciones durante 18 meses"
+    ],
+    "actors": [
+      "Equipo de Investigación Académica",
+      "Auditores RepTrak"
+    ],
+    "steps": [
+      "Diseño de cohortes emparejadas (matching)",
+      "Seguimiento de eventos de crisis y litigios",
+      "Análisis de regresión multivariada con variables de control"
+    ],
+    "states": [
+      "Study_Designed",
+      "Longitudinal_Pending"
+    ],
+    "outputs": [
+      "Reporte de impacto causal a largo plazo"
+    ],
+    "exceptions": [
+      "Eventos exógenos catastróficos que distorsionan el panel de control"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "GAP_LONGITUDINAL_REPUTATION",
+      "type": "vacio_investigacion",
+      "name": "Atribución Causal Reputacional a Largo Plazo",
+      "aliases": [
+        "Longitudinal Reputation Causality Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "GAP_LONGITUDINAL_REPUTATION",
+      "predicate": "limita_promesas_comerciales_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X32-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Obliga a la fuerza de ventas a no prometer 'mejoras del 20% en reputación', sino mejoras verificables en velocidad, consistencia y prevención de errores.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Inexistencia de estudios longitudinales de panel con control exógeno que aíslen el impacto causal de plataformas RAG sobre índices de reputación empresarial.",
+      "minimum_validation": "Estudio de panel cuasiexperimental de 18 meses con 10 empresas (5 con BRIDGE, 5 controles) midiendo litigiosidad y crisis.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

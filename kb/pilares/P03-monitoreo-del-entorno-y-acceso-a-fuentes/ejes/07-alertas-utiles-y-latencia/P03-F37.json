@@ -1,0 +1,131 @@
+{
+  "question_id": "P03-F37",
+  "pilar": "P03",
+  "eje": "Alertas útiles y latencia",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Cómo se define relevancia de una alerta para cada rol y severidad?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La relevancia de una alerta se define mediante una matriz bidimensional de rol corporativo y severidad de impacto: 1) Nivel Ejecutivo / Directorio (CEO, CCO, Directorio): Relevancia restringida exclusivamente a Severidad Crítica (alteración de continuidad operacional, Hecho Esencial en CMF/SEC, demanda judicial de alto impacto, o crisis reputacional de alcance nacional); entrega inmediata push multicanal; 2) Nivel Gerencial de Asuntos Corporativos y Regulatorios: Relevancia ampliada a Severidades Crítica y Alta (ingreso de proyectos de ley sectoriales, resoluciones sancionatorias de superintendencias, declaraciones de ministros y movilizaciones comunitarias locales); entrega inmediata o en bloques horarios (flash reports); y 3) Nivel de Analistas de Inteligencia y Monitoreo: Relevancia total (incluye Severidad Media y Baja: señales débiles, menciones periféricas, tópicos emergentes de BERTopic y alertas de coordinación temporal); entrega mediante tablero analítico en tiempo real.",
+  "findings": [
+    {
+      "claim_id": "P03-F37-C1",
+      "claim": "La relevancia de las alertas se calibra según el rol corporativo: la alta dirección recibe exclusivamente impactos críticos inmediatos, las gerencias de asuntos corporativos gestionan cambios regulatorios y comunitarios, y los analistas operan sobre el flujo completo de señales débiles.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Matriz de Alertas P03"
+      },
+      "evidence": [
+        {
+          "source_id": "5eaa5b99-624c-4877-87be-66c339c7b6d4",
+          "source_title": "AMEC Barcelona Principles 3.0 & Integrated Evaluation Framework",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Integrated Evaluation Framework - Stakeholder Targeting",
+          "excerpt_short": "Measurement and alerts must be tailored to decision-maker needs, aligning operational signals with organizational governance levels.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en el marco integrado de evaluación de AMEC y diseño de gobernanza.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señal entrante clasificada",
+      "Matriz de roles y suscripciones"
+    ],
+    "actors": [
+      "Alert Routing Engine",
+      "Role-Based Dispatcher"
+    ],
+    "steps": [
+      "Cálculo de severidad de impacto",
+      "Filtrado por perfil de usuario",
+      "Envío por canal preferente"
+    ],
+    "states": [
+      "Signal_Evaluated",
+      "Audience_Targeted",
+      "Notification_Sent"
+    ],
+    "outputs": [
+      "Notificación adaptada en contenido y canal según el rol directivo"
+    ],
+    "exceptions": [
+      "Crisis de fin de semana que requiera escalar alertas medias a críticas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ALERT_ROLE_MATRIX",
+      "type": "matriz_gobernanza",
+      "name": "Matriz de Roles y Severidad de Alertas",
+      "aliases": [
+        "Alert Role-Severity Matrix"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ALERT_ROLE_MATRIX",
+      "predicate": "gobierna_despacho_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F37-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Destinatario de alerta",
+      "CEO / Directorio": "Máximo 1 a 2 alertas por semana; solo eventos materiales con impacto en valor o licencia social.",
+      "Equipo de Asuntos Públicos": "Seguimiento diario de trámites legislativos, medios regionales y conflictos vecinales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar filtros estrictos de severidad por rol de usuario para evitar que el C-Suite desactive las notificaciones por saturación.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F38"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

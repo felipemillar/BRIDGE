@@ -1,0 +1,150 @@
+{
+  "question_id": "P10-C01",
+  "pilar": "P10",
+  "eje": "Origen de solicitudes y señales",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre origen de solicitudes y señales, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia central radica en la amplitud del origen de las señales: Síntesis internas iniciales (P10_QUALITY_ADDENDUM) asumían una cobertura universal automatizada donde cualquier mención en internet ingresaba como ticket prioritario; en contraste, las fuentes de arquitectura enterprise (Broadsight 'System of Record' y ContentGrip) restringen el canal de entrada a solicitudes formalmente canalizadas por un único buzón corporativo unificado (single inbox COMM-AAAA-NNNN) para evitar saturación y desinformación. Según P10_VERIFICATION_CORRECTIONS (f043631e), que goza de prevalencia canónica, prevalece la versión de Broadsight: El sistema de registro exige centralización estricta mediante tickets formalizados con SLA diferenciado, tratando las señales difusas de redes sociales como alertas periféricas de monitoreo que solo se convierten en ticket de respuesta externa tras triaje humano y verificación de impacto material.",
+  "findings": [
+    {
+      "claim_id": "P10-C01-C1",
+      "claim": "Conforme a P10_VERIFICATION_CORRECTIONS y Broadsight, prevalece el modelo de registro centralizado con triaje y ticket formal sobre la ingesta automática indiscriminada de señales de redes sociales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "intake_discrepancy_resolution",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Reglas de Prevalencia Canónica y Filtrado de Ingesta'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica rectora: P10_VERIFICATION_CORRECTIONS prevalece sobre addendums previos. La ingesta debe exigir ticket formal COMM-AAAA-NNNN; el ruido de redes sociales no genera respuesta automática sin triaje humano de riesgo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Unified Inbox and Ingestion Architecture'",
+          "retrieved_at": null,
+          "excerpt_short": "A single pane of glass consolidates multi-channel inquiries into uniquely identified tickets, establishing unambiguous ownership before drafting begins.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución explícita en el documento de correcciones canónicas rector.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales periféricas de redes",
+      "Correos de prensa formales",
+      "Requerimientos de autoridades"
+    ],
+    "actors": [
+      "Oficial de Triaje",
+      "Motor de Ingesta BRIDGE",
+      "Director de Comunicaciones"
+    ],
+    "steps": [
+      "Captura de solicitudes por buzón oficial COMM-AAAA-NNNN",
+      "Evaluación de umbral de materialidad sobre señales no estructuradas",
+      "Descarte de ruido irrelevante",
+      "Creación de ticket formal de respuesta en estado DRAFT_INGESTION"
+    ],
+    "states": [
+      "SIGNAL_DETECTED",
+      "THRESHOLD_EVALUATED",
+      "TICKET_FORMALIZED"
+    ],
+    "outputs": [
+      "Ticket validado listo para asignación"
+    ],
+    "exceptions": [
+      "Campañas coordinadas de bots son marcadas como desinformación y no abren tickets individuales"
+    ]
+  },
+  "entities": [
+    "Buzón Unificado",
+    "COMM-AAAA-NNNN",
+    "Broadsight System of Record",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "P10_QUALITY_ADDENDUM",
+      "type": "SUPERSEDES"
+    },
+    {
+      "from": "Señal Externa",
+      "to": "Ticket",
+      "type": "CONDITIONAL_CREATION"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta automática a cada tuit vs Triaje centralizado gobernado",
+      "diferencia": "La respuesta a cada tuit alimenta trolls y genera declaraciones contradictorias; el triaje gobernado concentra la atención en requerimientos legítimos y amenazas materiales."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Ingesta universal automática vs Triaje formal",
+      "resolution": "Prevalece el triaje formal centralizado con generación de ticket COMM-AAAA-NNNN."
+    }
+  ],
+  "metrics_and_denominators": {
+    "intake_formalization_ratio": "100% de declaraciones emitidas vinculadas a un ticket formal"
+  },
+  "bridge_implications": "Impide que BRIDGE incurra en sobre-reacciones comunicacionales ante ruido no verificado en internet.",
+  "open_gaps": [
+    "Integración técnica de WhatsApp Business API para ingesta de consultas comunitarias de zonas rurales."
+  ],
+  "next_question_ids": [
+    "P10-C02",
+    "P10-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

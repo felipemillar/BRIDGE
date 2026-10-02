@@ -1,0 +1,139 @@
+{
+  "question_id": "P04-C16",
+  "pilar": "P04",
+  "eje": "Evaluación de calidad documental",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué sigue sin prueba sobre evaluación de calidad documental, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Vacío e Incertidumbre: Sigue sin prueba empírica formal el comportamiento del sistema ante una crisis reputacional en tiempo real, donde coexisten tres factores de estrés simultáneos: 1) Acusación pública de greenwashing en medios; 2) Cuestionamiento de comunidades por uso de agua continental; y 3) Filtración de un borrador preliminar de política ambiental. Fuentes Parciales: Los benchmarks académicos (RAGAS, FActScore) evalúan preguntas aisladas en condiciones de laboratorio estáticas, pero no miden el desempeño ante gabinetes de crisis bajo presión temporal. Validación Mínima Requerida: Ejecución de la Etapa 4 de la agenda empírica en P04_GAPS_AND_VALIDATION: 'Simulación de Gabinete de Crisis (Stress Test de Vocería)', evaluando que el sistema genere minutas 100% trazables a memorias CMF oficiales en < 3 minutos por escenario, con diferenciación explícita entre hechos verificados y compromisos en curso, y con 100.0% de contención de documentos bajo embargo (cero filtración ABAC).",
+  "findings": [
+    {
+      "claim_id": "P04-C16-C1",
+      "claim": "La validación definitiva de la calidad documental requiere una prueba de estrés de gabinete de crisis que evalúe la generación de minutas en menos de 3 minutos con cero fuga de embargos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Protocolo de Validación Empírica"
+      },
+      "evidence": [
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 4: Agenda y Protocolo de Validación Empírica (Etapa 4)",
+          "excerpt_short": "Simular tres escenarios de crisis reputacional (greenwashing, agua en comunidad indígena, filtración de borrador). Criterio: minutas trazables en < 3 minutos y cero fuga ABAC.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Cierre de la agenda empírica formalizada en P04_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "3 escenarios simulados de crisis corporativa"
+    ],
+    "actors": [
+      "Crisis Simulation Controller",
+      "Executive Spokesperson",
+      "ABAC Compliance Officer"
+    ],
+    "steps": [
+      "Inyección de escenario de crisis",
+      "Medición de tiempo de respuesta de la IA (< 3 min)",
+      "Auditoría de citas oficiales y cero fuga de borradores"
+    ],
+    "states": [
+      "Crisis_Injected",
+      "Briefing_Generated",
+      "Stress_Test_Passed"
+    ],
+    "outputs": [
+      "Certificado de aptitud del sistema para asistencia en gabinetes de crisis"
+    ],
+    "exceptions": [
+      "Demora superior a 3 minutos en generación de minuta de vocería"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GAP_CRISIS_SIMULATION",
+      "type": "vacio_epistemico",
+      "name": "Vacío de Validación en Simulación de Gabinete de Crisis",
+      "aliases": [
+        "Crisis Stress Test Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GAP_CRISIS_SIMULATION",
+      "predicate": "cierra_validacion_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-C16-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Condición de prueba",
+      "Benchmark estático": "Evalúa preguntas independientes sin presión de tiempo ni documentos bajo embargo.",
+      "Simulación de crisis": "Evalúa el sistema en las condiciones extremas en las que realmente operan los directores de asuntos corporativos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe someter a su motor a esta simulación de estrés para garantizar su eficacia antes de ofrecerlo a directores corporativos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP-P04-08",
+      "description": "Falta de ejecución empírica de la simulación de gabinete de crisis bajo escenarios reales de controversia en Chile.",
+      "missing_information": "Telemetría de tiempo de generación de minutas y precisión de vocería en la simulación de crisis de 3 escenarios."
+    }
+  ],
+  "next_question_ids": [
+    "FIN_P04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

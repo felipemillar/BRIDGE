@@ -1,0 +1,164 @@
+{
+  "question_id": "P10-F31",
+  "pilar": "P10",
+  "eje": "Reglas para automatizar o abstenerse",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué tareas pueden automatizarse con bajo riesgo y cuáles deben revisarse siempre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La frontera de automatización en comunicaciones corporativas se define mediante una estricta clasificación de riesgo algorítmico: 1) Tareas Automatizables con Bajo Riesgo: Ingesta de solicitudes y clasificación inicial de tickets por NLP; monitoreo continuo de medios, redes y clipping; extracción y estructuración de borradores iniciales mediante RAG sobre fuentes verificadas (con temperatura < 0.2); formateo sintáctico y adaptación de longitud para canales específicos (e.g., recortar a 280 caracteres preservando URLs canónicas); cálculo de diffs textuales y sellado criptográfico de versiones; y 2) Tareas de Revisión Humana Obligatoria (Human-in-the-Loop No Automatizable): Certificación de veracidad de cifras cuantitativas y compromisos futuros; encuadre legal de responsabilidad ante incidentes operacionales, ambientales o laborales; declaraciones ante requerimientos de autoridades, reguladores o tribunales; discursos y respuestas de voceros en crisis de alta severidad; y la decisión final de publicación (Executive Sign-Off), la cual jamás puede ser delegada a un agente o algoritmo sin intervención humana.",
+  "findings": [
+    {
+      "claim_id": "P10-F31-C1",
+      "claim": "Las directrices éticas del CIPR, PR Council y el marco NIST AI RMF establecen que la IA y la automatización deben limitarse a labores de soporte sintáctico, investigación y monitoreo, exigiendo supervisión y aprobación humana obligatoria en toda afirmación factual de impacto reputacional o legal.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "automation_vs_human_review_boundary",
+      "evidence": [
+        {
+          "source_title": "CIPR: Artificial Intelligence in Public Relations Policy and Ethics Guides",
+          "source_id": "0f644aa9-897a-4f0e-87ac-29dd7c0e2d0b",
+          "locator": "Section 'Ethics Guide: Human Oversight and Accountability in PR AI'",
+          "retrieved_at": null,
+          "excerpt_short": "AI tools can assist in research, drafting, and sentiment monitoring, but accountability remains strictly human. Practitioners must never permit automated publishing of unverified factual claims or policy statements.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "PR Council: Ethical Standards and Guidelines for Generative AI",
+          "source_id": "493c8ec0-08c7-4b4a-81c4-c95a7734bfe1",
+          "locator": "Section 'Mandatory Human Review of AI-Generated Content'",
+          "retrieved_at": null,
+          "excerpt_short": "All communications generated or assisted by AI must be thoroughly reviewed and edited by human communications professionals before distribution to external or internal audiences.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "NIST: Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+          "source_id": "7b6bd5f9-00ed-4842-b819-dfcf19b5c016",
+          "locator": "GOVERN 1.2 & MAP 2.1",
+          "retrieved_at": null,
+          "excerpt_short": "Mechanisms are in place to ensure human oversight of AI systems with potential legal, reputational, or societal impact, defining boundaries where automated execution is strictly prohibited.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia total entre marcos normativos de IA gubernamentales (NIST) y gremios globales de relaciones públicas (CIPR, PR Council).",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tarea del flujo de comunicación",
+      "Clasificación de riesgo de la tarea",
+      "Directrices éticas"
+    ],
+    "actors": [
+      "Motor de IA / RAG",
+      "Redactor Especialista",
+      "Validador Humano",
+      "Director de Comunicaciones"
+    ],
+    "steps": [
+      "Identificación del tipo de tarea solicitada en el flujo",
+      "Si la tarea es sintáctica/monitoreo: Asignación a worker automático en background",
+      "Si la tarea implica afirmaciones fácticas o publicación: Bloqueo de avance automático y ruteo forzoso a revisor humano",
+      "Registro de la intervención humana en el log de auditoría",
+      "Validación de que la firma provenga de una sesión autenticada humana"
+    ],
+    "states": [
+      "TASK_CLASSIFIED",
+      "AUTOMATED_EXECUTION",
+      "HUMAN_GATE_TRIGGERED",
+      "HUMAN_APPROVED"
+    ],
+    "outputs": [
+      "Resultado de la tarea procesada bajo el nivel de control exigido"
+    ],
+    "exceptions": [
+      "Si un proceso automatizado intenta disparar un endpoint de publicación externa, el gateway de seguridad bloquea el request"
+    ]
+  },
+  "entities": [
+    "CIPR Ethics Guide",
+    "PR Council Guidelines",
+    "NIST AI RMF",
+    "Human-in-the-Loop",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Tarea de Redacción Asistida",
+      "to": "Revisión Humana",
+      "type": "REQUIRES_MANDATORY_GATE"
+    },
+    {
+      "from": "Monitoreo de Medios",
+      "to": "Worker Automático",
+      "type": "PERMITTED_FULLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Publicación automatizada sin filtro vs Arquitectura con compuertas humanas",
+      "diferencia": "La publicación automática expone a la organización a alucinaciones de IA y demandas legales; las compuertas humanas garantizan juicio ético, empatía y responsabilidad corporativa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "automated_task_safety_rate": "100% de tareas automáticas confinadas a labores de soporte y análisis",
+    "human_touchpoint_compliance": "100% de comunicados externos con al menos un visado humano autenticado"
+  },
+  "bridge_implications": "BRIDGE debe restringir a nivel de código las capacidades de los agentes de IA, prohibiendo arquitectónicamente que cualquier agente ejecute llamadas API de publicación directa a medios o redes sin confirmación humana.",
+  "open_gaps": [
+    "Definición de umbrales automáticos de confianza de LLMs bajo los cuales el borrador ni siquiera se sugiere al redactor."
+  ],
+  "next_question_ids": [
+    "P10-F32",
+    "P10-F33"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-F39",
+  "pilar": "P02",
+  "eje": "Mapa mundial y diferencias regionales",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué significa cobertura comercial declarada frente a disponibilidad real de fuentes en un país?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Significa la disparidad crítica entre el marketing comercial de las plataformas de software y la realidad técnica de acceso a datos en terreno: 1) Cobertura comercial declarada: vendors multinacionales (Meltwater, Cision, Brandwatch) afirman en su material de ventas monitorear 'millones de fuentes en más de 150 países y 80 idiomas'; sin embargo, dicha cifra se construye sobre agregación genérica de internet abierta, feeds RSS públicos y acuerdos con portales web sindicados; 2) Disponibilidad real de fuentes en un país: representa las fuentes de información que efectivamente determinan los riesgos corporativos, políticos y comunitarios en un territorio determinado. En países como Chile, Perú o Colombia, esto implica: a) Cero acceso de los vendors globales a radioemisoras locales provinciales (que en regiones concentran la opinión pública y los llamados a movilizaciones comunitarias); b) Cero acceso a muros de pago (paywalls) de prensa de nicho financiero o regional; c) Incapacidad de consultar bases de datos regulatorias cerradas (Diario Oficial, resoluciones sanitarias, actas municipales de concejos); 3) Consecuencia: una empresa multinacional que confía ciegamente en la 'cobertura global' de su suite de software sufre una falsa sensación de seguridad mientras se gesta una crisis territorial invisible en su dashboard.",
+  "findings": [
+    {
+      "claim_id": "P02-F39-C1",
+      "claim": "La cobertura comercial declarada por plataformas globales sobreestima radicalmente el monitoreo efectivo en mercados locales de América Latina, al ignorar la radio comunitaria, la prensa regional impresa y los registros regulatorios territoriales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "América Latina / Global",
+        "actor": "Meltwater, Cision, Litoralpress"
+      },
+      "evidence": [
+        {
+          "source_id": "5556e455-7c2c-458c-bcad-e0910d9ccc4e",
+          "source_title": "P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1",
+          "original_url": null,
+          "locator": "Section 4: The Reality Gap: Global Declared vs Local Ground Truth",
+          "excerpt_short": "Global media monitoring vendors exhibit severe blind spots in local broadcast and provincial print media across emerging markets, creating operational risks for corporate affairs.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evaluación empírica comparativa documentada en el informe de adenda regional.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes declaradas por vendor global",
+      "Inventario real de medios activos en un distrito electoral/comunal"
+    ],
+    "actors": [
+      "Auditor de Riesgo Reputacional",
+      "Gerente de Comunicaciones de Planta"
+    ],
+    "steps": [
+      "Cruce de lista de medios monitoreados con el catastro provincial",
+      "Cálculo del porcentaje de cobertura real de broadcast",
+      "Identificación de zonas de sombra informativa"
+    ],
+    "states": [
+      "Fuentes_Declaradas",
+      "Brecha_Medida",
+      "Zona_Sombra_Identificada"
+    ],
+    "outputs": [
+      "Índice de cobertura de suelo (Ground Truth Coverage Index)"
+    ],
+    "exceptions": [
+      "Medios que transmiten exclusivamente por Facebook Live o WhatsApp no capturados por ninguna API"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BRECHA_COBERTURA",
+      "type": "concepto_metodologico",
+      "name": "Brecha de Cobertura Global vs Local",
+      "aliases": [
+        "Reality Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BRECHA_COBERTURA",
+      "predicate": "impacta_negativamente_a",
+      "object_id": "Deteccion_Temprana_Crisis",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F39-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Promesa de Ventas Global vs Realidad en Faena Local",
+      "Promesa de Ventas": "'Monitoreamos todo el planeta mediante IA avanzada y miles de millones de posts'.",
+      "Realidad en Faena": "La radio comunitaria a 5 km de la mina organiza un bloqueo de ruta que no aparece en ninguna alerta global."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe auditar contractualmente la disponibilidad real de fuentes por país antes de homologar un conector de datos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F40",
+    "P02-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

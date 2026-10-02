@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X26",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Certeza comercial y madurez",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué precios, contratos y casos de cliente están publicados con alcance verificable?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La transparencia comercial en el software de asuntos corporativos muestra una clara dicotomía: 1) Opacidad de precios en suites empresariales: las plataformas de nivel empresarial (Meltwater, Cision, Quorum, FiscalNote, Broadsight, AlphaSense) ocultan completamente sus precios al público bajo el esquema 'Contact Sales'; cotizan contratos anuales cerrados que típicamente oscilan entre $15,000 y $120,000 USD anuales según número de usuarios (seats), volumen de menciones mensuales y módulos contratados; 2) Precios públicos verificables en herramientas de nicho: proveedores de PR y distribución como Prezly publican planes transparentes (e.g. Starter a $50 USD/mes, Professional a $140 USD/mes por usuario); plataformas de monitoreo básico publican tramos por palabras clave; 3) Casos de cliente verificables con alcance documentado: Prezly publica casos de estudio auditados con Samsung, Red Bull e ING para salas de prensa digitales; Broadsight documenta implementaciones en utilities reguladas del Fortune 500 para la gestión de más de 400 issues críticos; Quorum documenta casos con asociaciones gremiales en Washington; Litoralpress acredita contratos públicos verificables con ministerios, superintendencias y grandes consorcios en Chile a través de Mercado Público.",
+  "findings": [
+    {
+      "claim_id": "P02-X26-C1",
+      "claim": "El mercado de software de asuntos corporativos mantiene una opacidad sistemática de precios en las suites empresariales (cotizaciones custom entre $15K y $120K USD/año), existiendo precios públicos únicamente en herramientas de nicho (Prezly) y contratos verificables en portales de transparencia estatales (Litoralpress).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Ecosistema Comercial P02"
+      },
+      "evidence": [
+        {
+          "source_id": "b5217662-c6f0-4529-8282-f5d17339b7fa",
+          "source_title": "P02_GLOBAL_MARKET_MAP_V1",
+          "original_url": null,
+          "locator": "Section 6: Pricing Models and Enterprise Procurement Dynamics",
+          "excerpt_short": "Enterprise corporate affairs software operates under opaque quote-based pricing ($15K–$120K/yr). Only lower-tier PR workflow tools publish open pricing schedules.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:54:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de portales comerciales oficiales y registros públicos de adquisiciones.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Páginas web de precios de proveedores",
+      "Registros de contratación pública de ChileCompra",
+      "Propuestas comerciales anonimizadas"
+    ],
+    "actors": [
+      "Auditor Financiero de Software",
+      "Especialista en Compras Corporativas"
+    ],
+    "steps": [
+      "Verificación de existencia de tablas de precios públicas",
+      "Búsqueda de contratos de Litoralpress en Mercado Público",
+      "Estimación de TCO anual por tamaño de cliente"
+    ],
+    "states": [
+      "Datos_Recopilados",
+      "Rangos_Estimados",
+      "Contratos_Validados"
+    ],
+    "outputs": [
+      "Matriz de precios y modelos de contratación de la industria"
+    ],
+    "exceptions": [
+      "Descuentos confidenciales por volumen aplicados a clientes multinacionales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MERCADO_PUBLICO_CHILE",
+      "type": "portal_compras_estatal",
+      "name": "Mercado Público Chile (ChileCompra)",
+      "aliases": [
+        "ChileCompra"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LITORALPRESS",
+      "predicate": "posee_contratos_verificables_en",
+      "object_id": "Mercado_Publico_Chile",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X26-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Transparencia de Precios: Prezly vs Suites Empresariales (Broadsight/Meltwater)",
+      "Prezly": "Tarifas publicadas en web desde $50 USD/mes con prueba gratuita de 14 días.",
+      "Suites Empresariales": "Precios ocultos, demos guiadas obligatorias con comerciales, contratos anuales no cancelables."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE puede diferenciarse comercialmente adoptando un modelo de precios transparente y predecible frente a la opacidad del mercado.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:54:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

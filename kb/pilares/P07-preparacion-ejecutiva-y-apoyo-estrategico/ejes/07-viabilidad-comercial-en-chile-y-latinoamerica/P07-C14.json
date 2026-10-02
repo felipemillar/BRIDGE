@@ -1,0 +1,127 @@
+{
+  "question_id": "P07-C14",
+  "pilar": "P07",
+  "eje": "Viabilidad comercial en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué sigue sin prueba sobre viabilidad comercial en Chile y Latinoamérica, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba empírica la disposición a pagar (willingness-to-pay) específica de los directores de asuntos corporativos (CCOs) en Chile por un software SaaS especializado ($15.000 a $40.000 USD/año), frente a la arraigada cultura local de contratar agencias tradicionales de lobby o comunicaciones por un fee mensual fijo (retainer) que incluye servicios de gestoría personal. En este eje no hubo fuentes fallidas directas, pero 'P07_GAPS_AND_VALIDATION' (Sección 3) explicita que la viabilidad comercial depende de validar si los CCOs ven a BRIDGE como un sustituto o un complemento de sus consultoras externas. La validación mínima requerida es un programa piloto de 60 días con 5 empresas líderes de la minería, energía y banca chilena bajo un contrato de prueba remunerado (paid pilot de $3.000 USD/mes), midiendo la conversión final a contrato anual recurrente.",
+  "findings": [
+    {
+      "claim_id": "P07-C14-C1",
+      "claim": "La disposición a pagar por software de inteligencia de asuntos corporativos en Chile compite con la cultura del retainer de agencias tradicionales y requiere validación mediante pilotos remunerados.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "commercial_pricing_gap",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 3 (Batería de Preguntas Críticas con CCOs) y Sección 4",
+          "excerpt_short": "Pregunta de Validación Comercial: ¿Estaría dispuesta su compañía a reasignar parte del presupuesto de retainers de agencias hacia una suscripción de software como BRIDGE? Hipótesis: Los CCOs no reemplazarán a las agencias, pero forzarán a sus agencias a utilizar BRIDGE o adquirirán la licencia para fiscalizar el trabajo externo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 3 (Benchmark de Productos y Precios)",
+          "excerpt_short": "Rangos de precios en el mercado: Suites corporativas B2B operan entre $15.000 y $60.000 USD/año. En Chile, el modelo de entrada óptimo para grandes emisores CMF es de $25.000 USD/año con módulos de InfoLobby y simulador Q&A.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación de la hipótesis de pricing en el benchmark y formulación del protocolo en P07_GAPS.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "programa_piloto_comercial": {
+      "muestra": "5 grandes corporaciones cotizadas en la Bolsa de Comercio de Santiago.",
+      "modelo_prueba": "Paid Pilot de 60 días ($3.000 USD mensuales).",
+      "entregables": "Briefing matinal diario + 2 memos de preparación bajo Ley de Lobby + 1 sesión de Murder Board.",
+      "criterio_exito": "Conversión de al menos 3 de las 5 empresas a contrato anual recurrente (ARR >= $25.000 USD)."
+    }
+  },
+  "entities": [
+    "Bolsa de Santiago",
+    "Paid Pilot",
+    "Retainer Tradicional",
+    "P07_GAPS_AND_VALIDATION",
+    "CCO Chile"
+  ],
+  "relations": [
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "Paid Pilot",
+      "type": "proposes"
+    },
+    {
+      "from": "Paid Pilot",
+      "to": "Willingness-to-Pay",
+      "type": "validates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fee Mensual de Consultora vs Suscripción SaaS BRIDGE",
+      "diferencia": "La consultora cobra $8.000 USD/mes por informes artesanales; BRIDGE entrega analítica continua y rigurosa por una fracción del costo anual."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "conversion_target": ">= 60% de pilotos convertidos a ARR anual",
+    "pilot_duration": "60 días de operación continua"
+  },
+  "bridge_implications": "Estructurar la propuesta comercial inicial de BRIDGE bajo el formato de 'Piloto Remunerado de 60 días' para reducir las barreras de entrada corporativas.",
+  "open_gaps": [
+    "Ciclos de compra presupuestaria lentos en grandes corporaciones chilenas (octubre a diciembre)."
+  ],
+  "next_question_ids": [
+    "P07-C15",
+    "P07-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T06:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-X07",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Adquisiciones y estructura de grupos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre adquisiciones y estructura de grupos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan sobre la vigencia del control corporativo y la relación tecnológica entre marcas absorbidas y sus matrices: 1) Discrepancia: Fichas comerciales y artículos de prensa desactualizados continuaban listando a FGS Global como parte de WPP plc en 2025/2026, y asumían que Memo operaba como startup independiente en Nueva York; 2) Versión que prevalece: Rige '00_P02_GLOBAL_READ_ME_AND_ERRATA', que dictamina: a) La venta mayoritaria de FGS Global a KKR por parte de WPP se perfeccionó el 3 de diciembre de 2024 (SEC Form 6-K); b) Memo fue absorbida íntegramente por Signal AI el 20 de abril de 2026; c) Limbik fue adquirida por Burson el 12 de agosto de 2026. Prevalece la versión rectificada que exige eliminar cualquier referencia a FGS Global como subsidiaria de WPP y que consolida a Memo dentro de Signal AI.",
+  "findings": [
+    {
+      "claim_id": "P02-X07-C1",
+      "claim": "La discrepancia sobre el control societario de FGS Global y la absorción de Memo queda zanjada con la prevalencia de la errata editorial respaldada por los registros regulatorios de la SEC.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría Editorial P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 2: Absolute Rectification of Corporate Affiliations",
+          "excerpt_short": "Any synthesis listing FGS Global under WPP or Memo as independent must be rejected; KKR control and Signal AI consolidation prevail.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:48:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de la regla de precedencia editorial del mandato.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Artículos de prensa obsoletos",
+      "Borradores de síntesis desalineados",
+      "Filing SEC Form 6-K"
+    ],
+    "actors": [
+      "Auditor Editorial",
+      "Investigador Cuantitativo"
+    ],
+    "steps": [
+      "Identificación de contradicciones de afiliación",
+      "Aplicación de la directiva de errata",
+      "Modificación del registro definitivo"
+    ],
+    "states": [
+      "Discrepancia_Ubicada",
+      "Regla_Ejecutada",
+      "Registro_Rectificado"
+    ],
+    "outputs": [
+      "Registro canónico de filiación societaria sin contradicciones"
+    ],
+    "exceptions": [
+      "Uso histórico de fuentes antiguas que debe ser debidamente anotado con su fecha de expiración"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RECTIFICACION_M&A",
+      "type": "directiva_editorial",
+      "name": "Directiva de Rectificación M&A P02",
+      "aliases": [
+        "M&A Errata Directive"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RECTIFICACION_M&A",
+      "predicate": "resuelve_discrepancia_de",
+      "object_id": "FGS_Global_y_Memo",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X07-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fuente Secundaria Obsoleta vs Registro Regulatorio Mandatorio",
+      "Fuente Secundaria Obsoleta": "Artículo periodístico que repite que WPP fundó FGS Global sin verificar transacciones posteriores.",
+      "Registro Regulatorio Mandatorio": "Formulario oficial de desinversión presentado ante la SEC con firma del director financiero."
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "P02-CONT-06",
+      "description": "Discrepancia sobre la pertenencia de FGS Global a WPP frente a su venta efectiva a KKR.",
+      "resolution": "Prevalece la errata 00_P02_GLOBAL_READ_ME_AND_ERRATA: FGS Global es controlada por KKR desde dic-2024."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La actualización continua de los registros societarios es obligatoria para mantener la vigencia del modelo de inteligencia.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:48:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

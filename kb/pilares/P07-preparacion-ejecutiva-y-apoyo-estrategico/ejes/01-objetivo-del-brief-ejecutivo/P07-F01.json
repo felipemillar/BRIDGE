@@ -1,0 +1,141 @@
+{
+  "question_id": "P07-F01",
+  "pilar": "P07",
+  "eje": "Objetivo del brief ejecutivo",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué decisión concreta debe habilitar un brief antes de reunión, entrevista o crisis?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Un brief ejecutivo debe habilitar tres decisiones críticas: 1) Definir el objetivo estratégico, las líneas rojas (concesiones inadmisibles) y el encuadre narrativo antes de entrar a la interacción; 2) Arbitrar la postura táctica ante contrapartes o medios hostiles (ir a la ofensiva con datos, usar bridging para pivotar a mensajes clave o abstenerse estratégicamente); y 3) Activar protocolos legales y de gobernanza (calificar la reunión bajo Ley 20.730 de Lobby o resguardar hechos reservados bajo Ley 18.045 de Mercado de Valores).",
+  "findings": [
+    {
+      "claim_id": "P07-F01-C1",
+      "claim": "El briefing ejecutivo no es un resumen pasivo de prensa sino un instrumento cognitivo de decisión que fija objetivos, líneas rojas y el perímetro de revelación de información corporativa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "strategic_preparation",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 1 y Sección 6 (Plantillas 1 y 2)",
+          "excerpt_short": "El objetivo primario de un briefing ejecutivo no es informar pasivamente de lo ocurrido, sino habilitar la toma de decisiones estratégicas en tres escenarios críticos: 1) Determinar la postura frente a contrapartes regulatorias fijando las líneas rojas inadmisibles; 2) Proteger al vocero de trampas mediáticas mediante mensajes anclados a datos auditables; y 3) Asegurar el cumplimiento normativo estricto (ej. calificar si la reunión constituye gestión de lobby bajo Ley 20.730).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Page Society: Beyond Communication - CCO Leadership",
+          "source_id": "a6960a92-7998-4092-ab5b-ed3a91374b5e",
+          "locator": "Capítulo 'The Strategic CCO', p. 14-18",
+          "excerpt_short": "Executive briefing moves from media monitoring to strategic enablement when it aligns corporate purpose, operational ground truth, and stakeholder dynamics into actionable go/no-go decisions.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la doctrina ejecutiva de Page Society y las plantillas operativas del Dossier técnico de P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "triada_decisional": [
+      {
+        "decision": "Postura y Línea Roja",
+        "descripcion": "Fija qué puntos se defienden a ultranza, qué concesiones son negociables y qué temas jamás se deben admitir o conceder."
+      },
+      {
+        "decision": "Técnica de Vocería y Puente",
+        "descripcion": "Define si el vocero usará Bridging, Flagging o Hooking ante preguntas agresivas para regresar al Message House."
+      },
+      {
+        "decision": "Encuadre Legal y Regulatorio",
+        "descripcion": "Verifica si la cita califica bajo la Ley 20.730 de Lobby (exigiendo registro en plataforma InfoLobby) o involucra hechos reservados Ley 18.045."
+      }
+    ]
+  },
+  "entities": [
+    "Directorio",
+    "Comité Ejecutivo",
+    "CEO",
+    "CCO",
+    "InfoLobby",
+    "CMF",
+    "SMA"
+  ],
+  "relations": [
+    {
+      "from": "Brief Ejecutivo",
+      "to": "Decisión Estratégica",
+      "type": "enables"
+    },
+    {
+      "from": "Brief Ejecutivo",
+      "to": "Líneas Rojas",
+      "type": "delimits"
+    },
+    {
+      "from": "Reunión con Autoridad",
+      "to": "Ley 20.730",
+      "type": "governed_by"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Clipping tradicional vs Brief BRIDGE",
+      "diferencia": "El clipping acumula noticias sin jerarquizar; el brief de BRIDGE provee una síntesis en 60 segundos con cruce de compromisos internos y directrices de acción."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "decision_enablement_time": "< 3 minutos de lectura ejecutiva",
+    "regulatory_trigger_accuracy": "100% de detección de autoridades sujetas pasivas de lobby"
+  },
+  "bridge_implications": "El módulo de preparación de BRIDGE debe estructurarse en torno a decisiones obligatorias (Objetivo, Línea Roja, Protocolo Legal), evitando volcados de texto informativos no accionables.",
+  "open_gaps": [
+    "Medición empírica en tiempo real de la adherencia del ejecutivo al brief durante una entrevista en vivo."
+  ],
+  "next_question_ids": [
+    "P07-F02",
+    "P07-F03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T04:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

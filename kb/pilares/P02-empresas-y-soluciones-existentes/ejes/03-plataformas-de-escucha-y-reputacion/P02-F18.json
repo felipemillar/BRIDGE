@@ -1,0 +1,142 @@
+{
+  "question_id": "P02-F18",
+  "pilar": "P02",
+  "eje": "Plataformas de escucha y reputación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra plataformas de escucha y reputación sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto se ilustra mediante el flujo de respuesta ante una contingencia hídrica territorial en el norte de Chile: 1) Entradas reales: Entrada 1 (Escuchar): a las 06:45 AM, Litoralpress detecta y transcribe una entrevista en una radioemisora de Calama donde un dirigente vecinal acusa a la minera de sobreextracción hídrica ilegal (amplificada con 120 tuits en X); Entrada 2 (Saber): motor RAG (AlphaSense/Broadsight) recupera de SharePoint la RCA de la planta (Sección 3.2, Párrafo 4, que fija el límite legal en 45 L/s) y la auditoría hídrica de agosto 2026 (extracción real auditada de 38 L/s, cumpliendo la norma); Entrada 3 (Relacionar): CRM de stakeholders (Borealis/Consultation Manager) recupera la ficha del dirigente, el historial de reuniones en mesa de diálogo y el convenio firmado con la municipalidad en mayo 2025; 2) Resultado esperado (Executive Brief con Q&A asistido liberado a las 07:05 AM en el móvil del CCO): Diagnóstico de incidente (alerta de riesgo medio desmintiendo la acusación radial); Respuesta factual citada (Cero Alucinación: extracción real de 38 L/s, 15,5% bajo el límite de 45 L/s de la RCA 2024, con hipervínculo a la página del PDF); Q&A asistido con 2 preguntas difíciles probadas para medios de prensa; Portavoz asignado formalmente con firma Human-in-the-Loop del CCO antes de emitir la declaración a los periodistas.",
+  "findings": [
+    {
+      "claim_id": "P02-F18-C1",
+      "claim": "El caso concreto de respuesta ante controversia hídrica demuestra la viabilidad técnica de generar un Executive Brief verificado en menos de 20 minutos conectando señales de radio regional con expedientes RCA y CRM de compromisos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Chile (Calama / Antofagasta)",
+        "actor": "Caso Operativo BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Sección: Flujo Operativo del Caso de Contingencia de Calama",
+          "excerpt_short": "Demostración de cruce entre Litoralpress, RAG en RCA y CRM de actores comunitarios.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:31:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Escenario estructurado basado en fuentes del catálogo de P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alerta radial de Calama (06:45 AM)",
+      "RCA Ambiental 2024 (Pág. RCA Sec 3.2)",
+      "Auditoría hídrica interna (38 L/s)",
+      "Acta de mesa de diálogo en CRM (Mayo 2025)"
+    ],
+    "actors": [
+      "CCO",
+      "Portavoz Regional",
+      "Motor BRIDGE",
+      "Periodista Local"
+    ],
+    "steps": [
+      "Paso 1: Detección y transcripción radial por Litoralpress (06:45 AM)",
+      "Paso 2: RAG automático sobre SharePoint extrayendo RCA y auditoría (06:50 AM)",
+      "Paso 3: Consulta a CRM extrayendo compromisos de mayo 2025 (06:55 AM)",
+      "Paso 4: Generación de Executive Brief con Q&A asistido y citas (07:00 AM)",
+      "Paso 5: Validación y firma en móvil por el CCO (07:05 AM)",
+      "Paso 6: Emisión de vocería fidedigna al medio regional (07:15 AM)"
+    ],
+    "states": [
+      "Incidente_Detectado",
+      "Grounding_Verificado",
+      "Brief_Enviado_CCO",
+      "Voceria_Autorizada"
+    ],
+    "outputs": [
+      "Executive Brief de vocería con citas hipervinculadas a RCA y acta"
+    ],
+    "exceptions": [
+      "Detección de incumplimiento efectivo de la RCA (activa protocolo legal de contingencia)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CONTINGENCIA_CALAMA",
+      "type": "escenario_operativo",
+      "name": "Caso de Contingencia Hídrica de Calama",
+      "aliases": [
+        "Escenario de Prueba Antofagasta"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CONTINGENCIA_CALAMA",
+      "predicate": "valida_tiempo_respuesta_de",
+      "object_id": "Menos_De_20_Minutos",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F18-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta Desconectada vs Respuesta Integrada BRIDGE",
+      "Respuesta Desconectada": "El equipo se entera horas tarde cuando el medio publica la nota; búsqueda caótica de la RCA.",
+      "Respuesta Integrada BRIDGE": "Alerta a las 06:45 AM con brief y Q&A listo antes de las 07:05 AM con citas exactas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Configurar la plantilla de salida de Executive Briefing de BRIDGE con el diseño de diagnóstico, respuesta factual citada y Q&A asistido.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F19",
+    "P02-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:31:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

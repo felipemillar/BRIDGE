@@ -1,0 +1,150 @@
+{
+  "question_id": "P08-F39",
+  "pilar": "P08",
+  "eje": "Diferenciación como hipótesis",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué evidencia falsaría la hipótesis de ventaja diferencial?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus documenta de forma explícita tres condiciones empíricas que falsarían (refutarían) la hipótesis de ventaja diferencial de BRIDGE: 1) Falsación por Indiferencia del Comprador: Si en las pruebas comerciales los CCOs demuestran que les basta un clipping genérico en PDF y no están dispuestos a pagar una prima por el cruce con compromisos internos y líneas rojas; 2) Falsación por Barrera Insalvable de Adopción Interna: Si los departamentos legales y de seguridad de la información (CISO) de las empresas del IPSA vetan de forma sistemática la ingesta de sus documentos internos (RCAs, actas, políticas) en una plataforma cloud, bloqueando el módulo 'Saber'; y 3) Falsación por Entrada de Competidor Global con Localización Nativa: Si FiscalNote, Quorum o Signal AI adquieren una consultora líder en Chile (ej. Azerta o LLYC), desarrollan conectores nativos auditados para BCN, SMA e InfoLobby, y ofrecen un servicio Tech-Enabled con analistas locales a menor costo aprovechando su escala.",
+  "findings": [
+    {
+      "claim_id": "P08-F39-C1",
+      "claim": "La ventaja competitiva es una hipótesis falsable sujeta a tres riesgos críticos: apatía del comprador hacia el cruce interno, fricción insuperable de seguridad de datos (CISO), o entrada agresiva de un competidor global localizado.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "falsification_conditions",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 7.3 'Condiciones Explícitas de Falsación de la Ventaja Diferencial'",
+          "excerpt_short": "Criterios estrictos de falsación de la hipótesis de diferenciación: La tesis de ventaja única quedará refutada empíricamente si se verifica cualquiera de estos tres escenarios: 1) Si más del 50% de los prospectos calificados declara que la integración de documentos internos no justifica una cuota superior a USD 2.000/mes; 2) Si las trabas de compliance de la Ley 21.719 impiden en la práctica que los clientes carguen su memoria corporativa en el tenant de BRIDGE; o 3) Si un incumbente global adquiere capacidades de soporte local y conectores institucionales chilenos antes de que BRIDGE consolide sus primeros 15 clientes.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_GAPS_AND_VALIDATION",
+          "source_id": "b37bbf38-9c0d-4dc9-bf01-ac0b24ed0bd4",
+          "locator": "Sección 2 'Protocolo de Validación y Puntos de Falsación'",
+          "excerpt_short": "Mantener una vigilancia activa sobre los movimientos de M&A de FiscalNote y Quorum en América Latina para detectar tempranamente cualquier intento de localización nativa.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Condiciones de falsabilidad rigurosamente detalladas en el dossier y documento de validación de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Resultados de entrevistas de ventas",
+      "Objeciones de CISOs",
+      "Monitoreo de fusiones y adquisiciones de competidores"
+    ],
+    "actors": [
+      "Comité de Dirección",
+      "Head of Product",
+      "Inversionistas"
+    ],
+    "steps": [
+      "Registro de objeciones comerciales en CRM",
+      "Detección de patrones de rechazo",
+      "Evaluación periódica contra criterios de falsación",
+      "Decisión de perseverar, pivotar o detener"
+    ],
+    "states": [
+      "Hipótesis Vigente",
+      "Señales de Alerta",
+      "Condición de Falsación Cumplida",
+      "Pivote Estratégico"
+    ],
+    "outputs": [
+      "Dictamen periódico de vigencia de la ventaja competitiva"
+    ],
+    "exceptions": [
+      "Objeción de seguridad superada mediante despliegue en Virtual Private Cloud (VPC) dedicada del cliente"
+    ]
+  },
+  "entities": [
+    "Criterios de Falsación",
+    "Fricción CISO",
+    "M&A Competidores",
+    "FiscalNote",
+    "Ley 21.719",
+    "Pivote Estratégico"
+  ],
+  "relations": [
+    {
+      "from": "Rechazo CISO Sistemático",
+      "to": "Falsación Módulo Saber",
+      "type": "triggers"
+    },
+    {
+      "from": "Localización Nativa de FiscalNote",
+      "to": "Erosión de Ventaja BRIDGE",
+      "type": "threatens"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Ceguera de confirmación vs Protocolo de falsación científica",
+      "diferencia": "El emprendedor ingenuo ignora las señales de rechazo; el protocolo de BRIDGE monitorea activamente las condiciones que obligarían a cambiar el modelo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "ciso_rejection_falsification_threshold": "> 40% de prospectos vetados por seguridad de datos",
+    "wtp_compression_threshold": "WTP real inferior a USD 2.500/mes"
+  },
+  "bridge_implications": "Monitorear en cada reunión comercial si la resistencia del cliente viene del precio o del temor a compartir documentos internos.",
+  "open_gaps": [
+    "Diseñar una arquitectura alternativa 'Zero-Knowledge RAG' donde los documentos del cliente no residan en los servidores de BRIDGE."
+  ],
+  "next_question_ids": [
+    "P08-F40",
+    "P08-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

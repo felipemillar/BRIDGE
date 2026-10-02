@@ -1,0 +1,149 @@
+{
+  "question_id": "P09-F42",
+  "pilar": "P09",
+  "eje": "Herramientas existentes",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra herramientas existentes sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto Documentado: 'Migración y Reconciliación de un Registro de 120 Compromisos Comunitarios desde Planillas Excel Dispersas hacia la Plataforma SRM'. Entradas: 1) Entorno Previo: Tres planillas Excel no sincronizadas en posesión de la Gerencia de Sustentabilidad, la Gerencia de Operaciones y la consultora ambiental externa de una faena cuprífera en la Región de Antofagasta; 2) Diagnóstico Inicial: 28% de compromisos duplicados con redacciones discordantes, 15 compromisos vencidos sin registrar evidencia de cierre y 3 promesas verbales sin dueño asignado; 3) Proceso de Ingesta y Limpieza: Normalización de datos bajo el esquema de 14 campos de BRIDGE, eliminación de datos sensibles bajo Ley 21.719, validación de integridad referencial contra las RCAs de la faena y asignación de dueños únicos individuales; 4) Activación de Funcionalidades SRM: Configuración de la máquina de estados de 8 etapas, carga de actas históricas escaneadas y programación de alertas preventivas T-30, T-15 y T-7. Resultado Esperado: 1) Catálogo único inmutable consolidado con 86 compromisos reales deduplicados; 2) Identificación inmediata de 4 compromisos en riesgo crítico que fueron renegociados preventivamente antes de provocar bloqueos; y 3) Auditoría externa de sustentabilidad aprobada con 100% de trazabilidad probatoria documental.",
+  "findings": [
+    {
+      "claim_id": "P09-F42-C1",
+      "claim": "El caso documentado ilustra la transición desde planillas Excel fragmentadas hacia un SRM gobernado: deduplicación, asignación de dueños únicos, depuración de datos sensibles y erradicación de la amnesia institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "concrete_case_srm_tools_migration",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 4 'Caso de Estudio de Migración y Adopción de SRM'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de Adopción: De Excel al SRM. Empresa minera con 120 compromisos en planillas dispersas detecta 28% de inconsistencias. La migración al SRM genera un catálogo depurado, asigna un único responsable y evita multas de la SMA mediante alertas preventivas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: Building Strong Stakeholder Relationships & How an SRM Can Help",
+          "source_id": "09790394-0243-49ec-8617-343b020c8cf2",
+          "locator": "Case Study 'From Chaos to Control — Replacing Spreadsheets', p. 14-18",
+          "retrieved_at": null,
+          "excerpt_short": "Transitioning from spreadsheets to a centralized SRM typically uncovers dozens of forgotten commitments and overdue milestones, transforming organizational vulnerability into managed compliance.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación rigurosa de las lecciones del dossier de P09 y del caso de estudio de Boréalis.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Planillas Excel (.xlsx)",
+      "Actas escaneadas",
+      "Catálogo de usuarios LDAP"
+    ],
+    "actors": [
+      "Consultor de Migración",
+      "Jefe de Sustentabilidad",
+      "Motor de Ingesta BRIDGE"
+    ],
+    "steps": [
+      "Carga de archivos Excel en asistente de importación",
+      "Mapeo de columnas al schema de 14 campos",
+      "Deduplicación algorítmica de registros",
+      "Resolución de anomalías por usuarios",
+      "Persistencia en base de datos inmutable"
+    ],
+    "states": [
+      "Archivos Cargados",
+      "Anomalías Corregidas",
+      "Migración Exitosa"
+    ],
+    "outputs": [
+      "Catálogo maestro de compromisos activo",
+      "Reporte de migración y saneamiento"
+    ],
+    "exceptions": [
+      "Registros históricos sin soporte documental se marcan como 'Compromiso Histórico No Documentado' y pasan a revisión legal"
+    ]
+  },
+  "entities": [
+    "Migración de Excel a SRM",
+    "Boréalis SRM",
+    "Deduplicación",
+    "P09_RESEARCH_DOSSIER",
+    "Auditoría de Cumplimiento"
+  ],
+  "relations": [
+    {
+      "from": "Planillas Excel",
+      "to": "SRM BRIDGE",
+      "type": "MIGRATED_INTO"
+    },
+    {
+      "from": "Catálogo Maestro",
+      "to": "Auditoría Sustentabilidad",
+      "type": "VERIFIED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Gestión en Excel descentralizado vs Plataforma SRM unificada",
+      "diferencia": "Excel genera versiones contrapuestas entre áreas y amnesia corporativa; el SRM provee una única fuente de la verdad para toda la compañía."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "deduplication_reduction_rate": "28% de registros redundantes depurados",
+    "data_completeness_gain": "100% de compromisos con dueño y plazo verificado"
+  },
+  "bridge_implications": "Construir un módulo de onboarding 'Excel Importer Wizard' con validación de columnas y detección de duplicados.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F43",
+    "P09-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "question_id": "P10-F15",
+  "pilar": "P10",
+  "eje": "Redacción y adaptación de mensajes",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Cómo se genera un borrador que conserve citas y advertencias de incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La generación asistida de borradores mediante IA se gobierna mediante la técnica de Grounded Generation con inyección forzada de restricciones (Constrained Generation Protocol) en 4 pasos: 1) Inyección de Contexto RAG desde P04: El prompt de generación solo recibe fragmentos documentales verificados, impidiendo que el modelo recurra a conocimiento paramétrico libre para inventar cifras o antecedentes; 2) Preservación de Citas y Anclajes Documentales: Cada afirmación fáctica generada debe incluir un enlace o nota de procedencia (e.g., '[Fuente: Memoria CMF 2025, p. 45]'), permitiendo que el revisor humano verifique la fuente original en 1 clic; 3) Inserción Obligatoria de Cláusulas de Incertidumbre: Ante datos preliminares o estimaciones futuras, el generador inserta automáticamente el lenguaje de advertencia estándar ('Cifras preliminares sujetas a consolidación en balance auditado' o Safe Harbor bajo Rule 10b-5); y 4) Detección de Alucinaciones en Pre-Guardado: El motor compara el borrador generado contra el Shared Fact Record; si detecta una cifra no presente en el contexto, el borrador es rechazado antes de ser mostrado al usuario.",
+  "findings": [
+    {
+      "claim_id": "P10-F15-C1",
+      "claim": "La generación asistida de borradores exige RAG restringido a P04, citas documentales integradas, inserción obligatoria de cláusulas de incertidumbre y verificación automática contra alucinaciones antes de la revisión humana.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "grounded_drafting_and_uncertainty_warnings",
+      "evidence": [
+        {
+          "source_title": "PR Council: Ethical Standards and Guidelines for Generative AI",
+          "source_id": "493c8ec0-08c7-4b4a-81c4-c95a7734bfe1",
+          "locator": "Section 'Provenance, Grounding and Hallucination Prevention', p. 9-13",
+          "retrieved_at": null,
+          "excerpt_short": "Generative AI used in public affairs must operate exclusively on verified organizational inputs, retaining explicit source citations and mandatory uncertainty disclosures to prevent misleading the public or financial markets.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "NIST: Artificial Intelligence Risk Management Framework (AI RMF 1.0) Playbook",
+          "source_id": "7b6bd5f9-00ed-4842-b819-dfcf19b5c016",
+          "locator": "Section 'Govern 1.2 & Measure 2.5: Trustworthy Content Generation'",
+          "retrieved_at": null,
+          "excerpt_short": "AI systems generating public communications must incorporate transparent boundary constraints, provenance metadata, and automated verification checks to ensure factual fidelity and prevent ungrounded outputs.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los marcos de NIST y el PR Council.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Expediente COMM",
+      "Fragmentos documentales P04",
+      "Plantilla de guardrails de tono y estilo"
+    ],
+    "actors": [
+      "Agente de Redacción IA",
+      "Motor de Grounding P04",
+      "Redactor Humano"
+    ],
+    "steps": [
+      "Construcción de prompt acotado con documentos certificados",
+      "Invocación a modelo con temperatura baja (< 0.2)",
+      "Validación semántica contra catálogo de hechos",
+      "Despliegue de borrador v0.1 con citas y advertencias integradas"
+    ],
+    "states": [
+      "Contexto Compilado",
+      "Generación Ejecutada",
+      "Grounding Validado",
+      "Borrador v0.1 Emitido"
+    ],
+    "outputs": [
+      "Borrador con notas de procedencia y advertencias legales"
+    ],
+    "exceptions": [
+      "Si el modelo genera una cifra desconocida, el pipeline falla de inmediato y solicita intervención manual del redactor"
+    ]
+  },
+  "entities": [
+    "Grounded Generation",
+    "PR Council",
+    "NIST AI RMF 1.0",
+    "Safe Harbor",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Agente de Redacción",
+      "to": "NIST AI RMF",
+      "type": "GOVERNED_BY"
+    },
+    {
+      "from": "Borrador v0.1",
+      "to": "Cláusulas de Incertidumbre",
+      "type": "MANDATORILY_INCLUDES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Prompt genérico a ChatGPT abierto vs RAG gobernado en BRIDGE",
+      "diferencia": "ChatGPT abierto inventa cifras plausibles y filtra secretos corporativos; el RAG de BRIDGE opera aislado en servidores seguros sin alucinaciones."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "temperature_setting": "0.1 a 0.2 para evitar variabilidad",
+    "citation_provenance_rate": "100% de afirmaciones enlazadas a un fragmento de P04"
+  },
+  "bridge_implications": "Implementar el pipeline de generación asistida en LangChain/LlamaIndex con guardrails declarativos y verificación previa de alucinaciones.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F16",
+    "P10-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

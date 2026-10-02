@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-C02",
+  "pilar": "P09",
+  "eje": "Mapa de actores y relaciones",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué sigue sin prueba sobre mapa de actores y relaciones, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Brecha sin Prueba: Falta de evidencia empírica en el corpus sobre la tasa real de obsolescencia de los directorios de juntas de vecinos en zonas rurales chilenas tras elecciones periódicas (Ley 19.418), existiendo incertidumbre sobre con qué frecuencia las directivas pierden vigencia legal sin que la empresa se entere. Fuentes Fallidas: Las fuentes externas de Darzin (`40a8c211` y `6b6a0b3e`) presentaron fallas de extracción o contenido no sustantivo, siendo reemplazadas canónicamente por Boréalis (`00e3a352`) y Tractivity (`8b347889`). Validación Mínima Requerida: Ejecutar un muestreo piloto de 20 organizaciones comunitarias en una comuna minera (e.g., Calama o Tierra Amarilla), consultando el Registro Público de Organizaciones Comunitarias de la Secretaría Municipal respectiva para medir la discrepancia entre el registro corporativo y la vigencia del certificado de personería jurídica.",
+  "findings": [
+    {
+      "claim_id": "P09-C02-C1",
+      "claim": "La obsolescencia de vigencia de directivas comunitarias rurales carece de métrica empírica en el corpus; Darzin falló y fue sustituida por Boréalis y Tractivity; se requiere validación contra registros municipales.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "contrast_stakeholder_mapping_gaps",
+      "evidence": [
+        {
+          "source_title": "P09_PENDING_SOURCES_RESOLUTION",
+          "source_id": "dcb397bc-d659-44fc-af6b-e394801f12a9",
+          "locator": "Sección 'Resolución de Fuentes Fallidas de Darzin y SustaiNet'",
+          "retrieved_at": null,
+          "excerpt_short": "Las URLs de Darzin fueron declaradas no sustantivas y sustituidas formalmente por la literatura técnica de Boréalis y Tractivity, asegurando cobertura sin perder rigor probatorio.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_GAPS_AND_VALIDATION",
+          "source_id": "33944e01-6a0f-46f1-bfa3-19224f1c8d72",
+          "locator": "Sección 'Gaps en Mapeo de Actores Territoriales'",
+          "retrieved_at": null,
+          "excerpt_short": "Incertidumbre: El corpus no documenta la tasa de rotación estatutaria en juntas de vecinos chilenas. Se requiere validación empírica mediante cotejo con secretarías municipales locales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación honesta de brechas de evidencia y fuentes fallidas conforme al protocolo del mandato.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.92,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de juntas de vecinos de faena",
+      "Certificados de vigencia municipal"
+    ],
+    "actors": [
+      "Analista Territorial",
+      "Secretario Municipal",
+      "Auditor de Datos"
+    ],
+    "steps": [
+      "Selección de muestra de 20 organizaciones",
+      "Solicitud de certificados de directiva vigente",
+      "Comparación de directivas registradas vs oficiales",
+      "Cálculo de porcentaje de desfase"
+    ],
+    "states": [
+      "Muestra Diseñada",
+      "Certificados Obtenidos",
+      "Brecha Medida"
+    ],
+    "outputs": [
+      "Informe de calibración de vigencia estatutaria"
+    ],
+    "exceptions": [
+      "Comunidades sin directiva constituida se registran como 'En Proceso de Renovación'"
+    ]
+  },
+  "entities": [
+    "Darzin (Fuente Fallida)",
+    "Boréalis (Sustituto)",
+    "Tractivity (Sustituto)",
+    "Ley 19.418",
+    "P09_PENDING_SOURCES_RESOLUTION"
+  ],
+  "relations": [
+    {
+      "from": "Darzin",
+      "to": "Boréalis / Tractivity",
+      "type": "REPLACED_BY"
+    },
+    {
+      "from": "Vigencia Directiva",
+      "to": "Secretaría Municipal",
+      "type": "VALIDATED_AGAINST"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir vigencia eterna vs Verificación periódica municipal",
+      "diferencia": "Asumir vigencia eterna lleva a firmar compromisos con exdirigentes sin representatividad; la verificación asegura legitimidad de los acuerdos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "validation_sample_size": "20 organizaciones comunitarias",
+    "target_uncertainty_reduction": "Delimitar el error de representatividad a < 5%"
+  },
+  "bridge_implications": "Agregar un campo `fecha_vencimiento_directiva` con alerta a los 24 meses de vigencia para solicitar actualización de personería.",
+  "open_gaps": [
+    "Automatizar la consulta del Registro Civil para certificados de personería jurídica."
+  ],
+  "next_question_ids": [
+    "P09-C03",
+    "P09-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

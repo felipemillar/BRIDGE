@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C12",
+  "pilar": "P03",
+  "eje": "Desambiguación y análisis de señales",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué sigue sin prueba sobre desambiguación y análisis de señales, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la exactitud del análisis de postura (stance analysis) y clasificación de riesgo reputacional en el debate regulatorio y corporativo chileno: 1) Brecha: Ausencia absoluta de un conjunto de datos de evaluación (benchmark) estandarizado y público anotado con lenguaje y coyunturas de políticas públicas chilenas; 2) Fuente fallida/parcial: Las suites comerciales afirman alcanzar 95% de precisión en sentimiento pero emplean esquemas simplistas de polaridad tripolar que colapsan ante debates regulatorios; 3) Validación mínima: Construir un benchmark de prueba local anotando manualmente 2.000 textos de prensa, intervenciones en comisiones legislativas y cartas al director con 3 jueces expertos independientes en asuntos públicos (midiendo concordancia inter-anotador con Kappa de Cohen >= 0.75), evaluando sobre este corpus el rendimiento relativo de BETO fine-tuneado frente a LLMs comerciales (GPT-4o, Claude 3.5 Sonnet) con métricas formales de F1-Score macro.",
+  "findings": [
+    {
+      "claim_id": "P03-C12-C1",
+      "claim": "Sigue sin prueba la precisión del análisis de postura en asuntos públicos chilenos debido a la inexistencia de un benchmark anotado, requiriendo la creación de un corpus de 2.000 textos con Kappa de Cohen >= 0.75.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Protocolo de Validación NLP P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.2: Requerimiento Técnico",
+          "excerpt_short": "Se requiere un proceso formal de domain adaptation, fine-tuning con un conjunto de datos anotado manualmente por expertos en asuntos públicos chilenos, y la creación de un benchmark de prueba local.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del requerimiento técnico vinculante en la adenda de calidad.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "2.000 textos de debate público chileno",
+      "3 expertos anotadores en asuntos públicos"
+    ],
+    "actors": [
+      "Annotation Manager",
+      "Inter-Annotator Agreement Evaluator"
+    ],
+    "steps": [
+      "Anotación ciega por 3 expertos",
+      "Cálculo de Kappa de Cohen",
+      "Evaluación de modelos contra benchmark"
+    ],
+    "states": [
+      "Corpus_Gathered",
+      "Annotated_By_Experts",
+      "Benchmark_Released_Kappa_75"
+    ],
+    "outputs": [
+      "Benchmark formal de postura y riesgo reputacional en español chileno"
+    ],
+    "exceptions": [
+      "Discrepancias interpretativas profundas entre expertos en temas altamente polarizados"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BENCHMARK_POSTURA_CHILENA",
+      "type": "benchmark_nlp",
+      "name": "Benchmark de Postura y Riesgo Regulatorio Chileno",
+      "aliases": [
+        "Chilean Stance Benchmark"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BENCHMARK_POSTURA_CHILENA",
+      "predicate": "resuelve_incertidumbre_de",
+      "object_id": "Eje_Analisis_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C12-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Concordancia Inter-Anotador (Kappa de Cohen)",
+      "numerator": "Acuerdo observado - Acuerdo esperado por azar",
+      "denominator": "1 - Acuerdo esperado por azar",
+      "context": "Meta de validación: Kappa >= 0.75 en 2.000 textos anotados"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Financiar y construir el benchmark de postura chileno como activo propietario diferenciador para los modelos de BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_P03_CHILEAN_STANCE_BENCHMARK",
+      "description": "Falta de dataset anotado de postura regulatoria chilena",
+      "action": "Crear benchmark con 2.000 textos y 3 anotadores expertos"
+    }
+  ],
+  "next_question_ids": [
+    "P03-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

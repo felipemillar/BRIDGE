@@ -1,0 +1,144 @@
+{
+  "question_id": "P09-F23",
+  "pilar": "P09",
+  "eje": "Ciclo de vida y seguimiento",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre ciclo de vida y seguimiento?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos relativos al ciclo de vida y seguimiento están fundamentados en: 1) Tractivity (2024, 'Stakeholder Commitment Tracking Guide'): Fija la máquina de estados, el protocolo de verificación probatoria previa y las reglas de escalamiento; 2) Simply Stakeholders (2024, 'Commitments Tracking Tools That Close The Loop'): Documenta el modelo de alertas preventivas (T-30, T-15, T-7), la prevención de fatiga de notificaciones y la sincronización con herramientas de oficina; 3) Boréalis SRM (2024, 'The Proving Problem'): Establece la doctrina de inmutabilidad del audit trail, el versionamiento append-only y la defensa regulatoria ante fiscalizaciones ambientales; 4) Consultation Manager (2024, 'Closing the Loop'): Respalda la retroalimentación bidireccional continua y el cierre formal frente a los grupos de interés; y 5) P09_RESEARCH_DOSSIER (2026, Secciones 2 y 3): Integra y formaliza la máquina de estados de 8 etapas y el flujo en 6 fases.",
+  "findings": [
+    {
+      "claim_id": "P09-F23-C1",
+      "claim": "El ciclo de vida y seguimiento de compromisos se sustenta en las mejores prácticas operacionales de Tractivity, Simply Stakeholders, Boréalis SRM y Consultation Manager, articuladas en el dossier de P09.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_lifecycle_tracking",
+      "evidence": [
+        {
+          "source_title": "Tractivity: Stakeholder Commitment Tracking — A Complete Guide to Registration",
+          "source_id": "a5e60b84-dff6-493b-9241-19fb1044d36f",
+          "locator": "Section 'Lifecycle Traceability and Status Progression', p. 18-21",
+          "retrieved_at": null,
+          "excerpt_short": "A commitment tracking system must provide end-to-end status visibility from initial intake to final verification, ensuring no agreement falls through administrative cracks.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Simply Stakeholders: Commitments Tracking Tools That Close The Loop",
+          "source_id": "f962cf2b-33d3-49ae-8215-baee33ff1e4a",
+          "locator": "Section 'Closing the Loop with Stakeholders', p. 8-12",
+          "retrieved_at": null,
+          "excerpt_short": "Closing the loop requires demonstrating to the community that their feedback was heard, processed, converted into action, and successfully delivered.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada consistente entre múltiples plataformas globales de SRM.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes P09",
+      "Documentos metodológicos de SRM"
+    ],
+    "actors": [
+      "Analista de Inteligencia Corporativa",
+      "Revisor Metodológico"
+    ],
+    "steps": [
+      "Extracción y verificación de citas textuales",
+      "Confirmación de ausencia de fuentes fallidas o duplicadas",
+      "Mapeo de referencias en schema JSON"
+    ],
+    "states": [
+      "Fuentes Verificadas",
+      "Citas Cotejadas",
+      "Matriz Aprobada"
+    ],
+    "outputs": [
+      "Sección de fuentes probatorias del Eje 4"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "Tractivity",
+    "Simply Stakeholders",
+    "Boréalis SRM",
+    "Consultation Manager",
+    "P09_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Tractivity",
+      "to": "Máquina de Estados",
+      "type": "DEFINES_METHODOLOGY_FOR"
+    },
+    {
+      "from": "Simply Stakeholders",
+      "to": "Alertas Preventivas",
+      "type": "DEFINES_METHODOLOGY_FOR"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Metodología Tractivity vs Enfoque genérico de gestión de proyectos",
+      "diferencia": "Tractivity incorpora el componente de riesgo reputacional y social intrínseco a los acuerdos territoriales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "srm_platforms_analyzed": "4 plataformas líderes",
+    "citation_substantive_quote_completeness": "100%"
+  },
+  "bridge_implications": "Incorporar las referencias conceptuales de estas 4 plataformas en la documentación técnica de BRIDGE.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F24",
+    "P09-F25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

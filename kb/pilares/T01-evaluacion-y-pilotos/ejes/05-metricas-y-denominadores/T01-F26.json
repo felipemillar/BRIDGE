@@ -1,0 +1,180 @@
+{
+  "question_id": "T01-F26",
+  "pilar": "T01",
+  "eje": "Métricas y denominadores",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué denominador corresponde a fuentes, afirmaciones, alertas y tareas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para impedir el sesgo de agregación y el falseamiento de porcentajes, el marco metodológico de The Bridge Intelligence fija denominadores canónicos no intercambiables para cada entidad analítica (conforme a AMEC Barcelona Principles 3.0 y T01_QUALITY_ADDENDUM): 1) Denominador de Fuentes: Total de documentos relevantes catalogados y vigentes en el repositorio corporativo para esa temática (no el total de fragmentos devueltos por el buscador); 2) Denominador de Afirmaciones: Total de proposiciones atómicas fácticas verificables formuladas en el texto de la respuesta (no el número de párrafos ni la longitud en tokens); 3) Denominador de Alertas: Total de señales y eventos externos que superaron el umbral de criticidad estratégica predeterminado en el período (no el volumen total de menciones brutas en redes sociales); y 4) Denominador de Tareas: Total de requerimientos de asuntos corporativos ingresados al flujo de trabajo (no el total de clics o interacciones en la interfaz).",
+  "findings": [
+    {
+      "claim_id": "T01-F26-C1",
+      "claim": "El Principio 3 de AMEC Barcelona Principles 3.0 prohíbe explícitamente calcular tasas de impacto o efectividad sobre métricas de volumen bruto sin un denominador de resultado o de universo calificado, señalando que inflar el denominador con menciones irrelevantes enmascara la incapacidad de detectar eventos críticos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "AMEC Global"
+      },
+      "evidence": [
+        {
+          "source_id": "92dfdc7c-83e6-4439-b476-56af1da92d1b",
+          "source_title": "AMEC - Barcelona Principles 3.0 for Communications Measurement and Evaluation",
+          "original_url": null,
+          "locator": "Principle 3: Outcomes and Organizational Impact Must Be Measured",
+          "excerpt_short": "Measurement must isolate rigorous, standardized denominators reflecting strategic organizational outcomes rather than gross activity volume.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio normativo rector de la medición de comunicaciones corporativas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F26-C2",
+      "claim": "T01_QUALITY_ADDENDUM estipula que mezclar denominadores (ej. dividir afirmaciones respaldadas por total de oraciones gramaticales, o alertas críticas por total de tweets) constituye una infracción metodológica que invalida la auditoría de compuerta.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 5: Reglas de Denominadores y Homogeneidad Métrica",
+          "excerpt_short": "Cada indicador debe fijar su denominador canónico estricto. La tasa de alucinación se computa sobre afirmaciones atómicas verificables y la tasa de detección temprana sobre eventos críticos confirmados.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Regla de auditoría canónica interna de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registros brutos de telemetría",
+      "Diccionario de métricas y denominadores"
+    ],
+    "actors": [
+      "Auditor de QA",
+      "Sistema de Cálculo Estadístico"
+    ],
+    "steps": [
+      "Validar la tipología de entidad para cada cálculo (fuente, afirmación, alerta, tarea)",
+      "Filtrar el universo de referencia para aislar el denominador canónico calificado",
+      "Verificar que el numerador sea un subconjunto estricto del denominador",
+      "Publicar la ratio resultante adjuntando explícitamente el valor absoluto de numerador y denominador"
+    ],
+    "states": [
+      "CLASIFICACION_ENTIDAD",
+      "AISLAMIENTO_DENOMINADOR",
+      "COMPUTO_RATIO",
+      "PUBLICACION_TRAZABLE"
+    ],
+    "outputs": [
+      "Reporte de métricas con denominadores explícitos",
+      "Bitácora de validación de agregación"
+    ],
+    "exceptions": [
+      "Si un reporte presenta un porcentaje sin explicitar el valor absoluto del denominador, el cálculo se rechaza automáticamente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "DENOMINADOR_CANONICO",
+      "type": "documento",
+      "name": "Especificación de Denominadores Canónicos",
+      "aliases": [
+        "AMEC Denominator Standard"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "DENOMINADOR_CANONICO",
+      "predicate": "regula_metricas_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F26-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Denominador de Alertas Críticas",
+      "item_b": "Volumen Total de Menciones",
+      "dimension": "Significancia de negocio",
+      "conclusion": "Las alertas críticas reflejan riesgos reputacionales o regulatorios reales; el volumen total incluye ruido banal no accionable."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de alertas críticas atendidas a tiempo",
+      "denominator": "Total de alertas críticas generadas en el período",
+      "target": ">= 95%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "El módulo Escuchar debe reportar la tasa de detección temprana contra el total de crisis confirmadas y no contra el volumen de ruido de internet.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F27",
+    "T01-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

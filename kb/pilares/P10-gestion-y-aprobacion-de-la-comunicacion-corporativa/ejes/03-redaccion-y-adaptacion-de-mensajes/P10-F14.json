@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F14",
+  "pilar": "P10",
+  "eje": "Redacción y adaptación de mensajes",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué variaciones son editorialmente admisibles y cuáles requieren nueva aprobación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El sistema establece un umbral taxonómico y formal estricto entre dos tipos de modificaciones: 1) Variaciones Menores / Secundarias (Versión v1.x — Admisibles sin reiniciar el ciclo tripartito): Cambios de puntuación, corrección de errores ortográficos evidentes, sustitución de sinónimos que no modifiquen la denotación técnica, reordenamiento de párrafos para optimizar la lectura según el canal, o adaptación de longitud para respetar límites de caracteres (e.g., Twitter/LinkedIn); estas variaciones solo requieren el visto bueno del Jefe de Prensa; y 2) Modificaciones Sustantivas / Mayores (Versión v2.0 — Exigen reiniciar la cadena de aprobación tripartita): Cualquier cambio que modifique una cifra cuantitativa, altere una fecha de compromiso, introduzca un argumento defensivo no contemplado en v1.0, reformule la atribución de culpa o responsabilidad en un incidente, o suprima una advertencia de riesgo legal; estas variaciones INVALIDAN la aprobación previa y exigen nuevas firmas del SME, del Fiscal Legal y del DirCom.",
+  "findings": [
+    {
+      "claim_id": "P10-F14-C1",
+      "claim": "Las variaciones secundarias de forma (v1.x) son aprobadas por el Jefe de Prensa, mientras que cualquier cambio en cifras, plazos o encuadre de responsabilidad (v2.0) invalida la aprobación y exige reiniciar la cadena tripartita completa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "editorial_variation_vs_reapproval_threshold",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 4 'Reglas de Transición y Control de Versiones (Convención v1.x vs v2.0)'",
+          "retrieved_at": null,
+          "excerpt_short": "v1.x (Versión Secundaria): Ajustes de forma, corrección tipográfica o adaptación que no alteran el sentido ni las cifras. Requiere visación del Jefe de Prensa. v2.0 (Versión Mayor): Modificación que incorpore nuevos datos fácticos, altere compromisos o modifique el encuadre legal; exige reiniciar el ciclo tripartito (Legal, Técnico, Ejecutivo).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Presspage: Content Approval Workflow and Newsroom FAQ",
+          "source_id": "8758af9a-a962-4c5f-b878-886efa72e458",
+          "locator": "Section 'Minor vs Major Content Edits in Approved Releases', p. 5-9",
+          "retrieved_at": null,
+          "excerpt_short": "Minor formatting adjustments do not trigger re-approvals. However, any modification impacting quotes, data tables, or legal disclaimers automatically revokes approval status and routes the release back to compliance sign-off.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los flujos editoriales de Presspage y el dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Texto modificado",
+      "Texto aprobado v1.0",
+      "Diff semántico calculado"
+    ],
+    "actors": [
+      "Redactor",
+      "Jefe de Prensa",
+      "Motor de Versionamiento BRIDGE"
+    ],
+    "steps": [
+      "Detección de diferencias línea por línea",
+      "Clasificación automática de severidad del diff (Menor vs Mayor)",
+      "Si es Mayor, transición forzada de estado a UNDER_REVIEW",
+      "Notificación a los aprobadores originales con el diff resaltado"
+    ],
+    "states": [
+      "Diff Evaluado",
+      "Tipo de Versión Asignado",
+      "Workflow Notificado"
+    ],
+    "outputs": [
+      "Borrador v1.1 o nueva versión candidata v2.0-RC1"
+    ],
+    "exceptions": [
+      "Intentos de publicar cambios mayores bajo etiqueta de v1.x son bloqueados por el validador criptográfico"
+    ]
+  },
+  "entities": [
+    "Diff Semántico",
+    "Versión v1.x vs v2.0",
+    "Presspage FAQ",
+    "P10_RESEARCH_DOSSIER",
+    "Cadena Tripartita"
+  ],
+  "relations": [
+    {
+      "from": "Cambio Mayor",
+      "to": "Revisión Tripartita",
+      "type": "MANDATORILY_RESTARTS"
+    },
+    {
+      "from": "Cambio Menor",
+      "to": "Jefe de Prensa",
+      "type": "APPROVED_BY_SINGLE_ROLE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Re-aprobar todo por una coma vs Cambiar un número sin avisar a Legal",
+      "diferencia": "Re-aprobar por una coma paraliza al equipo; cambiar un número sin Legal causa multas bursátiles; el modelo v1.x/v2.0 equilibra agilidad y rigor."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "reapproval_trigger_conditions": "5 condiciones mayores (cifras, plazos, culpas, compromisos, safe harbor)",
+    "semantic_diff_latency": "< 500 ms"
+  },
+  "bridge_implications": "Programar en BRIDGE un algoritmo de comparación de texto que bloquee la publicación si detecta alteración de números entre la versión aprobada y la editada.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F15",
+    "P10-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

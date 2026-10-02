@@ -1,0 +1,138 @@
+{
+  "question_id": "P07-F25",
+  "pilar": "P07",
+  "eje": "Apoyo estratégico y límites",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué recomendaciones operativas pueden derivarse de evidencia citada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Pueden derivarse recomendaciones operativas concretas de naturaleza procedimental, discursiva y regulatoria, siempre que estén estrictamente ancladas a datos auditados: 1) Recomendaciones Procedimentales: Desplegar de inmediato tomas de muestras conjuntas con notario público cuando se detectan discrepancias ambientales; 2) Recomendaciones Discursivas: Asignar el Message House validado y orientar al vocero a utilizar Bridging hacia datos de auditorías independientes (ej. 84% de agua desalinizada); 3) Recomendaciones Regulatorias: Alertar sobre la obligatoriedad de registrar la reunión en la plataforma InfoLobby bajo la Ley 20.730; y 4) Recomendaciones de Mitigación: Despachar un Holding Statement en menos de 20 minutos ante crisis virales para frenar la propagación de desinformación sin admitir culpas prematuras.",
+  "findings": [
+    {
+      "claim_id": "P07-F25-C1",
+      "claim": "Las recomendaciones algorítmicas deben limitarse a acciones operativas y directrices discursivas directamente deducibles de los documentos corporativos y del marco legal aplicable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "operational_recommendations",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 1 y Sección 4.1",
+          "excerpt_short": "Las recomendaciones del sistema deben ser operacionales y fundadas en evidencia: proponer el contacto técnico previo con periodistas, calendarizar audiencias en InfoLobby cuando la contraparte es sujeto pasivo de la Ley 20.730, sugerir el despacho de Holding Statements y activar comités técnicos en terreno ante alertas de sensores.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Page Society: Beyond Communication - CCO Leadership",
+          "source_id": "a6960a92-7998-4092-ab5b-ed3a91374b5e",
+          "locator": "Capítulo 'Actionable Strategic Guidance', p. 28-32",
+          "excerpt_short": "Strategic recommendations are legitimate when they translate intelligence into operational safeguards: synchronizing public declarations with legal filings and verifiable operational adjustments.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los marcos de liderazgo del CCO (Page Society) y las plantillas del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "tipologia_recomendaciones_operativas": [
+      {
+        "tipo": "Procedimental",
+        "accion": "Activar muestreo pericial independiente con certificación notarial."
+      },
+      {
+        "tipo": "Discursiva",
+        "accion": "Aplicar guion de Bridging hacia informe técnico DGA en entrevista televisiva."
+      },
+      {
+        "tipo": "Regulatoria",
+        "accion": "Generar borrador de registro para InfoLobby.cl por reunión con Director de Servicio."
+      },
+      {
+        "tipo": "Gobernanza",
+        "accion": "Convocar a Comité de Crisis de C-Suite ante riesgo de daño reputacional severo."
+      }
+    ]
+  },
+  "entities": [
+    "Page Society",
+    "InfoLobby",
+    "Holding Statement",
+    "Comité de Crisis",
+    "DGA"
+  ],
+  "relations": [
+    {
+      "from": "Evidencia Citada",
+      "to": "Recomendación Operativa",
+      "type": "justifies"
+    },
+    {
+      "from": "Recomendación Operativa",
+      "to": "Comité de Crisis",
+      "type": "advises"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Consejo Intuitivo de Consultor vs Recomendación Basada en Evidencia",
+      "diferencia": "El consejo intuitivo carece de respaldo auditable; la recomendación fundada en evidencia enlaza la acción sugerida con un hecho interno comprobable y una obligación regulatoria."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "evidence_link_per_recommendation": "100% de recomendaciones con cita explícita",
+    "actionability_rating": "Acciones ejecutables en < 60 minutos"
+  },
+  "bridge_implications": "En BRIDGE, cada tarjeta de recomendación estratégica debe contener un botón de 'Ver Evidencia de Soporte' con el pasaje exacto que la fundamenta.",
+  "open_gaps": [
+    "Validación de la velocidad de ejecución de las recomendaciones operativas por equipos corporativos descentralizados."
+  ],
+  "next_question_ids": [
+    "P07-F26",
+    "P07-F27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

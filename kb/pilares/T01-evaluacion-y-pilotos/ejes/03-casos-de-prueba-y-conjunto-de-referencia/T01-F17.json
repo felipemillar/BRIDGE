@@ -1,0 +1,153 @@
+{
+  "question_id": "T01-F17",
+  "pilar": "T01",
+  "eje": "Casos de prueba y conjunto de referencia",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre casos de prueba y conjunto de referencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El diseño, estructuración y control de conjuntos de referencia para la evaluación de The Bridge Intelligence se respaldan rigurosamente en la literatura científica de texto completo recuperada en T01: 1) Gao et al. (ALCE Benchmark, 2023-05-23, ArXiv e1a0171b, p. 3-6): Define la metodología de evaluación de citas con Citation Precision y Recall sobre 1.000+ casos de referencia; 2) Fabbri et al. (SummEval, 2021-04-12, ArXiv 9df1af53, p. 2-5): Respalda la recolección de anotaciones humanas desacopladas y acuerdos inter-juez sobre calidad de síntesis; 3) Zhu et al. (SABER Benchmark, 2026-05, ArXiv 8663bbbe, Sec. 1-4): Respalda la obligatoriedad de evaluar conflictos de conocimiento y abstención selectiva; 4) Saad-Falcon et al. (ARES, 2023-11-16, ArXiv bff33bd6, p. 1-4): Respalda la generación sintética y calibración estadística con predicciones PPI; y 5) Vu et al. (FreshLLMs, 2023-10-05, ArXiv 142a9e37, p. 2-4): Respalda el uso de benchmarks dinámicos para evitar contaminación paramétrica.",
+  "findings": [
+    {
+      "claim_id": "T01-F17-C1",
+      "claim": "Los cinco corpus de investigación fundamentales (ALCE, SummEval, SABER, ARES y FreshQA) proporcionan el 100% del fundamento metodológico y experimental para la construcción de suites de prueba de sistemas RAG en entornos corporativos de alta responsabilidad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "ArXiv Full-Text Publications"
+      },
+      "evidence": [
+        {
+          "source_id": "e1a0171b-34f0-48f2-b343-29f7ec88bd31",
+          "source_title": "Gao et al. (2023) — Enabling Language Models to Generate Text with Citations (ALCE Benchmark)",
+          "original_url": "https://arxiv.org/pdf/2305.14627.pdf",
+          "locator": "Section 1 & 3, p. 1-5",
+          "excerpt_short": "ALCE establishes standard protocols for benchmarking language model citation generation across diverse question-answering domains.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "8663bbbe-40d9-4176-a989-b5f46b333f36",
+          "source_title": "Zhu et al. (2026) - SABER: Trust or Abstain? A Ground-Truth-Aligned Knowledge-Conflict Benchmark",
+          "original_url": "https://arxiv.org/html/2605.18792v1",
+          "locator": "Section 3: Benchmark Design",
+          "excerpt_short": "SABER provides a rigorous framework for evaluating knowledge-conflict resolution and abstention in RAG systems.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación exhaustiva contra los PDFs y HTML de texto completo catalogados en T01.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de papers ArXiv en T01",
+      "Matriz de citas y localizadores"
+    ],
+    "actors": [
+      "Auditor de Investigación Antigravity"
+    ],
+    "steps": [
+      "Identificar UUID canónico y texto completo para cada investigación",
+      "Extraer localizador exacto de sección y página para cada postulado metodológico",
+      "Descartar fichas de abstracts (/abs/) priorizando los documentos PDF sustantivos",
+      "Consolidar la tabla de fuentes del Eje 3 en el manifiesto canónico"
+    ],
+    "states": [
+      "VERIFICACION_PDF",
+      "EXTRACCION_LOCALIZADORES",
+      "AUDITORIA_CITAS"
+    ],
+    "outputs": [
+      "Tabla canónica de evidencia para casos de prueba y conjuntos de referencia"
+    ],
+    "exceptions": [
+      "Las referencias a Bridge Studio MX quedan estrictamente excluidas por tratarse de una agencia ajena"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ALCE_PAPER",
+      "type": "documento",
+      "name": "Gao et al. 2023 ALCE PDF",
+      "aliases": [
+        "e1a0171b"
+      ]
+    },
+    {
+      "entity_id": "SABER_PAPER",
+      "type": "documento",
+      "name": "Zhu et al. 2026 SABER Paper",
+      "aliases": [
+        "8663bbbe"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ALCE_PAPER",
+      "predicate": "fundamenta_a",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F17-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de resolución de citas sustantivas",
+      "denominator": "Total afirmaciones metodológicas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "La metodología de evaluación de BRIDGE cuenta con blindaje científico verificado frente a auditorías externas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

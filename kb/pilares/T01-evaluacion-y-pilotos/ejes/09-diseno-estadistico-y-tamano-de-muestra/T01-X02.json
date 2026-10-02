@@ -1,0 +1,162 @@
+{
+  "question_id": "T01-X02",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Diseño estadístico y tamaño de muestra",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué incertidumbre debe reportarse para precisión de citas y detección de contradicciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En The Bridge Intelligence está terminantemente prohibido reportar estimaciones puntuales aisladas sin su correspondiente medida de incertidumbre estadística: 1) Intervalos de Confianza al 95% (95% CI): Para la Precisión de Citación (Citation Precision) y la Exhaustividad (Citation Recall), se debe reportar siempre el estimador puntual acompañado de su intervalo de confianza Wilson para proporciones binomiales o bootstrapped CI (1.000 remuestreos con reemplazo), por ejemplo: 'Citation Precision: 96.2% [95% CI: 93.8% – 98.1%]' (metodología ALCE / Gao et al. 2023); 2) Intervalos Rectificados por PPI (ARES / Saad-Falcon et al. 2023): Cuando se utiliza evaluación automatizada de LLM-as-a-judge, el intervalo debe corregirse mediante Prediction-Powered Inference para acotar formalmente el sesgo algorítmico del evaluador; y 3) Incertidumbre en Detección de Contradicciones (SABER / Zhu et al. 2026): Se reporta el estadístico F1 de detección de contradicciones junto al error estándar (SE) y el p-valor de la prueba de McNemar frente a los sistemas de control.",
+  "findings": [
+    {
+      "claim_id": "T01-X02-C1",
+      "claim": "El benchmark ALCE (Gao et al. 2023) y el framework ARES (Saad-Falcon et al. 2023) exigen el reporte mandatorio de intervalos de confianza al 95% calculados por bootstrap o PPI, demostrando que reportar un score puntual sin rango de error induce a falsas certezas de desempeño en sistemas de recuperación aumentada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023",
+        "region": "Global",
+        "actor": "Gao et al. & Saad-Falcon et al."
+      },
+      "evidence": [
+        {
+          "source_id": "e1a0171b-34f0-48f2-b343-29f7ec88bd31",
+          "source_title": "Gao et al. (2023) — Enabling Language Models to Generate Text with Citations (ALCE Benchmark)",
+          "original_url": "https://arxiv.org/pdf/2305.14627.pdf",
+          "locator": "Section 4: Results & Bootstrap Significance, p. 5-7",
+          "excerpt_short": "We compute 95% confidence intervals via bootstrapping (B=1000) for Citation Precision and Recall, demonstrating statistically significant separation across baseline models.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "bff33bd6-afbc-4544-b611-640f2023a150",
+          "source_title": "Saad-Falcon et al. (2023) — ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+          "original_url": "https://arxiv.org/pdf/2311.09476.pdf",
+          "locator": "Section 3: Confidence Bounds Formulation",
+          "excerpt_short": "ARES constructs valid confidence intervals that correct for LLM judge misclassifications, ensuring empirical rigor in production reporting.",
+          "source_date": "2023-11-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Práctica estadística obligatoria en literatura científica de texto completo.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Predicciones y anotaciones de prueba de BRIDGE",
+      "Generador de remuestreo Bootstrap (B=1.000)"
+    ],
+    "actors": [
+      "MLOps Telemetry Engine",
+      "Auditor Estadístico"
+    ],
+    "steps": [
+      "Calcular el estimador puntual de Citation Precision y Recall",
+      "Ejecutar remuestreo no paramétrico bootstrap con 1.000 réplicas",
+      "Calcular los percentiles 2.5% y 97.5% para derivar el 95% CI",
+      "Publicar la métrica en el formato canónico 'Score [95% CI: min - max]'"
+    ],
+    "states": [
+      "COMPUTO_PUNTUAL",
+      "REMUESTREO_BOOTSTRAP",
+      "CALCULO_INTERVALOS",
+      "PUBLICACION_CI"
+    ],
+    "outputs": [
+      "Reporte Estadístico con Intervalos de Confianza al 95%"
+    ],
+    "exceptions": [
+      "Si el límite inferior del 95% CI de Citation Precision cae por debajo del 90%, el módulo no supera la compuerta G1"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "BOOTSTRAP_CI",
+      "type": "metrica",
+      "name": "Intervalos Bootstrap al 95%",
+      "aliases": [
+        "Wilson Score / Bootstrap CI"
+      ]
+    },
+    {
+      "entity_id": "REPORTE_INCERTIDUMBRE",
+      "type": "documento",
+      "name": "Estándar de Reporte de Incertidumbre BRIDGE",
+      "aliases": [
+        "Reporting Confidence Bounds"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "BOOTSTRAP_CI",
+      "predicate": "formaliza_incertidumbre_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X02-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Score Puntual Aislado (96%)",
+      "item_b": "Score con Intervalo (96% [93.8% - 98.1%])",
+      "dimension": "Honestidad científica",
+      "conclusion": "El score aislado puede ser un artefacto de una muestra pequeña; el intervalo transparenta el margen de error real."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Amplitud máxima del intervalo de confianza al 95%",
+      "denominator": "Rango porcentual (Límite superior - Límite inferior)",
+      "target": "<= 5.0%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Proporciona informes de evaluación inobjetables ante comités de auditoría de bancos y aseguradoras.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "question_id": "P09-F18",
+  "pilar": "P09",
+  "eje": "Ficha de compromiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra ficha de compromiso sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto Documentado: 'Compromiso de Pavimentación Participativa y Supresión de Polvo en Ruta G-25'. Entradas: 1) ID: COMP-2025-0104; 2) Título: 'Aplicación de supresor de polvo en tramo El Canelo - El Manzano'; 3) Tipo: Voluntario de relacionamiento comunitario derivado de mesa de trabajo; 4) Dueño Interno: Ing. Marcelo Rivas (Jefe de Obras Viales de Faena); 5) Beneficiario: Comunidad El Canelo (representada por D. Esteban Lagos, Presidente Junta de Vecinos); 6) Fecha Adquisición: 15 de octubre de 2025; 7) Fecha Vencimiento: 30 de noviembre de 2025; 8) Presupuesto Asignado: CLP $18.500.000; 9) Estado: EN_VERIFICACION; 10) Evidencia Requerida: Acta de conformidad comunitaria firmada + Informe de recepción técnica de la Dirección de Vialidad. Resultado Esperado: 1) Carga de informe de laboratorio de compactación y acta de recepción vecinal con fecha 28 de noviembre; 2) Cambio automático de estado a CUMPLIDO_CERRADO tras validación por la Jefa de Asuntos Comunitarios; 3) Envío de notificación de agradecimiento y comprobante digital al Presidente de la Junta de Vecinos; y 4) Registro del hito en el reporte trimestral de sustentabilidad.",
+  "findings": [
+    {
+      "claim_id": "P09-F18-C1",
+      "claim": "El caso documentado ilustra el ciclo de vida completo de una Ficha de Compromiso: asignación a dueño único, ejecución en plazo, carga de evidencia probatoria dual (técnica y social) y transición formal a CUMPLIDO_CERRADO.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "concrete_case_commitment_card",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo de Gestión en 6 Fases (Fase 5: Cerrar con Evidencia Probatoria)'",
+          "retrieved_at": null,
+          "excerpt_short": "Fase 5: Cerrar con Evidencia. El responsable sube el archivo probatorio (acta conforme firmada, informe técnico). La jefatura de área valida la suficiencia de la evidencia y aprueba el paso a CUMPLIDO_CERRADO. El sistema envía notificación de cierre a los involucrados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: The Proving Problem — Why DIY AI Can't Prove Compliance (Commitment Tracking)",
+          "source_id": "27ce9bc8-70cf-4dc0-ac19-d8787d3bccd6",
+          "locator": "Section 'Closing the Loop with Auditable Evidence', p. 24-28",
+          "retrieved_at": null,
+          "excerpt_short": "A closed commitment must contain bidirectional sign-offs: the engineering team verifying technical completion and the community relations officer confirming community receipt.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Modelado consistente con las especificaciones de cierre probatorio del dossier y Boréalis.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Informe técnico de laboratorio",
+      "Acta comunitaria con firma manuscrita",
+      "Formulario web de cierre"
+    ],
+    "actors": [
+      "Marcelo Rivas (Dueño)",
+      "Camila Soto (Jefa Comunitaria)",
+      "Esteban Lagos (Dirigente JJVV)"
+    ],
+    "steps": [
+      "Subida de archivos probatorios a BRIDGE",
+      "Revisión de consistencia por Jefa Comunitaria",
+      "Aprobación de cierre en sistema",
+      "Despacho de notificación de cierre exitoso"
+    ],
+    "states": [
+      "En Verificación",
+      "Cierre Aprobado",
+      "Cumplido Cerrado",
+      "Historiado"
+    ],
+    "outputs": [
+      "Compromiso COMP-2025-0104 en estado CUMPLIDO_CERRADO",
+      "Certificado de cumplimiento probatorio"
+    ],
+    "exceptions": [
+      "Si la comunidad rechaza la calidad de la obra, el estado retrocede a EN_EJECUCION con ticket de queja abierto"
+    ]
+  },
+  "entities": [
+    "COMP-2025-0104",
+    "Boréalis SRM",
+    "Acta Conforme",
+    "CUMPLIDO_CERRADO",
+    "P09_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "COMP-2025-0104",
+      "to": "Marcelo Rivas",
+      "type": "EXECUTED_BY"
+    },
+    {
+      "from": "COMP-2025-0104",
+      "to": "Acta Conforme",
+      "type": "CLOSED_WITH_EVIDENCE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cierre unilateral administrativo vs Cierre con evidencia social",
+      "diferencia": "El cierre unilateral ignora el descontento de los vecinos; el cierre con evidencia social garantiza que ambas partes reconozcan el cumplimiento."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "evidence_files_count": "2 documentos probatorios (informe de laboratorio + acta comunitaria firmada)",
+    "closing_cycle_time": "3 días desde término de faena hasta cierre en sistema"
+  },
+  "bridge_implications": "Diseñar la pantalla de cierre de compromisos con visor dual de documentos PDF y botón de firma electrónica simple.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F19",
+    "P09-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

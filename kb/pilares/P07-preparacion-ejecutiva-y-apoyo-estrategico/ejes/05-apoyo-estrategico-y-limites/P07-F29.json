@@ -1,0 +1,147 @@
+{
+  "question_id": "P07-F29",
+  "pilar": "P07",
+  "eje": "Apoyo estratégico y límites",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre apoyo estratégico y límites?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se respaldan en cinco fuentes canónicas del corpus: 1) Marcos de Gobernanza de IA y Gestión de Riesgos: NIST AI RMF 1.0 (2023, funciones GOVERN y MANAGE) y NIST Generative AI Profile (NIST AI 600-1, 2024) sobre límites operacionales y supervisión humana; 2) Estándares Éticos de la Industria: PR Council (2024, 'Ethical Standards and Guidelines for Generative AI in PR') sobre prohibición de astroturfing y rendición de cuentas humana; 3) Gobierno Corporativo Global: OECD Legal Instruments (2023, G20/OECD Principles of Corporate Governance, OECD-LEGAL-0413) sobre deber fiduciario indelegable del Directorio; 4) Normativa Chilena de Mercado y Lobby: Ley 18.045 de Mercado de Valores y Ley 20.730 de Lobby (BCN Chile); y 5) Síntesis Técnica y de Gaps: P07_RESEARCH_DOSSIER y P07_GAPS_AND_VALIDATION (Septiembre 2026).",
+  "findings": [
+    {
+      "claim_id": "P07-F29-C1",
+      "claim": "Los límites del apoyo estratégico y la obligatoriedad de compuertas de elevación emanan de la convergencia entre directrices de gobernanza de IA del NIST, normas corporativas de la OCDE y la legislación chilena.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_grounding",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje E) y Sección 3",
+          "excerpt_short": "Eje E: Supervisión Humana (Human-in-the-Loop) y Límites de Recomendaciones. Respaldado con Nivel 1 por NIST AI RMF 1.0 (2023), PR Council (2024), OECD Corporate Governance Principles (2023) y Leyes 18.045 y 20.730 de Chile. Establece la prohibición taxativa de autonomía en decisiones de comunicación pública y gobierno corporativo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "NIST: AI Risk Management Framework (AI RMF 1.0)",
+          "source_id": "3e70b28e-2295-4ce6-9f9f-efc2bfd4a5bf",
+          "locator": "Función GOVERN, p. 20-25",
+          "excerpt_short": "Policies and procedures must be established to delineate human responsibility from AI analytical outputs. High-impact operational recommendations must always require explicit human authorization before execution.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el mapa de evidencia y contraste documental con los marcos de gobernanza oficiales.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_fuentes_limites": [
+      {
+        "ambito": "Gobernanza de IA",
+        "fuente": "NIST AI RMF 1.0 / NIST AI 600-1",
+        "aporte": "Controles de supervisión humana, procedencia y mitigación de alucinaciones."
+      },
+      {
+        "ambito": "Deontología Profesional",
+        "fuente": "PR Council (2024)",
+        "aporte": "Límites éticos, prohibición de engaño y exigencia de firma humana."
+      },
+      {
+        "ambito": "Responsabilidad Fiduciaria",
+        "fuente": "OECD Principles (2023)",
+        "aporte": "Indelegabilidad del deber de cuidado y lealtad del Directorio."
+      },
+      {
+        "ambito": "Legislación Nacional",
+        "fuente": "Leyes 18.045 y 20.730 (BCN)",
+        "aporte": "Sanciones penales por manipulación bursátil o lobby encubierto."
+      },
+      {
+        "ambito": "Síntesis Metodológica",
+        "fuente": "P07_RESEARCH_DOSSIER / EVIDENCE_MAP",
+        "aporte": "Definición operativa de compuertas de elevación y abstención."
+      }
+    ]
+  },
+  "entities": [
+    "NIST AI RMF",
+    "PR Council",
+    "OECD Principles",
+    "BCN Chile",
+    "P07_EVIDENCE_MAP"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "NIST AI RMF",
+      "type": "synthesizes"
+    },
+    {
+      "from": "OECD Principles",
+      "to": "Directorio",
+      "type": "binds"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Autorregulación Voluntaria vs Marco Regulatorio Vinculante",
+      "diferencia": "La autorregulación ética plantea principios generales; las leyes bursátiles y de lobby chilenas acarrean inhabilidades de cargos públicos y multas millonarias."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "grounding_sources_count": "5 cuerpos normativos y éticos",
+    "statutory_alignment": "100% conforme a derecho corporativo chileno"
+  },
+  "bridge_implications": "Garantizar que los términos de servicio y la arquitectura técnica de BRIDGE reflejen taxativamente el cumplimiento de estos marcos.",
+  "open_gaps": [
+    "Monitoreo de futuras leyes de Inteligencia Artificial que se tramitan actualmente en el Congreso Nacional de Chile."
+  ],
+  "next_question_ids": [
+    "P07-F30",
+    "P07-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

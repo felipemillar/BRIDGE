@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F46",
+  "pilar": "P08",
+  "eje": "Experimentos comerciales",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar experimentos comerciales de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de los experimentos comerciales exige modelar: 1) Variables Experimentales (tasa de conversión de piloto a contrato anual, tiempo promedio de ciclo de conversión, Net Promoter Score NPS de CCOs, horas promedio de analista HITL consumidas por cliente durante el piloto, cuota de compromiso pagada); 2) Categorías de Experimento (Entrevista Cualitativa de Dolor, Prueba de Concepto Técnica de Ingesta, Piloto Guiado Pagado, Negociación Contractual de Conversión); 3) Relaciones de Causalidad (impacto de la velocidad de entrega en el NPS, correlación entre involucramiento del CISO y demora en el cierre); y 4) Condiciones de Gobernanza Experimental (criterios de éxito predefinidos y firmados antes de iniciar el piloto, SLA de soporte durante la prueba, confidencialidad estricta y protocolo de borrado de datos corporativos si el piloto no convierte).",
+  "findings": [
+    {
+      "claim_id": "P08-F46-C1",
+      "claim": "El esquema estructurado de experimentación formaliza los parámetros de evaluación comercial, asegurando trazabilidad entre las hipótesis iniciales y los datos de compra reales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "commercial_experiment_ontology",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 8.4 'Ontología Estructurada de Experimentos y Métricas de Tracción'",
+          "excerpt_short": "La ontología experimental se compone de las entidades: 'Experimento_Comercial', 'Cohorte_Piloto', 'Comprador_Sponsor', 'KPI_Exito_Preacordado' y 'Resultado_Conversion'. Cada piloto genera un registro estructurado que audita si se cumplieron los KPIs fijados en el contrato de prueba y si se gatilló la cláusula de conversión comercial.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_EVIDENCE_MAP",
+          "source_id": "1323b514-5154-49f7-b105-42766ddbcaf5",
+          "locator": "Eje 8: Experimentos Comerciales - Parámetros de Registro de Pruebas",
+          "excerpt_short": "Parámetros obligatorios: 'pilot_duration_days', 'paid_commitment_amount_usd', 'economic_buyer_verified_flag', 'conversion_contract_signed'.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño ontológico riguroso y formalizado en la documentación técnica de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Parámetros del piloto",
+      "Acuerdo de KPIs de prueba",
+      "Telemetría de uso"
+    ],
+    "actors": [
+      "Product Manager",
+      "Lead Comercial",
+      "Analista Asignado"
+    ],
+    "steps": [
+      "Alta de cohorte experimental en sistema",
+      "Seguimiento de KPIs acordados semanalmente",
+      "Revisión final de métricas al día 45",
+      "Registro de resultado en base de datos"
+    ],
+    "states": [
+      "Piloto Creado",
+      "En Seguimiento",
+      "Completado",
+      "Convertido / No Convertido"
+    ],
+    "outputs": [
+      "Informe estructurado de experimento comercial"
+    ],
+    "exceptions": [
+      "Cambio de contraparte en la empresa cliente durante el piloto que exija extender los KPIs acordados"
+    ]
+  },
+  "entities": [
+    "Cohorte Experimental",
+    "KPIs Preacordados",
+    "Telemetría de Piloto",
+    "Resultado Conversión",
+    "Ontología Experimental"
+  ],
+  "relations": [
+    {
+      "from": "Cohorte Experimental",
+      "to": "KPIs Preacordados",
+      "type": "evaluated_against"
+    },
+    {
+      "from": "Cumplimiento de KPIs",
+      "to": "Conversión Comercial",
+      "type": "facilitates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Prueba informal desordenada vs Experimento ontológico estructurado",
+      "diferencia": "La prueba informal termina en discusiones vagas sobre si 'gustó o no'; el experimento estructurado audita métricas preacordadas y firmadas por ambas partes."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "kpis_per_pilot_count": "3 a 5 KPIs cuantitativos firmados",
+    "pilot_tracking_frequency": "Informe semanal de avance"
+  },
+  "bridge_implications": "Integrar el módulo de seguimiento de pilotos en el panel administrativo de BRIDGE para monitorear el cumplimiento de KPIs en tiempo real.",
+  "open_gaps": [
+    "Definir el dashboard estándar de cierre de piloto para presentar al comité de compras del cliente."
+  ],
+  "next_question_ids": [
+    "P08-F47",
+    "P08-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

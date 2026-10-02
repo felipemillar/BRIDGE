@@ -1,0 +1,134 @@
+{
+  "question_id": "P06-X13",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Resolución de contradicciones complejas",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre resolución de contradicciones complejas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La resolución de contradicciones complejas se respalda en las siguientes fuentes canónicas del corpus: 1) Zhu et al. (2026, ArXiv:2605.18792; 'SABER: Trust or Abstain? Towards Self-Aware RAG', Mayo 2026): Texto completo HTML, Secciones 3 y 4, fundamentando los mecanismos de abstención pedagógica cuando la información entra en contradicción o carece de consistencia epistemológica; 2) Dhuliawala et al. (2023, ArXiv:2309.11495; 'Chain-of-Verification Reduces Hallucination in Large Language Models', Septiembre 2023): Metodología CoVe para descomponer afirmaciones complejas en preguntas de verificación independientes y contrastar respuestas; 3) CMF Chile (2021; 'Norma de Carácter General N° 461', Noviembre 2021): Instrucciones de divulgación, consistencia metodológica de métricas ESG y perímetro contable de emisores; y 4) P06_QUALITY_ADDENDUM (2026, Síntesis Interna, Septiembre 2026): Secciones 2 y 3, estableciendo las reglas de prevalencia, umbrales de revisión humana y prevención de falsas contradicciones.",
+  "findings": [
+    {
+      "claim_id": "P06-X13-C1",
+      "claim": "Los protocolos de resolución de contradicciones complejas se basan en literatura de vanguardia de autorreflexión RAG (SABER, CoVe) y normativa de la CMF.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Chile / Global",
+        "actor": "Investigación RAG y Regulación Financiera"
+      },
+      "evidence": [
+        {
+          "source_id": "8efce53c-a1b5-4416-b399-3a615f36b2b5",
+          "source_title": "Zhu et al. (2026) - SABER: Trust or Abstain? (Texto Completo HTML v1)",
+          "original_url": "https://arxiv.org/html/2605.18792v1",
+          "locator": "Section 1 & 3: Framework Overview",
+          "excerpt_short": "SABER equips RAG systems with self-awareness, allowing models to abstain rather than fabricate answers when facing irreconcilable factual conflicts in retrieved documents.",
+          "source_date": "2026-05-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "4cc2b683-2a00-429f-8117-63824505752b",
+          "source_title": "Dhuliawala et al. (2023) - Chain-of-Verification (CoVe)",
+          "original_url": "https://arxiv.org/abs/2309.11495",
+          "locator": "Section 2: Verification Chain Formulation",
+          "excerpt_short": "CoVe generates baseline responses, plans verification questions, executes them against knowledge sources independently, and synthesizes a verified output.",
+          "source_date": "2023-09-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Publicaciones científicas de primer nivel incorporadas y verificadas en el corpus de P06.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus indexado"
+    ],
+    "actors": [
+      "Auditor Bibliográfico"
+    ],
+    "steps": [
+      "Verificación de autores y texto de respaldo",
+      "Mapeo a afirmaciones del pilar"
+    ],
+    "states": [
+      "Verified"
+    ],
+    "outputs": [
+      "Trazabilidad bibliográfica certificada"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BIBLIO_CONFLICTS",
+      "type": "corpus_bibliografico",
+      "name": "Corpus Científico de Resolución de Contradicciones",
+      "aliases": [
+        "Conflict Resolution Sources"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BIBLIO_CONFLICTS",
+      "predicate": "fundamenta_logica_de",
+      "object_id": "ENT_HUMAN_GATEKEEPER",
+      "valid_from": "2023-01-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X13-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Garantiza solvencia metodológica y trazabilidad de cada regla de negocio del producto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

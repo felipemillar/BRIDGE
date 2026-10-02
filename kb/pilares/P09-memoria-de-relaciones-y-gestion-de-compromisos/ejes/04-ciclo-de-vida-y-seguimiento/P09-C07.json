@@ -1,0 +1,154 @@
+{
+  "question_id": "P09-C07",
+  "pilar": "P09",
+  "eje": "Ciclo de vida y seguimiento",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre ciclo de vida y seguimiento, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: En algunas síntesis iniciales se proponía una máquina de estados simplificada de 4 etapas (Pendiente, En Proceso, Cumplido, Cancelado), la cual permitía marcar un compromiso como 'Cumplido' directamente desde 'En Proceso' sin requerir una fase de validación ni verificar la suficiencia probatoria documental. Versión Prevalente: En estricta aplicación de la Rectificación R2 de `P09_VERIFICATION_CORRECTIONS` (`f7d21328`), prevalece la Máquina de Estados Finita (FSM) de 8 etapas gobernadas. Está expresamente prohibido transitar directamente a CUMPLIDO_CERRADO; el compromiso debe transitar obligatoriamente por el estado `EN_VERIFICACION`, donde la jefatura de área y la contraparte validan la evidencia física y el acta de recepción conforme.",
+  "findings": [
+    {
+      "claim_id": "P09-C07-C1",
+      "claim": "P09_VERIFICATION_CORRECTIONS prevalece imponiendo la máquina finita de 8 estados e impidiendo el cierre directo de compromisos sin pasar por la fase mandatoria de EN_VERIFICACION probatoria.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "contrast_lifecycle_tracking_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R2 'Máquina de Estados Finita e Inmutabilidad'",
+          "retrieved_at": null,
+          "excerpt_short": "Se ratifica la vigencia obligatoria de la FSM de 8 estados: PROPUESTO, APROBADO_ASIGNADO, EN_EJECUCION, EN_VERIFICACION, CUMPLIDO_CERRADO, RENEGOCIADO, INCUMPLIDO_VENCIDO y CANCELADO. Toda transición a cierre sin paso por EN_VERIFICACION queda bloqueada por la arquitectura de negocio.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: Stakeholder Commitment Tracking — A Complete Guide to Registration",
+          "source_id": "a5e60b84-dff6-493b-9241-19fb1044d36f",
+          "locator": "Section 'The Fallacy of the 3-State Model', p. 14-17",
+          "retrieved_at": null,
+          "excerpt_short": "Three-state models (To-Do, Doing, Done) inevitably produce self-serving closures where teams mark tasks completed without corroboration. An independent verification stage is indispensable.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Tractivity y la rectificación canónica rectora de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Petición de cierre de compromiso",
+      "Archivos probatorios",
+      "Validador de máquina de estados"
+    ],
+    "actors": [
+      "Dueño del Compromiso",
+      "Jefe de Asuntos Comunitarios",
+      "Motor de Workflow BRIDGE"
+    ],
+    "steps": [
+      "El ejecutor solicita cierre al terminar obras",
+      "El sistema sitúa el compromiso en EN_VERIFICACION",
+      "La jefatura revisa el informe y el acta conforme",
+      "Si la revisión es aprobatoria, se autoriza la transición a CUMPLIDO_CERRADO"
+    ],
+    "states": [
+      "En Ejecución",
+      "En Verificación",
+      "Cierre Aprobado",
+      "Cumplido Cerrado"
+    ],
+    "outputs": [
+      "Compromiso cerrado legal y socialmente defendible"
+    ],
+    "exceptions": [
+      "Si la evidencia no cumple los estándares, el estado retrocede a EN_EJECUCION con observaciones"
+    ]
+  },
+  "entities": [
+    "P09_VERIFICATION_CORRECTIONS",
+    "Máquina de Estados de 8 Etapas",
+    "Tractivity",
+    "EN_VERIFICACION",
+    "CUMPLIDO_CERRADO"
+  ],
+  "relations": [
+    {
+      "from": "EN_EJECUCION",
+      "to": "EN_VERIFICACION",
+      "type": "MANDATORY_PRIOR_STEP_TO_CLOSURE"
+    },
+    {
+      "from": "P09_VERIFICATION_CORRECTIONS",
+      "to": "FSM 8 Estados",
+      "type": "RATIFIES_AS_CANONICAL"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo simplista de 3 estados vs Modelo gobernado de 8 estados",
+      "diferencia": "El de 3 estados es apto para tareas personales pero vulnerable para compliance; el de 8 estados resiste auditorías y fiscalizaciones."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "Síntesis previas: Mencionaban un flujo simple de 'Pendiente -> Ejecutado -> Cerrado'.",
+      "claim_b": "P09_VERIFICATION_CORRECTIONS Rectificación R2: Impone la FSM de 8 estados con validación obligatoria.",
+      "resolution": "Prevalece canónicamente la FSM de 8 estados de P09_VERIFICATION_CORRECTIONS."
+    }
+  ],
+  "metrics_and_denominators": {
+    "canonical_fsm_states_count": "8 estados",
+    "forbidden_direct_closure_attempts": "100% interceptados y rechazados por código"
+  },
+  "bridge_implications": "Programar la máquina de estados en el backend asegurando que la única transición válida hacia CUMPLIDO_CERRADO provenga de EN_VERIFICACION.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C08",
+    "P09-F25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

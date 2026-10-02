@@ -1,0 +1,149 @@
+{
+  "question_id": "P11-F10",
+  "pilar": "P11",
+  "eje": "Separación entre clientes",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar separación entre clientes de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del aislamiento y separación entre clientes exige modelar: 1) Entidad TenantProfile (tenant_id, organization_name, isolation_mode: [POOLED_RLS, DEDICATED_SILO], kms_key_arn, vector_collection_name, redis_namespace_prefix, status: [ACTIVE, SUSPENDED, DELETED]); 2) Entidad TenantBoundaryPolicy (policy_id, tenant_id, enforce_rls: boolean, allow_cross_tenant_analytics: false, encryption_in_transit: 'TLS_1_3', encryption_at_rest: 'AES_256_GCM_KMS'); 3) Entidad IsolationAuditLog (log_id, source_tenant_id, target_attempted_tenant_id, access_timestamp_utc, endpoint_called, violation_detected: boolean, blocked_by_layer: [RLS_POSTGRES, QDRANT_FILTER, REDIS_NAMESPACE, API_GATEWAY]); 4) Relaciones de Grafo (ISOLATED_BY_KEY, RESTRICTED_TO_NAMESPACE, MONITORED_BY_AUDIT); y 5) Condiciones Lógicas de Seguridad Invariables (allow_cross_tenant_analytics == false, if (source_tenant != target_tenant) -> block_and_alert(), session_tenant_id == token_tenant_id).",
+  "findings": [
+    {
+      "claim_id": "P11-F10-C1",
+      "claim": "El modelamiento estructurado exige entidades para perfiles de tenant, políticas de frontera lógica, logs de intentos de violación y condiciones booleanas que prohíban analítica cruzada sin consentimiento.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_tenant_isolation_schema",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 3.1 'Modelo de Datos de Aislamiento y Políticas'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de esquema: TenantProfile, IsolationPolicy, SecurityBoundaryLog. Invariante nuclear: allow_cross_tenant_sharing = FALSE en todos los tenants comerciales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AWS Whitepapers: SaaS Tenant Isolation Strategies",
+          "source_id": "9c4732c4-ab75-4496-bbe6-f62334e3de5f",
+          "locator": "Section 'Tenant Context and Isolation Metadata'",
+          "retrieved_at": null,
+          "excerpt_short": "Model isolation metadata explicitly within the identity and provisioning constructs, associating dedicated encryption keys and partition identifiers with each tenant instance.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño de esquemas consistente con las especificaciones de arquitecturas SaaS multi-tenant seguras de AWS y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de entidades de tenant",
+      "Claves KMS aprovisionadas",
+      "Reglas de aislamiento"
+    ],
+    "actors": [
+      "Administrador de Infraestructura",
+      "Módulo de Aprovisionamiento BRIDGE",
+      "Motor de Base de Datos"
+    ],
+    "steps": [
+      "Creación de registro en `tenant_profiles` al dar de alta a un cliente",
+      "Generación automática de clave KMS dedicada y namespace de Redis",
+      "Compilación de las políticas de RLS para el nuevo tenant",
+      "Creación de colección o partición en Qdrant",
+      "Persistencia de la configuración en catálogo de seguridad inmutable"
+    ],
+    "states": [
+      "TENANT_PROVISIONED",
+      "KEYS_GENERATED",
+      "POLICIES_COMPILED",
+      "BOUNDARIES_ACTIVE"
+    ],
+    "outputs": [
+      "Estructura de aislamiento formalizada en base de datos"
+    ],
+    "exceptions": [
+      "Falla al generar la clave KMS detiene el aprovisionamiento del cliente de forma automática"
+    ]
+  },
+  "entities": [
+    "TenantProfile",
+    "TenantBoundaryPolicy",
+    "IsolationAuditLog",
+    "AWS SaaS Whitepaper",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "TenantProfile",
+      "to": "TenantBoundaryPolicy",
+      "type": "GOVERNED_BY"
+    },
+    {
+      "from": "IsolationAuditLog",
+      "to": "TenantProfile",
+      "type": "REPORTS_VIOLATION_AGAINST"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Configuración manual de aislamiento vs Aprovisionamiento estructurado por esquema",
+      "diferencia": "La configuración manual genera omisiones en bases de datos o caché; el aprovisionamiento estructurado compila automáticamente todos los aislamientos requeridos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "tenant_provisioning_completeness": "100% de inquilinos con clave KMS y particiones de caché/vectores creadas",
+    "boundary_rule_evaluation_latency": "< 2 milisegundos para evaluar la política de aislamiento en cada request"
+  },
+  "bridge_implications": "Permite que el aprovisionamiento de nuevos clientes corporativos sea automatizado, reproducible e inmune a errores humanos de configuración.",
+  "open_gaps": [
+    "Soporte para aislamiento en Silo Físico (Dedicated VPC / Dedicated Database) para clientes gubernamentales o de defensa."
+  ],
+  "next_question_ids": [
+    "P11-F11",
+    "P11-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "question_id": "P01-F09",
+  "pilar": "P01",
+  "eje": "Mapa de usuarios, compradores y aprobadores",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Cómo varían estos roles entre empresa grande, regulada, consultora y organización con presencia territorial?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En empresas grandes predomina el alineamiento del C-Suite y la NCG 461; en reguladas prevalece el control legal de Compliance y la Ley de Lobby (20.730); en consultoras prima la velocidad analítica de múltiples cuentas con necesidad de multi-tenancy; y en territoriales rige la gestión comunitaria en faenas ligada a Resoluciones de Calificación Ambiental (RCA) para sostener la licencia social.",
+  "findings": [
+    {
+      "claim_id": "P01-F09-C1",
+      "claim": "En empresas grandes e IPSA, el foco está en la preservación del valor reputacional, alineamiento del C-Suite y el cumplimiento de la NCG 461 de la CMF ante inversionistas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Chile",
+        "actor": "Grandes Corporaciones / IPSA"
+      },
+      "evidence": [
+        {
+          "source_id": "72c69269-a06e-4c45-a916-1cd68b9af0be",
+          "source_title": "Comisión para el Mercado Financiero (CMF Chile) - NCG 461 y 519: Sostenibilidad y Gobierno Corporativo",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Alcance para emisores de valores",
+          "excerpt_short": "Exige reportar gobernanza de riesgos y sostenibilidad en emisores de valores de alta capitalización bursátil.",
+          "source_date": "2025-11-26",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Normativa legal financiera chilena.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F09-C2",
+      "claim": "En empresas altamente reguladas (banca, salud, servicios básicos, AFP), las gerencias de Asuntos Públicos y Compliance ejercen predominio estricto, centradas en la Ley de Lobby N° 20.730 y requerimientos sancionatorios.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile",
+        "actor": "Sectores Regulados"
+      },
+      "evidence": [
+        {
+          "source_id": "87978287-38ec-4b0f-bd60-e724e02362aa",
+          "source_title": "Biblioteca del Congreso Nacional de Chile - Ley N° 20.730 que Regula el Lobby y Gestiones de Intereses Particulares",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=1060115",
+          "locator": "Artículos 3°, 4° y 5°",
+          "excerpt_short": "Define los sujetos pasivos de fiscalización ante los cuales deben registrarse gestiones de intereses particulares.",
+          "source_date": "2026-04-02",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto legal expreso de la legislación chilena.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F09-C3",
+      "claim": "En organizaciones con presencia territorial (minería, energía, celulosa), el poder decisorio se desplaza a gerentes de faena y sostenibilidad, obligados a conciliar acuerdos comunitarios locales con las RCA ambientales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Chile",
+        "actor": "Empresas con Faenas en Terreno"
+      },
+      "evidence": [
+        {
+          "source_id": "c2dbae6a-963d-4471-ab12-823eab7384d1",
+          "source_title": "Acción Empresas Chile - Red de Sostenibilidad y Desafíos Ambientales, Sociales y Gobernanza (ASG)",
+          "original_url": "https://accionempresas.cl/",
+          "locator": "Desafíos Territoriales y Licencia Social",
+          "excerpt_short": "La legitimidad de la empresa en territorio depende de cumplir acuerdos comunitarios y compromisos de las RCA operacionales.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Directrices de sostenibilidad y gestión territorial de Acción Empresas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F09-C4",
+      "claim": "No existen estudios empíricos longitudinales que midan el impacto de la IA en la reducción de litigios o preservación de la licencia social en faenas extractivas o energéticas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "América Latina",
+        "actor": "Literatura de gestión"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Vacío 2: Impacto longitudinal de IA en Licencia Social",
+          "excerpt_short": "No existen estudios académicos revisados por pares que demuestren que el uso de IA reduce parálisis de proyectos o litigios comunitarios.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:33:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío metodológico formal del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Arquetipo de organización",
+      "Marcos normativos aplicables",
+      "Documentación de faena vs corporativa"
+    ],
+    "actors": [
+      "Gerente Corporativo",
+      "Gerente de Faena",
+      "Fiscal de Compliance",
+      "Consultor Externo"
+    ],
+    "steps": [
+      "Identificación de perfil organizacional",
+      "Configuración de módulos aplicables",
+      "Validación por aprobadores del sector",
+      "Despliegue operativo"
+    ],
+    "states": [
+      "Perfilado",
+      "Modulo_Configurado",
+      "Validado_por_Compliance",
+      "Operativo"
+    ],
+    "outputs": [
+      "Configuración a la medida",
+      "Reporte regulado",
+      "Trazabilidad comunitaria territorial"
+    ],
+    "exceptions": [
+      "Uso de un módulo regulado en consultora sin aislamiento multi-inquilino",
+      "Desconexión entre compromisos de faena y vocería en casa matriz"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RCA",
+      "type": "documento",
+      "name": "Resolución de Calificación Ambiental (RCA)",
+      "aliases": [
+        "RCA Ambiental"
+      ]
+    },
+    {
+      "entity_id": "ENT_ACCION_EMPRESAS",
+      "type": "organizacion",
+      "name": "Acción Empresas Chile"
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ACCION_EMPRESAS",
+      "predicate": "monitorea_impacto_en",
+      "object_id": "Licencia_Social_Operar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F09-C3"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Prioridad Operativa",
+      "empresa_grande": "Alineamiento C-Suite, reputación bursátil y NCG 461",
+      "empresa_regulada": "Cumplimiento normativo, mitigación de multas y Ley de Lobby",
+      "consultora": "Velocidad de síntesis multi-cuenta y alertas 24/7",
+      "empresa_territorial": "Licencia social para operar en faena y cumplimiento de RCA"
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P01-F09-C1",
+        "P01-F09-C3"
+      ],
+      "difference": "Tensión entre métricas ESG abstractas y estandarizadas requeridas por la matriz en Santiago (NCG 461) y las demandas hiper-locales concretas de empleo y mitigación de impacto exigidas por comunidades en terreno.",
+      "resolution": "abierta",
+      "reason": "Desconexión estructural entre reporte financiero formal y relacionamiento territorial en faenas."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Indexar Resoluciones de Calificación Ambiental (RCA) y acuerdos comunitarios para empresas territoriales.",
+      "status": "evidencia"
+    },
+    {
+      "module": "Relacionar",
+      "implication": "Configurar la memoria relacional según sea multi-cliente (consultoras) o territorial (minería/energía).",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "sin_evidencia sobre estudios empíricos longitudinales del impacto de IA en la Licencia Social para Operar.",
+      "minimum_validation": "Estudio longitudinal de casos de faenas extractivas con medición antes/después.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "P01-F10",
+    "P01-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:33:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "question_id": "P02-C03",
+  "pilar": "P02",
+  "eje": "Competidores cercanos a los cuatro módulos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre competidores cercanos a los cuatro módulos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan sobre el alcance funcional real de los competidores más cercanos: 1) Discrepancia: Resúmenes comerciales previos insinuaban que suites como Meltwater, Onclusive o Signal AI cubrían 'de extremo a extremo' la gestión de asuntos corporativos, atribuyéndoles de facto los 4 módulos; 2) Versión que prevalece: Las fuentes primarias de producto y el atlas de reconciliación prueban que ninguna de estas suites cubre más de 2 módulos de forma nativa. Meltwater y Cision cubren primordialmente 'Escuchar' y parcialmente 'Hablar' (mediante distribución de notas de prensa sindicadas), pero carecen totalmente de repositorios RAG sobre documentos internos confidenciales ('Saber') y de gestión de compromisos comunitarios o Ley de Lobby ('Relacionar'). Quorum cubre 'Relacionar' legislativo y alertas normativas, pero es ciego a prensa masiva y carece de System of Record para vocerías de crisis. Prevalece la conclusión de que el mercado está compuesto por soluciones fragmentadas de nicho.",
+  "findings": [
+    {
+      "claim_id": "P02-C03-C1",
+      "claim": "Las revisiones técnicas de producto desmienten las afirmaciones de cobertura 'end-to-end' de las suites de listening globales, confirmando que ninguna solución comercial cubre los cuatro módulos de forma nativa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Meltwater, Cision, Quorum, Signal AI"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Four-Module Coverage Audit",
+          "excerpt_short": "No commercial vendor natively satisfies the 4-module architecture (Saber, Escuchar, Hablar, Relacionar). Maximum observed native coverage is two modules.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:44:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de matrices de producto frente a especificaciones funcionales.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fichas técnicas de Meltwater, Cision, Quorum y Signal AI",
+      "Matriz funcional de 4 módulos"
+    ],
+    "actors": [
+      "Auditor Funcional",
+      "Arquitecto de Soluciones"
+    ],
+    "steps": [
+      "Contraste módulo a módulo",
+      "Evaluación de dependencias externas",
+      "Calificación de cobertura (Nativa, Parcial, Nula)"
+    ],
+    "states": [
+      "Evaluacion_Iniciada",
+      "Brechas_Mapeadas",
+      "Veredicto_Emitido"
+    ],
+    "outputs": [
+      "Matriz de brechas funcionales de los líderes de mercado"
+    ],
+    "exceptions": [
+      "Módulos ofrecidos mediante integraciones iFrame con proveedores terceros"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MELTWATER",
+      "type": "suite_listening",
+      "name": "Meltwater N.V.",
+      "aliases": [
+        "Meltwater"
+      ]
+    },
+    {
+      "entity_id": "ENT_QUORUM",
+      "type": "crm_legislativo",
+      "name": "Quorum Analytics Inc.",
+      "aliases": [
+        "Quorum"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MELTWATER",
+      "predicate": "carece_de_modulo_nativo",
+      "object_id": "Modulo_Relacionar_Comunitario",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Afirmación Comercial vs Realidad Documentada",
+      "Afirmación Comercial": "'Plataforma todo en uno de inteligencia para asuntos públicos y comunicaciones'.",
+      "Realidad Documentada": "Herramienta especializada en monitoreo de prensa y redes con nula gestión de compromisos territoriales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La fragmentación de los líderes valida la tesis central de BRIDGE de construir una suite verdaderamente integrada.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-C04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:44:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

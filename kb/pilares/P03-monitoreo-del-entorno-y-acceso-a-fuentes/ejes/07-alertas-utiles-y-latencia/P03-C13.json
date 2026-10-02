@@ -1,0 +1,137 @@
+{
+  "question_id": "P03-C13",
+  "pilar": "P03",
+  "eje": "Alertas útiles y latencia",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre alertas útiles y latencia, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia radicaba en la promesa comercial generalizada de las suites de monitoreo respecto a entregar 'alertas instantáneas omnicanal en tiempo real sobre cada mención sin riesgo de saturación'. Prevalece la evidencia técnica de AMEC y los principios de control de fatiga de P03_EVIDENCE_MAP: la captura indiscriminada y notificación por mención simple genera una severa fatiga informativa que lleva a directivos a silenciar las alertas; asimismo, la inmediatez en segundos solo existe en WebSockets de redes (subsegundo) o RSS (1-5 min), mientras que las suites comerciales promedian 15 a 45 minutos y el broadcast requiere al menos 8 a 30 minutos. Prevalece la regla de diseño de filtrar por roles jerárquicos, exigir confirmación de materialidad organizativa y deduplicar réplicas mediante agrupamiento en eventos madre antes de emitir notificaciones ejecutivas.",
+  "findings": [
+    {
+      "claim_id": "P03-C13-C1",
+      "claim": "Prevalece la evidencia empírica que desmiente las alertas universales en tiempo real sin fatiga, exigiendo deduplicación por evento madre y límites estrictos de despacho según la jerarquía corporativa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría de Alertas P03"
+      },
+      "evidence": [
+        {
+          "source_id": "5eaa5b99-624c-4877-87be-66c339c7b6d4",
+          "source_title": "AMEC Barcelona Principles 3.0 & Integrated Evaluation Framework",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principles 2 & 7: Outcome Focus and Rigor",
+          "excerpt_short": "Alerting and reporting systems must eliminate vanity output counts to prevent executive attention fatigue, focusing strictly on organizational outcome shifts.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los principios AMEC y evidencia de fatiga informativa.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Declaraciones comerciales de inmediatez",
+      "Métricas reales de fatiga de directores"
+    ],
+    "actors": [
+      "Alert Architecture Auditor"
+    ],
+    "steps": [
+      "Medición de saturación de alertas",
+      "Cotejo con principios AMEC",
+      "Enforcement de deduplicación"
+    ],
+    "states": [
+      "Fatigue_Risk_Analyzed",
+      "AMEC_Rules_Applied",
+      "Controlled_Alerting_Active"
+    ],
+    "outputs": [
+      "Política de alertas directivas controladas por severidad"
+    ],
+    "exceptions": [
+      "Situaciones de crisis operativa grave donde se suspenden los filtros de digest"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CONTROL_FATIGA_ALERTAS",
+      "type": "politica_operativa",
+      "name": "Política de Control de Fatiga de Alertas",
+      "aliases": [
+        "Alert Fatigue Prevention Policy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CONTROL_FATIGA_ALERTAS",
+      "predicate": "regula_notificaciones_en",
+      "object_id": "Eje_Alertas_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de alertas ejecutivas",
+      "Enfoque de Mercado No Calibrado": "Notificación instantánea por cada mención o tuit que nombra a la marca.",
+      "Enfoque Calibrado Prevaleciente": "Deduplicación por evento madre, filtro por materialidad y despacho selectivo por rol."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Entrega instantánea omnicanal sin fatiga informativa",
+      "initial_claim": "Las alertas en tiempo real de cada mención maximizan la agilidad directiva.",
+      "corrected_claim": "Las alertas por mención causan saturación y desactivación del canal; la relevancia exige agrupar por evento.",
+      "resolution": "Prevalece el enfoque de AMEC y P03_EVIDENCE_MAP sobre las declaraciones comerciales."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Diseñar la gobernanza de BRIDGE con un tope máximo de alertas por rol ejecutivo para garantizar alta tasa de apertura y confianza.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

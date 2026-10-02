@@ -1,0 +1,144 @@
+{
+  "question_id": "P08-C10",
+  "pilar": "P08",
+  "eje": "Construir, comprar e integrar",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué sigue sin prueba sobre construir, comprar e integrar, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba de estrés suficiente la estabilidad de la API Ley Chile de la BCN y del portal InfoLobby ante peticiones concurrentes masivas o durante cambios de legislación urgentes en el Congreso, existiendo el riesgo de que el Congreso modifique sus endpoints sin previo aviso. En cuanto a fuentes del corpus, se reitera el fallo de las fuentes de OpenAI Enterprise (beb8de0b y ebd50500) por enlaces deshabilitados, las cuales fueron sustituidas canónicamente por la documentación de Azure OpenAI y Google Vertex AI. La validación mínima para despejar esta incertidumbre consiste en programar un script de prueba de carga (Load Testing con Locust) que ejecute 100 consultas por minuto contra los endpoints de la BCN durante 5 días hábiles, midiendo la tasa de respuestas HTTP 429 (Too Many Requests) y el tiempo de respuesta del caché local.",
+  "findings": [
+    {
+      "claim_id": "P08-C10-C1",
+      "claim": "La resiliencia operativa y límites de tasa de los endpoints públicos de la BCN e InfoLobby bajo alta concurrencia representan un vacío técnico que requiere pruebas de carga empíricas.",
+      "epistemic_status": "inferencia",
+      "scope": "public_api_resilience_gap",
+      "evidence": [
+        {
+          "source_title": "P08_GAPS_AND_VALIDATION",
+          "source_id": "b37bbf38-9c0d-4dc9-bf01-ac0b24ed0bd4",
+          "locator": "Sección 5 'Vacíos de Información Críticos: Eje 5'",
+          "retrieved_at": null,
+          "excerpt_short": "Falta validación técnica sobre el comportamiento de la API de la BCN ante picos de demanda durante votaciones parlamentarias críticas. Si los servidores del Congreso colapsan o bloquean IPs por exceso de tráfico, el módulo de monitoreo legislativo de BRIDGE fallará a menos que cuente con un repositorio espejo local sincronizado fuera de horas punta.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Condiciones de Uso y Cuotas de la API Ley Chile para Desarrolladores",
+          "source_id": "1bece919-6c70-4f4a-a6cb-77b66d1b66f8",
+          "locator": "Políticas de Cuota y Disponibilidad",
+          "retrieved_at": null,
+          "excerpt_short": "El servicio Ley Chile no ofrece garantías de SLA de nivel empresarial y se reserva el derecho de limitar o suspender accesos masivos que afecten el desempeño del portal legislativo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Limitación explícita documentada en las políticas de la BCN y catalogada en los gaps de P08.",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Endpoint BCN Ley Chile",
+      "Script de carga Locust",
+      "Parámetros de caché"
+    ],
+    "actors": [
+      "QA Engineer",
+      "Data Architect"
+    ],
+    "steps": [
+      "Ejecución de test de estrés de 100 req/min",
+      "Monitoreo de latencia y errores 429/5xx",
+      "Ajuste de política de sincronización nocturna (crawling batch off-peak)"
+    ],
+    "states": [
+      "Test Diseñado",
+      "Carga en Ejecución",
+      "Políticas de Caché Calibradas"
+    ],
+    "outputs": [
+      "Estrategia de caching local de leyes chilenas"
+    ],
+    "exceptions": [
+      "Bloqueo de IP mitigado mediante el uso de proxies rotativos debidamente identificados"
+    ]
+  },
+  "entities": [
+    "BCN Ley Chile",
+    "Load Testing",
+    "Locust",
+    "HTTP 429",
+    "Caché Espejo Local",
+    "P08_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "API BCN Ley Chile",
+      "to": "Riesgo de Indisponibilidad",
+      "type": "exhibits"
+    },
+    {
+      "from": "Caché Espejo Local",
+      "to": "Continuidad Operacional",
+      "type": "guarantees"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Consulta en vivo a servidores estatales vs Consulta sobre espejo local",
+      "diferencia": "La consulta en vivo falla cuando el portal estatal se cae; el espejo local responde en milisegundos independientemente del estado de la web del gobierno."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "bcn_load_test_threshold": "100 consultas/minuto con < 0.1% de error",
+    "local_cache_coverage": "100% de las leyes y normas vigentes almacenadas localmente"
+  },
+  "bridge_implications": "Implementar una base de datos espejo local en PostgreSQL que almacene todas las leyes chilenas y las actualice batch a las 03:00 AM.",
+  "open_gaps": [
+    "Verificar el protocolo de notificación de cambios de esquema en la API de la BCN."
+  ],
+  "next_question_ids": [
+    "P08-C11",
+    "P08-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

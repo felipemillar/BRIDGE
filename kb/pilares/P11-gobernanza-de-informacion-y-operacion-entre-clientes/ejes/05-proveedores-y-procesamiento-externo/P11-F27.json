@@ -1,0 +1,148 @@
+{
+  "question_id": "P11-F27",
+  "pilar": "P11",
+  "eje": "Proveedores y procesamiento externo",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué respuesta de debida diligencia sigue pendiente de confirmación contractual?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En los procesos de debida diligencia de ciberseguridad y contratación de proveedores de IA de frontera, existen 3 puntos críticos que permanecen como preguntas abiertas o pendientes de confirmación contractual exhaustiva: 1) SLA Específico para Notificación de Brechas de Seguridad: Proveedores como OpenAI y AWS comprometen contractualmente en sus DPAs notificar incidentes de seguridad 'sin dilación indebida' (without undue delay), pero se resisten a pactar un plazo fatal garantizado por escrito inferior a 24 o 72 horas (el cual es exigible bajo la Ley 21.663 de Ciberseguridad de Chile para reportes al CSIRT Nacional en 3 horas); 2) Supresión Verificable en Respaldos Inaccesibles de Subprocesadores: Ningún proveedor multinacional permite auditorías físicas presenciales ni otorga certificados periciales sobre la sanitización de bloques de datos en sus respaldos en frío secundarios (cold offline tape backups); y 3) Indemnizaciones Sin Tope por Vulneraciones de Hardware Compartido: Las cláusulas de limitación de responsabilidad de todos los grandes proveedores cloud (OpenAI, Microsoft, AWS, Google) limitan sus indemnizaciones financieras al monto total pagado por el cliente en los últimos 12 meses, negándose a otorgar indemnizaciones ilimitadas por daños reputacionales, pérdidas de cotización bursátil o multas regulatorias derivadas de fallas en sus hipervisores multi-inquilino.",
+  "findings": [
+    {
+      "claim_id": "P11-F27-C1",
+      "claim": "Tres respuestas de debida diligencia siguen pendientes de confirmación contractual: tiempos de notificación de brechas inferiores a 24h, prueba de sanitización en respaldos en frío secundarios de subprocesadores e indemnizaciones ilimitadas por fallas en hipervisores compartidos.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "due_diligence_contractual_gaps",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 8.2 'Brechas Abiertas en Debida Diligencia Contractual'",
+          "retrieved_at": null,
+          "excerpt_short": "3 vacíos contractuales pendientes: 1. SLA de reporte de brechas < 24h; 2. Verificación de purga en cintas offline de subprocesadores; 3. Topes de responsabilidad financiera frente a multas regulatorias de la CMF o CSIRT.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "OpenAI: OpenAI Data Processing Addendum (DPA) Official PDF",
+          "source_id": "1bc87361-d1fc-4156-897f-db56e4350456",
+          "locator": "Section 7 'Security Incidents' & Limitation of Liability",
+          "retrieved_at": null,
+          "excerpt_short": "OpenAI will notify Customer of a Security Incident without undue delay... Liability under this DPA shall be subject to the exclusions and limitations of liability set forth in the Agreement.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el texto del DPA de OpenAI y coherencia con los vacíos tipificados en el dossier de P11.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cuestionario de debida diligencia de seguridad",
+      "Términos estándar DPA del vendor",
+      "Límites legales chilenos"
+    ],
+    "actors": [
+      "Oficial de Riesgo de Terceros (TPRM)",
+      "Fiscal Legal Corporativo",
+      "Vendor Cloud"
+    ],
+    "steps": [
+      "Revisión de respuestas del vendor ante el cuestionario SIG / CAIQ",
+      "Identificación de la limitación de responsabilidad y cláusula de notificación 'sin dilación'",
+      "Evaluación del riesgo residual para la compañía",
+      "Diseño de controles compensatorios locales en BRIDGE (cifrado local antes de enviar, seguro de ciberriesgo complementario)",
+      "Documentación formal del riesgo residual aceptado por el Comité de Seguridad"
+    ],
+    "states": [
+      "QUESTIONNAIRE_REVIEWED",
+      "GAPS_IDENTIFIED",
+      "COMPENSATING_CONTROLS_SET",
+      "RESIDUAL_RISK_ACCEPTED"
+    ],
+    "outputs": [
+      "Matriz de riesgos de terceros con controles compensatorios implementados"
+    ],
+    "exceptions": [
+      "Si un proveedor rechaza firmar el DPA estándar, queda vetado para procesar datos de la compañía"
+    ]
+  },
+  "entities": [
+    "Due Diligence",
+    "OpenAI DPA",
+    "Limitación de Responsabilidad",
+    "Controles Compensatorios",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Vacíos Contractuales",
+      "to": "Controles Compensatorios",
+      "type": "MITIGATED_LOCALLY_BY"
+    },
+    {
+      "from": "OpenAI DPA",
+      "to": "SLA de Brechas",
+      "type": "OMITS_STRICT_HOURLY_WINDOW"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir que el DPA del vendor cubre todas las pérdidas vs Implementar controles compensatorios",
+      "diferencia": "Asumir cobertura plena deja a la empresa desprotegida ante multas; los controles compensatorios locales blindan los datos antes de que salgan a la nube del vendor."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "unresolved_due_diligence_gaps_count": "3 vacíos contractuales conocidos gestionados mediante controles compensatorios"
+  },
+  "bridge_implications": "Permite a BRIDGE estructurar pólizas de seguro de ciberriesgo propias y arquitecturas 'zero-trust' que no dependan ciegamente de las promesas de los proveedores de IA.",
+  "open_gaps": [
+    "Negociación de addendums contractuales específicos con Microsoft y AWS para industrias críticas chilenas."
+  ],
+  "next_question_ids": [
+    "P11-F28",
+    "P11-F29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

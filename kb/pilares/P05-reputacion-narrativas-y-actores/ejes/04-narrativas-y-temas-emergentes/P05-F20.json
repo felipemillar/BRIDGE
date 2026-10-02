@@ -1,0 +1,146 @@
+{
+  "question_id": "P05-F20",
+  "pilar": "P05",
+  "eje": "Narrativas y temas emergentes",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué diferencia una señal débil de un tema estable o una controversia material?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus diferencia estos tres estados del entorno informacional mediante su grado de institucionalización, volumen, permeabilidad intercanal y riesgo de consecuencias regulatorias/financieras: 1) Señal Débil (Weak Signal): Información fragmentaria, incipiente y de baja frecuencia, concentrada en canales de nicho o periféricos (artículos académicos, foros comunales rurales, actas iniciales del SEIA), con bajo volumen de menciones pero que contiene una advertencia temprana sobre una tecnología, reclamo o impacto operativo emergente no detectado por la masa; 2) Tema Estable (Established / Latent Issue): Asunto recurrente, maduro e institucionalizado en la agenda pública (e.g. negociaciones colectivas anuales, reporte periódico de huella de carbono, impuestos corporativos), con cobertura mediática predecible, marcos interpretativos consensuados y baja probabilidad de sorpresas críticas inmediatas; y 3) Controversia Material (Material Controversy): Conflicto activo, de alto volumen y rápida propagación que conecta simultáneamente la atención mediática generalista, la indignación de stakeholders territoriales o consumidores, y la acción coercitiva de reguladores o tribunales; posee materialidad de impacto y financiera severa bajo estándares CSRD/GRI/CMF, con potencial inminente de paralizar faenas, revocar permisos, detonar boicots o acarrear multas masivas.",
+  "findings": [
+    {
+      "claim_id": "P05-F20-C1",
+      "claim": "La clasificación del entorno en señales débiles, temas estables y controversias materiales permite jerarquizar los recursos de respuesta institucional según el nivel de riesgo de cristalización regulatoria.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global / Chile",
+        "actor": "Gestión Estratégica de Asuntos Públicos"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4.1: De las Señales Débiles a la Cristalización Regulatoria",
+          "excerpt_short": "Gráfico de ciclo de vida: Fase 1 Señales Débiles -> Fase 2 Tema Emergente -> Fase 3 Crisis / Mainstream Media -> Fase 4 Cristalización Regulatoria con pérdida exponencial de autonomía.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "9bfccb64-7767-4605-b33f-fb4556c5e868",
+          "source_title": "MDPI: Public Relations — Discipline, Practice and Profession (Academic Review)",
+          "original_url": "https://www.mdpi.com/journal/admsci",
+          "locator": "Sección: Issues Management and Crisis Life Cycles",
+          "excerpt_short": "Issues management bridges environmental scanning of weak signals with strategic public relations, preventing emerging controversies from hardening into regulatory barriers.",
+          "source_date": "2026-03-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco teórico consolidado de gestión estratégica de temas (Issues Management) y revisión académica del corpus.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alertas de fuentes periféricas",
+      "Patrones históricos de noticias",
+      "Expedientes de litigios y sanciones"
+    ],
+    "actors": [
+      "Analista de Temas Emergentes",
+      "Comité de Riesgos Operacionales"
+    ],
+    "steps": [
+      "Filtrado de señales según criterios de volumen y procedencia",
+      "Evaluación de severidad según criterios de doble materialidad",
+      "Clasificación en semáforo de criticidad (Verde, Amarillo, Rojo)"
+    ],
+    "states": [
+      "Signal_Detected",
+      "Severity_Evaluated",
+      "Category_Assigned"
+    ],
+    "outputs": [
+      "Matriz de Priorización de Asuntos Públicos"
+    ],
+    "exceptions": [
+      "Tratar una señal débil como crisis inmediata, generando sobre-reacción ejecutiva inútil"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ISSUE_TAXONOMY",
+      "type": "taxonomia",
+      "name": "Taxonomía de Estados de Temas Públicos",
+      "aliases": [
+        "Issue Life Cycle Stages"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ISSUE_TAXONOMY",
+      "predicate": "clasifica_estados_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F20-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Costo de mitigación y autonomía",
+      "Señal Débil": "Costo de gestión casi nulo; máxima autonomía estratégica para ajustar procesos operacionales internamente.",
+      "Controversia Material": "Costos millonarios en asesorías legales, compensaciones y multas; mínima autonomía directiva impuesta por la ley."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gestor de Alertas",
+      "implication": "BRIDGE debe separar en bandejas de entrada distintas las señales débiles (para análisis estratégico reflexivo) de las controversias materiales activas (para gestión urgente de comités).",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

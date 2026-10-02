@@ -1,0 +1,139 @@
+{
+  "question_id": "P05-F23",
+  "pilar": "P05",
+  "eje": "Narrativas y temas emergentes",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre narrativas y temas emergentes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos documentados sobre narrativas y temas emergentes se sustentan en cuatro fuentes canónicas del corpus: 1) Entman (1993, Journal of Communication, 43(4), pp. 51-58, ámbito: teoría del framing y ciencia política): respalda la definición de encuadre y sus cuatro funciones analíticas (problema, causa, juicio moral y remedio); 2) Shiller (2017/2019, Cowles Foundation Paper / Princeton University Press, ámbito: economía narrativa y modelización cuantitativa): respalda la adaptación de modelos epidemiológicos SIR (beta, gamma, R0) a la difusión de historias en mercados e instituciones; 3) MDPI Administrative Sciences Review (2026, Public Relations — Discipline, Practice and Profession, ámbito: relaciones públicas y asuntos corporativos): respalda el modelo del ciclo de vida de los temas (Issues Management) y la transición de señales débiles a crisis regulatorias; y 4) Signal AI (2024, Reputation Intelligence Platform & External Risk Monitoring, ámbito: telemetría de riesgos externos): respalda la detección automatizada de cambios de tono y encuadres pre-regulatorios mediante monitoreo continuo.",
+  "findings": [
+    {
+      "claim_id": "P05-F23-C1",
+      "claim": "El marco analítico de narrativas y temas emergentes se apoya en literatura económica y comunicacional rigurosamente indexada en bases científicas internacionales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1993-2026",
+        "region": "Global",
+        "actor": "Investigación Científica"
+      },
+      "evidence": [
+        {
+          "source_id": "7a4899f4-3cc7-43fe-abdb-ac1108d5282b",
+          "source_title": "Entman: Framing — Toward Clarification of a Fractured Paradigm (Journal of Communication)",
+          "original_url": "https://academic.oup.com/joc/article-abstract/43/4/51/4657475",
+          "locator": "Journal of Communication, 43(4), pp. 51-58",
+          "excerpt_short": "Text analysis of framing provides an empirical foundation to track how public issues are constructed and contested across actors.",
+          "source_date": "1993-12-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "7d9871b7-ce2b-4cae-b265-2d467351d0f4",
+          "source_title": "Shiller: Narrative Economics — How Stories Go Viral & Drive Major Economic Events",
+          "original_url": "https://press.princeton.edu/books/hardcover/9780691182292/narrative-economics",
+          "locator": "Princeton University Press, 2019",
+          "excerpt_short": "Provides historical and statistical evidence of contagion curves driving economic panic, stock movements, and legislative actions.",
+          "source_date": "2019-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual directa en los manuscritos fundacionales de la teoría de encuadres y economía narrativa.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Manuscritos académicos originales",
+      "Libros y monografías publicadas"
+    ],
+    "actors": [
+      "Analista Documental",
+      "Investigador Senior"
+    ],
+    "steps": [
+      "Extracción de tesis doctorales y artículos indexados",
+      "Mapeo de referencias y citas cruzadas",
+      "Integración en base de citas de P05"
+    ],
+    "states": [
+      "Academic_Sources_Read",
+      "Citations_CrossChecked",
+      "Catalog_Validated"
+    ],
+    "outputs": [
+      "Registro pericial de fuentes de narrativa"
+    ],
+    "exceptions": [
+      "Citas indirectas que confunden framing con mero análisis de sentimiento"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_NARRATIVE_SOURCES",
+      "type": "corpus_fuentes",
+      "name": "Fuentes Canónicas de Teoría Narrativa",
+      "aliases": [
+        "Narrative Theory Sources"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_NARRATIVE_SOURCES",
+      "predicate": "fundamenta_marco_de",
+      "object_id": "ENT_NARRATIVE_SCHEMA",
+      "valid_from": "1993",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F23-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Biblioteca de Métodos",
+      "implication": "BRIDGE debe permitir desplegar la ficha metodológica de Entman y Shiller dentro del software para fundamentar las decisiones de priorización ante el C-level.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

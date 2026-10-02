@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C05",
+  "pilar": "P03",
+  "eje": "Redes sociales y comunidades",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre redes sociales y comunidades, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Las discrepancias eran dobles: 1) Estatus de precios de X (Twitter): la síntesis inicial citaba un precio plano de '$42.000 USD/mes' como tarifa pública oficial para el nivel Enterprise; 2) Estructura de mercado: se calificaba el entorno social como un 'duopolio' absoluto. Prevalece la rectificación de la P03_QUALITY_ADDENDUM (Sección 2.1): X Developer Platform no publica una tarifa fija de lista para Enterprise, comercializándolo bajo 'Contact Sales' mediante evaluación caso a caso, siendo $42.000 un reporte de terceros consultores; asimismo, en 2026 X migró hacia modelos por consumo de créditos; y el ecosistema está fragmentado y distribuido (Reddit Data API con 100 req/min, Telegram Bot API, protocolos abiertos como AT Protocol/Bluesky Jetstream, foros y video profesional), descartando taxativamente la existencia de un duopolio fáctico.",
+  "findings": [
+    {
+      "claim_id": "P03-C05-C1",
+      "claim": "Prevalece la rectificación de la adenda de calidad P03 que desmiente la existencia de un precio oficial fijo de $42k/mes en X Enterprise y descarta el concepto de duopolio frente a un ecosistema fragmentado.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría de Redes P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.1: Precios de X y Corrección sobre Duopolio",
+          "excerpt_short": "En la documentación oficial... se comercializa bajo 'Contact Sales'... Cifra de $42.000 USD/mes: estimación de mercado no confirmada oficialmente... Se rectifica la caracterización como 'duopolio'.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación vinculante según la regla de precedencia editorial del pilar.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Información de tarifas de X",
+      "Mapa de mercado de redes sociales"
+    ],
+    "actors": [
+      "Contract Auditor",
+      "Market Analyst"
+    ],
+    "steps": [
+      "Verificación de developer.x.com",
+      "Comprobación de adenda P03",
+      "Actualización de catálogo"
+    ],
+    "states": [
+      "Market_Claim_Analyzed",
+      "Addendum_Rule_Enforced",
+      "Catalog_Updated"
+    ],
+    "outputs": [
+      "Registro fidedigno de precios y arquitectura de redes sociales"
+    ],
+    "exceptions": [
+      "Nuevas modificaciones en los esquemas tarifarios de X Developer Platform"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CORRECCION_REDES_P03",
+      "type": "rectificacion_editorial",
+      "name": "Rectificación de Ecosistema y Tarifas de Redes",
+      "aliases": [
+        "Social Ecosystem Rectification"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CORRECCION_REDES_P03",
+      "predicate": "reemplaza_afirmacion_en",
+      "object_id": "Eje_Redes_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C05-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Tarifas de X Enterprise y estructura de mercado",
+      "Afirmación Inicial": "Precio fijo publicado de $42k/mes y mercado dominado por duopolio.",
+      "Versión Prevaleciente": "Modalidad Contact Sales a la medida sin tarifa de lista fija pública; ecosistema fragmentado y federado."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Precio oficial de X Enterprise",
+      "initial_claim": "X Enterprise cuesta $42.000 USD/mes de tarifa oficial fija.",
+      "corrected_claim": "La cifra es una estimación de consultores; la modalidad oficial es 'Contact Sales' personalizada.",
+      "resolution": "Prevalece la P03_QUALITY_ADDENDUM por regla de precedencia editorial."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Diseñar la ingesta social de BRIDGE en torno a protocolos abiertos (Bluesky) y APIs de foros (Reddit) antes de comprometer contratos cerrados de gran volumen.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

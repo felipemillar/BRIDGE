@@ -1,0 +1,166 @@
+{
+  "question_id": "P02-F26",
+  "pilar": "P02",
+  "eje": "Conocimiento interno y cruce de fuentes",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué conectores, permisos, citas y actualización documentan sus fuentes originales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Documentan cuatro pilares técnicos fundamentales: 1) Conectores: Glean documenta más de 100 conectores API preconstruidos para Google Drive, SharePoint, OneDrive, Slack, Confluence, Jira, GitHub y Salesforce; AlphaSense documenta conectores hacia Box, Microsoft SharePoint/OneLake, carpetas de red e ingesta por API de PDFs internos; Contify ofrece APIs de ingesta y webhooks; 2) Permisos: Glean aplica un modelo de gobernanza estricto 'permission-aware search' donde las credenciales del usuario en el Identity Provider (IdP como Okta/Azure AD) determinan en tiempo de ejecución los fragmentos accesibles, impidiendo que el LLM sintetice sobre documentos a los que el usuario no tiene acceso directo; AlphaSense maneja particionamiento por cuentas corporativas y bibliotecas de equipo privadas; 3) Citas: AlphaSense y Glean implementan citación de grano fino con hipervínculo directo al documento, número de página y resaltado del fragmento textual que originó la afirmación; 4) Actualización: Fuentes externas en AlphaSense y Contify se actualizan en tiempo casi real (segundos a minutos tras publicación de un filing o cable de noticias); la indexación interna en Glean opera mediante webhooks reactivos para cambios inmediatos y re-indexaciones periódicas de consistencia.",
+  "findings": [
+    {
+      "claim_id": "P02-F26-C1",
+      "claim": "La arquitectura técnica de búsqueda corporativa exige sincronización de identidades (IdP), herencia de listas de control de acceso (ACL) en tiempo real y citación granular a nivel de párrafo para mitigar alucinaciones y prevenir filtraciones de información clasificada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Glean, AlphaSense"
+      },
+      "evidence": [
+        {
+          "source_id": "9cc4ccaf-1cc2-4e99-a496-b062204c7d08",
+          "source_title": "Glean Enterprise Search and Knowledge Assistant",
+          "original_url": "https://www.glean.com/product/enterprise-search",
+          "locator": "Security & Permissions Governance",
+          "excerpt_short": "Enforces identity-based access controls ensuring users only see information they are authorized to access in original systems.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:36:00-03:00"
+        },
+        {
+          "source_id": "6fa0dfd1-5192-4b3d-8ed7-20c44b7d4dc8",
+          "source_title": "AlphaSense Forrester Wave Market and Competitive Intelligence Leader",
+          "original_url": "https://www.alpha-sense.com/resources/reports/forrester-wave-mci-2024/",
+          "locator": "Evaluation Criteria: Content Integration, Search Relevance and Citations",
+          "excerpt_short": "Evaluated for robust search across proprietary content and internal repositories with traceable snippet-level citations.",
+          "source_date": "2024",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:36:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica de arquitectura documental en manuales y reportes de industria.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Identidad autenticada del usuario (SAML/OAuth)",
+      "Consulta en lenguaje natural",
+      "Árbol de permisos del repositorio de origen"
+    ],
+    "actors": [
+      "Usuario Corporativo",
+      "Motor RAG Empresarial",
+      "Identity Provider (Okta/Azure AD)"
+    ],
+    "steps": [
+      "Verificación de identidad y tokens de acceso",
+      "Filtrado de índices vectoriales según ACL activa",
+      "Recuperación de fragmentos autorizados",
+      "Generación de respuesta con enlaces de cita profunda"
+    ],
+    "states": [
+      "Autenticado",
+      "Filtro_ACL_Aplicado",
+      "Fragmentos_Recuperados",
+      "Cita_Desplegada"
+    ],
+    "outputs": [
+      "Respuesta generativa con trazabilidad a la página y archivo original"
+    ],
+    "exceptions": [
+      "Documento sin permisos configurados que resulta excluido por defecto de la búsqueda"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GLEAN",
+      "type": "proveedor_search",
+      "name": "Glean Technologies Inc.",
+      "aliases": [
+        "Glean"
+      ]
+    },
+    {
+      "entity_id": "ENT_ALPHASENSE",
+      "type": "proveedor_search",
+      "name": "AlphaSense Inc.",
+      "aliases": [
+        "AlphaSense"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GLEAN",
+      "predicate": "aplica_modelo_seguridad",
+      "object_id": "Identity_Aware_ACL",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F26-C1"
+    },
+    {
+      "subject_id": "ENT_ALPHASENSE",
+      "predicate": "enlaza_citas_a",
+      "object_id": "Parrafo_Documental_Original",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F26-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo de Permisos y Citas: Glean vs AlphaSense",
+      "Glean": "Hereda permisos ACL granulares de 100+ SaaS en tiempo real; citas referencian archivos internos de la intranet.",
+      "AlphaSense": "Permisos agrupados por equipo y biblioteca de suscripción; citas vinculan párrafos de filings financieros y broker research."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "BRIDGE debe implementar herencia estricta de permisos de SharePoint y Google Workspace para evitar que voceros vean documentos estratégicos no autorizados.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F27",
+    "P02-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:36:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

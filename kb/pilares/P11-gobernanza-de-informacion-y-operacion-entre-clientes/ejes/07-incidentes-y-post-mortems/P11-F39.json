@@ -1,0 +1,164 @@
+{
+  "question_id": "P11-F39",
+  "pilar": "P11",
+  "eje": "Incidentes y post-mortems",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Cómo incorporar lecciones sin exponer datos del incidente en el sistema compartido?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La incorporación de aprendizajes y lecciones aprendidas tras un incidente debe realizarse bajo el 'Protocolo de Descontaminación y Abstracción de Post-Mortems', garantizando que jamás se filtren datos confidenciales D3/D5 o datos personales D4 en repositorios comunes, tickets de soporte o modelos de lenguaje: 1) Destilación y Abstracción Arquitectónica: El informe post-mortem y los tickets de ingeniería documentan exclusivamente la falla causal abstracta (ej. 'inadecuada sanitización de delimitadores de salto de línea en el pre-procesador de documentos PDF permitió evasión de regla de RLS'), suprimiendo de raíz cualquier texto, fragmento, nombre de cliente o dato fáctico del documento comprometido; 2) Generación de Vectores de Prueba Sintéticos (Synthetic Test Cases): El equipo de ingeniería redacta un test automatizado utilizando entidades y textos ficticios creados ex professo (ej. 'Cliente Ficticio Alpha S.A.', 'Documento Mock Confidencial #000'), reproduciendo exactamente la mecánica del bug sin incorporar un solo carácter del activo real; 3) Aislamiento en Repositorio Cifrado de Evidencia Forense: Toda la telemetría cruda y los volcados de memoria que contienen datos reales del incidente se almacenan en un bucket forense dedicado con cifrado KMS restringido exclusivamente al Oficial de Seguridad y Asesor Legal, con retención máxima de 90 días tras la cual se aplica crypto-shredding; y 4) Despliegue de Reglas de Invarianza Global: Las reglas de defensa (actualización de pesos de filtros, guardrails de delimitadores, parches de SQL) se distribuyen a toda la flota de BRIDGE como código ejecutable genérico, fortaleciendo el sistema global sin exponer a terceros la causa que originó la mejora.",
+  "findings": [
+    {
+      "claim_id": "P11-F39-C1",
+      "claim": "El aprendizaje post-incidente se incorpora mediante abstracción arquitectónica de causas raíz y creación de casos de prueba sintéticos sin datos reales, confinando la evidencia forense cruda en silos cifrados de acceso restringido.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "post_incident_learning_without_data_leakage",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 7 'Protocolo de Descontaminación y Abstracción de Post-Mortems'",
+          "retrieved_at": null,
+          "excerpt_short": "Abstracción obligatoria de incidentes: El post-mortem compartido solo describe la causa raíz de software y el caso de prueba sintético. Prohibición estricta de incluir nombres, textos o datos del cliente en repositorios de código o tickets.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management",
+          "source_id": "1a1681bf-4024-4cbf-ab85-af3903a784ff",
+          "locator": "Section 3.5 'Post-Incident Activity and Lessons Learned'",
+          "retrieved_at": null,
+          "excerpt_short": "Information shared across organizations or development teams must be sanitized to remove sensitive proprietary information, customer identities, and protected data while preserving the actionable technical insights.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations",
+          "source_id": "24c7952c-3d6a-417c-8e7d-746065c9ca20",
+          "locator": "Control IR-7 'Incident Sharing and Information Sanitization'",
+          "retrieved_at": null,
+          "excerpt_short": "The organization sanitizes incident response information prior to sharing with internal stakeholders or external repositories to protect operational security and privacy.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación estricta con las recomendaciones federales de sanitización de información de incidentes NIST SP 800-61 r3 e IR-7 de NIST SP 800-53 r5.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evidencia forense cruda",
+      "Logs del incidente",
+      "Entrevista con ingenieros"
+    ],
+    "actors": [
+      "Oficial de Seguridad",
+      "Ingeniero de QA / Testing",
+      "Comité de Post-Mortem"
+    ],
+    "steps": [
+      "Aislamiento de la telemetría cruda en el bucket forense cifrado",
+      "Extracción del patrón de software defectuoso (análisis de causa raíz en lógica o arquitectura)",
+      "Redacción del post-mortem aplicando filtros de redacción automática de entidades y términos sensibles",
+      "Construcción de un script de prueba unitario sintético en el repositorio de CI/CD",
+      "Validación de que el test sintético falla en la versión anterior y pasa con el parche nuevo",
+      "Publicación del informe higienizado en la base de conocimiento interna de ingeniería"
+    ],
+    "states": [
+      "RAW_FORENSICS_SEALED",
+      "ABSTRACT_PATTERN_ISOLATED",
+      "SYNTHETIC_TEST_COMMITTED",
+      "SANITIZED_REPORT_PUBLISHED"
+    ],
+    "outputs": [
+      "Mejora de seguridad desplegada en producción sin haber expuesto un solo dato real del cliente"
+    ],
+    "exceptions": [
+      "Si un ingeniero pega texto real del incidente en un commit o ticket de GitHub, un linter perimetral bloquea el push y genera advertencia disciplinaria"
+    ]
+  },
+  "entities": [
+    "Protocolo de Descontaminación",
+    "NIST SP 800-61 r3",
+    "NIST SP 800-53 IR-7",
+    "Synthetic Test Cases",
+    "Bucket Forense Cifrado"
+  ],
+  "relations": [
+    {
+      "from": "Evidencia Cruda",
+      "to": "Bucket Forense Cifrado",
+      "type": "STORED_RESTRICTED_IN"
+    },
+    {
+      "from": "Causa Raíz Abstracta",
+      "to": "Synthetic Test Cases",
+      "type": "TRANSLATED_INTO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Post-mortem con volcados reales en tickets vs Post-mortem abstracto con tests sintéticos",
+      "diferencia": "El post-mortem con volcados reales genera una fuga secundaria hacia todo el equipo de desarrollo; el enfoque abstracto previene la fuga secundaria y estandariza la defensa."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "secondary_data_leakage_in_postmortems": "0 incidentes de exposición en tickets o commits",
+    "synthetic_test_coverage_for_incidents": "100% de incidentes traducidos a tests sintéticos en CI/CD"
+  },
+  "bridge_implications": "Permite que la plataforma BRIDGE aprenda y se robustezca colectivamente con cada evento anómalo sin poner en riesgo el secreto comercial de ningún cliente.",
+  "open_gaps": [
+    "Verificación de linters automáticos de código basados en IA para auditar PRs contra posibles fragmentos de datos reales de clientes."
+  ],
+  "next_question_ids": [
+    "P11-F40",
+    "P11-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

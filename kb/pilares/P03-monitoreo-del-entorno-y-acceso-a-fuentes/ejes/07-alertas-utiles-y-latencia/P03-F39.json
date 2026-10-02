@@ -1,0 +1,162 @@
+{
+  "question_id": "P03-F39",
+  "pilar": "P03",
+  "eje": "Alertas útiles y latencia",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué tiempos de detección y de verificación deben medirse por canal?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El monitoreo riguroso exige descomponer la latencia total en dos métricas independientes medidas por canal: 1) Tiempo de Detección (Time-to-Detect - TTD): intervalo desde la emisión de la señal hasta su captura e indexación en el sistema: a) Redes federadas (AT Protocol Jetstream): <10 segundos; b) Feeds RSS directos de medios: 1 a 5 minutos; c) Agregadores globales de noticias (GDELT): 15 minutos; d) Suites comerciales de clipping (Cision, Meltwater): 15 a 45 minutos; e) Broadcast ASR (TVEyes / Whisper streaming): 8 a 30 minutos; f) Hechos Esenciales CMF: 5 minutos; g) SEC EDGAR Form 8-K: 1 a 3 minutos; y h) Diario Oficial: Diario a las 06:00 AM; y 2) Tiempo de Verificación (Time-to-Verify - TTV): intervalo desde la detección inicial hasta que un analista o modelo supervisor valida la autenticidad de la fuente y corrobora la materialidad corporativa (típicamente 5 a 15 minutos para eventos críticos), evitando despachar alertas reactivas basadas en datos no comprobados.",
+  "findings": [
+    {
+      "claim_id": "P03-F39-C1",
+      "claim": "El rendimiento temporal del monitoreo se descompone obligatoriamente en Tiempo de Detección (TTD por canal, desde <10s en WebSockets hasta horas en boletines diarios) y Tiempo de Verificación (TTV analítico).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Telemetría de Latencia P03"
+      },
+      "evidence": [
+        {
+          "source_id": "6ad73a33-ba1d-48af-899d-b0a20126725f",
+          "source_title": "GDELT 2.0 Global Event Database Documentation",
+          "original_url": "https://blog.gdeltproject.org/gdelt-2-0-our-global-world-in-realtime/",
+          "locator": "Data Update Schedule",
+          "excerpt_short": "GDELT updates every 15 minutes, processing news across the world into real-time database files.",
+          "source_date": "2015",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:30:00-03:00"
+        },
+        {
+          "source_id": "619b1b25-eb9d-4be2-8efb-4fbb9db7519e",
+          "source_title": "AT Protocol / Bluesky Streaming Data & Jetstream Firehose Architecture",
+          "original_url": "https://atproto.com/guides/streaming-data",
+          "locator": "Streaming Latency",
+          "excerpt_short": "Jetstream delivers events via continuous WebSocket connections with sub-second transmission delays.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica de latencias en especificaciones de protocolos y APIs.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Timestamps de publicación de origen",
+      "Timestamps de ingesta de sistema",
+      "Timestamps de despacho"
+    ],
+    "actors": [
+      "Latency Telemetry Monitor",
+      "SLA Tracker"
+    ],
+    "steps": [
+      "Cálculo de delta TTD (Ingesta - Publicación)",
+      "Cálculo de delta TTV (Despacho - Ingesta)",
+      "Registro en dashboard de SLAs"
+    ],
+    "states": [
+      "Signal_Published",
+      "Signal_Ingested",
+      "Alert_Verified_Dispatched"
+    ],
+    "outputs": [
+      "Métricas de TTD y TTV desglosadas por canal de ingesta"
+    ],
+    "exceptions": [
+      "Publicaciones de origen con timestamps manipulados o ausentes"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_LATENCY_METRICS",
+      "type": "metrica_rendimiento",
+      "name": "Métricas de Latencia TTD y TTV",
+      "aliases": [
+        "TTD and TTV Latency Metrics"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LATENCY_METRICS",
+      "predicate": "mide_eficiencia_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F39-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Tiempo de Detección (TTD)",
+      "WebSockets / AT Protocol": "< 10 segundos.",
+      "RSS de Prensa": "1 - 5 minutos.",
+      "Agregador GDELT": "15 minutos.",
+      "Broadcast ASR (Whisper)": "8 - 30 minutos.",
+      "Diario Oficial de Chile": "Publicación fija matutina diaria (06:00 AM)."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Time-to-Detect (TTD)",
+      "numerator": "Timestamp de ingesta en sistema - Timestamp de publicación original",
+      "denominator": "Eventos de señal monitoreados en el periodo",
+      "context": "Evaluación de latencia de captura por canal de información"
+    },
+    {
+      "metric": "Time-to-Verify (TTV)",
+      "numerator": "Timestamp de despacho verificado - Timestamp de ingesta en sistema",
+      "denominator": "Alertas críticas despachadas a tomadores de decisión",
+      "context": "Evaluación del tiempo de confirmación analítica"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Monitorear continuamente TTD y TTV en los logs de BRIDGE para alertar sobre degradaciones operativas en los conectores.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

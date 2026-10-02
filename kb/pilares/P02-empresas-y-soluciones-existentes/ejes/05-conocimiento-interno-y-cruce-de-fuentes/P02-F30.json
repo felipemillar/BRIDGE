@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-F30",
+  "pilar": "P02",
+  "eje": "Conocimiento interno y cruce de fuentes",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra conocimiento interno y cruce de fuentes sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso de prueba concreto y verificable: 'Respuesta ante cuestionamiento público por consumo hídrico en faena industrial'. Entradas: 1) Alerta mediática externa capturada por monitoreo de prensa matutino con un artículo que denuncia que la empresa duplicó la extracción de agua en su planta de la Región de Coquimbo; 2) Repositorio corporativo interno en SharePoint con el 'Reporte Técnico Trimestral de Recursos Hídricos Q2 2026' y la 'Resolución de Calificación Ambiental (RCA) Res. Ex. 142/2021'; 3) Identidad y perfil del usuario consultante: Jefe de Comunicaciones Corporativas con permisos autorizados en el Active Directory. Proceso: El sistema realiza una búsqueda semántica cruzada donde: a) Extrae los hechos clave de la denuncia externa (volumen imputado, cuenca afectada); b) Consulta el repositorio interno validando las credenciales del usuario vía OAuth; c) Recupera el párrafo exacto de la RCA que fija el caudal máximo autorizado y los datos de monitoreo telemétrico del Q2 2026; d) Realiza el contraste lógico y detecta que el consumo real operó a un 45% del límite autorizado por la autoridad ambiental. Resultado esperado: Generación automática de un briefing ejecutivo para el vocero que incluye: 1) Síntesis del cuestionamiento público; 2) Datos duros certificados con cita hipervinculada a la página 14 del reporte técnico interno; 3) Declaración oficial sugerida que refuta la cifra sin revelar datos geológicos confidenciales protegidos.",
+  "findings": [
+    {
+      "claim_id": "P02-F30-C1",
+      "claim": "El cruce automatizado y contrastado entre alertas mediáticas públicas y expedientes técnicos internos auditables permite producir respuestas comunicacionales con sustento fáctico riguroso en menos de 15 minutos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Caso Operativo de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "53d0cefb-66f0-4c74-afd5-f18f7eec9d23",
+          "source_title": "AlphaSense Market and Competitive Intelligence Platform",
+          "original_url": "https://www.alpha-sense.com/platform/",
+          "locator": "Use Case: Crisis Response and Internal Document Cross-Referencing",
+          "excerpt_short": "Enables corporate communications to quickly cross-reference external claims against internal operational reports to produce verified public statements.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:36:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de trabajo operacional documentado y replicable.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Artículo de prensa externa denunciando sobreconsumo de agua",
+      "Reporte hídrico interno Q2 2026 en SharePoint",
+      "Permisos de usuario autenticados por IdP"
+    ],
+    "actors": [
+      "Jefe de Prensa",
+      "Gerente de Operaciones",
+      "Asistente RAG Cruzado"
+    ],
+    "steps": [
+      "Ingesta de alerta de prensa y extracción de entidades",
+      "Consulta semántica al repositorio interno con filtro de permisos",
+      "Cruce numérico entre caudal denunciado y caudal autorizado en RCA",
+      "Generación de minuta de vocería con citas auditables"
+    ],
+    "states": [
+      "Alerta_Recibida",
+      "Expediente_Interno_Contrastado",
+      "Minuta_Aprobada"
+    ],
+    "outputs": [
+      "Minuta de contingencia para vocero con respaldo documental hipervinculado"
+    ],
+    "exceptions": [
+      "Discrepancia entre la cifra de prensa y los registros internos no resuelta en faena"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_HIDRICO",
+      "type": "caso_prueba",
+      "name": "Caso Prueba Contingencia Hídrica Coquimbo",
+      "aliases": [
+        "Caso Hídrico P02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_HIDRICO",
+      "predicate": "valida_arquitectura_de",
+      "object_id": "Cruce_Interno_Externo",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F30-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta Manual Tradicional vs Respuesta Asistida por Cruce Semántico",
+      "Respuesta Manual Tradicional": "Toma de 4 a 12 horas en contactar a faena, solicitar reportes Excel dispersos y redactar sin certeza de versión.",
+      "Respuesta Asistida por Cruce Semántico": "Toma 10 minutos, contrastando la denuncia con la RCA oficial y reportes telemétricos ya indexados."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Este caso demuestra el valor nuclear de BRIDGE: unir el monitoreo de medios (Escuchar) con los repositorios de ingeniería y cumplimiento (Saber).",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:36:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

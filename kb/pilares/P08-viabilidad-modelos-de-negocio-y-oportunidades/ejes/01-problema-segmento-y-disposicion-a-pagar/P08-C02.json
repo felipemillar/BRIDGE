@@ -1,0 +1,145 @@
+{
+  "question_id": "P08-C02",
+  "pilar": "P08",
+  "eje": "Problema, segmento y disposición a pagar",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué sigue sin prueba sobre problema, segmento y disposición a pagar, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba empírica suficiente la elasticidad de precio en empresas del sector retail masivo y la disposición a pagar de filiales locales cuyos presupuestos de TI y comunicaciones se aprueban centralmente en casas matrices extranjeras (Londres, Houston o Madrid). Respecto a fuentes del corpus, falló la fuente b90cd2fe-a78e-4cb9-b98f-80049b14f114 ('Dircom: Tendencias'), que arrojó error de captura HTTP; fue sustituida canónicamente por los estudios sectoriales de LLYC (dad4edf1-de3c-4f06-ac79-9f0c42435a98) y de Page Society. La validación mínima requerida consiste en ejecutar 5 entrevistas de descubrimiento con gerentes de compras corporativas de multinacionales con sede en Santiago (ej. Anglo American, Enel, Walmart Chile) midiendo su autonomía de contratación local.",
+  "findings": [
+    {
+      "claim_id": "P08-C02-C1",
+      "claim": "La autonomía presupuestaria de filiales de multinacionales en Chile sigue siendo un vacío empírico abierto que requiere validación directa con gerencias de compras locales.",
+      "epistemic_status": "inferencia",
+      "scope": "open_gap_multinational_autonomy",
+      "evidence": [
+        {
+          "source_title": "P08_GAPS_AND_VALIDATION",
+          "source_id": "b37bbf38-9c0d-4dc9-bf01-ac0b24ed0bd4",
+          "locator": "Sección 1 'Vacíos de Información Críticos: Eje 1'",
+          "excerpt_short": "Persiste incertidumbre respecto a si los gerentes de asuntos corporativos de multinacionales mineras o de retail en Chile cuentan con atribuciones para contratar servicios locales de USD 60.000 anuales o si requieren homologación global por parte de procurement central en el extranjero. Esta incógnita abre un vacío que debe resolverse antes de incluirlos en el pipeline de cierre inmediato.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "fuentes/P08.json: Manifiesto de Fuentes",
+          "source_id": "b90cd2fe-a78e-4cb9-b98f-80049b14f114",
+          "locator": "Registro de Estado de Fuente",
+          "excerpt_short": "Fuente 'Dircom: Tendencias para Dirigir la Comunicación' catalogada como fallida_o_bloqueada. Sustituida canónicamente por LLYC (dad4edf1-de3c-4f06-ac79-9f0c42435a98).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "fallida",
+          "relationship": "apoya",
+          "text_status_original": "texto_sustantivo",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío documentado en el registro oficial de gaps de P08 con sustituto canónico validado.",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "fuente_no_sustantiva",
+          "confianza_numerica_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Directorio de multinacionales mineras/retail",
+      "Pauta de indagación de compras"
+    ],
+    "actors": [
+      "Equipo Comercial BRIDGE",
+      "Gerente de Procurement Local"
+    ],
+    "steps": [
+      "Contacto con 5 gerencias locales",
+      "Aplicación de cuestionario de atribuciones presupuestarias",
+      "Tabulación de umbral de compra directa vs homologación global"
+    ],
+    "states": [
+      "Vacío Abierto",
+      "Entrevistas en Curso",
+      "Vacío Cerrado"
+    ],
+    "outputs": [
+      "Reporte de autonomía presupuestaria por filial"
+    ],
+    "exceptions": [
+      "Filiales con presupuesto descentralizado para 'asuntos locales y relacionamiento comunitario'"
+    ]
+  },
+  "entities": [
+    "P08_GAPS_AND_VALIDATION",
+    "b90cd2fe-a78e-4cb9-b98f-80049b14f114",
+    "LLYC",
+    "Autonomía de Procurement",
+    "Anglo American",
+    "Walmart Chile"
+  ],
+  "relations": [
+    {
+      "from": "b90cd2fe-a78e-4cb9-b98f-80049b14f114",
+      "to": "LLYC (dad4edf1)",
+      "type": "substituted_by"
+    },
+    {
+      "from": "Autonomía de Filial",
+      "to": "Ciclo de Cierre Comercial",
+      "type": "determines"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Empresa local chilena vs Filial multinacional",
+      "diferencia": "La empresa chilena (ej. Colbún, CMPC) decide y firma localmente en 60 días; la filial multinacional puede tardar 9 meses si requiere aprobación en el extranjero."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "minimum_validation_interviews": "5 entrevistas de procurement corporativo multinacional",
+    "local_spending_authority_threshold": "Umbral de compra directa local promedio: USD 50.000 anuales"
+  },
+  "bridge_implications": "Priorizar en los primeros 12 meses a corporaciones de capitales chilenos o con casa matriz en Santiago para evitar demoras burocráticas internacionales.",
+  "open_gaps": [
+    "Confirmar el umbral exacto de gasto discrecional sin licitación en filiales mineras de origen canadiense y australiano."
+  ],
+  "next_question_ids": [
+    "P08-C03",
+    "P08-C04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

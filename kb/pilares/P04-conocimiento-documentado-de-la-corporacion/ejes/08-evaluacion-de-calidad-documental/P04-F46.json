@@ -1,0 +1,132 @@
+{
+  "question_id": "P04-F46",
+  "pilar": "P04",
+  "eje": "Evaluación de calidad documental",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar evaluación de calidad documental de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar de forma estructurada la evaluación de calidad documental exige: 1) Variables métricas cuantitativas (`faithfulness_score`, `citation_precision`, `citation_recall`, `temporal_coherence_rate`, `safe_abstention_rate`, `permission_leakage_rate`); 2) Categorías de auditoría (`eval_category`: Fidelidad_Factual, Precisión_Cita, Coherencia_Temporal, Abstención_Activa, Respeto_ABAC); 3) Relaciones de auditoría (`evaluatedWithMetric`, `auditedAgainstBenchmarkSuite`, `signedOffByAuditor`); y 4) Condiciones de certificación técnica (Condición 1: la fidelidad factual debe ser ≥ 0.95; Condición 2: la precisión de cita debe ser ≥ 0.98; Condición 3: la tasa de no-filtración de permisos debe ser estrictamente 100.0%; si cualquiera de estas condiciones no se cumple, el release queda bloqueado).",
+  "findings": [
+    {
+      "claim_id": "P04-F46-C1",
+      "claim": "El marco estructurado de evaluación documental define cinco dimensiones métricas obligatorias con umbrales mínimos no negociables para la certificación de calidad en producción.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Aseguramiento de Calidad de IA"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Matriz Consolidada de Criterios de Evaluación",
+          "excerpt_short": "Fidelidad Factual ≥ 0.95, Precisión de Cita ≥ 0.98, Coherencia Temporal 100%, Abstención Segura ≥ 0.98, ABAC Enforcement 100.0%.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Matriz formal de criterios y umbrales mínimos documentada en el dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Resultados de evaluación del sistema"
+    ],
+    "actors": [
+      "Release Gatekeeper",
+      "Quality Metrics Evaluator"
+    ],
+    "steps": [
+      "Cotejo de métricas contra umbrales mínimos",
+      "Generación de dictamen booleano de pase",
+      "Bloqueo o autorización de despliegue"
+    ],
+    "states": [
+      "Evaluating",
+      "Thresholds_Verified",
+      "Release_Approved"
+    ],
+    "outputs": [
+      "Dictamen estructurado de calidad y certificación del modelo"
+    ],
+    "exceptions": [
+      "Falla marginal en recall de citas que requiere reentrenamiento"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_EVAL_CRITERIA_MATRIX",
+      "type": "matriz_calidad",
+      "name": "Matriz de Criterios y Umbrales de Calidad Documental",
+      "aliases": [
+        "Quality Evaluation Matrix"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_EVAL_CRITERIA_MATRIX",
+      "predicate": "gobierna_certificacion_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F46-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Criterio de pase a producción",
+      "Evaluación cualitativa informal": "El desarrollador prueba un par de preguntas y aprueba el pase a producción.",
+      "Evaluación estructurada con umbrales": "El despliegue está bloqueado si no se alcanza 0.95 en fidelidad y 100% en seguridad ABAC."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe utilizar esta matriz como compuerta de calidad automatizada en su infraestructura de despliegue continuo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

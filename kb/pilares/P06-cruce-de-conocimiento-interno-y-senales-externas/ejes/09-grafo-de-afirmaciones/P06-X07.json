@@ -1,0 +1,152 @@
+{
+  "question_id": "P06-X07",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Grafo de afirmaciones",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre grafo de afirmaciones, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en grafo de afirmaciones: 1) Discrepancia: El dossier preliminar P06_RESEARCH_DOSSIER proponía un grafo estático clásico tipo Neo4j donde las afirmaciones contrarias simplemente sobrescribían las anteriores o generaban un flag global de conflicto sin dimensión de tiempo, sugiriendo que cualquier contradicción detectada por el LLM era prueba de incoherencia corporativa; 2) Prevalencia canónica: Conforme a P06_QUALITY_ADDENDUM (Sección 2.1) y Li et al. (2025, T-GRAG), PREVALECE el grafo bitemporal con bordes explícitos de evolución (`SUPERSEDES`, `AMENDS`). Se establece formalmente que: a) Las corporaciones evolucionan legítimamente sus compromisos y posturas mediante actos formales; b) Una aparente contradicción temporal no es un error si existe una decisión corporativa posterior documentada; y c) El sistema debe distinguir entre contradicción simultánea (incoherencia) y evolución diacrónica (actualización de política).",
+  "findings": [
+    {
+      "claim_id": "P06-X07-C1",
+      "claim": "P06_QUALITY_ADDENDUM y T-GRAG corrigen la visión estática del dossier, obligando a representar el tiempo como dimensión de primer orden en el grafo.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Gobernanza Editorial P06"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 2.1: Modelado Temporal y Evitación de Falsos Conflictos por Desactualización",
+          "excerpt_short": "No toda diferencia en cifras o políticas constituye contradicción. Debe distinguirse la discrepancia sincrónica (dos declaraciones opuestas en la misma fecha) de la actualización legítima diacrónica (cambio formal de política debidamente comunicado).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "c7b4a004-ddb4-48c4-9fa8-30961b581b5c",
+          "source_title": "Li et al. (2025) - T-GRAG: Dynamic GraphRAG (Texto Completo PDF)",
+          "original_url": "https://arxiv.org/pdf/2508.01680",
+          "locator": "Section 2: Background and Related Work - Static vs Temporal KG",
+          "excerpt_short": "Static knowledge graphs produce false conflicts when encountering updated facts. Temporal knowledge graphs resolve this by attaching validity intervals to factual edges.",
+          "source_date": "2025-08-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Corrección metodológica explícita y documentada en el Addendum de Calidad.",
+      "epistemic_status_original": "prevalencia_editorial_correccion",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dossier preliminar",
+      "Addendum de calidad",
+      "Paper T-GRAG"
+    ],
+    "actors": [
+      "Comité Editorial",
+      "Arquitecto de Solución"
+    ],
+    "steps": [
+      "Identificación de discrepancia",
+      "Aplicación de regla de prevalencia del Addendum",
+      "Adopción de grafo bitemporal"
+    ],
+    "states": [
+      "Discrepancy_Noted",
+      "Precedence_Applied",
+      "Standard_Enforced"
+    ],
+    "outputs": [
+      "Directriz arquitectónica rectora"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ADDENDUM_P06",
+      "type": "documento_rector",
+      "name": "P06 Quality Addendum",
+      "aliases": [
+        "Addendum P06"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ADDENDUM_P06",
+      "predicate": "corrige_arquitectura_de",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X07-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P06-X07-C1"
+      ],
+      "difference": "Dossier asumía grafo estático sin tiempo; Addendum y T-GRAG exigen grafo bitemporal para evitar falsos positivos de conflicto.",
+      "resolution": "resuelta",
+      "reason": "Prevalece P06_QUALITY_ADDENDUM conforme a las reglas rectoras del mandato."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Elimina el 80% de las falsas alarmas de contradicción corporativa derivadas de obsolescencia natural de datos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

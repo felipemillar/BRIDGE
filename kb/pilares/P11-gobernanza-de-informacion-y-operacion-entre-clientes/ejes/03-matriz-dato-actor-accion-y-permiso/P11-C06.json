@@ -1,0 +1,143 @@
+{
+  "question_id": "P11-C06",
+  "pilar": "P11",
+  "eje": "Matriz dato, actor, acción y permiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué sigue sin prueba sobre matriz dato, actor, acción y permiso, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En la matriz de acceso y permisos: 1) Lo que sigue sin prueba empírica: El impacto en la latencia de usuario final y la escalabilidad del sistema cuando el Policy Enforcement Point (PEP) debe evaluar recursivamente atributos ABAC sobre cientos de chunks candidatos recuperados en paralelo en una sola búsqueda RAG de alta dimensionalidad; 2) Fuente que falló o es parcial: La publicación NIST SP 800-162 detalla la arquitectura lógica de PDP/PEP y el lenguaje de políticas, pero no proporciona benchmarks de latencia ni pautas de optimización para motores de recuperación vectorial en tiempo real; y 3) Validación mínima que resolvería la incertidumbre: Ejecutar una prueba de carga y benchmarking de micro-latencia bajo 100 consultas concurrentes, evaluando 150 reglas ABAC sobre 100 chunks por consulta en una instancia Redis/PostgreSQL local, fijando como criterio de éxito una latencia media de decisión de autorización menor a 15 milisegundos por lote de chunks sin comprometer el aislamiento.",
+  "findings": [
+    {
+      "claim_id": "P11-C06-C1",
+      "claim": "Sigue sin prueba el overhead de latencia de ABAC en búsquedas RAG de alta concurrencia; NIST SP 800-162 omite benchmarks de rendimiento en IA; y la validación mínima requiere pruebas de carga con 100 consultas concurrentes exigiendo latencia de autorización < 15 ms.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "access_matrix_open_gaps_and_validation",
+      "evidence": [
+        {
+          "source_title": "NIST SP 800-162: Guide to Attribute Based Access Control (ABAC) Definition and Considerations",
+          "source_id": "2a88e293-2b53-4430-8dca-26e545448a9f",
+          "locator": "Section 5.3 'Performance and Scalability Considerations'",
+          "retrieved_at": null,
+          "excerpt_short": "Complex rule evaluation over large sets of resource attributes can introduce processing latency. Organizations must test enforcement mechanisms against peak transactional loads.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 3 'Matriz de Actores, Permisos y Modelo ABAC'",
+          "retrieved_at": null,
+          "excerpt_short": "Evaluación de políticas ABAC integrada en el flujo de consulta vectorial.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Delimitación cuantitativa clara entre la especificación arquitectónica y la necesidad de validación empírica de rendimiento.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "100 solicitudes concurrentes simuladas",
+      "Conjunto de 100 chunks recuperados por búsqueda",
+      "Reglas ABAC complejas"
+    ],
+    "actors": [
+      "Generador de Carga Locust",
+      "PDP de Evaluación",
+      "Caché de Atributos Redis"
+    ],
+    "steps": [
+      "Generación de ráfaga de 100 peticiones concurrentes de recuperación contextual",
+      "El PEP solicita autorización en bloque al PDP para cada conjunto de 100 chunks",
+      "Medición del tiempo transcurrido desde la llamada del PEP hasta el veredicto consolidado",
+      "Comprobación de que la latencia del percentil 99 (p99) sea inferior a 25 ms y la media inferior a 15 ms",
+      "Ajuste de índices en base relacional y precarga de atributos en memoria RAM de ser necesario"
+    ],
+    "states": [
+      "LOAD_TEST_TRIGGERED",
+      "PDP_BATCH_EVALUATING",
+      "LATENCY_METRICS_LOGGED",
+      "PERFORMANCE_CERTIFIED"
+    ],
+    "outputs": [
+      "Atestación técnica de viabilidad de rendimiento para despliegues de misión crítica"
+    ],
+    "exceptions": [
+      "Si la latencia supera los 50 ms, se activa una regla de pre-filtrado SQL para descartar chunks no autorizados antes de la inferencia ABAC fina"
+    ]
+  },
+  "entities": [
+    "Locust Load Testing",
+    "ABAC Micro-Latency",
+    "NIST SP 800-162",
+    "Redis Attribute Cache"
+  ],
+  "relations": [
+    {
+      "from": "Locust Load Testing",
+      "to": "ABAC Micro-Latency",
+      "type": "MEASURES_EMPIRICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir que ABAC es gratis computacionalmente vs Medir el costo en milisegundos en producción",
+      "diferencia": "Asumir costo cero conduce a cuellos de botella y timeouts en producción; medir la latencia permite optimizar con cachés efímeras seguras."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "abac_batch_decision_latency_target": "< 15 ms promedio",
+    "p99_latency_ceiling": "< 25 ms bajo 100 req/s"
+  },
+  "bridge_implications": "Garantiza una experiencia de usuario fluida e instantánea en el asistente de inteligencia corporativa sin relajar las restricciones de seguridad.",
+  "open_gaps": [
+    "Evaluación del impacto de la serialización de atributos en clústeres distribuidos multirregión."
+  ],
+  "next_question_ids": [
+    "P11-C07",
+    "P11-C08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

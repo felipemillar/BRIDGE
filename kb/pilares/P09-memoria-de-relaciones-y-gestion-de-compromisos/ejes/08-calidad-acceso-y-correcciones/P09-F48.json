@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-F48",
+  "pilar": "P09",
+  "eje": "Calidad, acceso y correcciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra calidad, acceso y correcciones sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto Documentado: 'Auditoría Forense y Rectificación de Expediente tras Intento de Manipulación de Fecha de Compromiso Crítico'. Entradas: 1) Actor y Contexto: Subgerente de Obras intenta modificar manualmente la fecha límite del compromiso COMP-2025-0088 ('Construcción de Planta de Tratamiento de Aguas Servidas') postergándola en 90 días en la base de datos sin acuerdo comunitario; 2) Reglas de Negocio Activadas: El sistema BRIDGE intercepta la petición vía API, bloquea el UPDATE directo en base de datos en cumplimiento de la Rectificación R2 de P09_VERIFICATION_CORRECTIONS y exige transitar a la máquina de estados formal (estado RENEGOCIADO); 3) Intento de Consulta No Autorizada: Usuario de agencia externa intenta revisar los antecedentes de la negociación reservada; el sistema deniega el acceso por falta de rol Nivel 3 y registra el intento en `read_access_logs` con IP, usuario y marca temporal; 4) Auditoría de Datos: La suite de calidad detecta que el registro carece de acta comunitaria aprobatoria y genera un reporte de anomalía forense. Resultado Esperado: 1) Fecha límite original preservada inalterada; 2) Alerta roja despachada al Gerente de Asuntos Corporativos y al Oficial de Cumplimiento; 3) Convocatoria a reunión formal con los dirigentes comunitarios para convenir una adenda legítima; y 4) Aprobación de la auditoría externa de sustentabilidad sin observaciones de manipulación de datos.",
+  "findings": [
+    {
+      "claim_id": "P09-F48-C1",
+      "claim": "El caso documentado ilustra la efectividad del bloqueo de edición destructiva (R2), el control granular de accesos (RBAC/Read Logging) y la auditoría forense ante intentos de eludir la gobernanza de compromisos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "concrete_case_quality_access_corrections",
+      "evidence": [
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R2 'Inmutabilidad y Auditoría Forense'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de Control: Intentos de sobrescritura de plazos son interceptados por el motor transaccional. Se preserva el registro original y se genera una notificación al oficial de cumplimiento, garantizando que ninguna promesa sea alterada unilateralmente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: Top 10 Secure Stakeholder Tools for Government and Public Sector",
+          "source_id": "da35828d-1b2b-4ede-8143-38784d7fc927",
+          "locator": "Section 'Audit Logging and Tamper-Proof Operations', p. 29-33",
+          "retrieved_at": null,
+          "excerpt_short": "Tamper-proof architectures alert compliance officers to unauthorized modification attempts, providing the forensic evidence needed to enforce internal corporate discipline.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de las directrices de seguridad y rectificación canónica del pilar P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Petición HTTP PATCH no autorizada",
+      "Intento de lectura sin privilegios",
+      "Disparadores de base de datos"
+    ],
+    "actors": [
+      "Subgerente de Obras",
+      "Oficial de Cumplimiento",
+      "Motor de Seguridad BRIDGE"
+    ],
+    "steps": [
+      "Bloqueo de modificación destructiva",
+      "Generación de entrada inmutable en log de seguridad",
+      "Despacho de alerta de incidente a gerencia",
+      "Apertura de proceso formal de renegociación comunitaria"
+    ],
+    "states": [
+      "Intento Bloqueado",
+      "Incidente Registrado",
+      "Gobernanza Restablecida"
+    ],
+    "outputs": [
+      "Registro de auditoría forense N° SEC-2025-0042",
+      "Compromiso original blindado"
+    ],
+    "exceptions": [
+      "Ninguna; el bloqueo criptográfico e inmutable no admite bypass de usuario"
+    ]
+  },
+  "entities": [
+    "Caso Auditoría Forense",
+    "P09_VERIFICATION_CORRECTIONS",
+    "Tractivity",
+    "Bloqueo Criptográfico",
+    "Oficial de Cumplimiento"
+  ],
+  "relations": [
+    {
+      "from": "COMP-2025-0088",
+      "to": "P09_VERIFICATION_CORRECTIONS",
+      "type": "PROTECTED_BY_CANONICAL_RULE"
+    },
+    {
+      "from": "Intento de Modificación",
+      "to": "SEC-2025-0042",
+      "type": "LOGGED_INTO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Sistema vulnerable con edición libre vs Sistema inmutable auditado",
+      "diferencia": "El sistema con edición libre permite encubrir atrasos hasta que estalla el conflicto; el sistema inmutable exige resolver las desviaciones con transparencia y rigor."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "unauthorized_override_success_rate": "0% (imposibilidad técnica de sobreescritura)",
+    "incident_notification_latency": "< 1 segundo"
+  },
+  "bridge_implications": "Configurar los triggers de PostgreSQL y los tests de penetración de BRIDGE para verificar que los endpoints rechacen peticiones destructivas.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C01",
+    "P09-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

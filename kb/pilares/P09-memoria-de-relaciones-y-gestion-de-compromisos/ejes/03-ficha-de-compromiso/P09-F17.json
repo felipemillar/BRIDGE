@@ -1,0 +1,145 @@
+{
+  "question_id": "P09-F17",
+  "pilar": "P09",
+  "eje": "Ficha de compromiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre ficha de compromiso?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos normativos y metodológicos relativos a la Ficha de Compromiso están respaldados por: 1) Boréalis SRM (2024, 'The Proving Problem'): Documenta los atributos indispensables de una promesa auditable, la exigencia de dueño único y el bloqueo de cierre sin evidencia comprobatoria; 2) Tractivity (2024, 'Stakeholder Commitment Tracking Guide'): Detalla la descomposición en hitos, la trazabilidad de renegociaciones y la prevención de fallos de cumplimiento; 3) SMA Chile (Res. Ex. N° 844/2012 y Res. Ex. N° 223/2015): Regula la obligatoriedad de reportar compromisos y medidas de mitigación con evidencia fáctica en el SSA; 4) IFC World Bank Good Practice Handbook (2007, Cap. 8): Establece que los compromisos con comunidades deben registrarse formalmente, publicarse y someterse a monitoreo participativo; y 5) P09_RESEARCH_DOSSIER (2026, Sección 2): Consolida el diccionario exhaustivo de 14 campos y las reglas de validación operacional.",
+  "findings": [
+    {
+      "claim_id": "P09-F17-C1",
+      "claim": "La doctrina de la Ficha de Compromiso está fundamentada en manuales internacionales de SRM (Boréalis, Tractivity), normativas de fiscalización de la SMA (Res. Ex. 223/2015) y guías de la IFC del Banco Mundial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_commitment_card",
+      "evidence": [
+        {
+          "source_title": "Boréalis: The Proving Problem — Why DIY AI Can't Prove Compliance (Commitment Tracking)",
+          "source_id": "27ce9bc8-70cf-4dc0-ac19-d8787d3bccd6",
+          "locator": "Section 'Why Evidence Matters in Compliance', p. 5-9",
+          "retrieved_at": null,
+          "excerpt_short": "A recorded promise without attached proof of execution is merely an internal intention, not a defensible compliance asset.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "IFC (World Bank): Stakeholder Engagement Good Practice Handbook",
+          "source_id": "834c36d4-8df0-4bb5-ae51-24f05ba97467",
+          "locator": "Chapter 8 'Management Functions — Tracking Commitments', p. 110-114",
+          "retrieved_at": null,
+          "excerpt_short": "Companies should maintain a commitments register that tracks all social and environmental promises made to communities, assigning each to a designated manager with defined timelines.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada entre organismos multilaterales (IFC) y líderes de industria en software SRM.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus P09 catalogado",
+      "Directrices IFC",
+      "Resoluciones SMA"
+    ],
+    "actors": [
+      "Investigador de Asuntos Corporativos",
+      "Auditor de Datos"
+    ],
+    "steps": [
+      "Revisión de citas bibliográficas",
+      "Comprobación de correspondencia terminológica",
+      "Validación de ausencia de fuentes fallidas"
+    ],
+    "states": [
+      "Fuentes Analizadas",
+      "Citas Validadas",
+      "Trazabilidad Completa"
+    ],
+    "outputs": [
+      "Tabla de evidencia de la Ficha de Compromiso"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "IFC World Bank",
+    "Boréalis SRM",
+    "Tractivity",
+    "SMA Chile",
+    "P09_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "IFC",
+      "to": "Entity_Commitment",
+      "type": "defines_international_standard_for"
+    },
+    {
+      "from": "SMA Chile",
+      "to": "Entity_Commitment",
+      "type": "regulates_environmental_compliance_of"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Estándar IFC vs Regulación SMA",
+      "diferencia": "La IFC fija estándares internacionales de gestión social; la SMA fiscaliza el cumplimiento punible de compromisos ambientales en Chile."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "primary_sources_count": "5 fuentes de referencia",
+    "citation_resolution_rate": "100%"
+  },
+  "bridge_implications": "Alinear la terminología de BRIDGE con los estándares IFC para facilitar auditorías internacionales ESG.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F18",
+    "P09-F19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

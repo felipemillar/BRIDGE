@@ -1,0 +1,145 @@
+{
+  "question_id": "P06-X09",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Resolución de contradicciones complejas",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Cómo clasificar dos cifras incompatibles que usan períodos o unidades distintos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La clasificación de cifras aparentemente incompatibles se rige por el protocolo de Normalización Dimensional y Detección de Discrepancias Paramétricas (P06_QUALITY_ADDENDUM, Sección 2.2; Calamai et al., 2025; CMF NCG 461): 1) Extracción de Parámetros Contextuales: Todo valor numérico se descompone en tupla de cinco dimensiones: `[Magnitud, Unidad_Medida, Período_Temporal, Alcance_Operacional, Base_Contable]`; 2) Reglas de Incompatibilidad Aparente (No Factual): Si dos cifras difieren en unidad (ej. tCO2e brutas vs tCO2e netas) o en ventana temporal (ej. año fiscal vs año calendario móvil; acumulado vs anualizado), el sistema las clasifica como 'Discrepancia Paramétrica No Comparable' (INCOMPARABLE_DIMENSIONS) y prohíbe emitir una alerta de contradicción fáctica; 3) Normalización y Conversión: Solo se procede a comparación aritmética si existen tablas de conversión deterministas oficiales (ej. conversión de GJ a MWh conforme a factores GHG Protocol). Si los períodos o alcances son dispares y no convertibles, el sistema genera una nota de contextualización metodológica advirtiendo al analista que comparar ambas cifras directamente constituye un error de agregación.",
+  "findings": [
+    {
+      "claim_id": "P06-X09-C1",
+      "claim": "Las diferencias numéricas originadas por heterogeneidad de períodos, unidades o perímetros de consolidación se clasifican como discrepancias metodológicas no comparables, no como contradicciones fácticas.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Auditoría Financiera y Reporte ESG"
+      },
+      "evidence": [
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 2.2: Normalización Dimensional y Prevención de Falsas Contradicciones Numéricas",
+          "excerpt_short": "Comparar cifras sin normalizar unidades o alcances de consolidación es una fuente masiva de falsos positivos. Dos números distintos para un mismo concepto suelen reflejar perímetros contables dispares.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "589b1b7c-6049-4b3a-9f0d-1fa8990a7a1d",
+          "source_title": "CMF Chile - Sostenibilidad y Norma de Carácter General N° 461",
+          "original_url": "https://www.cmfchile.cl/portal/principal/623/w4-propertyvalue-50301.html",
+          "locator": "Instrucciones de Llenado: Consistencia Metodológica y Perímetros",
+          "excerpt_short": "Las entidades informantes deben explicitar el perímetro de consolidación, las unidades de reporte y la metodología de cálculo utilizada en cada métrica, debiendo justificar cambios respecto al ejercicio anterior.",
+          "source_date": "2021-11-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio estándar de contabilidad financiera y directrices obligatorias de la NCG 461 CMF.",
+      "epistemic_status_original": "principio_metodologico_formal",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cifra A con metadatos",
+      "Cifra B con metadatos"
+    ],
+    "actors": [
+      "Extractor de Métricas",
+      "Normalizador Dimensional",
+      "Motor de Reglas"
+    ],
+    "steps": [
+      "Extracción de quintupla dimensional",
+      "Comprobación de identidad de unidad y período",
+      "Si son distintas y no convertibles, asignar etiqueta INCOMPARABLE_DIMENSIONS",
+      "Generación de nota metodológica"
+    ],
+    "states": [
+      "Raw_Numbers",
+      "Dimensions_Extracted",
+      "Compatibility_Evaluated",
+      "Flagged_or_Compared"
+    ],
+    "outputs": [
+      "Clasificación dimensional de la relación entre cifras"
+    ],
+    "exceptions": [
+      "Falta de metadatos de unidad que fuerza solicitud de revisión manual"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_NUMERICAL_DISCREPANCY",
+      "type": "taxonomia_error",
+      "name": "Tipología de Discrepancias Numéricas",
+      "aliases": [
+        "Numerical Discrepancy Taxonomy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_NUMERICAL_DISCREPANCY",
+      "predicate": "evita_falsas_alertas_en",
+      "object_id": "ENT_TGRAG_SCHEMA",
+      "valid_from": "2026-09-30",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X09-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Evita que un vocero corporativo desmienta erróneamente un informe técnico que simplemente usó una base contable distinta.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "question_id": "P01-F40",
+  "pilar": "P01",
+  "eje": "Usuarios de asuntos corporativos en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar usuarios de asuntos corporativos en Chile y Latinoamérica de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de usuarios en Chile y LatAm se articula mediante: 3 estadios de madurez digital (baja/artesanal, media/estratégica, y avanzada/agéntica AI Lighthouses con brecha de <30% de CommTech según LCM); 3 perfiles organizacionales (grandes conglomerados familiares IPSA, empresas reguladas por Ley 20.730/NCG 461, y sectores territoriales minero/energéticos enfocados en SLO y RCA); relaciones B2B tripartitas (Usuario operativo, Comprador C-Suite y Aprobador con veto CISO/Legal); y condiciones de despliegue local de alta desconfianza institucional y transparencia obligatoria.",
+  "findings": [
+    {
+      "claim_id": "P01-F40-C1",
+      "claim": "La madurez digital de asuntos corporativos en América Latina presenta tres estadios: baja/artesanal (monitoreo en PDF y minutas manuales nocturnas), media/estratégica (escucha social activa y microsegmentación) y avanzada/agéntica (AI Lighthouses conectando repositorios internos con el entorno exterior).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "América Latina",
+        "actor": "Gerencias de Comunicación y Asuntos Públicos"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Estadios de Madurez Digital CommTech en LatAm",
+          "excerpt_short": "Tres estadios de madurez digital: artesanal (<30% madurez según LCM), estratégica y agéntica (AI Lighthouses).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:01:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F40-C2",
+      "claim": "La dinámica B2B en la región distingue rígidamente al Usuario (CCO/Asuntos Públicos que exige rapidez sin alucinaciones), el Comprador (CEO/CFO enfocado en ROI y protección reputacional) y el Aprobador crítico con poder de veto (CISO y Fiscal Legal que exigen aislamiento privado VPC y cero fuga de datos).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / América Latina",
+        "actor": "Estructura B2B Corporativa"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Tríada de Personas B2B (Usuario - Comprador - Aprobador)",
+          "excerpt_short": "Tríada B2B: CCO usuario, CEO comprador y CISO/Legal aprobadores con potestad de veto técnico.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:01:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evaluación de madurez digital interna",
+      "Perfil de propiedad corporativa",
+      "Políticas de ciberseguridad del CISO"
+    ],
+    "actors": [
+      "Usuario Operativo (CCO/Analista)",
+      "Comprador (CEO/Directorio)",
+      "Aprobador Técnico (CISO/Fiscal Legal)"
+    ],
+    "steps": [
+      "Diagnóstico de madurez CommTech",
+      "Configuración de entorno VPC privado",
+      "Validación legal y de seguridad",
+      "Despliegue de asistentes agénticos"
+    ],
+    "states": [
+      "Madurez_Evaluada",
+      "VPC_Configurado",
+      "Aprobación_CISO_Otorgada",
+      "Sistema_Operativo"
+    ],
+    "outputs": [
+      "Matriz de roles B2B regionalizada",
+      "Certificación de aislamiento de datos"
+    ],
+    "exceptions": [
+      "Objeción de seguridad del CISO ante modelos que retengan datos para entrenamiento"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTADIOS_MADUREZ",
+      "type": "modelo_madurez",
+      "name": "Estadios de Madurez Digital CommTech",
+      "aliases": [
+        "Madurez Artesanal, Estratégica y Agéntica"
+      ]
+    },
+    {
+      "entity_id": "ENT_TRIADA_B2B",
+      "type": "modelo_adopcion",
+      "name": "Tríada B2B (Usuario - Comprador - Aprobador)",
+      "aliases": [
+        "Matriz de Decisión Tecnológica B2B"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TRIADA_B2B",
+      "predicate": "condiciona_despliegue_de",
+      "object_id": "Adopción_Tecnología_IA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F40-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gobernanza",
+      "implication": "Incorporar en BRIDGE la arquitectura multi-persona para separar los accesos operativos del CCO de los controles de auditoría del CISO.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F41",
+    "P01-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:01:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

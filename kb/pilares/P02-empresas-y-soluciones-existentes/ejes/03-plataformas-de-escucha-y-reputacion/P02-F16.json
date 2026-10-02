@@ -1,0 +1,135 @@
+{
+  "question_id": "P02-F16",
+  "pilar": "P02",
+  "eje": "Plataformas de escucha y reputación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar plataformas de escucha y reputación de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo cuatripartito: 1) Los 4 Módulos Cardinales: Saber (memorias ESG, actas, discursos y RAG estricto), Escuchar (prensa, broadcast, redes, podcasts, detección de velocidad con NewsWhip y grafos de riesgo con Signal AI), Hablar (Broadsight System of Record, Executive Briefs y Q&A asistido) y Relacionar (CRM de autoridades, Ley de Lobby y acuerdos comunitarios tipo Borealis/Open Point); 2) Variables de Grafo de Entidades: nodos de ejecutivos, empresas, reguladores y comunidades con aristas de cercanía y polaridad semántica; atributos de señal (velocidad de propagación, lecturas reales verificadas vía Memo y autenticidad del perfil vía Cyabra); 3) Escala Epistémica de Calificación: OPD, FD, DTI, POR (=Ninguna) y ND; 4) Cuatro Condiciones Operativas Estrictas: Condición Zero Hallucination (citas obligatorias a nivel de párrafo y página en documentos internos o notas externas), Enlace Bitemporal Bipartito (cruzar la noticia de hoy con el compromiso firmado hace años), Gobernanza Human-in-the-Loop (controles RBAC donde ningún borrador se libera sin firma del CCO), y Alineación AMEC (eliminación del AVE publicitario desacreditado y foco en métricas de outcomes de reputación).",
+  "findings": [
+    {
+      "claim_id": "P02-F16-C1",
+      "claim": "La modelación de plataformas de inteligencia corporativa exige la adopción estricta de los estándares de AMEC (Barcelona Principles 3.0), prohibiendo el uso del valor publicitario equivalente (AVE) y basando la medición en métricas de cambio de percepción, confianza y capital relacional (outcomes).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Estándar Metodológico AMEC"
+      },
+      "evidence": [
+        {
+          "source_id": "2ce0f47e-6e5d-4a91-bd16-81900818673a",
+          "source_title": "AMEC Barcelona Principles 3.0 Communications Measurement Standard",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0/",
+          "locator": "Principio 5: Los AVEs no son el valor de la comunicación",
+          "excerpt_short": "Advertising Value Equivalents (AVEs) do not measure the value of communications and should not be used.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:31:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar internacional de medición de relaciones públicas consolidado.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Noticias y redes",
+      "Documentos internos",
+      "Compromisos territoriales"
+    ],
+    "actors": [
+      "Grafo Bipartito",
+      "Algoritmo de Polaridad",
+      "Auditor AMEC"
+    ],
+    "steps": [
+      "Ingesta y extracción de entidades",
+      "Cálculo de cercanía semántica y polaridad",
+      "Vinculación con archivos internos",
+      "Generación de métricas de reputación basadas en outcomes"
+    ],
+    "states": [
+      "Datos_Ingresados",
+      "Grafo_Actualizado",
+      "Metricas_Calculadas"
+    ],
+    "outputs": [
+      "Reporte estructurado de reputación corporativa libre de AVE"
+    ],
+    "exceptions": [
+      "Menciones sin impacto material en la reputación (se filtran como ruido)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ESTANDAR_AMEC_3",
+      "type": "estandar_internacional",
+      "name": "AMEC Barcelona Principles 3.0",
+      "aliases": [
+        "Estándar Global de Medición PR"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ESTANDAR_AMEC_3",
+      "predicate": "prohibe_uso_de",
+      "object_id": "AVE_Valor_Publicitario_Equivalente",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F16-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Métrica de Vanidad (AVE) vs Métrica de Valor Real (AMEC)",
+      "Métrica Desacreditada (AVE)": "Multiplicar centímetros de columna de prensa por tarifa publicitaria.",
+      "Métrica Estándar AMEC": "Medición de cambios en percepción de confianza, alineamiento discursivo y mitigación de riesgos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Diseñar los paneles de analítica de BRIDGE cumpliendo al 100% con los principios AMEC 3.0, desterrando cualquier cálculo de AVE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F17",
+    "P02-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:31:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

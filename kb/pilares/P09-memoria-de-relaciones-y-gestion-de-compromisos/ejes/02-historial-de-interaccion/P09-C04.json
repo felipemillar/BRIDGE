@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-C04",
+  "pilar": "P09",
+  "eje": "Historial de interacción",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué sigue sin prueba sobre historial de interacción, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Brecha sin Prueba: El corpus no documenta con respaldo empírico qué porcentaje de participantes en asambleas comunitarias chilenas acepta ser grabado en audio o video para transcripción asistida por IA, existiendo el riesgo de que la insistencia en grabar genere rechazo social y desconfianza. Fuentes Parciales: La fuente de INDH Chile sobre conflictos (`fb02f5bf`) resultó ser una landing page introductoria sin datos descargables, mientras que el informe de INDH (`285ff668`) presentó fallas de enlace, siendo sustituido por Kancha Investigación (`c726d144`) y SEA Chile (`f519980d`). Validación Mínima Requerida: Ejecutar un test piloto de 10 asambleas comunitarias en proyectos piloto, ofreciendo tres opciones de registro (grabación con consentimiento informado firmado, toma de notas por actuario paritario o acta manuscrita tradicional firmada al cierre), midiendo cuantitativamente la tasa de aceptación de cada modalidad.",
+  "findings": [
+    {
+      "claim_id": "P09-C04-C1",
+      "claim": "La aceptabilidad social de grabaciones de audio en asambleas comunitarias carece de prueba empírica en el corpus; los portales del INDH fueron sustituidos por Kancha y SEA; se requiere test de consentimiento informado.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "contrast_interaction_history_gaps",
+      "evidence": [
+        {
+          "source_title": "P09_PENDING_SOURCES_RESOLUTION",
+          "source_id": "dcb397bc-d659-44fc-af6b-e394801f12a9",
+          "locator": "Sección 'Sustitución de Fuentes INDH por Kancha y SEA'",
+          "retrieved_at": null,
+          "excerpt_short": "Las referencias rotas del portal INDH se regularizaron mediante el estudio metodológico de Kancha Investigación y los instructivos del SEA Chile, proveyendo sustento sólido para la gestión de quejas y asambleas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_GAPS_AND_VALIDATION",
+          "source_id": "33944e01-6a0f-46f1-bfa3-19224f1c8d72",
+          "locator": "Sección 'Gaps en Métodos de Captura de Actas'",
+          "retrieved_at": null,
+          "excerpt_short": "Incertidumbre: Se desconoce la viabilidad de usar grabadoras de voz en asambleas sin que los asistentes perciban vigilancia corporativa. Requiere prueba de consentimiento.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación transparente de la limitación tecnológica frente a sensibilidades culturales.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.92,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Protocolo de consentimiento informado",
+      "Consentimientos firmados",
+      "Bitácora de terreno"
+    ],
+    "actors": [
+      "Facilitador de Terreno",
+      "Presidente de la Asamblea",
+      "Equipo de Asuntos Comunitarios"
+    ],
+    "steps": [
+      "Consulta previa al inicio de la asamblea",
+      "Firma de hoja de consentimiento para grabación",
+      "Si hay oposición, uso estricto de acta manuscrita paritaria",
+      "Registro de la preferencia comunitaria en BRIDGE"
+    ],
+    "states": [
+      "Consulta Realizada",
+      "Modalidad Aprobada",
+      "Acta Registrada"
+    ],
+    "outputs": [
+      "Métrica de aceptabilidad de modalidades de registro de interacción"
+    ],
+    "exceptions": [
+      "Basta la oposición de un comunero para desestimar la grabación de audio"
+    ]
+  },
+  "entities": [
+    "Consentimiento Informado",
+    "Kancha Investigación",
+    "SEA Chile",
+    "INDH (Sustituido)",
+    "P09_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Grabación de Asamblea",
+      "to": "Consentimiento Informado",
+      "type": "STRICTLY_REQUIRES"
+    },
+    {
+      "from": "INDH Links",
+      "to": "Kancha / SEA",
+      "type": "SUPERSEDED_BY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Grabación oculta o forzada vs Acta manuscrita acordada",
+      "diferencia": "La grabación oculta destruye toda confianza y puede configurar ilícito penal (Art. 161-A Código Penal); el acta acordada fortalece la legitimidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "pilot_assemblies_count": "10 asambleas de prueba",
+    "consent_rate_target": "Determinar si la aceptación supera el 50%"
+  },
+  "bridge_implications": "Implementar un checklist previo en el módulo móvil de BRIDGE: '¿Existe consentimiento unánime de los asistentes para grabar audio?' (Sí/No).",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C05",
+    "P09-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

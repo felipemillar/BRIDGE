@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-X31",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Certeza comercial y madurez",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre certeza comercial y madurez, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan sobre la atribución de madurez operativa comprobada (POR) a plataformas que solo cuentan con declaraciones de marketing: 1) Discrepancia: Fichas de producto y borradores de síntesis preliminares asignaban etiquetas como 'Evidencia Demostrada (EM)' o 'Funcionalidad Probada' a herramientas basadas en demos comerciales o notas de prensa de lanzamientos de IA; 2) Versión que prevalece: Prevalece '00_P02_GLOBAL_READ_ME_AND_ERRATA' y 'P02_GLOBAL_ATLAS_RECONCILIATION_V1': a) Se prohíbe el uso de la categoría 'Evidencia Demostrada (EM)' genérica, sustituyéndola por la escala estricta OPD, FD, DTI y POR; b) Se certifica formalmente que NINGUNO de los 70 proveedores comerciales cuenta con una Prueba Operacional Realizada (POR) en el benchmark independiente de este programa de investigación; c) The Bridge Intelligence debe clasificarse estrictamente como 'hipotesis_diseno'. Prevalece la versión que erradica la autocomplacencia y exige pruebas técnicas auditables para cualquier afirmación de madurez.",
+  "findings": [
+    {
+      "claim_id": "P02-X31-C1",
+      "claim": "La errata de reconciliación prohíbe la categoría inflada de 'Evidencia Demostrada' y establece la regla inmutable de que ninguno de los 70 proveedores del mercado cuenta con una prueba operacional realizada (POR) independiente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría Epistémica P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 8: Prohibition of Unverified 'Demonstrated Evidence' Labels",
+          "excerpt_short": "Replaces generic 'Demonstrated Evidence' with the rigorous scale (OPD, DTI, FD, POR). Formally notes that zero commercial vendors possess verified POR benchmark status.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:54:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de la regla de precedencia editorial del mandato.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borradores con etiquetas desactualizadas",
+      "Directiva de errata P02",
+      "Criterios de rigor epistemológico"
+    ],
+    "actors": [
+      "Auditor Epistémico Jefe",
+      "Investigador Cuantitativo"
+    ],
+    "steps": [
+      "Búsqueda de términos 'Evidencia Demostrada' o 'EM'",
+      "Reemplazo sistemático por la escala canónica",
+      "Verificación de recuento de POR = 0"
+    ],
+    "states": [
+      "Etiquetas_Detectadas",
+      "Escala_Reemplazada",
+      "Auditoria_Conforme"
+    ],
+    "outputs": [
+      "Catálogo maestro depurado bajo la escala epistémica canónica"
+    ],
+    "exceptions": [
+      "Descripciones textuales de marketing en citas primarias que deben mantenerse entrecomilladas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REGLA_CERO_POR",
+      "type": "regla_editorial",
+      "name": "Regla Canónica Cero POR en Vendors P02",
+      "aliases": [
+        "Zero POR Rule"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REGLA_CERO_POR",
+      "predicate": "aplica_taxativamente_a",
+      "object_id": "70_Proveedores_Comerciales",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X31-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Etiqueta Inflada (EM) vs Escala Epistémica Canónica (OPD/DTI/FD/POR)",
+      "Etiqueta Inflada": "Hacía creer al lector que el software había sido testeado científicamente en laboratorio.",
+      "Escala Canónica": "Distingue claramente entre lo que la empresa vende públicamente (OPD), lo que documenta técnicamente (DTI) y lo probado en operaciones reales (POR)."
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "P02-CONT-09",
+      "description": "Uso de la etiqueta 'Evidencia Demostrada' en borradores previos frente a la escala de evidencia canónica.",
+      "resolution": "Prevalece la errata 00_P02_GLOBAL_READ_ME_AND_ERRATA: reemplazo absoluto por la escala canónica (OPD, DTI, FD, POR)."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Esta honestidad metodológica blinda la credibilidad de todo el programa de investigación de asuntos corporativos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X32"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:54:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

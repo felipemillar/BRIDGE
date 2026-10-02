@@ -1,0 +1,148 @@
+{
+  "question_id": "P05-F24",
+  "pilar": "P05",
+  "eje": "Narrativas y temas emergentes",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra narrativas y temas emergentes sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado en el corpus que ilustra la génesis, evolución y cristalización de narrativas emergentes es la controversia socioambiental en torno a la extracción y uso del agua en cuencas agrícolas y mineras en Chile (e.g. cuencas de la zona centro-norte y expedientes en el SEIA/DGA): 1) Entradas del Sistema: a) Fase 1 (Señal Débil): Reclamos de vecinos y comités de agua potable rural (APR) presentados en actas de participación ciudadana temprana del SEA y denuncias administrativas aisladas ante la Dirección General de Aguas (DGA) por descenso en napas subterráneas; b) Fase 2 (Tema Emergente): Activistas locales y ONGs ambientales crean contenido en redes sociales y medios comunitarios estructurando el encuadre (Framing de Entman): Problema = escasez hídrica en hogares; Causa = sobreextracción industrial corporativa; Juicio Moral = abuso empresarial frente a derecho humano básico; Remedio = paralización de faenas y cambio en derechos de aprovechamiento; c) Fase 3 (Mainstream): Prensa económica nacional y noticieros televisivos adoptan el tema con reportajes en horario estelar ('Crisis del agua en la cuenca'), provocando que el contagio viral de la narrativa supere el umbral epidemiológico (R0 > 1 de Shiller); 2) Proceso y Resultado Observado (Fase 4 Cristalización Regulatoria): Presentación de una moción parlamentaria en el Congreso Nacional para declarar zona de escasez hídrica y caducar autorizaciones, acompañada de la apertura de un procedimiento sancionatorio gravísimo por parte de la Superintendencia del Medio Ambiente (SMA). El resultado esperado demuestra cómo un tema que comenzó como reclamo local de baja frecuencia se transforma en barrera regulatoria crítica debido a la inacción temprana de la gerencia de asuntos corporativos.",
+  "findings": [
+    {
+      "claim_id": "P05-F24-C1",
+      "claim": "El ciclo de vida de los conflictos hídricos en Chile ilustra empíricamente cómo las narrativas territoriales de escasez escalan desde señales débiles hasta intervenciones parlamentarias y regulatorias coercitivas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2026",
+        "region": "Chile",
+        "actor": "DGA / SMA / Comunidades / Empresas"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 6: Caso 2 (Conflictos Socioambientales y la Pérdida de la SLO en Chile)",
+          "excerpt_short": "Paralización de megaproyectos por oposición comunitaria sostenida articulada con el Convenio 169 de la OIT y denuncias de afectación a recursos hídricos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "af4cb260-c2b6-4a33-a9cf-111fbf67fdbe",
+          "source_title": "SEA Chile: Guías sobre Participación Ciudadana (PAC) en el SEIA",
+          "original_url": "https://www.sea.gob.cl/guias-y-criterios",
+          "locator": "Guía de Criterios de Evaluación Ambiental del Componente Hídrico",
+          "excerpt_short": "La omisión del diálogo temprano sobre el uso del agua genera escalamiento contencioso que suele derivar en revocación de autorizaciones administrativas.",
+          "source_date": "2023-11-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Patrón empírico sistemático observado en la tramitación ambiental y regulatoria de recursos hídricos en Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Actas de comités de agua",
+      "Reportajes de prensa",
+      "Boletines de proyectos de ley en el Congreso"
+    ],
+    "actors": [
+      "Comité de Agua Potable Rural",
+      "Gerente de Sustentabilidad",
+      "Diputados de la Comisión de Medio Ambiente",
+      "SMA"
+    ],
+    "steps": [
+      "Detección de reclamo inicial en DGA",
+      "Monitoreo del salto a prensa mainstream",
+      "Comparecencia ante comisión parlamentaria"
+    ],
+    "states": [
+      "Weak_Signal_Active",
+      "Mainstream_Contagion",
+      "Regulatory_Sanction_Initiated"
+    ],
+    "outputs": [
+      "Procedimiento sancionatorio y exigencia de adenda ambiental rectificatoria"
+    ],
+    "exceptions": [
+      "Empresa que interviene en Fase 1 con mesas de diálogo técnico resolviendo el suministro alternativo de agua"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_WATER_CONFLICT_CASE",
+      "type": "caso_analitico",
+      "name": "Caso Conflicto Hídrico Territorial en Chile",
+      "aliases": [
+        "Escalamiento Narrativo del Agua en Chile"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_WATER_CONFLICT_CASE",
+      "predicate": "ejemplifica_evolucion_de",
+      "object_id": "ENT_NARRATIVE_SCHEMA",
+      "valid_from": "2022",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F24-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Etapa de intervención corporativa",
+      "Intervención en Fase 1 (Señal Débil)": "Inversión menor en recirculación o apoyo técnico al APR; el conflicto se resuelve en sede local sin daño a la marca.",
+      "Intervención en Fase 4 (Cristalización)": "Defensa judicial forzada, multas millonarias, daño reputacional de portada y riesgo de revocación de la RCA."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Radar de Temas Críticos",
+      "implication": "BRIDGE debe permitir vincular expedientes de la DGA y actas del SEIA a la alerta temprana de narrativas corporativas para anticipar crisis hídricas antes de que lleguen a la prensa.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

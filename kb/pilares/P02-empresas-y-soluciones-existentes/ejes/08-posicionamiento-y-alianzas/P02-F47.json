@@ -1,0 +1,132 @@
+{
+  "question_id": "P02-F47",
+  "pilar": "P02",
+  "eje": "Posicionamiento y alianzas",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre posicionamiento y alianzas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos están respaldados por el conjunto de documentos primarios y de síntesis metodológica de P02: 1) Mapa de Mercado Global: respaldado por 'P02_GLOBAL_MARKET_MAP_V1' (2026), que formaliza la matriz funcional de los cuatro módulos y fundamenta la separación entre capas comoditizadas y software diferencial; 2) Atlas de Reconciliación: respaldado por 'P02_GLOBAL_ATLAS_RECONCILIATION_V1' (2026), que clasifica las propuestas teóricas de The Bridge como hipótesis y fija el marco de certeza comercial; 3) Brechas y Validación: respaldado por 'P02_GLOBAL_GAPS_AND_VALIDATION_V1' (2026), que establece las condiciones necesarias para llevar una hipótesis a prueba operacional; 4) Errata y precedencia: '00_P02_GLOBAL_READ_ME_AND_ERRATA', que prohíbe atribuir pruebas empíricas a conceptos en fase de diseño.",
+  "findings": [
+    {
+      "claim_id": "P02-F47-C1",
+      "claim": "El respaldo documental de posicionamiento y alianzas reposa en la síntesis estratégica del mercado global y en las directivas epistemológicas de reconciliación de atlas de P02.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Fuentes primarias P02"
+      },
+      "evidence": [
+        {
+          "source_id": "b5217662-c6f0-4529-8282-f5d17339b7fa",
+          "source_title": "P02_GLOBAL_MARKET_MAP_V1",
+          "original_url": null,
+          "locator": "Section 5: Build, Buy or Partner Strategic Synthesis",
+          "excerpt_short": "Synthesis detailing architectural feasibility, data licensing models, and commercial partnerships across the 70 vendor landscape.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:42:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en los documentos normativos del cuaderno P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documentos del cuaderno P02",
+      "Citas de precedencia editorial"
+    ],
+    "actors": [
+      "Auditor Epistémico",
+      "Investigador de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Verificación de concordancia de afirmaciones",
+      "Validación cruzada de números de sección",
+      "Control de integridad referencial"
+    ],
+    "states": [
+      "Fuentes_Contrastadas",
+      "Trazabilidad_Aprobada"
+    ],
+    "outputs": [
+      "Índice de fuentes verificadas para el eje de posicionamiento"
+    ],
+    "exceptions": [
+      "Diferencias interpretativas resueltas bajo la precedencia de la errata global"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_FUENTE_MAP_V1",
+      "type": "documento_fuente",
+      "name": "Global Market Map V1",
+      "aliases": [
+        "Market Map V1"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_FUENTE_MAP_V1",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "P02-F43",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F47-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respaldo Estratégico (Market Map) vs Respaldo Operacional (Vendor Manuals)",
+      "Respaldo Estratégico": "Brinda una visión macro sobre la industria y define las condiciones de integración de soluciones.",
+      "Respaldo Operacional": "Detalla las APIs y especificaciones técnicas individuales de cada herramienta."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La coherencia de la investigación exige basar el posicionamiento en fuentes verificadas sin sobrestimar la madurez de la tecnología propia.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:42:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

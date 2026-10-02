@@ -1,0 +1,147 @@
+{
+  "question_id": "P10-F18",
+  "pilar": "P10",
+  "eje": "Redacción y adaptación de mensajes",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra redacción y adaptación de mensajes sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto Documentado: 'Adaptación Multicanal de Comunicado sobre Alianza Estratégica de Hidrógeno Verde'. Entradas: 1) Mensaje Maestro Aprobado v1.0: Contiene inversión certificada de USD $450 millones, reducción proyectada de 320.000 toneladas de CO2 anuales, fecha de inicio de obras Q3 2026 y cláusula obligatoria de Safe Harbor bajo SEC Rule 10b-5; 2) Adaptación Requerida para 3 Canales: Canal A: Comunicado para newswires financieros (Bloomberg/Reuters, 600 palabras con tabla de inversión y safe harbor completo); Canal B: Post para LinkedIn institucional (150 palabras enfocado en sustentabilidad y empleo local con enlace al comunicado oficial); Canal C: Mensaje interno para colaboradores (200 palabras enfocado en seguridad laboral y orgullo de pertenencia); 3) Proceso de Guardrails en BRIDGE: El sistema verifica que las 3 adaptaciones utilicen exactamente la cifra de USD $450M y 320.000 ton CO2, bloquea cualquier intento de redondear a USD $500M, e inserta automáticamente en LinkedIn el enlace canónico al newsroom donde reside el safe harbor. Resultado Esperado: Aprobación por el Jefe de Prensa como versión v1.1, despacho simultáneo bajo embargo a las 08:30 h y cero desvíos discursivos entre el público financiero, los trabajadores y las redes sociales.",
+  "findings": [
+    {
+      "claim_id": "P10-F18-C1",
+      "claim": "El caso documentado ilustra la derivación multicanal sin alteración de datos fácticos: adaptación del tono para prensa, colaboradores y redes sociales preservando exactamente las cifras certificadas y los enlaces obligatorios de safe harbor.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "concrete_case_message_drafting",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 6 'Escenarios Sintéticos Detallados (Escenario de Adaptación Multicanal)'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de Adaptación: El mensaje maestro v1.0 se ramifica en piezas para prensa, colaboradores y redes. El sistema verifica que no se omitan los disclaimers y que ninguna cifra sufra distorsión o redondeo publicitario.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "ContentGrip: Practical PR Workflow - Staging, Embargoes, and Distribution (2026)",
+          "source_id": "4b3bd2de-e375-4ca4-a494-8adce9b0d5a5",
+          "locator": "Section 'Synchronized Multi-Audience Release Management', p. 18-22",
+          "retrieved_at": null,
+          "excerpt_short": "Successful corporate distribution requires tailored messaging for employees, investors, and the public, all anchored strictly to a single approved master narrative.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación rigurosa de las especificaciones del dossier y de las mejores prácticas de ContentGrip.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Mensaje maestro v1.0",
+      "Parámetros de los 3 canales",
+      "Texto generado de adaptaciones"
+    ],
+    "actors": [
+      "Redactor Corporativo",
+      "Jefe de Prensa",
+      "Motor de Validación BRIDGE"
+    ],
+    "steps": [
+      "Generación de textos derivados",
+      "Comprobación de guardrails de cifras",
+      "Visación del Jefe de Prensa como v1.1",
+      "Programación de despacho sincronizado con embargo"
+    ],
+    "states": [
+      "Piezas Derivadas",
+      "Validación Exitosa",
+      "Staging Aprobado"
+    ],
+    "outputs": [
+      "Tres publicaciones programadas sincronizadas"
+    ],
+    "exceptions": [
+      "Si un canal rechaza el enlace de safe harbor por política de plataforma, se exige reformular el post para incluir la advertencia en texto plano"
+    ]
+  },
+  "entities": [
+    "Caso Hidrógeno Verde",
+    "Adaptación Multicanal",
+    "ContentGrip",
+    "Safe Harbor",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Caso Hidrógeno Verde",
+      "to": "Mensaje Maestro v1.0",
+      "type": "DERIVED_FROM"
+    },
+    {
+      "from": "Post LinkedIn",
+      "to": "Safe Harbor Link",
+      "type": "MANDATORILY_INCLUDES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Adaptación manual desarticulada vs Distribución orquestada en BRIDGE",
+      "diferencia": "La manual produce filtraciones previas al embargo y cifras contradictorias; la orquestada asegura sincronización temporal al segundo y coherencia fáctica total."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "derivative_channels_count": "3 canales sincronizados",
+    "factual_discrepancies_detected": "0 discrepancias toleradas"
+  },
+  "bridge_implications": "Crear en la pantalla de publicación de BRIDGE una vista previa 'Side-by-Side' de las versiones para newswire, social y colaboradores antes de confirmar el despacho.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F19",
+    "P10-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

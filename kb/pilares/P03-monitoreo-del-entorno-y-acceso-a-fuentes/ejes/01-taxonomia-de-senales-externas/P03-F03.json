@@ -1,0 +1,147 @@
+{
+  "question_id": "P03-F03",
+  "pilar": "P03",
+  "eje": "Taxonomía de señales externas",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Cómo se distingue una mención de marca de un cambio material para asuntos corporativos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La distinción se basa en tres filtros metodológicos acumulativos: 1) Umbral de materialidad regulatoria y financiera: una mención de marca es un evento meramente comunicacional (ej. auspicio deportivo, review de producto), mientras que un cambio material altera los derechos, obligaciones, gobernanza, operaciones o valoración de la corporación (equivalente al criterio de Hecho Esencial de la CMF y Form 8-K de la SEC); 2) Señales de entorno no nominales: los mayores riesgos emergen en señales sectoriales donde la marca ni siquiera es nombrada inicialmente (ej. cambios tributarios, regulaciones de cuencas de agua, litigios contra competidores directos); y 3) Marco AMEC: separar 'outputs' (menciones de vanidad / volumen) de 'outcomes' e impacto organizacional estratégico.",
+  "findings": [
+    {
+      "claim_id": "P03-F03-C1",
+      "claim": "Los cambios materiales para asuntos corporativos se definen por su impacto en gobernanza, regulación y operación sectorial, y frecuentemente no contienen el nombre de la empresa en sus fases iniciales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "CMF / SEC / AMEC"
+      },
+      "evidence": [
+        {
+          "source_id": "5eaa5b99-624c-4877-87be-66c339c7b6d4",
+          "source_title": "AMEC Barcelona Principles 3.0 & Integrated Evaluation Framework",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principle 2: Measuring Communication Outcomes is Recommended Versus Only Measuring Outputs",
+          "excerpt_short": "Outcomes include shifts in awareness, comprehension, attitude, stance, and organizational impact, distinct from mere mention volume or media impressions.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:00:00-03:00"
+        },
+        {
+          "source_id": "ccc863f8-d879-4693-b10c-015f8ae278fa",
+          "source_title": "CMF Chile - Sistema de Consulta de Hechos Esenciales y Normativa",
+          "original_url": "https://www.cmfchile.cl/portal/principal/623/w4-propertyvalue-48783.html",
+          "locator": "Definición de Hecho Esencial (Ley 18.045 Art. 9 y 10)",
+          "excerpt_short": "Hecho esencial es todo aquel acontecimiento que una persona juiciosa consideraría importante para sus decisiones sobre la marcha social o títulos de la entidad.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Respaldo directo en normativa legal de mercado de valores y estándares AMEC.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Texto de señal entrante",
+      "Lista de entidades corporativas",
+      "Ontología de riesgos sectoriales"
+    ],
+    "actors": [
+      "Materiality Classifier",
+      "Graph Query Engine"
+    ],
+    "steps": [
+      "Verificación de mención directa",
+      "Análisis de impacto regulatorio sectorial",
+      "Ponderación de severidad AMEC"
+    ],
+    "states": [
+      "Raw_Signal",
+      "Direct_Mention_Flagged",
+      "Materiality_Evaluated"
+    ],
+    "outputs": [
+      "Clasificación dicotómica: Mención_Superficial vs Cambio_Material_Corporativo"
+    ],
+    "exceptions": [
+      "Menciones aparentemente triviales emitidas por figuras con alto poder de veto regulatorio"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MATERIAL_CHANGE",
+      "type": "concepto_regulatorio",
+      "name": "Cambio Material Corporativo",
+      "aliases": [
+        "Material Event",
+        "Hecho Esencial"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MATERIAL_CHANGE",
+      "predicate": "discrimina_relevancia_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Criterio de clasificación",
+      "Mención de Marca": "Presencia de keywords comerciales o menciones directas en prensa/redes.",
+      "Cambio Material": "Afectación jurídica, regulatoria, reputacional o de licencia social para operar."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Descartar dashboards de simple 'volumen de menciones' e incorporar clasificadores de materialidad regulatoria y de negocio.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

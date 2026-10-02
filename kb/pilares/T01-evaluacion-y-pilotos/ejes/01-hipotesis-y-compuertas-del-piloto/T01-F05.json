@@ -1,0 +1,156 @@
+{
+  "question_id": "T01-F05",
+  "pilar": "T01",
+  "eje": "Hipótesis y compuertas del piloto",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre hipótesis y compuertas del piloto?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos, criterios y principios experimentales sobre hipótesis y compuertas de decisión están fundamentados en una sólida red de fuentes originales primarias y síntesis canónicas rectoras: 1) Cooper (2016–2025, The Stage-Gate System): Respalda la teoría y metodología del sistema de compuertas en desarrollo tecnológico e innovación B2B, sustentando los criterios obligatorios 'Must-Meet' y las compuertas binarias Go/Kill; 2) The Bridge Intelligence Official Reference Website (`6eca40e5`, `thebridgeintelligence.ai`): Sustenta la definición sustantiva de los cuatro pilares canónicos (Saber, Escuchar, Hablar, Relacionar), ratificada por `T01_VERIFICATION_CORRECTIONS` frente a la atribución errónea de `bridgestudio.mx`; 3) AMEC Barcelona Principles 3.0 (2020, `92dfdc7c` / `31a4e1bf`): Fundamenta los principios 2 y 5 sobre medición cualitativa y deslinde causal de resultados organizacionales; 4) Es et al. (2023, Ragas Full Paper PDF, `01d6cab0`): Sustenta los algoritmos y umbrales matemáticos de Faithfulness y Answer Relevance para evaluar sistemas RAG; 5) Noy & Zhang (2023, Science, `2964a62c`): Acredita el diseño experimental de productividad laboral con IA y la necesidad de descontar el tiempo de verificación; 6) T01_VERIFICATION_CORRECTIONS (`f5a15f9d`, 30-09-2026, síntesis interna con prevalencia rectora): Establece el marco jerárquico canónico, convalida la recuperación de los 9 PDFs de ArXiv y formaliza el descarte de atribuciones comerciales erróneas; y 7) T01_QUALITY_ADDENDUM (`45782049`, 30-09-2026): Acredita la reconciliación de inventarios y los umbrales específicos de compuertas de T01.",
+  "findings": [
+    {
+      "claim_id": "T01-F05-C1",
+      "claim": "El diseño de hipótesis y compuertas se fundamenta en Cooper (Stage-Gate), The Bridge Intelligence (pilares oficiales), AMEC Barcelona Principles 3.0, Ragas (evaluación RAG), Noy & Zhang (productividad experimental en Science) y las síntesis rectoras T01_VERIFICATION_CORRECTIONS y T01_QUALITY_ADDENDUM.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "sources_lineage_hypotheses_and_gates",
+      "evidence": [
+        {
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & B2B Technology Pilot Governance",
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "locator": "Section 'Stage-Gate Governance'",
+          "excerpt_short": "Gates are structured Go/Kill decision points where projects are evaluated against predetermined operational, technical, and commercial criteria.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "The Bridge Intelligence - Official Reference Website (Saber, Escuchar, Hablar, Relacionar)",
+          "source_id": "6eca40e5-dfef-4b44-a26e-8b7af8c57e8c",
+          "locator": "Homepage and Methodology Description",
+          "excerpt_short": "The Bridge Intelligence structures corporate affairs intelligence across four interconnected modules: Saber, Escuchar, Hablar, and Relacionar.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "T01_VERIFICATION_CORRECTIONS: Reconciliación de Tareas y Recuperación Full-Text (Síntesis Interna)",
+          "source_id": "f5a15f9d-310f-4bfc-ae19-70ff8cc2bdcf",
+          "locator": "Sección 'Resolución de Incidencia y Deslinde'",
+          "excerpt_short": "Prevalencia de textos completos de ArXiv y exclusión absoluta de bridgestudio.mx en favor de thebridgeintelligence.ai.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Trazabilidad exhaustiva respaldada por fuentes primarias internacionales y documentos rectores de síntesis del proyecto.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Publicaciones científicas",
+      "Estándares de la industria",
+      "Documentos rectores canónicos"
+    ],
+    "actors": [
+      "Investigador Principal de BRIDGE",
+      "Auditor Metodológico",
+      "Oficial de Calidad"
+    ],
+    "steps": [
+      "Revisión sistemática de literatura metodológica (Cooper, AMEC, Ragas)",
+      "Cotejo con la arquitectura propietaria de The Bridge Intelligence",
+      "Verificación de las directrices rectoras de T01_VERIFICATION_CORRECTIONS",
+      "Extracción de UUIDs y citas textuales sustantivas",
+      "Publicación de la matriz de linaje documental en el repositorio del proyecto"
+    ],
+    "states": [
+      "LITERATURE_EXAMINED",
+      "CANONICAL_PREVALENCE_VERIFIED",
+      "LINEAGE_SEALED"
+    ],
+    "outputs": [
+      "Trazabilidad documental 100% verificable que confiere blindaje científico al diseño del piloto"
+    ],
+    "exceptions": [
+      "Se rechaza de forma absoluta cualquier cita atribuida a bridgestudio.mx para describir la plataforma"
+    ]
+  },
+  "entities": [
+    "Cooper Stage-Gate",
+    "The Bridge Intelligence",
+    "AMEC BP 3.0",
+    "T01_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "T01_VERIFICATION_CORRECTIONS",
+      "to": "Cooper Stage-Gate",
+      "type": "HARMONIZES_WITH"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citas ambiguas sin linaje vs Trazabilidad verificable con UUIDs de textos completos",
+      "diferencia": "La cita ambigua debilita el rigor del informe; la trazabilidad verificable permite a un auditor independiente confirmar la fuente primaria en segundos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "primary_source_traceability_rate": "100%",
+    "canonical_precedence_compliance": "1.0"
+  },
+  "bridge_implications": "Garantiza que ningún cliente o auditor pueda cuestionar el fundamento científico sobre el cual se evalúa la solución.",
+  "open_gaps": [
+    "Monitoreo de nuevas publicaciones de AMEC previstas para 2026-2027."
+  ],
+  "next_question_ids": [
+    "T01-F06",
+    "T01-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

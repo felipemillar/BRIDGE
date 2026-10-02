@@ -1,0 +1,166 @@
+{
+  "question_id": "P11-F01",
+  "pilar": "P11",
+  "eje": "Inventario y clasificación de datos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué datos son públicos, internos, confidenciales, personales o de terceros?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La taxonomía de gobernanza de la información en BRIDGE clasifica exhaustivamente los activos de datos en 5 categorías formales: 1) Datos Públicos (D1): Información abierta y accesible al escrutinio general (comunicados oficiales emitidos, leyes de la BCN, resoluciones públicas de la SMA, registros de SEIA/SEA y notas de prensa), con permiso de vectorización irrestricta; 2) Datos Internos Corporativos (D2): Documentación de trabajo ordinaria de la empresa (minutas de coordinación interna, borradores de trabajo, clippings sectoriales, planes de turno y organigramas), accesibles solo a usuarios autenticados del tenant; 3) Datos Confidenciales Estratégicos (D3): Información sensible con impacto comercial, legal o bursátil directo (planes de litigio, minutas de M&A, borradores de Hechos Esenciales bajo reserva conforme al Art. 10 Ley 18.045, análisis de contingencias ambientales no públicas), sujetos a cifrado con claves CMK por tenant y control de acceso estricto ABAC; 4) Datos Personales (D4): Datos identificatorios y de contacto profesional de personas naturales (dirigentes comunitarios, voceros, autoridades Ley 20.730 y empleados), regulados por la Ley 21.719 (vacatio legis) y Ley 19.628, con prohibición taxativa de almacenar datos sensibles íntimos (salud, religión, ideología privada); y 5) Secretos de Terceros / Materias Reguladas (D5): Información técnica, comercial o financiera amparada por acuerdos de confidencialidad (NDA), secretos industriales bajo Ley 17.336 y registros de lobby formal Ley 20.730, aislados en silos protegidos.",
+  "findings": [
+    {
+      "claim_id": "P11-F01-C1",
+      "claim": "El marco de clasificación tipifica cinco niveles de datos (D1 a D5), delimitando las salvaguardas de cifrado, retención y vectorización aplicables a activos públicos, internos, confidenciales, personales y de terceros.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "data_classification_taxonomy",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 2.1 'Taxonomía de Datos y Actores'",
+          "retrieved_at": null,
+          "excerpt_short": "Cinco clases de datos: D1 Público, D2 Interno, D3 Confidencial Estratégico (reservas bursátiles Art. 10 Ley 18.045), D4 Datos Personales (Ley 21.719/19.628) y D5 Secretos de Terceros/Regulados (NDAs, Ley 17.336, Ley 20.730).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations",
+          "source_id": "24c7952c-3d6a-417c-8e7d-746065c9ca20",
+          "locator": "Control RA-2 'Security Categorization'",
+          "retrieved_at": null,
+          "excerpt_short": "Categorize information and the system in accordance with applicable laws, directives, policies, regulations, standards, and guidance, documenting the security categorization results in the security plan.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Artículos 2, 4 y 12",
+          "retrieved_at": null,
+          "excerpt_short": "Define datos personales, datos sensibles y categorías especiales, estableciendo principios de licitud, finalidad, proporcionalidad y medidas de seguridad técnicas para su custodia.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los controles de seguridad NIST SP 800-53, la legislación chilena (Leyes 21.719 y 19.628) y la arquitectura del dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento ingresado al sistema",
+      "Metadatos de origen",
+      "Reglas de clasificación corporativas"
+    ],
+    "actors": [
+      "Usuario Emisor",
+      "Motor de Clasificación BRIDGE",
+      "Oficial de Seguridad de la Información"
+    ],
+    "steps": [
+      "Ingesta del documento y extracción de texto/metadatos",
+      "Escaneo de expresiones regulares y entidades nombradas (detección de PII, NDAs, cifras financieras)",
+      "Asignación de etiqueta de clasificación (D1, D2, D3, D4, D5)",
+      "Aplicación de políticas de cifrado según etiqueta (e.g., D3 exige KMS por tenant)",
+      "Enrutamiento hacia el pipeline de almacenamiento y vectorización correspondiente"
+    ],
+    "states": [
+      "DOCUMENT_INGESTED",
+      "PII_SCANNED",
+      "CLASSIFIED_D1_TO_D5",
+      "ENCRYPTED_AND_ROUTED"
+    ],
+    "outputs": [
+      "Documento etiquetado formalmente con políticas de seguridad asociadas"
+    ],
+    "exceptions": [
+      "Detección de datos sensibles privados (salud, religión) bloquea la ingesta y exige purga inmediata"
+    ]
+  },
+  "entities": [
+    "D1 Público",
+    "D2 Interno",
+    "D3 Confidencial",
+    "D4 Datos Personales",
+    "D5 Secretos Terceros",
+    "Ley 21.719",
+    "NIST SP 800-53",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Documento",
+      "to": "Clasificación D1-D5",
+      "type": "CATEGORIZED_AS"
+    },
+    {
+      "from": "Clasificación D3",
+      "to": "KMS por Tenant",
+      "type": "REQUIRES_ENCRYPTION"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Almacenamiento plano no clasificado vs Taxonomía formal D1-D5",
+      "diferencia": "El almacenamiento plano filtra datos confidenciales a usuarios no autorizados; la taxonomía D1-D5 restringe el flujo informativo y garantiza trazabilidad regulatoria."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "unclassified_assets_rate": "0% de documentos huérfanos sin clasificación asignada",
+    "pii_leakage_detection_pass_rate": "100% de escaneos de PII ejecutados previo a vectorización"
+  },
+  "bridge_implications": "BRIDGE debe codificar en la tabla maestra de documentos el campo `classification_tier: ENUM('D1', 'D2', 'D3', 'D4', 'D5')`, condicionando todas las operaciones RAG a este valor.",
+  "open_gaps": [
+    "Integración con clasificadores de datos de terceros (e.g., Microsoft Purview) para importación de etiquetas existentes."
+  ],
+  "next_question_ids": [
+    "P11-F02",
+    "P11-F03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

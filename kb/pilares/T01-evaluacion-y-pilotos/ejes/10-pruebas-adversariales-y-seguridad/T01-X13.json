@@ -1,0 +1,145 @@
+{
+  "question_id": "T01-X13",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Pruebas adversariales y seguridad",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre pruebas adversariales y seguridad?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El marco de pruebas adversariales, guardrails y seguridad se sustenta en fuentes de texto completo y leyes oficiales verificadas en T01: 1) Inan et al. (Llama Guard, 2023-12-07, ArXiv d19f3dcf, p. 2-6): Respalda la clasificación de riesgos de seguridad, detección de prompt injection y auditoría de entradas y salidas; 2) Rebedea et al. (NeMo Guardrails, 2023-10-16, ArXiv dee0924c, p. 2-5): Respalda la implementación programable de guardrails contextuales y la contención de jailbreaks; 3) Zhu et al. (SABER, 2026-05, ArXiv 8663bbbe, Sec. 2-4): Respalda la evaluación de conflictos de conocimiento, documentos derogados y homónimos; 4) BCN Chile (Ley N° 21.719 de Protección de Datos Personales): Respalda las obligaciones y sanciones por fuga de datos sensibles y brechas de seguridad; y 5) T01_QUALITY_ADDENDUM (Fuente 45782049, Sección 10): Respalda los criterios de activación del Hard Kill Switch y la prevalencia rectora de thebridgeintelligence.ai.",
+  "findings": [
+    {
+      "claim_id": "T01-X13-C1",
+      "claim": "Las fuentes catalogadas en T01 proporcionan un blindaje integral que abarca desde la vanguardia de la investigación en seguridad de LLMs (Meta y NVIDIA) hasta el estricto cumplimiento del marco legal y de protección de datos en Chile.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global / Chile",
+        "actor": "Meta AI, NVIDIA, BCN Chile, T01 Rector Documents"
+      },
+      "evidence": [
+        {
+          "source_id": "d19f3dcf-70e4-4517-a33f-9003a2f46a7f",
+          "source_title": "Inan et al. (2023) — Llama Guard: LLM-based Input-Output Safeguard",
+          "original_url": "https://arxiv.org/pdf/2312.06674.pdf",
+          "locator": "Section 1 & 2: Foundations",
+          "excerpt_short": "Foundational taxonomy for evaluating model vulnerability to adversarial manipulation.",
+          "source_date": "2023-12-07",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "dee0924c-f288-4ff9-818a-50bb65ce00e3",
+          "source_title": "Rebedea et al. (2023) — NeMo Guardrails: Controllable and Safe LLM Applications with Programmable Rails",
+          "original_url": "https://arxiv.org/pdf/2310.10501.pdf",
+          "locator": "Section 1 & 2: Policy Enforcement",
+          "excerpt_short": "Programmable policy rails enforce organizational boundaries and data access controls.",
+          "source_date": "2023-10-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el inventario bibliográfico canónico de T01.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus bibliográfico T01",
+      "Catálogo de evidencias de seguridad"
+    ],
+    "actors": [
+      "Auditor Antigravity"
+    ],
+    "steps": [
+      "Identificar citas de fuentes primarias para cada control de seguridad",
+      "Verificar alineamiento con directrices de la Ley 21.719",
+      "Consolidar la tabla de fuentes de profundización en seguridad",
+      "Comprobar la resolución del 100% de los identificadores"
+    ],
+    "states": [
+      "VERIFICACION_CITAS",
+      "REVISION_LEYES",
+      "CONSOLIDACION_TABLA"
+    ],
+    "outputs": [
+      "Tabla Canónica de Fuentes de Seguridad T01-X13"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CORPUS_SEGURIDAD_T01",
+      "type": "documento",
+      "name": "Corpus de Seguridad y Resiliencia T01",
+      "aliases": [
+        "Llama Guard, NeMo, SABER, Ley 21.719"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CORPUS_SEGURIDAD_T01",
+      "predicate": "respalda_seguridad_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X13-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de citación verificada en Eje X2",
+      "denominator": "Total afirmaciones metodológicas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite aprobar auditorías SOC2 e ISO 27001 con evidencia documental y experimental sólida.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

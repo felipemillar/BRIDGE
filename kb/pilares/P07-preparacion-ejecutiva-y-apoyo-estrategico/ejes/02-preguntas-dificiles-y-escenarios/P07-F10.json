@@ -1,0 +1,134 @@
+{
+  "question_id": "P07-F10",
+  "pilar": "P07",
+  "eje": "Preguntas difíciles y escenarios",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar preguntas difíciles y escenarios de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un schema de batería adversarial compuesto por: 1) Identificador de pregunta (Question_Id); 2) Pregunta hostil exacta (Hostile_Query_Text); 3) Trampa o riesgo discursivo (Trap_Risk_Description: premisas falsas, polarización, trampa de culpabilidad); 4) Técnica discursiva recomendada (Recommended_Technique: Bridging, Flagging, Hooking); 5) Guion estructurado en bloques (Empatía/Desmarque, Frase de Transición Puente, Mensaje Clave Anclado, Señalización de Cierre); 6) Puntos de prueba asociados (Proof_Points con URI y hash del documento interno); 7) Nivel de severidad reputacional (Critical, High, Medium); y 8) Condiciones de uso (restringido a voceros certificados con media training vigente).",
+  "findings": [
+    {
+      "claim_id": "P07-F10-C1",
+      "claim": "El modelado de baterías Q&A adversariales requiere un esquema relacional que conecte la pregunta hostil, el riesgo detectado, la técnica retórica y la evidencia probatoria auditable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "adversarial_schema",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 6 (Plantilla 3: Hoja de Entrenamiento Adversarial)",
+          "excerpt_short": "Estructura formal de la pregunta difícil: Item_Id, Theme (ej. Agua y Comunidades), Hostile_Question, Discursive_Trap, Script_Structure (Empathy, Disengagement, Bridge, Key_Data, Flag), Proof_Point_Ref (ID del documento corporativo que respalda la cifra), Severity_Level.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Comms Manoeuvres: Media Training for CEOs (Bridging, Flagging, Hooking)",
+          "source_id": "234523c8-725c-4d7c-be22-086db78823a0",
+          "locator": "Capítulo 'The Anatomy of a Soundbite', p. 18-24",
+          "excerpt_short": "A robust interview prep template must dissect the trap inside the question before offering the answer. Structuring the response into transition language and verified proof points keeps the executive disciplined under pressure.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación metodológica entre manuales internacionales de media training y la arquitectura de datos del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "schema_murder_board_item": {
+      "id": "QA-ADV-001",
+      "tema": "Recursos Hídricos y Comunidades",
+      "pregunta_hostil": "Texto de la pregunta agresiva o sesgada",
+      "trampa_retorica": "Identificación de la falacia o premisa culposa",
+      "tecnica_aplicada": "Reconocimiento Empático + Desmarque Fáctico + Bridging + Flagging",
+      "guion_desglosado": {
+        "empatia_desmarque": "Reconocimiento de la preocupación ciudadana sin aceptar culpa.",
+        "frase_puente": "Conector formal que redirige hacia la verdad técnica.",
+        "dato_respaldado": "Cifra auditada o porcentaje oficial.",
+        "cierre_flagging": "Mensaje principal a retener por la audiencia."
+      },
+      "soporte_evidencia_id": "DOC-REF-Q3-WATER-001",
+      "severidad": "Critical"
+    }
+  },
+  "entities": [
+    "MurderBoardItemSchema",
+    "Comms Manoeuvres",
+    "Message House",
+    "ProofPoint"
+  ],
+  "relations": [
+    {
+      "from": "MurderBoardItemSchema",
+      "to": "ProofPoint",
+      "type": "cites"
+    },
+    {
+      "from": "MurderBoardItemSchema",
+      "to": "Message House",
+      "type": "aligns_with"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta Genérica vs Guion Estructurado en 4 Bloques",
+      "diferencia": "La respuesta genérica se dispersa y sucumbe ante la insistencia del entrevistador; el guion en 4 bloques garantiza control de tiempo y rigor probatorio."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "schema_attributes_count": "8 atributos canónicos por reactivo adversarial",
+    "evidence_link_integrity": "100% de citas verificables con URI interno"
+  },
+  "bridge_implications": "Implementar este schema de entrenamiento en el módulo de vocería y preparación ejecutiva de BRIDGE para entrenar voceros.",
+  "open_gaps": [
+    "Adaptación de la estructura del guion para formatos ultra-cortos de radio o cuñas televisivas de 15 segundos."
+  ],
+  "next_question_ids": [
+    "P07-F11",
+    "P07-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T04:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "question_id": "P07-F02",
+  "pilar": "P07",
+  "eje": "Objetivo del brief ejecutivo",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué información esencial cabe en una primera página y qué debe quedar como respaldo navegable?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La primera página (Executive 60-second View) debe contener estrictamente: 1) Síntesis ejecutiva del evento/reunión y perfil sintético de la contraparte; 2) Radar de señales externas de las últimas 24h con semáforo de riesgo; 3) Cruce con el estado de cumplimiento interno y compromisos ESG vinculantes; y 4) La postura recomendada con 3 mensajes clave aprobados y la 'Línea Roja'. Todo el resto —expedientes sancionatorios completos de la SMA, transcripciones históricas, balances financieros detallados, argumentarios técnicos secundarios y biografías extendidas— debe quedar en un segundo nivel como respaldo navegable mediante enlaces ancla e hipervínculos trazables.",
+  "findings": [
+    {
+      "claim_id": "P07-F02-C1",
+      "claim": "La arquitectura cognitiva del briefing ejecutivo exige una razón de compresión extrema en la página frontal (menos de 400 palabras) relegando el material probatorio al anexo navegable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "brief_architecture",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 2.1 y Sección 6 (Plantilla 1)",
+          "excerpt_short": "Estructura en dos capas obligatoria: Capa 1 (Frontal / 'En 60 segundos'): perfil esencial del interlocutor, semáforo de alertas del entorno (últimas 24h), los 3 mensajes clave aprobados y la línea roja corporativa. Capa 2 (Respaldo Navegable): expedientes regulatorios CMF/SMA, bitácora de reuniones previas en InfoLobby, baterías Q&A completas y fuentes primarias con hash auditable.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Cision: Executive Briefings & Strategic Media Insights",
+          "source_id": "f9c62779-67fa-460e-becb-0a1ce70e725f",
+          "locator": "Whitepaper 'Executive Intelligence Design', p. 8-11",
+          "excerpt_short": "C-suite executives consume information under acute time constraints. A one-page dashboard containing high-impact signals and authorized response pillars outperforms a 20-page dossier by increasing message consistency during high-stakes encounters.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño validado por suites de inteligencia de medios globales (Cision, Signal AI) y formalizado en las plantillas del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "estructura_dos_capas": {
+      "capa_1_frontal": [
+        "Objetivo y Contraparte (con rol y sesgo previo)",
+        "Semáforo de Riesgo (Últimas 24h)",
+        "3 Mensajes Clave Aprobados (Message House)",
+        "Línea Roja Inadmisible"
+      ],
+      "capa_2_respaldo_navegable": [
+        "Expedientes regulatorios y sanciones SMA/CMF",
+        "Historial de Lobby (InfoLobby)",
+        "Batería Q&A Adversarial (Murder Board)",
+        "Fuentes y documentos internos citados con hash SHA-256"
+      ]
+    }
+  },
+  "entities": [
+    "C-Suite",
+    "CEO",
+    "Directorio",
+    "Cision",
+    "Signal AI"
+  ],
+  "relations": [
+    {
+      "from": "Capa 1 Frontal",
+      "to": "Toma de Decisión Rápida",
+      "type": "enables"
+    },
+    {
+      "from": "Capa 2 Respaldo",
+      "to": "Capa 1 Frontal",
+      "type": "provides_evidence_for"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Página Frontal vs Anexo",
+      "diferencia": "Página 1 resume afirmaciones normativas y directrices; anexo contiene la evidencia probatoria auditable."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "reading_time_page_1": "< 60 segundos (< 400 palabras)",
+    "navigation_depth": "Máximo 1 clic desde la página principal al anexo respaldado"
+  },
+  "bridge_implications": "La UI de BRIDGE debe renderizar un 'Executive Card' frontal limpio con badges de verificación y popups/drawers laterales para inspeccionar la evidencia profunda.",
+  "open_gaps": [
+    "Adaptación de la interfaz para lectura móvil en traslados inmediatos previos a una entrevista."
+  ],
+  "next_question_ids": [
+    "P07-F03",
+    "P07-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T04:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

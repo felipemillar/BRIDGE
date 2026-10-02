@@ -1,0 +1,147 @@
+{
+  "question_id": "P05-F45",
+  "pilar": "P05",
+  "eje": "Decisiones de producto y evaluación",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Cuándo debería la herramienta abstenerse de recomendar una respuesta pública?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La plataforma debe abstenerse de recomendar una respuesta pública y activar una recomendación de 'Contención y Monitoreo Silencioso' cuando se configure cualquiera de las siguientes cuatro condiciones operacionales auditadas en el corpus: 1) Controversia artificial o provocación sin tracción (Efecto Streisand y regla 'Don't feed the trolls'): Cuando la negatividad en redes sociales proviene de cuentas anónimas, granjas de bots o nichos hiperpolarizados sin actores con Legitimidad ni Poder (clase Demandante Latente), y ningún medio de comunicación acreditado ni regulador ha recogido el tema; emitir una respuesta pública corporativa masiva conferiría notoriedad a una falsedad que de otro modo se extinguiría en pocas horas; 2) Ausencia de verificación de hechos en el corpus interno: Bajo los Page Principles ('Tell the truth, Prove it with action'), si la empresa no ha concluido su investigación interna y no dispone de evidencias auditadas que sustenten su postura fáctica, responder de forma apresurada genera alto riesgo de emitir declaraciones falsas que luego serán usadas en tribunales como prueba de hipocresía o encubrimiento; 3) Asuntos bajo litigación penal, antimonopolio o reserva judicial: Si existe una investigación en curso de la FNE o el Ministerio Público, las declaraciones públicas de voceros pueden violar el secreto procesal o comprometer las defensas judiciales de la firma; y 4) Consultas que exijan perfilamiento individual sensible: Cuando la respuesta involucre alusiones a la vida privada, salud o ideología de personas naturales, activando el filtro ético de bloqueo absoluto.",
+  "findings": [
+    {
+      "claim_id": "P05-F45-C1",
+      "claim": "La abstención comunicacional estratégica es una decisión analítica deliberada que previene el Efecto Streisand y evita comprometer la posición fiduciaria de la empresa ante vacíos de hechos o reservas legales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global / Chile",
+        "actor": "Dirección de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "4a704f39-0f78-4e44-8b03-b9922d00ed6b",
+          "source_title": "Arthur W. Page Society: The Page Principles for Corporate Character & Trust",
+          "original_url": "https://page.org/who-we-are/page-principles/",
+          "locator": "Principio 1: Tell the Truth, Principio 4: Listen to the Enterprise",
+          "excerpt_short": "Never mislead the public. When facts are uncertain, listening and verifying internally must precede any public assertion.",
+          "source_date": "2023-01-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7.2: Salvaguardas Éticas y de Seguridad Obligatorias",
+          "excerpt_short": "Filtro ético y de no-inferencia sensible: la herramienta debe abstenerse de prescribir respuestas públicas cuando no existen datos verificados o se vulnere la privacidad.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio rector de prudencia y gestión de crisis respaldado por la Page Society y el diseño ético de BRIDGE.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evaluación de prominencia de la fuente emisora",
+      "Verificación de hechos internos (P04)",
+      "Estatus legal de la causa"
+    ],
+    "actors": [
+      "Motor de Reglas Éticas",
+      "Comité de Crisis",
+      "Consejero General (General Counsel)"
+    ],
+    "steps": [
+      "Evaluación de condiciones de disparo de abstención",
+      "Bloqueo de generación de borradores de notas de prensa",
+      "Emisión de recomendación: 'Monitoreo Silencioso y Verificación Interna'"
+    ],
+    "states": [
+      "Abstention_Triggers_Checked",
+      "Contempt_Risk_Detected",
+      "Silent_Monitoring_Prescribed"
+    ],
+    "outputs": [
+      "Recomendación formal de contención y no respuesta pública"
+    ],
+    "exceptions": [
+      "Requerimiento formal de la CMF o SMA con plazo fatal de respuesta obligatoria"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ABSTENTION_PROTOCOL",
+      "type": "regla_gobernanza",
+      "name": "Protocolo de Abstención de Respuesta Pública",
+      "aliases": [
+        "Strategic Abstention Policy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ABSTENTION_PROTOCOL",
+      "predicate": "restringe_recomendaciones_de",
+      "object_id": "ENT_EXECUTIVE_BRIEF_UI",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F45-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Comportamiento del sistema ante rumores falsos",
+      "Sistemas Comerciales Básicos": "Recomiendan redactar de inmediato un comunicado de desmentido en redes sociales.",
+      "Protocolo BRIDGE": "Recomienda abstención pública activa, monitoreo de actores con legitimidad y preparación de minuta interna para servicio al cliente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Generador de Respuestas",
+      "implication": "BRIDGE debe incluir una compuerta lógica que inhabilite el botón de 'Generar Comunicado' si se activa cualquiera de las cuatro condiciones de abstención estratégica.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

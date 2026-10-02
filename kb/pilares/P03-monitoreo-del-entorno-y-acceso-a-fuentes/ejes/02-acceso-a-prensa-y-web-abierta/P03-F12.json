@@ -1,0 +1,130 @@
+{
+  "question_id": "P03-F12",
+  "pilar": "P03",
+  "eje": "Acceso a prensa y web abierta",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra acceso a prensa y web abierta sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso: Ingesta y agrupamiento de noticias sobre un conflicto laboral en una planta industrial en la Región del Biobío. Entradas: 1) Feed RSS de Diario Concepción con titular y entradilla anunciando huelga legal de sindicato (latencia 3 min tras emisión); 2) Artículo publicado en Emol (Santiago) analizando el posible impacto en la cadena de suministros nacional (latencia 25 min); 3) Bloque de evento en GDELT 2.0 que captura el conflicto asignándole un código CAMEO de huelga laboral (latencia 15 min); y 4) Verificación de robots.txt del portal de noticias regional que no contiene restricción de TDM. Resultado esperado: El sistema genera una ficha de evento unificada `EVENT_BIOBIO_HUELGA_001`, agrupa las 3 noticias bajo el mismo evento madre, almacena únicamente los snippets con atribución y enlaces canónicos (respetando la Ley 17.336), y emite una alerta temprana a los equipos de asuntos corporativos 22 minutos antes de que el evento sea reportado por los diarios de circulación nacional en Santiago.",
+  "findings": [
+    {
+      "claim_id": "P03-F12-C1",
+      "claim": "Un caso de monitoreo de prensa regional estructurado combina RSS local, agregador GDELT y validación de robots.txt para emitir alertas tempranas de conflictos laborales con estricto apego a derechos de autor.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Región del Biobío)",
+        "actor": "Caso Prensa P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.1: Prensa y Web Abierta - Hipótesis Operativa",
+          "excerpt_short": "Requiere un conector de ingesta directo sobre los portales de noticias regionales chilenos... para captar señales tempranas antes de que lleguen a los medios de circulación nacional.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:05:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los casos de uso documentados del mapa de evidencia.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "RSS Regional Biobío",
+      "GDELT Event Feed",
+      "Artículo Prensa Nacional",
+      "Robots.txt Validator"
+    ],
+    "actors": [
+      "Event Aggregator",
+      "Early Warning Monitor"
+    ],
+    "steps": [
+      "Captura de RSS local",
+      "Verificación legal de robots.txt",
+      "Cotejo con GDELT",
+      "Generación de alerta"
+    ],
+    "states": [
+      "Local_Signal_Detected",
+      "Legal_Clearance_Granted",
+      "Early_Warning_Dispatched"
+    ],
+    "outputs": [
+      "Alerta temprana de huelga sindical regional con 22 minutos de ventaja"
+    ],
+    "exceptions": [
+      "Desactualización del feed RSS regional por problemas del CMS del diario"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_PRENSA_REGIONAL",
+      "type": "caso_de_uso",
+      "name": "Caso Demostrativo Alerta Temprana Prensa Regional",
+      "aliases": [
+        "Regional Press Early Warning Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_PRENSA_REGIONAL",
+      "predicate": "demuestra_ventaja_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F12-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Diseñar la cola de alertas para priorizar la ventaja temporal de los medios regionales sobre las repeticiones nacionales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:05:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

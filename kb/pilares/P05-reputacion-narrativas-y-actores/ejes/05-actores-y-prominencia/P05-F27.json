@@ -1,0 +1,148 @@
+{
+  "question_id": "P05-F27",
+  "pilar": "P05",
+  "eje": "Actores y prominencia",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué riesgo tiene inferir posturas personales desde datos de una organización o grupo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Inferir posturas personales de individuos específicos a partir de datos colectivos de una organización o grupo entraña dos riesgos críticos documentados taxativamente en el corpus: 1) Riesgo Metodológico de Falacia Ecológica / Falacia de División: Consiste en asumir erróneamente que las características, posturas políticas o declaraciones emitidas por una institución (e.g. un sindicato, una confederación gremial, una asamblea vecinal o un partido político) son automáticamente compartidas por cada uno de sus miembros individuales. Esta inferencia produce diagnósticos ejecutivos falsos, subestimando la diversidad interna de opiniones, la existencia de corrientes disidentes o el hecho de que un directivo o empleado mantenga posturas moderadas frente a una cúpula beligerante; y 2) Riesgo Ético y Legal Severo (Vulneración de Derechos Fundamentales y Normas de Privacidad): En los marcos institucionales de Chile y estándares internacionales de inteligencia corporativa, el perfilamiento ideológico, la inferencia de convicciones políticas, filiaciones partidistas, religión, salud o vida privada de personas naturales está expresamente proscrito por la Ley de Protección de la Vida Privada (Ley 19.628 y sus reformas), configurando prácticas abusivas de 'espionaje corporativo' o 'listas negras' sindicales. La regla deontológica del programa BRIDGE estipula que el sistema debe limitar su análisis exclusivamente a personas jurídicas, entidades formalmente constituidas y vocerías institucionales públicas registradas en actas y medios abiertos.",
+  "findings": [
+    {
+      "claim_id": "P05-F27-C1",
+      "claim": "La inferencia de atributos ideológicos o posturas individuales desde datos grupales incurre en falacia ecológica y viola salvaguardas éticas y legales de no discriminación y privacidad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Internacional",
+        "actor": "Sistemas de Inteligencia Corporativa"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 4.1: Principios Éticos y Salvaguardas de Privacidad",
+          "excerpt_short": "Regla de No-Inferencia de Atributos Sensibles Individuales: Prohibición absoluta de inferir salud, etnia, religión, política o antecedentes penales privados de individuos específicos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7.2: Salvaguardas Éticas y de Seguridad Obligatorias",
+          "excerpt_short": "Bloquea categorizaciones individuales de raza, salud, religión o afiliación partidista personal; enfoca exclusivamente datos institucionales públicos y abiertos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio normativo y ético de cumplimiento imperativo en el programa de investigación de BRIDGE.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Textos de declaraciones colectivas",
+      "Actas de asambleas institucionales"
+    ],
+    "actors": [
+      "Oficial de Privacidad (DPO)",
+      "Desarrollador de Algoritmos",
+      "Analista de Inteligencia"
+    ],
+    "steps": [
+      "Inspección de datos de entrada para excluir identificadores personales sensibles",
+      "Bloqueo algorítmico de inferencias individuales",
+      "Auditoría de cumplimiento de privacidad"
+    ],
+    "states": [
+      "Input_Received",
+      "Privacy_Filter_Applied",
+      "Institutional_Scope_Enforced"
+    ],
+    "outputs": [
+      "Análisis de posicionamiento circunscrito a personas jurídicas e instituciones"
+    ],
+    "exceptions": [
+      "Intentos de usuarios del sistema de solicitar perfilamiento individual de dirigentes vecinales o sindicales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ETHICAL_FIREWALL",
+      "type": "salvaguarda_seguridad",
+      "name": "Filtro Ético de No-Inferencia Individual",
+      "aliases": [
+        "Ethical Profiling Firewall"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ETHICAL_FIREWALL",
+      "predicate": "restringe_alcance_de",
+      "object_id": "ENT_MITCHELL_SALIENCE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F27-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de análisis de actores",
+      "Perfilamiento Individual Proscrito": "Analizar la orientación política privada o características psicológicas de un dirigente social.",
+      "Análisis Institucional Aprobado": "Analizar las actas públicas, comunicados oficiales y petitorios formales ingresados por la entidad jurídica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Filtro de Cumplimiento Ético",
+      "implication": "BRIDGE debe incorporar un guardrail en su pipeline de IA que rechace cualquier consulta orientada a perfilar psicológicamente o atribuir ideologías a personas naturales individuales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

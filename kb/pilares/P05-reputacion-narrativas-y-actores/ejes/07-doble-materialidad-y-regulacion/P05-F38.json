@@ -1,0 +1,146 @@
+{
+  "question_id": "P05-F38",
+  "pilar": "P05",
+  "eje": "Doble materialidad y regulación",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué señales anticipan que una controversia se convierta en asunto regulatorio?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus identifica cinco señales de alerta temprana auditables que anticipan con alta probabilidad que una controversia corporativa informal mute hacia un proceso regulatorio vinculante o sancionatorio: 1) Ingreso de mociones parlamentarias u oficios fiscalizadores: Solicitud formal de antecedentes por parte de comisiones investigadoras de la Cámara de Diputados o Senado al regulador sectorial (SMA, CMF, SERNAC, DGA); 2) Judicialización mediante recursos cautelares admitidos a trámite: Presentación de recursos de protección con órdenes de no innovar en Cortes de Apelaciones o demandas en Tribunales Ambientales por parte de ONGs o colectivos territoriales; 3) Formulación de denuncias administrativas formales con soporte pericial: Ingreso de antecedentes probatorios en las oficinas de partes de superintendencias, activando investigaciones preliminares de infracción de RCA o libre competencia; 4) Adopción del marco por líderes de opinión en medios de cobertura nacional: Transición de la cobertura desde foros locales o redes sociales hacia reportajes en profundidad en prensa económica o noticieros centrales con el encuadre de 'falla estructural de supervisión estatal'; y 5) Publicación de advertencias o estándares por organismos internacionales: Emisión de informes de la OCDE, OIT (Convenio 169) o relatorías de la ONU sobre derechos humanos y empresas que generan presión directa sobre los ministerios sectoriales chilenos para endurecer la regulación.",
+  "findings": [
+    {
+      "claim_id": "P05-F38-C1",
+      "claim": "La cristalización regulatoria está precedida por patrones verificables de intermediación institucional que abarcan oficios parlamentarios, admisibilidad judicial y escrutinio pericial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile",
+        "actor": "Congreso Nacional / Fiscalizadores / ONGs"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4.1: Ciclo de Vida de los Asuntos Corporativos",
+          "excerpt_short": "Fase 3 Mainstream Media precede la Fase 4 Cristalización Regulatoria (Leyes, Multas, Litigios Masivos).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "c62aeddc-41fa-483b-bdc9-e18d6ec4e930",
+          "source_title": "Signal AI: Reputation Intelligence Platform & External Risk Monitoring",
+          "original_url": "https://www.signal-ai.com/platform/external-risk",
+          "locator": "Whitepaper: Predicting Regulatory Change through Media and Policy Scanning",
+          "excerpt_short": "Tracks early indicators in committee hearings and regulatory notices that predict legislative intervention 6 to 18 months in advance.",
+          "source_date": "2024-03-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Señales observadas de forma consistente en el ecosistema regulatorio y legislativo chileno.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Diario de sesiones del Congreso",
+      "Boletines de proyectos de ley",
+      "Portal de resoluciones de la SMA y CMF"
+    ],
+    "actors": [
+      "Analista de Asuntos Regulatorios",
+      "Abogado de Políticas Públicas"
+    ],
+    "steps": [
+      "Rastreo automatizado de términos corporativos en actas parlamentarias",
+      "Evaluación de probabilidad de avance de proyectos legislativos",
+      "Emisión de alerta temprana de riesgo regulatorio"
+    ],
+    "states": [
+      "Signal_Detected",
+      "Legislative_Track_Mapped",
+      "Regulatory_Alert_Triggered"
+    ],
+    "outputs": [
+      "Informe de Alerta Regulatoria Temprana para el Directorio"
+    ],
+    "exceptions": [
+      "Proyectos de ley testimoniales sin respaldo político que no superan el primer trámite"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REGULATORY_SIGNALS",
+      "type": "catalogo_senales",
+      "name": "Señales de Cristalización Regulatoria",
+      "aliases": [
+        "Early Regulatory Indicators"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REGULATORY_SIGNALS",
+      "predicate": "anticipa_intervencion_de",
+      "object_id": "ENT_DOUBLE_MATERIALITY",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F38-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Velocidad de reacción institucional",
+      "Respuesta Reactiva": "Esperar a que la ley se publique en el Diario Oficial o a recibir la formulación de cargos de la SMA.",
+      "Respuesta Proactiva": "Detectar los oficios parlamentarios y participar transparentemente en audiencias de comisiones bajo Ley de Lobby."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Radar Legislativo y Regulatorio",
+      "implication": "BRIDGE debe incorporar fuentes parlamentarias chilenas (Cámara y Senado) y del Diario Oficial para alertar cuando un tema reputacional ingrese a la agenda legislativa.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F39"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

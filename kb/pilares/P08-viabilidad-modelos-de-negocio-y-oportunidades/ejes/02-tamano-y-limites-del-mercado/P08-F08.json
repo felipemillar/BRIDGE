@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F08",
+  "pilar": "P08",
+  "eje": "Tamaño y límites del mercado",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué segmentos deben excluirse por derechos de datos, seguridad o ciclo de venta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus define la exclusión explícita de cuatro segmentos: 1) Pequeñas y medianas empresas (PyMEs) y startups sin escrutinio público, por falta de presupuesto (> USD 4K/mes) y ausencia de complejidad regulatoria; 2) B2C no regulado (retail menor, comercio local), donde el gasto va a marketing de conversión y no a asuntos corporativos; 3) Sector público central y municipalidades en etapas tempranas, debido a ciclos de venta excesivos (> 12-18 meses en licitaciones de ChileCompra/Mercado Público), burocracia de pago y riesgo político de cambio de gobierno; y 4) Entidades con políticas de 'Zero-Cloud' o con exigencias on-premise estrictas (ciertas divisiones de defensa o inteligencia) que impidan el uso de nubes públicas certificadas.",
+  "findings": [
+    {
+      "claim_id": "P08-F08-C1",
+      "claim": "La viabilidad del modelo exige excluir deliberadamente PyMEs, sector público licitado y entornos on-premise para mantener ciclos de venta inferiores a 6 meses y márgenes saludables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "segment_exclusion_criteria",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 2.2 'Criterios de Exclusión de Segmentos y Límites de Mercado'",
+          "excerpt_short": "Para proteger el margen operativo y evitar desgastes de preventa, se excluyen de la estrategia comercial: 1) PyMEs y empresas sin operaciones de riesgo ambiental o social; 2) El aparato estatal central licitado por Mercado Público, cuyos plazos de adjudicación de 12 a 18 meses y márgenes degradados arriesgan el flujo de caja en etapa temprana; y 3) Corporaciones que exijan despliegues on-premise cerrados, incompatibles con la arquitectura multi-tenant y orquestación cloud de LLMs.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 3 'Límites de Seguridad y Exclusiones Regulatorias'",
+          "excerpt_short": "Empresas con exigencias de aislamiento físico total o con litigios activos contra el Estado donde se vete el uso de APIs comerciales deben ser postergadas a una fase post-serie A.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Directrices claras en el dossier y addendum de calidad para la selección y descarte de clientes.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud de información (RFI)",
+      "Evaluación de canal de venta",
+      "Perfil del prospecto"
+    ],
+    "actors": [
+      "Equipo Comercial",
+      "Security Officer",
+      "CEO"
+    ],
+    "steps": [
+      "Recepción de lead",
+      "Evaluación contra matriz de exclusión (PyME? Mercado Público? On-premise?)",
+      "Descalificación inmediata o derivación a socios comerciales",
+      "Focalización en clientes Enterprise aptos"
+    ],
+    "states": [
+      "Lead Ingresado",
+      "Evaluado",
+      "Descartado por Matriz de Exclusión",
+      "Calificado Enterprise"
+    ],
+    "outputs": [
+      "Registro de descarte con causal documentada"
+    ],
+    "exceptions": [
+      "Empresas públicas que operen bajo régimen de sociedad anónima de derecho privado (ej. Metro, Codelco) que puedan contratar por cotización directa"
+    ]
+  },
+  "entities": [
+    "ChileCompra",
+    "Mercado Público",
+    "PyMEs",
+    "On-Premise",
+    "Matriz de Exclusión"
+  ],
+  "relations": [
+    {
+      "from": "Sector Público Licitado",
+      "to": "Ciclo de Venta Prolongado (>12m)",
+      "type": "exhibits"
+    },
+    {
+      "from": "On-Premise Exigido",
+      "to": "Exclusión de BRIDGE",
+      "type": "triggers"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Venta al Estado vs Venta a Corporación Privada",
+      "diferencia": "La venta privada en Chile cierra en 3-5 meses con pago a 30 días; la licitación pública tarda 12-18 meses sujeta a impugnaciones en el Tribunal de Contratación Pública."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "sales_cycle_private_enterprise": "3 a 5 meses",
+    "sales_cycle_public_procurement": "12 a 18 meses"
+  },
+  "bridge_implications": "Fijar un filtro estricto en la prospección comercial de BRIDGE para descartar tempranamente oportunidades del sector público licitado y demandas on-premise.",
+  "open_gaps": [
+    "Definir el marco de atención para empresas de propiedad mixta (ej. empresas sanitarias con participación de Corfo)."
+  ],
+  "next_question_ids": [
+    "P08-F09",
+    "P08-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-C12",
+  "pilar": "P09",
+  "eje": "Registros públicos y obligaciones",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué sigue sin prueba sobre registros públicos y obligaciones, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Brecha sin Prueba: El corpus no documenta con respaldo empírico la latencia promedio real entre la celebración de una reunión de lobby ante un sujeto pasivo municipal en Chile y su publicación efectiva en la plataforma central InfoLobby, existiendo incertidumbre sobre si las municipalidades rurales cumplen efectivamente el plazo reglamentario (primer día hábil del mes subsiguiente según Dto 71 SEGPRES) o incurren en demoras de meses. Fuentes Fallidas: Los tres enlaces HTML preliminares de la OECD (`010df9f7`, `87991dd4`, `22566ef0`) presentaban fragmentación y fueron sustituidos formalmente por el PDF consolidado oficial (`49910d9b`). Validación Mínima Requerida: Ejecutar un raspado y cruce de datos sobre una muestra de 100 audiencias sostenidas por empresas mineras o energéticas ante 10 municipios de regiones productivas (Antofagasta, Atacama, Coquimbo, Valparaíso), contrastando la fecha declarada del encuentro contra la marca temporal de publicación del registro en InfoLobby.",
+  "findings": [
+    {
+      "claim_id": "P09-C12-C1",
+      "claim": "La latencia real de publicación municipal en InfoLobby carece de medición empírica en el corpus; los HTMLs de la OCDE fueron unificados en el PDF oficial; se requiere cotejo de latencia en 100 audiencias.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "contrast_public_registries_gaps",
+      "evidence": [
+        {
+          "source_title": "P09_PENDING_SOURCES_RESOLUTION",
+          "source_id": "dcb397bc-d659-44fc-af6b-e394801f12a9",
+          "locator": "Sección 'Deduplicación de Fuentes OECD y Cobertura'",
+          "retrieved_at": null,
+          "excerpt_short": "La incorporación del PDF oficial de la OCDE de 86.856 tokens subsanó la dispersión de fuentes previas, concentrando toda la evidencia comparativa en un único documento íntegro.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_GAPS_AND_VALIDATION",
+          "source_id": "33944e01-6a0f-46f1-bfa3-19224f1c8d72",
+          "locator": "Sección 'Gaps en Telemetría de InfoLobby'",
+          "retrieved_at": null,
+          "excerpt_short": "Incertidumbre: Se desconoce el desfase temporal real con que los municipios cargan sus audiencias a InfoLobby, lo que dificulta la conciliación automática en tiempo real.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación transparente de la brecha operacional en la interoperabilidad pública.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.92,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fechas internas de reuniones sostenidas",
+      "Registros descargados de API InfoLobby",
+      "Catálogo de sujetos pasivos"
+    ],
+    "actors": [
+      "Analista de Datos Públicos",
+      "Auditor de Asuntos Públicos",
+      "Integrador BRIDGE"
+    ],
+    "steps": [
+      "Extracción de 100 registros de audiencias celebradas",
+      "Búsqueda por nombre de empresa y autoridad en InfoLobby",
+      "Cálculo de delta de días (fecha_publicacion - fecha_reunion)",
+      "Determinación de la mediana y percentil 90 de retraso"
+    ],
+    "states": [
+      "Datos Extraídos",
+      "Cálculo Ejecutado",
+      "Latencia Medida"
+    ],
+    "outputs": [
+      "Informe de latencia de cumplimiento de la Ley 20.730"
+    ],
+    "exceptions": [
+      "Reuniones no publicadas por el municipio tras 90 días se reportan al Oficial de Cumplimiento interno"
+    ]
+  },
+  "entities": [
+    "InfoLobby",
+    "Dto 71 SEGPRES",
+    "Latencia de Publicación",
+    "OECD PDF Oficial",
+    "P09_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Audiencia Municipal",
+      "to": "InfoLobby",
+      "type": "PUBLISHED_WITH_LATENCY"
+    },
+    {
+      "from": "Latencia Medida",
+      "to": "Dto 71",
+      "type": "EVALUATED_AGAINST_DEADLINE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir sincronización inmediata vs Medición empírica de latencia",
+      "diferencia": "Asumir sincronización inmediata genera falsas alarmas de auditoría; medir la latencia permite calibrar las alertas al ritmo real del sector público."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "sample_audiences_count": "100 audiencias analizadas",
+    "target_municipalities_count": "10 comunas mineras y energéticas"
+  },
+  "bridge_implications": "Configurar una ventana de gracia de 45 días en BRIDGE antes de marcar como 'Anomalía de No Publicación' una audiencia de lobby sostenida con un municipio.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C13",
+    "P09-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

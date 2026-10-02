@@ -1,0 +1,149 @@
+{
+  "question_id": "P10-F28",
+  "pilar": "P10",
+  "eje": "Estados, versiones y auditoría",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar estados, versiones y auditoría de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del ciclo de vida, versionado y auditoría requiere un esquema de datos relacional y temporal riguroso: 1) Entidad MessageLifecycleState (state_id, state_name, state_type: [ACTIVE, STAGED, PUBLISHED, RETRACTED, ARCHIVED], entered_at, exited_at, triggered_by_user_id); 2) Entidad MessageVersion (version_id, message_id, semantic_version: [MAJOR.MINOR], content_text, content_hash_sha256, change_reason_code, diff_patch_json, parent_version_id); 3) Entidad AuditSignature (signature_id, version_id, signer_id, signer_role, signature_timestamp_utc, cryptographic_seal, sso_session_id); 4) Relaciones de Grafo (SUPERSEDES, DERIVED_FROM, RETRACTED_BY, APPROVED_IN_STEP); y 5) Condiciones de Integridad Invariables (immutable_hash_match == true, no_orphaned_versions == true, valid_fsm_transition == true, major_version_requires_new_approvals == true).",
+  "findings": [
+    {
+      "claim_id": "P10-F28-C1",
+      "claim": "La auditabilidad de sistemas de registro de comunicaciones exige formalizar entidades para estados, versiones, diffs y firmas criptográficas, asegurando integridad referencial e inmutabilidad estricta.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "audit_schema_architecture",
+      "evidence": [
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Database Schema for Audit Trails and Cryptographic Sealing'",
+          "retrieved_at": null,
+          "excerpt_short": "Core database entities: ContentItem, VersionNode, ReviewEvent, CryptographicSignOff. Each VersionNode is immutable once sealed, maintaining foreign keys to previous versions and approval signatures.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 5 'Modelo de Datos para Auditoría y Estados'",
+          "retrieved_at": null,
+          "excerpt_short": "Estructura requerida: Version, StateTransition, AuditSignOff, TombstoneEvent. Hash SHA-256 de texto y metadatos garantizan no repudio.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño de esquemas conforme a las mejores prácticas de bases de datos transaccionales de cumplimiento.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de modelo relacional",
+      "Reglas de integridad referencial",
+      "Eventos de publicación"
+    ],
+    "actors": [
+      "Motor de Base de Datos",
+      "Servicio de Auditoría",
+      "Auditor de Sistemas"
+    ],
+    "steps": [
+      "Persistencia de cada cambio como nueva tupla en MessageVersion",
+      "Cálculo y verificación de hash criptográfico",
+      "Vinculación de firmas digitales a la versión exacta",
+      "Actualización del estado actual en el puntero del mensaje",
+      "Emisión de logs estructurados para auditorías externas"
+    ],
+    "states": [
+      "VERSION_REGISTERED",
+      "HASH_SEALED",
+      "SIGNATURE_ATTACHED",
+      "AUDIT_PERSISTED"
+    ],
+    "outputs": [
+      "Estructura de auditoría inmutable consultable vía API"
+    ],
+    "exceptions": [
+      "Discrepancia entre el hash almacenado y el recálculo en tiempo real genera alerta inmediata de manipulación de datos"
+    ]
+  },
+  "entities": [
+    "MessageVersion",
+    "AuditSignature",
+    "StateTransition",
+    "Inmutabilidad",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "MessageVersion",
+      "to": "AuditSignature",
+      "type": "AUTHENTICATED_BY"
+    },
+    {
+      "from": "MessageVersion",
+      "to": "MessageLifecycleState",
+      "type": "CURRENTLY_IN_STATE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Auditoría en logs de texto plano vs Esquema relacional con sellado hash",
+      "diferencia": "Los logs de texto plano son modificables y difíciles de consultar; el esquema relacional con hashes garantiza prueba judicial y consultas estructuradas en milisegundos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cryptographic_verification_pass_rate": "100% de registros con coincidencia exacta de hash SHA-256",
+    "schema_migration_integrity": "0 inconsistencias de foreign keys en tablas de auditoría"
+  },
+  "bridge_implications": "BRIDGE debe estructurar sus modelos Prisma/PostgreSQL con restricciones estrictas de append-only para todas las tablas del módulo de auditoría de comunicaciones.",
+  "open_gaps": [
+    "Diseño de estrategia de particionamiento de tablas para conservar millones de eventos históricos sin degradar performance."
+  ],
+  "next_question_ids": [
+    "P10-F29",
+    "P10-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

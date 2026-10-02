@@ -1,0 +1,163 @@
+{
+  "question_id": "T01-X27",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Reproducción y seguimiento",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué formato de informe permite auditar decisiones de continuar, reformular o detener?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El formato estándar de informe que permite a los comités ejecutivos y de auditoría revisar y respaldar de forma transparente las decisiones de compuerta Stage-Gate es el Acta de Decisión de Compuerta (Gate Decision Scorecard / Cooper 2016-2025, 773f1a85), estructurada en seis secciones inmutables: 1) Resumen Ejecutivo de la Compuerta: Declaración categórica de dictamen (Go, Kill, Hold, Recycle/Pivot), fecha, evaluadores nominales y objetivo de negocio; 2) Panel de Métricas Cuantitativas Duras (Must-Meet Criteria): Tabla con meta prefijada vs valor real alcanzado para cada KPI (Ragas Faithfulness >= 0.90, latencia p95 < 5s, costo < $0.025, WAP >= 70%, ahorro neto >= 40%); 3) Certificado de Fallos Fatales (Fatal Flaw Audit): Verificación explícita de 0 alucinaciones reguladas, 0 fugas cross-tenant y 0 contradicciones con compromisos vigentes; 4) Análisis de Retorno y TCO: Desglose de horas ahorradas, costos de cómputo y ROI demostrado; 5) Dictamen Comercial y Compromiso Presupuestario: Verificación de partida presupuestaria o Letter of Intent en Gate 3; y 6) Firmas y Trazabilidad Criptográfica: Firmas digitales del Sponsor Económico, Lead Legal y CISO con hash SHA-256 del acta.",
+  "findings": [
+    {
+      "claim_id": "T01-X27-C1",
+      "claim": "El sistema Stage-Gate (Cooper 2016-2025) y T01_QUALITY_ADDENDUM exigen que las decisiones de compuerta se consignen en scorecards estandarizados con criterios de exclusión absolutos (Must-Meet), garantizando que las decisiones de detener (Kill) o reformular (Pivot) sean transparentes y defendibles ante el directorio.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Cooper Stage-Gate & T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & Agile Integration",
+          "original_url": null,
+          "locator": "Gate Scorecards and Must-Meet Criteria Architecture",
+          "excerpt_short": "Gatekeepers evaluate projects against explicit Must-Meet criteria using standardized scorecards, generating clear audit trails for Go, Kill, Hold, and Recycle decisions.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 12: Formato del Acta de Compuerta Stage-Gate",
+          "excerpt_short": "El acta de compuerta es el documento formal de cierre de cada fase. Debe registrar el cumplimiento de los umbrales cuantitativos y las firmas digitales de los responsables.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Metodología estándar internacional de gobernanza de compuertas.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos de telemetría del piloto",
+      "Evaluaciones cualitativas de analistas",
+      "Informe de facturación FinOps"
+    ],
+    "actors": [
+      "Comité de Compuerta (Gatekeepers)",
+      "Secretario de Gobernanza"
+    ],
+    "steps": [
+      "Completar la tabla de criterios Must-Meet en la plantilla del Scorecard",
+      "Verificar ausencia de flags de Fallo Fatal",
+      "Registrar la deliberación de los evaluadores y emitir el dictamen formal",
+      "Firmar digitalmente el acta y archivarla en el repositorio WORM"
+    ],
+    "states": [
+      "RECOPILACION_EVIDENCIA",
+      "DELIBERACION_COMITE",
+      "EMISION_DICTAMEN",
+      "ACTA_ARCHIVADA_WORM"
+    ],
+    "outputs": [
+      "Acta de Decisión de Compuerta Stage-Gate T01-X27"
+    ],
+    "exceptions": [
+      "Si un criterio Must-Meet no se cumple, el comité solo puede dictaminar Pivot o Kill, quedando prohibido el Go con salvedades"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "GATE_SCORECARD_BRIDGE",
+      "type": "documento",
+      "name": "Gate Decision Scorecard BRIDGE",
+      "aliases": [
+        "Acta de Decisión de Compuerta"
+      ]
+    },
+    {
+      "entity_id": "CRITERIOS_MUST_MEET",
+      "type": "metrica",
+      "name": "Criterios Must-Meet Innegociables",
+      "aliases": [
+        "Gate Exclusion Criteria"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "GATE_SCORECARD_BRIDGE",
+      "predicate": "formaliza_dictamen_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X27-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Informe Narrativo Informal",
+      "item_b": "Gate Decision Scorecard Estructurado",
+      "dimension": "Capacidad de auditoría",
+      "conclusion": "El informe narrativo oculta debilidades con retórica; el Scorecard estructurado expone objetivamente el cumplimiento o incumplimiento de cada umbral."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de compuertas con Scorecard estandarizado emitido",
+      "denominator": "Total compuertas ejecutadas en el ciclo de vida",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Proporciona a la junta directiva y a los inversionistas visibilidad y control absoluto sobre los recursos asignados a pilotos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

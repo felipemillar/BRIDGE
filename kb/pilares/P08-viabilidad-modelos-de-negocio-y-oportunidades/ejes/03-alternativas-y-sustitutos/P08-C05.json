@@ -1,0 +1,157 @@
+{
+  "question_id": "P08-C05",
+  "pilar": "P08",
+  "eje": "Alternativas y sustitutos",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre alternativas y sustitutos, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal gira en torno a la amenaza real de los proveedores globales de software (FiscalNote, Quorum, Signal AI): Las síntesis preliminares del Research Dossier presentaban a estos actores como competidores inminentes y letales con tecnología superior. En contraste frontal, la fe de erratas canónica de P02 (`00_P02_GLOBAL_READ_ME_AND_ERRATA`), el P08_QUALITY_ADDENDUM y la comparativa Quorum vs FiscalNote 2026 demuestran que las 70 fichas de P02 correspondían a catálogos desarticulados, que los claims comerciales de 'IA predictiva' son marketing no verificado, y que ninguno de estos vendors tiene presencia operativa, capacidad de procesamiento de la BCN o InfoLobby, ni soporte humano en Chile. Prevalece la regla de precedencia de la fe de erratas de P02: las herramientas globales son sustitutos débiles y 'ciegos' en Chile, y la competencia real proviene exclusivamente de las agencias tradicionales locales de consultoría.",
+  "findings": [
+    {
+      "claim_id": "P08-C05-C1",
+      "claim": "Conforme a la fe de erratas de P02 y el QUALITY_ADDENDUM, los vendors globales de software no constituyen una amenaza operativa inmediata en Chile por carecer de conectores normativos locales y capacidades HITL.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "competitive_landscape_reconciliation",
+      "evidence": [
+        {
+          "source_title": "P08_QUALITY_ADDENDUM",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 'Regla de Precedencia y Fe de Erratas sobre los 70 Registros'",
+          "excerpt_short": "Precedencia canónica obligatoria: Las 70 entidades catalogadas en el atlas no representan 70 soluciones corporativas verificadas e independientes. Los reclamos de capacidades comerciales (claims) no constituyen evidencia operativa. La mayoría de los proveedores internacionales carece de localización regulatoria para América Latina.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 1 'Precedencia Editorial y Rectificaciones desde P02'",
+          "excerpt_short": "Se rectifica la apreciación de amenaza competitiva: el mercado chileno no está saturado de soluciones de software de asuntos corporativos; está prácticamente desierto en herramientas de inteligencia profunda con cruce normativo local.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de la regla canónica de erratas de P02 y P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+      "P08_RESEARCH_DOSSIER",
+      "P08_QUALITY_ADDENDUM"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "Lead Researcher",
+      "Comité de Producto"
+    ],
+    "steps": [
+      "Revisión de afirmaciones preliminares sobre los 70 vendors",
+      "Aplicación de la fe de erratas de P02",
+      "Reclasificación de la competencia real en Chile"
+    ],
+    "states": [
+      "Amenaza Sobredimensionada",
+      "Fe de Erratas Aplicada",
+      "Competencia Reclasificada"
+    ],
+    "outputs": [
+      "Mapa de competencia saneado y realista"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+    "P08_QUALITY_ADDENDUM",
+    "FiscalNote",
+    "Quorum",
+    "Signal AI",
+    "Agencias Locales"
+  ],
+  "relations": [
+    {
+      "from": "Fe de Erratas P02",
+      "to": "Dossier Preliminar",
+      "type": "rectifies"
+    },
+    {
+      "from": "Competencia Real Chile",
+      "to": "Agencias Tradicionales Locales",
+      "type": "consists_of"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "70 competidores globales aparentes vs Escenario competitivo real en Chile",
+      "diferencia": "La catalogación cruda sugería un mercado hipercompetitivo; la errata demuestra que en Chile no hay ningún software con conectores locales y HITL."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P08-F13-C1",
+        "P08-C05-C1"
+      ],
+      "difference": "Discrepancia entre la percepción preliminar de saturación competitiva y la realidad de un mercado local sin soluciones especializadas.",
+      "resolution": "resuelta",
+      "reason": "La fe de erratas canónica de P02 desmantela las capacidades no comprobadas de los vendors globales."
+    }
+  ],
+  "metrics_and_denominators": {
+    "reconciled_direct_software_competitors_chile": "0 plataformas comerciales con integración nativa a InfoLobby y SMA"
+  },
+  "bridge_implications": "Acelerar la captura del mercado chileno aprovechando la ventaja temporal de ser los primeros en integrar fuentes oficiales chilenas.",
+  "open_gaps": [
+    "Monitorear si Quorum o FiscalNote establecen alianzas comerciales con alguna consultora local en 2026-2027."
+  ],
+  "next_question_ids": [
+    "P08-C06",
+    "P08-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

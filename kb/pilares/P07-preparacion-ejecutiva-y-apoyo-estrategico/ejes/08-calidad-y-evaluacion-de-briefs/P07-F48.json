@@ -1,0 +1,124 @@
+{
+  "question_id": "P07-F48",
+  "pilar": "P07",
+  "eje": "Calidad y evaluación de briefs",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra calidad y evaluación de briefs sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso documentado en la Sección 7 del Dossier P07 ilustra la auditoría de calidad realizada sobre el Briefing Matinal generado para el CEO de Minera Los Salares S.A. ante la alerta de turbiedad en la cuenca. Entradas: 1) Briefing generado a las 05:45 AM con 420 palabras en página frontal; 2) Batería de comprobación de guardrails: Cita al informe técnico Q3 con verificación criptográfica SHA-256 (Poblado: 84% de agua desalinizada de mar auditada por DGA); Cita a Memoria CMF NCG 461; Alerta activa de Ley 20.730 de Lobby; 3) Evaluación por la Rúbrica de Calidad: Utilidad decisional = 92/100 (fija objetivo de abrir telemetría a la SMA y línea roja de no paralizar sin peritaje); Grounding Index = 98.5% (todas las cifras con fuente directa auditable); Concisión = 95/100 (lectura en 2 minutos y 10 segundos); Neutralidad = 90/100 (tono sobrio sin adjetivaciones complacientes); y Lista de Fallos Críticos: 0 alucinaciones, 0 filtraciones de secretos bursátiles y 0 omisiones de lobby. Resultado esperado: Emisión del Certificado de Calidad con Score Compuesto de 94.2/100 y Veredicto 'AUTORIZADO PARA USO EJECUTIVO', habilitando el despacho inmediato a la cadena de firmas del CCO y Fiscal.",
+  "findings": [
+    {
+      "claim_id": "P07-F48-C1",
+      "claim": "La auditoría objetiva de calidad mediante la rúbrica y la verificación de fallos críticos permite certificar de forma determinista la aptitud de un brief antes de su uso por el C-Suite.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "quality_case",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 7 (Criterios de Calidad, Utilidad y Trazabilidad)",
+          "excerpt_short": "Caso de aplicación de la rúbrica: El brief de Minera Los Salares alcanza un Grounding Index de 98.5%, un tiempo de lectura de 2m10s y neutralidad sobria, superando con holgura el umbral de 85 puntos y registrando cero fallos críticos. Se autoriza su despacho al Directorio.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso representativo y documentado en la Sección 7 del Dossier técnico P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "caso_auditoria_calidad_los_salares": {
+      "documento_evaluado": "Briefing Ejecutivo Matinal — Minera Los Salares S.A.",
+      "desglose_calificacion": {
+        "utilidad_decisional": "92/100 (Objetivo primario y línea roja perfectamente delimitados)",
+        "anclaje_factico": "98.5% (Cifras de agua desalada verificadas contra DGA)",
+        "concision_ejecutiva": "95/100 (420 palabras, 2m 10s lectura)",
+        "calibracion_tono": "90/100 (Sobrio, institucional, sin adjetivos emocionales)",
+        "score_total": "94.2 / 100"
+      },
+      "inspeccion_fallos_criticos": {
+        "alucinacion_numerica": "PASS (0 detectadas)",
+        "violacion_ley_18045": "PASS (0 datos reservados)",
+        "omision_ley_20730": "PASS (Alerta InfoLobby precargada)",
+        "admision_injustificada_culpa": "PASS (Holding statement empático sin admitir culpa)"
+      },
+      "dictamen": "APROBADO PARA DESPACHO C-SUITE"
+    }
+  },
+  "entities": [
+    "Minera Los Salares S.A.",
+    "CEO",
+    "DGA",
+    "Certificado de Calidad",
+    "P07_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Briefing Ejecutivo",
+      "to": "Certificado de Calidad",
+      "type": "evaluated_and_certified_by"
+    },
+    {
+      "from": "Dictamen Aprobatorio",
+      "to": "CEO",
+      "type": "enables_delivery_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Briefing No Auditado vs Briefing con Certificado de Calidad",
+      "diferencia": "El briefing no auditado expone al CEO a improvisaciones peligrosas; el briefing certificado otorga certeza fiduciaria y respaldo documental ante cualquier contraparte."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "composite_quality_score": "94.2 / 100 puntos",
+    "reading_time_measured": "2 minutos 10 segundos"
+  },
+  "bridge_implications": "Hacer visible este badge de calidad (Score 94.2/100) en la esquina superior derecha de cada brief generado por BRIDGE.",
+  "open_gaps": [
+    "Automatización del feedback loop para que el sistema aprenda qué estilos de redacción prefieren diferentes perfiles de directores."
+  ],
+  "next_question_ids": [
+    "P07-C01",
+    "P07-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T06:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

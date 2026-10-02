@@ -1,0 +1,127 @@
+{
+  "question_id": "P05-F22",
+  "pilar": "P05",
+  "eje": "Narrativas y temas emergentes",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar narrativas y temas emergentes de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar narrativas y temas emergentes de forma estructurada exige las siguientes especificaciones técnicas de modelado: 1) Variables formales: `narrative_id`, `issue_topic_id`, `core_frame` (diccionario con `problem_def`, `causal_attribution`, `moral_evaluation`, `remedy_demand`), `life_cycle_stage` (Weak_Signal, Emerging, Mainstream, Regulatory_Crystallization, Institutionalized), `virality_r0`, `contagion_rate_beta`, `recovery_rate_gamma`, `active_stakeholder_segments`, `temporal_first_seen`, `temporal_last_seen`, `volume_trend_slope`; 2) Categorías: Tipología del asunto (Ambiental, Laboral, Libre_Competencia, Gobierno_Corporativo, Derechos_Humanos, Producto); 3) Relaciones formales: `origina_en_fuente` (Narrativa -> Fuente), `muta_hacia` (Narrativa_A -> Narrativa_B), `asigna_responsabilidad_a` (Narrativa -> EntidadCorporativa), `amplificada_por_nodo` (Narrativa -> Actor), `amenaza_licencia_social` (Narrativa -> Territorio); 4) Condiciones de consistencia lógica: Toda narrativa en estado 'Emergente' debe estar respaldada por al menos 3 fuentes documentadas independientes; ningún tema puede ser promovido a 'Cristalización Regulatoria' si no existe un expediente formal (proyecto de ley, recurso judicial admitido a trámite o requerimiento de superintendencia); y se prohíbe la creación de narrativas basadas en una única cuenta anónima en redes sociales.",
+  "findings": [
+    {
+      "claim_id": "P05-F22-C1",
+      "claim": "El grafo estructurado de narrativas corporativas requiere relacionar componentes semánticos de encuadre, parámetros epidemiológicos de contagio y estados del ciclo de vida del tema.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Software BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7.1: Módulos y Algoritmos Requeridos (Módulo 3: Issue Life Cycle Tracker)",
+          "excerpt_short": "Identifica si un tema está en Señal Débil, Emergente o Pre-Regulatorio. Estructura el cruce entre conocimiento interno (P04) y señales externas (P03).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en los requerimientos arquitectónicos especificados en el dossier de P05.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Ontología de temas emergentes",
+      "Modelos de clustering semántico"
+    ],
+    "actors": [
+      "Ingeniero de Datos",
+      "Analista de Inteligencia Narrativa"
+    ],
+    "steps": [
+      "Extracción de temas mediante modelos de tópicos",
+      "Instanciación de la narrativa con metadatos de ciclo de vida",
+      "Vinculación con el grafo de conocimiento corporativo"
+    ],
+    "states": [
+      "Topic_Discovered",
+      "Frame_Parsed",
+      "Narrative_Graph_Stored"
+    ],
+    "outputs": [
+      "Nodo estructurado de narrativa en base de grafos (Neo4j / GraphRAG)"
+    ],
+    "exceptions": [
+      "Fragmentación excesiva de temas que cree decenas de micro-narrativas sin valor"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_NARRATIVE_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Narrativas y Temas",
+      "aliases": [
+        "Narrative Graph Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_NARRATIVE_SCHEMA",
+      "predicate": "representa_dinamicas_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F22-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Grafo de Narrativas",
+      "implication": "BRIDGE debe permitir navegar las relaciones del grafo entre narrativas emergentes, actores promotores y regulaciones amenazadas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "question_id": "P04-F01",
+  "pilar": "P04",
+  "eje": "Inventario de documentos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué tipos de memoria anual, política, comunicado, presentación, acta y compromiso forman el corpus institucional?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus institucional para asuntos corporativos se estructura en ocho familias de artefactos documentales canónicos: 1) Memoria Anual Integrada (reporte retrospectivo y estratégico anual bajo CMF NCG 461, GRI e IFRS S1/S2 con secciones obligatorias de gobierno corporativo, estrategia, riesgos y métricas ESG); 2) Hecho Esencial / Relevante (comunicación inmediata vinculante ante la CMF bajo Ley 18.045 sobre hechos jurídicos y operacionales materiales); 3) Reporte de Sostenibilidad / ESG (divulgación detallada de impactos no financieros y debida diligencia según GRI Standards 1, 2 y 3); 4) Política Corporativa y Códigos (normas internas permanentes sobre ética, derechos humanos, compras y sostenibilidad bajo ISO 37000); 5) Comunicado de Prensa Oficial (posicionamiento público emitido por la gerencia de comunicaciones para medios y opinión pública); 6) Minutas de Vocería y Q&A Internos (líneas de respuesta reservadas para preparación de voceros ante contingencias); 7) Presentaciones de Resultados a Inversionistas (Earnings presentations trimestrales con proyecciones bajo cláusula Safe Harbor); y 8) Informes de Aseguramiento Externo Independiente (dictámenes de auditoría pericial bajo norma ISAE 3000 sobre métricas reportadas).",
+  "findings": [
+    {
+      "claim_id": "P04-F01-C1",
+      "claim": "El corpus institucional formal de una empresa sujeta a supervisión en Chile y Latinoamérica se compone de ocho clases documentales tipificadas según su formalidad legal, periodicidad y audiencia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Internacional",
+        "actor": "Corporación Regulada"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.1: Taxonomía Canónica de Artefactos Documentales",
+          "excerpt_short": "Tipo Documental: Memoria Anual Integrada (Anual, Vinculante CMF NCG 461), Hecho Esencial (Inmediato, Ley 18.045), Reporte ESG (GRI 1-3), Política Corporativa, Comunicado de Prensa, Q&A Interno, Presentación a Inversionistas e Informe de Aseguramiento (ISAE 3000).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "62bbf73f-3262-466f-9b1c-feb81c69d6dd",
+          "source_title": "CMF Chile: NCG N° 461 Memoria Anual Integrada y Sostenibilidad",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Resolución NCG 461, Cap. II y III",
+          "excerpt_short": "Modifica la estructura de la memoria anual de los emisores de valores, incorporando de forma integral aspectos de gobierno corporativo, estrategia, riesgos, indicadores y metas de sostenibilidad.",
+          "source_date": "2021-11-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Taxonomía tipificada en regulación oficial CMF y dossier de arquitectura P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria Anual CMF NCG 461",
+      "Hechos Esenciales",
+      "Políticas internas",
+      "Comunicados de prensa",
+      "Informes ISAE 3000"
+    ],
+    "actors": [
+      "Secretaría General",
+      "Gerencia de Asuntos Corporativos",
+      "Relación con Inversionistas",
+      "Auditor Independiente"
+    ],
+    "steps": [
+      "Recepción y catalogación DCAT-3",
+      "Clasificación taxonómica de tipo documental",
+      "Asignación de metadatos de autoría y custodia"
+    ],
+    "states": [
+      "Ingested",
+      "Classified",
+      "Cataloged_In_Corpus"
+    ],
+    "outputs": [
+      "Inventario estructurado de artefactos institucionales"
+    ],
+    "exceptions": [
+      "Documento sin metadatos de fecha o autoría verificable"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CORPUS_FAMILIES",
+      "type": "taxonomia",
+      "name": "Familias del Corpus Institucional",
+      "aliases": [
+        "Taxonomía Documental Corporativa"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CORPUS_FAMILIES",
+      "predicate": "estructura_documentos_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F01-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fuerza vinculante",
+      "Memoria / Hecho Esencial": "Máxima vinculación legal y regulatoria ante la CMF bajo Ley 18.045.",
+      "Comunicado / Minuta de Prensa": "Declaración pública o guía operativa sin carácter de balance legal."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe tipificar cada archivo en una de las 8 familias para asociar reglas de recuperación y pesos de relevancia adecuados.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

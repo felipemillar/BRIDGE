@@ -1,0 +1,134 @@
+{
+  "question_id": "P07-F26",
+  "pilar": "P07",
+  "eje": "Apoyo estratégico y límites",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Dónde termina el apoyo analítico y empieza una decisión política, legal o reputacional humana?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El apoyo analítico termina en la entrega rigurosa del diagnóstico: síntesis estructurada de señales externas, modelación de escenarios probabilísticos, extracción de precedentes normativos y formulación de guiones respaldados en datos. La decisión humana empieza inexcusablemente en: 1) La fijación de las líneas rojas y concesiones corporativas negociables; 2) La asunción de responsabilidad institucional o disculpa pública bajo SCCT; 3) La ponderación del riesgo de judicialización frente a la sanción reputacional; 4) La decisión de mantener reserva legal o realizar revelación proactiva; y 5) La evaluación de la sensibilidad cultural, política y emocional de la comunidad afectada, cuya lectura reside en la empatía y prudencia fiduciaria de los directivos humanos.",
+  "findings": [
+    {
+      "claim_id": "P07-F26-C1",
+      "claim": "Existe una frontera epistémica y legal infranqueable entre el procesamiento cognitivo de datos por la IA y la decisión directiva humana que compromete la responsabilidad de la empresa.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "human_agency_boundary",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 4.2 (Límites de las Recomendaciones Automatizadas)",
+          "excerpt_short": "Límite Estratégico: El sistema modela escenarios probabilísticos, pero no asume la toma de decisión final. La intuición política, la ponderación del clima social y la lectura de sensibilidades de los grupos de interés corresponden exclusivamente al criterio ético y fiduciario del directivo humano.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "OECD Legal Instruments: G20/OECD Principles of Corporate Governance (OECD-LEGAL-0413)",
+          "source_id": "13d8c510-9ee4-47fe-b580-51df8a77fa08",
+          "locator": "Principio VI: Responsabilidades del Directorio, p. 45-52",
+          "excerpt_short": "The board is collectively responsible for the long-term stewardship of the corporation. The duty of loyalty and duty of care cannot be transferred, delegated, or outsourced to automated algorithmic systems.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los Principios de Gobierno Corporativo de la OCDE y las directrices de gobernanza de P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "delimitacion_frontera_cognitiva": {
+      "dominio_ia_bridge": [
+        "Monitoreo y alerta temprana de señales en medios y redes.",
+        "Cruce NLI con memorias y balances internos.",
+        "Generación de baterías Q&A adversariales con citas auditables.",
+        "Simulación de escenarios What-If y redacción de borradores."
+      ],
+      "dominio_humano_exclusivo": [
+        "Aprobación de la postura corporativa final.",
+        "Asunción pública de culpas y disculpas institucionales.",
+        "Fijación de compromisos de inversión social o compensaciones.",
+        "Evaluación de riesgos penales y civiles con abogados patrocinantes."
+      ]
+    }
+  },
+  "entities": [
+    "OECD Principles of Corporate Governance",
+    "Directorio",
+    "Deber de Lealtad",
+    "Deber de Cuidado",
+    "Frontera Epistémica"
+  ],
+  "relations": [
+    {
+      "from": "IA BRIDGE",
+      "to": "Frontera Epistémica",
+      "type": "operates_up_to"
+    },
+    {
+      "from": "Directorio Humano",
+      "to": "Decisión Estratégica",
+      "type": "solely_responsible_for"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Autonomía Algorítmica vs Copiloto Cognitivo",
+      "diferencia": "La autonomía algorítmica expone a la empresa a negligencia fiduciaria corporativa; el copiloto cognitivo potencia el juicio humano sin relevarlo de su responsabilidad."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "autonomous_decision_rate": "0% de decisiones estratégicas delegadas al sistema",
+    "fiduciary_compliance": "100% conforme a Principios OCDE"
+  },
+  "bridge_implications": "Exponer claramente en el pie de página de todos los briefs que el documento constituye apoyo analítico y no asesoría jurídica ni decisión fiduciaria delegada.",
+  "open_gaps": [
+    "Manejo del sesgo de complacencia (automation bias) donde ejecutivos humanos tienden a firmar recomendaciones de la IA sin revisión crítica."
+  ],
+  "next_question_ids": [
+    "P07-F27",
+    "P07-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

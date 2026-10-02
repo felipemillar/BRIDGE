@@ -1,0 +1,125 @@
+{
+  "question_id": "P03-F22",
+  "pilar": "P03",
+  "eje": "Radio, televisión, video y podcasts",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar radio, televisión, video y podcasts de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de contenidos audiovisuales exige: 1) Variables técnicas: `canal_emision` (tv_abierta, cable, radio_am, radio_fm, podcast_rss), `segmento_tiempo_inicio_fin` (timestamps precisos en segundos), `wer_estimado_transcripcion`, `locutor_detectado` (speaker diarization) y `frecuencia_transmision` (ej. 93.7 FM Antofagasta); 2) Categorías temáticas: Noticiero_Central, Entrevista_Politica, Panel_Opinion, Programa_Sectorial y Transmision_Oficial; 3) Relaciones en grafo: `emitido_por` (Estación de Radio/TV), `entrevistado_es` (Figura Pública), `cita_a` (Entidad Corporativa) y `deriva_de_evento` (Hecho Noticioso); y 4) Condiciones de integridad: almacenar únicamente fragmentos transcritos breves junto al audio mínimo requerido para verificación de exactitud, cumpliendo las restricciones de licencias de difusión audiovisual.",
+  "findings": [
+    {
+      "claim_id": "P03-F22-C1",
+      "claim": "El modelado estructurado audiovisual debe contener marcas temporales en segundos, diarización de locutores y variables técnicas de modulación y frecuencia para respaldar la verificación de alertas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Modelado Estructurado P03"
+      },
+      "evidence": [
+        {
+          "source_id": "1ab725af-4c91-4a60-9d00-f67db48d921a",
+          "source_title": "TVEyes Broadcast Monitoring API & Real-Time Media Feeds",
+          "original_url": "https://www.tveyes.com/api-partners/",
+          "locator": "Data Delivery Schema - Station, Timestamp, and Snippet",
+          "excerpt_short": "Feeds provide broadcast station call signs, market, precise start/stop timestamps, transcript text snippets, and streaming media links.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación con especificaciones de APIs industriales de broadcast.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Stream audiovisual",
+      "Metadata de sintonizador"
+    ],
+    "actors": [
+      "Broadcast Parser",
+      "Diarization Engine"
+    ],
+    "steps": [
+      "Diarización de hablantes",
+      "Marcado de timestamps",
+      "Generación de envelope estructurado"
+    ],
+    "states": [
+      "Raw_Stream",
+      "Diarized_Transcript",
+      "Structured_Broadcast_Record"
+    ],
+    "outputs": [
+      "Objeto estructurado JSON con locutor, medio y rango temporal exacto"
+    ],
+    "exceptions": [
+      "Múltiples personas hablando simultáneamente en debates acalorados"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BROADCAST_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Broadcast",
+      "aliases": [
+        "Broadcast Data Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BROADCAST_SCHEMA",
+      "predicate": "normaliza_transmisiones_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F22-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Adoptar esquemas con soporte nativo de diarización para atribuir correctamente declaraciones a ministros o ejecutivos en radio y TV.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

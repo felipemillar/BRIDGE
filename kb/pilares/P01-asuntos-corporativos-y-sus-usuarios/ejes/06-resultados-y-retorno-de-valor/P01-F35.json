@@ -1,0 +1,174 @@
+{
+  "question_id": "P01-F35",
+  "pilar": "P01",
+  "eje": "Resultados y retorno de valor",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre resultados y retorno de valor?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El tema está respaldado por 11 fuentes estructuradas bajo 4 niveles epistemológicos: Hechos Documentados (Dircom ECE 2025: 54,4% reporte al CEO; BCN Ley 20.730; CMF NCG 461/519; Edelman Trust Barometer 2025/2026; Cadem Marcas Ciudadanas Jun 2026; Merco Chile 2025/2026; Acción Empresas Sep 2026; ICARE); Evidencia Académica (Page Society 2022/2023; Global Capability Framework 2021); Afirmaciones Comerciales (McKinsey Oct 2025); e Hipótesis de Trabajo (HT-1, HT-2, HT-3). Se reiteran los 4 vacíos críticos de evidencia.",
+  "findings": [
+    {
+      "claim_id": "P01-F35-C1",
+      "claim": "McKinsey (junio 2025, The CEO's role as chief storyteller) documenta que aproximadamente 6 de cada 10 personas señalan que las acciones y declaraciones de un CEO afectan directamente su opinión sobre la empresa, vinculando la vocería directiva con la valoración de mercado a largo plazo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-06",
+        "region": "Global",
+        "actor": "McKinsey & Company"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: McKinsey CEO Storyteller y Reputación C-Suite",
+          "excerpt_short": "Aproximadamente 6 de cada 10 personas declaran que las acciones del CEO afectan directamente su opinión sobre la empresa.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:56:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Investigación empírica global de liderazgo directivo de McKinsey.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F35-C2",
+      "claim": "El Edelman Trust Barometer (2025-2026) reporta que las empresas privadas son percibidas como la institución más ética y competente en comparación con gobiernos y medios, lo que impone al CCO y al CEO la exigencia de fundamentar sus posturas en hechos verificables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Edelman Trust Institute"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Edelman Trust Barometer y Confianza Institucional",
+          "excerpt_short": "Las empresas son la institución más confiable y ética respecto a gobiernos y medios, exigiendo vocerías sustentadas en hechos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:56:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Barómetro empírico global representativo de confianza institucional.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Informes empíricos y regulatorios",
+      "Textos legales oficiales",
+      "Matriz de niveles epistemológicos"
+    ],
+    "actors": [
+      "Auditor Metodológico",
+      "Investigador Corporativo"
+    ],
+    "steps": [
+      "Verificación de citas",
+      "Control de fechas de corte",
+      "Catalogación epistemológica",
+      "Detección de vacíos"
+    ],
+    "states": [
+      "Fuentes_Verificadas",
+      "Trazabilidad_Aprobada"
+    ],
+    "outputs": [
+      "Tabla General de Fuentes y Respaldos"
+    ],
+    "exceptions": [
+      "Cita sin fuente primaria demostrable"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_EDELMAN_TRUST",
+      "type": "estudio_opinion",
+      "name": "Edelman Trust Barometer 2025/2026",
+      "aliases": [
+        "Barómetro de Confianza Edelman"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_EDELMAN_TRUST",
+      "predicate": "mide_confianza_en",
+      "object_id": "Empresas_y_Gobiernos",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F35-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Proporción de personas cuya opinión corporativa depende directamente de las acciones del CEO",
+      "value": "6 de cada 10",
+      "denominator": "Total encuestados en estudio McKinsey CEO Storyteller",
+      "source_claim_id": "P01-F35-C1"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Garantizar que todo insumo generado en BRIDGE incorpore el respaldo documental explícito exigido en la Tabla General de Fuentes.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F36",
+    "P01-F37"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:56:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

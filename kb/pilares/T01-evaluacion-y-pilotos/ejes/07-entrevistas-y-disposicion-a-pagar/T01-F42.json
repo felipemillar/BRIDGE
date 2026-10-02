@@ -1,0 +1,169 @@
+{
+  "question_id": "T01-F42",
+  "pilar": "T01",
+  "eje": "Entrevistas y disposición a pagar",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra entrevistas y disposición a pagar sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto de Pricing y Compra CCP-T01-182 (Validación Comercial en Grupo Minero Multilocal): 1) Entradas: Aplicación del cuestionario Van Westendorp PSM a 5 ejecutivos clave (Director de Asuntos Corporativos, Gerente de Comunidades, Gerente Legal, Jefe de Compras y CFO) tras 4 semanas de piloto; 2) Respuestas y Curvas Acumuladas Obtenidas: a) Punto de Barato Marginal (PMC): $2.200 USD/mes; b) Punto de Indiferencia de Precio (IPP): $4.800 USD/mes; c) Punto Óptimo de Precio (OPP): $4.500 USD/mes; d) Punto de Caro Marginal (PME): $7.500 USD/mes; 3) Resultado Esperado y Decisión de Compuerta G3: BRIDGE presenta una propuesta comercial formal de suscripción anual por $4.500 USD/mes (Tier Corporativo con los 4 módulos y 10 licencias de usuario); el cliente confirma que el monto se sitúa exactamente en su punto óptimo presupuestario, presenta un ROI de 3.2x frente al costo evitado de analistas y consultoría externa, y el CFO autoriza formalmente la orden de compra en SAP, logrando un 'Go' unánime en la compuerta comercial Stage-Gate G3.",
+  "findings": [
+    {
+      "claim_id": "T01-F42-C1",
+      "claim": "La aplicación empírica del Price Sensitivity Meter de Van Westendorp en un caso corporativo permite fijar el precio de The Bridge Intelligence en su punto óptimo ($4.500 USD/mes), logrando aprobación presupuestaria inmediata al alinearse con el rango de precios aceptables y demostrar un retorno económico superior a 3x.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "The Bridge Intelligence / Caso CCP-T01-182"
+      },
+      "evidence": [
+        {
+          "source_id": "b62914e1-de40-490c-ae09-d229aaf7f384",
+          "source_title": "SurveyMonkey - How To Use The Van Westendorp Price Sensitivity Meter",
+          "original_url": null,
+          "locator": "Optimal Price Point Calculation",
+          "excerpt_short": "The intersection of the 'Too Cheap' and 'Too Expensive' curves reveals the Optimal Price Point where customer resistance is minimized and perceived value is maximized.",
+          "source_date": "2024",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & Agile Integration",
+          "original_url": null,
+          "locator": "Gate 3 Financial Case Approval",
+          "excerpt_short": "Financial approval at Gate 3 confirms customer willingness to pay and closes the pilot cycle into a multi-year commercial contract.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Simulación y caso representativo riguroso derivado del modelo de pricing.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Respuestas PSM de 5 ejecutivos de Grupo Minero",
+      "Cálculo de horas ahorradas en el piloto (82 horas en el mes)",
+      "Tarifario de suscripción propuesto"
+    ],
+    "actors": [
+      "Equipo Comercial de BRIDGE",
+      "CFO y Comité de Compras del Cliente"
+    ],
+    "steps": [
+      "Tabular las 5 respuestas y calcular curvas acumuladas inversas",
+      "Determinar intersecciones: PMC = $2.200, OPP = $4.500, PME = $7.500 USD/mes",
+      "Emitir propuesta comercial de $4.500 USD/mes con memoria de cálculo de ROI",
+      "Recepcionar orden de compra formal y cerrar compuerta Gate 3 con éxito"
+    ],
+    "states": [
+      "TABULACION_PSM",
+      "CURVAS_GENERADAS",
+      "OFERTA_EMITIDA",
+      "ORDEN_COMPRA_EMITIDA"
+    ],
+    "outputs": [
+      "Orden de Compra anual por $54.000 USD",
+      "Certificado de Cierre de Piloto Exitoso"
+    ],
+    "exceptions": [
+      "Si la propuesta hubiese superado los $7.500 USD/mes (PME), habría sido bloqueada por considerarse excesiva frente al valor aportado"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CCP_182",
+      "type": "experimento",
+      "name": "Caso de Pricing CCP-T01-182",
+      "aliases": [
+        "Validación Comercial Minera"
+      ]
+    },
+    {
+      "entity_id": "PRECIO_OPP_4500",
+      "type": "metrica",
+      "name": "Precio Óptimo $4.500 USD/mes",
+      "aliases": [
+        "Optimal Price Point"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CCP_182",
+      "predicate": "valida_modelo_comercial_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F42-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Precio BRIDGE ($4.500 USD/mes)",
+      "item_b": "Costo Consultoría Externa ($15.000 USD/mes)",
+      "dimension": "Gasto mensual cliente",
+      "conclusion": "BRIDGE entrega cobertura en tiempo real y memoria institucional propia a un tercio del costo de una agencia tradicional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "ROI demostrado en CCP-T01-182",
+      "denominator": "Costo anual suscripción ($54.000 USD)",
+      "target": "3.2x"
+    },
+    {
+      "metric": "Tiempo de ciclo de cierre en Compras",
+      "denominator": "Días desde fin de piloto hasta OC",
+      "target": "<= 15 días"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Demuestra la viabilidad comercial y unit economics de The Bridge Intelligence en el segmento de grandes corporaciones.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

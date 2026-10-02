@@ -1,0 +1,148 @@
+{
+  "question_id": "P04-F48",
+  "pilar": "P04",
+  "eje": "Evaluación de calidad documental",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra evaluación de calidad documental sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Canónico: Ejecución de la suite de auditoría de factualidad y seguridad sobre un release del motor de inteligencia corporativa. Entradas documentadas: 1) Suite de evaluación compuesta por 250 consultas Gold Standard de Asuntos Corporativos; 2) Subconjunto adversarial de 50 preguntas con prompt injections intentando extraer borradores de Hechos Esenciales bajo embargo; 3) Corpus corporativo compuesto por 15 memorias NCG 461 y 120 hechos esenciales históricos. Proceso de evaluación: 1) Ejecución paralela de las consultas y captura de outputs con sus fragmentos citados; 2) Cálculo de FActScore arrojando que 96.2% de los hechos atómicos cuentan con sustento literal (superando el umbral ≥ 0.95); 3) Medición de precisión de cita alcanzando 0.985 (superando el umbral ≥ 0.98); 4) Evaluación de las 50 consultas adversariales arrojando 0 filtraciones de documentos embargados (100.0% de efectividad ABAC). Resultado esperado: El sistema genera un 'Certificado de Conformidad de Release' automatizado, habilitando el despliegue a producción y garantizando a la alta dirección que la aplicación no emitirá cifras alucinadas ni divulgará información privilegiada no aprobada.",
+  "findings": [
+    {
+      "claim_id": "P04-F48-C1",
+      "claim": "El caso empírico de certificación de release demuestra cómo los umbrales de FActScore, precisión de cita y Red Teaming adversarial garantizan la inocuidad y precisión del sistema antes de su entrega a directivos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Caso Certificación de Release"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Protocolo de Calificación Continua (Benchmark Suite)",
+          "excerpt_short": "Evaluación de dos pasos con 250 consultas reales, FActScore, RAGAS y pruebas de penetración semántica con umbrales mínimos obligatorios.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "b0babc4e-51fa-4a3c-bb22-2bea8487a65e",
+          "source_title": "P04_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 4: Agenda y Protocolo de Validación Empírica (Etapas 3 y 4)",
+          "excerpt_short": "Benchmark de búsqueda asistida con 250 consultas complejas contrastando RAG vs ColBERT vs GraphRAG, y simulación de gabinete de crisis con cero fuga ABAC.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso de prueba formalizado en la agenda empírica de los documentos metodológicos de P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Suite de 250 consultas Gold Standard",
+      "Suite de 50 ataques adversariales"
+    ],
+    "actors": [
+      "Continuous Certification Engine",
+      "Release Controller",
+      "Compliance Officer"
+    ],
+    "steps": [
+      "Ejecución de benchmarks",
+      "Verificación matemática de cumplimiento de los 5 umbrales",
+      "Firma criptográfica de certificado de release"
+    ],
+    "states": [
+      "Testing_Release",
+      "Thresholds_Met",
+      "Production_Certified"
+    ],
+    "outputs": [
+      "Certificado de auditoría y release formalmente autorizado para producción"
+    ],
+    "exceptions": [
+      "Cualquier umbral no alcanzado aborta automáticamente el despliegue"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RELEASE_CERTIFICATE",
+      "type": "artefacto_certificacion",
+      "name": "Certificado de Conformidad de Release Corporativo",
+      "aliases": [
+        "Corporate Release Compliance Certificate"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RELEASE_CERTIFICATE",
+      "predicate": "autoriza_despliegue_de",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F48-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Gobernanza de software",
+      "Despliegue sin compuertas de auditoría": "Riesgo constante de introducir alucinaciones que comprometan legalmente a la empresa.",
+      "Despliegue con certificación continua": "Garantía cuantificable de que cada versión mantiene una fidelidad superior al 95% y cero fugas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe requerir este certificado de conformidad en su pipeline para brindar confianza institucional a sus clientes corporativos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

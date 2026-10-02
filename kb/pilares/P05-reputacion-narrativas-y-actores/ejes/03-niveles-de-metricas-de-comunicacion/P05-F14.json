@@ -1,0 +1,146 @@
+{
+  "question_id": "P05-F14",
+  "pilar": "P05",
+  "eje": "Niveles de métricas de comunicación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué métricas tienen denominadores observables y cuáles descansan en estimaciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus separa con rigor epistemológico las métricas con denominadores empíricos directamente observables de aquellas basadas en modelos inferenciales o estimaciones: 1) Métricas con denominadores observables: a) Comunicados corporativos emitidos y actos públicos (conteo exacto en el archivo institucional); b) Artículos de prensa publicados e indexados (recuento auditable de menciones en medios con fecha y página); c) Resoluciones de calificación ambiental (RCA) emitidas, rechazadas o en trámite en el SEIA; d) Multas y sanciones cursadas por la SMA o CMF en UF o pesos; e) Audiencias de lobby registradas formalmente bajo Ley 20.730; f) Tráfico web directo y descargas de la memoria corporativa mediante telemetría propia; 2) Métricas que descansan en estimaciones o modelos inferenciales: a) Alcance potencial e impresiones brutas (OTS): Se calculan multiplicando la tirada del medio por factores teóricos de pase de mano (e.g. 2.5 a 4 lectores por ejemplar), asumiendo erróneamente que todo lector vio la página corporativa; b) Sentimiento semántico automatizado: Estimado mediante algoritmos de NLP con márgenes de error léxico del 15% al 35% en español contextual; c) Audiencia potencial en redes sociales: Estimaciones extrapoladas basadas en seguidores de cuentas, ignorando la tasa real de entrega algorítmica (reach orgánico del 2% al 8%); d) Valor Publicitario Equivalente (AVE): Estimación conceptualmente inválida que asigna tarifas publicitarias a textos periodísticos.",
+  "findings": [
+    {
+      "claim_id": "P05-F14-C1",
+      "claim": "El control de calidad analítica exige etiquetar la base empírica de cada indicador, separando denominadores verificables de estimaciones proyectadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Medición de Comunicaciones"
+      },
+      "evidence": [
+        {
+          "source_id": "c8249017-0397-4799-aacc-c1c53ee4662d",
+          "source_title": "AMEC: Barcelona Principles 3.0 (Global Standard for PR & Comms Measurement)",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principio 3: Qualitative and Quantitative Metrics Should Be Applied",
+          "excerpt_short": "Metrics must rely on rigorous observable denominators where possible and explicitly acknowledge estimation models when evaluating reach or sentiment.",
+          "source_date": "2020-07-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3.1: Análisis Detallado de Cada Nivel Métrica",
+          "excerpt_short": "Alcance bruto descansa en supuestos lineales de circulación. El volumen tiene denominador contable observable pero carece de valor evaluativo.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Criterio metodológico fundamental de auditoría estadística y evaluación de medios.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos contables de difusión",
+      "Informes de agencias de clipping",
+      "Modelos de estimación de audiencias"
+    ],
+    "actors": [
+      "Analista Cuantitativo",
+      "Auditor de Comunicaciones"
+    ],
+    "steps": [
+      "Clasificación de cada métrica según tipo de denominador",
+      "Asignación de banderas de confiabilidad metodológica",
+      "Advertencia visual de datos modelados vs auditados"
+    ],
+    "states": [
+      "Raw_Metrics_Parsed",
+      "Denominators_Categorized",
+      "Confidence_Flags_Assigned"
+    ],
+    "outputs": [
+      "Reporte de métricas con desglose de certeza empírica"
+    ],
+    "exceptions": [
+      "Presentar estimaciones de impresiones teóricas como si fueran personas reales contactadas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DENOMINATOR_TYPES",
+      "type": "clasificacion",
+      "name": "Tipos de Denominadores Métricos",
+      "aliases": [
+        "Metric Denominators"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DENOMINATOR_TYPES",
+      "predicate": "condiciona_certeza_de",
+      "object_id": "ENT_AMEC_TAXONOMY",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F14-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Naturaleza del dato",
+      "Métrica con Denominador Observable": "Verificable físicamente: 14 reuniones registradas en InfoLobby, 3 sanciones en la SMA.",
+      "Métrica con Denominador Estimado": "Inferencia algorítmica: 2.500.000 impresiones potenciales estimadas en base a tráfico general del portal de noticias."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Capa de Datos",
+      "implication": "BRIDGE debe marcar en la base de datos si una cifra es un recuento contable o una estimación estadística proyectada.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

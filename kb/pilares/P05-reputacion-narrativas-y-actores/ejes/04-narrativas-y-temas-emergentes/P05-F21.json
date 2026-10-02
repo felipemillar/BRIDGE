@@ -1,0 +1,149 @@
+{
+  "question_id": "P05-F21",
+  "pilar": "P05",
+  "eje": "Narrativas y temas emergentes",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Cómo comparar narrativas de prensa, actores políticos, empleados y comunidades?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus prescribe la comparación estructurada de narrativas mediante una matriz de triangulación de encuadres multi-stakeholder que contrasta los cuatro grupos analíticos: 1) Prensa y Medios Masivos: Encuadran los temas privilegiando la novedad, el conflicto institucional, la personificación del drama y el ángulo de interés masivo (agenda-setting y gatekeeping de Deephouse); 2) Actores Políticos y Reguladores: Encuadran los temas desde la asignación de responsabilidad fiduciaria, el escrutinio de legalidad, la necesidad de reformas regulatorias o la apertura de comisiones investigadoras parlamentarias; 3) Colaboradores Internos y Sindicatos: Encuadran los hechos desde la vivencia cotidiana laboral, la seguridad física, la equidad salarial y la concordancia ética entre las políticas declaradas y la conducta de la jefatura directa (principio de Page de que las conductas reales guían la percepción interna); y 4) Comunidades Locales y Pueblos Indígenas: Encuadran los hechos desde la afectación territorial, el uso del agua, la salud colectiva, el respeto al patrimonio cultural ancestral y la validez de los acuerdos de consulta previa bajo Convenio 169 OIT. La comparación se realiza alineando cada grupo en columnas paralelas evaluando la función diagnóstica de Entman, revelando dónde convergen consensos y dónde estallan contradicciones críticas.",
+  "findings": [
+    {
+      "claim_id": "P05-F21-C1",
+      "claim": "Cada segmento de stakeholders procesa un incidente a través de marcos culturales e intereses divergentes, exigiendo comparativas estructuradas que eviten homogeneizar las narrativas corporativas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Internacional",
+        "actor": "Dirección de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5.2: Caracterización Operativa de los Cinco Grupos de Actores Clave",
+          "excerpt_short": "Detalla la naturaleza del vínculo, atributos de prominencia y dinámicas operativas para comunidades locales, autoridades públicas, periodistas, inversionistas y colaboradores internos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "4a704f39-0f78-4e44-8b03-b9922d00ed6b",
+          "source_title": "Arthur W. Page Society: The Page Principles for Corporate Character & Trust",
+          "original_url": "https://page.org/who-we-are/page-principles/",
+          "locator": "Principio 5: Manage for tomorrow, Principio 7: Realize a company's true character is expressed by its people",
+          "excerpt_short": "Stakeholders have diverse expectations. A company must listen to all voices and recognize that internal alignment directly impacts external credibility.",
+          "source_date": "2023-01-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Enfoque comparativo fundamentado en la teoría de stakeholders y principios canónicos de la Page Society.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Monitoreo de prensa especializada",
+      "Diario de sesiones legislativas",
+      "Boletines sindicales internos",
+      "Actas de asambleas territoriales"
+    ],
+    "actors": [
+      "Analista Multistakeholder",
+      "Director de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Extracción de argumentos centrales por grupo de interés",
+      "Mapeo en matriz comparativa de 4 funciones de framing",
+      "Identificación de puntos ciegos entre la visión interna y comunitaria"
+    ],
+    "states": [
+      "Narratives_Collected",
+      "Frames_Aligned",
+      "Comparative_Matrix_Rendered"
+    ],
+    "outputs": [
+      "Matriz Comparativa de Narrativas por Grupo de Interés"
+    ],
+    "exceptions": [
+      "Ignorar las narrativas sindicales o comunitarias asumiendo que solo la prensa formal define la realidad"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_STAKEHOLDER_NARRATIVES",
+      "type": "modelo_comparativo",
+      "name": "Matriz Comparativa de Narrativas por Stakeholder",
+      "aliases": [
+        "Multi-stakeholder Narrative Matrix"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_STAKEHOLDER_NARRATIVES",
+      "predicate": "triangula_discursos_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F21-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Foco prioritario del encuadre",
+      "Prensa": "¿Qué conflicto novedoso ocurrió hoy?",
+      "Regulador": "¿Qué norma formal fue vulnerada?",
+      "Comunidad": "¿Cómo afecta esto mi territorio y mi agua?",
+      "Colaborador": "¿Es ético trabajar en esta compañía y estoy seguro?"
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Visualizador de Narrativas",
+      "implication": "BRIDGE debe permitir al usuario seleccionar filtros de audiencia para comparar qué encuadre predomina en la prensa vs lo que declaran las comunidades en el SEIA.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

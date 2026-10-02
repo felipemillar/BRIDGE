@@ -1,0 +1,141 @@
+{
+  "question_id": "P05-C06",
+  "pilar": "P05",
+  "eje": "Niveles de métricas de comunicación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué sigue sin prueba sobre niveles de métricas de comunicación, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis de brechas de medición de comunicaciones documentado en P05_GAPS_AND_VALIDATION establece: 1) Lo que sigue sin prueba rigurosa: La precisión de los algoritmos de análisis de sentimiento automatizado mediante modelos de lenguaje genéricos cuando se aplican a textos informales cargados de ironía, sarcasmo o giros idiomáticos locales chilenos (chilenismos). La tasa de error en la asignación de polaridad en español coloquial oscila entre el 20% y el 35%, produciendo falsos positivos de hostilidad o ignorando descalificaciones sutiles muy dañinas; 2) Qué fuente falló o es parcial: Fallan los clasificadores comerciales de sentimiento estándar incluidos en plataformas como Brandwatch y Meltwater al no estar calibrados lingüísticamente para las particularidades dialectales de Chile y América Latina; 3) Validación mínima que resolvería la incertidumbre: Incorporar modelos de lenguaje pre-entrenados y afinados territorialmente en español chileno (como BETO o modelos fine-tuneados con prensa y foros locales), contrastados periódicamente con una muestra ciega del 10%+ de menciones críticas auditada por lingüistas y sociólogos humanos con cálculo formal del coeficiente Kappa de concordancia inter-evaluador.",
+  "findings": [
+    {
+      "claim_id": "P05-C06-C1",
+      "claim": "El análisis automatizado de sentimiento en español local mantiene una tasa de error relevante ante el sarcasmo y la ironía, exigiendo modelos afinados territorialmente y auditorías humanas continuas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / América Latina",
+        "actor": "Tecnología NLP y Analítica"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2: Análisis de Sentimiento Automatizado (NLP/LLMs)",
+          "excerpt_short": "Sesgo léxico y de contexto cultural; incapacidad de procesar ironía, sarcasmo o modismos locales chilenos. Mecanismo de atenuación: modelos afinados territorialmente y análisis cualitativo humano.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Limitación ampliamente documentada en la literatura de procesamiento de lenguaje natural en español.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus de menciones en español chileno",
+      "Modelos BETO fine-tuneados",
+      "Muestra de control humano"
+    ],
+    "actors": [
+      "Ingeniero de NLP",
+      "Auditor Lingüístico"
+    ],
+    "steps": [
+      "Clasificación automática con modelo afinado",
+      "Extracción de muestra estratificada del 10%",
+      "Revisión humana y cálculo de matriz de confusión"
+    ],
+    "states": [
+      "Raw_Text_Classified",
+      "Sample_Audited",
+      "Kappa_Calculated"
+    ],
+    "outputs": [
+      "Métricas de precisión y calibración del clasificador de sentimiento"
+    ],
+    "exceptions": [
+      "Uso de modelos en inglés con traducción automática previa que altere el sentido coloquial"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_NLP_CULTURAL_GAP",
+      "type": "vacio_metodologico",
+      "name": "Sesgo Cultural en Análisis de Sentimiento",
+      "aliases": [
+        "Local Dialect Sentiment Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_NLP_CULTURAL_GAP",
+      "predicate": "limita_efectividad_de",
+      "object_id": "ENT_AMEC_TAXONOMY",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C06-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de procesamiento",
+      "NLP Estándar Global": "Clasifica 'la raja' o 'harto penca' con diccionarios genéricos generando errores groseros.",
+      "Modelo Afinado Territorial (BETO Chile)": "Reconoce el significado pragmático exacto de modismos y sarcasmos chilenos en el contexto de la noticia."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Clasificador Semántico Local",
+      "implication": "BRIDGE debe utilizar modelos adaptados al español de Chile y mostrar una advertencia de confiabilidad en menciones que presenten indicios de ironía.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_SENTIMENT_DIALECT",
+      "description": "Tasa de error de NLP genérico ante modismos locales y sarcasmo en español latinoamericano.",
+      "severity": "media",
+      "status": "documentado"
+    }
+  ],
+  "next_question_ids": [
+    "P05-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

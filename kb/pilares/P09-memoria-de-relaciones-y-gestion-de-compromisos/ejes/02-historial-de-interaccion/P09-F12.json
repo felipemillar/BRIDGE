@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F12",
+  "pilar": "P09",
+  "eje": "Historial de interacción",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra historial de interacción sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto Documentado: 'Reunión Informativa y Audiencia de Diálogo con la Junta de Vecinos N° 4 El Melocotón y Visita del Delegado Municipal de San José de Maipo'. Entradas: 1) Fecha: 12 de noviembre de 2025, 15:00 a 16:45 h; 2) Asistentes Externos: Rosa Morales (Presidenta JJVV N° 4) y Pedro Valenzuela (Director de DIDECO Municipalidad de San José de Maipo); 3) Asistentes Internos: Camila Soto (Jefa de Relaciones Comunitarias) y Javier Pardo (Ingeniero de Faena); 4) Temas: Estado de mantención del camino de acceso a faena y polvo en suspensión provocado por camiones de alto tonelaje; 5) Acta Adjunta: Acta comunitaria firmada escaneada (PDF, hash d41d8cd98f00b204e9800998ecf8427e); 6) Compromiso Pactado: 'Instalación de supresor de polvo (bischofita) en 3,5 km de camino vecinal antes del 15 de diciembre de 2025' asignado a Javier Pardo. Resultado Esperado: 1) Interacción creada e inmutable en BRIDGE; 2) Ficha de compromiso P09-COMP-2025-089 generada con semáforo verde; 3) Notificación automática al calendario y correo del Ingeniero de Faena; y 4) Alerta preventiva T-15 programada para el 30 de noviembre de 2025.",
+  "findings": [
+    {
+      "claim_id": "P09-F12-C1",
+      "claim": "El caso documentado ilustra la captura completa del flujo post-reunión: ingreso de metadatos, acta firmada escaneada, generación del compromiso derivado y programación de alertas preventivas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "concrete_case_interaction_history",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo de Gestión en 6 Fases (Ejemplo de Aplicación Práctica)'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso Tipo: Reunión comunitaria con acta física firmada. Entradas: participantes formales, acta escaneada, compromiso con fecha fija y dueño. Salida: registro inmutable, ticket de compromiso enlazado al responsable interno y alertas preventivas T-30, T-15 y T-7.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: Stakeholder Commitment Tracking — A Complete Guide to Registration",
+          "source_id": "a5e60b84-dff6-493b-9241-19fb1044d36f",
+          "locator": "Section 'From Meeting Minutes to Tracked Milestones', p. 22-26",
+          "retrieved_at": null,
+          "excerpt_short": "The successful implementation of an SRM workflow is demonstrated when a community meeting minute instantly creates an assigned task with automated alerts and definitive evidence requirements.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación rigurosa de las especificaciones del dossier y de Tractivity sin datos inventados.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Formulario de reunión completado",
+      "PDF escaneado del acta con firmas"
+    ],
+    "actors": [
+      "Camila Soto (Jefa Comunitaria)",
+      "Javier Pardo (Ingeniero Faena)",
+      "Motor de Workflow BRIDGE"
+    ],
+    "steps": [
+      "Carga de datos y adjunto",
+      "Validación de completitud",
+      "Creación de compromiso en base de datos",
+      "Envío de alertas a responsables"
+    ],
+    "states": [
+      "Interacción Guardada",
+      "Compromiso Creado",
+      "Alertas Activadas"
+    ],
+    "outputs": [
+      "Registro de interacción N° INT-2025-0142",
+      "Ficha de compromiso N° COMP-2025-089"
+    ],
+    "exceptions": [
+      "Si el Ingeniero de Faena rechaza la asignación en menos de 24h, el sistema escala al Gerente de Asuntos Públicos"
+    ]
+  },
+  "entities": [
+    "Caso Tipo Comunitario",
+    "Acta Firmada",
+    "Compromiso Derivado",
+    "Tractivity SRM",
+    "Alerta Preventiva"
+  ],
+  "relations": [
+    {
+      "from": "INT-2025-0142",
+      "to": "COMP-2025-089",
+      "type": "generates"
+    },
+    {
+      "from": "COMP-2025-089",
+      "to": "Javier Pardo",
+      "type": "assigned_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Compromiso verbal olvidado vs Caso sistematizado",
+      "diferencia": "El compromiso verbal genera crisis social por incumplimiento; el caso sistematizado garantiza seguimiento y evidencia de cierre."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "response_time_workflow": "< 1 segundo",
+    "alert_stages": "3 alertas (T-30, T-15, T-7)"
+  },
+  "bridge_implications": "Usar este caso canónico para el test suite de integración del módulo de compromisos en BRIDGE.",
+  "open_gaps": [
+    "Verificar integración con Microsoft Outlook / Google Calendar para las alertas."
+  ],
+  "next_question_ids": [
+    "P09-F13",
+    "P09-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

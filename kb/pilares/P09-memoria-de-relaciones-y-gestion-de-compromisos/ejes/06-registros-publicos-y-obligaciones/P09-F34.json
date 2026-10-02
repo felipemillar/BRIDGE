@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F34",
+  "pilar": "P09",
+  "eje": "Registros públicos y obligaciones",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar registros públicos y obligaciones de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de registros públicos y obligaciones exige: 1) Entidad de Registro de Lobby: `Entity_PublicLobbyRecord` con atributos (infolobby_id, authority_passive_subject_id, interest_manager_id, meeting_date, subject_matter, public_url); 2) Entidad de Expediente Ambiental: `Entity_EnvironmentalPermit` con atributos (rca_number, rca_year, sea_project_id, issuance_date, environmental_commitments_count, sma_oversight_file_id); 3) Entidad de Obligación Exigible: `Entity_PublicObligation` con atributos (obligation_id, permit_id, legal_condition_text, sma_compliance_code, reporting_frequency, due_date); 4) Relaciones Grafo: `GOVERNED_BY_RCA`, `REPORTED_TO_SMA`, `LOBBY_INTERACTION_CORRESPONDS_TO`; 5) Condiciones de Integridad: Validación de números de RCA contra catálogo oficial del SEA, coherencia de fechas (la fecha de reporte a SMA no puede ser anterior a la fecha de emisión de la RCA) y verificación de rol del sujeto pasivo según la Ley 20.730.",
+  "findings": [
+    {
+      "claim_id": "P09-F34-C1",
+      "claim": "El esquema de registros públicos estructura tablas normalizadas para audiencias de lobby (Ley 20.730), RCAs del SEA y obligaciones de reporte del SNIFA/SSA con integridad referencial cruzada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_public_registries",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades y Relaciones (ERD) — Entidades de Cumplimiento Público'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de cumplimiento público: Entity_PublicLobbyRecord (audiencias Ley 20.730), Entity_EnvironmentalPermit (RCAs) y Entity_PublicObligation (condiciones de seguimiento ambiental ante la SMA).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "SMA Chile: Resolución Exenta N° 223 (2015) — Instrucciones sobre Plan de Seguimiento y SSA",
+          "source_id": "3e3feb1b-c98d-471f-9ee0-a4ff77c50390",
+          "locator": "Título II 'Campos Requeridos en el Módulo de Seguimiento'",
+          "retrieved_at": null,
+          "excerpt_short": "Cada compromiso ambiental cargado en el sistema debe estructurarse con: número de RCA, variable ambiental objeto de seguimiento, punto de control georreferenciado, frecuencia y tipo de informe comprometido.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre la Res. Ex. 223 de la SMA y el modelo de datos de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Metadata de RCA e-SEIA",
+      "Archivos JSON de audiencias InfoLobby",
+      "Catálogo de puntos de muestreo SSA"
+    ],
+    "actors": [
+      "Administrador de Cumplimiento",
+      "Arquitecto de Software BRIDGE",
+      "Base de Datos SQL"
+    ],
+    "steps": [
+      "Diseño de modelos SQLAlchemy/Pydantic",
+      "Creación de índices por RCA y sujeto pasivo",
+      "Poblado automatizado mediante ETL",
+      "Generación de vistas de consulta rápida"
+    ],
+    "states": [
+      "Tablas Creadas",
+      "ETL Ejecutado",
+      "Datos Cruzados"
+    ],
+    "outputs": [
+      "Esquema `public_compliance` poblado y validado"
+    ],
+    "exceptions": [
+      "Registros con números de RCA sin formato estándar N°/Año son redirigidos a cola de saneamiento"
+    ]
+  },
+  "entities": [
+    "Entity_PublicLobbyRecord",
+    "Entity_EnvironmentalPermit",
+    "Entity_PublicObligation",
+    "Res. Ex. 223/2015 SMA",
+    "PostgreSQL"
+  ],
+  "relations": [
+    {
+      "from": "Entity_Commitment",
+      "to": "Entity_PublicObligation",
+      "type": "FULFILLS_LEGAL_OBLIGATION"
+    },
+    {
+      "from": "Entity_Interaction",
+      "to": "Entity_PublicLobbyRecord",
+      "type": "REPORTED_AS_LOBBY_AUDIENCE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Manejo disperso de PDFs de RCA vs Tabla estructurada de obligaciones",
+      "diferencia": "Los PDFs dispersos impiden búsquedas masivas; la tabla estructurada permite auditar al instante cuántos compromisos RCA vencen este mes."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "mandatory_obligation_fields": "7 atributos mínimos",
+    "regulatory_mapping_accuracy": "100% de congruencia con campos del SSA"
+  },
+  "bridge_implications": "Crear el esquema `public_compliance` en PostgreSQL para almacenar las obligaciones legales separadas de los compromisos puramente voluntarios.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F35",
+    "P09-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

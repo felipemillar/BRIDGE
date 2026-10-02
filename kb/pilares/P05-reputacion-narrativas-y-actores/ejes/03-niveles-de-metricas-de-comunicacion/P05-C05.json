@@ -1,0 +1,152 @@
+{
+  "question_id": "P05-C05",
+  "pilar": "P05",
+  "eje": "Niveles de métricas de comunicación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre niveles de métricas de comunicación, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia más severa en este eje radica en la persistencia del Valor Publicitario Equivalente (AVE / VPE) en reportes de agencias de relaciones públicas tradicionales frente al consenso científico global. Agencias comerciales siguen comercializando el AVE asignando el costo de una tarifa publicitaria al espacio editorial obtenido en prensa, vendiéndolo a clientes corporativos como 'retorno de inversión de comunicaciones'. En contraste, los Principios de Barcelona 3.0 de AMEC (Principio 5: 'AVEs are not the value of communication') y las síntesis canónicas de P05 (P05_EVIDENCE_MAP Eje 2, Hallazgo 2.2 y P05_RESEARCH_DOSSIER Sección 3) dictaminan que el AVE carece de validez científica, confunde costo publicitario con valor de las relaciones públicas y no mide comprensión, cambio de actitud ni impacto en el negocio. De acuerdo con las correcciones del mandato, prevalece de forma categórica y definitiva el estándar AMEC: el AVE queda proscrito de la arquitectura analítica de BRIDGE, debiendo medirse la efectividad comunicacional exclusivamente a través de la cadena causal de Outputs, Out-takes, Outcomes e Impacto Organizacional.",
+  "findings": [
+    {
+      "claim_id": "P05-C05-C1",
+      "claim": "Prevalece la proscripción definitiva del AVE dictaminada por los Principios de Barcelona 3.0 de AMEC, exigiendo la adopción exclusiva de la cadena causal de resultados organizacionales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Estándar Global AMEC"
+      },
+      "evidence": [
+        {
+          "source_id": "c8249017-0397-4799-aacc-c1c53ee4662d",
+          "source_title": "AMEC: Barcelona Principles 3.0 (Global Standard for PR & Comms Measurement)",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principio 5: AVEs are not the value of communication",
+          "excerpt_short": "Advertising Value Equivalents (AVEs) do not measure the value of communications. AMEC reconfirms that AVEs should not be used in any measurement program.",
+          "source_date": "2020-07-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2: Matriz de Tensiones Epistemológicas, Tensión 1",
+          "excerpt_short": "Adoptar AMEC IEF de forma exclusiva. La aplicación debe prohibir el AVE y medir outputs, out-takes, outcomes y valor de negocio. Nivel de confianza DEFINITIVO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Consenso internacional unánime consagrado en los estándares profesionales de AMEC.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Reportes de clippings con tarifas publicitarias",
+      "Directrices AMEC"
+    ],
+    "actors": [
+      "Comité Metodológico",
+      "Auditor de Comunicaciones"
+    ],
+    "steps": [
+      "Detección de métricas no conformes tipo AVE en archivos de agencias",
+      "Eliminación automática de campos AVE en el pipeline de datos",
+      "Sustitución por métricas de out-takes y outcomes"
+    ],
+    "states": [
+      "Clips_Scanned",
+      "AVE_Detected_and_Purged",
+      "AMEC_Tiers_Enforced"
+    ],
+    "outputs": [
+      "Reporte conforme a Principios de Barcelona 3.0"
+    ],
+    "exceptions": [
+      "Agencias proveedoras que se nieguen a reportar outcomes, requiriendo revisión de contrato"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_AVE_BAN",
+      "type": "regla_exclusiva",
+      "name": "Proscripción Definitiva del AVE",
+      "aliases": [
+        "AMEC AVE Ban"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_AVE_BAN",
+      "predicate": "elimina_metrica_de",
+      "object_id": "ENT_AMEC_TAXONOMY",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C05-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Validez epistemológica",
+      "Valor Publicitario Equivalente (AVE)": "Cálculo ficticio que inventa un supuesto ahorro publicitario en textos periodísticos.",
+      "Marco AMEC IEF": "Evaluación científica rigurosa que demuestra cambios en la confianza y reducción de multas regulatorias."
+    }
+  ],
+  "contradictions": [
+    {
+      "issue": "Uso de AVE como métrica de PR",
+      "source_a": "Agencias tradicionales de relaciones públicas",
+      "source_b": "AMEC Barcelona Principles 3.0 / P05_EVIDENCE_MAP",
+      "resolution": "Prevalece AMEC: el AVE está formal y definitivamente proscrito por carecer de rigor científico."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gestor de KPIs",
+      "implication": "BRIDGE debe excluir de su modelo relacional el campo AVE, impidiendo que los usuarios generen gráficos basados en equivalencias publicitarias.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-C06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

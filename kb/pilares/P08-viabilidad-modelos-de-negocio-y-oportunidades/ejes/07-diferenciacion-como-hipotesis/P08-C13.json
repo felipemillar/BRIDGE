@@ -1,0 +1,155 @@
+{
+  "question_id": "P08-C13",
+  "pilar": "P08",
+  "eje": "Diferenciación como hipótesis",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre diferenciación como hipótesis, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia se focaliza en el núcleo de la ventaja competitiva: Los borradores preliminares del Research Dossier sostenían que la diferenciación principal de BRIDGE residía en 'algoritmos predictivos de sentimiento en redes sociales y minería de texto avanzada'. En contraste, Arthur W. Page Society ('The New CCO'), McKinsey & Company y el P08_QUALITY_ADDENDUM desmienten esta afirmación: los CCOs y Directorios consideran que el análisis de sentimiento general es un indicador superficial que no ayuda a resolver crisis regulatorias complejas. Prevalece la regla del QUALITY_ADDENDUM: la diferenciación única de BRIDGE reside exclusivamente en el cruce semántico entre señales externas y compromisos internos (RCAs ambientales, políticas corporativas y memoria de audiencias de InfoLobby), culminando en la delimitación de 'Líneas Rojas' accionables para el vocero institucional.",
+  "findings": [
+    {
+      "claim_id": "P08-C13-C1",
+      "claim": "Conforme al P08_QUALITY_ADDENDUM y la doctrina corporativa de Page Society, se descarta el análisis de sentimiento como ventaja competitiva y se establece como diferenciador único el cruce con compromisos internos y líneas rojas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "differentiation_core_reconciliation",
+      "evidence": [
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 8 'Jerarquía de Valor en la Propuesta Comercial'",
+          "retrieved_at": null,
+          "excerpt_short": "Precedencia canónica: Se elimina cualquier afirmación de que BRIDGE compite mediante 'análisis de sentimiento' o 'predicción de opinión pública'. El mercado corporativo está saturado de herramientas de escucha social que generan ruido. La diferenciación única e insustituible es el cruce de señales con la memoria corporativa interna y la entrega de briefs con líneas rojas verificadas por analistas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Arthur W. Page Society: The New CCO & Strategic Integrator Role",
+          "source_id": "794b9a31-58fe-4554-8ca1-70e2859c6c7e",
+          "locator": "Strategic Guidelines 'Moving Beyond Sentiment to Operational Alignment', p. 18-21",
+          "retrieved_at": null,
+          "excerpt_short": "Modern chief communication officers place minimal strategic value on vanity sentiment graphs. Value is derived from systems that contextualize external regulatory and political pressure against verifiable corporate commitments.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Page Society y el mandato del QUALITY_ADDENDUM de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dossier preliminar (análisis de sentimiento)",
+      "Page Society The New CCO",
+      "P08_QUALITY_ADDENDUM"
+    ],
+    "actors": [
+      "Product Strategist",
+      "Lead Researcher",
+      "Comité de Marca"
+    ],
+    "steps": [
+      "Depuración de discursos sobre 'análisis de sentimiento'",
+      "Reorientación de la propuesta hacia 'cruce de compromisos y líneas rojas'",
+      "Actualización del material de ventas y pitch"
+    ],
+    "states": [
+      "Propuesta Confusa",
+      "Rectificación Canónica",
+      "Posicionamiento Alineado"
+    ],
+    "outputs": [
+      "Discurso de valor diferencial depurado"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P08_QUALITY_ADDENDUM",
+    "Arthur W. Page Society",
+    "Análisis de Sentimiento (Descartado)",
+    "Cruce con Compromisos Internos",
+    "Línea Roja"
+  ],
+  "relations": [
+    {
+      "from": "QUALITY_ADDENDUM",
+      "to": "Análisis de Sentimiento",
+      "type": "discards_as_differentiator"
+    },
+    {
+      "from": "Diferenciación Real",
+      "to": "Cruce con Compromisos Internos",
+      "type": "anchors_in"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Gráficos de sentimiento vs Briefing con Línea Roja",
+      "diferencia": "Un gráfico de sentimiento no le dice al vocero qué contestar ante la prensa; el brief con línea roja le marca los límites exactos de lo que puede y no puede conceder."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P08-F37-C1",
+        "P08-C13-C1"
+      ],
+      "difference": "Discrepancia entre la diferenciación basada en algoritmos de escucha social versus integración semántica interna.",
+      "resolution": "resuelta",
+      "reason": "El QUALITY_ADDENDUM consagra el cruce interno de compromisos como la única ventaja defendible de BRIDGE."
+    }
+  ],
+  "metrics_and_denominators": {
+    "differentiating_feature_adoption_share": "> 75% del valor percibido asignado al cruce interno"
+  },
+  "bridge_implications": "Eliminar de la interfaz de BRIDGE cualquier gráfico de sentimiento de redes sociales genérico que distraiga del foco regulatorio y operativo.",
+  "open_gaps": [
+    "Medir la reacción de los clientes ante la primera entrega del módulo de 'Líneas Rojas'."
+  ],
+  "next_question_ids": [
+    "P08-C14",
+    "P08-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

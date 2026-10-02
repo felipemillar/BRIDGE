@@ -1,0 +1,152 @@
+{
+  "question_id": "P09-C11",
+  "pilar": "P09",
+  "eje": "Registros públicos y obligaciones",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre registros públicos y obligaciones, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: En revisiones previas se atribuía al informe de la OCDE 2024 ('The Regulation of Lobbying and Influence in Chile') el carácter de 'norma regulatoria' o exigencia vinculante para las empresas en Chile, pretendiendo modelar obligaciones basadas en sus recomendaciones. Versión Prevalente: En estricta aplicación de `P09_OECD_SCOPE_CORRECTION` (`42eb25f9`) y `P09_VERIFICATION_CORRECTIONS` (`f7d21328`), prevalece la corrección formal de alcance: el informe de la OCDE es un documento de diagnóstico, análisis comparativo y recomendaciones de política pública para el Estado de Chile, pero NO constituye derecho positivo chileno ni norma jurídica vinculante para los privados. Las únicas fuentes vinculantes en Chile sobre la materia son la Ley N° 20.730 de Lobby, el Dto N° 71 de SEGPRES, la Ley 19.300 y las Resoluciones Exentas N° 844/2012 y 223/2015 de la SMA.",
+  "findings": [
+    {
+      "claim_id": "P09-C11-C1",
+      "claim": "P09_OECD_SCOPE_CORRECTION y P09_VERIFICATION_CORRECTIONS prevalecen delimitando que el informe OECD Lobbying 2024 es complementario y no vinculante, rigiendo exclusivamente las leyes positivas chilenas como fuente obligatoria.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "contrast_public_registries_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P09_OECD_SCOPE_CORRECTION",
+          "source_id": "42eb25f9-bb90-49b6-82d5-32220b2e6f7c",
+          "locator": "Sección 'Dictamen Canónico sobre Alcance Normativo de la OCDE'",
+          "retrieved_at": null,
+          "excerpt_short": "Se rectifica categóricamente cualquier afirmación previa que considere las recomendaciones de la OCDE como imperativas para las empresas en Chile. La OCDE provee estándares comparados; la Ley 20.730 y las resoluciones de la SMA proveen la exigibilidad legal positiva.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 20.730 que Regula el Lobby y las Gestiones de Intereses Particulares",
+          "source_id": "f6fa26bd-ba44-4b03-bbed-ad4d4296f20f",
+          "locator": "Artículo 1 'Ámbito de Aplicación de la Ley'",
+          "retrieved_at": null,
+          "excerpt_short": "Esta ley regula la publicidad en el ejercicio del lobby y de las demás gestiones de intereses particulares que se hagan ante las autoridades y funcionarios de los órganos de la Administración del Estado.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia canónica explícita de P09_OECD_SCOPE_CORRECTION y verificación jurídica en BCN Chile.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Informe OECD 2024",
+      "P09_OECD_SCOPE_CORRECTION",
+      "Leyes de la República BCN"
+    ],
+    "actors": [
+      "Auditor Legal",
+      "Arquitecto de BRIDGE",
+      "Oficial de Asuntos Públicos"
+    ],
+    "steps": [
+      "Revisión de textos y etiquetas en módulo de compliance",
+      "Reclasificación del informe OCDE a categoría 'Benchmark Internacional No Vinculante'",
+      "Aseguramiento de que las alertas legales apunten únicamente a normas BCN/SMA"
+    ],
+    "states": [
+      "Discrepancia Identificada",
+      "Reclasificación Aprobada",
+      "Taxonomía Legal Blindada"
+    ],
+    "outputs": [
+      "Módulo de cumplimiento alineado estrictamente con el derecho positivo chileno"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P09_OECD_SCOPE_CORRECTION",
+    "OECD 2024 Report",
+    "Ley 20.730",
+    "Res. Ex. 223/2015 SMA",
+    "P09_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P09_OECD_SCOPE_CORRECTION",
+      "to": "OECD 2024",
+      "type": "DELIMITS_AS_NON_BINDING"
+    },
+    {
+      "from": "BRIDGE Compliance",
+      "to": "Ley 20.730",
+      "type": "BINDS_TO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Recomendación internacional consultiva vs Ley positiva nacional",
+      "diferencia": "La recomendación no tiene tribunal competente ni multa; la ley nacional conlleva sanciones administrativas, sumarios de Contraloría e invalidaciones."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "Borradores iniciales: Calificaban el reporte OCDE 2024 como 'nueva regulación obligatoria de lobby'.",
+      "claim_b": "P09_OECD_SCOPE_CORRECTION: Declara que es un estudio comparativo de diagnóstico y no una ley vigente.",
+      "resolution": "Prevalece de forma absoluta la rectificación de P09_OECD_SCOPE_CORRECTION."
+    }
+  ],
+  "metrics_and_denominators": {
+    "statutory_binding_sources": "100% normas publicadas en Diario Oficial de Chile",
+    "non_binding_benchmarks": "Tratamiento segregado en informes"
+  },
+  "bridge_implications": "Etiquetar en la interfaz de BRIDGE cualquier mención a la OCDE como 'Estándar Internacional Sugerido' y no como 'Requisito Legal Obligatorio'.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C12",
+    "P09-F37"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

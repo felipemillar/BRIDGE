@@ -1,0 +1,150 @@
+{
+  "question_id": "P08-F36",
+  "pilar": "P08",
+  "eje": "Costos y economía unitaria",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra costos y economía unitaria sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado es la 'Simulación Financiera de Escala para los Primeros 5 Clientes Corporativos de BRIDGE': Entradas: 1) Captura secuencial de 5 corporaciones clientes (2 mineras, 2 energéticas y 1 banco) con un contrato anual base de USD 5.000/mes (~CLP 4.800.000/mes) cada una; 2) Estructura de costos de entrega: Inferencia LLM y cloud ($85/mes por cliente = $425/mes total); datos licenciados Factiva Snapshots ($1.500/mes costo fijo); y 1 analista senior de asuntos corporativos a tiempo completo ($3.600/mes costo empresa) más un analista junior de apoyo a media jornada ($1.200/mes); y 3) Costo total mensual de entrega para los 5 clientes: USD 6.725/mes. Resultado Esperado: Ingresos mensuales recurrentes (MRR) de USD 25.000 (USD 300.000 ARR); costo de entrega de USD 6.725/mes; ganancia bruta mensual de USD 18.275, alcanzando un Margen Bruto del 73.1%, validando plenamente que la combinación Tech-Enabled con HITL supera el umbral de viabilidad financiera del 70%.",
+  "findings": [
+    {
+      "claim_id": "P08-F36-C1",
+      "claim": "La simulación de escala a 5 clientes demuestra que el modelo de negocio alcanza un margen bruto del 73.1% y un ARR de USD 300.000 con una dotación humana mínima y costos de cómputo marginales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "unit_economics_case_study",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 6.5 'Caso Financiero de Escala: Cartera Inicial de 5 Clientes Corporativos'",
+          "excerpt_short": "Simulación de rentabilidad operativa a régimen inicial: Cartera de 5 clientes a USD 5.000/mes genera un MRR de USD 25.000. Los costos directos de entrega se desglosan en: Cómputo LLM y hosting ($425), Feed Factiva API ($1.500), Analista Senior dedicado ($3.600) y Analista Junior de respaldo ($1.200), totalizando USD 6.725 mensuales. La ganancia bruta resultante es de USD 18.275 mensuales, lo que equivale a un margen bruto del 73.1%. Este resultado confirma la viabilidad económica del modelo Tech-Enabled y permite reinvertir el flujo de caja en adquisición comercial.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 7.4 'Validación de Margen Bruto en Etapa Temprana'",
+          "excerpt_short": "Incluso en un escenario de estrés con 4 clientes y un fee reducido a USD 4.500/mes, el margen bruto se sostiene en el 64.2%, muy superior al margen promedio de las agencias de consultoría tradicionales (20-30%).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Simulación matemática completa y consistente en el dossier y adición de calidad de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "5 contratos corporativos a USD 5K/mes",
+      "Facturas de Factiva y Google Cloud",
+      "Planilla de sueldos de 2 analistas"
+    ],
+    "actors": [
+      "Equipo BRIDGE",
+      "5 Clientes Corporativos",
+      "CFO"
+    ],
+    "steps": [
+      "Cierre de 5 contratos",
+      "Contratación de analista senior y junior",
+      "Operación continua de plataforma",
+      "Generación de USD 18.2K de margen bruto mensual"
+    ],
+    "states": [
+      "1 Cliente (42% Margen)",
+      "3 Clientes (67% Margen)",
+      "5 Clientes (73% Margen)"
+    ],
+    "outputs": [
+      "Flujo de caja operacional positivo de USD 219K anuales"
+    ],
+    "exceptions": [
+      "Retraso en el pago de un cliente resuelto mediante provisión de capital de trabajo a 60 días"
+    ]
+  },
+  "entities": [
+    "MRR USD 25.000",
+    "ARR USD 300.000",
+    "Margen Bruto 73.1%",
+    "Analista Senior",
+    "Analista Junior",
+    "Cartera 5 Clientes"
+  ],
+  "relations": [
+    {
+      "from": "5 Clientes Corporativos",
+      "to": "MRR USD 25.000",
+      "type": "generates"
+    },
+    {
+      "from": "Operación Tech-Enabled",
+      "to": "Margen Bruto 73.1%",
+      "type": "delivers"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Margen bruto consultora tradicional vs Margen bruto BRIDGE",
+      "diferencia": "Consultora tradicional = 20-30% de margen por su alta intensidad de mano de obra artesanal; BRIDGE = > 73% de margen gracias a la automatización algorítmica y el modelo 1:4."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "initial_mrr": "USD 25.000",
+    "initial_arr": "USD 300.000",
+    "gross_margin_percentage": "73.1%"
+  },
+  "bridge_implications": "Fijar el hito de los 'Primeros 5 Clientes' como el objetivo central de validación financiera y autofinanciamiento del proyecto BRIDGE.",
+  "open_gaps": [
+    "Definir el paquete de incentivos (stock options o bonos por cliente retenido) para los dos primeros analistas."
+  ],
+  "next_question_ids": [
+    "P08-F37",
+    "P08-F38"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F28",
+  "pilar": "P08",
+  "eje": "Construir, comprar e integrar",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar construir, comprar e integrar de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de este eje exige modelar una matriz de decisiones tecnológicas con: 1) Variables Técnicas y Financieras (costo fijo de licencia, costo variable por token/request, latencia promedio y P95, uptime garantizado por SLA, esfuerzo de ingeniería en horas-hombre para desarrollo in-house); 2) Categorías Arquitectónicas (Cómputo Fundacional LLM, Almacenamiento Relacional y Vectorial, Agregación de Fuentes Externas, Lógica de Negocio y Ontología Local, Capa de Interfaz y Auditoría HITL); 3) Relaciones de Acoplamiento (dependencia crítica, redundancia multi-proveedor, interfaz de abstracción agnóstica); y 4) Condiciones de Gobernanza (certificación SOC 2 / ISO 27001, compromiso contractualmente vinculante de Zero Data Retention, cumplimiento de Ley 21.719 en Chile).",
+  "findings": [
+    {
+      "claim_id": "P08-F28-C1",
+      "claim": "El modelo ontológico de decisiones técnicas estructura las dependencias entre costos marginales, requerimientos normativos y arquitectura modular de software.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "tech_decision_ontology",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 5.4 'Ontología Estructurada de Componentes y Decisión Make-or-Buy'",
+          "excerpt_short": "La arquitectura debe formalizarse mediante la relación entre las entidades 'Componente_Arquitectura', 'Tipo_Decision' (build, buy, integrate), 'Proveedor_Candidato', 'Metrica_SLA', y 'Gobernanza_Datos'. Cada decisión se valida frente a una función de optimización que minimiza el costo total de propiedad (TCO) condicionado a una tasa de fallo inferior al 0.1% y cumplimiento normativo estricto.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_EVIDENCE_MAP",
+          "source_id": "1323b514-5154-49f7-b105-42766ddbcaf5",
+          "locator": "Eje 5: Construir, Comprar e Integrar - Esquema de Relaciones de Componentes",
+          "excerpt_short": "Esquema relacional: 'Modulo_Sistema' -> 'Estrategia_Provision' -> 'Restriccion_Seguridad' -> 'Impacto_Margen_Bruto'.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño ontológico riguroso y formalizado en la documentación técnica de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de módulos",
+      "Especificaciones de APIs",
+      "Restricciones de seguridad CISO"
+    ],
+    "actors": [
+      "Arquitecto de Soluciones",
+      "Ingeniero de Datos",
+      "Comité de Seguridad"
+    ],
+    "steps": [
+      "Mapeo de módulos del sistema en la ontología",
+      "Evaluación de costos y dependencias",
+      "Asignación de estrategia (Make vs Buy vs Integrate)",
+      "Aprobación formal"
+    ],
+    "states": [
+      "Módulo Propuesto",
+      "Estrategia Asignada",
+      "Validado en Matriz",
+      "Implementado"
+    ],
+    "outputs": [
+      "Matriz arquitectónica oficial de BRIDGE"
+    ],
+    "exceptions": [
+      "Componentes de misión crítica que requieran desarrollo dual (redundancia activa)"
+    ]
+  },
+  "entities": [
+    "Make-or-Buy",
+    "TCO",
+    "Capa de Abstracción",
+    "Componente Arquitectura",
+    "Gobernanza de Datos"
+  ],
+  "relations": [
+    {
+      "from": "Módulo Sistema",
+      "to": "Estrategia Make-or-Buy",
+      "type": "governed_by"
+    },
+    {
+      "from": "Restricción CISO",
+      "to": "Zero Data Retention",
+      "type": "mandates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Decisión ad-hoc de programador vs Matriz ontológica de gobernanza",
+      "diferencia": "La decisión ad-hoc genera dispersión tecnológica y riesgos de seguridad; la matriz estructurada garantiza coherencia técnica y control financiero."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "architecture_modules_count": "5 categorías principales de componentes",
+    "target_system_uptime": "99.9% de disponibilidad garantizada"
+  },
+  "bridge_implications": "Utilizar este esquema de decisiones como el estándar oficial de ingeniería en el repositorio y guías de arquitectura de BRIDGE.",
+  "open_gaps": [
+    "Definir la política de actualización de dependencias de librerías open-source (Python/TypeScript)."
+  ],
+  "next_question_ids": [
+    "P08-F29",
+    "P08-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

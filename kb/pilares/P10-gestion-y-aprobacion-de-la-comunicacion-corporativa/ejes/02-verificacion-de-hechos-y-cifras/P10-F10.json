@@ -1,0 +1,146 @@
+{
+  "question_id": "P10-F10",
+  "pilar": "P10",
+  "eje": "Verificación de hechos y cifras",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar verificación de hechos y cifras de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la verificación de hechos y cifras exige: 1) Entidad de Registro de Hecho Compartido: `Entity_SharedFactRecord` con atributos (fact_id, claim_text, verified_value_numeric, unit_of_measure, effective_date_start, effective_date_end, provenance_document_id [hash SHA-256 en P04], verification_status [unverified, verified_sme, verified_legal, rejected_hold]); 2) Entidad de Registro de Discrepancia: `Entity_FactDiscrepancy` con atributos (discrepancy_id, fact_id, reported_source, reported_value, root_cause_category, resolution_decision, resolved_by_user_id); 3) Relaciones Grafo: `GROUNDED_IN_DOCUMENT`, `SUBSTANTIATED_BY_EVIDENCE`, `CONTRADICTS_RECORD`; 4) Condiciones de Integridad: Prohibición de valores nulos en `provenance_document_id` para hechos en estado `verified_*`, validación de coherencia de unidades de medida (e.g., m3/s, ppm, USD) y bloqueo del guardado si la fecha de vigencia del documento fuente ha expirado.",
+  "findings": [
+    {
+      "claim_id": "P10-F10-C1",
+      "claim": "El esquema estructurado de verificación fáctica define tablas normalizadas para hechos certificados y discrepancias resueltas con trazabilidad documental criptográfica y control de vigencia temporal.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_fact_checking",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Flujo de Trabajo Integral (Fase 3: Verificación)' y Sección 7 'Métricas de Calidad'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de soporte fáctico: Entity_SharedFactRecord y Entity_FactDiscrepancy. Cada registro cuenta con hash SHA-256 de procedencia, unidad de medida y fechas de vigencia. Cero discrepancias numéricas toleradas en la firma de Legal.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications and Issues Management",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Data Schema for Verified Organizational Facts', p. 8-12",
+          "retrieved_at": null,
+          "excerpt_short": "A single source of truth requires structuring verified facts with explicit document references, expiry dates, and named technical owners to maintain institutional reliability.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Broadsight y el modelo de datos del dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de modelos SQLAlchemy / Pydantic",
+      "Repositorio de documentos P04"
+    ],
+    "actors": [
+      "Arquitecto de Datos BRIDGE",
+      "Backend PostgreSQL",
+      "Validador Semántico"
+    ],
+    "steps": [
+      "Diseño de tablas relacionales de hechos",
+      "Implementación de constraints de integridad referencial",
+      "Verificación cruzada con la API de documentos",
+      "Pruebas unitarias de rechazo de datos huérfanos"
+    ],
+    "states": [
+      "Esquema Creado",
+      "Constraints Activas",
+      "Pruebas Superadas"
+    ],
+    "outputs": [
+      "Tabla `shared_fact_records` activa en PostgreSQL"
+    ],
+    "exceptions": [
+      "Registros con documentos expirados disparan alerta automática de actualización a su dueño técnico"
+    ]
+  },
+  "entities": [
+    "Entity_SharedFactRecord",
+    "Entity_FactDiscrepancy",
+    "Broadsight",
+    "Pydantic Schema",
+    "PostgreSQL"
+  ],
+  "relations": [
+    {
+      "from": "Entity_SharedFactRecord",
+      "to": "Entity_CommunicationRequest",
+      "type": "USED_TO_ANSWER"
+    },
+    {
+      "from": "Entity_FactDiscrepancy",
+      "to": "Entity_SharedFactRecord",
+      "type": "REPORTS_DEVIATION_IN"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Lista en documento Word vs Base de datos estructurada de hechos",
+      "diferencia": "El Word permite que cualquiera cambie un número sin control; la base de datos estructurada exige permisos, versionado y auditoría."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "fact_record_mandatory_attributes": "8 campos con NOT NULL",
+    "cryptographic_hash_algorithm": "SHA-256 para procedencia documental"
+  },
+  "bridge_implications": "Crear el esquema `facts` en PostgreSQL para alimentar automáticamente a los agentes generativos de redacción de comunicados.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F11",
+    "P10-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

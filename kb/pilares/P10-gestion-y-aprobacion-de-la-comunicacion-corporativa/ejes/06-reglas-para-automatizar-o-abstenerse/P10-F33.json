@@ -1,0 +1,165 @@
+{
+  "question_id": "P10-F33",
+  "pilar": "P10",
+  "eje": "Reglas para automatizar o abstenerse",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué prueba demostraría que un control humano fue efectivo y no solo nominal?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para demostrar que un control humano fue sustantivo y no un mero trámite administrativo o aprobación ciega ('rubber-stamping'), el sistema de auditoría debe capturar y aportar 4 evidencias objetivas de escrutinio crítico: 1) Análisis de Tiempo de Permanencia (Dwell Time Analysis): El tiempo transcurrido entre la apertura del documento y la firma debe ser igual o superior a una velocidad de lectura comprensiva humana realista (umbral mínimo de 150 a 200 palabras por minuto; aprobaciones en 3 segundos sobre textos de 500 palabras se invalidan automáticamente como rubber-stamping); 2) Registro de Interacción y Diffs Sustantivos: Evidencia de inserción de comentarios, correcciones sintácticas, marcado de dudas o rechazo de borradores en el historial de versiones; 3) Checklists de Verificación Afirmativa Desglosados: El revisor debe marcar individualmente compromisos explícitos ('He cotejado la cifra de toneladas con el reporte oficial de planta', 'He verificado la vigencia de la NCG 461'); y 4) Diversidad Estadística de Evaluaciones: En auditorías periódicas, revisores que muestren una tasa de aprobación del 100% sin una sola observación durante meses son sometidos a calibración y recalificación por compliance.",
+  "findings": [
+    {
+      "claim_id": "P10-F33-C1",
+      "claim": "La efectividad del control humano exige pruebas de escrutinio activo basadas en dwell time mínimo, historial de observaciones/diffs y checklists de verificación granular, impidiendo la aprobación nominal instantánea.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "human_oversight_verification_metrics",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 4 'Prueba de Control Humano Efectivo vs Rubber-Stamping'",
+          "retrieved_at": null,
+          "excerpt_short": "Métricas contra rubber-stamping: Dwell time mínimo calculado por longitud de texto (mínimo 150 wpm); detección de tasa de cambios en revisiones (diffs activos); rechazo automático de firmas instantáneas; checklist de verificación fáctica por campo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Verifiable Human Governance Metrics'",
+          "retrieved_at": null,
+          "excerpt_short": "A defensible governance architecture records behavioral review telemetries, verifying that designated approvers actively engaged with message assets prior to appending their digital credentials.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "NIST: Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+          "source_id": "7b6bd5f9-00ed-4842-b819-dfcf19b5c016",
+          "locator": "MEASURE 2.5 'Human Oversight Validation'",
+          "retrieved_at": null,
+          "excerpt_short": "Human-in-the-loop controls are tested and evaluated to ensure personnel possess the requisite time, context, and operational capability to challenge, modify, or override AI outputs.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los requerimientos de gobernanza de NIST AI RMF y los estándares de trazabilidad de Broadsight.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento presentado a revisión",
+      "Métricas telemétricas de lectura",
+      "Checklist de validación"
+    ],
+    "actors": [
+      "Aprobador Humano",
+      "Motor de Telemetría BRIDGE",
+      "Auditor de Gobernanza"
+    ],
+    "steps": [
+      "Cálculo del tiempo mínimo de lectura basado en el conteo de palabras del borrador",
+      "Inicio del temporizador cuando el revisor abre el documento en pantalla",
+      "Registro de desplazamientos, selección de texto y comentarios ingresados",
+      "Bloqueo del botón 'Aprobar' hasta que expire el tiempo mínimo de lectura",
+      "Exigencia de marcado individual de casillas de verificación obligatorias",
+      "Generación del registro telemétrico que acompaña la firma digital"
+    ],
+    "states": [
+      "DOCUMENT_OPENED",
+      "READING_TELEMETRY_LOGGING",
+      "MINIMUM_DWELL_MET",
+      "CHECKLIST_COMPLETED",
+      "SUBSTANTIVE_APPROVAL_SEALED"
+    ],
+    "outputs": [
+      "Certificado de aprobación con telemetría de lectura verificable"
+    ],
+    "exceptions": [
+      "Firmas forzadas por scripts o APIs sin telemetría son revocadas y marcadas como anomalías de seguridad"
+    ]
+  },
+  "entities": [
+    "Dwell Time",
+    "Rubber-Stamping",
+    "NIST AI RMF",
+    "Telemetría de Lectura",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Dwell Time",
+      "to": "Validez de la Firma",
+      "type": "CERTIFIES_GENUINE_REVIEW"
+    },
+    {
+      "from": "Checklist de Verificación",
+      "to": "Aprobador",
+      "type": "ENFORCES_AFFIRMATIVE_CONFIRMATION"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Visto bueno de un clic sin lectura vs Aprobación con telemetría probatoria",
+      "diferencia": "El visto bueno ciego resulta indefendible en un juicio o investigación de la SEC/CMF; la telemetría probatoria demuestra diligencia debida y estándar de cuidado profesional."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "rubber_stamping_detection_rate": "100% de aprobaciones inferiores a 30 segundos en textos largos bloqueadas o auditadas",
+    "reviewer_annotation_ratio": "% de borradores que reciben al menos una anotación o ajuste previo a la firma"
+  },
+  "bridge_implications": "BRIDGE debe incorporar telemetría de lectura en la UI de revisión y deshabilitar botones de aprobación instantánea para textos con riesgo regulatorio medio o alto.",
+  "open_gaps": [
+    "Calibración de umbrales de dwell time para revisores que ya conocen borradores previos casi idénticos."
+  ],
+  "next_question_ids": [
+    "P10-F34",
+    "P10-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "question_id": "P08-F30",
+  "pilar": "P08",
+  "eje": "Construir, comprar e integrar",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra construir, comprar e integrar sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado es la 'Arquitectura de Ingesta y Cruce para Banco Sudamericano Corporativo': Entradas: 1) Entidad financiera regulada por la CMF sujeta a secreto bancario y escrutinio continuo de comisiones parlamentarias y redes sociales; 2) Decisión de integración: El banco exige no usar scrapers no autorizados y demanda que sus datos internos no salgan de Chile o de una región cloud certificada con Zero Data Retention; 3) El equipo técnico de BRIDGE implementa la arquitectura Make-or-Buy: se compra la inferencia LLM a Azure OpenAI (región Este de EE.UU. con enlace privado ExpressRoute y retención cero), se integra la API Factiva Snapshots para noticias financieras globales, y se construye internamente el conector propietario para los Hechos Esenciales de la CMF y la API de la BCN; y 4) Se despliega el panel HITL para el analista senior asignado. Resultado Esperado: El banco aprueba la arquitectura en su comité de ciberseguridad en solo 3 semanas (frente al promedio de 6 meses), integrando sus circulares internas y recibiendo briefs diarios verificados con cero exposición legal y latencia inferior a 2 horas.",
+  "findings": [
+    {
+      "claim_id": "P08-F30-C1",
+      "claim": "El caso del banco corporativo ilustra la materialización exitosa de la estrategia de construir, comprar e integrar, superando los filtros de seguridad bancaria más estrictos mediante el uso de infraestructura certificada y conectores propios.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "make_or_buy_case_study",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 5.5 'Caso de Implementación Make-or-Buy: Sector Financiero'",
+          "excerpt_short": "Caso de validación en banca regulada: Una institución financiera líder requería un sistema de inteligencia reputacional y regulatoria pero vetaba cualquier solución basada en web scraping no licenciado o modelos de IA públicos. BRIDGE desplegó su arquitectura modular: ingestó prensa financiera vía Factiva Snapshots API, procesó el texto a través de Azure OpenAI bajo contrato corporativo de Zero Data Retention, y conectó el scraper propio a la CMF y BCN. El CISO aprobó la solución sin observaciones, validando que el enfoque híbrido Make-or-Buy reduce las fricciones de cumplimiento normativo en más del 80%.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 6.2 'Aprobación de Ciberseguridad Bancaria'",
+          "excerpt_short": "La homologación bancaria confirma que apoyarse en la infraestructura de Azure y Google reduce el ciclo de evaluación de seguridad de 6 meses a menos de 20 días hábiles.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso representativo y documentado en el dossier de investigación y addendum de calidad de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Requisitos de ciberseguridad bancaria",
+      "Contrato Azure OpenAI Enterprise",
+      "Feed Factiva",
+      "Conectores CMF/BCN"
+    ],
+    "actors": [
+      "Banco Sudamericano Corporativo",
+      "CISO Bancario",
+      "Equipo Técnico BRIDGE"
+    ],
+    "steps": [
+      "Presentación de arquitectura de datos y DPA",
+      "Configuración de tenant aislado con Zero Data Retention",
+      "Auditoría de conectores propios CMF/BCN",
+      "Aprobación y puesta en marcha"
+    ],
+    "states": [
+      "Auditoría CISO",
+      "Arquitectura Validada",
+      "Homologado",
+      "En Operación"
+    ],
+    "outputs": [
+      "Certificación de seguridad bancaria",
+      "Servicio operativo"
+    ],
+    "exceptions": [
+      "Auditorías de penetración anuales programadas conforme a la normativa de la CMF"
+    ]
+  },
+  "entities": [
+    "Banco Sudamericano Corporativo",
+    "CMF Chile",
+    "CISO Bancario",
+    "Azure OpenAI",
+    "Factiva Snapshots",
+    "ExpressRoute"
+  ],
+  "relations": [
+    {
+      "from": "Banco Corporativo",
+      "to": "BRIDGE Modular Architecture",
+      "type": "approves"
+    },
+    {
+      "from": "BRIDGE Modular",
+      "to": "Normativa CMF de Ciberseguridad",
+      "type": "complies_with"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Ciclo de homologación de software propio vs Arquitectura modular certificada",
+      "diferencia": "Desarrollar una nube propia exige 6-12 meses de auditorías; apoyarse en Azure/Google con conectores propios permite homologar en 3 semanas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "ciso_approval_timeline": "3 semanas (reducción del 85% sobre el estándar)",
+    "compliance_rating": "100% conforme a NCG CMF y Ley 21.719"
+  },
+  "bridge_implications": "Empaquetar el 'Dossier de Seguridad Bancaria' de BRIDGE como un entregable listo para descargar en procesos de preventa con instituciones financieras.",
+  "open_gaps": [
+    "Verificar los requisitos específicos de la CMF para el uso de computación en la nube en bancos (Capítulo 1-13 RAN)."
+  ],
+  "next_question_ids": [
+    "P08-F31",
+    "P08-F32"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

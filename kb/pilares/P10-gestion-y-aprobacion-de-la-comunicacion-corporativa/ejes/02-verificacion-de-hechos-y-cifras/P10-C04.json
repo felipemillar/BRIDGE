@@ -1,0 +1,146 @@
+{
+  "question_id": "P10-C04",
+  "pilar": "P10",
+  "eje": "Verificación de hechos y cifras",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué sigue sin prueba sobre verificación de hechos y cifras, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "1) Lo que sigue sin prueba definitiva es la velocidad de resolución de discrepancias fácticas complejas entre áreas operativas y financieras durante una crisis de impacto bursátil (e.g., cálculo de pérdidas por paralización de planta minera entre Finanzas y Minería en menos de 1 hora); 2) Fuentes fallidas o parciales: La fuente SEC original (source_id 8a031be9) falló por error de extracción y eCFR (8858106c) quedó bloqueada por pantalla CAPTCHA, subsanándose ambas con el texto oficial verificado de Cornell LII (b689098d); además, los estándares de Percepture (c41f5272) describen protocolos de crisis pero no aportan algoritmos de conciliación numérica; y 3) Validación mínima para resolver la incertidumbre: Ejecutar un simulacro de crisis financiera-operacional donde se inyecten cifras contradictorias (toneladas de mineral afectadas) entre el reporte de mina y el reporte bursátil, cronometrando el tiempo requerido por el algoritmo de BRIDGE para forzar la reunión de conciliación y emitir la cifra unificada bajo firma mancomunada.",
+  "findings": [
+    {
+      "claim_id": "P10-C04-C1",
+      "claim": "La velocidad de conciliación de discrepancias numéricas bajo presión bursátil carece de datos empíricos de campo; las fuentes de eCFR y SEC fallaron, sustituidas canónicamente por Cornell LII, requiriéndose un simulacro de conciliación.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "factual_reconciliation_gaps",
+      "evidence": [
+        {
+          "source_title": "P10_GAPS_AND_VALIDATION: Vacios, Hipotesis y Validacion",
+          "source_id": "1bdee7c1-95df-4848-ba8e-74ff3eaca685",
+          "locator": "Sección 'Brechas en Conciliación Fáctica Bajo Estrés'",
+          "retrieved_at": null,
+          "excerpt_short": "Incertidumbre en latencia de conciliación: No existen mediciones de campo sobre el tiempo que tarda un comité en resolver contradicciones internas en menos de 2 horas. Validación requerida: Simulación controlada.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Cornell LII: 17 CFR § 240.10b-5 - Employment of Manipulative and Deceptive Devices",
+          "source_id": "b689098d-8595-4f11-9e01-293b0e194a96",
+          "locator": "Substitución Canónica Verificada",
+          "retrieved_at": null,
+          "excerpt_short": "Texto sustantivo íntegro de la Regla 10b-5 verificada tras descarte de pantallas anti-bot de eCFR.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Comprobación directa del fallo de eCFR y sustento documental del vacío en P10_GAPS_AND_VALIDATION.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Escenario de discrepancia numérica de 50.000 ton vs 15.000 ton",
+      "Equipo de Finanzas y Operaciones"
+    ],
+    "actors": [
+      "Gerente de Finanzas",
+      "Gerente de Operaciones",
+      "Facilitador de Conciliación BRIDGE"
+    ],
+    "steps": [
+      "Detección de discrepancia > 5% entre reportes internos",
+      "Apertura de sala de conciliación virtual urgente",
+      "Cotejo de hojas de pesaje primarias de balanza de planta",
+      "Adopción de cifra oficial y certificación de procedencia",
+      "Cálculo del tiempo total insumido en la resolución"
+    ],
+    "states": [
+      "DISCREPANCY_FLAGGED",
+      "WAR_ROOM_ACTIVE",
+      "PRIMARY_LEDGER_AUDITED",
+      "CONSENSUS_REACHED"
+    ],
+    "outputs": [
+      "Cifra certificada para emisión de hecho esencial"
+    ],
+    "exceptions": [
+      "Si la reunión de conciliación excede 60 minutos, se emite un rango acotado de incertidumbre con safe harbor legal"
+    ]
+  },
+  "entities": [
+    "Cornell LII",
+    "Conciliación Fáctica",
+    "Simulacro de Estrés",
+    "P10_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Discrepancia Numérica",
+      "to": "Sala de Conciliación",
+      "type": "TRIGGERS_WAR_ROOM"
+    },
+    {
+      "from": "Simulacro",
+      "to": "Incertidumbre de Latencia",
+      "type": "RESOLVES_EMPIRICALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Esperar una crisis real para probar la conciliación vs Simulacro previo",
+      "diferencia": "Esperar la crisis real arriesga suspensiones de cotización en bolsa; el simulacro ajusta los protocolos de entendimiento entre ingenieros y abogados con antelación."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "reconciliation_time_target_minutes": "Tiempo objetivo < 45 minutos para resolver discrepancias numéricas"
+  },
+  "bridge_implications": "Permite a BRIDGE estructurar una funcionalidad de 'War Room de Datos' que asista en la mediación entre gerencias operativas y financieras.",
+  "open_gaps": [
+    "Protocolos de firma mancomunada remota para directores en zonas sin cobertura de telefonía móvil."
+  ],
+  "next_question_ids": [
+    "P10-C05",
+    "P10-C06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

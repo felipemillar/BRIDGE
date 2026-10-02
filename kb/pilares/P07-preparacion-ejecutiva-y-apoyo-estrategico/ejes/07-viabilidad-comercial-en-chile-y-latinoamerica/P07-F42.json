@@ -1,0 +1,119 @@
+{
+  "question_id": "P07-F42",
+  "pilar": "P07",
+  "eje": "Viabilidad comercial en Chile y Latinoamérica",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra viabilidad comercial en Chile y Latinoamérica sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso documentado en la Plantilla 2 del Dossier P07 ilustra la preparación del Vicepresidente de Asuntos Corporativos de Minera Los Salares S.A. ante una reunión estratégica con la Directora Regional del Servicio de Evaluación Ambiental (SEA) de Antofagasta. Entradas: 1) Solicitud formal de reunión para presentar avances de la Declaración de Impacto Ambiental (DIA) del proyecto de optimización hídrica; 2) Historial de InfoLobby: La autoridad ha sostenido 6 reuniones sobre cuencas hídricas en los últimos 3 meses con ONGs y comunidades, mostrando un sesgo de alta exigencia de monitoreo participativo; 3) Documentación interna: Certificación ambiental RCA N° 124/2021 y balances de extracción cero en acuíferos protegidos; 4) Requisito legal: Calificación obligatoria como audiencia de lobby bajo Ley 20.730. Resultado esperado: Generación de un Memo de Preparación de 2 páginas con: Status regulatorio Ley 20.730; Perfil conductual de la autoridad; Objetivos de la reunión (primario: ofrecer red de monitoreo participativo; línea roja: no aceptar plazos que paralicen la planta); Argumentario con citas exactas a la RCA; y Borrador automático de declaración de asistencia para ser subido a InfoLobby.cl tras la reunión, demostrando la superioridad comercial de BRIDGE frente a software extranjero que ignora este marco.",
+  "findings": [
+    {
+      "claim_id": "P07-F42-C1",
+      "claim": "La integración nativa de los datos de InfoLobby y de las exigencias del SEIA en la preparación de audiencias con autoridades chilenas demuestra el valor diferencial y la viabilidad comercial de BRIDGE.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "local_commercial_case",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 6 (Plantilla 2: Preparación de Reunión Estratégica / Ley del Lobby)",
+          "excerpt_short": "Caso de preparación de reunión bajo Ley 20.730 con autoridad regional ambiental: Incluye status regulatorio con link directo a InfoLobby.cl, perfil de la contraparte designada por Alta Dirección Pública, objetivos estratégicos con línea roja inadmisible y argumentario técnico anclado a resoluciones de la empresa. Ningún software global provee este entregable llave en mano.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso canónico completamente estructurado y documentado en la Plantilla 2 del Dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "caso_infolobby_sea_antofagasta": {
+      "autoridad": "Directora Regional SEA Antofagasta (Sujeto Pasivo Ley 20.730).",
+      "materia": "Modificación operacional y red de monitoreo participativo cuenca norte.",
+      "entregables_generados": [
+        "Status Legal: Notificación de obligatoriedad de registro en InfoLobby.",
+        "Análisis de Contraparte: Síntesis de las 6 audiencias previas sostenidas por la Directora.",
+        "Objetivo Estratégico: Proponer canal de telemetría público para disipar temores de ONGs.",
+        "Línea Roja: No acceder a paralizaciones arbitrarias no sustentadas en la RCA.",
+        "Formulario InfoLobby: Borrador con asistentes, gestor de interés y materias tratadas listo para enviar."
+      ],
+      "impacto_comercial": "Ahorro de 5 horas de trabajo legal y aseguramiento de 100% de cumplimiento en transparencia pública."
+    }
+  },
+  "entities": [
+    "SEA Antofagasta",
+    "Ley 20.730",
+    "InfoLobby.cl",
+    "RCA N° 124/2021",
+    "Minera Los Salares S.A."
+  ],
+  "relations": [
+    {
+      "from": "Minera Los Salares",
+      "to": "SEA Antofagasta",
+      "type": "holds_lobby_meeting_with"
+    },
+    {
+      "from": "Memo de Preparación",
+      "to": "InfoLobby.cl",
+      "type": "generates_filing_for"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Preparación Manual con Asesor Externo vs Memo BRIDGE",
+      "diferencia": "El asesor externo cobra US$ 3.000 por preparar una minuta de lobby que tarda días; BRIDGE genera el memo con trazabilidad de InfoLobby y citas de RCA en minutos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "preparation_time_reduction": "De 5 horas a 10 minutos de revisión",
+    "regulatory_filing_readiness": "100% precargado para InfoLobby"
+  },
+  "bridge_implications": "Demostrar este caso en los pilotos comerciales de BRIDGE con gerencias de asuntos públicos de la gran minería y energía en Chile.",
+  "open_gaps": [
+    "Ampliación de conectores automatizados hacia las Direcciones de Obras Municipales (DOM) para proyectos inmobiliarios e industriales."
+  ],
+  "next_question_ids": [
+    "P07-F43",
+    "P07-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T06:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

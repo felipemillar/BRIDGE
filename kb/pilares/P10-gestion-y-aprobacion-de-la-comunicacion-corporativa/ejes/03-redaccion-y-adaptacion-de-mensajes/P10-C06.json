@@ -1,0 +1,146 @@
+{
+  "question_id": "P10-C06",
+  "pilar": "P10",
+  "eje": "Redacción y adaptación de mensajes",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué sigue sin prueba sobre redacción y adaptación de mensajes, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "1) Lo que sigue sin prueba concluyente es la tasa de retención cognitiva y comprensión de disclaimers regulatorios por parte del público masivo cuando estos se resumen en formatos de video corto o carruseles gráficos para redes sociales (e.g., TikTok/Instagram); 2) Fuentes fallidas o parciales: La fuente Coombs (2007, source_id acd418f9) falló por error de extracción y fue regularizada canónicamente mediante Anderson SCCT (ae1d0dbb); además, la guía de la ADX (f2b3a7f2) es parcial por restringirse al mercado de Abu Dhabi sin abordar el consumo de información por audiencias en plataformas móviles occidentales; y 3) Validación mínima para resolver la incertidumbre: Realizar un panel de pruebas A/B con 200 usuarios representativos de comunidades e inversionistas minoristas expuestos a versiones adaptadas de un comunicado de crisis (texto clásico vs micro-cápsula con enlace canónico), aplicando encuestas de recuerdo de hechos clave y percepción de transparencia para calibrar el formato óptimo.",
+  "findings": [
+    {
+      "claim_id": "P10-C06-C1",
+      "claim": "La efectividad comunicacional de disclaimers en formatos visuales emergentes sigue sin validación cuantitativa de campo; Coombs falló y fue sustituida por Anderson SCCT, requiriendo pruebas A/B de retención cognitiva.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "drafting_gaps_and_cognitive_testing",
+      "evidence": [
+        {
+          "source_title": "P10_GAPS_AND_VALIDATION: Vacios, Hipotesis y Validacion",
+          "source_id": "1bdee7c1-95df-4848-ba8e-74ff3eaca685",
+          "locator": "Sección 'Brechas en Comprensión de Disclaimers en Formatos Visuales'",
+          "retrieved_at": null,
+          "excerpt_short": "Vacío en retención de advertencias legales: Se desconoce si los usuarios perciben adecuadamente los disclaimers resumidos en formatos visuales móviles. Validación requerida: Testing A/B con grupos focales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Anderson: Situational Crisis Communication Theory (SCCT)",
+          "source_id": "ae1d0dbb-67ec-484b-9d34-004f0faa44f2",
+          "locator": "Sustituto Canónico de Coombs (2007)",
+          "retrieved_at": null,
+          "excerpt_short": "Documento sustantivo íntegro de SCCT utilizado canónicamente tras el descarte del registro fallido de Coombs acd418f9.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación empírica de la sustitución canónica de Coombs por Anderson y concordancia con P10_GAPS_AND_VALIDATION.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Comunicado oficial sobre mantenimiento de planta",
+      "Variantes textual y visual móvil",
+      "Muestra de 200 evaluadores"
+    ],
+    "actors": [
+      "Investigador de Audiencias",
+      "Diseñador de Mensaje BRIDGE",
+      "Panel de Testeo A/B"
+    ],
+    "steps": [
+      "Exposición aleatoria a formato tradicional (Grupo A) vs formato adaptado (Grupo B)",
+      "Cuestionario de retención sobre cifras de seguridad y advertencias legales",
+      "Cálculo de error de interpretación por grupo",
+      "Ajuste de plantillas de adaptación en BRIDGE según resultados"
+    ],
+    "states": [
+      "EXPERIMENT_DESIGNED",
+      "PANEL_EXPOSED",
+      "RESPONSES_LOGGED",
+      "COGNITIVE_MODEL_CALIBRATED"
+    ],
+    "outputs": [
+      "Recomendación de diseño de adaptaciones visuales con respaldo empírico"
+    ],
+    "exceptions": [
+      "Si la comprensión del safe harbor cae por debajo del 70% en el formato visual, se prohíbe el uso de micro-cápsulas para ese tipo de anuncio"
+    ]
+  },
+  "entities": [
+    "Testing A/B",
+    "Anderson SCCT",
+    "Retención Cognitiva",
+    "P10_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Formato Visual Adaptado",
+      "to": "Panel A/B",
+      "type": "EVALUATED_BY"
+    },
+    {
+      "from": "Anderson SCCT",
+      "to": "Coombs Fallido",
+      "type": "CANONICALLY_REPLACES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir que un carrusel de Instagram informa legalmente vs Prueba empírica A/B",
+      "diferencia": "Asumir sin prueba expone a la empresa a acusaciones de ocultar información; la prueba empírica demuestra que el diseño garantiza la comprensión del usuario."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cognitive_retention_benchmark": "Target > 80% de recuerdo preciso de cifras y advertencias clave en ambos grupos"
+  },
+  "bridge_implications": "Permitirá a BRIDGE guiar a las agencias creativas sobre cómo modular piezas de video y redes sociales respetando los estándares de compliance.",
+  "open_gaps": [
+    "Regulaciones del SERNAC en materia de legibilidad tipográfica en pantallas de teléfonos móviles."
+  ],
+  "next_question_ids": [
+    "P10-C07",
+    "P10-C08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

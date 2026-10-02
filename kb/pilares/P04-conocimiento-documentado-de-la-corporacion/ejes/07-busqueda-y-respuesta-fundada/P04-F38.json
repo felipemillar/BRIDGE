@@ -1,0 +1,147 @@
+{
+  "question_id": "P04-F38",
+  "pilar": "P04",
+  "eje": "Búsqueda y respuesta fundada",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Cómo se seleccionan citas suficientes para respaldar cifras, fechas y compromisos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La selección de citas suficientes se fundamenta en la metodología de Atribución Factual a Nivel de Oración (Sentence-Level Attribution; Bohnet et al., 2022; Yue et al., 2023): 1) Descomposición Atómica: la respuesta generada se fragmenta en proposiciones atómicas individuales (cada una con un sujeto, predicado y cifra/fecha); 2) Verificación Booleana de Sustento: un evaluador algorítmico comprueba si el fragmento recuperado contiene evidencia suficiente e inequívoca para la proposición; 3) Anclaje Estricto de Cita: toda cifra, fecha o meta debe llevar una llamada de cita inmediata con 5 atributos inmutables (`document_title`, `edition_year`, `page_number`, `exact_quote` literal y `hash_sha256`); y 4) Umbrales de Calidad: se exige una Precisión de Cita ≥ 0.98 (98% de las citas contienen exactamente el hecho afirmado) y un Recall de Cita ≥ 0.95 (95% de las afirmaciones cuantitativas cuentan con cita verificable), prohibiendo terminantemente citas genéricas al documento completo.",
+  "findings": [
+    {
+      "claim_id": "P04-F38-C1",
+      "claim": "La atribución en asuntos corporativos requiere citación granular a nivel de oración y comprobación atómica con hash criptográfico, erradicando las citas genéricas no verificables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2026",
+        "region": "Global",
+        "actor": "Evaluación de Atribución en LLMs"
+      },
+      "evidence": [
+        {
+          "source_id": "4df5f8f3-f0db-42c2-a566-b66b67b81db0",
+          "source_title": "Attributed QA: Evaluation and Modeling (Bohnet et al., 2022)",
+          "original_url": "https://arxiv.org/abs/2212.08037",
+          "locator": "Sección 2 and 4: Attribution Precision and Recall Metrics",
+          "excerpt_short": "Defines fine-grained attribution metrics requiring that every factual claim in the model output is directly supported by cited evidence snippets.",
+          "source_date": "2022-12-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Matriz Consolidada de Criterios (Dimensión 2)",
+          "excerpt_short": "Precisión de Cita ≥ 0.98, Recall de Cita ≥ 0.95. Alineación oración-por-oración con hash de fragmento de origen.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco riguroso de Bohnet et al. de Google Research y métricas del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borrador de respuesta generado por LLM",
+      "Fragmentos de contexto utilizados"
+    ],
+    "actors": [
+      "Sentence Splitter",
+      "Atomic Fact Extractor",
+      "Attribution Verifier"
+    ],
+    "steps": [
+      "Descomposición en oraciones",
+      "Comprobación de sustentación contra fragmento citado",
+      "Validación de página y hash",
+      "Publicación de respuesta con citas"
+    ],
+    "states": [
+      "Generated_Draft",
+      "Attribution_Checked",
+      "Certified_Response"
+    ],
+    "outputs": [
+      "Texto final con llamadas de cita verificables a página y hash"
+    ],
+    "exceptions": [
+      "Oración que contiene una cifra sin sustento directo en el fragmento citado"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ATTRIBUTION_VERIFIER",
+      "type": "mecanismo_calidad",
+      "name": "Verificador de Atribución Atómica de Citas",
+      "aliases": [
+        "Atomic Citation Verifier"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ATTRIBUTION_VERIFIER",
+      "predicate": "certifica_respuestas_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F38-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Formato de citación",
+      "Citación genérica ('según la memoria')": "Obliga al usuario a buscar manualmente en 250 páginas para comprobar la cifra.",
+      "Citación a nivel de oración": "Enlaza directamente al número de página, párrafo exacto y hash SHA-256."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe suprimir o marcar cualquier afirmación generada que no supere el umbral de sustentación atómica del 98%.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F39"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

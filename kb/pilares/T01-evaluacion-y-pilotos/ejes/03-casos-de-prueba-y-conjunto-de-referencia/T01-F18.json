@@ -1,0 +1,170 @@
+{
+  "question_id": "T01-F18",
+  "pilar": "T01",
+  "eje": "Casos de prueba y conjunto de referencia",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra casos de prueba y conjunto de referencia sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso de Prueba CP-T01-042 (Escenario de Conflicto de Fechas en Hecho Esencial CMF): 1) Entradas: Consulta del usuario: '¿Cuál fue la fecha formal de cierre de la transacción minera y el monto final acordado?'; Contexto disponible: Documento A (Nota de prensa, 15 de marzo de 2025: 'Transacción estimada en 120M USD'); Documento B (Hecho Esencial oficial ante la CMF, 28 de marzo de 2025: 'Cierre definitivo el 27 de marzo por un monto final de 114.5M USD'); 2) Ejecución del Sistema: El motor Saber recupera ambos documentos, detecta conflicto epistémico entre prensa preliminar y hecho regulatorio formal (taxonomía SABER / Zhu et al. 2026); y 3) Resultado Esperado: Respuesta generada que reporta con precisión 114.5M USD citando exclusivamente el Hecho Esencial CMF con localizador exacto, explicitando que la cifra anterior de 120M USD correspondía a estimaciones preliminares de prensa. Citation Precision = 1.0, Citation Recall = 1.0, SelfCheckGPT = 0.0% alucinación.",
+  "findings": [
+    {
+      "claim_id": "T01-F18-C1",
+      "claim": "En la resolución de discrepancias factuales entre fuentes corporativas no reguladas (prensa) y documentos oficiales ante la CMF, el sistema debe dar prevalencia epistémica al hecho esencial oficial y transparentar la evolución temporal del dato para anular el riesgo de confusión en la toma de decisiones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Chile",
+        "actor": "The Bridge Intelligence / CMF"
+      },
+      "evidence": [
+        {
+          "source_id": "8663bbbe-40d9-4176-a989-b5f46b333f36",
+          "source_title": "Zhu et al. (2026) - SABER: Trust or Abstain? A Ground-Truth-Aligned Knowledge-Conflict Benchmark",
+          "original_url": "https://arxiv.org/html/2605.18792v1",
+          "locator": "Section 4: Experiments on Conflicting Sources",
+          "excerpt_short": "Models must prioritize authoritative, ground-truth-aligned sources when secondary or speculative documents present conflicting factual assertions.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "f5a15f9d-310f-4bfc-ae19-70ff8cc2bdcf",
+          "source_title": "T01_VERIFICATION_CORRECTIONS: Reconciliación de Tareas y Evidencia Canónica",
+          "original_url": null,
+          "locator": "Sección 2: Reglas de Prevalencia en Casos de Prueba",
+          "excerpt_short": "Los hechos esenciales y balances oficiales auditados prevalecen absolutamente sobre resúmenes de prensa o minutas internas en las pruebas de fidelidad.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia normativa y rectora canónica confirmada.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Query de consulta fáctica de transacción corporativa",
+      "Doc A: Artículo de prensa con cifra estimada (120M USD)",
+      "Doc B: Hecho Esencial oficial CMF con cifra auditada (114.5M USD)"
+    ],
+    "actors": [
+      "Motor de Recuperación RAG",
+      "Módulo Saber",
+      "Analista de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Recuperar pasajes de ambos documentos mediante búsqueda híbrida",
+      "Detectar discrepancia numérica entre Doc A y Doc B",
+      "Aplicar regla de prevalencia: Fuente regulatoria oficial CMF prevalece sobre prensa",
+      "Sintetizar respuesta con cita explícita al Hecho Esencial CMF y nota aclaratoria sobre la prensa"
+    ],
+    "states": [
+      "RECUPERACION_MULTI_DOC",
+      "DETECCION_CONFLICTO",
+      "RESOLUCION_PREVALENCIA",
+      "RESPUESTA_VERIFICADA"
+    ],
+    "outputs": [
+      "Respuesta fáctica con Citation Precision = 1.0",
+      "Registro de resolución de conflicto en bitácora"
+    ],
+    "exceptions": [
+      "Si el Hecho Esencial no estuviera firmado o contuviera una fe de erratas posterior, el sistema debe señalar la reserva legal correspondiente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "HECHO_ESENCIAL_CMF",
+      "type": "documento",
+      "name": "Hecho Esencial Oficial CMF",
+      "aliases": [
+        "Fuente Regulatoria Primaria"
+      ]
+    },
+    {
+      "entity_id": "PRENSA_FINANCIERA",
+      "type": "documento",
+      "name": "Reporte de Prensa Financiera",
+      "aliases": [
+        "Fuente Secundaria No Oficial"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "HECHO_ESENCIAL_CMF",
+      "predicate": "prevalece_sobre",
+      "object_id": "PRENSA_FINANCIERA",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F18-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Hecho Esencial CMF",
+      "item_b": "Artículo de Prensa",
+      "dimension": "Fidelidad jurídica",
+      "conclusion": "El Hecho Esencial CMF posee fe pública y valor legal vinculante; el artículo de prensa es una estimación no vinculante."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Citation Precision en CP-T01-042",
+      "denominator": "Total de citas emitidas",
+      "target": "1.0 (100%)"
+    },
+    {
+      "metric": "Tasa de alucinación SelfCheckGPT",
+      "denominator": "Muestreo estocástico n=20",
+      "target": "0.0%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "El módulo Saber debe incorporar metadatos de 'autoridad regulatoria' para resolver automáticamente jerarquías de fuentes en casos de conflicto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

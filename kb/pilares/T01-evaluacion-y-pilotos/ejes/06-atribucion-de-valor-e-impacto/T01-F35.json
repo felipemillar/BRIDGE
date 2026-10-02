@@ -1,0 +1,145 @@
+{
+  "question_id": "T01-F35",
+  "pilar": "T01",
+  "eje": "Atribución de valor e impacto",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre atribución de valor e impacto?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El marco de atribución de valor e impacto se respalda en fuentes internacionales canónicas y textos metodológicos verificados en T01: 1) AMEC (Integrated Evaluation Framework, 2020, Fuente f7ad452c, p. 2-5): Respalda la taxonomía cuádruple de Outputs, Outtakes, Outcomes e Impact y el grafo dirigido de causalidad; 2) AMEC (Barcelona Principles 3.0, 2020, Fuente 92dfdc7c, Principios 2, 3, 5 y 6): Respalda la exigencia de medir outcomes organizacionales, el aislamiento de factores confusores externos y el rechazo a métricas superficiales de volumen; 3) Arthur W. Page Society (Page Principles, Fuente f45d1506, Principio 2): Respalda la tesis estructural de que el 90% de la reputación corporativa depende de la conducta operacional de la empresa; y 4) T01_QUALITY_ADDENDUM (Fuente 45782049, Sección 6): Respalda la prohibición interna de formular promesas causales de mejora reputacional a los clientes de The Bridge Intelligence.",
+  "findings": [
+    {
+      "claim_id": "T01-F35-C1",
+      "claim": "La combinación de los principios de AMEC y la Page Society proporciona un blindaje epistemológico y comercial total contra el riesgo de sobrepromesa (over-promising) tecnológica en asuntos corporativos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "AMEC & Arthur W. Page Society"
+      },
+      "evidence": [
+        {
+          "source_id": "f7ad452c-58e4-47a4-81ba-7248495038a3",
+          "source_title": "AMEC - Integrated Evaluation Framework for Public Relations & Corporate Affairs",
+          "original_url": null,
+          "locator": "Section 1: Theoretical Foundations",
+          "excerpt_short": "Evaluation must remain anchored in rigorous methodology, preventing unsubstantiated leaps between communication production and overarching business outcomes.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "92dfdc7c-83e6-4439-b476-56af1da92d1b",
+          "source_title": "AMEC - Barcelona Principles 3.0 for Communications Measurement and Evaluation",
+          "original_url": null,
+          "locator": "Principle 6: Holistic Measurement",
+          "excerpt_short": "Organizational success requires cross-functional measurement across communication, operations, and governance.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el corpus metodológico canónico.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus bibliográfico T01",
+      "Catálogo de pasajes canónicos"
+    ],
+    "actors": [
+      "Auditor Antigravity"
+    ],
+    "steps": [
+      "Identificar citas textuales para cada eslabón de la cadena de valor",
+      "Verificar alineamiento entre estándares AMEC y políticas internas de BRIDGE",
+      "Consolidar la tabla de fuentes del Eje 6 en el manifiesto canónico",
+      "Documentar directrices para el equipo de ventas"
+    ],
+    "states": [
+      "VERIFICACION_CITAS",
+      "ALINEAMIENTO_POLITICAS",
+      "CONSOLIDACION_TABLA"
+    ],
+    "outputs": [
+      "Tabla de fuentes autoritativas de atribución de valor e impacto"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "AMEC_STANDARDS_DOC",
+      "type": "documento",
+      "name": "Estándares AMEC Barcelona y Framework",
+      "aliases": [
+        "92dfdc7c y f7ad452c"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "AMEC_STANDARDS_DOC",
+      "predicate": "valida_metodologia_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F35-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Resolución de fuentes en Eje 6",
+      "denominator": "Total citas metodológicas formuladas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Garantiza coherencia total entre el discurso comercial y el rigor de ingeniería del producto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

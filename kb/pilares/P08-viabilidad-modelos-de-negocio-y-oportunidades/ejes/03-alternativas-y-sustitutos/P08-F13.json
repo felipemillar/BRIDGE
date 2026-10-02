@@ -1,0 +1,153 @@
+{
+  "question_id": "P08-F13",
+  "pilar": "P08",
+  "eje": "Alternativas y sustitutos",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Cómo resuelven hoy el problema agencias, equipos internos y software especializado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Hoy las corporaciones resuelven la inteligencia de asuntos corporativos mediante tres alternativas fragmentadas e insatisfactorias: 1) Agencias tradicionales de comunicaciones y asuntos públicos (LLYC, Burson, Tironi, Azerta, Imaginaccion), que operan con retainers de CLP 4M a 18M/mes entregando informes artesanales en PDF con desfases de 24 a 72 horas, alta rotación de analistas junior y nula trazabilidad algorítmica; 2) Equipos internos (in-house), donde analistas remunerados entre CLP 2.2M y 3.0M líquido consumen el 70% de su jornada armando manualmente clippings y buscando en el Diario Oficial o InfoLobby; y 3) Software especializado global (FiscalNote, Quorum, Signal AI), que cobra USD 20K a 50K/año pero es 'ciego' a las fuentes regulatorias chilenas (SMA, BCN, InfoLobby) y carece de soporte humano local.",
+  "findings": [
+    {
+      "claim_id": "P08-F13-C1",
+      "claim": "El mercado actual está dividido entre consultoría artesanal cara y lenta, esfuerzo manual interno ineficiente y software global desconectado de la realidad institucional chilena.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "incumbent_solutions_analysis",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 3.1 'Mapeo y Evaluación de Alternativas Existentes'",
+          "excerpt_short": "Las corporaciones recurren hoy a un mosaico ineficiente: pagan retainers de USD 5.000 a USD 15.000 mensuales a agencias de lobby y comunicaciones que envían resúmenes manuales con 2 días de retraso; sobrecargan a sus propios analistas internos en tareas de 'copiar y pegar' de boletines oficiales; o contratan plataformas extranjeras como FiscalNote o Signal AI que, pese a su costo de decenas de miles de dólares, no rastrean las resoluciones de la SMA, ni los trámites de la BCN ni las audiencias de InfoLobby en Chile.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "LLYC: Tendencias y Modelos de Servicio en Asuntos Públicos y Corporativos",
+          "source_id": "dad4edf1-de3c-4f06-ac79-9f0c42435a98",
+          "locator": "Capítulo 1 'Modelos de consultoría y entrega de inteligencia', p. 7-10",
+          "excerpt_short": "Los servicios de consultoría estratégica siguen basándose intensivamente en horas-hombre de consultores y analistas, con entregables periódicos (semanales o mensuales) y alertas ad-hoc durante contingencias, enfrentando desafíos de inmediatez y escalabilidad frente al ritmo de las crisis digitales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los modelos de servicio de LLYC y el dossier de alternativas de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Prensa diaria",
+      "Boletines de agencias",
+      "Plataformas extranjeras",
+      "Búsquedas manuales"
+    ],
+    "actors": [
+      "Agencia de Comunicaciones",
+      "Analista In-House",
+      "Vendor Global (FiscalNote/Signal AI)",
+      "CCO"
+    ],
+    "steps": [
+      "Recolección manual dispersa",
+      "Redacción de informe en Word/PDF",
+      "Envío al CCO con 48h de retraso",
+      "Recepción tardía"
+    ],
+    "states": [
+      "Dispersión",
+      "Retraso",
+      "Desalineación",
+      "Costo Excesivo"
+    ],
+    "outputs": [
+      "PDF de 20 páginas que nadie lee en detalle",
+      "Alertas tardías de crisis"
+    ],
+    "exceptions": [
+      "Uso de WhatsApp personal entre consultores y ejecutivos durante crisis agudas"
+    ]
+  },
+  "entities": [
+    "LLYC",
+    "FiscalNote",
+    "Signal AI",
+    "Quorum",
+    "Tironi",
+    "Azerta",
+    "InfoLobby"
+  ],
+  "relations": [
+    {
+      "from": "Agencias Tradicionales",
+      "to": "Retainer Elevado / Entrega Lenta",
+      "type": "characterized_by"
+    },
+    {
+      "from": "Software Global",
+      "to": "Ceguera Regulatoria Local",
+      "type": "suffers_from"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Agencia Tradicional vs BRIDGE",
+      "diferencia": "La agencia tarda 48 horas en un reporte artesanal; BRIDGE entrega un brief ejecutivo en 60 segundos cruzado con compromisos internos y validado por analista senior."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "agency_response_time": "24 a 72 horas para informes de coyuntura",
+    "in_house_manual_time": "60% a 70% de la jornada de un analista dedicada a tareas mecánicas de clipping"
+  },
+  "bridge_implications": "Posicionar a BRIDGE no como un rival de la agencia, sino como la infraestructura de inteligencia que reemplaza el retainer de monitoreo y potencia al equipo interno.",
+  "open_gaps": [
+    "Determinar la penetración actual de FiscalNote en filiales multinacionales en Santiago."
+  ],
+  "next_question_ids": [
+    "P08-F14",
+    "P08-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

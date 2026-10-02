@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-C15",
+  "pilar": "P02",
+  "eje": "Posicionamiento y alianzas",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre posicionamiento y alianzas, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan sobre la madurez atribuida a The Bridge Intelligence en las comparativas de posicionamiento: 1) Discrepancia: En algunos borradores de síntesis, The Bridge Intelligence aparecía clasificada en tablas y matrices como si fuera un proveedor comercial existente con 'Evidencia Demostrada (EM)' y capacidades operativas superiores a Meltwater o Quorum; 2) Versión que prevalece: Rige con fuerza obligatoria '00_P02_GLOBAL_READ_ME_AND_ERRATA' y 'P02_GLOBAL_ATLAS_RECONCILIATION_V1', que dictaminan: a) The Bridge Intelligence es un modelo de referencia conceptual y una hipótesis de diseño arquitectónico, NO un producto comercial disponible en el mercado; b) No puede ser contabilizada dentro del denominador de 70 competidores comerciales; c) Sus afirmaciones de superioridad funcional carecen de pruebas operacionales realizadas (POR) y deben clasificarse estrictamente como 'hipotesis_diseno'. Prevalece la honestidad epistemológica absoluta para evitar sesgos de confirmación en la investigación.",
+  "findings": [
+    {
+      "claim_id": "P02-C15-C1",
+      "claim": "La errata editorial prohíbe tratar a The Bridge Intelligence como un proveedor comercial maduro, reclasificándolo como una hipótesis de arquitectura de referencia a validar empíricamente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "The Bridge Intelligence, Auditoría P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 6: Epistemic Demotion of The Bridge to Reference Design Hypothesis",
+          "excerpt_short": "The Bridge Intelligence must never be classified as an operational commercial product or ranked with proven superiority without independent empirical testing.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:46:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de la regla de oro epistemológica del mandato de investigación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tablas de posicionamiento previas",
+      "Directiva de errata P02",
+      "Criterios de auditoría epistémica"
+    ],
+    "actors": [
+      "Auditor Epistémico Jefe",
+      "Autor de Arquitectura"
+    ],
+    "steps": [
+      "Revisión de todas las afirmaciones sobre The Bridge",
+      "Degradación de estatus a 'hipotesis_diseno'",
+      "Eliminación de calificaciones no probadas"
+    ],
+    "states": [
+      "Afirmaciones_Auditadas",
+      "Estatus_Alineado",
+      "Integridad_Garantizada"
+    ],
+    "outputs": [
+      "Cuadro de posicionamiento científico riguroso"
+    ],
+    "exceptions": [
+      "Uso pedagógico de The Bridge como modelo de llegada claramente rotulado como diseño proyectado"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_THE_BRIDGE_DESIGN",
+      "type": "hipotesis_diseno",
+      "name": "The Bridge Reference Design",
+      "aliases": [
+        "BRIDGE Target Model"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_THE_BRIDGE_DESIGN",
+      "predicate": "clasificado_obligatoriamente_como",
+      "object_id": "Hipotesis_Diseno",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Sesgo de Autocomplacencia vs Rigor Científico",
+      "Sesgo de Autocomplacencia": "Declarar que la solución propia es superior a los 70 vendors sin haber construido ni testeado el código.",
+      "Rigor Científico": "Reconocer que el mercado tiene vendors reales con clientes y que la solución propia es una hipótesis a validar."
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "P02-CONT-05",
+      "description": "Clasificación de The Bridge como producto operativo en borradores tempranos frente a su condición real de hipótesis de diseño.",
+      "resolution": "Prevalece la errata 00_P02_GLOBAL_READ_ME_AND_ERRATA: estatus exclusivo de hipótesis de diseño de referencia."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe construir su propuesta de valor sobre la evidencia auditada de las fallas del mercado, no sobre afirmaciones gratuitas de superioridad.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:46:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

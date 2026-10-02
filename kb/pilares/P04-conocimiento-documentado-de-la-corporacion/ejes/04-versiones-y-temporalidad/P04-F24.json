@@ -1,0 +1,147 @@
+{
+  "question_id": "P04-F24",
+  "pilar": "P04",
+  "eje": "Versiones y temporalidad",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra versiones y temporalidad sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Canónico: Reexpresión de línea base de emisiones de Gases de Efecto Invernadero (GEI) tras la venta de un activo industrial. Entradas documentadas: 1) Meta original en Memoria 2022: Reducción del 30% en emisiones Alcance 1 al 2030, con línea base 2020 de 500.000 tCO2e; 2) Evento societario en 2024: Venta de la fundición secundaria (filial desinvertida); 3) Memoria 2024 (nota técnica pág. 112): Reexpresión de la línea base 2020 a 350.000 tCO2e conforme a IFRS S2 y GHG Protocol, para mantener la comparabilidad del perímetro operacional. Resultado esperado en el sistema: 1) El compromiso COM-ENV-2022-012 pasa a `status: 'Reexpresado / Modificado'`; 2) Se registra `previous_baseline: 500.000` y `revised_baseline: 350.000`; 3) Se vincula la relación `prov:wasRevisionOf`; 4) Ante una consulta actual sobre avance, el sistema calcula el progreso sobre la base reexpresada (350.000 tCO2e) y añade automáticamente la aclaración: 'La línea base 2020 fue reexpresada en la Memoria 2024 (p. 112) de 500k a 350k tCO2e debido a la desinversión de la fundición, en conformidad con IFRS S2'. Si un usuario consulta '¿cuál era la meta según la Memoria 2022?', el sistema recupera fielmente los 500.000 tCO2e históricos advirtiendo su posterior reexpresión.",
+  "findings": [
+    {
+      "claim_id": "P04-F24-C1",
+      "claim": "El caso empírico de reexpresión de línea base climática demuestra cómo el modelo bitemporal previene acusaciones de greenwashing o contradicción al transparentar la justificación técnica de la modificación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2026",
+        "region": "Chile / Global",
+        "actor": "Caso Reexpresión IFRS S2"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Fase 5: Protocolo de Deprecación y Reexpresiones",
+          "excerpt_short": "Cuando una empresa reexpresa cifras (frecuente en emisiones GEI por cambio de perímetro o desinversiones), el documento original no se borra; se anota con dcterms:isReplacedBy y enlace de superación.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "3d670aa0-fc8d-48ca-8c2d-26879dc45378",
+          "source_title": "IFRS S2: Climate-related Disclosures",
+          "original_url": "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/ifrs-s2-climate-related-disclosures/",
+          "locator": "Párrafos 34-36: Base Year Re-expressions",
+          "excerpt_short": "Requires explicit disclosure of the reasons for any recalculation of base year emissions following significant changes in company structure.",
+          "source_date": "2023-06-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso de prueba exhaustivo alineado con IFRS S2 y dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria 2022",
+      "Memoria 2024 nota p. 112",
+      "Hecho Esencial de desinversión"
+    ],
+    "actors": [
+      "Baseline Tracker",
+      "Reexpression Engine",
+      "Briefing Generator"
+    ],
+    "steps": [
+      "Detección de modificación de línea base",
+      "Creación de enlace wasRevisionOf",
+      "Generación de respuesta con nota explicativa de perímetro"
+    ],
+    "states": [
+      "Original_Baseline",
+      "Reexpressed_Baseline",
+      "Coherent_Audit_Ready"
+    ],
+    "outputs": [
+      "Minuta de vocería con explicación de reexpresión según norma internacional"
+    ],
+    "exceptions": [
+      "Omisión de nota justificativa en el documento de origen"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASE_REEXPRESSION",
+      "type": "caso_empirico",
+      "name": "Caso de Reexpresión de Línea Base GEI",
+      "aliases": [
+        "GHG Baseline Reexpression Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASE_REEXPRESSION",
+      "predicate": "valida_consistencia_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F24-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Riesgo reputacional",
+      "Sin trazabilidad de reexpresión": "La ONG o el medio acusa a la empresa de alterar cifras en secreto para aparentar cumplimiento.",
+      "Con trazabilidad bitemporal": "El vocero explica con solvencia inmediata que la línea base varió por la venta del activo bajo norma IFRS S2."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe alertar automáticamente cuando un directivo prepare declaraciones sobre metas cuya línea base haya sido reexpresada.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

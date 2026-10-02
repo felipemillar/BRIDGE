@@ -1,0 +1,171 @@
+{
+  "question_id": "P11-F46",
+  "pilar": "P11",
+  "eje": "Jurisdicciones y rectificaciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar jurisdicciones y rectificaciones de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de jurisdicciones y rectificaciones normativas exige un modelo de datos formal de interoperabilidad legal y trazabilidad de prevalencia epistémica, estructurado en seis entidades principales: 1) `Jurisdiction`: Modela la demarcación soberana (`jurisdiction_id`, `country_code` [CL, BR, EU, US, INT], `jurisdiction_name`, `legal_tradition` [civil_law, common_law], `primary_data_authority` [ANPD, CSIRT_ANCI, Agencia_Datos_Chile]); 2) `StatutoryInstrument`: Define la ley o reglamento oficial (`instrument_id`, `jurisdiction_id`, `official_code` [Ley_21663, Ley_21719, Lei_13709, GDPR], `publication_date`, `effective_date`, `is_in_vacatio_legis` [boolean], `vacatio_legis_months` [integer], `enforcement_deadline`); 3) `StatutoryObligation`: Modela el deber legal específico exigible (`obligation_id`, `instrument_id`, `article_number`, `obligation_type` [incident_notification, breach_report, dpo_appointment, data_subject_rights, encryption_mandate], `statutory_timeframe_hours` [3h, 72h, etc.], `is_directly_applicable_in_chile` [boolean], `cross_border_restriction_level` [strict, adequacy_required, standard_contractual_clauses]); 4) `CanonicalCorrection`: Registra las directrices rectoras de corrección interna (`correction_id`, `synthesis_source_id` [49d7882a, 0716e04e], `target_topic` [wipo_lex_discard, openai_pdf_substitution, vacatio_legis_precedence, provider_marketing_distinction], `precedence_rank` [rank_1_supreme, rank_2_complementary], `effective_snapshot_date`); 5) `DisqualifiedSourceRegistry`: Mapeo formal de fuentes descartadas o no sustantivas (`disqualification_id`, `source_id` [4caa2cda_wipo_lex], `source_title`, `disqualification_reason` [navigational_directory, lack_of_substantive_text, replaced_by_official_pdf], `canonical_substitute_id` [ea76a1ee, 8d9a7ceb]); y 6) `TenantComplianceMapping`: Perfil normativo de cada cliente (`tenant_id`, `applicable_jurisdictions` [array], `mandatory_frameworks` [array], `custom_dpa_id`). Las condiciones de integridad prohíben que una fuente en `DisqualifiedSourceRegistry` sea vinculada a una `StatutoryObligation` activa.",
+  "findings": [
+    {
+      "claim_id": "P11-F46-C1",
+      "claim": "El modelo relacional estructurado para jurisdicciones y rectificaciones vincula demarcaciones territoriales, leyes con estado de vacatio legis, obligaciones con plazos horarios, síntesis rectoras canónicas y un registro de fuentes descalificadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_jurisdictions_and_corrections",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Modelo de Reconciliación Categorial'",
+          "retrieved_at": null,
+          "excerpt_short": "Estructura formal de corrección: Identificación de fuentes rectificadas, rango de prevalencia canónica, sustitución de fuentes no sustantivas y mapeo de vigencia legal.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'Catálogo Canónico Actualizado'",
+          "retrieved_at": null,
+          "excerpt_short": "Registro de sustitución de términos contractuales y fuentes legislativas consolidadas a 2026.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 9 'Modelo de Datos para Auditoría y Controles'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades relacionales de jurisdicción y compliance: Jurisdiction, StatutoryInstrument, StatutoryObligation, CanonicalCorrection, TenantComplianceMapping.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño relacional estructurado que plasma formalmente las reglas rectoras del proyecto BRIDGE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Textos legales oficiales",
+      "Directivas de rectificación canónica",
+      "Requerimientos contractuales de clientes"
+    ],
+    "actors": [
+      "Administrador de Cumplimiento",
+      "Motor de Validación de Evidencia",
+      "Servicio de Gobernanza"
+    ],
+    "steps": [
+      "Registro de la jurisdicción y la ley en 'Jurisdiction' y 'StatutoryInstrument'",
+      "Configuración de los flags de vacatio legis y plazos en 'StatutoryObligation'",
+      "Registro de directrices rectoras en 'CanonicalCorrection'",
+      "Inscripción de fuentes descartadas en 'DisqualifiedSourceRegistry' con asignación de su sustituto canónico",
+      "Asociación del perfil normativo del cliente en 'TenantComplianceMapping'",
+      "Validación automatizada en tiempo de consulta: el validador rechaza cualquier referencia a fuentes en la lista de descalificadas"
+    ],
+    "states": [
+      "INSTRUMENT_REGISTERED",
+      "CORRECTION_TIER_SEALED",
+      "DISQUALIFIED_SOURCE_BLOCKED",
+      "TENANT_MAPPED"
+    ],
+    "outputs": [
+      "Esquema estructurado consultable que gobierna las respuestas del sistema y la generación de contratos"
+    ],
+    "exceptions": [
+      "Si una consulta intenta vincular una obligación legal a una fuente descalificada, el motor aborta la operación con error de integridad epistémica"
+    ]
+  },
+  "entities": [
+    "Jurisdiction",
+    "StatutoryInstrument",
+    "StatutoryObligation",
+    "CanonicalCorrection",
+    "DisqualifiedSourceRegistry",
+    "TenantComplianceMapping"
+  ],
+  "relations": [
+    {
+      "from": "StatutoryObligation",
+      "to": "StatutoryInstrument",
+      "type": "DERIVED_FROM"
+    },
+    {
+      "from": "CanonicalCorrection",
+      "to": "DisqualifiedSourceRegistry",
+      "type": "MANDATES_EXCLUSION_OF"
+    },
+    {
+      "from": "TenantComplianceMapping",
+      "to": "StatutoryObligation",
+      "type": "ENFORCES_LOCALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Listas de texto no estructuradas vs Modelo relacional con control de vigencia y descalificación",
+      "diferencia": "Las listas de texto permiten mezclar leyes vigentes con normas en vacatio legis o fuentes descartadas; el modelo estructurado impone integridad referencial e impide citar fuentes no sustantivas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "disqualified_source_citation_attempts": "0 referencias no interceptadas",
+    "statutory_obligation_mapping_completeness": "100% de deberes críticos tipificados con artículo y plazo"
+  },
+  "bridge_implications": "Proporciona la infraestructura de datos que garantiza la trazabilidad y pureza de las citas en todos los módulos de inteligencia corporativa.",
+  "open_gaps": [
+    "Incorporación dinámica de normativas de jurisdicciones adicionales (ej. Perú, Colombia, México) según la expansión regional de BRIDGE."
+  ],
+  "next_question_ids": [
+    "P11-F47",
+    "P11-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

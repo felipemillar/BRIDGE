@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C07",
+  "pilar": "P03",
+  "eje": "Radio, televisión, video y podcasts",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre radio, televisión, video y podcasts, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radicaba en las promesas comerciales de 'alertas instantáneas en tiempo real al segundo en que se nombra una empresa en televisión o radio', recogidas acríticamente en notas iniciales de mercado. Prevalece la evidencia técnica de la P03_QUALITY_ADDENDUM y el mapa de evidencia técnica: TVEyes y CisionOne operan con desfases reales de procesamiento de 5 a 30 minutos; asimismo, los modelos ASR de última generación como Whisper (Radford et al. 2022) requieren procesamiento en ventanas de 30 segundos y hardware acelerado, acumulando una latencia de pipeline real de 8 a 15 minutos en streaming continuo. Adicionalmente, el ASR estándar degrada drásticamente su precisión en la fonética chilena (WER > 25%), lo que obliga a descartar la promesa de inmediatez instantánea y adoptar una arquitectura híbrida de búsqueda semántica vectorial con buffers de tolerancia temporal.",
+  "findings": [
+    {
+      "claim_id": "P03-C07-C1",
+      "claim": "Prevalece la evidencia técnica que desmiente la alerta instantánea en broadcast, demostrando desfases reales de 15 a 30 minutos y latencias mínimas de 8 minutos en pipelines neuronales Whisper.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Auditoría Audiovisual P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.3: Broadcast Audiovisual - Hecho Documentado y AC",
+          "excerpt_short": "TVEyes y Cision capturan emisiones... con desfases que oscilan entre 5 y 30 minutos... Las empresas de broadcast prometen alerta en segundos... desmentido por la evidencia.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica de especificaciones de hardware y APIs de broadcast.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Especificaciones de TVEyes",
+      "Benchmarks de Whisper",
+      "Promesas publicitarias"
+    ],
+    "actors": [
+      "Broadcast Telemetry Auditor"
+    ],
+    "steps": [
+      "Medición de latencia de pipeline",
+      "Cotejo con promesas comerciales",
+      "Ajuste de SLAs reales"
+    ],
+    "states": [
+      "Marketing_Claims_Checked",
+      "Technical_Latency_Measured",
+      "Realistic_SLA_Published"
+    ],
+    "outputs": [
+      "SLA realista de detección de broadcast (15 a 30 minutos)"
+    ],
+    "exceptions": [
+      "Emisiones de televisión con subtítulos cerrados transmitidos en vivo con <2 min"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SLA_BROADCAST_REAL",
+      "type": "especificacion_sla",
+      "name": "SLA Real de Monitoreo Audiovisual",
+      "aliases": [
+        "Real Broadcast SLA"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SLA_BROADCAST_REAL",
+      "predicate": "fija_expectativa_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C07-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Latencia en broadcast",
+      "Promesa de Marketing": "Alerta instantánea en segundos al momento de la mención.",
+      "Realidad Técnica Demostrada": "Desfase de 8 a 30 minutos por segmentación de ventanas ASR y renderizado."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Latencia de alertas en televisión y radio",
+      "initial_claim": "Las suites de broadcast alertan en segundos en tiempo real.",
+      "corrected_claim": "Las alertas de broadcast presentan un desfase comprobado de 15 a 30 minutos.",
+      "resolution": "Prevalece la evidencia técnica de P03_EVIDENCE_MAP sobre las declaraciones comerciales."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Comunicar con transparencia en los dashboards de BRIDGE que las alertas de radio/TV tienen una latencia inherente de 15 minutos.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

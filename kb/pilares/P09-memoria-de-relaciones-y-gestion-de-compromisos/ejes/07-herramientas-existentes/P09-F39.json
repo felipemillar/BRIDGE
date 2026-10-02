@@ -1,0 +1,148 @@
+{
+  "question_id": "P09-F39",
+  "pilar": "P09",
+  "eje": "Herramientas existentes",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué integración con escucha externa y conocimiento interno está documentada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La literatura y los dossiers técnicos documentan dos ejes de integración fundamentales para un SRM moderno: 1) Integración con Escucha Externa (External Listening & Monitoring): Conexión bidireccional con plataformas de monitoreo de prensa y medios sociales (Prowly, Brandwatch, Meltwater) e ingesta automática de datos públicos abiertos (InfoLobby para agendas gubernamentales, e-SEIA para observaciones ciudadanas en evaluación ambiental), permitiendo detectar si un actor comunitario o gremial emite declaraciones públicas divergentes de lo acordado en reuniones privadas; y 2) Integración con Conocimiento Interno Corporativo: Enlace mediante APIs y conectores seguros con los sistemas de gestión documental (SharePoint, Google Drive), plataformas ERP de compras y pagos (SAP, Oracle) para validar desembolsos de proyectos comunitarios, y sistemas de gestión ambiental y de faena (SSA de la SMA), asegurando que los compromisos de BRIDGE reflejen en tiempo real el avance físico y financiero de las obras comprometidas.",
+  "findings": [
+    {
+      "claim_id": "P09-F39-C1",
+      "claim": "El SRM debe integrarse tanto con herramientas de escucha y monitoreo de medios externos como con los repositorios documentales, ERPs financieros y sistemas de seguimiento ambiental internos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "cross_system_integration_external_internal",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 4 'Integraciones del SRM: Escucha Externa y Conocimiento Interno'",
+          "retrieved_at": null,
+          "excerpt_short": "Arquitectura de Integración: BRIDGE se acopla con escucha externa (prensa, InfoLobby) para contextualizar el salience de los actores, y con sistemas internos (SharePoint, ERP, SSA SMA) para verificar avances de obra y validar pagos sin duplicar la digitación.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Sopact: Best Stakeholder Intelligence Platforms — Consultation, Commitments and Impact",
+          "source_id": "e6a3ba50-cd98-49f7-b801-84aee4012bab",
+          "locator": "Section 'Data Interoperability in Stakeholder Intelligence', p. 15-19",
+          "retrieved_at": null,
+          "excerpt_short": "A modern stakeholder platform must break institutional silos by feeding on external social listening signals while continuously cross-referencing internal operational project management software.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Sopact y la arquitectura de integración del dossier de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Webhooks de menciones en prensa",
+      "Alertas de publicaciones InfoLobby",
+      "Estados de órdenes de compra SAP"
+    ],
+    "actors": [
+      "Administrador de Integraciones",
+      "Analista de Inteligencia BRIDGE",
+      "Sistemas ERP / API"
+    ],
+    "steps": [
+      "Recepción de evento en endpoint REST",
+      "Normalización del payload en modelo Pydantic",
+      "Enlace automático al ID de actor o compromiso en BRIDGE",
+      "Actualización de dashboard de contexto"
+    ],
+    "states": [
+      "Evento Recibido",
+      "Payload Validado",
+      "Grafo Enriquecido"
+    ],
+    "outputs": [
+      "Contexto unificado de escucha y conocimiento interno en la ficha del actor"
+    ],
+    "exceptions": [
+      "Fallas de red en APIs externas activan reintentos automáticos con retroceso exponencial (exponential backoff)"
+    ]
+  },
+  "entities": [
+    "Escucha Externa",
+    "Conocimiento Interno",
+    "Sopact",
+    "ERP SAP",
+    "Prowly",
+    "InfoLobby"
+  ],
+  "relations": [
+    {
+      "from": "BRIDGE",
+      "to": "InfoLobby",
+      "type": "CONSUMES_EXTERNAL_SIGNALS_FROM"
+    },
+    {
+      "from": "BRIDGE",
+      "to": "SAP ERP",
+      "type": "CROSS_REFERENCES_FINANCIAL_PROGRESS_WITH"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Sistema aislado (silo de datos) vs Plataforma integrada interoperable",
+      "diferencia": "El silo ignora lo que pasa en la prensa o en los pagos de faena; la plataforma integrada alerta si se paraliza un pago a un contratista comunitario."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "supported_integration_protocols": "REST API, Webhooks, GraphQL, OAuth 2.0",
+    "sync_frequency": "Casi tiempo real (Near-real-time < 5 minutos)"
+  },
+  "bridge_implications": "Desarrollar adaptadores de ingesta en BRIDGE para conectar con el módulo de monitoreo de prensa y APIs de ERP.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F40",
+    "P09-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

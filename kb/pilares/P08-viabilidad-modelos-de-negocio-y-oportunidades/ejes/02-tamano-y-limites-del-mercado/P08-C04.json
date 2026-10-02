@@ -1,0 +1,145 @@
+{
+  "question_id": "P08-C04",
+  "pilar": "P08",
+  "eje": "Tamaño y límites del mercado",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué sigue sin prueba sobre tamaño y límites del mercado, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba concluyente el tamaño exacto del mercado corporativo en Perú y Colombia accesible desde Chile bajo una arquitectura multi-país (Cross-Border SAM), particularmente respecto al costo de integrar los sistemas normativos de OSINERGMIN (Perú) o la ANLA (Colombia). En cuanto a fuentes fallidas del corpus, falló la fuente 0882b4fe-8bc7-4112-9e01-6b5044b5ee81 ('Gartner: Enterprise Guide to PR and Media Monitoring Tools'), que presentó error de acceso por muro de pago; fue reemplazada canónicamente por las comparativas de Quorum vs FiscalNote 2026 (d89d3fda-5b1f-4cd4-a67d-dc0211f1e087) y la plataforma RepTrak Compass. La validación mínima para despejar la incertidumbre consiste en realizar un catastro de los 30 mayores conglomerados mineros y energéticos que operan simultáneamente en Chile y Perú (ej. Antofagasta Minerals, Minsur, Engie) evaluando su interés en un contrato regional unificado.",
+  "findings": [
+    {
+      "claim_id": "P08-C04-C1",
+      "claim": "El dimensionamiento del mercado regional andino (Perú y Colombia) sigue siendo una hipótesis no corroborada que requiere validar el apetito por contratos cross-border en holdings bi-nacionales.",
+      "epistemic_status": "inferencia",
+      "scope": "cross_border_market_gap",
+      "evidence": [
+        {
+          "source_title": "P08_GAPS_AND_VALIDATION",
+          "source_id": "b37bbf38-9c0d-4dc9-bf01-ac0b24ed0bd4",
+          "locator": "Sección 2 'Vacíos de Información Críticos: Eje 2'",
+          "excerpt_short": "La expansión del SAM hacia Perú y Colombia se basa en extrapolaciones teóricas de similitud institucional. Falta evidencia directa sobre la disposición de los holdings regionales a contratar un servicio centralizado en Santiago para monitorear regulaciones peruanas o colombianas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "fuentes/P08.json: Manifiesto de Fuentes",
+          "source_id": "0882b4fe-8bc7-4112-9e01-6b5044b5ee81",
+          "locator": "Registro de Estado de Fuente",
+          "excerpt_short": "Fuente 'Gartner: Enterprise Guide to PR Tools' catalogada como fallida_o_bloqueada. Sustituida canónicamente por Quorum vs FiscalNote 2026 (d89d3fda-5b1f-4cd4-a67d-dc0211f1e087).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "fallida",
+          "relationship": "apoya",
+          "text_status_original": "texto_sustantivo",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío metodológico catalogado formalmente en los gaps de P08 con sustituto canónico validado.",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "fuente_no_sustantiva",
+          "confianza_numerica_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catastro de empresas con operaciones en Chile y Perú",
+      "Cuestionario de contratación regional"
+    ],
+    "actors": [
+      "Director de Expansión Regional",
+      "Analista de Inteligencia de Mercado"
+    ],
+    "steps": [
+      "Identificación de 30 empresas binacionales",
+      "Sondeo cualitativo con directores regionales de asuntos corporativos",
+      "Evaluación de factibilidad de contrato regional"
+    ],
+    "states": [
+      "Hipótesis Regional",
+      "Sondeo en Curso",
+      "Potencial Validado"
+    ],
+    "outputs": [
+      "Dimensionamiento corregido del SAM Regional Andino"
+    ],
+    "exceptions": [
+      "Barreras tributarias de retención en la fuente entre Chile y Perú resueltas bajo convenios de doble tributación"
+    ]
+  },
+  "entities": [
+    "SAM Regional Andino",
+    "0882b4fe-8bc7-4112-9e01-6b5044b5ee81",
+    "Quorum vs FiscalNote",
+    "OSINERGMIN",
+    "ANLA",
+    "Holdings Binacionales"
+  ],
+  "relations": [
+    {
+      "from": "0882b4fe-8bc7-4112-9e01-6b5044b5ee81",
+      "to": "Quorum vs FiscalNote (d89d3fda)",
+      "type": "substituted_by"
+    },
+    {
+      "from": "Holdings Binacionales",
+      "to": "SAM Regional Andino",
+      "type": "validates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Crecimiento nacional en Chile vs Expansión andina prematura",
+      "diferencia": "Consolidar 30 clientes en Chile genera USD 1.8M ARR con bajo riesgo; expandirse a Perú antes de dominar Chile duplica los costos de ingeniería de conectores."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "binational_target_pool": "30 grandes grupos empresariales Chile-Perú",
+    "cross_border_acv_multiplier": "1.4x a 1.6x sobre la tarifa nacional"
+  },
+  "bridge_implications": "Congelar la expansión a Perú y Colombia hasta alcanzar al menos 15 clientes consolidados en Chile.",
+  "open_gaps": [
+    "Verificar la accesibilidad técnica de las APIs públicas del Congreso de la República del Perú y de la plataforma Seace."
+  ],
+  "next_question_ids": [
+    "P08-C05",
+    "P08-C06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

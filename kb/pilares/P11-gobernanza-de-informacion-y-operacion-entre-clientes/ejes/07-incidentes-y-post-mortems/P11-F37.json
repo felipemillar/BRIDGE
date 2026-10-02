@@ -1,0 +1,166 @@
+{
+  "question_id": "P11-F37",
+  "pilar": "P11",
+  "eje": "Incidentes y post-mortems",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Cómo detectar una cita a documento ajeno, un permiso desactualizado o un prompt malicioso?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La detección de anomalías operacionales y brechas de seguridad en BRIDGE se implementa mediante tres subsistemas de inspección especializada en tiempo de ejecución: 1) Cita a Documento Ajeno (Cross-Tenant Citation Leak): El módulo post-generación 'CitationCrossTenantScrubber' intercepta la respuesta del LLM antes de ser transmitida al cliente, extrae todos los UUIDs de documentos citados y contrasta cada localizador contra el conjunto cerrado de activos autorizados para el 'app.current_tenant_id'. Si se detecta un identificador correspondiente a otro cliente o un fragmento de texto con firma criptográfica ajena, el scrubber cancela la entrega, emite un error '403 Cross-Tenant Anomaly Detected' y genera un evento de alerta crítica; 2) Permiso Desactualizado (Stale Permission / ACL Drift): El subsistema PEP (Policy Enforcement Point) ejecuta una validación síncrona de vigencia contra el PDP en cada solicitud, prohibiendo el uso de permisos cacheados con TTL mayor a 60 segundos. Si ocurre una revocación en el directorio corporativo o en la base relacional, un evento de invalidación en Redis via pub/sub destruye la sesión activa en menos de 100 ms; y 3) Prompt Malicioso (Prompt Injection y Jailbreak): Conforme al marco OWASP GenAI Top 10 (2025, LLM01), se aplica un análisis perimetral de dos etapas: un clasificador heurístico y vectorial que analiza el input buscando patrones de sobreescritura de instrucciones del sistema ('ignore previous instructions', 'system override', 'exfiltrate context'), complementado con un guardrail delimitador de contexto en el system prompt y un escáner de salida que verifica la ausencia de volcados de memoria contextual o revelación de metadatos internos.",
+  "findings": [
+    {
+      "claim_id": "P11-F37-C1",
+      "claim": "La detección de citas cruzadas se ejecuta mediante scrubbers de UUIDs post-generación, los permisos obsoletos se invalidan síncronamente con TTLs de 60s en Redis y los prompts maliciosos se bloquean mediante clasificadores OWASP GenAI pre-inferencia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "detection_mechanisms_for_security_anomalies",
+      "evidence": [
+        {
+          "source_title": "OWASP GenAI: Top 10 for Large Language Model Applications 2025",
+          "source_id": "83d92341-65c3-4adf-877a-8cf4b4cd29f2",
+          "locator": "Item LLM01: Prompt Injection and LLM02: Sensitive Information Disclosure",
+          "retrieved_at": null,
+          "excerpt_short": "Mitigation requires input validation, context separation using distinct delimiters, egress filtering on model completions, and structural verification of retrieved documents.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 7 'Detección de Incidentes, Contención y Post-Mortems'",
+          "retrieved_at": null,
+          "excerpt_short": "Detección en tres planos: Scrubber de citas post-LLM verifica que todo doc_id pertenezca al tenant activo; expiración síncrona de permisos con TTL de 60 segundos; detector de inyección de prompt pre-inferencia con bloqueo inmediato.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-162: Guide to Attribute Based Access Control (ABAC) Definition and Considerations",
+          "source_id": "2a88e293-2b53-4430-8dca-26e545448a9f",
+          "locator": "Section 4.3 'Policy Enforcement Point and Dynamic Policy Evaluation'",
+          "retrieved_at": null,
+          "excerpt_short": "The PEP must verify current subject attributes and environmental conditions at the moment of access to prevent unauthorized operations caused by permission latency or stale caches.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa con las directrices de mitigación de OWASP GenAI 2025 y los estándares de acceso dinámico de NIST SP 800-162.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Prompt enviado por el usuario",
+      "Fragmentos contextuales recuperados",
+      "Respuesta candidata del LLM"
+    ],
+    "actors": [
+      "Filtro Perimetral OWASP",
+      "PDP/PEP de Autorización",
+      "CitationCrossTenantScrubber",
+      "Motor de Alertas WORM"
+    ],
+    "steps": [
+      "El input del usuario ingresa al Filtro Perimetral: se analiza similitud semántica contra base de firmas de jailbreaks conocidos",
+      "Si el prompt contiene patrones de evasión, se rechaza la solicitud de inmediato con registro en la bitácora de ciberseguridad",
+      "Durante la consulta, el PEP valida que el token del usuario posea el rol y clearance activo en el instante de la ejecución",
+      "Tras recibir la respuesta del LLM, el CitationCrossTenantScrubber escanea todas las citas y notas al pie",
+      "Se valida que cada UUID de documento pertenezca estrictamente al 'tenant_id' autenticado",
+      "Si se detecta una discrepancia en citas, se cancela la entrega al usuario y se aísla la sesión"
+    ],
+    "states": [
+      "PROMPT_INSPECTED",
+      "ACCESS_EVALUATED_FRESH",
+      "GENERATION_SCRUBBED",
+      "SAFE_DELIVERY_CLEARED"
+    ],
+    "outputs": [
+      "Respuesta verificada libre de citas cruzadas, permisos vigentes y prompts legítimos"
+    ],
+    "exceptions": [
+      "Detección de intento deliberado de exfiltración bloquea la IP y la cuenta del operador preventivamente"
+    ]
+  },
+  "entities": [
+    "CitationCrossTenantScrubber",
+    "OWASP GenAI LLM01",
+    "NIST SP 800-162",
+    "Redis ACL Cache",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "CitationCrossTenantScrubber",
+      "to": "Respuesta LLM",
+      "type": "SCRUBS_BEFORE_DELIVERY"
+    },
+    {
+      "from": "Filtro Perimetral",
+      "to": "Prompt Malicioso",
+      "type": "BLOCKS_PRE_INFERENCE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Detección estática en logs post-facto vs Detección en línea con bloqueo de entrega",
+      "diferencia": "La detección post-facto se entera de la fuga cuando el dato ya fue expuesto; la detección en línea intercepta el payload y evita que el dato cruce la frontera del cliente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cross_tenant_citation_leak_rate": "0% de citas cruzadas entregadas al cliente",
+    "stale_permission_invalidation_latency": "< 100 ms tras evento de revocación en directorio",
+    "prompt_injection_detection_accuracy": "> 99.4% de efectividad en benchmarks de jailbreak estándar"
+  },
+  "bridge_implications": "Garantiza que ningún fallo de alineación del LLM o desactualización de credenciales se traduzca en una brecha de confidencialidad efectiva.",
+  "open_gaps": [
+    "Evolución de ataques de inyección indirecta de prompt incrustados en imágenes o archivos PDF externos descargados vía conector."
+  ],
+  "next_question_ids": [
+    "P11-F38",
+    "P11-F39"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

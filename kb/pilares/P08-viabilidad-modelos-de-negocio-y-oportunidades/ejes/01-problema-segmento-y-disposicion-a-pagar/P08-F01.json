@@ -1,0 +1,152 @@
+{
+  "question_id": "P08-F01",
+  "pilar": "P08",
+  "eje": "Problema, segmento y disposición a pagar",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué problema frecuente y costoso identifica el corpus para un comprador concreto?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El problema frecuente y costoso identificado para el CCO (Chief Communications Officer) y VP de Asuntos Corporativos en industrias reguladas (minería, energía, utilities y banca) es la asimetría informativa operativa y la lentitud reactiva frente a crisis regulatorias, legislativas y comunitarias. Los equipos corporativos operan con monitoreos fragmentados (clippings de prensa no contextualizados) y sin conexión con los compromisos internos (RCA, InfoLobby, hechos esenciales CMF), lo que genera multas millonarias por incumplimiento, exposición reputacional del Directorio en el Congreso o prensa, y pérdida de licencia social para operar, costando entre USD 500K y decenas de millones de dólares por retrasos de proyectos.",
+  "findings": [
+    {
+      "claim_id": "P08-F01-C1",
+      "claim": "Los CCOs y directores de asuntos corporativos enfrentan el riesgo crítico de 'ceguera operativa' al carecer de un sistema unificado que conecte señales del entorno con la memoria corporativa e historial de compromisos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "corporate_affairs_pain_point",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 1.1 'El Problema de Decisión Ejecutiva y Costos de Inacción'",
+          "excerpt_short": "El dolor crítico del Chief Communications Officer (CCO) y del Director de Asuntos Públicos en grandes corporaciones de sectores regulados no es la falta de noticias, sino la desconexión total entre las alertas del entorno exterior (prensa, Congreso, fiscalización SMA) y la realidad operativa de sus propios compromisos internos. La inacción o una respuesta pública descoordinada deriva en multas regulatorias de la CMF o SMA, parálisis de faenas mineras o energéticas, y daño reputacional irreparable ante inversionistas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "McKinsey & Company: Upgrading Corporate Affairs for a New Geopolitical Era",
+          "source_id": "99c84fdd-b5ba-4db1-b9ae-dfea068efc5b",
+          "locator": "Párrafo 4-7, 'The Cost of Reactive Corporate Affairs'",
+          "excerpt_short": "Corporate affairs leaders frequently operate as reactive firefighting units. Companies that fail to integrate regulatory, social, and operational data into early-warning executive workflows risk regulatory fines, activist shareholder interventions, and operational delays that average millions of dollars annually in capital-intensive sectors.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre McKinsey y el Dossier técnico de viabilidad P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alertas de prensa",
+      "Boletines del Congreso",
+      "Fiscalizaciones SMA",
+      "Historial de compromisos y lobby"
+    ],
+    "actors": [
+      "CCO / VP Asuntos Corporativos",
+      "Gerente de Asuntos Públicos",
+      "Gerente General / Directorio"
+    ],
+    "steps": [
+      "Detección de señal externa",
+      "Cruce manual disperso (días de demora)",
+      "Respuesta pública reactiva no alineada",
+      "Impacto o sanción"
+    ],
+    "states": [
+      "Fragmentación",
+      "Alerta Tardía",
+      "Crisis Operativa",
+      "Pérdida de Valor"
+    ],
+    "outputs": [
+      "Exposición a sanciones",
+      "Pérdida de confianza de stakeholders",
+      "Costos de litigio o mitigación de emergencia"
+    ],
+    "exceptions": [
+      "Detección temprana cuando el CCO cuenta con red de contactos informales"
+    ]
+  },
+  "entities": [
+    "CCO",
+    "VP Asuntos Corporativos",
+    "SMA",
+    "CMF",
+    "InfoLobby",
+    "McKinsey"
+  ],
+  "relations": [
+    {
+      "from": "CCO",
+      "to": "Asimetría Informativa",
+      "type": "suffers"
+    },
+    {
+      "from": "Desconexión Interna/Externa",
+      "to": "Pérdida de Licencia Social",
+      "type": "leads_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Costo de error vs Inversión en BRIDGE",
+      "diferencia": "Una sanción grave de la SMA o la suspensión temporal de un proyecto minero cuesta entre USD 1M y USD 50M; una plataforma con HITL cuesta USD 60K/año."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cost_of_inaction": "USD 500K - USD 10M+ por paralización o multas",
+    "executive_decision_window": "Menos de 4 horas durante una crisis en desarrollo"
+  },
+  "bridge_implications": "BRIDGE ataca directamente la asimetría informativa unificando señales de monitoreo y memoria corporativa con síntesis ejecutiva en 60 segundos.",
+  "open_gaps": [
+    "Cuantificación exacta del gasto promedio anual de las mineras del IBEX/IPSA en consultorías de crisis reactivas."
+  ],
+  "next_question_ids": [
+    "P08-F02",
+    "P08-F03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

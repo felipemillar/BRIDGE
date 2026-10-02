@@ -1,0 +1,154 @@
+{
+  "question_id": "P10-F36",
+  "pilar": "P10",
+  "eje": "Reglas para automatizar o abstenerse",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra reglas para automatizar o abstenerse sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto: Consulta Periodística sobre Investigación Penal en Curso por Supuesto Incidente de Contaminación. Entradas: 1) Correo de periodista de investigación de Ciper Chile preguntando si la empresa reconoce responsabilidad en la alteración de parámetros de agua en el Río Huasco y exigiendo respuesta en 2 horas; 2) Antecedente legal interno: Existe una orden de investigación de la Fiscalía y un procedimiento sancionatorio en trámite ante la Superintendencia del Medio Ambiente (SMA), ambos bajo carácter reservado; 3) Módulo de triaje de BRIDGE detecta bandera roja 'ACTIVE_LITIGATION' y 'SUB_JUDICE'; 4) Intento de redactor junior de generar una respuesta explicativa detallando los procesos de filtrado de la planta. Proceso: El sistema bloquea de inmediato la generación asistida del borrador explicativo; notifica con alerta de alta prioridad al Fiscal Legal Corporativo; Fiscal emite dictamen de abstención total sobre el fondo para evitar entorpecer la investigación judicial o incurrir en autoincriminación involuntaria; se autoriza exclusivamente la emisión del Holding Statement oficial de reserva. Resultado Esperado: Se remite al periodista la declaración estandarizada autorizada: 'La compañía colabora activamente con las autoridades fiscalizadoras aportando todos los antecedentes técnicos requeridos, y por respeto a los procedimientos en curso no emitirá declaraciones públicas sobre materias sub iudice'; el log inmutable registra la activación de la regla de abstención, el visado legal y el dwell time del Fiscal.",
+  "findings": [
+    {
+      "claim_id": "P10-F36-C1",
+      "claim": "El caso operacionaliza el disparo de banderas rojas de abstención ante litigios e investigaciones penales, demostrando cómo el sistema previene declaraciones imprudentes mediante bloqueo algorítmico y uso exclusivo de holding statements de reserva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_abstention_enforcement",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 6 'Escenarios Sintéticos de Ejecución Integral (Escenario B: Crisis Ambiental Faena Minera)'",
+          "retrieved_at": null,
+          "excerpt_short": "Manejo de consulta por investigación penal: Detección de bandera roja de litigio -> Bloqueo de respuestas sobre el fondo -> Activación de holding statement de colaboración institucional sin prejuzgar hechos -> Visado por Fiscalía.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "PRSA: Code of Ethics and Professional Standards",
+          "source_id": "13ceba58-340a-43ab-b46a-6a7fb9211c8d",
+          "locator": "Section 'Guidelines for Media Inquiries during Legal Proceedings'",
+          "retrieved_at": null,
+          "excerpt_short": "Communications professionals must avoid public commentary that could prejudice legal proceedings or compromise judicial discovery, maintaining institutional cooperation without public debate.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los códigos deontológicos de relaciones públicas y el escenario operacional del dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta de prensa indagando sobre causa penal activa",
+      "Registro de causa judicial en módulo legal",
+      "Plantilla de holding statement institucional"
+    ],
+    "actors": [
+      "Redactor Junior",
+      "Motor de Reglas BRIDGE",
+      "Fiscal Legal",
+      "Director de Comunicaciones"
+    ],
+    "steps": [
+      "Ingreso del correo de Ciper Chile al sistema",
+      "Activación de trigger de abstención por mención a Fiscalía / SMA",
+      "Bloqueo de redacción libre de detalles técnicos no peritados",
+      "Escalamiento automático a Fiscal con timer de 30 minutos",
+      "Fiscal revisa telemétricamente la consulta (dwell time: 4 minutos)",
+      "Aprobación del despacho del Holding Statement de reserva legal",
+      "Despacho al periodista y registro en libro mayor de auditoría"
+    ],
+    "states": [
+      "QUERY_RECEIVED",
+      "RED_FLAG_TRIPPED",
+      "GENERATION_LOCKED",
+      "LEGAL_REVIEW_ACTIVE",
+      "RESERVED_STATEMENT_DISPATCHED"
+    ],
+    "outputs": [
+      "Holding statement neutral despachado dentro del plazo de 2h",
+      "Registro de auditoría certificando cumplimiento de deber de reserva"
+    ],
+    "exceptions": [
+      "Si la Fiscalía levanta la reserva de la causa, el Comité de Crisis puede re-evaluar la estrategia comunicacional"
+    ]
+  },
+  "entities": [
+    "Fiscalía",
+    "SMA",
+    "Holding Statement",
+    "Sub Iudice",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Consulta sobre Litigio",
+      "to": "Trigger de Abstención",
+      "type": "ACTIVATES"
+    },
+    {
+      "from": "Fiscal Legal",
+      "to": "Holding Statement",
+      "type": "AUTHORIZES_EXCLUSIVE_USE"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta improvisada tratando de defenderse vs Holding statement de reserva",
+      "diferencia": "La respuesta improvisada entrega argumentos a la contraparte que son usados en el juicio; el holding statement demuestra respeto institucional y resguarda la estrategia jurídica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "case_resolution_time_minutes": "Tiempo transcurrido desde ingreso de consulta hasta despacho (Target < 90 min)",
+    "leak_prevention_rate": "100% de datos litigiosos confidenciales resguardados sin divulgación"
+  },
+  "bridge_implications": "Valida la capacidad práctica de BRIDGE para proteger jurídicamente a la empresa frente a requerimientos periodísticos agresivos en materias sensibles.",
+  "open_gaps": [
+    "Monitoreo post-despacho para detectar si el medio publica citando fuentes anónimas internas."
+  ],
+  "next_question_ids": [
+    "P10-F37",
+    "P10-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

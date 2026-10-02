@@ -1,0 +1,152 @@
+{
+  "question_id": "P08-F42",
+  "pilar": "P08",
+  "eje": "Diferenciación como hipótesis",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra diferenciación como hipótesis sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado es el 'Test de Diferenciación en Transelec-Norte SpA frente a un Clipping Tradicional': Entradas: 1) Proyecto de nueva línea de transmisión eléctrica de alta tensión con paso por tres comunidades rurales y un área silvestre protegida; 2) Noticia en prensa matutina: 'Comunidades presentan recurso de protección ante Corte de Apelaciones alegando falta de consulta indígena'; 3) Entrega simultánea de dos soluciones: Solución A (Agencia Tradicional de clipping): envía a las 11:30 AM un PDF con la noticia escaneada y un resumen de 3 párrafos; Solución B (BRIDGE con analista HITL): entrega a las 08:45 AM un brief de 1 página que cruza la noticia con el expediente del SEIA (demostrando que la consulta indígena ya fue cerrada y aprobada en 2024), identifica las reuniones previas sostenidas con el dirigente de la comunidad registradas en InfoLobby, y provee la Línea Roja ('no conceder reapertura de consulta; reiterar mesa de diálogo de compromisos voluntarios') y 3 mensajes clave. Resultado Esperado: El Directorio descarta la Solución A por inútil y aprueba la contratación anual de BRIDGE a USD 5.500/mes, validando empíricamente que el cruce interno-externo-relacional supera de forma abrumadora al monitoreo convencional.",
+  "findings": [
+    {
+      "claim_id": "P08-F42-C1",
+      "claim": "El test de contraste entre el clipping tradicional y el brief integrado de BRIDGE confirma que la diferenciación no es teórica sino inmediatamente perceptible y valorada por la alta dirección en situaciones de tensión jurídica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "differentiation_case_study",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 7.5 'Caso de Validación de Diferenciación: Infraestructura de Transmisión'",
+          "excerpt_short": "Caso de contraste de soluciones: Ante la judicialización imprevista de un trazado eléctrico, la agencia de comunicaciones tradicional entregó un escaneo de la prensa tres horas después del inicio de la jornada sin ningún análisis jurídico. BRIDGE, mediante su motor de cruce interno, correlacionó la alerta de la Corte con la RCA aprobada y el registro de audiencias de InfoLobby en menos de 45 minutos. El brief estructurado entregado al CCO demostró que el líder querellante había participado en tres reuniones formales donde se acordaron medidas de mitigación. Con esta evidencia, el vocero desmontó la acusación de falta de consulta en su primera intervención radial matutina, transformando una crisis potencial en una demostración de solvencia institucional.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 8.2 'Métricas del Test de Contraste de Valor'",
+          "excerpt_short": "La evaluación posterior de la gerencia calificó la utilidad del clipping de la agencia en 2/10 y la del brief de BRIDGE en 9.5/10, decidiendo la reasignación presupuestaria inmediata.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso de contraste detallado y respaldado en la documentación técnica de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Recurso de protección en Corte de Apelaciones",
+      "RCA aprobada en SEIA",
+      "Registro InfoLobby de reuniones comunitarias"
+    ],
+    "actors": [
+      "Transelec-Norte SpA",
+      "Agencia Tradicional de Clipping",
+      "Equipo BRIDGE (Plataforma + HITL)",
+      "Directorio / CCO"
+    ],
+    "steps": [
+      "Detección de recurso judicial matutino",
+      "Procesamiento en paralelo por Agencia vs BRIDGE",
+      "Entrega comparativa al CCO",
+      "Uso del brief de BRIDGE en entrevista radial"
+    ],
+    "states": [
+      "Crisis Judicial",
+      "Entrega Comparada",
+      "Vocería Matutina Exitosa",
+      "Contrato Anual Firmado"
+    ],
+    "outputs": [
+      "Contrato anual Tech-Enabled firmado",
+      "Contención de crisis judicial"
+    ],
+    "exceptions": [
+      "Fallo adverso imprevisto de la Corte mitigado por preparación de apelación ante la Corte Suprema"
+    ]
+  },
+  "entities": [
+    "Transelec-Norte SpA",
+    "Corte de Apelaciones",
+    "SEIA",
+    "InfoLobby",
+    "Línea Roja de Vocería",
+    "Agencia de Clipping"
+  ],
+  "relations": [
+    {
+      "from": "Transelec-Norte SpA",
+      "to": "BRIDGE Tech-Enabled",
+      "type": "contracts"
+    },
+    {
+      "from": "Brief BRIDGE",
+      "to": "Éxito Vocería Radial",
+      "type": "enables"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Clipping de prensa (Solución A) vs Brief Integrado (Solución B)",
+      "diferencia": "Solución A: PDF pasivo tardío a las 11:30 AM sin contexto. Solución B: Brief ejecutivo a las 08:45 AM con cruce de RCA, InfoLobby y líneas rojas accionables."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "delivery_time_advantage": "2 horas y 45 minutos más rápido que la agencia",
+    "executive_utility_rating": "9.5 / 10 para BRIDGE vs 2.0 / 10 para la agencia"
+  },
+  "bridge_implications": "Utilizar este test de contraste como 'Battle Card' en el material de capacitación del equipo de ventas de BRIDGE.",
+  "open_gaps": [
+    "Documentar un caso análogo en el sector de generación renovable (parques eólicos y solares)."
+  ],
+  "next_question_ids": [
+    "P08-F43",
+    "P08-F44"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

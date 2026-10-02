@@ -1,0 +1,190 @@
+{
+  "question_id": "T01-F15",
+  "pilar": "T01",
+  "eje": "Casos de prueba y conjunto de referencia",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué separación entre diseño y evaluación evita contaminar el conjunto de prueba?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para prevenir la fuga de datos (data contamination) y el sobreajuste métrico en los pilotos de The Bridge Intelligence, debe aplicarse una estricta separación metodológica entre el equipo de diseño/desarrollo y el equipo de evaluación: 1) Aislamiento Estricto de Repositorios (Train/Dev vs Test): Los prompts del sistema, las estrategias de chunking y los hiperparámetros de búsqueda vectorial solo pueden calibrarse sobre el conjunto de desarrollo (Dev Set); el conjunto de prueba definitivo (Test Set / Golden Benchmark) permanece cifrado, versionado y oculto al equipo de ingeniería; 2) Principio de Evaluación Exógena: Ni los ingenieros de software ni los proveedores de LLM eligen los casos de prueba finales; estos son definidos de forma ciega por un comité evaluador de asuntos corporativos (conforme a SummEval / Fabbri et al. 2021); y 3) Evaluación Ciega Dinámica: Introducción de preguntas temporales frescas no vistas por los modelos (benchmark FreshQA / Vu et al. 2023) para asegurar que el sistema demuestre verdadera capacidad de recuperación documental y no memorización paramétrica del LLM.",
+  "findings": [
+    {
+      "claim_id": "T01-F15-C1",
+      "claim": "El estudio FreshLLMs (Vu et al. 2023) demuestra que la evaluación de sistemas generativos sobre datasets estáticos sufre de contaminación masiva por memorización paramétrica en los LLMs, haciendo imperativa la inclusión de conjuntos de prueba dinámicos (FreshQA) basados en eventos y documentos contemporáneos que obligan al motor RAG a recuperar evidencia actualizada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023",
+        "region": "Global",
+        "actor": "Vu et al. / Google Research & UC Berkeley"
+      },
+      "evidence": [
+        {
+          "source_id": "142a9e37-de1d-438a-9ec4-96dfb18dbb09",
+          "source_title": "Vu et al. (2023) — FreshLLMs: Refreshing Large Language Models with Search Engine Augmentation",
+          "original_url": "https://arxiv.org/pdf/2310.03214.pdf",
+          "locator": "Section 2: The FreshQA Benchmark, p. 2-4",
+          "excerpt_short": "To mitigate test set contamination and evaluate true real-time reasoning, FreshQA incorporates questions with fast-changing answers and false-premise questions that cannot be solved purely through static pre-training memory.",
+          "source_date": "2023-10-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto completo de Vu et al. recuperado y verificado (31.487 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F15-C2",
+      "claim": "La auditoría T01_QUALITY_ADDENDUM estipula que en ningún caso los prompts de prueba del piloto comercial deben compartirse con los desarrolladores antes de la compuerta G1, evitando que se ajusten manualmente las ponderaciones de búsqueda para sesgar artificialmente la tasa de éxito del piloto.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 3: Protocolo Anti-Contaminación de Conjuntos de Prueba",
+          "excerpt_short": "El conjunto de prueba ciego de 100 consultas corporativas debe permanecer sellado criptográficamente y ser ejecutado exclusivamente por el equipo de QA independiente.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Síntesis interna rectora canónica de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Banco de preguntas y documentos de prueba",
+      "Clave criptográfica del Golden Benchmark",
+      "Entorno de ejecución sellado"
+    ],
+    "actors": [
+      "Comité Independiente de Evaluación",
+      "Auditor de QA",
+      "Equipo de Desarrollo (aislado)"
+    ],
+    "steps": [
+      "Congelar el repositorio de desarrollo con sus casos de tuning",
+      "Cifrar y custodiar el Golden Benchmark de evaluación en bóveda de claves separada",
+      "Ejecutar la suite evaluativa de forma desatendida en un entorno efímero",
+      "Publicar los resultados agregados y logs de error sin revelar las respuestas doradas a los desarrolladores"
+    ],
+    "states": [
+      "CONGELAMIENTO",
+      "CUSTODIA_BOVEDA",
+      "EJECUCION_CIEGA",
+      "REPORTE_METRICO"
+    ],
+    "outputs": [
+      "Reporte independiente de exactitud y sesgo",
+      "Registro criptográfico de inmutabilidad del testset"
+    ],
+    "exceptions": [
+      "Si se detecta que un caso del testset fue incorporado a la base de ejemplos few-shot del sistema, el caso se anula y se sustituye por uno nuevo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "FRESHQA_BENCHMARK",
+      "type": "producto",
+      "name": "FreshQA Dynamic Benchmark",
+      "aliases": [
+        "Vu et al. 2023"
+      ]
+    },
+    {
+      "entity_id": "GOLDEN_TESTSET",
+      "type": "documento",
+      "name": "Golden Benchmark Ciego BRIDGE",
+      "aliases": [
+        "Testset de evaluación G1-G2"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "GOLDEN_TESTSET",
+      "predicate": "aislado_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F15-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Conjunto de Desarrollo (Dev Set)",
+      "item_b": "Conjunto de Prueba Ciego (Test Set)",
+      "dimension": "Acceso por desarrolladores",
+      "conclusion": "Dev Set permite inspección e iteración libre; Test Set permanece inaccesible para garantizar validez estadística."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de contaminación del testset",
+      "denominator": "Total de casos de evaluación",
+      "target": "0.0% (cero tolerancia)"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Toda certificación de desempeño previa a la venta debe basarse exclusivamente en la ejecución contra el Golden Testset sellado.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F16",
+    "T01-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

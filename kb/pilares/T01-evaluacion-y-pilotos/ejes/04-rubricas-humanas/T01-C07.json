@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-C07",
+  "pilar": "T01",
+  "eje": "Rúbricas humanas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre rúbricas humanas, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en rúbricas humanas: 1) Discrepancia: Las notas iniciales proponían promediar aritméticamente las calificaciones de los evaluadores humanos (ej. satisfacción general = 4.2 / 5.0) para decidir la aprobación del piloto, sin contemplar vetos específicos; 2) Versión que Prevalece: Según T01_QUALITY_ADDENDUM (45782049) y las directrices AMEC Barcelona 3.0 (92dfdc7c), prevalece el Principio de Fallo Fatal Asimétrico (Fatal Flaw Rule): ninguna puntuación promedio positiva puede ocultar una alucinación en materias reguladas, una fuga cross-tenant o una contradicción con un compromiso vigente; la presencia de un solo fallo crítico impone el veto inmediato y detención (Kill) del piloto, independientemente del promedio general. Asimismo, se exige concordancia inter-evaluador medida mediante Krippendorff's alpha >= 0.70 (SummEval / Fabbri et al. 2021).",
+  "findings": [
+    {
+      "claim_id": "T01-C07-C1",
+      "claim": "T01_QUALITY_ADDENDUM anula la validez de los promedios aritméticos simples en la evaluación de comunicaciones corporativas, subordinando el pase de compuerta a la ausencia total de fallos fatales asimétricos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 4: Invalidez de Promedios Aritméticos",
+          "excerpt_short": "Los promedios simples son engañosos. Un promedio de 4.8 con una sola alucinación en un hecho reservado es un fracaso absoluto. Prevalece la regla de fallo fatal.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma metodológica canónica interna de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Matriz de puntajes Likert de evaluadores",
+      "Registro de incidentes y flags de fallo fatal"
+    ],
+    "actors": [
+      "Comité Evaluador de Compuerta",
+      "Chief Legal Officer"
+    ],
+    "steps": [
+      "Revisar la matriz de puntajes y verificar presencia de flags de fallo fatal",
+      "Si existe un fallo fatal, desestimar el promedio aritmético y activar veto",
+      "Calcular Krippendorff's alpha para validar concordancia entre jueces",
+      "Emitir resolución de compuerta con trazabilidad íntegra"
+    ],
+    "states": [
+      "REVISION_PUNTAJES",
+      "SCAN_FALLO_FATAL",
+      "CALCULO_ALPHA",
+      "RESOLUCION_COMPUERTA"
+    ],
+    "outputs": [
+      "Acta de Compuerta con Regla de Fallo Fatal Aplicada"
+    ],
+    "exceptions": [
+      "Ningún miembro del panel puede dispensar un fallo fatal en materias regulatorias o de confidencialidad"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "REGLA_FALLO_FATAL",
+      "type": "riesgo",
+      "name": "Regla de Fallo Fatal Asimétrico",
+      "aliases": [
+        "Zero Tolerance Rule"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "REGLA_FALLO_FATAL",
+      "predicate": "prevalece_sobre",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C07-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Promedio Aritmético Simple",
+      "item_b": "Rúbrica con Filtro de Fallo Fatal",
+      "dimension": "Gestión de riesgo",
+      "conclusion": "El promedio enmascara riesgos letales; el filtro de fallo fatal garantiza la integridad corporativa y regulatoria."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de fallos fatales tolerados",
+      "denominator": "Total casos auditados",
+      "target": "0.0%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Brinda a los directores legales la certeza de que el sistema protege el patrimonio regulatorio de la empresa.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-C08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

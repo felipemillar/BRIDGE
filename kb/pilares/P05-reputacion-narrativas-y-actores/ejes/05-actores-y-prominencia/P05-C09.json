@@ -1,0 +1,152 @@
+{
+  "question_id": "P05-C09",
+  "pilar": "P05",
+  "eje": "Actores y prominencia",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre actores y prominencia, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia identificada en el corpus contrapone dos visiones sobre el relacionamiento con partes interesadas: por un lado, la concepción del lobby tradicional como una gestión relacional informal, opaca y no documentada ('gestión de contactos y pasillos') que subestima a las comunidades y prioriza exclusivamente a las autoridades de gobierno; por otro lado, el enfoque formal sustentado en la literatura de stakeholders (Mitchell, Agle & Wood 1997), los estándares de rendición de cuentas (AA1000SES 2015) y el marco institucional chileno (Ley 20.730 de Lobby y Convenio 169 OIT). Las síntesis internas canónicas (P05_EVIDENCE_MAP Tensión 5 y P05_RESEARCH_DOSSIER Sección 5) resuelven que el lobby y el relacionamiento institucional deben gestionarse como un proceso auditable, documentado y transparente integrado al repositorio corporativo oficial. Prevalece de forma definitiva la versión rigurosa de P05: la plataforma BRIDGE debe descartar la informalidad opaca, estructurar a los actores según su prominencia dinámica (Poder, Legitimidad y Urgencia) y exigir la trazabilidad de cada audiencia y gestión pública conforme a la Ley 20.730.",
+  "findings": [
+    {
+      "claim_id": "P05-C09-C1",
+      "claim": "Prevalece la exigencia de transparencia y gestión estructurada de partes interesadas bajo la Ley 20.730 y el modelo de Mitchell et al., proscribiendo la gestión informal u opaca de influencias.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2014-2026",
+        "region": "Chile",
+        "actor": "Gestión de Asuntos Públicos y Lobby"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2: Matriz de Tensiones Epistemológicas, Tensión 5",
+          "excerpt_short": "Incorporar compliance de transparencia de lobby. Conectar reuniones de agenda pública con el archivo corporativo de temas y posiciones oficiales. Nivel de confianza DEFINITIVO.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "537a7618-1e79-4747-ad6b-6e492a4a15b7",
+          "source_title": "BCN Chile: Ley 20.730 Regula el Lobby y las Gestiones que Representen Intereses Particulares",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=1060115",
+          "locator": "Título I y II",
+          "excerpt_short": "Establece el registro público de lobbistas, gestores de intereses y viajes, garantizando el principio de probidad y transparencia en las decisiones del Estado.",
+          "source_date": "2014-03-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Normativa legal obligatoria vigente en Chile y principio ético consagrado en las directrices de P05.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registros de reuniones institucionales",
+      "Plataforma InfoLobby del Estado"
+    ],
+    "actors": [
+      "Oficial de Cumplimiento de Lobby",
+      "Director de Asuntos Públicos"
+    ],
+    "steps": [
+      "Verificación de registro formal de audiencias",
+      "Indexación de temas tratados en el corpus interno",
+      "Auditoría de cumplimiento de la Ley 20.730"
+    ],
+    "states": [
+      "Meeting_Requested",
+      "Lobby_Registered",
+      "Institutional_Compliance_Enforced"
+    ],
+    "outputs": [
+      "Reporte de Transparencia de Gestión de Intereses Particulares"
+    ],
+    "exceptions": [
+      "Gestiones informales no declaradas, sancionables por la Contraloría o tribunales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_LOBBY_COMPLIANCE",
+      "type": "marco_cumplimiento",
+      "name": "Compliance de Transparencia de Lobby Ley 20.730",
+      "aliases": [
+        "Lobby Transparency Framework"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LOBBY_COMPLIANCE",
+      "predicate": "regula_interacciones_de",
+      "object_id": "ENT_ACTOR_SCHEMA",
+      "valid_from": "2014",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de gestión de actores",
+      "Lobby Informal Opaco": "Confía en relaciones personales no registradas, exponiendo a la empresa a escándalos de tráfico de influencias.",
+      "Gestión Estructurada BRIDGE": "Registra audiencias públicas bajo Ley 20.730, alineando los temas conversados con la evidencia técnica oficial de la empresa."
+    }
+  ],
+  "contradictions": [
+    {
+      "issue": "Gestión de lobby informal vs transparente",
+      "source_a": "Práctica de gestión de contactos no reglada",
+      "source_b": "Ley 20.730 / P05_EVIDENCE_MAP",
+      "resolution": "Prevalece la Ley 20.730 y P05: toda gestión institucional debe ser pública, transparente y auditable."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Conector InfoLobby",
+      "implication": "BRIDGE debe sincronizarse con las APIs públicas de la Ley de Lobby en Chile para mapear qué gestores de intereses están activos ante qué autoridades.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

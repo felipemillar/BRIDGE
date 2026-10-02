@@ -1,0 +1,145 @@
+{
+  "question_id": "P03-F43",
+  "pilar": "P03",
+  "eje": "Derechos, costos y calidad de ingesta",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué derechos de uso, retención, redistribución y entrenamiento están documentados por tipo de fuente?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los derechos de uso se estructuran en 4 regímenes jurídicos diferenciados: 1) Datos Públicos Gubernamentales (CMF, ChileCompra, SEC EDGAR, Diario Oficial): derecho pleno de consulta, indexación, retención indefinida y derivación analítica interna, con redistribución autorizada citando la fuente oficial (estándar OCDS y dominio público); 2) Prensa Comercial y Agregadores Sindicados (Factiva, Cision, Meltwater): derechos restringidos a lectura interna y visualización de fragmentos; prohibición expresa de redistribución de texto íntegro a terceros y prohibición contractual de utilizar el corpus para entrenamiento de modelos de lenguaje (LLMs); 3) Redes Sociales y Plataformas Abiertas: Bluesky (AT Protocol) permite ingesta y procesamiento bajo protocolo abierto; Reddit permite lectura bajo API pero prohíbe explícitamente el reentrenamiento de modelos de IA sin licencia comercial expresa; Meta Content Library y TikTok Research prohíben todo uso comercial corporativo; y 4) Web Scraping en Prensa Abierta: sujeto a la reserva de derechos legibles por máquina (opt-out Art. 4 Directiva UE 2019/790) y al derecho de cita breve de la Ley 17.336 en Chile, con riesgo civil por ruptura de Términos de Servicio según el precedente post-hiQ v. LinkedIn.",
+  "findings": [
+    {
+      "claim_id": "P03-F43-C1",
+      "claim": "Los derechos de ingesta varían desde el libre uso en datos gubernamentales hasta la prohibición estricta de reentrenamiento de IA en Reddit y Factiva, y la inelegibilidad corporativa en Meta Content Library.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / EE.UU. / UE",
+        "actor": "Marco de Derechos P03"
+      },
+      "evidence": [
+        {
+          "source_id": "6d444b42-f740-4b1f-877f-61ea4703e485",
+          "source_title": "Reddit Data API Terms, Wiki & Rate Limits",
+          "original_url": "https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki",
+          "locator": "Commercial Licensing and AI Training Clause",
+          "excerpt_short": "Accessing Reddit data to train commercial AI or machine learning models without explicit authorization is strictly prohibited under Reddit Developer Terms.",
+          "source_date": "2023",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:35:00-03:00"
+        },
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.4: Limitación de Conclusiones Jurídicas",
+          "excerpt_short": "En Chile, la Ley de Propiedad Intelectual (Ley 17.336) no contempla al corte de septiembre de 2026 una excepción explícita de TDM... el monitoreo que involucre reproducción o almacenamiento sin autorización conlleva contingencias.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de términos de servicio de desarrolladores y la adenda de calidad.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Payload de fuente ingerida",
+      "Matriz de derechos de propiedad intelectual"
+    ],
+    "actors": [
+      "Rights Gatekeeper",
+      "Data Retention Policy Worker"
+    ],
+    "steps": [
+      "Verificación de tipo de fuente",
+      "Aplicación de política de retención (efímera vs permanente)",
+      "Bloqueo de exportación para entrenamiento"
+    ],
+    "states": [
+      "Raw_Payload",
+      "Rights_Assessed",
+      "Compliant_Storage"
+    ],
+    "outputs": [
+      "Datos almacenados bajo estricto cumplimiento de derechos"
+    ],
+    "exceptions": [
+      "Uso no autorizado de textos protegidos para entrenamiento de modelos locales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_IP_RIGHTS_FRAMEWORK",
+      "type": "marco_legal",
+      "name": "Marco de Derechos de Uso y Retención de Datos",
+      "aliases": [
+        "Data Rights & IP Framework"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_IP_RIGHTS_FRAMEWORK",
+      "predicate": "restringe_almacenamiento_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F43-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Permiso de entrenamiento de IA",
+      "Datos Abiertos de Gobierno": "Permitido libremente con fines de análisis y machine learning.",
+      "Factiva / Cision / Reddit": "Prohibido terminantemente sin contratos comerciales de licenciamiento de datos de IA."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Almacenar únicamente embeddings y snippets breves de noticias protegidas para evitar contingencias legales de propiedad intelectual en BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F44"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

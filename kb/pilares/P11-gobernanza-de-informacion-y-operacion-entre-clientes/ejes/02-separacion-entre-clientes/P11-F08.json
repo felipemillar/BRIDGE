@@ -1,0 +1,164 @@
+{
+  "question_id": "P11-F08",
+  "pilar": "P11",
+  "eje": "Separación entre clientes",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Cómo se prueba aislamiento en ingesta, índices, caché, conversación, exportación y respaldo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El aislamiento entre clientes se verifica empíricamente a través de un protocolo de auditoría continua en 6 planos técnicos: 1) Ingesta: Pruebas de inyección de documentos con metadatos cruzados, validando que el servicio de almacenamiento (S3/GCS) segregue rutas por prefijo restringido con políticas IAM que impiden escribir en carpetas ajenas; 2) Índices Vectoriales: Tests de búsqueda adversarial donde se realizan 1.000 consultas semánticas utilizando fragmentos exactos de documentos del Cliente B, exigiendo que la similitud de cosenos en el espacio del Cliente A devuelva un recall de 0.0% para cualquier vector externo; 3) Caché: Verificación de que prompts idénticos enviados sucesivamente por el Cliente A y el Cliente B no generen 'cache hits' cruzados en Redis; 4) Conversación y Memoria LLM: Pruebas de fuga de contexto en sesiones de chat, comprobando que las variables temporales del modelo se destruyan al cerrar la sesión; 5) Exportación: Tests automatizados sobre endpoints de reporte y exportación masiva (PDF/CSV/ZIP), validando que los queries SQL subyacentes incluyan forzosamente la política RLS; y 6) Respaldos: Verificación de que los backups de base de datos se generen segregados por esquema/tenant o se cifren con la clave KMS propia de cada cliente, impidiendo restauraciones cruzadas.",
+  "findings": [
+    {
+      "claim_id": "P11-F08-C1",
+      "claim": "La verificación empírica del aislamiento exige pruebas formales en los seis planos operativos (ingesta, índices, caché, conversación, exportación y respaldos), garantizando recall cero de datos ajenos bajo estándares SOC 2.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "cross_layer_isolation_testing",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 3.2 'Protocolo de Pruebas de Aislamiento en 6 Planos'",
+          "retrieved_at": null,
+          "excerpt_short": "Pruebas obligatorias: 1. Ingesta (IAM de almacenamiento); 2. Índices (recall 0.0% de vectores cruzados en Qdrant); 3. Caché (namespacing Redis); 4. Conversación (purga de memoria); 5. Exportación (validación BOLA/IDOR); 6. Respaldo (cifrado con CMK dedicada).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AICPA: System and Organization Controls (SOC 2) Trust Services Criteria",
+          "source_id": "11c7c827-b3a4-4207-925a-f5bac2493a7b",
+          "locator": "Criteria CC6.1 & CC6.3 'Logical Boundary Testing'",
+          "retrieved_at": null,
+          "excerpt_short": "The entity tests and evaluates logical boundaries to ensure that customer data is segregated and inaccessible to unauthorized individuals or other tenants.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Cloud Security Alliance: Cloud Controls Matrix (CCM v4) and Shared Responsibility",
+          "source_id": "f6cdbafa-a8d6-4918-97f5-a8d6bf03341b",
+          "locator": "Domain IAM-07 'Tenant Separation Verification'",
+          "retrieved_at": null,
+          "excerpt_short": "Multi-tenant environments must demonstrate technical controls that enforce tenant separation and undergo regular adversarial verification across all persistent and temporary storage layers.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los requerimientos de auditoría SOC 2 CC6.3, CSA CCM v4 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Suite de pruebas automatizadas CI/CD",
+      "Tokens de prueba Tenant Alpha y Tenant Beta",
+      "Bases de prueba"
+    ],
+    "actors": [
+      "Ingeniero de QA de Seguridad",
+      "Harness de Testing Automatizado",
+      "Auditor SOC 2"
+    ],
+    "steps": [
+      "Creación de datos de prueba en Tenant Alpha y Tenant Beta",
+      "Ejecución de 1.000 consultas vectoriales cruzadas en Qdrant",
+      "Intento deliberado de leer llaves de Redis de Alpha con sesión de Beta",
+      "Intento de invocar endpoints de exportación de Alpha con token de Beta",
+      "Verificación de que el 100% de los intentos arrojen 0 resultados o error HTTP 403",
+      "Generación de reporte criptográfico de no filtración"
+    ],
+    "states": [
+      "FIXTURES_LOADED",
+      "ADVERSARIAL_TESTS_RUN",
+      "ZERO_LEAK_CONFIRMED",
+      "REPORT_CERTIFIED"
+    ],
+    "outputs": [
+      "Informe de auditoría de aislamiento para certificación SOC 2"
+    ],
+    "exceptions": [
+      "Cualquier filtración de 1 solo registro o vector detiene inmediatamente el pipeline de despliegue"
+    ]
+  },
+  "entities": [
+    "Pruebas de Aislamiento",
+    "SOC 2 Type II",
+    "CSA CCM v4",
+    "Testing CI/CD",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Suite de Pruebas",
+      "to": "6 Planos Operativos",
+      "type": "VALIDATES_INDEPENDENTLY"
+    },
+    {
+      "from": "Resultado de Pruebas",
+      "to": "Certificación SOC 2",
+      "type": "SUPPORTS_EVIDENTIALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir aislamiento teórico vs Pruebas automatizadas en 6 planos",
+      "diferencia": "El aislamiento teórico falla ante la primera mala configuración de middleware; las pruebas automatizadas en 6 planos verifican la robustez del sistema en cada release."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cross_tenant_recall_score": "0.0% de documentos ajenos recuperados en pruebas de estrés",
+    "isolation_test_frequency": "100% de ejecuciones exitosas en cada pipeline de integración continua"
+  },
+  "bridge_implications": "Permite a BRIDGE presentar reportes de auditoría de aislamiento en tiempo real a los oficiales de riesgo de nuevos clientes corporativos.",
+  "open_gaps": [
+    "Automatización de simulaciones de corrupción de memoria en instancias multi-tenant de Redis."
+  ],
+  "next_question_ids": [
+    "P11-F09",
+    "P11-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

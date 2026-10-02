@@ -1,0 +1,158 @@
+{
+  "question_id": "P11-F29",
+  "pilar": "P11",
+  "eje": "Proveedores y procesamiento externo",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre proveedores y procesamiento externo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos, términos contractuales y compromisos sobre proveedores de IA y procesamiento externo se sustentan en fuentes primarias verificadas: 1) Contratos Oficiales de Proveedores de IA (Versiones Vigentes 2026 en PDF): OpenAI Services Agreement (Sección 4.2 en PDF oficial `8d9a7ceb`) y OpenAI Data Processing Addendum (PDF oficial `1bc87361`), que fijan las cláusulas de no entrenamiento y rol de procesador; 2) Documentación Técnica y Términos de Nubes Hiperescalares: AWS Documentation 'Amazon Bedrock Data Protection and Privacy Controls' (`c1ccc227`), Google Cloud Vertex AI 'Generative AI Data Governance & Enterprise Privacy' (`9610ffd6`) y Microsoft Learn 'Data, Privacy, and Security for Azure OpenAI Service' (`9da2d927`); 3) Términos Comerciales de IA Alternativa: Anthropic 'Commercial Terms of Service and Data Processing Architecture' (`43c7c201`, Sección 3); 4) Marcos de Gestión de Riesgo en la Cadena de Suministro: Cloud Security Alliance CCM v4 (Dominios STA-01 y STA-02); y 5) Prevalencia Canónica Rectora: P11_2026_LAW_AND_PROVIDER_CORRECTION (`0716e04e`), que establece el alcance legal exacto de las promesas de proveedores.",
+  "findings": [
+    {
+      "claim_id": "P11-F29-C1",
+      "claim": "La base epistemológica de proveedores descansa en los contratos PDF oficiales de OpenAI (vigencia 2026), whitepapers de privacidad de AWS Bedrock, Google Vertex AI y Azure OpenAI, y la corrección canónica rectora de P11.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_base_cloud_providers",
+      "evidence": [
+        {
+          "source_title": "P11_SOURCE_INDEX",
+          "source_id": "4608d794-4538-48e8-94fb-da95fb84e1e4",
+          "locator": "Sección 'Cluster 5: Proveedores de IA, Nubes y Procesamiento Externo'",
+          "retrieved_at": null,
+          "excerpt_short": "Mapeo exhaustivo de proveedores: OpenAI Services Agreement & DPA (PDFs oficiales), AWS Bedrock, Google Vertex AI, Azure OpenAI, Anthropic, CSA CCM v4.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_2026_LAW_AND_PROVIDER_CORRECTION",
+          "source_id": "0716e04e-fef2-438a-8640-b662534aa59b",
+          "locator": "Sección 'Alcance de las Condiciones de OpenAI'",
+          "retrieved_at": null,
+          "excerpt_short": "Los PDF oficiales contienen cláusulas sustantivas. Se retiran afirmaciones de 'garantía absoluta' y se establece que las cláusulas contractuales requieren verificación técnica continua.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Microsoft Learn: Data, Privacy, and Security for Azure OpenAI Service",
+          "source_id": "9da2d927-097b-4dee-ac6a-f542d8d4324d",
+          "locator": "Section 'Data Management and Customer Control'",
+          "retrieved_at": null,
+          "excerpt_short": "Azure OpenAI Service processes customer data within the Microsoft Azure tenant boundary, ensuring customer data is not available to OpenAI and not used to retrain foundation models.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual directa de los documentos contractuales auténticos y respeto a la prevalencia de la corrección canónica rectora.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes en fuentes/P11.json",
+      "Validación cruzada de citas contractuales"
+    ],
+    "actors": [
+      "Auditor Documental",
+      "Investigador de Cumplimiento BRIDGE"
+    ],
+    "steps": [
+      "Revisión de citas directas de OpenAI Services Agreement, AWS Bedrock y Azure OpenAI",
+      "Verificación de que las versiones HTML descartadas no sean citadas como sustantivas",
+      "Mapeo de correspondencia en el índice de fuentes",
+      "Formalización de referencias en el esquema de respuestas"
+    ],
+    "states": [
+      "SOURCES_INSPECTED",
+      "CONTRACTS_VERIFIED",
+      "GROUNDING_CERTIFIED"
+    ],
+    "outputs": [
+      "Cuerpo probatorio inexpugnable para la relación con proveedores cloud"
+    ],
+    "exceptions": [
+      "Ninguna; las fuentes documentan textualmente los términos contractuales analizados"
+    ]
+  },
+  "entities": [
+    "OpenAI Agreement",
+    "Azure OpenAI",
+    "AWS Bedrock",
+    "CSA CCM v4",
+    "P11_SOURCE_INDEX"
+  ],
+  "relations": [
+    {
+      "from": "OpenAI Agreement",
+      "to": "No-Training",
+      "type": "COMMITS_LEGALLY"
+    },
+    {
+      "from": "Azure OpenAI",
+      "to": "Tenant Boundary",
+      "type": "ISOLATES_WITHIN"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citar blogs de internet sobre IA vs Citar PDFs contractuales oficiales con fecha de vigencia",
+      "diferencia": "Los blogs carecen de validez legal; los contratos PDF vigentes y la fe de erratas canónica ofrecen certeza probatoria ante cualquier litigio o auditoría de compliance."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "contractual_quote_accuracy": "100% de pasajes de proveedores citados textualmente desde PDFs oficiales"
+  },
+  "bridge_implications": "Garantiza la máxima defensibilidad jurídica de los contratos de procesamiento de BRIDGE ante auditorías de ciberseguridad corporativas.",
+  "open_gaps": [
+    "Monitoreo semestral de actualizaciones en los PDFs de DPAs de los principales proveedores."
+  ],
+  "next_question_ids": [
+    "P11-F30",
+    "P11-F31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

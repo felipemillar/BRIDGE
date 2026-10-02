@@ -1,0 +1,141 @@
+{
+  "question_id": "P03-C06",
+  "pilar": "P03",
+  "eje": "Redes sociales y comunidades",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué sigue sin prueba sobre redes sociales y comunidades, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la representatividad y exactitud de la detección de redes de influencia inauténtica cuando los atacantes emplean modelos de lenguaje (LLMs) para generar publicaciones con alta variabilidad estilística que evaden la coincidencia léxica: 1) Brecha: El algoritmo clásico de Pacheco et al. (2020) se basa en sincronía temporal y textos idénticos o cuasi-idénticos, volviéndose ciego ante ataques de astroturfing generativo con textos diversos; 2) Fuente fallida/parcial: La fuente 'Meta Content Library and API Evaluation - Social Media Lab' (`33f50617-82e1-45aa-8da9-6319d3d5cb05`) falló en la ingesta por bloqueo/error técnico, y además Meta prohíbe contractualmente el uso comercial; 3) Validación mínima: Ejecutar la Etapa 2 del protocolo empírico de P03 ('Prueba de Estrés frente a Desinformación Sintética'), inyectando 10.000 publicaciones sintéticas coordinadas en sandbox, midiendo si el motor combinado de sincronía temporal y DISARM alcanza un F1-Score >= 0.88 con cero falsas acusaciones hacia cuentas ciudadanas legítimas.",
+  "findings": [
+    {
+      "claim_id": "P03-C06-C1",
+      "claim": "Sigue sin prueba la resistencia ante astroturfing generativo con LLMs, habiendo fallado la fuente de evaluación de Meta, requiriendo validación en sandbox mediante la Etapa 2 del protocolo empírico (F1 >= 0.88).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Protocolo de Validación P03"
+      },
+      "evidence": [
+        {
+          "source_id": "443e6667-3d26-48ad-b56a-bb825e9ea387",
+          "source_title": "P03_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 4: Etapa 2 - Prueba de Estrés frente a Desinformación Sintética",
+          "excerpt_short": "Inyectar en un entorno controlado (sandbox) 10.000 publicaciones sintéticas generadas mediante agentes LLM... Criterio: Aislamiento con F1-Score superior a 0.88 y cero falsas acusaciones a cuentas orgánicas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del protocolo formal de prueba de estrés en P03_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "10.000 posts sintéticos generados por LLMs",
+      "Sandbox de prueba de estrés"
+    ],
+    "actors": [
+      "Adversarial Simulator",
+      "CIB Detector",
+      "DISARM Evaluator"
+    ],
+    "steps": [
+      "Inyección de tráfico sintético",
+      "Ejecución de detectores de sincronía",
+      "Cálculo de F1-Score y falsos positivos"
+    ],
+    "states": [
+      "Sandbox_Prepared",
+      "Traffic_Injected",
+      "Detection_Scored"
+    ],
+    "outputs": [
+      "Reporte de robustez algorítmica frente a astroturfing generativo"
+    ],
+    "exceptions": [
+      "Modelos LLM que imitan perfectamente la varianza temporal humana"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SANDBOX_PRUEBA_ESTRES",
+      "type": "entorno_pruebas",
+      "name": "Sandbox de Prueba de Estrés de Desinformación Sintética",
+      "aliases": [
+        "Synthetic Disinformation Sandbox"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SANDBOX_PRUEBA_ESTRES",
+      "predicate": "resuelve_incertidumbre_de",
+      "object_id": "Eje_Redes_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C06-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "F1-Score en Detección de Astroturfing Generativo",
+      "numerator": "2 * (Precision * Recall)",
+      "denominator": "Precision + Recall",
+      "context": "Meta de validación: F1 >= 0.88 sobre 10.000 publicaciones sintéticas"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "No desplegar detectores de coordinación en producción en BRIDGE sin antes certificar F1 >= 0.88 en el sandbox de astroturfing sintético.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_P03_ASTROTURFING_LLM",
+      "description": "Falta de prueba frente a campañas coordinadas generadas con LLMs",
+      "action": "Ejecutar Etapa 2 de validación en sandbox con 10.000 posts"
+    }
+  ],
+  "next_question_ids": [
+    "P03-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

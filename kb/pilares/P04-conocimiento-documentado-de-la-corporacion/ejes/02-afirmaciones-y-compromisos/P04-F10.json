@@ -1,0 +1,133 @@
+{
+  "question_id": "P04-F10",
+  "pilar": "P04",
+  "eje": "Afirmaciones y compromisos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar afirmaciones y compromisos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de afirmaciones y compromisos exige: 1) Variables métricas e identitarias (`commitment_id`, `title`, `description`, `baseline_value`, `target_value`, `unit`, `metric_type`); 2) Categorías temáticas normalizadas (`category`: Ambiental/Clima, Social/Comunidad, Gobierno Corporativo, Operacional/Seguridad, Diversidad e Inclusión; marcos de alineación: CMF NCG 461, GRI, IFRS S1/S2); 3) Relaciones ontológicas dirigidas (`hasBaseline`, `hasTargetYear`, `wasApprovedBy`, `hasReportedOutcome`, `isAssuredBy`); y 4) Condiciones de consistencia lógica y gobernanza (Condición 1: todo compromiso cuantitativo debe poseer un año base y unidad métrica válida; Condición 2: ningún resultado puede ser catalogado como 'auditado' sin dictamen ISAE 3000 con URI verificable; Condición 3: toda modificación de meta debe referenciar la versión previa vía `prov:wasRevisionOf` garantizando no-destrucción de la historia).",
+  "findings": [
+    {
+      "claim_id": "P04-F10-C1",
+      "claim": "El modelado estructurado de afirmaciones corporativas requiere variables tipadas, taxonomías temáticas ESG, relaciones dirigidas de linaje y tres condiciones lógicas obligatorias de consistencia y no-destrucción histórica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Datos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3.1: Estructura de Campos (Schema) y 2.2: Ontología",
+          "excerpt_short": "Schema properties: required [commitment_id, title, category, issuing_entity, baseline, target, status, governance, source_traceability]. Condiciones de integridad en Fase 4 de actualización.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación de schema e integridad referencial documentada en el dossier P04.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Schema JSON de compromiso",
+      "Registros candidatos"
+    ],
+    "actors": [
+      "Schema Validator",
+      "Consistency Enforcer"
+    ],
+    "steps": [
+      "Validación de tipos de datos",
+      "Comprobación de condiciones lógicas",
+      "Persistencia en grafo y almacén relacional"
+    ],
+    "states": [
+      "Validating",
+      "Passed_Integrity",
+      "Committed_To_Store"
+    ],
+    "outputs": [
+      "Entidad estructurada y validada lista para indexación semántica"
+    ],
+    "exceptions": [
+      "Compromiso cuantitativo que omite el año base"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_INTEGRITY_RULES",
+      "type": "reglas",
+      "name": "Reglas de Consistencia Lógica de Compromisos",
+      "aliases": [
+        "Commitment Data Integrity Rules"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_INTEGRITY_RULES",
+      "predicate": "asegura_calidad_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F10-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Control de consistencia",
+      "Almacenamiento no estructurado": "Permite inconsistencias numéricas y omisión de años base sin validación.",
+      "Modelo estructurado con reglas": "Rechaza o marca como incompleta cualquier afirmación que no cumpla las condiciones lógicas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe incorporar validadores automáticos en la ingesta para rechazar o clasificar como incompletas las afirmaciones sin metadata.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

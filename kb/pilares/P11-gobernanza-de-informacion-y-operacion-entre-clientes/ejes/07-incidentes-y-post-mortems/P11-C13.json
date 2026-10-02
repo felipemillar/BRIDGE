@@ -1,0 +1,148 @@
+{
+  "question_id": "P11-C13",
+  "pilar": "P11",
+  "eje": "Incidentes y post-mortems",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre incidentes y post-mortems, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia esencial en incidentes y post-mortems se focaliza en los plazos legales de reporte y en el tratamiento de los datos del incidente: las versiones preliminares del dossier (`P11_RESEARCH_DOSSIER`) proponían un protocolo genérico de comunicación que fijaba plazos difusos como 'notificar en 48 o 72 horas a criterio del equipo' y admitían la inclusión de fragmentos reales del incidente en los tickets internos de resolución. Las fuentes legales primarias de Chile (Ley N° 21.663 de Ciberseguridad, Ley N° 21.719 en vacatio legis) y la síntesis canónica rectora `P11_VERIFICATION_CORRECTIONS` (49d7882a) corrigen radicalmente este enfoque: 1) La Ley N° 21.663 (plenamente vigente) establece en su artículo 24 un plazo legal perentorio e improrrogable de 3 horas para notificar ciberataques e incidentes con efecto significativo al CSIRT Nacional; 2) La Ley N° 21.719 (en vacatio legis hacia fines de 2026) y el GDPR establecen un plazo de 72 horas para notificar brechas de datos personales a la Agencia reguladora; 3) Se prohíbe de forma absoluta incluir textos o datos reales del cliente en repositorios o post-mortems compartidos, exigiendo abstracción arquitectónica y casos sintéticos; y 4) Prevalece con rango rector `P11_VERIFICATION_CORRECTIONS` y la Ley 21.663, fijando el cronómetro legal estricto de 3 horas como regla operativa inviolable de BRIDGE.",
+  "findings": [
+    {
+      "claim_id": "P11-C13-C1",
+      "claim": "Existe discrepancia entre los plazos difusos de 48-72h del dossier preliminar versus la prevalencia canónica de la Ley 21.663 y P11_VERIFICATION_CORRECTIONS que imponen el plazo legal improrrogable de 3 horas para notificar al CSIRT Nacional y sanitización total de post-mortems.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "incident_reporting_discrepancy_and_precedence",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Respuesta a Incidentes y Plazos Legales'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia rectora: Rige el plazo legal obligatorio de 3 horas para reportar incidentes significativos al CSIRT Nacional bajo la Ley 21.663. Se desestiman plazos difusos del dossier.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.663 Ley Marco de Ciberseguridad e Infraestructura Crítica",
+          "source_id": "ee032cb3-abe5-4440-948f-815a9b4fbe78",
+          "locator": "Artículo 24",
+          "retrieved_at": null,
+          "excerpt_short": "Las instituciones y operadores deberán notificar al CSIRT Nacional los ciberataques e incidentes de ciberseguridad que puedan tener efectos significativos en el plazo máximo de tres horas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa con la legislación chilena vigente publicada en el Diario Oficial y directrices de prevalencia canónica.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Dossier preliminar con plazos de 48h",
+      "Texto oficial Ley 21.663",
+      "Directiva de P11_VERIFICATION_CORRECTIONS"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "Oficial de Seguridad CSIRT",
+      "Comandante de Incidente"
+    ],
+    "steps": [
+      "Identificación y anulación de plazos difusos de notificación en los playbooks de BRIDGE",
+      "Configuración de temporizadores regresivos a 3 horas en el SIEM ante eventos SEV-1",
+      "Integración del protocolo de sanitización obligatoria de post-mortems",
+      "Capacitación del equipo de respuesta a emergencias en los formularios del CSIRT Nacional",
+      "Ratificación de la prevalencia canónica en el Plan de Respuesta a Incidentes"
+    ],
+    "states": [
+      "OBSOLETE_SLA_DETECTED",
+      "3_HOUR_LEGAL_TIMER_CONFIGURED",
+      "POSTMORTEM_SANITIZATION_ENFORCED"
+    ],
+    "outputs": [
+      "Playbook de respuesta plenamente alineado con las leyes de la República de Chile"
+    ],
+    "exceptions": [
+      "Ninguna. El incumplimiento del plazo de 3 horas constituye infracción grave bajo la Ley 21.663"
+    ]
+  },
+  "entities": [
+    "Ley N° 21.663 Art 24",
+    "CSIRT Nacional",
+    "P11_VERIFICATION_CORRECTIONS",
+    "NIST SP 800-61 r3"
+  ],
+  "relations": [
+    {
+      "from": "Ley N° 21.663 Art 24",
+      "to": "Playbook de Incidentes",
+      "type": "MANDATES_3_HOUR_DEADLINE_TO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Tomarse 48 horas para avisar informalmente vs Reportar en 3 horas al CSIRT Nacional",
+      "diferencia": "Avisar en 48 horas es ilegal bajo la Ley 21.663 y arriesga multas millonarias; reportar en 3 horas cumple la ley y coordina la defensa nacional contra ciberataques."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Plazo de Notificación de Incidentes",
+      "dossier_claim": "Plazo flexible de 48 a 72 horas",
+      "canonical_resolution": "Plazo legal estricto de 3 horas al CSIRT Nacional bajo Ley 21.663."
+    }
+  ],
+  "metrics_and_denominators": {
+    "statutory_csirt_compliance_rate": "100%",
+    "max_csirt_notification_latency_hours": "3.0 horas"
+  },
+  "bridge_implications": "Garantiza que BRIDGE opere como un ciudadano corporativo ejemplar en materia de ciberseguridad en Chile.",
+  "open_gaps": [
+    "Pruebas de enlace de telecomunicaciones de emergencia fuera de banda con la ANCI."
+  ],
+  "next_question_ids": [
+    "P11-C14",
+    "P11-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

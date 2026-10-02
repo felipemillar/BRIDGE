@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C11",
+  "pilar": "P03",
+  "eje": "Desambiguación y análisis de señales",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre desambiguación y análisis de señales, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal radicaba en que las síntesis preliminares afirmaban que el modelo fundacional en español BETO (Cañete et al. 2020) resolvía de forma nativa la comprensión del dialecto chileno, la ironía política y la postura en controversias regulatorias complejas. Prevalece la rigurosa calibración de la P03_QUALITY_ADDENDUM (Sección 2.2): el paper fundacional de BETO evaluó tareas clásicas de NLP general (POS-tagging, NER y clasificación temática sobre Wikipedia y OPUS), sin incluir benchmarks de análisis de postura ni modismos coloquiales chilenos de coyuntura; por consiguiente, afirmar que BETO comprende ironía o postura corporativa en Chile es ESTRICTAMENTE UNA HIPÓTESIS OPERATIVA NO DEMOSTRADA que requiere un proceso formal de adaptación de dominio (domain adaptation), ajuste fino supervisado (fine-tuning) y creación de un benchmark de prueba local antes de poder utilizarse en producción.",
+  "findings": [
+    {
+      "claim_id": "P03-C11-C1",
+      "claim": "Prevalece la rectificación de la adenda de calidad P03 que califica la capacidad de BETO sobre ironía y lenguaje corporativo chileno como una hipótesis operativa no probada empíricamente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Auditoría de NLP P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.2: Límites y Condición de Hipótesis de BETO",
+          "excerpt_short": "La afirmación de que BETO... puede detectar con precisión ironía política, expresiones coloquiales chilenas complejas... es estrictamente una HIPÓTESIS OPERATIVA PENDIENTE DE VALIDACIÓN EMPÍRICA.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:45:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación vinculante según la regla de precedencia editorial del pilar.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Afirmaciones sobre rendimiento de BETO",
+      "Benchmark original de Cañete et al."
+    ],
+    "actors": [
+      "NLP Calibrator",
+      "Epistemic Auditor"
+    ],
+    "steps": [
+      "Cotejo de tareas del paper de BETO",
+      "Identificación de falta de datos de postura chilena",
+      "Etiquetado como Hipótesis Operativa"
+    ],
+    "states": [
+      "Claim_Checked",
+      "Gap_Identified",
+      "Hypothesis_Status_Enforced"
+    ],
+    "outputs": [
+      "Estatus epistémico calibrado de modelos de lenguaje en español"
+    ],
+    "exceptions": [
+      "Modelos propietarios recientes de OpenAI/Anthropic sin pesos abiertos evaluados"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESTATUS_BETO_CHILE",
+      "type": "calibracion_epistemica",
+      "name": "Calibración Epistémica de BETO en Chile",
+      "aliases": [
+        "BETO Epistemic Status"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESTATUS_BETO_CHILE",
+      "predicate": "fija_alcance_de",
+      "object_id": "Eje_Analisis_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C11-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Capacidad de BETO en lenguaje chileno",
+      "Afirmación Inicial": "BETO comprende la ironía y modismos corporativos chilenos nativamente.",
+      "Estatus Prevaleciente": "Hipótesis operativa no probada; requiere fine-tuning local y dataset anotado."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Capacidades nativas de BETO sobre ironía y modismos en Chile",
+      "initial_claim": "BETO resuelve con precisión la ironía y el lenguaje corporativo chileno.",
+      "corrected_claim": "BETO no ha sido evaluado en esas tareas; su capacidad es una hipótesis pendiente de validación.",
+      "resolution": "Prevalece la P03_QUALITY_ADDENDUM por regla de precedencia editorial."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "No confiar ciegamente en modelos BERT genéricos para clasificar postura en Chile sin un conjunto de datos de fine-tuning local en BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

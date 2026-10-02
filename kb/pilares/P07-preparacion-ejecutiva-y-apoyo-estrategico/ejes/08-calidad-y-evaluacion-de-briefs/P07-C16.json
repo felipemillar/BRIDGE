@@ -1,0 +1,126 @@
+{
+  "question_id": "P07-C16",
+  "pilar": "P07",
+  "eje": "Calidad y evaluación de briefs",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué sigue sin prueba sobre calidad y evaluación de briefs, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba econométrica concluyente el impacto causal directo del uso sistemático de briefs ejecutivos de alta calidad sobre la valoración de mercado o la reducción del costo de capital de la compañía (atribución causal última de la comunicación corporativa). En este eje no hubo fuentes fallidas directas, pero 'P07_GAPS_AND_VALIDATION' (Sección 1, Brecha 1) advierte que la literatura tiende a confundir correlación con causalidad, atribuyendo a la comunicación éxitos que corresponden al ciclo de precios de materias primas o a la gestión financiera. La validación mínima requerida es un estudio econométrico de eventos (Event Study Methodology) sobre una muestra de 40 anuncios corporativos de crisis en empresas chilenas cotizadas en bolsa, comparando el comportamiento del precio accionario anormal (Cumulative Abnormal Returns - CAR) entre compañías que respondieron con briefs y holding statements respaldados frente a aquellas que improvisaron o mantuvieron silencio pasivo.",
+  "findings": [
+    {
+      "claim_id": "P07-C16-C1",
+      "claim": "La atribución causal entre preparación ejecutiva asistida por IA y la reducción de pérdidas de capitalización bursátil en crisis no cuenta con demostración econométrica concluyente.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "macro_economic_causality_gap",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 1 (Brecha 1: El Vacío de Atribución Causal en la Reputación)",
+          "excerpt_short": "Brecha de Atribución: No existe un modelo cuantitativo validado que aísle el impacto de un brief ejecutivo del rendimiento financiero general o del ciclo de commodities (ej. precio del cobre). Se suele atribuir a la preparación comunicacional lo que es efecto del ciclo macroeconómico.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "MDPI: Public Relations - Discipline, Practice and Profession (Academic Review 2026)",
+          "source_id": "9220a19c-27bc-4d66-b455-c5755e4bbc27",
+          "locator": "Sección 'Causality and Value Attribution in Corporate Communications', p. 24-29",
+          "excerpt_short": "Establishing definitive causal linkages between specific strategic messaging interventions and organizational enterprise value requires rigorous event study methodologies to isolate market-wide endogeneity.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Alineación directa entre el paper académico de revisión de MDPI (2026) y la Brecha 1 de P07_GAPS.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "estudio_econometrico_eventos": {
+      "metodologia": "Event Study Methodology (Cálculo de CAR a 3, 5 y 10 días tras el estallido de la crisis).",
+      "muestra": "40 eventos de crisis reputacional en emisores de la Bolsa de Comercio de Santiago (2020-2026).",
+      "variable_independiente": "Calidad y velocidad de la preparación ejecutiva (Holding statement < 20 min y citas respaldadas vs Improvisación).",
+      "variable_dependiente": "Retorno anormal acumulado de las acciones y spread de deuda corporativa.",
+      "objetivo": "Aislar el impacto protector de la preparación ejecutiva frente al ruido de mercado."
+    }
+  },
+  "entities": [
+    "MDPI Academic Review 2026",
+    "Event Study Methodology",
+    "CAR",
+    "P07_GAPS_AND_VALIDATION",
+    "Bolsa de Santiago"
+  ],
+  "relations": [
+    {
+      "from": "MDPI Review",
+      "to": "Event Study Methodology",
+      "type": "recommends"
+    },
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "Brecha de Atribución",
+      "type": "formalizes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Correlación Ingenua vs Estudio de Eventos Econométrico",
+      "diferencia": "La correlación ingenua afirma que un buen brief subió las acciones; el estudio de eventos aísla el precio del cobre y la tasa de interés para medir el impacto puro de la comunicación."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "sample_events_count": "40 crisis documentadas en Chile",
+    "event_window": "[-1, +5] días bursátiles"
+  },
+  "bridge_implications": "Integrar este estudio en el whitepaper fundacional de BRIDGE para demostrar el rigor científico del proyecto frente al escepticismo de los directores financieros (CFOs).",
+  "open_gaps": [
+    "Dificultad de aislar el impacto comunicacional en empresas cerradas o familiares que no cotizan acciones en bolsa."
+  ],
+  "next_question_ids": [
+    "FIN_PILAR_P07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

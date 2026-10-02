@@ -1,0 +1,185 @@
+{
+  "question_id": "P01-F23",
+  "pilar": "P01",
+  "eje": "Reuniones y decisiones críticas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre reuniones y decisiones críticas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El tema está respaldado por 8 fuentes primarias estructuradas: Ley N° 20.730 de Lobby (BCN Chile 2014-2026); NCG 461 y 519 de la CMF (26-NOV-2025 sobre memorias integradas ASG); Dircom ECE 2025 (Sep 2025, 54,4% reporte a CEO y 32,3% en Comité); Page Society (2022-2024 sobre el CCO Integrador); McKinsey (Oct 2025, 30% tiempo CEO a stakeholders externos); GCF Global Alliance (2021 sobre inteligencia contextual); Cadem Marcas Ciudadanas (Jun 2026); y Merco Chile auditado por KPMG. Se identifican 4 vacíos críticos de evidencia (métricas de tiempo, estudios longitudinales de IA en SLO, criterios de CISO y trazabilidad empírica en InfoLobby).",
+  "findings": [
+    {
+      "claim_id": "P01-F23-C1",
+      "claim": "La regulación chilena (Ley 20.730 y NCG 461 de la CMF) fija responsabilidades legales ineludibles sobre la transparencia de reuniones con autoridades y la divulgación de factores ASG en memorias anuales de emisores bursátiles.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2014-2026",
+        "region": "Chile",
+        "actor": "BCN / CMF Chile"
+      },
+      "evidence": [
+        {
+          "source_id": "87978287-38ec-4b0f-bd60-e724e02362aa",
+          "source_title": "Biblioteca del Congreso Nacional de Chile - Ley N° 20.730 que Regula el Lobby y Gestiones de Intereses Particulares",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=1060115",
+          "locator": "Marco general de registro de lobby",
+          "excerpt_short": "Regula la publicidad en la actividad de lobby y gestiones de intereses particulares en Chile.",
+          "source_date": "2026-04-02",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:47:00-03:00"
+        },
+        {
+          "source_id": "72c69269-a06e-4c45-a916-1cd68b9af0be",
+          "source_title": "Comisión para el Mercado Financiero (CMF Chile) - NCG 461 y 519: Sostenibilidad y Gobierno Corporativo",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Supervisión de divulgación de sostenibilidad",
+          "excerpt_short": "Exigencia de reporte de sostenibilidad y gobierno corporativo en memorias integradas.",
+          "source_date": "2025-11-26",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:47:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Normativa oficial chilena vigente.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F23-C2",
+      "claim": "Existen 4 vacíos críticos de evidencia documentados formalmente en P01_GAPS_AND_VALIDATION: falta de métricas temporales auditadas sobre horas-hombre de briefings; carencia de estudios longitudinales de IA en Licencia Social; opacidad en criterios de aprobación de CISOs; y ausencia de literatura empírica que coteje minutas internas con registros de InfoLobby.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Literatura de Investigación"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Knowledge Gaps 1 a 4",
+          "excerpt_short": "Identificación de los 4 vacíos críticos de evidencia: métricas de tiempo, impacto en SLO, objeciones CISO y trazabilidad en lobby.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:47:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Matriz formal de vacíos del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fuentes regulatorias",
+      "Benchmarks profesionales",
+      "Matriz de vacíos"
+    ],
+    "actors": [
+      "Auditor Epistemológico",
+      "Investigador Legal"
+    ],
+    "steps": [
+      "Cotejo normativo",
+      "Verificación cruzada de fuentes",
+      "Mapeo de vacíos"
+    ],
+    "states": [
+      "Fuentes_Verificadas",
+      "Vacíos_Delimitados"
+    ],
+    "outputs": [
+      "Matriz de fuentes y pasajes",
+      "Registro de Knowledge Gaps"
+    ],
+    "exceptions": [
+      "Cita sin localizador exacto o fuente desactualizada"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CORPUS_P01",
+      "type": "corpus_investigacion",
+      "name": "Corpus P01: Asuntos Corporativos y sus Usuarios",
+      "aliases": [
+        "Cuaderno P01"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CORPUS_P01",
+      "predicate": "identifica_vacios_en",
+      "object_id": "ENT_GAP_HORAS_HOMBRE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F23-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Validación",
+      "implication": "Diseñar pruebas piloto para resolver empíricamente los 4 Knowledge Gaps identificados en empresas chilenas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "sin_evidencia sobre estudios empíricos que comparen minutas internas de empresas chilenas con sus actas publicadas en InfoLobby.",
+      "minimum_validation": "Muestreo comparativo de 50 audiencias públicas en InfoLobby contra minutas de preparación.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "P01-F24",
+    "P01-F25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:47:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "question_id": "P09-F07",
+  "pilar": "P09",
+  "eje": "Historial de interacción",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué datos deben registrarse después de llamada, reunión, audiencia o visita a terreno?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Tras cualquier interacción (llamada, reunión presencial, audiencia formal o visita a terreno), el sistema debe registrar obligatoriamente 9 atributos nucleares: 1) Fecha, hora de inicio/término y geolocalización o enlace telemático; 2) Tipología de interacción (reunión comunitaria, audiencia de lobby bajo Ley 20.730, inspección de terreno, mesa técnica, llamada de prensa o queja formal); 3) Asistentes completos con rol formal y representatividad estatutaria; 4) Agenda tratada y temas clave (issues vinculados a la taxonomía de riesgos); 5) Resumen fáctico de lo conversado (hechos verificables sin interpretaciones subjetivas no fundadas); 6) Minuta adjunta o acta física firmada digitalizada; 7) Compromisos adquiridos (o declaración explícita de 'sin nuevos compromisos'); 8) Quejas o disconformidades formuladas bajo el Principio 31 de la ONU; y 9) Usuario interno registrador y sello de tiempo inmutable para auditoría.",
+  "findings": [
+    {
+      "claim_id": "P09-F07-C1",
+      "claim": "El registro post-interacción exige capturar metadatos operativos, asistentes con rol, temas tratados, minutas probatorias y compromisos derivados para cerrar la brecha de amnesia institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "interaction_logging_standard",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo de Gestión en 6 Fases (Fase 2)'",
+          "retrieved_at": null,
+          "excerpt_short": "Fase 2: Registrar Interacción. Datos obligatorios: fecha, hora, modalidad, asistentes internos y externos con rol, síntesis objetiva de puntos tratados, compromisos pactados (con ID único), quejas recibidas y acta física firmada digitalizada o comprobante telemático.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: Building Strong Stakeholder Relationships & How an SRM Can Help",
+          "source_id": "09790394-0243-49ec-8617-343b020c8cf2",
+          "locator": "Sección 'Interaction Records as Institutional Memory', p. 8-12",
+          "retrieved_at": null,
+          "excerpt_short": "A single interaction record without clear participants, tangible minutes, and explicitly tracked commitments is a primary source of corporate vulnerability during regulatory or legal scrutiny.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Boréalis SRM y la fase 2 del dossier de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Notas manuscritas",
+      "Grabación de audio de asamblea",
+      "Acta comunitaria firmada",
+      "Formulario móvil offline"
+    ],
+    "actors": [
+      "Relacionador Comunitario",
+      "Gestor de Asuntos Públicos",
+      "Secretaría de Actas"
+    ],
+    "steps": [
+      "Carga de metadatos de la interacción",
+      "Identificación unívoca de participantes",
+      "Carga de acta o resumen fáctico",
+      "Desglose estructurado de compromisos",
+      "Guardado con hash inmutable"
+    ],
+    "states": [
+      "Borrador",
+      "Enviado a Revisión",
+      "Consolidado e Inmutable"
+    ],
+    "outputs": [
+      "Registro de interacción indexado en el grafo relacional"
+    ],
+    "exceptions": [
+      "Interacciones en zonas sin conectividad móvil sincronizadas mediante búfer local cifrado en la app móvil"
+    ]
+  },
+  "entities": [
+    "Entity_Interaction",
+    "Entity_MeetingMinutes",
+    "Entity_Commitment",
+    "Principio 31 ONU",
+    "Boréalis SRM"
+  ],
+  "relations": [
+    {
+      "from": "Entity_Interaction",
+      "to": "Entity_Person",
+      "type": "attended_by"
+    },
+    {
+      "from": "Entity_Interaction",
+      "to": "Entity_Commitment",
+      "type": "generates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Registro en CRM tradicional vs SRM especializado",
+      "diferencia": "El CRM registra notas comerciales breves; el SRM requiere actas de validez probatoria ante la SMA y tribunales ambientales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "interaction_mandatory_fields": "9 campos obligatorios",
+    "sla_logging_time": "Máximo 24 horas hábiles posteriores al encuentro"
+  },
+  "bridge_implications": "Implementar un formulario rápido en el módulo 'Relaciones' que soporte sincronización offline para personal de terreno en faenas mineras y energéticas.",
+  "open_gaps": [
+    "Definir el límite de tamaño para archivos adjuntos de audio o video de asambleas."
+  ],
+  "next_question_ids": [
+    "P09-F08",
+    "P09-F09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

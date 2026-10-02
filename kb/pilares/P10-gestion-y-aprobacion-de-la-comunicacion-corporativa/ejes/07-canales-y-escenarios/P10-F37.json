@@ -1,0 +1,164 @@
+{
+  "question_id": "P10-F37",
+  "pilar": "P10",
+  "eje": "Canales y escenarios",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Cómo difieren comunicado, respuesta a periodista, mensaje interno y explicación a autoridad?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los cuatro tipos de mensaje difieren radicalmente en formato, objetivo comunicacional, lenguaje y marco de responsabilidad, compartiendo una base fáctica idéntica: 1) Comunicado de Prensa (Media Wire): Estructura de pirámide invertida de alcance público masivo, redactada en tercera persona, con titular fáctico claro, cita aprobada de vocero autorizado con su cargo exacto, antecedentes operativos consolidados, datos de contacto de prensa y safe harbor; 2) Respuesta a Periodista (Media Inquiry Q&A): Formato conversacional reactivo y acotado, enfocado en responder exclusivamente las preguntas específicas formuladas sin divagar, bajo acuerdos formales de atribución ('on the record' / 'background') y embargo horario por escrito; 3) Mensaje Interno (Colaboradores y Sindicatos): Registro empático y directo de liderazgo, centrado en la seguridad física de los trabajadores, la continuidad operacional, el impacto en turnos o beneficios, y pautas claras sobre no especular ni filtrar material a redes sociales personales; y 4) Explicación a la Autoridad (Oficio Regulatorio / SMA / CMF / Seremi): Documento formal jurídico-técnico foliado, con invocación expresa de artículos legales, acompañamiento de informes periciales certificados, cronología exacta y firma de representación legal acreditada, sujeto a fe pública.",
+  "findings": [
+    {
+      "claim_id": "P10-F37-C1",
+      "claim": "La comunicación corporativa exige adaptar el formato y registro retórico según el destinatario (medios, periodistas individuales, empleados o reguladores), manteniendo invariante el sustrato fáctico subyacente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "channel_and_audience_differentiation",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 2 'Fase 8: Adaptación Multicanal y Staging con Embargo'",
+          "retrieved_at": null,
+          "excerpt_short": "Diferenciación de formatos: Comunicado para newswire (pirámide invertida y cita de vocero), Q&A para periodista (acotado y contextualizado), comunicado interno (seguridad, empatía y continuidad laboral), reporte a la autoridad (oficio técnico con valor legal probatorio).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "ContentGrip: Practical PR Workflow - Staging, Embargoes and Multi-Channel Distribution",
+          "source_id": "4b3bd2de-e375-4ca4-a494-8adce9b0d5a5",
+          "locator": "Section 'Tailoring PR Assets to Distinct Channel Realities'",
+          "retrieved_at": null,
+          "excerpt_short": "Releasing the identical text across all channels is an amateur flaw. Internal staff need reassurance and operational directives, whereas journalists require punchy facts and quotable perspectives.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 20.730 Regula el Lobby y Gestiones Particulares",
+          "source_id": "955cac61-0953-4bbf-a571-40c0a4c38b41",
+          "locator": "Artículos 5 a 8 'Registro de Audiencias y Comunicaciones'",
+          "retrieved_at": null,
+          "excerpt_short": "Las comunicaciones dirigidas a autoridades públicas que busquen influir en decisiones deben quedar registradas formalmente, distinguiéndose de declaraciones de prensa abiertas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre manuales de flujo PR, derecho administrativo (Ley de Lobby) y el dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Mensaje institucional aprobado v1.0",
+      "Matriz de audiencias destino",
+      "Especificaciones de canal"
+    ],
+    "actors": [
+      "Redactor Especialista",
+      "Comunicaciones Internas",
+      "Relaciones Institucionales / Lobby",
+      "Oficial de Prensa"
+    ],
+    "steps": [
+      "Selección de las derivadas a producir a partir del mensaje aprobado",
+      "Generación de plantilla adaptada para cada audiencia",
+      "Verificación de que las cifras y líneas rojas no hayan sido alteradas",
+      "Aprobación de la adaptación por el líder de cada área de canal",
+      "Staging y programación de despacho sincronizado"
+    ],
+    "states": [
+      "CORE_APPROVED",
+      "VARIANTS_DRAFTED",
+      "INTEGRITY_CHECKED",
+      "READY_FOR_DISPATCH"
+    ],
+    "outputs": [
+      "Cuatro paquetes comunicacionales específicos listos para emisión"
+    ],
+    "exceptions": [
+      "Si la autoridad exige reserva por secreto de sumario, el comunicado de prensa general debe omitir los anexos periciales entregados al fiscalizador"
+    ]
+  },
+  "entities": [
+    "Comunicado de Prensa",
+    "Mensaje Interno",
+    "Oficio a Autoridad",
+    "Ley 20.730",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Mensaje Central Aprobado",
+      "to": "Comunicado de Prensa",
+      "type": "INSTANTIATES"
+    },
+    {
+      "from": "Mensaje Central Aprobado",
+      "to": "Oficio a Autoridad",
+      "type": "FORMALIZES_LEGALLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Copy-paste masivo del mismo texto vs Adaptación controlada multicanal",
+      "diferencia": "El copy-paste masivo desmotiva al personal interno y genera rechazo de la autoridad por falta de rigor formal; la adaptación controlada maximiza la efectividad en cada audiencia sin desviar los hechos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "cross_channel_factual_fidelity": "100% de consistencia en cifras y fechas clave entre los 4 formatos",
+    "channel_format_compliance_rate": "% de mensajes que cumplen los estándares formales requeridos por cada medio"
+  },
+  "bridge_implications": "BRIDGE debe ofrecer plantillas modulares conectadas al mismo registro de hechos para generar simultáneamente borradores adaptados a prensa, colaboradores y autoridades.",
+  "open_gaps": [
+    "Integración con plataformas de comunicación interna como Slack Enterprise Grid y Microsoft Teams."
+  ],
+  "next_question_ids": [
+    "P10-F38",
+    "P10-F39"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

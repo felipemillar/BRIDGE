@@ -1,0 +1,142 @@
+{
+  "question_id": "P02-C09",
+  "pilar": "P02",
+  "eje": "Conocimiento interno y cruce de fuentes",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre conocimiento interno y cruce de fuentes, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan sobre la omnisciencia de los motores de búsqueda empresarial y la suficiencia de las herramientas de inteligencia financiera: 1) Discrepancia: Fichas comerciales de Enterprise Search (Glean) y Market Intelligence (AlphaSense) afirman en su marketing resolver 'todas las necesidades de información estratégica y búsqueda de la empresa'; borradores iniciales asumían que contratar Glean o AlphaSense volvía innecesario desarrollar un módulo de conocimiento corporativo específico para asuntos públicos; 2) Versión que prevalece: '00_P02_GLOBAL_READ_ME_AND_ERRATA' y 'P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1' fijan que Glean es un motor de búsqueda horizontal que respeta permisos internos (SaaS conectores) pero es ciego a la reputación mediática externa y a la taxonomía de vocerías; mientras que AlphaSense está optimizado para M&A, earnings calls y filings ante la SEC, careciendo de gestión de crisis comunicacionales y memoria territorial. Prevalece la conclusión de que son complementos de datos e infraestructura, no sustitutos de la suite vertical.",
+  "findings": [
+    {
+      "claim_id": "P02-C09-C1",
+      "claim": "Glean y AlphaSense resuelven capas horizontales de búsqueda interna y filings financieros, pero carecen de la semántica de asuntos corporativos, vocería y licenciamiento social requerida por los directores de comunicación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Glean, AlphaSense"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 4: Enterprise Search vs Domain-Specific Corporate Affairs Knowledge",
+          "excerpt_short": "Horizontal search engines like Glean provide infrastructure connectivity but do not curate reputation risk or spokesperson messaging workflows.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:46:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de especificaciones funcionales en los manuales de producto.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Especificaciones de Glean y AlphaSense",
+      "Requerimientos del módulo Saber",
+      "Taxonomía de riesgos de asuntos corporativos"
+    ],
+    "actors": [
+      "Arquitecto de Soluciones",
+      "Director de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Mapeo de casos de uso de búsqueda",
+      "Evaluación de cobertura de taxonomía de riesgos",
+      "Delimitación entre infraestructura RAG genérica y lógica vertical"
+    ],
+    "states": [
+      "Capacidades_Mapeadas",
+      "Fronteras_Definidas",
+      "Arquitectura_Aprobada"
+    ],
+    "outputs": [
+      "Definición de interfaz de complementariedad técnica"
+    ],
+    "exceptions": [
+      "Lanzamiento de plugins verticales de PR por parte de proveedores de búsqueda horizontal"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GLEAN",
+      "type": "enterprise_search",
+      "name": "Glean Technologies Inc.",
+      "aliases": [
+        "Glean"
+      ]
+    },
+    {
+      "entity_id": "ENT_ALPHASENSE",
+      "type": "market_intelligence",
+      "name": "AlphaSense Inc.",
+      "aliases": [
+        "AlphaSense"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GLEAN",
+      "predicate": "opera_como_infraestructura_horizontal_sin",
+      "object_id": "Flujo_Voceria_Asuntos_Publicos",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Búsqueda Horizontal (Glean) vs Conocimiento Vertical (BRIDGE)",
+      "Búsqueda Horizontal": "Encuentra cualquier archivo en Slack o Drive sin entender si es una crisis o una postura aprobada.",
+      "Conocimiento Vertical": "Clasifica el archivo según su riesgo reputacional, estado de aprobación legal y aplicabilidad para voceros."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "BRIDGE debe consumir la búsqueda de Glean como conector de bajo nivel y aplicar encima la capa semántica de asuntos corporativos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:46:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

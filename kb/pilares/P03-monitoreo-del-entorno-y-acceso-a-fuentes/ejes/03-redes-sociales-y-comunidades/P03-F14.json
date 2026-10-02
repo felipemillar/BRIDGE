@@ -1,0 +1,145 @@
+{
+  "question_id": "P03-F14",
+  "pilar": "P03",
+  "eje": "Redes sociales y comunidades",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué sesgos introducen muestras parciales, cuentas privadas, límites de API y cambios de plataforma?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La captura de datos sociales introduce 4 sesgos estructurales severos: 1) Sesgo de visibilidad y cámaras de eco privadas: las conversaciones en perfiles cerrados de Instagram, grupos privados de Facebook y chats de WhatsApp son inaccesibles legalmente, ocultando la articulación comunitaria territorial real; 2) Sesgo de sobre-representación demográfica y polarización: los usuarios activos en plataformas como X representan una fracción no representativa de la población general (sesgo hacia élites políticas, periodistas y activistas hiperpolarizados); 3) Sesgo algorítmico y de muestreo por cuotas de API: los límites de llamadas y filtros de 'relevancia' de las APIs comerciales entregan subconjuntos opacos que sobrerrepresentan la viralidad superficial sobre los reclamos de base; y 4) Sesgo de volatilidad de plataforma: los cambios unilaterales en términos de servicio, cierres de APIs (como el desmantelamiento de CrowdTangle en 2024) y migraciones de usuarios crean discontinuidades artificiales en series temporales.",
+  "findings": [
+    {
+      "claim_id": "P03-F14-C1",
+      "claim": "Los datos de redes sociales sufren sesgos sistemáticos de selección demográfica, exclusión de espacios privados y truncamiento por límites de API, impidiendo atribuirles representatividad estadística poblacional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Auditoría Metodológica P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.2: Redes Sociales - Evidencia Independiente",
+          "excerpt_short": "El ecosistema de investigación social independiente ha denunciado una 'crisis de transparencia digital' que bloquea la auditoría de riesgos públicos... obligando a depender de muestras parciales.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        },
+        {
+          "source_id": "5eaa5b99-624c-4877-87be-66c339c7b6d4",
+          "source_title": "AMEC Barcelona Principles 3.0 & Integrated Evaluation Framework",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principle 5: AVEs are Not the Value of Communication & Principle 6: Social Media Can and Should be Measured Consistently",
+          "excerpt_short": "Social media measurement must recognize the distinct characteristics of each platform, avoiding assumptions of broad public representativeness from isolated digital conversations.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificado con principios de medición AMEC y evaluaciones de transparencia digital.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Muestra de publicaciones sociales",
+      "Parámetros de consulta de API"
+    ],
+    "actors": [
+      "Bias Auditor",
+      "Sample Calibrator"
+    ],
+    "steps": [
+      "Detección de cuentas privadas inaccesibles",
+      "Cálculo de cobertura muestral",
+      "Ponderación de advertencia de sesgo"
+    ],
+    "states": [
+      "Raw_Sample",
+      "Bias_Quantified",
+      "Sample_Weighted_With_Disclaimer"
+    ],
+    "outputs": [
+      "Informe de escucha social con métricas de sesgo explícitas"
+    ],
+    "exceptions": [
+      "Pánico reputacional infundado provocado por métricas de vanidad en cuentas polarizadas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SOCIAL_BIAS",
+      "type": "concepto_metodologico",
+      "name": "Sesgos Estructurales de Redes Sociales",
+      "aliases": [
+        "Social Media Sampling Bias"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SOCIAL_BIAS",
+      "predicate": "condiciona_interpretacion_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F14-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Representatividad de la muestra",
+      "Redes Públicas (X / Bluesky)": "Representa voces vocales hiperpolarizadas y periodistas; no representa la opinión pública.",
+      "Encuestas Probabilísticas": "Muestreo aleatorio estratificado con margen de error conocido sobre la población general."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe etiquetar toda métrica de redes sociales con un índice de sesgo muestral explícito, prohibiendo extrapolar 'sentimiento de Twitter' a opinión pública general.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

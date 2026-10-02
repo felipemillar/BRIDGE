@@ -1,0 +1,193 @@
+{
+  "question_id": "T01-F14",
+  "pilar": "T01",
+  "eje": "Casos de prueba y conjunto de referencia",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Cómo se rotulan afirmaciones, citas, conflictos y permisos de forma independiente?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para garantizar la máxima validez científica y evitar el sesgo de confirmación, la rotulación del conjunto de referencia debe desacoplarse en cuatro ejes independientes evaluados por jueces ciegos o modelos calibrados: 1) Rotulación de Afirmaciones Fácticas: Cada oración de la respuesta generada se descompone en proposiciones atómicas (claims) verificables de forma aislada (metodología ALCE / Gao et al. 2023 y SummEval / Fabbri et al. 2021); 2) Rotulación de Citas: Se audita si la cita textual sustenta directamente la afirmación (Citation Precision) y si se aportaron todas las citas necesarias (Citation Recall); 3) Rotulación de Conflictos: Se clasifica si una discrepancia entre fuentes es temporal, de alcance o de interpretación sustantiva siguiendo la taxonomía SABER (Zhu et al. 2026); y 4) Rotulación de Permisos: Se valida mediante auditoría lógica si la afirmación y la fuente citada correspondían estrictamente a la partición de acceso autorizada para el usuario emisor (RBAC/RLS).",
+  "findings": [
+    {
+      "claim_id": "T01-F14-C1",
+      "claim": "El benchmark ALCE (Gao et al. 2023) formaliza la separación entre la calidad de la respuesta (fluidez/utilidad) y el rigor de citación mediante dos métricas independientes: Citation Precision (proporción de citas generadas que respaldan plenamente la afirmación asociada) y Citation Recall (proporción de afirmaciones fácticas que cuentan con respaldo citado).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-05",
+        "region": "Global",
+        "actor": "Gao et al. / Princeton, Stanford, Chicago"
+      },
+      "evidence": [
+        {
+          "source_id": "e1a0171b-34f0-48f2-b343-29f7ec88bd31",
+          "source_title": "Gao et al. (2023) — Enabling Language Models to Generate Text with Citations (ALCE Benchmark)",
+          "original_url": "https://arxiv.org/pdf/2305.14627.pdf",
+          "locator": "Section 3: Evaluation Metrics, p. 4-5",
+          "excerpt_short": "We define Citation Precision as the percentage of generated citations that fully support the associated claim, and Citation Recall as the ratio of generated claims that are supported by at least one citation.",
+          "source_date": "2023-05-23",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto completo del paper ALCE recuperado y analizado (50.565 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F14-C2",
+      "claim": "SummEval (Fabbri et al. 2021) establece un protocolo riguroso para la rotulación independiente de consistencia factual, coherencia y relevancia por parte de evaluadores humanos ciegos respecto al modelo que generó el texto, evitando la contaminación por familiaridad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021",
+        "region": "Global",
+        "actor": "Fabbri et al. / Yale & Salesforce Research"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 2: Human Evaluation Protocol, p. 3-4",
+          "excerpt_short": "Evaluators independently scored outputs across coherence, consistency, fluency, and relevance without knowledge of the underlying model generating each text.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto completo recuperado (35.612 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Respuestas generadas por el sistema",
+      "Documentos originales recuperados",
+      "Tokens de autorización del usuario evaluador"
+    ],
+    "actors": [
+      "Anotadores humanos ciegos",
+      "Evaluador automatizado ALCE/Ragas",
+      "Auditor de seguridad RBAC"
+    ],
+    "steps": [
+      "Segmentar la respuesta generada en oraciones y proposiciones atómicas",
+      "Cruce ciego claim vs cita: evaluar Citation Precision y Recall de forma desacoplada",
+      "Verificar si la fuente citada presenta conflicto epistémico con el repositorio canónico",
+      "Auditar que el anotador y el usuario de prueba solo hayan accedido a documentos autorizados para su tenant"
+    ],
+    "states": [
+      "SEGMENTACION",
+      "EVALUACION_CIEGA",
+      "CALCULO_PRECISION_RECALL",
+      "CONFORMIDAD_SEGURIDAD"
+    ],
+    "outputs": [
+      "Dataset rotulado multidimensional",
+      "Score ALCE independiente por respuesta"
+    ],
+    "exceptions": [
+      "Si una afirmación carece de cita en un tema regulado o financiero, se rotula automáticamente como infracción crítica"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ALCE_BENCHMARK",
+      "type": "producto",
+      "name": "ALCE Benchmark",
+      "aliases": [
+        "Gao et al. 2023"
+      ]
+    },
+    {
+      "entity_id": "SUMMEVAL",
+      "type": "producto",
+      "name": "SummEval Benchmark",
+      "aliases": [
+        "Fabbri et al. 2021"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ALCE_BENCHMARK",
+      "predicate": "desacopla",
+      "object_id": "SUMMEVAL",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F14-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Citation Precision",
+      "item_b": "Citation Recall",
+      "dimension": "Foco evaluativo",
+      "conclusion": "Precision castiga citas espurias o alucinadas; Recall castiga afirmaciones fácticas huérfanas sin respaldo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Citation Precision",
+      "denominator": "Citas generadas en la respuesta",
+      "target": ">= 95%"
+    },
+    {
+      "metric": "Citation Recall",
+      "denominator": "Afirmaciones fácticas formuladas en la respuesta",
+      "target": ">= 90%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Todo borrador generado por Hablar debe someterse a cálculo de Citation Precision antes de avanzar a la compuerta de aprobación legal.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F15",
+    "T01-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "question_id": "P10-F48",
+  "pilar": "P10",
+  "eje": "Indicadores y límites normativos",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra indicadores y límites normativos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto: Auditoría Trimestral de Calidad y Cumplimiento Normativo en Emisión de Reporte Integrado de Sostenibilidad. Entradas: 1) Producción de 45 piezas comunicacionales durante el trimestre (incluyendo comunicado de resultados financieros, reporte NCG 461 y 12 notas de prensa ESG); 2) Módulo telemétrico registra: Mediana de tiempo de aprobación de 18.4 horas en flujo ordinario y 22 minutos en flujo de emergencia (ambos bajo SLAs objetivo); 3) Verificación de Factual Inaccuracy Rate: 0 errores detectados frente al Shared Fact Record; 4) Tasa de corrección: 1 comunicado menor requirió fe de erratas v1.1 por error tipográfico en nombre de contratista (2.2% del volumen, bajo control); 5) Intento de redactora de marketing de incluir el claim 'Operación 100% Carbono Neutral y Cero Impacto Hídrico según Directiva Europea de Green Claims'. Proceso: El motor normativo detecta la infracción a la Ley 19.496 (afirmación ambiental no comprobable pericialmente) y alerta que la directiva de la UE no rige en Chile; bloquea la afirmación no sustentada; exige reemplazar el claim por la métrica auditada exacta ('Reducción del 28% en intensidad hídrica conforme a NCG 461 auditada por PwC'); el Director de Asuntos Corporativos visará exclusivamente la versión con datos certificados. Resultado Esperado: El reporte trimestral de gobernanza aprueba todas las métricas de proceso AMEC; se neutraliza una potencial infracción por greenwashing y publicidad engañosa del SERNAC/CMF; el panel de control documenta error factual cero y 100% de apego a la jurisdicción vinculante chilena.",
+  "findings": [
+    {
+      "claim_id": "P10-F48-C1",
+      "claim": "El caso operacionaliza el control de KPIs de gobernanza (latencia, error factual cero, tasa de corrección) y el bloqueo preventivo de greenwashing por aplicación de límites regulatorios (Ley 19.496 y NCG 461) frente a directivas europeas no vinculantes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_kpis_and_regulatory_enforcement",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 6 'Escenarios Sintéticos de Ejecución Integral (Escenario A: Reporte NCG 461)'",
+          "retrieved_at": null,
+          "excerpt_short": "Revisión de afirmaciones ESG: Detección y bloqueo de claims genéricos '100% verde' -> Exigencia de comprobabilidad técnica bajo Ley 19.496 y NCG 461 -> Descarte de invocación improcedente de directivas de la UE -> Aprobación de métricas auditadas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 19.496 Proteccion de los Derechos de los Consumidores",
+          "source_id": "543cb591-da9a-4ad6-be22-6a85c7d5220d",
+          "locator": "Artículos 28 y 33 'Publicidad Engañosa y Comprobabilidad'",
+          "retrieved_at": null,
+          "excerpt_short": "Comete infracción quien a través de cualquier mensaje publicitario induzca a error o engaño respecto a las características relevantes del bien o servicio... debiendo comprobarse la veracidad de las aseveraciones.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las exigencias probatorias de la Ley 19.496 y la simulación del dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borrador de reporte ESG con claim '100% Carbono Neutral'",
+      "Informe pericial de emisiones de PwC",
+      "Reglas de bloqueo de greenwashing en BRIDGE"
+    ],
+    "actors": [
+      "Redactor de Marketing",
+      "Oficial de Cumplimiento",
+      "Fiscal Corporativo",
+      "Director Asuntos Corporativos"
+    ],
+    "steps": [
+      "Evaluación algorítmica del claim frente al Shared Fact Record",
+      "Activación de bloqueo por falta de sustento del claim absoluto '100% neutral'",
+      "Alerta al redactor exigiendo sustitución por métricas auditadas NCG 461",
+      "Revisión y visado legal del texto corregido",
+      "Aprobación ejecutiva y cómputo de métricas en el panel trimestral"
+    ],
+    "states": [
+      "CLAIM_DETECTED",
+      "GUARDRAIL_TRIPPED",
+      "CLAIM_REPLACED",
+      "LEGAL_CLEARED",
+      "AUDIT_REGISTERED"
+    ],
+    "outputs": [
+      "Reporte de sostenibilidad blindado legalmente",
+      "Métricas trimestrales AMEC cumplidas al 100%"
+    ],
+    "exceptions": [
+      "Si el área de marketing insiste en usar el claim genérico, el Fiscal Legal ejerce veto formal vinculante"
+    ]
+  },
+  "entities": [
+    "Ley 19.496",
+    "Greenwashing",
+    "NCG 461",
+    "PwC Auditoría",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Claim No Comprobado",
+      "to": "Guardrail Greenwashing",
+      "type": "BLOCKED_BY"
+    },
+    {
+      "from": "Métrica Auditada",
+      "to": "Aprobación Ejecutiva",
+      "type": "ENABLES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Campaña de marketing con claims inflados vs Comunicación de sostenibilidad gobernada",
+      "diferencia": "La campaña inflada arriesga demandas millonarias por greenwashing del SERNAC; la comunicación gobernada consolida la credibilidad ante inversionistas institucionales y reguladores."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "quarterly_greenwashing_blocks": "100% de claims ambientales no peritados bloqueados antes de publicación",
+    "factual_accuracy_audit_score": "100% de concordancia con la auditoría de PwC"
+  },
+  "bridge_implications": "Demuestra el inmenso valor financiero y reputacional de BRIDGE al proteger preventivamente a la empresa de sanciones legales y crisis de greenwashing.",
+  "open_gaps": [
+    "Monitoreo de resoluciones del SERNAC en materias de publicidad sustentable para calibrar heurísticas del motor de guardrails."
+  ],
+  "next_question_ids": [
+    "P10-C01",
+    "P10-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

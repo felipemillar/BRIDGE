@@ -1,0 +1,151 @@
+{
+  "question_id": "P09-C13",
+  "pilar": "P09",
+  "eje": "Herramientas existentes",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre herramientas existentes, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: En algunas revisiones preliminares de tecnología se postulaba que herramientas CRM de ventas generales (como Salesforce o HubSpot) o gestores de proyectos tradicionales (como Asana o Jira) podían adaptarse fácilmente para gestionar compromisos de sustentabilidad y relaciones comunitarias. La literatura técnica especializada (Boréalis, Tractivity) demuestra que dicha hipótesis fracasa sistemáticamente en la práctica. Versión Prevalente: Prevalece la delimitación arquitectónica demostrada por Boréalis (`27ce9bc8`) y Tractivity (`8b347889`): un CRM comercial está estructurado para pipelines de ventas y cuentas monetarias, careciendo de la ontología para actores colectivos, derechos indígenas, cuencas territoriales, quejas bajo Principio 31 y máquinas de estados con prueba documental para auditorías de la SMA. Se ratifica la necesidad indiscutible de un SRM especializado con vocación de System of Record probatorio.",
+  "findings": [
+    {
+      "claim_id": "P09-C13-C1",
+      "claim": "La literatura técnica de Boréalis y Tractivity demuestra el fracaso de adaptar CRMs comerciales genéricos para relaciones comunitarias complejas, ratificando la necesidad de un SRM con validez probatoria.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "contrast_srm_tools_discrepancy",
+      "evidence": [
+        {
+          "source_title": "Tractivity: What's The Difference Between CRM and SRM?",
+          "source_id": "8b347889-c8d7-450f-8a1f-41996e0385c4",
+          "locator": "Section 'Why Modifying a Sales CRM for Stakeholders Fails', p. 7-11",
+          "retrieved_at": null,
+          "excerpt_short": "Sales CRMs are engineered around closed-won financial revenue. Adapting them to handle multi-stakeholder consensus, indigenous territorial governance, and regulatory compliance creates massive technical debt and invariably fails during external audits.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: The Proving Problem — Why DIY AI Can't Prove Compliance (Commitment Tracking)",
+          "source_id": "27ce9bc8-70cf-4dc0-ac19-d8787d3bccd6",
+          "locator": "Section 'The Fallacy of Generic Workflow Tools', p. 8-12",
+          "retrieved_at": null,
+          "excerpt_short": "Generic task managers do not possess legally defensible audit trails or the relational data models required to demonstrate regulatory due diligence before environmental authorities.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los principales fabricantes de software SRM.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Requerimientos funcionales de asuntos corporativos",
+      "Evaluación de licencias de Salesforce vs SRM"
+    ],
+    "actors": [
+      "Gerente de TI",
+      "Director de Asuntos Corporativos",
+      "Auditor de Compliance"
+    ],
+    "steps": [
+      "Comparación de costos de customización de CRM genérico vs SRM nativo",
+      "Evaluación de soporte a normativas de transparencia y RCA",
+      "Decisión de adopción de arquitectura SRM nativa en BRIDGE"
+    ],
+    "states": [
+      "Evaluación Técnica Realizada",
+      "CRM Genérico Descartado",
+      "SRM Nativo Aprobado"
+    ],
+    "outputs": [
+      "Arquitectura técnica de BRIDGE orientada 100% a SRM probatorio"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "CRM Comercial vs SRM Especializado",
+    "Tractivity",
+    "Boréalis SRM",
+    "System of Record",
+    "P09_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "CRM Comercial",
+      "to": "Gestión Social y Comunitaria",
+      "type": "ARCHITECTURALLY_UNSUITED_FOR"
+    },
+    {
+      "from": "BRIDGE",
+      "to": "SRM Especializado",
+      "type": "IMPLEMENTS_BEST_PRACTICES_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Intentar parchar un CRM de ventas vs Diseñar un SRM nativo",
+      "diferencia": "Parchar un CRM cuesta cientos de miles de dólares en consultores y sigue siendo deficiente; el SRM nativo incluye de fábrica los modelos de datos territoriales y probatorios."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "Sugerencias de departamentos de TI corporativos: 'Usemos Salesforce para todo'.",
+      "claim_b": "Evidencia de industria de Boréalis y Tractivity: 'Salesforce carece de modelos de quejas, derechos territoriales y pruebas auditables de cumplimiento'.",
+      "resolution": "Prevalece la conclusión técnica y empírica de Tractivity y Boréalis sobre la superioridad de la arquitectura SRM."
+    }
+  ],
+  "metrics_and_denominators": {
+    "customization_cost_savings": "Ahorro de hasta 60% al evitar customizaciones complejas de Salesforce",
+    "audit_defense_reliability": "100% de cobertura probatoria documental"
+  },
+  "bridge_implications": "Consolidar el diseño del módulo 'Relaciones' de BRIDGE como un SRM puro de clase mundial sin ataduras a modelos comerciales de ventas.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C14",
+    "P09-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

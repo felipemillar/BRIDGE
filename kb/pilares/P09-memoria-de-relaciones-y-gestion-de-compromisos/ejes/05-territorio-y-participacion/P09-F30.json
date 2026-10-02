@@ -1,0 +1,150 @@
+{
+  "question_id": "P09-F30",
+  "pilar": "P09",
+  "eje": "Territorio y participación",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra territorio y participación sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto Documentado: 'Mesa de Trabajo de Monitoreo Hídrico Participativo con la Comunidad Indígena Atacameña de Solor (Comuna de San Pedro de Atacama)'. Entradas: 1) Actor: Comunidad Indígena Atacameña de Solor (Personería CONADI N° 214, Presidenta: María Tejerina); 2) Territorio: Cuenca del Salar de Atacama, Comuna de San Pedro de Atacama (Código CUT 02203), área de influencia directa de la RCA; 3) Asunto: Temor por descenso de niveles freáticos en pozos comunitarios; 4) Compromiso Adquirido: 'Implementación de protocolo conjunto de monitoreo quincenal con toma de muestras espejo y financiamiento corporativo de laboratorio independiente acreditado' (ID COMP-2025-0189); 5) Reglas de Gobernanza Aplicadas: Actas de asamblea redactadas en lenguaje claro, validadas ante el Consejo de Ancianos y firma de actas físicas digitalizadas. Resultado Esperado: 1) Expediente territorial completo en BRIDGE; 2) Cronograma de salidas a terreno sincronizado en calendario compartido; 3) Publicación de reportes de ensayo en portal transparente comunitario; y 4) Cero quejas formales en el canal del Principio 31 de la ONU relativas a opacidad en datos hídricos durante el período.",
+  "findings": [
+    {
+      "claim_id": "P09-F30-C1",
+      "claim": "El caso documentado ilustra la aplicación del Convenio 169 de la OIT y del monitoreo ambiental participativo con una comunidad indígena formalizada, garantizando trazabilidad y transparencia técnica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "concrete_case_territory_participation",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo de Gestión en 6 Fases (Caso Territorial Indígena)'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso Territorial: Acuerdo de monitoreo hídrico participativo con comunidad atacameña. Entradas: personería indígena, asamblea de comuneros, toma de muestras espejo. Salida: registro inmutable de ensayos de laboratorio y validación por la directiva tradicional, reduciendo el riesgo de litigación.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "ICMM: Human Rights Due Diligence Maturity Matrix (2024) — Community Engagement",
+          "source_id": "71d00453-c0fc-454a-9348-0b36a7f9430c",
+          "locator": "Section 'Participatory Environmental Monitoring Programs', p. 28-32",
+          "retrieved_at": null,
+          "excerpt_short": "Joint monitoring protocols co-designed with indigenous leadership turn contentious environmental data into agreed common ground, neutralizing community suspicion.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Modelado consistente con las pautas de participación del dossier y de la ICMM.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos de la comunidad CONADI",
+      "Puntos de muestreo georreferenciados",
+      "Informes de laboratorio acreditado"
+    ],
+    "actors": [
+      "María Tejerina (Presidenta Comunidad)",
+      "Diego Morales (Hidrogeólogo Faena)",
+      "Facilitador Intercultural"
+    ],
+    "steps": [
+      "Planificación de campaña de terreno",
+      "Muestreo conjunto en terreno con acta firmada",
+      "Envío de muestras a laboratorio neutral",
+      "Presentación de resultados en asamblea comunitaria",
+      "Carga de informes en BRIDGE"
+    ],
+    "states": [
+      "Campaña Planificada",
+      "Muestreo Realizado",
+      "Resultados Validados",
+      "Hito Cumplido"
+    ],
+    "outputs": [
+      "Informe de monitoreo hídrico participativo N° 04-2025",
+      "Compromiso COMP-2025-0189 en estado CUMPLIDO_CERRADO para el ciclo"
+    ],
+    "exceptions": [
+      "Detección de anomalías en calidad de agua gatilla reunión técnica extraordinaria en menos de 48 horas"
+    ]
+  },
+  "entities": [
+    "Comunidad Indígena de Solor",
+    "Salar de Atacama",
+    "Monitoreo Participativo",
+    "ICMM",
+    "P09_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "COMP-2025-0189",
+      "to": "Comunidad de Solor",
+      "type": "CO_MONITORED_WITH"
+    },
+    {
+      "from": "Faena",
+      "to": "Cuenca Salar de Atacama",
+      "type": "OPERATES_IN"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Monitoreo unilateral de la empresa vs Monitoreo participativo con comunidad",
+      "diferencia": "El unilateral siempre es cuestionado como sesgado; el participativo genera confianza y legitimidad compartida."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "monitoring_frequency": "Quincenal (24 campañas anuales)",
+    "community_validation_rate": "100% de actas suscritas conforme"
+  },
+  "bridge_implications": "Crear una plantilla de 'Compromiso de Monitoreo Participativo' en la biblioteca de compromisos de BRIDGE.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F31",
+    "P09-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

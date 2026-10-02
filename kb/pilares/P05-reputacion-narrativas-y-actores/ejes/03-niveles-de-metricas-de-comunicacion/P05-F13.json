@@ -1,0 +1,152 @@
+{
+  "question_id": "P05-F13",
+  "pilar": "P05",
+  "eje": "Niveles de métricas de comunicación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Cómo se distinguen actividad, alcance, recepción, cambio de actitud y efecto organizacional?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus distingue de forma taxativa cinco niveles jerárquicos basados en el Marco de Evaluación Integrada (IEF) de AMEC y los Principios de Barcelona 3.0: 1) Actividad / Volumen (Outputs): Conteo bruto de elementos de contenido producidos o emitidos (artículos publicados, comunicados corporativos enviados, clips radiales o posts digitales); mide el esfuerzo del emisor pero no el efecto en el receptor; 2) Alcance / Exposición (Opportunity to See - OTS): Estimación del público potencial que tuvo oportunidad física o digital de ser expuesto al mensaje (tirada de medios, visitantes únicos, impresiones brutas); 3) Recepción Inmediata (Out-takes): Lo que la audiencia retiene, comprende o realiza de forma inmediata al entrar en contacto con el mensaje (tasa de lectura, engagement rate, compartidos, recuerdo de mensajes clave o polaridad superficial); 4) Cambio de Actitud / Percepción (Outcomes intermedios): Modificación medible en el conocimiento, confianza, favorabilidad, credibilidad o preferencia evaluada en públicos específicos mediante encuestas estructuradas o paneles; y 5) Efecto Organizacional (Organizational Impact): Consecuencias directas y tangibles sobre los objetivos estratégicos, financieros, legales y operacionales de la institución (obtención de una Resolución de Calificación Ambiental - RCA, ausencia de paralizaciones comunitarias, menor conflictividad regulatoria, retención de capital o atracción de talento).",
+  "findings": [
+    {
+      "claim_id": "P05-F13-C1",
+      "claim": "La evaluación de comunicaciones corporativas exige transitar secuencialmente desde outputs de actividad hasta outcomes perceptuales e impactos organizacionales medibles, prohibiendo la confusión entre difusión y resultado de negocio.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Asuntos Corporativos / AMEC"
+      },
+      "evidence": [
+        {
+          "source_id": "c8249017-0397-4799-aacc-c1c53ee4662d",
+          "source_title": "AMEC: Barcelona Principles 3.0 (Global Standard for PR & Comms Measurement)",
+          "original_url": "https://amecorg.com/barcelona-principles-3-0-translations/",
+          "locator": "Principio 2: Measurement and Evaluation Should Identify Outputs, Outcomes, and Organizational Impact",
+          "excerpt_short": "Evaluation requires identifying outputs, out-takes, outcomes, and organizational impact. Moving beyond outputs to demonstrate how communications moves the needle on organizational goals.",
+          "source_date": "2020-07-08",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3: Taxonomía Métrica Rigurosa: Distinción entre Niveles de Medición",
+          "excerpt_short": "Jerarquía de cinco niveles: Nivel 1 Volumen -> Nivel 2 Alcance -> Nivel 3 Influencia/Recepción -> Nivel 4 Percepción -> Nivel 5 Impacto Organizacional.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio universalmente consensuado en la industria global de medición de comunicaciones (AMEC).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registros de emisión de comunicados",
+      "Datos de analítica web y medios",
+      "Encuestas de percepción",
+      "Métricas operacionales y regulatorias"
+    ],
+    "actors": [
+      "Gerente de Asuntos Corporativos",
+      "Jefe de Prensa",
+      "Auditor de Negocio"
+    ],
+    "steps": [
+      "Registro de outputs de actividad",
+      "Cálculo de alcance y out-takes",
+      "Medición periódica de outcomes perceptuales",
+      "Atribución correlacional a metas organizacionales"
+    ],
+    "states": [
+      "Outputs_Logged",
+      "Outtakes_Monitored",
+      "Outcomes_Measured",
+      "Impact_Assessed"
+    ],
+    "outputs": [
+      "Cuadro de Mando AMEC completo"
+    ],
+    "exceptions": [
+      "Reportar clips de prensa como prueba de éxito estratégico institucional"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_AMEC_TAXONOMY",
+      "type": "taxonomia",
+      "name": "Taxonomía de Medición AMEC IEF",
+      "aliases": [
+        "AMEC Framework Levels"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_AMEC_TAXONOMY",
+      "predicate": "jerarquiza_niveles_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de valor",
+      "Outputs (Actividad)": "Indica lo que la empresa hizo (volumen de trabajo).",
+      "Out-takes (Recepción)": "Indica cómo reaccionó la audiencia inmediata.",
+      "Outcomes (Percepción)": "Indica qué cambió en la mente y actitud del público.",
+      "Impacto Organizacional": "Indica qué beneficio operativo o regulatorio real obtuvo la corporación."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gestión de Métricas",
+      "implication": "BRIDGE debe clasificar cada KPI en uno de los 5 niveles de AMEC para impedir que un usuario ejecutivo confunda un aumento de clips de prensa con éxito en la licencia social.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

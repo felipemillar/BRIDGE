@@ -1,0 +1,151 @@
+{
+  "question_id": "P09-F15",
+  "pilar": "P09",
+  "eje": "Ficha de compromiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué excepciones requieren aprobación, explicación pública o escalamiento?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El sistema categoriza tres niveles de excepción que exigen protocolos rigurosos de gobernanza: 1) Modificación de Alcance o Presupuesto: Requiere aprobación formal del Gerente de Asuntos Corporativos y el Gerente de Operaciones, registrando el motivo técnico justificatorio en el audit trail inmutable; 2) Solicitud de Prórroga o Riesgo de Incumplimiento de Plazo: Si el hito alcanza T-15 sin avance suficiente, se activa un escalamiento automático al Comité de Crisis Territorial; si se trata de un compromiso derivado de RCA o norma ambiental, requiere consulta legal previa para evaluar si constituye infracción ante la SMA; y 3) Renegociación o Cancelación: Todo compromiso con una comunidad o autoridad jamás puede ser borrado ni cancelado unilateralmente; requiere una interacción formal documentada con la contraparte beneficiaria, un acta de acuerdo de reemplazo firmada y una explicación pública documentada en la mesa de diálogo correspondiente.",
+  "findings": [
+    {
+      "claim_id": "P09-F15-C1",
+      "claim": "Las excepciones en compromisos (prórrogas, cambios de alcance o cancelaciones) requieren aprobación ejecutiva dual, prohibición de borrado inmutable y protocolo formal de renegociación con la comunidad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "exception_handling_and_escalation",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo de Gestión en 6 Fases (Manejo de Excepciones)'",
+          "retrieved_at": null,
+          "excerpt_short": "Regla de Inmutabilidad de Compromisos: Ningún compromiso puede ser eliminado o sobreescrito. Un cambio de fecha o alcance genera una nueva versión enlazada a la anterior (estado RENEGOCIADO), requiriendo justificación formal y acta de acuerdo con la contraparte.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Tractivity: Stakeholder Commitment Tracking — A Complete Guide to Registration",
+          "source_id": "a5e60b84-dff6-493b-9241-19fb1044d36f",
+          "locator": "Section 'Managing Escalations, Delays and Scope Creep', p. 30-34",
+          "retrieved_at": null,
+          "excerpt_short": "Automated escalation triggers alert leadership before a deadline expires, preventing sudden breach of trust and enabling proactive dialogue with affected stakeholders.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Tractivity y las reglas del dossier de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud de prórroga del dueño",
+      "Imposibilidad climática/operacional de cumplir",
+      "Notificación de alerta T-15"
+    ],
+    "actors": [
+      "Dueño del Compromiso",
+      "Gerente de Asuntos Públicos",
+      "Comunidad Afectada"
+    ],
+    "steps": [
+      "Detección de riesgo de atraso",
+      "Apertura de ticket de excepción en BRIDGE",
+      "Visación ejecutiva interna",
+      "Convocatoria a reunión explicativa con la contraparte",
+      "Firma de acta modificatoria y actualización de versión"
+    ],
+    "states": [
+      "Alerta Activada",
+      "Excepción Solicitada",
+      "Renegociación Aprobada",
+      "Compromiso Versionado"
+    ],
+    "outputs": [
+      "Ticket de excepción cerrado",
+      "Compromiso v2 activo",
+      "Historial de cambios inmutable"
+    ],
+    "exceptions": [
+      "Compromisos vinculados a RCA que venzan sin prórroga formal del SEA/SMA gatillan alerta legal roja inmediata"
+    ]
+  },
+  "entities": [
+    "Matriz de Excepciones",
+    "Escalamiento Preventivo",
+    "Tractivity SRM",
+    "Audit Trail Inmutable",
+    "Alerta Roja Legal"
+  ],
+  "relations": [
+    {
+      "from": "Solicitud de Excepción",
+      "to": "Gerente de Asuntos Públicos",
+      "type": "requires_approval_from"
+    },
+    {
+      "from": "Compromiso v1",
+      "to": "Compromiso v2",
+      "type": "superseded_by"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Incumplimiento silencioso vs Renegociación gobernada",
+      "diferencia": "El incumplimiento silencioso desata bloqueos de faena o multas de la SMA; la renegociación gobernada preserva la licencia social para operar."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "escalation_thresholds": "T-30 (aviso), T-15 (escalamiento gerencial), T-7 (comité de crisis)",
+    "approval_roles_required": "2 firmas ejecutivas para renegociación"
+  },
+  "bridge_implications": "Programar en BRIDGE el motor de alertas con triggers temporales automáticos y workflow de firmas electrónicas para modificaciones.",
+  "open_gaps": [
+    "Definir el umbral financiero que exige escalamiento al Directorio."
+  ],
+  "next_question_ids": [
+    "P09-F16",
+    "P09-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

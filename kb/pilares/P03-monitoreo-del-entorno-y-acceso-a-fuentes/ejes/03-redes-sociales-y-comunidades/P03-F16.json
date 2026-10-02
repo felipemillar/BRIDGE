@@ -1,0 +1,139 @@
+{
+  "question_id": "P03-F16",
+  "pilar": "P03",
+  "eje": "Redes sociales y comunidades",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar redes sociales y comunidades de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de redes y comunidades exige: 1) Variables técnicas y de red: `plataforma` (bluesky, telegram, reddit, x), `post_id`, `emisor_id`, `es_cuenta_institucional` (booleano), `probabilidad_automatizacion_bot` (Sayyadiharikandeh et al. 2020), `coeficiente_coordinacion_temporal` (Pacheco et al. 2020) y `alcance_estimado`; 2) Categorías discursivas: Apoyo_Comunitario, Reclamo_Operacional, Disputa_Regulatoria, Alerta_Ambiental y Campaña_Sindicada; 3) Relaciones en grafo: `publicado_por` (Cuenta), `responde_a` (Post anterior), `co_actua_con` (Cuentas sincronizadas temporalmente), `ataca_a` (Entidad Corporativa) y `amplifica_narrativa` (TTP DISARM); y 4) Condiciones de integridad: desacoplar la coordinación temporal de juicios automáticos de falsedad, y prohibir la catalogación de una cuenta como 'bot malicioso' sin verificación humana supervisada.",
+  "findings": [
+    {
+      "claim_id": "P03-F16-C1",
+      "claim": "El modelado estructurado de redes exige registrar métricas de probabilidad de automatización y coordinación temporal como grafos de co-acción, deslindándolos formalmente de acusaciones de falsedad discursiva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Modelado Estructurado P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.3: Desacoplamiento Estricto: Coordinación != Falsedad y Bots != Desinformación",
+          "excerpt_short": "Un sistema de monitoreo debe reportar 'anomalías de coordinación temporal' y 'probabilidad de automatización', pero nunca etiquetar automáticamente un evento como 'campaña de desinformación'... sin verificación humana.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        },
+        {
+          "source_id": "54ca7822-3e38-4946-b37f-5664338c27e6",
+          "source_title": "Detection of Novel Social Bots by Ensembles of Specialized Classifiers (Sayyadiharikandeh et al. 2020)",
+          "original_url": "https://arxiv.org/abs/2006.06867",
+          "locator": "Ensemble Classification Architecture",
+          "excerpt_short": "Bot detection requires specialized classifiers across profile, temporal behavior, and content, avoiding monolithic binary labels.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los principios de la adenda de calidad y papers de detección de bots.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Metadatos de post social",
+      "Historial de actividad de la cuenta"
+    ],
+    "actors": [
+      "Bot Ensemble Scorer",
+      "Co-action Graph Builder"
+    ],
+    "steps": [
+      "Cálculo de probabilidad de bot",
+      "Detección de sincronía con otras cuentas",
+      "Asignación de tripleta en grafo"
+    ],
+    "states": [
+      "Raw_Post",
+      "Network_Metrics_Computed",
+      "Graph_Triples_Stored"
+    ],
+    "outputs": [
+      "Entidad estructurada de interacción social en el grafo de conocimiento"
+    ],
+    "exceptions": [
+      "Cuentas híbridas operadas por humanos con herramientas de publicación automática"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SOCIAL_DATA_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Datos Sociales",
+      "aliases": [
+        "Structured Social Data Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SOCIAL_DATA_SCHEMA",
+      "predicate": "define_formato_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F16-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar el esquema con separación estricta entre atributos topológicos (coordinación) y juicios semánticos (veracidad).",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

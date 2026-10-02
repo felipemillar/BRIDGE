@@ -1,0 +1,161 @@
+{
+  "question_id": "P05-F03",
+  "pilar": "P05",
+  "eje": "Identidad, imagen y reputación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué parte de la reputación puede medirse sin reducirla a un único puntaje?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La reputación puede y debe medirse de forma desagregada sin reducirla a un único puntaje global colapsado, evaluando sus dimensiones constitutivas y su segmentación por grupos de interés: 1) Desglose por dimensiones analíticas independientes: En el modelo RepTrak se evalúan por separado los 7 drivers racionales (Productos/Servicios, Innovación, Lugar de Trabajo, Gobernanza, Ciudadanía, Liderazgo y Desempeño Financiero); en Merco se desagrega reputación comercial, talento interno, responsabilidad ESG y reputación directiva; 2) Desglose por grupos de interés (Stakeholder Salience): Como demuestran Freeman (1984) y Mitchell et al. (1997), una empresa no tiene una sola reputación, sino múltiples reputaciones sectoriales que frecuentemente divergen (e.g. excelente reputación de retorno ante inversionistas institucionales pero pésima reputación ambiental ante comunidades locales colindantes); 3) Niveles de Licencia Social para Operar (SLO de Boutilier & Thomson): Medición en escala ordinal de umbrales socio-políticos (Legitimidad económica, Credibilidad institucional y Confianza plena); y 4) Cuadro de Mando AMEC (Integrated Evaluation Framework): Registro de outputs, out-takes, outcomes y objetivos de negocio sin forzar un índice sintético artificial que oculte vulnerabilidades críticas.",
+  "findings": [
+    {
+      "claim_id": "P05-F03-C1",
+      "claim": "La reputación corporativa es intrínsecamente multidimensional y dependiente del stakeholder; colapsarla en un puntaje único oscurece riesgos asimétricos críticos en gobernanza o comunidades.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "1997-2026",
+        "region": "Global",
+        "actor": "Analistas de Reputación e Intangibles"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2: Matriz de Tensiones Epistemológicas, Tensión 4",
+          "excerpt_short": "Una firma tiene tantas reputaciones como grupos de interés con los que interactúa. La plataforma debe permitir visualizar la reputación segmentada (inversores, comunidades locales, empleados, reguladores).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "9345d275-3d3f-4a23-933b-beafacded60c",
+          "source_title": "RepTrak: 7 Ways to Quantify Reputation and 7 Drivers Model",
+          "original_url": "https://www.reptrak.com/blog/7-ways-to-quantify-reputation/",
+          "locator": "Sección: The 7 Drivers of Corporate Reputation",
+          "excerpt_short": "Reputation is explained by 7 distinct rational drivers: Products & Services, Innovation, Workplace, Governance, Citizenship, Leadership, and Performance. Evaluating each driver exposes specific operational risks.",
+          "source_date": "2022-04-10",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Consenso metodológico entre los principales estándares de medición de intangibles y literatura académica de stakeholders.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Encuestas por panel segmentado",
+      "Auditorías de gobernanza y sostenibilidad",
+      "Monitoreo de prensa y reclamos comunitarios"
+    ],
+    "actors": [
+      "Equipo de Inteligencia de Negocios",
+      "Director de Asuntos Corporativos",
+      "Comité de Riesgos"
+    ],
+    "steps": [
+      "Recolección de percepciones desagregadas por perfil de stakeholder",
+      "Ponderación por driver analítico (ESG, gobierno, producto)",
+      "Generación de matriz de reputación multidimensional"
+    ],
+    "states": [
+      "Stakeholder_Data_Segmented",
+      "Drivers_Computed",
+      "Multidimensional_Profile_Rendered"
+    ],
+    "outputs": [
+      "Perfil de reputación desagregado (Radar Chart multi-stakeholder)"
+    ],
+    "exceptions": [
+      "Exigencia de la alta dirección de un único KPI resumen tipo NPS para bonos ejecutivos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REPTRAK_DRIVERS",
+      "type": "modelo",
+      "name": "7 Drivers de RepTrak",
+      "aliases": [
+        "RepTrak 7 Dimensions"
+      ]
+    },
+    {
+      "entity_id": "ENT_SLO_LEVELS",
+      "type": "modelo",
+      "name": "Niveles de Licencia Social Boutilier-Thomson",
+      "aliases": [
+        "SLO Pyramid"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REPTRAK_DRIVERS",
+      "predicate": "desagrega_componentes_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2006",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de agregación",
+      "Puntaje Único Compuesto (Pulse/NPS)": "Útil para comunicación ejecutiva rápida pero ciego a fallas localizadas graves de gobernanza o comunidades.",
+      "Perfil Multidimensional Desagregado": "Permite detectar qué driver específico (e.g. Ciudadanía o Ética) está fallando mientras las ventas se mantienen estables."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Puntaje por Driver Reputacional",
+      "denominator": "Escala normalizada de 0 a 100 por cada uno de los 7 drivers analíticos.",
+      "formula": "Sum(Ponderada_Items_Driver) / Items_Totales"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Dashboard Ejecutivo",
+      "implication": "BRIDGE no debe forzar un único índice unificado de reputación; debe ofrecer vistas desglosadas por stakeholder (empleados, reguladores, comunidad, mercado) y por driver temático.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

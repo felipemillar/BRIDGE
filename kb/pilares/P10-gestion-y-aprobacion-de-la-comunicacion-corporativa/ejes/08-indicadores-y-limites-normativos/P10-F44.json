@@ -1,0 +1,161 @@
+{
+  "question_id": "P10-F44",
+  "pilar": "P10",
+  "eje": "Indicadores y límites normativos",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué regulaciones específicas están verificadas en fuentes oficiales y cuáles siguen pendientes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis regulatorio de P10 deslinda con precisión las normas verificadas con valor vinculante de aquellas en trámite o circunscritas a otras jurisdicciones: 1) Regulaciones Chilenas Verificadas en Textos Oficiales (BCN / CMF): Ley 18.045 de Mercado de Valores (Art. 9 y 10: deber fiduciario de veracidad de hechos esenciales y reserva estricta de negociaciones); Norma de Carácter General NCG 30 de la CMF (difusión pública y simultánea de información continua); Norma de Carácter General NCG 461 de la CMF (reporte anual obligatorio de sostenibilidad, prácticas ESG y gobierno corporativo); Ley 19.496 de Protección de los Derechos de los Consumidores (prohibición de publicidad engañosa y comprobabilidad técnica de atributos ecológicos); y Ley 20.730 de Lobby (registro formal de audiencias y comunicaciones de influencia ante sujetos pasivos del Estado); 2) Regulaciones Internacionales Verificadas: SEC Regulation FD (17 CFR Part 243) y SEC Rule 10b-5 (17 CFR § 240.10b-5, verificada vía Cornell LII), vigentes y aplicables exclusivamente a emisores con valores transados en bolsas de EE.UU.; y 3) Regulaciones Pendientes o No Vinculantes: La Propuesta de Directiva de la Unión Europea sobre Alegaciones Ecológicas (EU Green Claims Directive, COM(2023) 166 final), la cual es una propuesta legislativa parlamentaria en debate de trílogos que no constituye derecho vigente ni es aplicable a empresas operando en Chile.",
+  "findings": [
+    {
+      "claim_id": "P10-F44-C1",
+      "claim": "El marco normativo aplicable se sustenta en normas chilenas vinculantes (Ley 18.045, NCG 30, NCG 461, Ley 19.496, Ley 20.730) y normas bursátiles de EE.UU. (Reg FD, Rule 10b-5 para emisores con ADRs), deslindando la Green Claims Directive de la UE como propuesta no vinculante.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "verified_regulatory_landscape",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Deslinde Jurisdiccional y Retractación de Cobertura Legal Universal'",
+          "retrieved_at": null,
+          "excerpt_short": "Retractación de cobertura legal universal: Las normas chilenas vinculantes son Ley 18.045, NCG 30, NCG 461, Ley 19.496 y Ley 20.730. SEC Reg FD y 10b-5 aplican a emisores EE.UU. La directiva Green Claims de la UE es propuesta legislativa parlamentaria no vinculante.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "European Commission: Green Claims Directive Proposal (Single Market)",
+          "source_id": "09b89326-c438-4e2d-a2a3-c8932482ff0e",
+          "locator": "Document COM(2023) 166 final",
+          "retrieved_at": null,
+          "excerpt_short": "Proposal for a Directive on substantiation and communication of explicit environmental claims (Green Claims Directive). Legislative procedure in progress.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "CMF Chile: Norma de Caracter General NCG 461 (Sostenibilidad y Gobierno Corporativo)",
+          "source_id": "4e9fe39f-638d-4f54-9a74-cb7e5ee26377",
+          "locator": "Sección Temática ESG y Memoria Anual",
+          "retrieved_at": null,
+          "excerpt_short": "Instrucciones sobre la incorporación de temáticas de sostenibilidad, gobierno corporativo, cambio climático y capital humano en la memoria anual de las entidades fiscalizadas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en los textos oficiales de la BCN, CMF y la Comisión Europea.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Perfil corporativo de la empresa",
+      "Mercados donde transa",
+      "Catálogo regulatorio en fuentes/P10.json"
+    ],
+    "actors": [
+      "Fiscal Corporativo",
+      "Oficial de Cumplimiento",
+      "Motor Normativo BRIDGE"
+    ],
+    "steps": [
+      "Identificación de la jurisdicción y estatus de emisor de la empresa",
+      "Activación de guardrails de Ley 18.045 y NCG 30 para toda empresa abierta en Chile",
+      "Activación de guardrails SEC Reg FD y Rule 10b-5 solo si transa en EE.UU.",
+      "Calificación de directivas de la UE como benchmarks voluntarios de buenas prácticas, evitando citarlas como obligaciones legales locales",
+      "Revisión de consistencia normativa en cada borrador"
+    ],
+    "states": [
+      "JURISDICTION_PROFILED",
+      "RULES_FILTERED",
+      "REGULATORY_GUARDRAILS_SET"
+    ],
+    "outputs": [
+      "Matriz de cumplimiento normativo personalizado y exigible"
+    ],
+    "exceptions": [
+      "Empresas con filiales en la UE deben monitorear la transposición nacional de directivas europeas una vez promulgadas"
+    ]
+  },
+  "entities": [
+    "Ley 18.045",
+    "NCG 30",
+    "NCG 461",
+    "Green Claims Directive",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "Ley 18.045",
+      "to": "Mercado Chileno",
+      "type": "BINDING_LAW"
+    },
+    {
+      "from": "Green Claims Directive",
+      "to": "Unión Europea",
+      "type": "PROPOSAL_IN_PROGRESS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Afirmar cobertura legal universal 100% vs Deslinde jurisdiccional riguroso",
+      "diferencia": "Afirmar cobertura universal es una falsedad jurídica que induce a error corporativo; el deslinde riguroso aplica con precisión qué ley rige a cada entidad según su domicilio y mercado bursátil."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "regulatory_applicability_accuracy": "100% de normas citadas correspondientes a la jurisdicción efectiva del cliente"
+  },
+  "bridge_implications": "Permite a BRIDGE configurar los motores de validación jurídica según el perfil del cliente (local chileno vs multinacional con ADRs).",
+  "open_gaps": [
+    "Monitoreo de las votaciones finales de los trílogos europeos sobre el texto consolidado de la Green Claims Directive."
+  ],
+  "next_question_ids": [
+    "P10-F45",
+    "P10-F46"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

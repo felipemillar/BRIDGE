@@ -1,0 +1,154 @@
+{
+  "question_id": "P08-F06",
+  "pilar": "P08",
+  "eje": "Problema, segmento y disposición a pagar",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra problema, segmento y disposición a pagar sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado es el de 'Minera Cordillera Norte S.A.' (empresa de la Gran Minería del Cobre en Chile con faena activa en Atacama). Entradas: 1) Proyecto de expansión de tranque de relaves en tramitación ante el SEA; 2) Alerta de fiscalización de la SMA por monitoreo de aguas subterráneas; 3) Convocatoria a una sesión especial de la Comisión de Medio Ambiente del Senado; y 4) Presupuesto anual de Asuntos Corporativos de USD 800.000. Problema: El CCO recibe informes de clipping desarticulados que no alertan sobre la moción parlamentaria ni cruzan los datos con la RCA interna. Resultado Esperado: BRIDGE implementa un contrato Tech-Enabled de USD 5.000/mes (~CLP 4.800.000) con analista HITL asignado, entregando briefs ejecutivos en 60 segundos con líneas rojas y verificación de InfoLobby, evitando la paralización del proyecto y aprobando la contratación anual.",
+  "findings": [
+    {
+      "claim_id": "P08-F06-C1",
+      "claim": "El caso de una minera regulada con trámites ambientales y escrutinio legislativo demuestra la justificación económica y la disposición de pago para la plataforma BRIDGE.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_simulation",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 1.5 'Caso Representativo: Corporación Minera y Adopción Tech-Enabled'",
+          "excerpt_short": "Caso de estudio de validación comercial: Una corporación minera con operaciones en el norte de Chile se enfrenta a un doble desafío: la tramitación de una Declaración de Impacto Ambiental (DIA) y la citación a una comisión investigadora de la Cámara de Diputados. El CCO contrata el servicio Tech-Enabled de inteligencia corporativa a un valor de USD 5.000 mensuales. La plataforma detecta tempranamente las mociones de los diputados fiscalizadores y cruza las declaraciones con los compromisos de la RCA 245/2018. El valor generado al prevenir una suspensión de faenas estimada en USD 1.2M diarios supera en varios órdenes de magnitud la cuota anual del servicio.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 2 'Validación de Precios y Retorno de Inversión'",
+          "excerpt_short": "La simulación del caso minero confirma la elasticidad del precio: las empresas del segmento prioritario no evalúan el software por su costo por usuario individual, sino por la prima de seguro que representa frente a contingencias regulatorias y políticas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso documentado explícitamente en el dossier de investigación y addendum de calidad de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Expediente DIA/RCA",
+      "Alertas SMA SNIFA",
+      "Boletines Congreso de Chile",
+      "Presupuesto de asuntos corporativos"
+    ],
+    "actors": [
+      "Minera Cordillera Norte S.A.",
+      "CCO / Gerente de Asuntos Públicos",
+      "Equipo BRIDGE (Plataforma + Analista Senior)",
+      "Comisión del Senado"
+    ],
+    "steps": [
+      "Ingesta de compromisos de RCA",
+      "Detección de moción parlamentaria",
+      "Generación de brief ejecutivo con analista HITL",
+      "Comparecencia exitosa del CEO en el Senado"
+    ],
+    "states": [
+      "Riesgo de Paralización",
+      "Briefing Entregado",
+      "Audiencia Exitosa",
+      "Contrato Renovado"
+    ],
+    "outputs": [
+      "Brief ejecutivo validado en < 2 horas",
+      "Cumplimiento normativo intachable",
+      "Renovación de contrato anual"
+    ],
+    "exceptions": [
+      "Emergencia ambiental sobrevenida con derrame no reportado que suspenda la vocería"
+    ]
+  },
+  "entities": [
+    "Minera Cordillera Norte S.A.",
+    "SEA",
+    "SMA",
+    "Comisión de Medio Ambiente del Senado",
+    "RCA 245/2018",
+    "BRIDGE Tech-Enabled"
+  ],
+  "relations": [
+    {
+      "from": "Minera Cordillera Norte S.A.",
+      "to": "BRIDGE Tech-Enabled",
+      "type": "contracts"
+    },
+    {
+      "from": "BRIDGE Tech-Enabled",
+      "to": "Prevención de Sanción SMA",
+      "type": "achieves"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Costo mensual de BRIDGE vs Riesgo diario de detención minera",
+      "diferencia": "USD 5.000/mes de BRIDGE frente a un costo de paralización de faenas mineras superior a USD 1.000.000 diarios."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "roi_ratio": "> 20x en valor de mitigación de riesgo",
+    "contract_value": "USD 60.000 anuales (USD 5.000/mes)"
+  },
+  "bridge_implications": "Utilizar este caso como arquetipo central en los pilotos comerciales y simulaciones de preventa de BRIDGE.",
+  "open_gaps": [
+    "Desarrollo de un simulador de ROI interactivo para la página web de BRIDGE."
+  ],
+  "next_question_ids": [
+    "P08-F07",
+    "P08-F08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

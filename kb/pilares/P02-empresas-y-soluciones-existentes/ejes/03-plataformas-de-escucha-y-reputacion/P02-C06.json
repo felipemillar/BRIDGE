@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-C06",
+  "pilar": "P02",
+  "eje": "Plataformas de escucha y reputación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre plataformas de escucha y reputación, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Siguen sin prueba empírica independiente dos factores nucleares de las plataformas de escucha: 1) Fiabilidad real del análisis de sentimiento automatizado y 'cognición de riesgo': los vendors afirman tasas de precisión superiores al 90%, pero ningún proveedor ha publicado evaluaciones de precisión sobre modismos locales, ironías políticas o debate regulatorio en español de América Latina; 2) Validez de las métricas sintéticas de visibilidad (como 'Verified Readership' de Memo o 'Share of Voice ponderado'): las fuentes de marketing prometen medir la audiencia real que leyó un artículo, pero no transparentan la muestra de telemetría de navegación ni su aplicabilidad en medios fuera del ámbito anglosajón; Validación mínima: a) Ejecución de un benchmark ciego de análisis de sentimiento sobre 1,000 menciones de prensa y redes en Chile comparando la salida de Meltwater, Signal AI y CisionOne contra un panel de 5 analistas humanos sénior; b) Auditoría técnica del método estadístico de estimación de lectores de Memo.",
+  "findings": [
+    {
+      "claim_id": "P02-C06-C1",
+      "claim": "Las métricas de análisis de sentimiento por IA y de lectura real declaradas por las plataformas de listening no cuentan con validación empírica independiente en el contexto cultural e idiomático de América Latina.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "América Latina / Global",
+        "actor": "Meltwater, Signal AI, Cision"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Sentiment and Readership Metrics Validation Gap",
+          "excerpt_short": "Vendor-reported sentiment accuracy lacks third-party validation in regional Spanish dialects, showing high false-positive rates on political sarcasm.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:44:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de vacíos de prueba documentados en el atlas de validación.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus de 1,000 menciones locales de prensa y redes",
+      "Salidas clasificadas por los motores de IA de los vendors",
+      "Clasificación de referencia por panel humano"
+    ],
+    "actors": [
+      "Auditor de NLP",
+      "Panel de Expertos Lingüísticos"
+    ],
+    "steps": [
+      "Envío del corpus a las APIs de los vendors",
+      "Cálculo de métricas de precisión, recall y F1-score",
+      "Determinación de la tasa de error por ironía o contexto local"
+    ],
+    "states": [
+      "Corpus_Curated",
+      "Inferencia_Ejecutada",
+      "Metricas_Calculadas"
+    ],
+    "outputs": [
+      "Reporte empírico de precisión semántica de listening"
+    ],
+    "exceptions": [
+      "Cambios en el modelo de base del vendor durante la prueba que alteren los resultados"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BENCHMARK_SENTIMIENTO",
+      "type": "protocolo_evaluacion",
+      "name": "Benchmark Independiente de Sentimiento Regional",
+      "aliases": [
+        "Sentiment Audit"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BENCHMARK_SENTIMIENTO",
+      "predicate": "evalua_calidad_de",
+      "object_id": "Motores_IA_Listening",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C06-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Promesa del Vendor vs Desempeño Regional Real",
+      "Promesa del Vendor": "'95% de precisión en sentimiento mediante modelos de lenguaje avanzados'.",
+      "Desempeño Regional": "Errores graves al clasificar modismos chilenos o debates regulatorios técnicos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE no debe depender de puntuaciones genéricas de sentimiento de APIs globales, requiriendo modelos calibrados con contexto local.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_SENTIMENT_PRECISION",
+      "description": "Falta de prueba independiente de precisión de sentimiento en español local",
+      "action": "Ejecutar benchmark ciego"
+    }
+  ],
+  "next_question_ids": [
+    "P02-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:44:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "question_id": "P03-F23",
+  "pilar": "P03",
+  "eje": "Radio, televisión, video y podcasts",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre radio, televisión, video y podcasts?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos están respaldados por: 1) APIs comerciales de broadcast: TVEyes API Partners Documentation (2026) y CisionOne API v2 (2026), que especifican la captura continua y licenciamiento de medios audiovisuales con latencias de 15 a 30 minutos; 2) Capacidades y límites de ASR neuronal: Radford et al. (2022, 'Robust Speech Recognition via Large-Scale Weak Supervision' - Whisper paper, arXiv:2212.04356), que documenta el WER en español estándar y las arquitecturas de ventanas de audio; 3) Estándares de audio digital y podcasts: Podcast Index API Documentation (2026, sección 'Podcasting 2.0 Namespace and Transcripts'); y 4) Calibración dialectal chilena y fonética: Cañete et al. (2020, BETO paper) y P03_QUALITY_ADDENDUM (Septiembre 2026, Sección 2.2), que explicitan las limitaciones del NLP estándar ante giros lingüísticos y modismos chilenos no estandarizados.",
+  "findings": [
+    {
+      "claim_id": "P03-F23-C1",
+      "claim": "La base probatoria de broadcast combina documentación de APIs industriales (TVEyes, Cision, Podcast Index) y literatura de reconocimiento de voz (Whisper) junto a las restricciones de lenguaje local de la adenda P03.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global / Chile",
+        "actor": "Corpus Canónico P03"
+      },
+      "evidence": [
+        {
+          "source_id": "1387f97d-0bce-4fa6-a8f5-d5cd579d17fe",
+          "source_title": "Podcast Index Open Podcast Directory API Documentation",
+          "original_url": "https://podcastindex-org.github.io/docs-api/",
+          "locator": "Endpoints: /podcasts/byfeedid & Transcript Tags",
+          "excerpt_short": "Provides metadata and direct links to creator-supplied transcript files (VTT, SRT, JSON) conforming to the podcast namespace standards.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:15:00-03:00"
+        },
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.2: Límites de BETO en el Entorno Corporativo Chileno",
+          "excerpt_short": "La afirmación de que modelos en español pueden interpretar modismos chilenos complejos... es estrictamente una hipótesis operativa pendiente de validación empírica.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de documentación técnica de audio y adenda de calidad.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de citas de broadcast"
+    ],
+    "actors": [
+      "Auditor Técnico"
+    ],
+    "steps": [
+      "Cotejo de APIs",
+      "Verificación de papers de ASR",
+      "Aprobación de referencias"
+    ],
+    "states": [
+      "Raw_Citations",
+      "Verified_Citations",
+      "Approved_Corpus"
+    ],
+    "outputs": [
+      "Catálogo de respaldo de evidencia audiovisual"
+    ],
+    "exceptions": [
+      "Falta de benchmarks formales publicados de Whisper sobre audio regional chileno"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BROADCAST_EVIDENCE_CORPUS",
+      "type": "corpus_documental",
+      "name": "Corpus de Evidencia Audiovisual P03",
+      "aliases": [
+        "Audiovisual Evidence Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BROADCAST_EVIDENCE_CORPUS",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "Eje_Broadcast_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F23-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Mantener una base de conocimiento documental para justificar los trade-offs de la ingesta de audio en BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

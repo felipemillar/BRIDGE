@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-F21",
+  "pilar": "P02",
+  "eje": "Asuntos públicos y memoria de actores",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué registros, responsables y alertas podrían integrarse con la preparación ejecutiva?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para que la preparación ejecutiva (Executive Briefing) evite que el C-Suite entre 'a ciegas' a una comisión parlamentaria o punto de prensa, deben integrarse tres capas: 1) Registros documentales integrables: Memoria de mensajes aprobados (System of Record en Broadsight con hojas de postura y Q&A de contingencia), Matriz de compromisos vigentes (acuerdos territoriales en Borealis/Open Point y Resoluciones de Calificación Ambiental - RCA) e Historial de declaraciones y discursos previos (AlphaSense/Broadsight); 2) Mapeo de responsables y gobernanza (Human-in-the-Loop): Ruta de aprobación técnica auditable (Sign-off route por Legal, Sostenibilidad y Operaciones) y Ficha de portavoces calificados por tema crítico con su historial de declaraciones; 3) Alertas e indicadores de activación (Triggers): Alertas de señal externa en tiempo real (picos de virulencia en Dataminr/Signal AI/NewsWhip) y Alertas de inconsistencia fáctica cuando una noticia emergente contradice un compromiso corporativo o cuando una postura oficial interna ha expirado; 4) Resultado integrado: generación activa de un Executive Briefing de 1 página con núcleo de la controversia, postura oficial, 3 preguntas difíciles asistidas y citas hipervinculadas a página y párrafo del documento fuente interno.",
+  "findings": [
+    {
+      "claim_id": "P02-F21-C1",
+      "claim": "La preparación ejecutiva directiva exige la integración automática de tres capas: memoria de mensajes aprobados (Broadsight), matriz de compromisos socioambientales (Borealis) y alertas tempranas de medios (Litoralpress/Dataminr), consolidando un Executive Brief con Q&A asistido.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global / Chile",
+        "actor": "Flujos de Preparación Ejecutiva"
+      },
+      "evidence": [
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Sección: The Executive Briefing Gap y Rutas de Sign-off",
+          "excerpt_short": "Integración de posturas aprobadas, compromisos vigentes y alertas en un dossier ejecutivo sintético de 1 página.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:34:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño de flujo de preparación basado en análisis de brechas de software.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Noticia externa crítica",
+      "Repositorio de posturas aprobadas",
+      "Matriz de compromisos de RCA"
+    ],
+    "actors": [
+      "Motor de Cruce Bipartito",
+      "Fiscal Legal",
+      "Director de Comunicaciones",
+      "Portavoz Autorizado"
+    ],
+    "steps": [
+      "Detección de trigger externo",
+      "Búsqueda de compromiso y postura aprobada",
+      "Verificación de vigencia y sign-off",
+      "Generación de briefing con Q&A",
+      "Firma digital del portavoz"
+    ],
+    "states": [
+      "Trigger_Activado",
+      "Postura_Localizada",
+      "Briefing_Generado",
+      "Vocero_Preparado"
+    ],
+    "outputs": [
+      "Executive Dossier de 1 página con citas y Q&A asistido"
+    ],
+    "exceptions": [
+      "Postura oficial expirada o desactualizada (dispara alerta de revisión urgente al CCO)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "MOD_EXECUTIVE_BRIEF",
+      "type": "modulo_producto",
+      "name": "Generador de Executive Briefs BRIDGE",
+      "aliases": [
+        "Módulo de Preparación Ejecutiva Activa"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "MOD_EXECUTIVE_BRIEF",
+      "predicate": "integra_datos_de",
+      "object_id": "Broadsight_Borealis_y_Litoralpress",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F21-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Preparación Manual Tradicional vs Executive Briefing Automatizado",
+      "Preparación Tradicional": "Correos de madrugada, minutas en Word desactualizadas y riesgo de contradicción.",
+      "Executive Briefing BRIDGE": "Dossier estructurado en < 5 minutos con posturas aprobadas y preguntas difíciles asistidas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Implementar el motor de generación de Executive Briefings como interfaz primaria de consumo para el C-Suite en dispositivos móviles.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F22",
+    "P02-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:34:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

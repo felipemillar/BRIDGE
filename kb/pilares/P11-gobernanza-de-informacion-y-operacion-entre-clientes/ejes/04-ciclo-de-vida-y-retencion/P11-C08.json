@@ -1,0 +1,144 @@
+{
+  "question_id": "P11-C08",
+  "pilar": "P11",
+  "eje": "Ciclo de vida y retención",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué sigue sin prueba sobre ciclo de vida y retención, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el ciclo de vida y retención: 1) Lo que sigue sin prueba empírica: La certeza forense de que la invocación del comando de borrado de vectores (`delete_points` o borrado de colección) en motores de bases de datos vectoriales como Qdrant elimine físicamente los datos de la memoria persistente de forma inmediata y no mantenga representaciones residuales en el Write-Ahead Log (WAL), en segmentos no compactados o en archivos temporales del sistema operativo antes del ciclo programado de compactación (Garbage Collection); 2) Fuente que falló o es parcial: La documentación técnica de Qdrant describe el borrado lógico y el marcado tombstone pero omite especificaciones detalladas sobre los tiempos exactos de compactación física en disco y el riesgo de persistencia forense en bloques no sobreescritos; y 3) Validación mínima que resolvería la incertidumbre: Diseñar y ejecutar un test forense de purga en laboratorio: a) Inserción de un documento sintético con vector característico; b) Ejecución del comando de borrado y destrucción de la clave DEK asociada en KMS; c) Volcado en crudo (raw disk dump) y volcado de memoria RAM del nodo de Qdrant; d) Escaneo exhaustivo mediante herramientas forenses buscando coincidencias de bytes o patrones de flotantes; y e) Verificación matemática de que la tasa de recuperación de vectores es estrictamente 0.00% y que cualquier bloque residual es criptográficamente indecifrable.",
+  "findings": [
+    {
+      "claim_id": "P11-C08-C1",
+      "claim": "Sigue sin prueba la eliminación física inmediata en disco tras borrados en vector DB antes de la compactación de WAL; la documentación de Qdrant es parcial en persistencia forense; y la validación mínima exige un test forense con volcado de memoria y disco confirmando 0.00% de recuperabilidad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "retention_and_purge_forensic_validation",
+      "evidence": [
+        {
+          "source_title": "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization",
+          "source_id": "eeffc975-0a8f-470f-80c9-13435bf0efd8",
+          "locator": "Section 4.7 'Verification of Media Sanitization'",
+          "retrieved_at": null,
+          "excerpt_short": "Verification testing must be conducted across representative storage locations to ensure that residual data cannot be recovered using advanced analytical or laboratory recovery tools.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Qdrant Documentation: Multitenancy and Payload-based Partitioning",
+          "source_id": "1c6d441b-79bd-430c-9e06-48a208a341e5",
+          "locator": "Section 'Point Deletion and Segment Optimization'",
+          "retrieved_at": null,
+          "excerpt_short": "Deleted points are initially marked as soft-deleted until segments are merged and vacuumed during the periodic optimization process.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación de un problema de ingeniería real de persistencia de bajo nivel en bases de datos modernas con propuesta de prueba concluyente.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Nodo de prueba de Qdrant",
+      "Documentos sintéticos con clave DEK dedicada",
+      "Herramienta de análisis forense"
+    ],
+    "actors": [
+      "Perito Informático Forense",
+      "Ingeniero de Base de Datos",
+      "CISO"
+    ],
+    "steps": [
+      "Ingesta de documento clasificado en el nodo de pruebas y vectorización en Qdrant",
+      "Disparo del procedimiento de revocación y purga completa (Crypto-shredding + delete_points)",
+      "Forzado síncrono de optimización y vacuuming de segmentos (`optimize_collection`)",
+      "Extracción de volcado bit a bit de disco y memoria",
+      "Inspección de artefactos residuales y cálculo de recall de vectores (objetivo: 0.00%)",
+      "Emisión del Dictamen Forense de Sanitización Efectiva"
+    ],
+    "states": [
+      "DATA_INGESTED",
+      "PURGE_AND_OPTIMIZE_EXECUTED",
+      "FORENSIC_IMAGE_DUMPED",
+      "ZERO_RECOVERY_CERTIFIED"
+    ],
+    "outputs": [
+      "Evidencia empírica indiscutible de que el borrado en BRIDGE es irreversible ante peritajes forenses"
+    ],
+    "exceptions": [
+      "Si se detectan bytes legibles antes de la compactación, se reprograma el trigger de optimización para que se ejecute forzosamente de forma síncrona tras cada borrado"
+    ]
+  },
+  "entities": [
+    "NIST SP 800-88 r2",
+    "Qdrant Segment Optimization",
+    "Crypto-shredding Verification",
+    "Peritaje Forense de Datos"
+  ],
+  "relations": [
+    {
+      "from": "Peritaje Forense de Datos",
+      "to": "Qdrant Segment Optimization",
+      "type": "VERIFIES_PHYSICAL_PURGE_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir que 'delete' borra instantáneamente los sectores de disco vs Verificar con herramientas forenses",
+      "diferencia": "Asumir borrado instantáneo deja datos expuestos en bloques libres de disco; verificar con herramientas forenses garantiza que el Crypto-shredding hace ilegible cualquier sector no sobreescrito."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "residual_vector_recovery_rate": "0.00%",
+    "post_purge_vacuum_latency": "< 30 segundos tras orden de eliminación"
+  },
+  "bridge_implications": "Permite emitir certificados de destrucción de datos con fe pública técnica ante comités de auditoría y tribunales de justicia.",
+  "open_gaps": [
+    "Automatización del protocolo de verificación forense en pipelines periódicos de control de calidad."
+  ],
+  "next_question_ids": [
+    "P11-C09",
+    "P11-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

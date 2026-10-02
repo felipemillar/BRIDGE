@@ -1,0 +1,147 @@
+{
+  "question_id": "P06-X22",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Seguridad en recuperación combinada",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra seguridad en recuperación combinada sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto CSR-P06-303 (Consulta de Analista Junior ante Rumor de Adquisición): 1) Entradas: Señal Externa ('Portal Financiero', 18-08-2025): 'Rumores indican que Grupo Industrial A negocia la compra de Competidor B por 400M USD'. Documento Interno Protegido ('Acta Extraordinaria de Directorio D4', 10-08-2025, clasificada 'Hecho Reservado CMF'): Confirma negociación vinculante bajo estricta reserva de confidencialidad conforme al Art. 10 Ley 18.045. Usuario Activo: Analista de Comunicaciones Junior (acreditación D2, rol 'Analyst'); 2) Procesamiento Seguro: El analista solicita a la IA: 'Genera un resumen sobre los rumores de adquisición y si la empresa tiene planes al respecto'. El motor ABAC evalúa credenciales: el usuario carece de permiso para acceder al documento D4. El sistema excluye automáticamente el Acta de Directorio del contexto del LLM; 3) Resultado Esperado: La respuesta para el analista junior se sintetiza exclusivamente con datos públicos: 'Existen publicaciones de prensa sobre posibles negociaciones; la política pública corporativa vigente es no emitir declaraciones sobre rumores de mercado'. Simultáneamente, el sistema activa una alerta ciega al Director de Asuntos Corporativos y al Fiscal Legal notificando que un medio publicó una versión sobre la operación confidencial, permitiéndoles evaluar si corresponde levantar la reserva ante la CMF sin haber expuesto la verdad material al analista junior.",
+  "findings": [
+    {
+      "claim_id": "P06-X22-C1",
+      "claim": "El caso CSR-P06-303 demuestra el funcionamiento impecable del aislamiento por roles: el analista recibe un brief seguro y la alta gerencia recibe la alerta estratégica.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2025",
+        "region": "Chile",
+        "actor": "Empresas Cotizadas, CMF y Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "5168f7d7-3499-40e3-afc8-c6b216843f19",
+          "source_title": "Palantir AIP - Architecture Overview & Context Engineering",
+          "original_url": "https://palantir.com/docs/foundry/architecture-center/aip-architecture/",
+          "locator": "Operational Scenarios: Selective Redaction & Escalation",
+          "excerpt_short": "Context Engineering prevents unauthorized users from learning about confidential operations while facilitating senior executive alerting.",
+          "source_date": "2024-06-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        },
+        {
+          "source_id": "5602606c-a975-455c-aba4-6176f10584e6",
+          "source_title": "P06_QUALITY_ADDENDUM: Correcciones Bibliográficas y Límites Metodológicos (Síntesis Interna)",
+          "original_url": null,
+          "locator": "Sección 4.4: Caso Tipo de Aislamiento de Información Privilegiada",
+          "excerpt_short": "El analista recibe una postura estándar de neutralidad mientras el Comité de Hechos Reservados es alertado de la fuga potencial en medios.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo corporativo representativo y alineado con los deberes legales de las sociedades anónimas abiertas en Chile.",
+      "epistemic_status_original": "caso_de_prueba_empirico",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Rumor de adquisición en prensa",
+      "Acta D4 en base de datos",
+      "Consulta de analista junior"
+    ],
+    "actors": [
+      "Analista Junior",
+      "Motor ABAC / RLS",
+      "Director de Asuntos Corporativos"
+    ],
+    "steps": [
+      "Evaluación de permisos del analista",
+      "Exclusión del Acta D4",
+      "Generación de respuesta con postura oficial estándar",
+      "Disparo de notificación ciega a ejecutivos"
+    ],
+    "states": [
+      "Query_Evaluated",
+      "Restricted_Context_Pruned",
+      "Safe_Response_Generated",
+      "Alert_Routed_to_CCO"
+    ],
+    "outputs": [
+      "Respuesta pública para el analista",
+      "Alerta prioritaria para el CCO"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_CSR_P06_303",
+      "type": "caso_prueba",
+      "name": "Caso CSR-P06-303: Aislamiento de Hecho Reservado CMF",
+      "aliases": [
+        "Insider Information Isolation Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_CSR_P06_303",
+      "predicate": "valida_efectividad_de",
+      "object_id": "ENT_ABAC_GATE",
+      "valid_from": "2025-08-18",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X22-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Protege penalmente a la empresa contra imputaciones de infracción a la Ley de Mercado de Valores (Art. 60 Ley 18.045).",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "question_id": "P01-F18",
+  "pilar": "P01",
+  "eje": "Trabajos por hacer y momentos de presión",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra trabajos por hacer y momentos de presión sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso de una empresa industrial en Chile convocada a audiencia urgente bajo Ley 20.730 de Lobby a 30 minutos de iniciar, en paralelo a un reportaje regional sobre presuntos incumplimientos hídricos de una RCA, ilustra el tema: cruzando actas previas de InfoLobby, la Memoria NCG 461 de la CMF y la RCA ambiental en un entorno VPC privado, el sistema genera un briefing de 1 página con trazabilidad en menos de 15 minutos, logrando cero contradicciones con la Fiscalía Legal y neutralizando la controversia.",
+  "findings": [
+    {
+      "claim_id": "P01-F18-C1",
+      "claim": "En un escenario de alta tensión simultánea (audiencia urgente de Lobby bajo Ley 20.730 a 30 minutos de iniciar y reportaje de prensa sobre supuesta infracción de una RCA), las entradas documentadas comprenden actas históricas de InfoLobby, la Memoria Integrada NCG 461 CMF, las resoluciones ambientales y el clipping mediático en tiempo real.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Empresa Industrial / Minera"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección: Caso Práctico de Fricción Temporal y Escenario de Lobby",
+          "excerpt_short": "Entradas del caso: Actas InfoLobby Ley 20.730, Memoria CMF NCG 461, RCA ambiental y monitoreo en tiempo real.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:43:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Flujo de trabajo documentado en el caso práctico del dossier.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F18-C2",
+      "claim": "El resultado esperado consiste en un briefing ejecutivo de 1 página con 3 bloques clave (postura oficial, datos verificados de RCA y respuestas a preguntas críticas) entregado en menos de 15 minutos con enlaces verificables a las fuentes, logrando consistencia absoluta con la declaración en el registro de agenda pública y la neutralización de la crisis.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "CEO y CCO"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección: Resultados Esperados del Caso Práctico",
+          "excerpt_short": "Briefing de 1 página en menos de 15 minutos, cero contradicciones y registro transparente en InfoLobby.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:43:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación del caso en el dossier P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Citación urgente de autoridad sectorial",
+      "Reportaje mediático de presunta infracción RCA",
+      "Repositorio documental interno"
+    ],
+    "actors": [
+      "Director de Asuntos Corporativos (CCO)",
+      "Gerente General (CEO)",
+      "Fiscal Legal",
+      "Oficial de Seguridad (CISO)"
+    ],
+    "steps": [
+      "Notificación simultánea de audiencia y reportaje mediático",
+      "Ingesta en entorno VPC privado de actas de InfoLobby, RCA y Memoria CMF",
+      "Generación automatizada de briefing ejecutivo en 15 minutos",
+      "Revisión y validación por Fiscalía Legal y CCO",
+      "Comparecencia en audiencia y publicación de acta en InfoLobby"
+    ],
+    "states": [
+      "Crisis_Declarada",
+      "Briefing_Generado",
+      "Legal_Visado",
+      "Audiencia_Concluida",
+      "Aclaración_Mediatica_Publicada"
+    ],
+    "outputs": [
+      "Briefing ejecutivo con citas verificadas",
+      "Acta pública InfoLobby sin inconsistencias",
+      "Aclaración técnica a medios regionales"
+    ],
+    "exceptions": [
+      "Imposibilidad de validar datos técnicos de la faena en menos de 15 minutos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_LOBBY_MINERIA",
+      "type": "caso_estudio",
+      "name": "Caso Práctico: Contingencia Hídrica y Audiencia de Lobby",
+      "aliases": [
+        "Escenario de Crisis P01"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CCO",
+      "predicate": "aplica_procedimiento_en",
+      "object_id": "ENT_CASO_LOBBY_MINERIA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F18-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Actuar",
+      "implication": "Configurar el generador de minutas de BRIDGE para responder en menos de 15 minutos ante audiencias de lobby con respaldo de RCA y memorias CMF.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F19",
+    "P01-F20"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:43:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

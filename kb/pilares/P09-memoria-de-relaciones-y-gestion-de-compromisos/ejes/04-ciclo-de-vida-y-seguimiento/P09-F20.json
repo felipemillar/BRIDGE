@@ -1,0 +1,149 @@
+{
+  "question_id": "P09-F20",
+  "pilar": "P09",
+  "eje": "Ciclo de vida y seguimiento",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué alertas anticipan incumplimiento o vencimiento sin duplicar tareas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El sistema implementa una arquitectura de alertas preventivas no intrusivas basadas en cadencias temporales y umbrales de riesgo, evitando la saturación por correos duplicados: 1) Alerta Temprana T-30: Notificación informativa al dueño del compromiso 30 días antes del vencimiento, recordando el hito y sugiriendo la carga de avances preliminares; 2) Alerta de Advertencia T-15: Si el avance reportado es inferior al 50%, se envía aviso al dueño y copia a su jefatura directa para coordinar recursos operacionales; 3) Alerta Crítica T-7: Notificación de alta prioridad al Gerente de Asuntos Públicos y al Comité Territorial para activar un plan de rescate o preparar una reunión explicativa con la contraparte; 4) Integración con Herramientas Existentes: Para evitar duplicación con Jira, Trello, SAP o Asana, BRIDGE envía recordatorios mediante webhooks a los canales corporativos oficiales (Slack, MS Teams, Google Workspace) sincronizando el estado bidireccionalmente vía API.",
+  "findings": [
+    {
+      "claim_id": "P09-F20-C1",
+      "claim": "El esquema de alertas escalonadas T-30, T-15 y T-7 previene la desidia y el vencimiento inadvertido sin crear tareas redundantes, sincronizándose con los canales de mensajería y calendarios del equipo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "preventive_alerting_architecture",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo de Gestión en 6 Fases (Fase 4: Seguir y Ejecutar)'",
+          "retrieved_at": null,
+          "excerpt_short": "Fase 4: Seguir y Ejecutar. Motor de alertas preventivas: T-30 (aviso a dueño), T-15 (copia a jefatura), T-7 (escalamiento a comité). Notificaciones push e integración vía webhooks a Slack y MS Teams para no duplicar tableros de tareas.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Simply Stakeholders: Commitments Tracking Tools That Close The Loop",
+          "source_id": "f962cf2b-33d3-49ae-8215-baee33ff1e4a",
+          "locator": "Section 'Smart Notifications vs Notification Fatigue', p. 28-32",
+          "retrieved_at": null,
+          "excerpt_short": "Effective commitment management relies on escalating threshold alerts that notify only relevant managers as deadlines approach, integrating directly with corporate email and calendar systems.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Simply Stakeholders y el diseño de alertas del dossier de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Job de cron diario a las 07:00 AM",
+      "Tabla de compromisos activos",
+      "Configuración de canales de notificación"
+    ],
+    "actors": [
+      "Demonio de Cron BRIDGE",
+      "Servicio de Notificaciones Webhook",
+      "Dueño del Compromiso"
+    ],
+    "steps": [
+      "Cálculo diario de diferencia de días respecto a due_date",
+      "Identificación de compromisos que cruzan T-30, T-15 o T-7",
+      "Verificación de estado diferente a CUMPLIDO o CANCELADO",
+      "Despacho de notificación unificada (digest diario)",
+      "Registro de despacho para evitar duplicados"
+    ],
+    "states": [
+      "Evaluación Ejecutada",
+      "Alertas Despachadas",
+      "Audit Log Guardado"
+    ],
+    "outputs": [
+      "Mensaje contextual en Slack/Teams con enlace directo a la ficha",
+      "Digest semanal para gerencia"
+    ],
+    "exceptions": [
+      "Compromisos de criticidad 'Crítica' generan alertas diarias a partir de T-7"
+    ]
+  },
+  "entities": [
+    "Alertas Escalonadas (T-30/T-15/T-7)",
+    "Simply Stakeholders",
+    "Fatiga de Alertas (Notification Fatigue)",
+    "Webhooks Slack/Teams",
+    "P09_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Alerta T-15",
+      "to": "Jefatura Directa",
+      "type": "ESCALATES_TO"
+    },
+    {
+      "from": "Motor de Alertas",
+      "to": "Slack / Teams API",
+      "type": "INTEGRATES_VIA_WEBHOOK"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Spam indiscriminado de emails vs Alertas escalonadas por criticidad",
+      "diferencia": "El spam es ignorado por los usuarios; las alertas escalonadas solo involucran a mandos altos cuando existe riesgo inminente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "alert_cadence_days": "30, 15 y 7 días previos al vencimiento",
+    "daily_digest_limit": "Máximo 1 resumen diario por usuario"
+  },
+  "bridge_implications": "Configurar un worker Celery / Redis Queue en BRIDGE que ejecute la verificación de vencimientos cada mañana.",
+  "open_gaps": [
+    "Permitir que el usuario configure si prefiere alertas vía WhatsApp Business para faenas sin correo continuo."
+  ],
+  "next_question_ids": [
+    "P09-F21",
+    "P09-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

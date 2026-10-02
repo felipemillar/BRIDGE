@@ -1,0 +1,215 @@
+{
+  "question_id": "P02-F03",
+  "pilar": "P02",
+  "eje": "Universo comercial y deduplicación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fichas del atlas quedan cuestionadas por la fe de erratas y cómo debe reconciliarse el denominador?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La fe de erratas (00_P02_GLOBAL_READ_ME_AND_ERRATA) y la reconciliación del atlas (P02_GLOBAL_ATLAS_RECONCILIATION_V1) sustituyen formalmente la versión preliminar (V1) corrigiendo: 1) El denominador comercial de la V1 (que reportaba 78 o 70 'proveedores independientes' sin deduplicación estricta) queda depurado y fijado en exactamente 70 proveedores comerciales independientes, tras restar 2 asociaciones (AMEC y Page Society), 1 propuesta de referencia (The Bridge) y deduplicar subsidiarias (ej. Memo dentro de Signal AI); 2) FGS Global se desvincula de WPP y se asigna a Kite Bidco Inc. / KKR (SEC Form 6-K de dic 2024); 3) Limbik se fija con adquisición de Burson el 12 agosto 2026 (no 2024); 4) Direct Signal queda con sede e identidad jurídica no verificadas; 5) Entual se precisa como servicio humano bespoke sobre datos públicos sin repositorio interno; 6) Contrlr y Third Hemisphere mantienen separación legal; 7) Se elimina la escala 'Evidencia Demostrada (EM)' y se sustituye por la escala auditada: OPD (Oferta Pública Documentada), FD (Funcionalidad Declarada), DTI (Documentación Técnica Identificada) y POR (Prueba Operacional Realizada = Ninguna en los 70 casos); 8) Se retiran superlativos no probados (cobertura insuperable en Litoralpress, RAG Zero Hallucination en AlphaSense, o superioridad máxima de Quorum).",
+  "findings": [
+    {
+      "claim_id": "P02-F03-C1",
+      "claim": "El denominador comercial del mercado queda fijado por la fe de erratas en exactamente 70 proveedores independientes verificados, excluyendo entidades sin fines de lucro y deduplicando filiales corporativas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Auditoría de Manifiesto P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Sección: Conciliación del Denominador Comercial (70 Proveedores)",
+          "excerpt_short": "El denominador reconciliado fija el total en exactamente 70 proveedores comerciales independientes.",
+          "source_date": "2026-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        },
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Tabla de Reconciliación V1 vs Versión Auditada",
+          "excerpt_short": "Depuración de 78 entidades brutas a 70 proveedores comerciales independientes verificados.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Regla de prevalencia editorial autoritativa y vinculante del pilar P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P02-F03-C2",
+      "claim": "Se sustituye la categorización 'Evidencia Demostrada (EM)' por la escala rigurosa OPD/FD/DTI/POR, consignando 'POR = Ninguna' para todos los proveedores evaluados al no haberse realizado pruebas de laboratorio con credenciales de clientes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Equipo Evaluador P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Sección: Escala Epistémica de Evidencia de Producto",
+          "excerpt_short": "Sustitución de EM por OPD, FD, DTI y POR (marcado como Ninguna en todos los casos).",
+          "source_date": "2026-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Protocolo de control de calidad metodológico del mandato.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borrador preliminar Atlas V1",
+      "Documentos de fe de erratas",
+      "Filings corporativos actualizados"
+    ],
+    "actors": [
+      "Auditor Editorial",
+      "Base de Datos del Atlas",
+      "Fuentes Primarias"
+    ],
+    "steps": [
+      "Identificación de entidades dudosas en V1",
+      "Reconciliación matemática del denominador",
+      "Retiro de juicios categóricos y superlativos",
+      "Publicación de atlas reconciliado"
+    ],
+    "states": [
+      "Atlas_Preliminar_Cuestionado",
+      "Auditoria_Ejecutada",
+      "Denominador_Reconciliado_70"
+    ],
+    "outputs": [
+      "Atlas Reconciliado V1 con 70 proveedores independientes"
+    ],
+    "exceptions": [
+      "Aparición de nuevas fusiones societarias no registradas a la fecha de corte"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_FE_ERRATAS_P02",
+      "type": "documento_normativo_interno",
+      "name": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+      "aliases": [
+        "Fe de Erratas Canónica P02"
+      ]
+    },
+    {
+      "entity_id": "ENT_ATLAS_RECONCILIADO",
+      "type": "documento_sintesis",
+      "name": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+      "aliases": [
+        "Atlas Reconciliado"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_FE_ERRATAS_P02",
+      "predicate": "reemplaza_y_anula",
+      "object_id": "P02_GLOBAL_COMPANY_ATLAS_V1_Borrador",
+      "valid_from": "2026-10-01",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cifras de Mercado Preliminares vs Cifras Auditadas",
+      "Versión Preliminar V1": "78 entidades heterogéneas mezclando software, gremios y marcos teóricos.",
+      "Versión Auditada (Prevaleciente)": "Exactamente 70 proveedores comerciales independientes verificados."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P02-F03-C1",
+        "P02-F01-C1"
+      ],
+      "difference": "Divergencia entre reportes de prensa antiguos que atribuían FGS Global a WPP y el documento oficial de cierre de venta ante la SEC.",
+      "resolution": "resuelta",
+      "reason": "Prevalece la fe de erratas y el SEC Form 6-K: la propiedad actual corresponde a Kite Bidco Inc. (KKR)."
+    }
+  ],
+  "metrics_and_denominators": [
+    {
+      "metric_name": "Proveedores Comerciales Independientes Verificados",
+      "value": 70,
+      "unit": "empresas",
+      "denominator": "70 proveedores tras deduplicación de 78 registros brutos",
+      "evidence_claim_id": "P02-F03-C1"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Utilizar exclusivamente el denominador N=70 en todos los cálculos de cobertura y participación de mercado de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F04",
+    "P02-F05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

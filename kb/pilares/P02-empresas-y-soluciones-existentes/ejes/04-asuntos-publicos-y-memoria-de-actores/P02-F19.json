@@ -1,0 +1,168 @@
+{
+  "question_id": "P02-F19",
+  "pilar": "P02",
+  "eje": "Asuntos públicos y memoria de actores",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué ofrecen Quorum, FiscalNote, Open Point, Simply Stakeholders y Borealis para actores y compromisos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Ofrecen soluciones diferenciadas entre el seguimiento político-legislativo y la gestión relacional comunitaria: 1) Quorum (Quorum Analytics Inc.): mapea legisladores y funcionarios en EE. UU., UK y UE; CRM de lobby para registrar reuniones, enviar one-pagers institucionales y lanzar campañas grassroots, con asistente Quincy AI para resumir leyes; brecha: no integrado con Ley de Lobby en Chile ni monitoreo de prensa masiva; 2) FiscalNote (FiscalNote Holdings / PolicyNote): rastrea autoridades y agencias regulatorias aplicando ML para predecir probabilidades de aprobación de proyectos de ley en EE. UU. y UE; brecha: cobertura estática en LatAm y no gestiona comunidades territoriales; 3) Open Point Group (Consultation Manager + Social Point + Converlens, adq. julio 2024): centraliza perfiles de comunidades, propietarios y líderes vecinales por proyectos de minería/energía, con historial auditable de acuerdos y análisis de feedback con IA; brecha: ciego a medios de prensa masivos; 4) Simply Stakeholders (Darzin Software Pty Ltd): matrices de mapeo de influencia, análisis de sentimiento con NLP y módulo de seguimiento de compromisos (Commitments Tracking); brecha: IA en despliegue gradual y sin monitoreo de medios; 5) Borealis (Irth Solutions LLC): System of Record de gestión social y ambiental en faenas mineras/energéticas, tramitación de quejas (grievances), convenios indígenas (OIT 169) y compromisos de la RCA; brecha: software cerrado de campo sin herramientas de vocería de prensa.",
+  "findings": [
+    {
+      "claim_id": "P02-F19-C1",
+      "claim": "Las plataformas de actores se bifurcan entre CRMs legislativos anglosajones (Quorum, FiscalNote) centrados en proyectos de ley en Washington/Bruselas y sistemas de gestión de compromisos comunitarios territoriales (Borealis, Open Point, Simply Stakeholders) especializados en licencias sociales e impactos ambientales de proyectos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global / Chile",
+        "actor": "Proveedores de Stakeholder CRM"
+      },
+      "evidence": [
+        {
+          "source_id": "1444a51e-c089-4621-9d52-3a42d941d73b",
+          "source_title": "Borealis Irth Solutions Stakeholder Engagement Platform",
+          "original_url": "https://www.boreal-is.com/modules/stakeholder-engagement/",
+          "locator": "Modules: Commitments Management and Grievances",
+          "excerpt_short": "Stakeholder Engagement & Social Operations Software managing grievances, land access, and community commitments in mining and energy.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:34:00-03:00"
+        },
+        {
+          "source_id": "68a1b5fa-6582-445a-9be9-b968b2955270",
+          "source_title": "Open Point Stakeholder Relationship Management Suite",
+          "original_url": "https://www.openpoint.com/products/stakeholder-relationship-management/",
+          "locator": "Consultation Manager and Converlens Integration",
+          "excerpt_short": "Stakeholder Relationship Management centralizing consultation history, community agreements and feedback analysis.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:34:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de capacidades funcionales en portales y manuales oficiales.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Actas de reuniones vecinales",
+      "Audiencias con parlamentarios",
+      "Convenios de mitigación socioambiental"
+    ],
+    "actors": [
+      "Gerente de Asuntos Públicos",
+      "Encargado Territorial de RSE",
+      "Comunidades Locales",
+      "Legisladores"
+    ],
+    "steps": [
+      "Registro de actor y perfil de influencia",
+      "Ingreso de acuerdo o compromiso firmado",
+      "Seguimiento de cumplimiento de plazos",
+      "Reporte de estado de relacionamiento"
+    ],
+    "states": [
+      "Actor_Mapeado",
+      "Compromiso_Asumido",
+      "Seguimiento_Activo",
+      "Compromiso_Cumplido"
+    ],
+    "outputs": [
+      "Bitácora auditable de compromisos y matriz de partes interesadas"
+    ],
+    "exceptions": [
+      "Incumplimiento de acuerdo territorial no notificado al equipo de comunicaciones corporativas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_QUORUM",
+      "type": "crm_legislativo",
+      "name": "Quorum Analytics Inc.",
+      "aliases": [
+        "Quorum Public Affairs"
+      ]
+    },
+    {
+      "entity_id": "ENT_OPEN_POINT",
+      "type": "srm_territorial",
+      "name": "Open Point Group",
+      "aliases": [
+        "Consultation Manager",
+        "Converlens"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BOREALIS",
+      "predicate": "gestiona_compromisos_en",
+      "object_id": "Mineria_y_Energia",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F19-C1"
+    },
+    {
+      "subject_id": "ENT_QUORUM",
+      "predicate": "focalizado_en_seguimiento_de",
+      "object_id": "Lobby_EEUU_y_UE",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F19-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "CRM Legislativo (Quorum) vs SRM Territorial (Borealis/Open Point)",
+      "CRM Legislativo": "Mapeo de votos parlamentarios, patrocinio de enmiendas y cabildeo en Washington/Bruselas.",
+      "SRM Territorial": "Gestión de acuerdos de agua, empleo local, mesas de diálogo y compromisos de la RCA en terreno."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Relacionar",
+      "implication": "BRIDGE debe combinar ambas capas en un único módulo: seguimiento normativo de Ley de Lobby y bitácora territorial de compromisos de faena.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F20",
+    "P02-F21"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:34:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

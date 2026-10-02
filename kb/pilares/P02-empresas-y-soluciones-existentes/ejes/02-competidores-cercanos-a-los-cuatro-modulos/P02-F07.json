@@ -1,0 +1,207 @@
+{
+  "question_id": "P02-F07",
+  "pilar": "P02",
+  "eje": "Competidores cercanos a los cuatro módulos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué proveedores declaran combinar Saber, Escuchar, Hablar y Relacionar en un flujo único?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Ningún proveedor comercial independiente probado del catálogo de 70 soluciones verificadas ha demostrado operacionalmente (POR = Ninguna) la integración técnica de los cuatro módulos en un software SaaS unificado. Quienes proponen o declaran esta combinación son: 1) The Bridge Intelligence: único modelo teórico configurado para articular los cuatro módulos, pero clasificado formalmente como hipótesis de diseño arquitectónico a validar y no como ventaja probada; 2) Broadsight (COMP-012 / PROV-011): el competidor más cercano en arquitectura (System of Record), integra Saber (hojas de postura, Q&A aprobados), Hablar (gobernanza de mensajes) y Relacionar (directorio de periodistas), pero su módulo Escuchar es pasivo y requiere carga manual sin ingesta masiva en tiempo real; 3) Contrlr: declara monitorear 7 pilares, calcular Reputation Score y redactar con Circuit Breaker, pero sus métricas carecen de validación técnica independiente; 4) Direct Signal: declara MCP y perfiles activos, pero su sede e identidad jurídica no están verificadas; 5) Entual B.V.: ofrece ContentStudio, pero opera exclusivamente sobre información pública externa sin conectores a repositorios internos confidenciales (Saber); 6) Burson / WPP (Decipher + Limbik): combina simulación cognitiva y monitoreo, pero opera como un servicio de consultoría cautivo de agencia y no como software SaaS autónomo.",
+  "findings": [
+    {
+      "claim_id": "P02-F07-C1",
+      "claim": "En el universo comercial de 70 proveedores independientes de P02, ningún software SaaS ha demostrado operativamente la integración unificada de Saber, Escuchar, Hablar y Relacionar; el mercado se encuentra fragmentado en silos funcionales especializados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Auditoría de Competidores P02"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Evaluación de Cobertura de los Cuatro Módulos en el Mercado",
+          "excerpt_short": "Ningún proveedor comercial del atlas demuestra integración operativa simultánea de los cuatro módulos en un flujo SaaS único.",
+          "source_date": "2026-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        },
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Análisis Transversal de Competidores Cercanos a los 4 Módulos",
+          "excerpt_short": "Las suites de escucha son ciegas a repositorios internos y los buscadores RAG carecen de flujos de vocería y prensa.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación exhaustiva del atlas de competidores y fe de erratas canónica.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P02-F07-C2",
+      "claim": "The Bridge Intelligence no constituye un producto comercial con superioridad demostrada, sino una hipótesis de diseño arquitectónico y sujeto de análisis comparativo que debe someterse a validación empírica.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Chile / EE. UU.",
+        "actor": "The Bridge Intelligence Project"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Sección: Estatus Metodológico de The Bridge Intelligence",
+          "excerpt_short": "The Bridge Intelligence debe tratarse estrictamente como una hipótesis de diseño arquitectónico a validar.",
+          "source_date": "2026-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:28:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia editorial explícita en la fe de erratas del mandato.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Demandas de vocería",
+      "Señales de prensa",
+      "Documentos corporativos",
+      "Directorio de actores"
+    ],
+    "actors": [
+      "CCO",
+      "Plataformas de Escucha",
+      "Plataformas RAG",
+      "CRMs de Asuntos Públicos"
+    ],
+    "steps": [
+      "Detección externa en plataforma A",
+      "Búsqueda manual de antecedentes en plataforma B",
+      "Redacción artesanal en procesador de texto C",
+      "Cotejo de contactos en CRM D"
+    ],
+    "states": [
+      "Fragmentacion_Operativa",
+      "Multiples_Herramientas_Desconectadas",
+      "Riesgo_Desalineamiento"
+    ],
+    "outputs": [
+      "Flujo fragmentado entre herramientas no interoperables"
+    ],
+    "exceptions": [
+      "Integraciones ad-hoc vía API construidas por el cliente a alto costo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BROADSIGHT",
+      "type": "competidor_directo",
+      "name": "Broadsight / Broadsight AI",
+      "aliases": [
+        "System of Record for PR"
+      ]
+    },
+    {
+      "entity_id": "ENT_THE_BRIDGE",
+      "type": "propuesta_referencia",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "Hipótesis Arquitectónica Cuatro Módulos"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BROADSIGHT",
+      "predicate": "cubre_parcialmente",
+      "object_id": "Modulos_Saber_Hablar_Relacionar",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F07-C1"
+    },
+    {
+      "subject_id": "ENT_THE_BRIDGE",
+      "predicate": "plantea_integracion_de",
+      "object_id": "Saber_Escuchar_Hablar_Relacionar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F07-C2"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque Broadsight vs Enfoque The Bridge",
+      "Broadsight": "System of Record para posturas y Q&A internos; escucha externa es manual o pasiva.",
+      "The Bridge (Hipótesis)": "Grafo bipartito que enlaza continuamente la escucha externa masiva con la memoria interna."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "La gran oportunidad competitiva de BRIDGE radica precisamente en llenar el vacío de integración entre Escuchar y Saber, que ningún competidor resuelve hoy en SaaS.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F08",
+    "P02-F09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:28:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

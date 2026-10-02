@@ -1,0 +1,156 @@
+{
+  "question_id": "P02-F33",
+  "pilar": "P02",
+  "eje": "Flujo editorial y servicios expertos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué evidencia hay de uso productivo, caso de cliente o ensayo independiente por proveedor?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La evidencia de uso productivo verificable varía sustancialmente según la madurez comercial del proveedor: 1) Broadsight: documenta adopción en grandes corporaciones de servicios públicos (utilities), transporte y tecnología regulada en Norteamérica y Europa, con casos de uso donde comités de asuntos corporativos gestionan más de 400 temas críticos y reducen el tiempo de aprobación de holding statements de 6 horas a 25 minutos; 2) Prezly: publica testimonios de clientes verificables como Samsung, Red Bull, Ubisoft e ING, que operan sus salas de prensa digitales y gestión de relaciones con periodistas de tecnología y consumo; 3) Entual: evidencia basada en estudios de caso cualitativos con asociaciones comerciales e instituciones gubernamentales en Países Bajos y la Unión Europea para el monitoreo de directivas regulatorias; 4) Cision y Meltwater: miles de clientes comerciales con reportes de analistas independientes (G2, Forrester Wave) que certifican la escala de procesamiento de medios; 5) Escala de evidencia de P02: ninguno de los 70 proveedores comerciales ha sido sometido a una 'Prueba Operacional Realizada' (POR) independiente en el contexto del proyecto BRIDGE, operando bajo 'Oferta Pública Demostrada' (OPD) o 'Documentación Técnica Identificada' (DTI).",
+  "findings": [
+    {
+      "claim_id": "P02-F33-C1",
+      "claim": "Existen casos de cliente y testimonios verificables para soluciones de nicho (Broadsight, Prezly, Meltwater), pero el nivel de evidencia global en P02 se clasifica como OPD o DTI, con cero pruebas operacionales independientes realizadas sobre el benchmark completo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Proveedores comerciales P02"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Evidence Framework: OPD, DTI, POR definitions",
+          "excerpt_short": "No vendor has undergone formal POR (Proof of Operation Performed) under BRIDGE benchmark criteria; all 70 commercial vendors are evaluated under OPD, FD, or DTI.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        },
+        {
+          "source_id": "c4de85cf-571d-4f7f-ba31-a56c3cab3b48",
+          "source_title": "Prezly PR Software Newsrooms and Stakeholder CRM",
+          "original_url": "https://www.prezly.com/product",
+          "locator": "Customer Case Studies Section",
+          "excerpt_short": "Customer cases documenting deployment for global corporate press teams managing distributed media relations.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:38:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación estricta del marco de evidencia fijado en el atlas de reconciliación.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Casos de estudio publicados",
+      "Reportes de analistas independientes (Forrester, G2)",
+      "Manifiestos de producto"
+    ],
+    "actors": [
+      "Auditor de Software",
+      "Director de Evaluación de Proveedores"
+    ],
+    "steps": [
+      "Recopilación de credenciales comerciales",
+      "Clasificación en escala epistémica (OPD/FD/DTI/POR)",
+      "Verificación de clientes nombrados",
+      "Detección de brechas operativas"
+    ],
+    "states": [
+      "Credencial_Recopilada",
+      "Nivel_Evidencia_Asignado",
+      "Caso_Auditado"
+    ],
+    "outputs": [
+      "Matriz de madurez comercial comprobada por vendor"
+    ],
+    "exceptions": [
+      "Casos de cliente bajo acuerdo de confidencialidad que no pueden citarse públicamente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BROADSIGHT_CASES",
+      "type": "casos_estudio",
+      "name": "Broadsight Enterprise Customer Cases",
+      "aliases": [
+        "Broadsight Cases"
+      ]
+    },
+    {
+      "entity_id": "ENT_PREZLY_CASES",
+      "type": "casos_estudio",
+      "name": "Prezly Customer Cases",
+      "aliases": [
+        "Prezly Cases"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BROADSIGHT_CASES",
+      "predicate": "clasificado_bajo_nivel",
+      "object_id": "DTI",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F33-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de Evidencia: Declaración en Marketing (FD) vs Documentación Técnica (DTI)",
+      "Declaración en Marketing": "Promesas generales en páginas comerciales sobre 'IA omnisciente' sin especificaciones.",
+      "Documentación Técnica": "Fichas de producto, manuales de API y reportes de analistas que prueban funcionalidades activas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "BRIDGE debe basar su desarrollo en patrones DTI comprobados y someter sus módulos a pruebas POR tempranas en clientes piloto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F34",
+    "P02-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:38:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

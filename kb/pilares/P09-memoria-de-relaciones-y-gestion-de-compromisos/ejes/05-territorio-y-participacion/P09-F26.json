@@ -1,0 +1,149 @@
+{
+  "question_id": "P09-F26",
+  "pilar": "P09",
+  "eje": "Territorio y participación",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Cómo se representa un conflicto territorial sin reducirlo a sentimiento automático?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación rigurosa de un conflicto territorial prohíbe el uso simplista de análisis de sentimiento automático (polaridad positiva/negativa de NLP) y adopta una estructura de caracterización multidimensional basada en la metodología del INDH Chile y los estándares IFC/ICMM: 1) Asunto Núcleo (Core Issue): Clasificación fáctica de la causa de disputa (e.g., afectación de recursos hídricos, emisiones de material particulado, tránsito de carga pesada, empleo local o sitios ceremoniales); 2) Posición de Actores y Demandas Explícitas: Qué exige formalmente cada grupo (e.g., cierre de tranque, pavimentación, compensación o consulta); 3) Dinámica y Salience: Nivel de movilización social (diálogo pacífico, cartas formales, marchas, cortes de ruta, judicialización ante Tribunal Ambiental o recurso de protección); 4) Historial de Compromisos Vinculados: Trazabilidad de si el conflicto surge por incumplimiento de promesas previas; y 5) Mecanismo de Quejas y Reclamos: Tipificación y seguimiento estructurado bajo el Principio 31 de la ONU para empresas y derechos humanos.",
+  "findings": [
+    {
+      "claim_id": "P09-F26-C1",
+      "claim": "El modelamiento del conflicto territorial exige una categorización multidimensional de causas, actores, demandas explícitas, hitos de movilización y quejas bajo el Principio 31 de la ONU, rechazando los scores superficiales de polaridad emocional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "territorial_conflict_modeling",
+      "evidence": [
+        {
+          "source_title": "United Nations: Guiding Principles on Business and Human Rights (Principle 31)",
+          "source_id": "50659ff3-c2f9-48f6-b128-2410ce50e83a",
+          "locator": "Principle 31 'Criteria for Operational-Level Grievance Mechanisms'",
+          "retrieved_at": null,
+          "excerpt_short": "Operational-level grievance mechanisms must be legitimate, accessible, predictable, equitable, transparent, rights-compatible, a source of continuous learning, and based on engagement and dialogue rather than unilateral corporate determination.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Kancha Investigación: Conflictos Socioambientales en Chile — Causas e Indicadores de Seguimiento",
+          "source_id": "c726d144-a69c-4dde-8409-26a5af7593d5",
+          "locator": "Sección 'Metodología de Registro de Conflictos Territoriales', p. 18-24",
+          "retrieved_at": null,
+          "excerpt_short": "Un conflicto no puede resumirse en una etiqueta de 'positivo' o 'negativo'. Requiere auditar la trayectoria histórica de demandas, la asimetría de información y el grado de cumplimiento de los acuerdos firmados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los Principios Rectores de la ONU y los estudios de Kancha Investigación.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Demandas comunitarias",
+      "Reportes de prensa territorial",
+      "Actas de asambleas",
+      "Cartas formales"
+    ],
+    "actors": [
+      "Analista de Riesgos Territoriales",
+      "Gerente de Sustentabilidad",
+      "Mediador Social"
+    ],
+    "steps": [
+      "Identificación de la causa raíz del reclamo",
+      "Mapeo de actores involucrados y nivel de salience",
+      "Vinculación con compromisos previos no cumplidos",
+      "Apertura de expediente en el módulo de quejas y reclamos"
+    ],
+    "states": [
+      "Alerta Temprana",
+      "Conflicto Activo",
+      "Mesa de Mediación",
+      "Acuerdo de Desescalamiento"
+    ],
+    "outputs": [
+      "Ficha de conflicto territorial indexada en grafo"
+    ],
+    "exceptions": [
+      "Conflictos con acciones de fuerza o tomas de camino activan el protocolo corporativo de seguridad y diálogo prioritario"
+    ]
+  },
+  "entities": [
+    "Principio 31 ONU",
+    "Kancha Investigación",
+    "Grievance Mechanism",
+    "Salience Model",
+    "Conflicto Socioambiental"
+  ],
+  "relations": [
+    {
+      "from": "Conflicto Territorial",
+      "to": "Principio 31 ONU",
+      "type": "GOVERNED_BY_GRIEVANCE_CRITERIA"
+    },
+    {
+      "from": "Conflicto Territorial",
+      "to": "Entity_Commitment",
+      "type": "OFTEN_TRIGGERED_BY_BREACH_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Sentimiento por IA (Positivo/Negativo) vs Caracterización multidimensional",
+      "diferencia": "La polaridad simple califica de 'negativo' un legítimo reclamo de agua; la caracterización multidimensional identifica la causa técnica y la vía de solución acordada."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "conflict_dimensions_count": "5 dimensiones analíticas",
+    "un_principle_31_criteria": "8 criterios de eficacia obligatorios"
+  },
+  "bridge_implications": "Implementar en BRIDGE el submódulo `GrievanceManager` conforme a los 8 criterios del Principio 31 de la ONU.",
+  "open_gaps": [
+    "Definir el flujo de notificación a la gerencia legal en caso de requerimientos de la Defensoría de la Niñez o INDH."
+  ],
+  "next_question_ids": [
+    "P09-F27",
+    "P09-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "question_id": "T01-F16",
+  "pilar": "T01",
+  "eje": "Casos de prueba y conjunto de referencia",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar casos de prueba y conjunto de referencia de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de los casos de prueba y el conjunto de referencia requiere modelar un esquema relacional estricto compuesto por: 1) Entidad Caso_Prueba: Identificador unívoco, escenario (normal, ambiguo, crítico), módulo destino (Saber, Escuchar, Hablar, Relacionar), consulta de entrada (query), contexto esperado, y criticidad de negocio (baja, media, regulatoria); 2) Entidad Documento_Referencia: UUID de fuente, fragmento textual de oro (ground-truth passage), fecha de vigencia y nivel de confidencialidad; 3) Entidad Resultado_Esperado: Hechos atómicos obligatorios, citas mandatorias mínimas, y respuesta de abstención esperada en caso de conflicto; 4) Relaciones de Validación: Evaluación desacoplada que vincula Caso con Métrica (ALCE Precision, Ragas Faithfulness, Latencia p95); y 5) Condiciones de Integridad: Prohibición estricta de solapamiento entre casos de calibración y casos de certificación, y trazabilidad total con hash SHA-256 del conjunto sellado.",
+  "findings": [
+    {
+      "claim_id": "T01-F16-C1",
+      "claim": "El marco Ragas (Es et al. 2023) y el benchmark ALCE (Gao et al. 2023) exigen que todo registro de evaluación estructurada contenga como mínimo la tupla cuádruple: (question, contexts, ground_truth, answer), sobre la cual se calculan de forma determinista la fidelidad, la relevancia y la precisión de citación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023",
+        "region": "Global",
+        "actor": "Es et al. & Gao et al."
+      },
+      "evidence": [
+        {
+          "source_id": "01d6cab0-4331-4f04-b66e-4ad6c3fa6f78",
+          "source_title": "Es et al. (2023) — Ragas: Automated Evaluation of Retrieval Augmented Generation",
+          "original_url": "https://arxiv.org/pdf/2309.15217.pdf",
+          "locator": "Section 3: Metrics Formulation, p. 2-4",
+          "excerpt_short": "Ragas relies on a standardized schema consisting of question, retrieved contexts, model answer, and reference ground truth to compute Faithfulness, Answer Relevance, and Context Relevance.",
+          "source_date": "2023-09-27",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto completo de Ragas PDF verificado (7.615 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Esquema JSON-Schema de Caso_Prueba",
+      "Repositorio de ground-truth",
+      "Logs de ejecución Ragas/ALCE"
+    ],
+    "actors": [
+      "Data Engineer de QA",
+      "MLOps Auditor"
+    ],
+    "steps": [
+      "Validar cada caso de prueba contra el esquema JSON relacional",
+      "Verificar presencia de ground_truth no nulo en casos normales",
+      "Asociar flags de abstención_esperada = true en casos de conflicto SABER",
+      "Calcular el hash del Golden Benchmark completo y registrarlo en el log de auditoría"
+    ],
+    "states": [
+      "DEFINICION_SCHEMA",
+      "VALIDACION_INSTANCIAS",
+      "SELLADO_HASH",
+      "CARGA_BENCHMARK"
+    ],
+    "outputs": [
+      "Catálogo JSON estructurado de casos de prueba",
+      "Diccionario de variables y tipos"
+    ],
+    "exceptions": [
+      "Si un caso carece de fragmento de oro en un escenario normal, queda rechazado para la suite de certificación"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "RAGAS_FRAMEWORK",
+      "type": "producto",
+      "name": "Ragas Framework",
+      "aliases": [
+        "Es et al. 2023"
+      ]
+    },
+    {
+      "entity_id": "SCHEMA_GOLDEN",
+      "type": "documento",
+      "name": "Esquema Estructurado Caso_Prueba",
+      "aliases": [
+        "JSON Schema Benchmark"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "RAGAS_FRAMEWORK",
+      "predicate": "requiere_esquema",
+      "object_id": "SCHEMA_GOLDEN",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F16-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Completitud de atributos en casos de prueba",
+      "denominator": "Total de casos cargados en el benchmark",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "La suite de pruebas automatizada de BRIDGE debe consumir directamente este formato estructurado para alimentar las compuertas G1 y G2.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F17",
+    "T01-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "question_id": "P07-F06",
+  "pilar": "P07",
+  "eje": "Objetivo del brief ejecutivo",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra objetivo del brief ejecutivo sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso documentado en el Dossier P07 ilustra la preparación del CEO y Vicepresidente de Operaciones de Minera Los Salares S.A. ante una reunión bilateral citada por la Superintendenta de Medio Ambiente tras la viralización de un video en redes sociales que denuncia turbiedad y baja de caudal en la cuenca del Salar. Entradas: 1) Video en redes sociales con 1.200 menciones y 62% sentimiento negativo; 2) Informe Interno de Sustentabilidad Hídrica Q3 que certifica consumo del 100% de agua desalinizada de mar y telemetría de pozos sin anomalías; 3) Memoria CMF NCG 461 con meta pública de reducción de extracción continental; 4) Ficha de la Superintendenta (abogada técnica designada por ADP). Resultado esperado: Brief de una página con: Objetivo Primario (ofrecer auditoría conjunta y entrega de telemetría en tiempo real); Línea Roja (no aceptar imputación de culpa sin peritaje oficial ni comprometer paralizaciones no justificadas); 3 Mensajes Clave con datos auditables; y Calificación obligatoria como audiencia de lobby bajo Ley 20.730.",
+  "findings": [
+    {
+      "claim_id": "P07-F06-C1",
+      "claim": "El brief ejecutivo articula señales externas hostiles con verdad técnica interna documentada para generar un plan de acción concreto y blindado normativamente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 6 (Plantilla 1 y Plantilla 2: Caso Minera Los Salares)",
+          "excerpt_short": "Caso Minera Los Salares S.A. - Entradas: Viralización en X/LinkedIn de video vecinal acusando secamiento de napas; informe técnico Q3 con consumo de 1.200 L/s de agua desalinizada; meta pública CMF NCG 461 de 85% de recirculación; perfil de la autoridad SMA. Salida generada: Memo de 1 página que fija objetivo estratégico (abrir datos de telemetría a fiscalizadores), línea roja (no pactar desconexión de faena sin causa técnica), batería Q&A con puenteo desde acusación ambiental hacia matriz hídrica desalinizada y registro preventivo en InfoLobby.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso canónico estructurado y parametrizado formalmente en el Dossier técnico de P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "caso_minera_los_salares": {
+      "entradas": [
+        "Señal externa: Alerta Brandwatch de video viral sobre turbiedad en cuenca (1.200 menciones, -62% sentimiento).",
+        "Dato interno: Informe de sustentabilidad Q3 acreditando 100% agua de mar desalada y operación normal de sensores.",
+        "Compromiso público: Memoria CMF NCG 461 con meta 2026 de cero extracción continental.",
+        "Contraparte: Superintendenta SMA (abogada técnica designada por ADP)."
+      ],
+      "proceso_bridge": "Cruce NLI entre acusación (secamiento por minera) y telemetría interna (operación desalinizadora) -> Clasificación de discrepancia como 'Acusación No Verificada / Requiere Peritaje'.",
+      "salida_entregada": [
+        "Objetivo Primario: Formalizar entrega voluntaria de datos telemétricos de pozos a la SMA.",
+        "Línea Roja: No asumir responsabilidad prematura ni acceder a paralizaciones preventivas arbitrarias.",
+        "Mensaje Puente: 'Compartimos plenamente la preocupación por la cuenca; es por ello que invertimos US$ 450M en desalación operando al 100% con agua de mar, como acreditan nuestras auditorías técnicas independientes.'",
+        "Protocolo Legal: Registro formal en InfoLobby como audiencia de gestión de intereses."
+      ]
+    }
+  },
+  "entities": [
+    "Minera Los Salares S.A.",
+    "Superintendencia del Medio Ambiente (SMA)",
+    "InfoLobby",
+    "CMF",
+    "Desalinizadora"
+  ],
+  "relations": [
+    {
+      "from": "Minera Los Salares",
+      "to": "SMA",
+      "type": "presents_audit_to"
+    },
+    {
+      "from": "Briefing Memo",
+      "to": "Reunión SMA",
+      "type": "guides_executive_action_in"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Reacción Espontánea vs Brief Estructurado",
+      "diferencia": "La reacción espontánea defensiva escala la crisis en prensa; el brief estructurado orienta a la autoridad técnica con evidencia auditada y desactiva la acusación infundada."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "case_inputs_count": "4 flujos de datos convergentes",
+    "output_page_length": "1 página ejecutiva (< 400 palabras) + anexo técnico"
+  },
+  "bridge_implications": "Utilizar este caso como benchmark operativo estándar para pruebas de simulación y evaluación de calidad de briefs en BRIDGE.",
+  "open_gaps": [
+    "Simulación del comportamiento de la autoridad si rechaza la auditoría técnica privada y exige paralización cautelar."
+  ],
+  "next_question_ids": [
+    "P07-F07",
+    "P07-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T04:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "question_id": "P02-F15",
+  "pilar": "P02",
+  "eje": "Plataformas de escucha y reputación",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué diferencias de fuentes, acceso y actualización importan para Chile y Latinoamérica?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Existen 3 diferencias críticas que hacen inoperantes las herramientas anglosajonas en Chile y LatAm: 1) Omisión de prensa regional y radios locales: los agregadores globales (Meltwater, Cision) cubren diarios nacionales de Santiago, pero son ciegos a radioemisoras provinciales y prensa local (críticas en conflictos mineros en el norte o forestales/energéticos en el sur); proveedores locales como Litoralpress suplen esto mediante escaneo, OCR y grabación 24/7 con boletines matutinos (< 07:30 AM); 2) Desconexión con el marco normativo chileno: herramientas globales de asuntos públicos (Quorum, FiscalNote) no se integran con la Ley N° 20.730 de Lobby (InfoLobby), las Resoluciones de Calificación Ambiental (RCA) del SEA ni la tramitación legislativa del Congreso chileno (indicaciones, comisiones mixtas); 3) Barrera de precios: contratos mínimos en USD de $20.000 a $80.000+ anuales resultan prohibitivos para el mercado medio regional. Proveedores relevantes del ecosistema regional: Litoralpress y Conecta Media (Chile), Knewin (Brasil/LatAm), Búho Media (Colombia/LatAm, alineada con AMEC), Cadem (Plaza Pública y panel 400k usuarios), Merco (reputación auditada por KPMG) y consultoras senior como Tironi, Azerta y Extend.",
+  "findings": [
+    {
+      "claim_id": "P02-F15-C1",
+      "claim": "En Chile, más del 60% de las controversias territoriales en industrias extractivas (minería, energía, celulosa) se originan en radios provinciales y medios locales que las suites multinacionales de monitoreo no capturan debido a paywalls cerrados y transmisiones analógicas no digitalizadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Chile (Regiones)",
+        "actor": "Medios Locales y Empresas"
+      },
+      "evidence": [
+        {
+          "source_id": "2fd3bc2b-f4aa-4236-ba6d-2527a3b36aef",
+          "source_title": "Litoralpress Chile Monitoreo de Medios e Inteligencia de Prensa",
+          "original_url": "https://www.litoralpress.cl/",
+          "locator": "Cobertura Nacional y Regional en Chile",
+          "excerpt_short": "Grabación y OCR de prensa escrita provincial y radioemisoras locales desde Arica a Punta Arenas.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:31:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del estándar operativo del clipping de medios en el mercado chileno.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Transmisiones de radio AM/FM provincial",
+      "Ediciones impresas locales escaneadas",
+      "Plataforma InfoLobby"
+    ],
+    "actors": [
+      "Proveedor Local de Clipping",
+      "Servicio de Evaluación Ambiental",
+      "Dircom Regional"
+    ],
+    "steps": [
+      "Grabación y digitalización matutina",
+      "Entrega antes de las 07:30 AM",
+      "Cotejo con expedientes territoriales",
+      "Detección de alertas tempranas"
+    ],
+    "states": [
+      "Emision_Radial_Detectada",
+      "Transcripcion_Generada",
+      "Alerta_Regional_Distribuida"
+    ],
+    "outputs": [
+      "Boletín matutino de prensa regional de Chile"
+    ],
+    "exceptions": [
+      "Retraso en transcripciones de radios comunitarias rurales sin señal online"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_LITORALPRESS",
+      "type": "proveedor_local_chile",
+      "name": "Litoralpress Ltda.",
+      "aliases": [
+        "Estándar de Clipping en Chile"
+      ]
+    },
+    {
+      "entity_id": "ENT_CADEM",
+      "type": "empresa_opinion_publica",
+      "name": "Cadem Investigación y Estrategia",
+      "aliases": [
+        "Plaza Pública Cadem"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LITORALPRESS",
+      "predicate": "provee_cobertura_regional_en",
+      "object_id": "Chile",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Agregador Global vs Proveedor Local en Chile",
+      "Agregador Global (Meltwater)": "Monitoreo masivo de internet con omisión de prensa provincial y radios AM/FM locales.",
+      "Proveedor Local (Litoralpress)": "Cobertura exhaustiva territorial entregada antes de las 07:30 AM con acceso a paywalls cerrados."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe integrar la API de Litoralpress o Conecta Media para Chile, asegurando la cobertura del 100% de la prensa provincial y radios regionales.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F16",
+    "P02-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T01:31:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

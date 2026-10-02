@@ -1,0 +1,171 @@
+{
+  "question_id": "P11-F21",
+  "pilar": "P11",
+  "eje": "Ciclo de vida y retención",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Cómo se ejecuta una revocación sin dejar copias en resultados o registros?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La revocación o supresión de un documento (o el ejercicio del 'derecho al olvido' / supresión bajo Ley 21.719 / GDPR Art. 17) sin dejar copias residuales en resultados o memorias de IA se ejecuta mediante un protocolo de purga coordinada en 5 pasos síncronos: 1) Destrucción de la Clave de Cifrado del Documento (Crypto-shredding a nivel de Objeto): Destrucción irreversible de la Data Encryption Key (DEK) específica del documento en KMS, convirtiendo todos los bloques de almacenamiento persistente en ruido irrecuperable; 2) Purgado Síncrono de Vectores en Qdrant: Ejecución de `delete_points` con filtro estricto por `document_id` y `tenant_id`, acompañada de una invocación forzada de optimización de índices para purgar vectores huérfanos del grafo HNSW; 3) Purga de Caché Semántica y Memoria de Sesión: Invocación de `UNLINK` en Redis sobre todas las claves con prefijo del documento y de sesiones vinculadas, impidiendo respuestas desde memoria intermedia; 4) Inserción de Registro Tombstone Histórico: El puntero del documento se reemplaza por una tupla Tombstone que contiene únicamente su ID, fecha de supresión y motivo legal, sin contenido textual alguno; y 5) Comprobación Post-Purga (Adversarial Post-Erasure Verification): Ejecución de 100 consultas semánticas adversariales para certificar que el modelo retorne recall de 0.0% y emisión de certificado criptográfico de eliminación.",
+  "findings": [
+    {
+      "claim_id": "P11-F21-C1",
+      "claim": "La supresión total sin copias residuales exige crypto-shredding de la DEK en KMS, purgado síncrono de vectores en Qdrant, eliminación de caché en Redis, marcado de tombstone y prueba adversarial de recall cero conforme a NIST SP 800-88 r2.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "residual_free_erasure_protocol",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 4.2 'Protocolo de Purga Coordinada de 5 Pasos'",
+          "retrieved_at": null,
+          "excerpt_short": "Purga coordinada: 1. Destrucción de DEK en KMS; 2. Purgado en Qdrant (delete_points por document_id); 3. UNLINK en Redis; 4. Inserción de Tombstone inmutable; 5. Test adversarial con recall 0.0%.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization",
+          "source_id": "eeffc975-0a8f-470f-80c9-13435bf0efd8",
+          "locator": "Section 4.7 'Verification of Sanitization'",
+          "retrieved_at": null,
+          "excerpt_short": "Testing a representative sample of media to verify that data cannot be retrieved is an essential component of an effective sanitization process.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "EUR-Lex: Regulation (EU) 2016/679 General Data Protection Regulation (GDPR)",
+          "source_id": "a1653205-5048-4f9b-8b23-40d4908de893",
+          "locator": "Article 17 'Right to Erasure (Right to be Forgotten)'",
+          "retrieved_at": null,
+          "excerpt_short": "The controller shall have the obligation to erase personal data without undue delay where the personal data are no longer necessary in relation to the purposes for which they were collected.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los requerimientos de verificación de sanitización NIST SP 800-88 r2, los principios de supresión de GDPR / Ley 21.719 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud formal de revocación o derecho al olvido",
+      "Documento ID",
+      "Contexto de autenticación"
+    ],
+    "actors": [
+      "Data Owner",
+      "Oficial DPO",
+      "Orquestador de Purga BRIDGE",
+      "KMS",
+      "Qdrant",
+      "Redis"
+    ],
+    "steps": [
+      "Validación de la admisibilidad de la solicitud de supresión",
+      "Comprobación de ausencia de orden de Legal Hold sobre el activo",
+      "Destrucción de la DEK en el servicio KMS",
+      "Borrado de puntos vectoriales en Qdrant mediante llamada API de baja latencia",
+      "Eliminación de entradas en caché Redis",
+      "Conversión del registro a Tombstone histórico",
+      "Ejecución de test adversarial comprobando 0% de recuperación en RAG",
+      "Emisión de certificado criptográfico de eliminación firmado digitalmente"
+    ],
+    "states": [
+      "PURGE_REQUESTED",
+      "DEK_DESTROYED",
+      "VECTORS_PURGED",
+      "CACHE_CLEARED",
+      "TOMBSTONE_COMMITTED",
+      "RECALL_ZERO_VERIFIED"
+    ],
+    "outputs": [
+      "Certificado de sanitización y eliminación definitiva"
+    ],
+    "exceptions": [
+      "Si el documento se encuentra bajo Legal Hold judicial, la purga se congela y se notifica formalmente al solicitante"
+    ]
+  },
+  "entities": [
+    "Derecho al Olvido",
+    "NIST SP 800-88 r2",
+    "Qdrant Vector Purge",
+    "Tombstone Record",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Solicitud de Supresión",
+      "to": "Orquestador de Purga",
+      "type": "TRIGGERS_5_STEP_PROTOCOL"
+    },
+    {
+      "from": "DEK",
+      "to": "KMS",
+      "type": "IRREVERSIBLY_DESTROYED_IN"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Borrado superficial de archivo en disco vs Protocolo de purga en 5 pasos",
+      "diferencia": "El borrado superficial mantiene vectores en memoria y cachés que siguen alimentando al LLM; el protocolo en 5 pasos destruye la llave, purga vectores y limpia la memoria intermedia por completo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "post_purge_adversarial_recall": "0.0% de datos recuperados en pruebas semánticas post-eliminación",
+    "full_purge_execution_time_seconds": "< 15 segundos para completar los 5 pasos de purga coordinada"
+  },
+  "bridge_implications": "Permite a BRIDGE responder con garantías técnicas absolutas a solicitudes de supresión de datos personales o eliminación de material confidencial de clientes.",
+  "open_gaps": [
+    "Automatización de certificados de purga con firma de Autoridad de Certificación acreditada en Chile."
+  ],
+  "next_question_ids": [
+    "P11-F22",
+    "P11-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

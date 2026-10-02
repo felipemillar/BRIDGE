@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X05",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Adquisiciones y estructura de grupos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre adquisiciones y estructura de grupos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos están respaldados por fuentes regulatorias primarias y documentos del cuaderno P02: 1) FGS Global y KKR: respaldado por SEC Form 6-K filing 'a5017o.htm' presentado por WPP plc ante la Securities and Exchange Commission de EE. UU. con fecha efectiva 3 de diciembre de 2024, certificando la venta del control mayoritario a fondos de KKR; 2) Burson y Limbik: respaldado por el comunicado oficial corporativo de Burson Global del 12 de agosto de 2026 anunciando la adquisición de Limbik para Burson Decipher; 3) Signal AI y Memo: respaldado por el anuncio formal de adquisición de Memo por Signal AI del 20 de abril de 2026; 4) Hootsuite y Talkwalker: respaldado por el informe de adquisición corporativa de Hootsuite de abril de 2024; 5) Cision y Brandwatch: respaldado por el reporte de cierre de adquisición de Cision Ltd. del 1 de junio de 2021; 6) Errata oficial: '00_P02_GLOBAL_READ_ME_AND_ERRATA', que rige sobre las fechas y filiaciones canónicas.",
+  "findings": [
+    {
+      "claim_id": "P02-X05-C1",
+      "claim": "El respaldo documental del eje de adquisiciones proviene directamente de filings oficiales de la SEC y notas de prensa primarias de cierre de las empresas adquirentes.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Fuentes primarias de M&A"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Errata 2: Primary Sources for Corporate Transactions",
+          "excerpt_short": "Cites SEC Form 6-K filing a5017o.htm (Dec 3, 2024) for WPP/KKR transaction, along with verified corporate closing releases.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:48:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Máximo nivel probatorio mediante documentos regulatorios obligatorios presentados ante la SEC.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Citas regulatorias de la SEC",
+      "Repositorio de notas de prensa corporativas",
+      "Manifiesto de fuentes fuentes/P02.json"
+    ],
+    "actors": [
+      "Auditor de Evidencia",
+      "Investigador Senior"
+    ],
+    "steps": [
+      "Comprobación de números de filing SEC",
+      "Validación cruzada de fechas de publicación",
+      "Confirmación de coincidencia de extractos"
+    ],
+    "states": [
+      "Fuentes_Consultadas",
+      "Citas_Verificadas",
+      "Trazabilidad_Cerrada"
+    ],
+    "outputs": [
+      "Registro de evidencia primaria para el eje de M&A"
+    ],
+    "exceptions": [
+      "Notas de prensa eliminadas de webs que se conservan en repositorios web archivados"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SEC_FORM_6K",
+      "type": "filing_regulatorio",
+      "name": "SEC Form 6-K a5017o.htm (WPP plc)",
+      "aliases": [
+        "WPP SEC Filing"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SEC_FORM_6K",
+      "predicate": "certifica_venta_de_fgs_a",
+      "object_id": "KKR_Kite_Bidco",
+      "valid_from": "2024-12-03",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X05-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Filing Oficial ante Regulador (SEC) vs Nota en Blog de Marketing",
+      "Filing Oficial ante Regulador": "Documento legal bajo juramento con responsabilidad penal por falsedad documental.",
+      "Nota en Blog": "Texto publicitario que frecuentemente distorsiona fechas, montos y naturaleza de los acuerdos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "La rigurosidad en las fuentes primarias confiere autoridad científica a las conclusiones de mercado de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:48:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

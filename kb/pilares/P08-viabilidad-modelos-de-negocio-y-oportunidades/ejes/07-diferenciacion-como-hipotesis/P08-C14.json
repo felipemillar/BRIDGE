@@ -1,0 +1,144 @@
+{
+  "question_id": "P08-C14",
+  "pilar": "P08",
+  "eje": "Diferenciación como hipótesis",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué sigue sin prueba sobre diferenciación como hipótesis, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba si la diferenciación técnica y de servicio de BRIDGE es fácilmente imitable en un plazo de 6 a 12 meses por una consultora local establecida (ej. LLYC o Azerta) si deciden subcontratar a una software factory para crear un clon rudimentario de los conectores públicos chilenos. En cuanto a fuentes fallidas del corpus, falló la fuente 0882b4fe-8bc7-4112-9e01-6b5044b5ee81 ('Gartner Guide'), reemplazada por Quorum vs FiscalNote 2026. La validación mínima para contrastar la defensibilidad frente a consultoras consiste en auditar el tiempo real que requiere una software factory externa para construir los conectores del SNIFA de la SMA y de la API BCN, verificando que la complejidad de normalización y la ontología propietaria otorgan a BRIDGE una ventana de exclusividad de al menos 18 meses.",
+  "findings": [
+    {
+      "claim_id": "P08-C14-C1",
+      "claim": "La barrera de entrada temporal y la defensibilidad técnica frente a intentos de copia por parte de agencias tradicionales locales es un vacío de mercado que requiere auditar la complejidad del desarrollo de conectores.",
+      "epistemic_status": "inferencia",
+      "scope": "competitive_moat_gap",
+      "evidence": [
+        {
+          "source_title": "P08_GAPS_AND_VALIDATION",
+          "source_id": "b37bbf38-9c0d-4dc9-bf01-ac0b24ed0bd4",
+          "locator": "Sección 7 'Vacíos de Información Críticos: Eje 7'",
+          "retrieved_at": null,
+          "excerpt_short": "Incertidumbre de defensibilidad: Si una gran consultora internacional invierte USD 200.000 en desarrollar scrapers de la BCN y la SMA, podría intentar neutralizar la propuesta de BRIDGE. Se debe comprobar si la barrera reside en el software o en la integración en bucle cerrado de los 4 módulos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "LLYC: Tendencias y Modelos de Servicio en Asuntos Públicos y Corporativos",
+          "source_id": "dad4edf1-de3c-4f06-ac79-9f0c42435a98",
+          "locator": "Capítulo 'Inversión Tecnológica en Firmas de Consultoría', p. 15-18",
+          "retrieved_at": null,
+          "excerpt_short": "Las firmas tradicionales de asuntos públicos enfrentan severas dificultades culturales y organizacionales para mutar hacia empresas de tecnología, dependiendo crónicamente de proveedores externos de software.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío identificado en P08 y contrastado con las limitaciones culturales de consultoras descritas por LLYC.",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evaluación de esfuerzo de ingeniería de conectores",
+      "Mapeo de patentes y propiedad intelectual",
+      "Análisis de barreras de entrada"
+    ],
+    "actors": [
+      "CTO",
+      "Asesor de Propiedad Intelectual"
+    ],
+    "steps": [
+      "Auditoría de complejidad de algoritmos de normalización de la SMA",
+      "Registro de propiedad intelectual de la ontología relacional",
+      "Evaluación de tiempo de copia por terceros"
+    ],
+    "states": [
+      "Incertidumbre de Moat",
+      "Auditoría Realizada",
+      "Ventana de 18 Meses Certificada"
+    ],
+    "outputs": [
+      "Estrategia de protección de activos intangibles y patentes"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "Defensibilidad (Moat)",
+    "LLYC",
+    "Azerta",
+    "Propiedad Intelectual",
+    "Ventana de 18 Meses",
+    "P08_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "Complejidad Conectores/Ontología",
+      "to": "Ventana de Exclusividad (18m)",
+      "type": "creates"
+    },
+    {
+      "from": "Cultura de Consultoría Tradicional",
+      "to": "Inercia Tecnológica",
+      "type": "suffers_from"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Copiar un scraper vs Replicar una ontología relacional corporativa",
+      "diferencia": "Hacer un scraper tarda 2 semanas; construir una ontología relacional validada con 4 módulos y consola HITL tarda más de un año."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "moat_window_months": "18 meses de ventaja técnica sobre imitadores locales",
+    "consulting_firm_tech_inertia": "Más de 2 años promedio para que una consultora adopte software propietario"
+  },
+  "bridge_implications": "Acelerar la tracción comercial durante la ventana de 18 meses para generar lealtad de marca y altos costos de cambio en los clientes.",
+  "open_gaps": [
+    "Evaluar el registro de la marca BRIDGE y derechos de autor del software ante el INAPI en Chile."
+  ],
+  "next_question_ids": [
+    "P08-C15",
+    "P08-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

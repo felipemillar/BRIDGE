@@ -1,0 +1,176 @@
+{
+  "question_id": "P01-F36",
+  "pilar": "P01",
+  "eje": "Resultados y retorno de valor",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra resultados y retorno de valor sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso de preparación ejecutiva para una Audiencia de Ley de Lobby (Ley N° 20.730) ante una Autoridad Sectorial e Inversionistas Comunitarios en minería/industria en Chile ilustra el tema: con entradas de repositorios internos seguros (Memoria CMF NCG 461, actas previas de InfoLobby, RCA y convenios territoriales) cruzadas con señales dinámicas de prensa y proyectos legislativos, un motor analítico en VPC privada genera un Briefing Book en 15 minutos (ahorrando el 80% de tiempo de búsqueda); el resultado esperado verifica 100% de coherencia discursiva, cero sanciones de probidad y costo evitado de parálisis de faena estimada en millones de dólares.",
+  "findings": [
+    {
+      "claim_id": "P01-F36-C1",
+      "claim": "En una audiencia de lobby y relacionamiento comunitario en Chile, las entradas combinan repositorios privados seguros (Memoria CMF NCG 461, actas anteriores de InfoLobby, RCA y acuerdos territoriales) con señales dinámicas de prensa y seguimiento legislativo en tiempo real.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Empresa Minera / Industrial"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Caso Concreto de Retorno de Valor en Minería/Industria",
+          "excerpt_short": "Entradas del caso: Repositorio privado (NCG 461, InfoLobby, RCA) cruzado con prensa y proyectos legislativos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:56:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso práctico detallado en el dossier P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F36-C2",
+      "claim": "El retorno esperado y verificable se materializa en tres dimensiones: 1) retorno en tiempo (briefing de 4 horas a 15 minutos); 2) costo evitado (cero sanciones CMF/Lobby y protección de continuidad operacional de faenas); y 3) retorno reputacional (100% consistencia de relato corporativo protegiendo la Licencia Social).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "C-Suite y Asuntos Públicos"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Resultados Verificables y ROI del Caso",
+          "excerpt_short": "Resultados verificables: ahorro de tiempo (15 min), costo evitado en litigios/parálisis y retorno reputacional 100% coherente.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:56:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación de métricas y retorno verificable en el dossier.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Memoria CMF NCG 461",
+      "RCA ambiental",
+      "Historial InfoLobby",
+      "Prensa y proyectos de ley"
+    ],
+    "actors": [
+      "Gerente de Asuntos Públicos",
+      "CCO",
+      "Gerente General (CEO)",
+      "Fiscal Legal"
+    ],
+    "steps": [
+      "Ingesta en entorno VPC privado",
+      "Generación de Briefing Book con citas directas en 15 minutos",
+      "Validación de consistencia por Legal y CCO",
+      "Comparecencia en audiencia de lobby",
+      "Registro en InfoLobby y auditoría de coherencia fáctica"
+    ],
+    "states": [
+      "Datos_Ingresados",
+      "Briefing_Generado_15min",
+      "Legal_Visado",
+      "Audiencia_Completada",
+      "Coherencia_100%_Certificada"
+    ],
+    "outputs": [
+      "Briefing ejecutivo trazable",
+      "Registro formal InfoLobby sin inconsistencias",
+      "Evaluación de costos evitados"
+    ],
+    "exceptions": [
+      "Falla de sincronización entre el texto de la RCA y la memoria CMF"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_ROI_MINERO",
+      "type": "caso_estudio",
+      "name": "Caso Práctico de Retorno de Valor en Sector Minero",
+      "aliases": [
+        "Caso de Éxito P01 ROI"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_ROI_MINERO",
+      "predicate": "evidencia_retorno_de",
+      "object_id": "ENT_MODELO_VALOR_P01",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F36-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Actuar",
+      "implication": "Desplegar el caso de estudio de retorno de valor como benchmark operativo para las demostraciones a C-Suite en Chile.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F37",
+    "P01-F38"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:56:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

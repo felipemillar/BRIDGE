@@ -1,0 +1,172 @@
+{
+  "question_id": "P01-F46",
+  "pilar": "P01",
+  "eje": "Descubrimiento y validación de usuarios",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar descubrimiento y validación de usuarios de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del descubrimiento de clientes se define por: variables de validación de las 3 hipótesis de trabajo (HT-1 tasa de coherencia narrativa interna vs externa; HT-2 cronometraje exacto de briefings y tasa de citas sin alucinaciones; y HT-3 tasa de aprobación/rechazo B2B en auditorías CISO/Legal); 3 categorías de personas B2B (User, Buyer, Approver); relaciones de veto técnico y legal; y 3 condiciones de salida de etapa (Stage Gates) que exigen validar JTBD con 15 CCOs (Gate 1), cronometrar reducción a <15 min (Gate 2) y lograr aprobación trilateral en VPC (Gate 3).",
+  "findings": [
+    {
+      "claim_id": "P01-F46-C1",
+      "claim": "Las variables de validación operacionalizan las tres hipótesis de trabajo: HT-1 mide la tasa de coherencia narrativa y número de contradicciones con archivos internos; HT-2 cronometra el tiempo de elaboración de briefings y la tasa de citas verificables; y HT-3 mide el índice de aprobación en auditorías de ciberseguridad.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Diseño Experimental B2B"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1: Variables de Validación de Hipótesis HT-1 a HT-3",
+          "excerpt_short": "Operacionalización de variables de validación: tasa de coherencia, cronometraje de briefings y aprobación técnica de ciberseguridad.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:06:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Protocolo de validación metodológico del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F46-C2",
+      "claim": "Los tres stage gates del plan imponen hitos estrictos de salida: Gate 1 (validación de JTBD con 15 directores de comunicación), Gate 2 (demostración cuantitativa de reducción a menos de 15 minutos en shadowing) y Gate 3 (aprobación formal del panel trilateral CCO-CISO-Fiscal Legal en entorno VPC).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Comité de Validación B2B"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1: Stage Gates y Criterios de Aprobación",
+          "excerpt_short": "Tres stage gates: Gate 1 exploración cualitativa, Gate 2 medición cuantitativa y Gate 3 validación trilateral B2B en VPC.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:06:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier metodológico del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Protocolos de entrevistas cualitativas",
+      "Métricas de cronometraje en shadowing",
+      "Requisitos de seguridad ISO/SOC2"
+    ],
+    "actors": [
+      "Equipo de Investigación",
+      "CCO Evaluador",
+      "CISO Evaluador",
+      "Fiscal Legal"
+    ],
+    "steps": [
+      "Verificación de Gate 1",
+      "Medición de tiempos en Gate 2",
+      "Prueba de concepto en Gate 3",
+      "Dictamen de viabilidad comercial"
+    ],
+    "states": [
+      "Gate1_En_Curso",
+      "Gate1_Aprobado",
+      "Gate2_Aprobado",
+      "Gate3_Validado"
+    ],
+    "outputs": [
+      "Informe de cumplimiento de Stage Gates",
+      "Matriz de viabilidad de adopción B2B"
+    ],
+    "exceptions": [
+      "Veto de seguridad en Gate 3 que obliga a rediseñar el enclave de encriptación"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_STAGE_GATES_P01",
+      "type": "marco_gestion",
+      "name": "Stage Gates de Validación B2B P01",
+      "aliases": [
+        "Compuertas de Salida de Validación"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_STAGE_GATES_P01",
+      "predicate": "condiciona_paso_a",
+      "object_id": "Despliegue_Comercial",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F46-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gobernanza",
+      "implication": "Implementar el esquema de Stage Gates como protocolo de despliegue progresivo de BRIDGE en cada cliente corporativo.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F47",
+    "P01-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:06:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

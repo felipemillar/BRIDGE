@@ -1,0 +1,140 @@
+{
+  "question_id": "P05-F41",
+  "pilar": "P05",
+  "eje": "Doble materialidad y regulación",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre doble materialidad y regulación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos documentados sobre doble materialidad y regulación se respaldan en cuatro fuentes primarias normativas y técnicas: 1) EFRAG ESRS Implementation Guidance 1 (IG 1) Materiality Assessment (2024, European Financial Reporting Advisory Group, ámbito: regulación europea y directiva CSRD): respalda la definición formal de materialidad de impacto y financiera y la regla disyuntiva de inclusión; 2) CMF Chile: Norma de Carácter General NCG N° 461 (2021/2025, Comisión para el Mercado Financiero, ámbito: mercado de valores chileno): respalda la obligación legal de reportar gobernanza, riesgos ESG y sostenibilidad integrada en la memoria anual de sociedades supervisadas; 3) Global Reporting Initiative: GRI 3 Material Topics (2021, Global Sustainability Standards Board, ámbito: divulgación global de sostenibilidad): respalda el proceso estructurado de priorización de temas basado en impactos significativos en la economía, medio ambiente y personas; y 4) P05_RESEARCH_DOSSIER (2026, Sección 4.3: Doble Materialidad y P05_EVIDENCE_MAP Eje 5): respaldan la conceptualización del punto ciego corporativo tradicional y la transmutación de externalidades no financieras en riesgos financieros.",
+  "findings": [
+    {
+      "claim_id": "P05-F41-C1",
+      "claim": "Los estándares de doble materialidad constituyen marcos formales promulgados por autoridades de supervisión financiera y organismos de estandarización internacional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Chile / Europa / Global",
+        "actor": "EFRAG / CMF / GRI"
+      },
+      "evidence": [
+        {
+          "source_id": "af6a94f4-36c8-4b11-bfe3-dda44c8c816f",
+          "source_title": "GRI Standards: GRI 3 Material Topics 2021 & Foundation Standards",
+          "original_url": "https://www.globalreporting.org/standards/",
+          "locator": "Estándar GRI 3: Temas Materiales 2021",
+          "excerpt_short": "Establece el procedimiento paso a paso para identificar y evaluar los impactos de la organización y determinar cuáles son materiales.",
+          "source_date": "2021-10-05",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "11ce6bf4-9dcf-4933-bf0b-d6a7579da3ac",
+          "source_title": "CMF Chile: Norma de Carácter General NCG 461 (Gobierno Corporativo y ESG)",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Resolución Exenta CMF N° 461, Anexos Técnicos",
+          "excerpt_short": "Guía obligatoria de reporte de temas materiales de sostenibilidad alineada con recomendaciones del SASB y GRI.",
+          "source_date": "2021-11-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual directa en los textos normativos oficiales vigentes.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Estándares GRI 3 oficiales",
+      "Compendio normativo de la CMF",
+      "Guías técnicas de EFRAG"
+    ],
+    "actors": [
+      "Curador Regulatorio",
+      "Auditor de Información ESG"
+    ],
+    "steps": [
+      "Verificación de concordancia entre resoluciones CMF y estándares GRI/ESRS",
+      "Extracción de articulados y tablas de reporte",
+      "Almacenamiento en repositorio de normativas de P05"
+    ],
+    "states": [
+      "Norms_Verified",
+      "Crosswalk_Established",
+      "Repository_Frozen"
+    ],
+    "outputs": [
+      "Tabla de correlación normativa de doble materialidad"
+    ],
+    "exceptions": [
+      "Modificaciones normativas periódicas emitidas mediante circulares de la CMF"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_REGULATORY_CORPUS_P05",
+      "type": "corpus_fuentes",
+      "name": "Corpus Regulatorio de Doble Materialidad",
+      "aliases": [
+        "ESG Regulatory Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_REGULATORY_CORPUS_P05",
+      "predicate": "respalda_estandar_de",
+      "object_id": "ENT_MATERIALITY_SCHEMA",
+      "valid_from": "2021",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F41-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gestor Normativo",
+      "implication": "BRIDGE debe permitir exportar las tablas de temas materiales mapeadas contra los códigos exactos de la CMF NCG 461 y GRI 3.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

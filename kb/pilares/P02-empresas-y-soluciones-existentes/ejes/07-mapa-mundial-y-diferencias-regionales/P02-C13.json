@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-C13",
+  "pilar": "P02",
+  "eje": "Mapa mundial y diferencias regionales",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre mapa mundial y diferencias regionales, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan radicalmente sobre la veracidad de la cobertura territorial de los proveedores multinacionales en América Latina: 1) Discrepancia: Fichas comerciales de vendors globales (Meltwater, Cision, Brandwatch, Talkwalker) promocionan en sus mapas mundiales 'cobertura omnicanal completa en Chile, Colombia, Perú y toda Latinoamérica'; síntesis internas preliminares aceptaban acríticamente esta declaración; 2) Versión que prevalece: Rige 'P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1' y la evidencia técnica de 'Litoralpress Media Intelligence': los agregadores globales carecen de antenas RF y convenios de captura para las más de 200 radioemisoras locales de provincias en Chile y la prensa impresa comunal, cubriendo únicamente sitios web nacionales indexados. Prevalece la conclusión de que la cobertura global declarada es una ilusión de marketing frente a la verdad de terreno regional, requiriendo proveedores locales especializados para la gestión operativa real.",
+  "findings": [
+    {
+      "claim_id": "P02-C13-C1",
+      "claim": "La auditoría regional demuestra que las plataformas de listening multinacionales carecen de captura efectiva sobre el 90% de las radioemisoras provinciales de América Latina, invalidando sus afirmaciones comerciales de cobertura exhaustiva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "América Latina / Chile",
+        "actor": "Meltwater, Cision, Litoralpress"
+      },
+      "evidence": [
+        {
+          "source_id": "5556e455-7c2c-458c-bcad-e0910d9ccc4e",
+          "source_title": "P02_GLOBAL_REGIONAL_AND_INTEGRATED_ADDENDUM_V1",
+          "original_url": null,
+          "locator": "Regional Media Discrepancy Audit",
+          "excerpt_short": "Global vendors overstate regional coverage; field audits confirm near-total absence of provincial FM/AM radio monitoring in Chile and the Andean region.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:46:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación técnica de infraestructura de ingesta de Litoralpress vs feeds globales.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de medios declarados por suites globales",
+      "Inventario real de concesiones de radiodifusión Subtel Chile",
+      "Logs de captura efectiva"
+    ],
+    "actors": [
+      "Auditor de Cobertura Regional",
+      "Ingeniero de Telecomunicaciones"
+    ],
+    "steps": [
+      "Cruce de bases de datos de emisoras concesionadas vs indexadas",
+      "Identificación del porcentaje de omisión de broadcast regional",
+      "Publicación de brecha territorial"
+    ],
+    "states": [
+      "Censo_Concesiones_Reunido",
+      "Cruce_Ejecutado",
+      "Brecha_Documentada"
+    ],
+    "outputs": [
+      "Matriz de verdad territorial de cobertura de medios en Chile"
+    ],
+    "exceptions": [
+      "Radios locales con transmisiones intermitentes o enlaces de streaming caídos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SUBTEL_CHILE",
+      "type": "regulador_telecomunicaciones",
+      "name": "Subsecretaría de Telecomunicaciones de Chile",
+      "aliases": [
+        "Subtel"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_LITORALPRESS",
+      "predicate": "cubre_concesiones_radiales_de",
+      "object_id": "Subtel_Chile_16_Regiones",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Mapa Comercial Declarado vs Verdad de Terreno",
+      "Mapa Comercial Declarado": "Un mapamundi coloreado en azul prometiendo cobertura en 150 países.",
+      "Verdad de Terreno": "Ceguera absoluta ante la radio comunitaria de Petorca, Freirina o Calama que convoca a una marcha de regantes."
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "P02-CONT-04",
+      "description": "Discrepancia entre la cobertura declarada por vendors globales en América Latina y la cobertura real de medios locales verificada.",
+      "resolution": "Prevalece la auditoría de la adenda regional: los vendors globales presentan zonas de sombra masivas en radio y prensa comunal."
+    }
+  ],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe posicionarse en América Latina demostrando esta brecha fáctica de los competidores globales mediante auditorías de cobertura local.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-C14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:46:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "question_id": "P08-F32",
+  "pilar": "P08",
+  "eje": "Costos y economía unitaria",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué costos son observados, cotizados o supuestos y con qué sensibilidad?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus clasifica la certidumbre de los costos en tres categorías epistemológicas y evalúa su sensibilidad: 1) Costos Observados (Alta Certidumbre): Salarios de analistas de Michael Page Chile (CLP 3.2M a 4.2M/mes costo empresa); precios públicos de tokens de Google Vertex AI y Azure OpenAI (Gemini 1.5 Flash a $0.075/1M tokens entrada, Gemini 1.5 Pro a $1.25/1M tokens, GPT-4o a $2.50/1M tokens); y cotización base de base de datos Cloud SQL PostgreSQL (~$180/mes); 2) Costos Cotizados (Certidumbre Media): Licencias de Factiva Snapshots API (cotizadas entre USD 15.000 y USD 30.000 anuales según volumen de consultas); y 3) Costos Supuestos / Sensibles: Tasa de consultas complejas durante crisis (se modela un rango de 2 a 10 briefs diarios por cliente en contingencia) y el ratio analista/cliente (sensibilidad crítica: si el ratio cae de 1:4 a 1:2 por sobrecarga, el margen bruto se reduce en 18 puntos porcentuales; si sube a 1:6 con mejor tooling, el margen bruto supera el 80%).",
+  "findings": [
+    {
+      "claim_id": "P08-F32-C1",
+      "claim": "La variable de mayor sensibilidad en la rentabilidad de BRIDGE no es el precio del cómputo ni de los datos, sino el ratio de capacidad del analista humano (clientes por analista).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "cost_sensitivity_analysis",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 6.2 'Análisis de Sensibilidad de Costos y Clasificación Epistémica'",
+          "excerpt_short": "Matriz de sensibilidad financiera: La variación en las tarifas de los LLMs tiene un impacto insignificante en la rentabilidad (un aumento del 50% en los precios de Gemini o GPT solo altera el margen en un 1.2%). En contraste, la variable crítica es el ratio de apalancamiento del analista HITL: A 1 analista cada 2 clientes, el costo unitario del personal es de USD 1.800/mes (margen bruto del 56%); a 1 analista cada 4 clientes, el costo unitario baja a USD 900/mes (margen bruto del 74%); a 1 analista cada 6 clientes, el costo unitario es de USD 600/mes (margen bruto del 81%).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 7 'Validación de Supuestos Financieros'",
+          "excerpt_short": "El ratio base prudente para la planificación operativa inicial se fija en 1 analista por cada 4 clientes corporativos, garantizando holgura para contingencias sin degradar el margen del 70%.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Análisis de sensibilidad cuantitativo modelado en el dossier técnico de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tabla de precios de LLMs",
+      "Tarifario Factiva",
+      "Estudio de sueldos PageGroup",
+      "Simulación Monte Carlo"
+    ],
+    "actors": [
+      "Analista Financiero",
+      "VP de Operaciones",
+      "CEO"
+    ],
+    "steps": [
+      "Modelación de escenarios base, pesimista y optimista",
+      "Cálculo de elasticidad del margen bruto",
+      "Fijación de límites de capacidad de analistas"
+    ],
+    "states": [
+      "Escenarios Modelados",
+      "Sensibilidad Calculada",
+      "Punto Óptimo Fijado"
+    ],
+    "outputs": [
+      "Cuadro de sensibilidad financiera"
+    ],
+    "exceptions": [
+      "Alzas bruscas en el costo de APIs de datos de prensa que exijan renegociación de contrato anual"
+    ]
+  },
+  "entities": [
+    "Costos Observados",
+    "Costos Cotizados",
+    "Ratio Analista/Cliente",
+    "Sensibilidad de Margen",
+    "Monte Carlo"
+  ],
+  "relations": [
+    {
+      "from": "Ratio Analista/Cliente",
+      "to": "Margen Bruto de BRIDGE",
+      "type": "governs"
+    },
+    {
+      "from": "Precios de Tokens LLM",
+      "to": "Impacto Marginal (<1.5%)",
+      "type": "has_effect"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Sensibilidad de costo de cómputo vs Sensibilidad de costo laboral",
+      "diferencia": "Duplicar el cómputo apenas mueve el margen 2 puntos; duplicar la dotación de analistas por cliente reduce el margen en 18 puntos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "critical_sensitivity_variable": "Ratio de analistas HITL por cliente",
+    "base_operational_ratio": "1 analista senior por cada 4 clientes corporativos"
+  },
+  "bridge_implications": "Invertir en herramientas internas que automaticen la verificación de citas para que el analista pueda supervisar 4 a 5 clientes con facilidad.",
+  "open_gaps": [
+    "Monitorear si Factiva o Meltwater imponen cobros por volumen de tokens generados internamente."
+  ],
+  "next_question_ids": [
+    "P08-F33",
+    "P08-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

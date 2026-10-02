@@ -1,0 +1,262 @@
+{
+  "question_id": "P01-F11",
+  "pilar": "P01",
+  "eje": "Mapa de usuarios, compradores y aprobadores",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre mapa de usuarios, compradores y aprobadores?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El mapa está respaldado por encuestas gremiales de directivos (ECE 2025 de Dircom España: 53,6% reporte a CEO), marcos conceptuales globales (GCF de Global Alliance 2021; Page Society 2022/2023), consultoría estratégica de alta dirección (McKinsey 2025), marcos regulatorios chilenos vinculantes (Ley 20.730 de Lobby y NCG 461 de la CMF) y los dossiers de síntesis interna P01.",
+  "findings": [
+    {
+      "claim_id": "P01-F11-C1",
+      "claim": "El estudio ECE 2025 de Dircom España (campo Ene-Mar 2025, publicado Sep 2025) documenta que el 53,6% de los directores de comunicación reporta al máximo ejecutivo (CEO) y el 33% forma parte del comité de dirección.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025",
+        "region": "España",
+        "actor": "Dircom España"
+      },
+      "evidence": [
+        {
+          "source_id": "11566961-aace-42d0-bdcc-6b9171cecded",
+          "source_title": "Dircom - El Estado de la Comunicación en España (ECE 2025): Reporte al CEO y Comité Ejecutivo",
+          "original_url": "https://www.dircom.org/actualidad/mas-de-la-mitad-de-los-dircoms-en-espana-reporta-al-maximo-ejecutivo-de-su-organizacion/",
+          "locator": "Pasaje: Más de la mitad de los dircoms reportan al CEO (53,6%) y uno de cada tres está en el comité ejecutivo",
+          "excerpt_short": "53,6% reporta al CEO y uno de cada tres está en el comité ejecutivo.",
+          "source_date": "2025-09-25",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Encuesta empírica cuantitativa de la principal asociación gremial de comunicación de habla hispana.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F11-C2",
+      "claim": "McKinsey & Company (octubre 2025) concluye que a medida que la inteligencia recopilada por IA se convierte en un commodity, los equipos corporativos requieren conocimiento y criterio humano para contextualizar decisiones.",
+      "epistemic_status": "declaracion_proveedor",
+      "scope": {
+        "time": "2025-10",
+        "region": "Global",
+        "actor": "McKinsey & Company"
+      },
+      "evidence": [
+        {
+          "source_id": "b6f21f15-0ec9-4e85-b6ae-aca2f29e1ed1",
+          "source_title": "McKinsey & Company - Upgrading corporate affairs for a new geopolitical era",
+          "original_url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/upgrading-corporate-affairs-for-a-new-geopolitical-era",
+          "locator": "Sección: The human element in corporate affairs intelligence",
+          "excerpt_short": "...as AI-gathered intelligence becomes commoditized, teams need human knowledge and judgment to interpret strategic implications.",
+          "source_date": "2025-10-29",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Publicación de liderazgo de pensamiento de consultora estratégica global.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F11-C3",
+      "claim": "En Chile, la Ley N° 20.730 de Lobby (2014-2026) y la NCG 461 de la CMF (2021-2025) constituyen el marco regulatorio legal obligatorio que fija la responsabilidad fáctica sobre las declaraciones corporativas de sujetos pasivos y emisores de valores.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Chile",
+        "actor": "Congreso Nacional / CMF Chile"
+      },
+      "evidence": [
+        {
+          "source_id": "87978287-38ec-4b0f-bd60-e724e02362aa",
+          "source_title": "Biblioteca del Congreso Nacional de Chile - Ley N° 20.730 que Regula el Lobby y Gestiones de Intereses Particulares",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=1060115",
+          "locator": "Artículos 3°, 4° y 5°",
+          "excerpt_short": "Establece los sujetos pasivos y el registro público de audiencias y viajes.",
+          "source_date": "2026-04-02",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        },
+        {
+          "source_id": "72c69269-a06e-4c45-a916-1cd68b9af0be",
+          "source_title": "Comisión para el Mercado Financiero (CMF Chile) - NCG 461 y 519: Sostenibilidad y Gobierno Corporativo",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Requisitos de Memoria Integrada ASG",
+          "excerpt_short": "Supervisa la divulgación de sostenibilidad y gobierno corporativo en memorias anuales integradas.",
+          "source_date": "2025-11-26",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Cuerpo normativo chileno oficial y vigente.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F11-C4",
+      "claim": "No existen mediciones cuantitativas auditadas e independientes sobre las horas-hombre exactas invertidas en preparar un briefing book ni matrices de objeción técnica de CISOs en la literatura gremial de PR.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Literatura de Gestión Corporativa"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección de Vacíos: Falta de auditorías de tiempo y criterios CISO",
+          "excerpt_short": "Falta de medición cuantitativa de horas-hombre en briefing books y vacíos en matrices de objeción de CISOs.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:37:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío metodológico explícitamente delimitado en el corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fuentes primarias y secundarias",
+      "Leyes de la República",
+      "Informes gremiales"
+    ],
+    "actors": [
+      "Investigador Corporativo",
+      "Auditor de Evidencia"
+    ],
+    "steps": [
+      "Verificación de autenticidad de fuentes",
+      "Extracción de citas y localizadores",
+      "Identificación de vacíos epistemológicos"
+    ],
+    "states": [
+      "Fuentes_Reunidas",
+      "Analizadas",
+      "Auditadas",
+      "Trazables"
+    ],
+    "outputs": [
+      "Matriz de Trazabilidad Documental",
+      "Registro de Vacíos de Evidencia"
+    ],
+    "exceptions": [
+      "Uso de enlaces rotos o fuentes sin fecha",
+      "Atribución de hechos empíricos a declaraciones comerciales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_DIRCOM_ESP",
+      "type": "organizacion",
+      "name": "Asociación de Directivos de Comunicación (Dircom España)"
+    },
+    {
+      "entity_id": "ENT_MCKINSEY",
+      "type": "empresa",
+      "name": "McKinsey & Company"
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_DIRCOM_ESP",
+      "predicate": "publica_estudio",
+      "object_id": "El Estado de la Comunicación en España 2025",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F11-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Mantener tabla de metadatos estricta con URL, fecha y localizador para cada insumo indexado en BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "sin_evidencia sobre mediciones auditadas de horas invertidas en preparación de briefings en empresas chilenas.",
+      "minimum_validation": "Estudio de tiempos y movimientos con 10 equipos de asuntos corporativos en Santiago.",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "P01-F12",
+    "P01-F13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:37:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

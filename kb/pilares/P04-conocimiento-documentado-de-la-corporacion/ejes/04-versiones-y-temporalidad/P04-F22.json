@@ -1,0 +1,144 @@
+{
+  "question_id": "P04-F22",
+  "pilar": "P04",
+  "eje": "Versiones y temporalidad",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar versiones y temporalidad de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Representar versiones y temporalidad estructuradas exige: 1) Variables de marca temporal (`event_date_start`, `event_date_end`, `publication_date`, `system_ingestion_timestamp`); 2) Propiedades de versión (`version_number` semántico, `version_status`: Activo, Superado, Retirado, Borrador; `reexpression_flag`: booleano); 3) Relaciones de linaje temporal DCAT-3 y PROV-O (`dcterms:replaces`, `dcterms:isReplacedBy`, `prov:wasRevisionOf`, `prov:invalidatedAtTime`); y 4) Condiciones operativas (Condición 1: todo documento marcado como 'Superado' debe apuntar obligatoriamente al URI de su sustituto; Condición 2: no pueden coexistir dos versiones con `status: 'Activo'` para la misma política corporativa dentro del mismo ámbito geográfico; Condición 3: todo cambio en una cifra de año base debe registrar la fecha de reexpresión y la causal metodológica).",
+  "findings": [
+    {
+      "claim_id": "P04-F22-C1",
+      "claim": "El versionado temporal corporativo requiere atributos de estado semántico, marcas temporales bitemporales, relaciones W3C PROV-O y tres condiciones de consistencia de estados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Modelado de Datos Temporales"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.3: Trazabilidad Bitemporal y Sección 4: Fase 5",
+          "excerpt_short": "corp:Statement_v2 prov:wasRevisionOf corp:Statement_v1 (anotada con dcterms:replaces). Gestión de fe de erratas y reexpresiones sin borrado físico.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "1cf0d513-b850-4fa2-af8d-08b20c91d954",
+          "source_title": "DCMI Metadata Terms (Dublin Core)",
+          "original_url": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
+          "locator": "Terms: replaces, isReplacedBy, isVersionOf, hasVersion",
+          "excerpt_short": "Provides standard properties for resource superseding, version tracking, and chronological relations.",
+          "source_date": "2020-01-20",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de estándares DCMI y W3C con la arquitectura temporal del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Metadatos de versionado de documentos"
+    ],
+    "actors": [
+      "Temporal Consistency Engine",
+      "Version Validator"
+    ],
+    "steps": [
+      "Verificación de unicidad de versión activa",
+      "Comprobación de aristas de sustitución",
+      "Persistencia en catálogo"
+    ],
+    "states": [
+      "Validating_Version",
+      "Consistent",
+      "Persisted_Version"
+    ],
+    "outputs": [
+      "Registro de versión inmutable con relaciones de linaje"
+    ],
+    "exceptions": [
+      "Intento de publicar dos versiones activas contradictorias"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_VERSIONING_RULES",
+      "type": "reglas",
+      "name": "Reglas de Integridad del Versionado Temporal",
+      "aliases": [
+        "Temporal Versioning Integrity Rules"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_VERSIONING_RULES",
+      "predicate": "asegura_coherencia_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F22-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Control de vigencia",
+      "Sistemas de archivo tradicionales": "Archivos nombrados '_v1', '_v2_final' con riesgo de usar versiones obsoletas.",
+      "Control ontológico de versiones": "Resolución automática de la versión vigente basada en el predicado dcterms:replaces."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe automatizar la resolución de versiones mediante estas reglas para evitar respuestas con políticas desactualizadas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

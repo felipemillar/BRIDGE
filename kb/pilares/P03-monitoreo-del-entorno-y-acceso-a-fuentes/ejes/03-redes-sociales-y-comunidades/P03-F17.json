@@ -1,0 +1,137 @@
+{
+  "question_id": "P03-F17",
+  "pilar": "P03",
+  "eje": "Redes sociales y comunidades",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre redes sociales y comunidades?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos sobre redes y comunidades están respaldados por: 1) Arquitectura abierta y streaming: AT Protocol Streaming Documentation (2026, Jetstream WebSockets); 2) Restricciones y cuotas de APIs: Reddit Data API Wiki (2023-2026, cuota de 100 req/min OAuth) y Telegram Bot API Guide (2026, getUpdates); 3) Prohibición corporativa de Meta y TikTok: Meta Content Library Bellingcat Toolkit (2024-2026) y TikTok Research API Getting Started (2024-2026), que acreditan la inelegibilidad del sector privado; 4) Modelado de redes coordinadas y automatización: Pacheco et al. (2020, 'Uncovering Coordinated Networks on Social Media') y Sayyadiharikandeh et al. (2020, 'Detection of Novel Social Bots'); 5) Taxonomía de amenazas y desinformación: DISARM Foundation Framework (2026); y 6) Precedencia editorial y rectificación: P03_QUALITY_ADDENDUM (Septiembre 2026), que rectifica el mito del duopolio y el precio fijo de X Enterprise.",
+  "findings": [
+    {
+      "claim_id": "P03-F17-C1",
+      "claim": "El respaldo documental del eje de redes comprende especificaciones técnicas de APIs abiertas y cerradas, investigaciones de detección de bots y redes coordinadas, el marco DISARM y la adenda editorial P03.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Corpus Canónico P03"
+      },
+      "evidence": [
+        {
+          "source_id": "6d444b42-f740-4b1f-877f-61ea4703e485",
+          "source_title": "Reddit Data API Terms, Wiki & Rate Limits",
+          "original_url": "https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki",
+          "locator": "Reddit Data API Wiki - Rate Limits and Commercial Use",
+          "excerpt_short": "Reddit enforces a limit of 100 queries per minute per OAuth client ID for free access, requiring custom agreements for larger commercial pipelines.",
+          "source_date": "2023",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        },
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.1: Corrección sobre Duopolio",
+          "excerpt_short": "El entorno de información social contemporáneo está fragmentado y distribuido... No existe un duopolio fáctico, sino una multiplicidad de regímenes de acceso.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada de documentación primaria de APIs y literatura científica revisada.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de fuentes de redes"
+    ],
+    "actors": [
+      "Audit Worker"
+    ],
+    "steps": [
+      "Validación de enlaces",
+      "Comprobación de términos de servicio",
+      "Extracción de evidencia"
+    ],
+    "states": [
+      "Raw_Sources",
+      "Validated_Terms",
+      "Corpus_Certified"
+    ],
+    "outputs": [
+      "Registro de respaldo de evidencia para redes sociales"
+    ],
+    "exceptions": [
+      "Actualizaciones frecuentes en las políticas de APIs de las plataformas"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SOCIAL_EVIDENCE_CORPUS",
+      "type": "corpus_documental",
+      "name": "Corpus de Evidencia de Redes P03",
+      "aliases": [
+        "Social Evidence Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SOCIAL_EVIDENCE_CORPUS",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "Eje_Redes_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F17-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Mantener una matriz de políticas de API viva para alertar sobre discontinuidades en el acceso a datos sociales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "question_id": "P03-F27",
+  "pilar": "P03",
+  "eje": "Fuentes institucionales y regulatorias",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué frecuencia, formatos y trazabilidad ofrecen las fuentes oficiales revisadas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La frecuencia, formatos y trazabilidad técnica presentan las siguientes especificaciones verificadas: 1) CMF Chile: Divulgación en tiempo casi real continua (polling cada 5 minutos recomendado); formato HTML semiestructurado y archivos PDF descargables; trazabilidad mediante código único de ingreso de hecho esencial; 2) ChileCompra API: Actualización diaria y horaria; formato JSON nativo bajo el estándar internacional Open Contracting Data Standard (OCDS); trazabilidad mediante identificador de licitación (`CodigoExterno`); cuotas gestionadas mediante tickets de autenticación; 3) SEC EDGAR: Actualización en tiempo real conforme se reciben las presentaciones; formato JSON nativo y XML estructurado para Form 8-K; trazabilidad inmutable mediante CIK de empresa y Accession Number único; límite técnico de 10 peticiones/segundo con declaración de User-Agent; y 4) Diario Oficial de Chile: Edición diaria matutina (lunes a sábado a las 06:00 AM); formato HTML y PDF firmado digitalmente con Código Seguro de Verificación (CSV) para autenticidad jurídica.",
+  "findings": [
+    {
+      "claim_id": "P03-F27-C1",
+      "claim": "Las fuentes oficiales ofrecen formatos estructurados que van desde JSON OCDS (ChileCompra) y JSON/XML con CIK (SEC EDGAR) hasta HTML/PDF con firmas CSV (Diario Oficial) y hechos esenciales (CMF), con latencias de minutos a días.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / EE.UU.",
+        "actor": "Especificaciones Técnicas Oficiales P03"
+      },
+      "evidence": [
+        {
+          "source_id": "bc848342-284e-4da3-9520-6f6e51094b3c",
+          "source_title": "ChileCompra - API de Mercado Público y Datos Abiertos de Licitaciones",
+          "original_url": "https://www.chilecompra.cl/api/",
+          "locator": "ChileCompra API Documentation - Formats and Rate Limits",
+          "excerpt_short": "Exposes public procurement data in JSON format adhering to OCDS schema, requiring developer API tickets and enforcing concurrent call limits.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:20:00-03:00"
+        },
+        {
+          "source_id": "be4fb72f-480d-4820-b0ac-a1a734b17482",
+          "source_title": "SEC EDGAR API Developer Resources & Dissemination Guidelines",
+          "original_url": "https://www.sec.gov/about/developer-resources",
+          "locator": "Rate Limiting & Access Guidelines",
+          "excerpt_short": "The SEC limits automated requests to no more than 10 requests per second. Developers must declare a specific User-Agent including corporate email.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:20:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de especificaciones de APIs y directrices de acceso oficiales.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Endpoints de datos gubernamentales",
+      "Schedulers de cron"
+    ],
+    "actors": [
+      "Government API Harvester",
+      "Rate Governor"
+    ],
+    "steps": [
+      "Ejecución de polling según frecuencia",
+      "Validación de firma CSV o hash",
+      "Parseo de JSON OCDS / PDF"
+    ],
+    "states": [
+      "Polled",
+      "Downloaded",
+      "Integrity_Verified"
+    ],
+    "outputs": [
+      "Eventos oficiales inmutables listos para indexación"
+    ],
+    "exceptions": [
+      "Respuestas 429 Too Many Requests por exceder las 10 req/s en la SEC"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_OFFICIAL_FORMATS",
+      "type": "especificacion_tecnica",
+      "name": "Especificaciones de Formato y Trazabilidad Oficial",
+      "aliases": [
+        "Official Formats & Traceability"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_OFFICIAL_FORMATS",
+      "predicate": "gobierna_ingesta_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F27-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Trazabilidad técnica",
+      "SEC EDGAR": "Accession Number inmutable de 20 dígitos + CIK de emisor.",
+      "Diario Oficial Chile": "Código Seguro de Verificación (CSV) firmado digitalmente por el Estado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar un regulador de tasa (token bucket) estricto de máximo 8 req/s en el conector de SEC EDGAR para operar con margen de seguridad bajo el límite de 10 req/s.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F28"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "question_id": "P03-F35",
+  "pilar": "P03",
+  "eje": "Desambiguación y análisis de señales",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre desambiguación y análisis de señales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos de este eje están respaldados por: 1) Arquitectura de desambiguación densa: Wu et al. (2020, 'Scalable Zero-shot Entity Linking with Dense Entity Retrieval' - BLINK paper, arXiv:1911.03814); 2) Modelado neuronal de tópicos no supervisado: Grootendorst (2022, 'BERTopic: Neural Topic Modeling with a Class-based TF-IDF Procedure', arXiv:2203.05794); 3) Modelo fundacional en español y sus límites: Cañete et al. (2020, 'Spanish Pre-Trained BERT Model and Evaluation' - BETO paper); 4) Detección de patrones en redes: Pacheco et al. (2020, coordinación temporal) y Sayyadiharikandeh et al. (2020, ensembles de bots); 5) Taxonomía de desinformación: DISARM Foundation (2026); y 6) Precedencia editorial y rectificación: P03_QUALITY_ADDENDUM (Septiembre 2026, Secciones 2.2 y 2.3), que califica taxativamente la capacidad de BETO sobre modismos e ironía chilena como 'hipótesis operativa no probada' y desacopla la coordinación de la falsedad.",
+  "findings": [
+    {
+      "claim_id": "P03-F35-C1",
+      "claim": "El respaldo documental de desambiguación y análisis de señales integra publicaciones científicas de NLP y redes (BLINK, BERTopic, BETO, Pacheco et al., Sayyadiharikandeh et al.), el marco DISARM y la adenda editorial P03.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global / Chile",
+        "actor": "Corpus Canónico P03"
+      },
+      "evidence": [
+        {
+          "source_id": "8375f21f-7a9b-4214-a492-4d42391c71e0",
+          "source_title": "BETO: Spanish Pre-Trained BERT Model and Evaluation (Cañete et al. 2020)",
+          "original_url": "https://github.com/dccuchile/beto",
+          "locator": "Model Architecture & Benchmark Tasks",
+          "excerpt_short": "BETO is pre-trained on the Spanish Wikipedia and OPUS corpora, evaluated on standard tasks (POS, NER, MLDoc) without domain-specific stance benchmarks.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        },
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.2: Requerimiento Técnico de Adaptación",
+          "excerpt_short": "Para que esta capacidad sea efectiva en un sistema de Asuntos Corporativos, se requiere un proceso formal de domain adaptation, fine-tuning con un conjunto de datos anotado manualmente... y un benchmark de prueba local.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de papers fundacionales y la adenda de calibración epistémica.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de citas de NLP y análisis"
+    ],
+    "actors": [
+      "NLP Auditor"
+    ],
+    "steps": [
+      "Comprobación de papers",
+      "Verificación de benchmarks",
+      "Aprobación de citas"
+    ],
+    "states": [
+      "Raw_Citations",
+      "Verified_Papers",
+      "Corpus_Approved"
+    ],
+    "outputs": [
+      "Catálogo de respaldo de evidencia de NLP certificado"
+    ],
+    "exceptions": [
+      "Modelos pre-entrenados sin documentación de datos de entrenamiento"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_NLP_EVIDENCE_CORPUS",
+      "type": "corpus_documental",
+      "name": "Corpus de Evidencia de NLP P03",
+      "aliases": [
+        "NLP Evidence Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_NLP_EVIDENCE_CORPUS",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "Eje_Analisis_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F35-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Mantener una base de conocimiento documental para guiar el desarrollo de modelos de lenguaje ajustados localmente en BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

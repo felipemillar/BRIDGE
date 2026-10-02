@@ -1,0 +1,140 @@
+{
+  "question_id": "P02-C04",
+  "pilar": "P02",
+  "eje": "Competidores cercanos a los cuatro módulos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre competidores cercanos a los cuatro módulos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la interoperabilidad operativa real entre herramientas que dicen comunicarse vía API: 1) Brecha: Ningún competidor ha demostrado un flujo continuo donde una alerta de medios (Escuchar) actualice automáticamente la ficha de riesgo de un parlamentario o dirigente comunal (Relacionar), genere un borrador de postura oficial en el repositorio de Q&A (Hablar) y consulte los contratos de faena en SharePoint (Saber); 2) Fuentes parciales: Las fichas de ventas de CisionOne y Meltwater mencionan 'capacidades de integración vía API' y 'asistentes generativos', pero no publican documentación de endpoints ni esquemas de eventos webhooks que soporten este ciclo; 3) Validación mínima: Diseñar un caso de prueba cerrado con datos sintéticos y solicitar a los vendors ejecutar en vivo el traspaso automático de un evento de crisis desde el clipping de prensa hasta la actualización del registro de compromisos y la generación del briefing de vocería.",
+  "findings": [
+    {
+      "claim_id": "P02-C04-C1",
+      "claim": "No existe evidencia técnica documentada de interoperabilidad automatizada de ciclo completo entre módulos de escucha externa y módulos de memoria de actores en ninguna plataforma comercial disponible.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Suites Comerciales de Corporate Affairs"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Interoperability Validation Gap",
+          "excerpt_short": "Vendor literature lacks technical documentation verifying automated bidirectional event flows between media listening and stakeholder CRMs.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:44:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Auditoría de especificaciones de API públicas de los proveedores evaluados.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Guías de API de vendors",
+      "Casos de prueba de ciclo cerrado",
+      "Matriz de endpoints requeridos"
+    ],
+    "actors": [
+      "Ingeniero de Protocolos",
+      "Evaluador de Software"
+    ],
+    "steps": [
+      "Revisión de Swagger/OpenAPI de los proveedores",
+      "Detección de ausencia de triggers para eventos de asuntos públicos",
+      "Diseño de protocolo de validación mínima"
+    ],
+    "states": [
+      "Especificaciones_Revisadas",
+      "Brecha_Confirmada",
+      "Protocolo_Fijado"
+    ],
+    "outputs": [
+      "Informe de viabilidad de interoperabilidad de competidores"
+    ],
+    "exceptions": [
+      "APIs privadas accesibles solo bajo acuerdos de desarrollo OEM de alto costo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_BRECHA_INTEROP",
+      "type": "brecha_tecnica",
+      "name": "Brecha de Interoperabilidad Multi-Módulo",
+      "aliases": [
+        "Interoperability Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_BRECHA_INTEROP",
+      "predicate": "afecta_a",
+      "object_id": "Lideres_Comerciales_Listening",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C04-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Promesa de Ecosistema Integrado vs Realidad de Silos",
+      "Promesa de Ecosistema": "'Nuestra plataforma conecta todos sus flujos de trabajo de relaciones públicas'.",
+      "Realidad de Silos": "El usuario debe exportar reportes en PDF o Excel e ingresarlos manualmente en su CRM o gestor documental."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe construir su arquitectura sobre un bus de eventos reactivo que garantice este ciclo automático de forma nativa.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_INTEROP",
+      "description": "Falta de demostración de flujo inter-módulo en competidores",
+      "action": "Ejecutar benchmark técnico"
+    }
+  ],
+  "next_question_ids": [
+    "P02-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:44:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "question_id": "P03-F01",
+  "pilar": "P03",
+  "eje": "Taxonomía de señales externas",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué tipos de señales de prensa, redes, broadcast, reguladores y comunidades son relevantes?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para asuntos corporativos, las señales relevantes se dividen en 5 familias operativas: 1) Prensa estructurada y web abierta (artículos periodísticos, editoriales, columnas de opinión y blogs especializados con metadata de autor y medio); 2) Redes sociales y plataformas comunitarias (mensajería pública en Telegram, firehose federado en AT Protocol/Bluesky, foros temáticos en Reddit y publicaciones públicas muestreadas); 3) Broadcast audiovisual (emisiones lineales de TV nacional y regional, radioemisoras locales AM/FM y podcasts temáticos); 4) Señales regulatorias e institucionales oficiales (hechos esenciales de la CMF, resoluciones y decretos del Diario Oficial, licitaciones de ChileCompra/Mercado Público, tramitaciones del Congreso y Form 8-K/10-K de la SEC); y 5) Señales comunitarias de base (declaraciones de comunidades locales, reclamos en servicios de evaluación ambiental y actas de organizaciones vecinales).",
+  "findings": [
+    {
+      "claim_id": "P03-F01-C1",
+      "claim": "Las señales externas críticas para asuntos corporativos abarcan cinco categorías operativas: prensa, redes/foros, broadcast audiovisual, reguladores oficiales y dinámica comunitaria territorial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Internacional",
+        "actor": "Ecosistema de Monitoreo P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2: Mapeo Estructurado por Área Temática",
+          "excerpt_short": "Para garantizar la máxima rigurosidad analítica... este documento clasifica toda la evidencia recolectada en cuatro categorías... prensa, redes sociales, broadcast audiovisual y señales institucionales.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Taxonomía consolidada en el mapa de evidencia del pilar P03.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Feeds RSS de prensa",
+      "Firehose de AT Protocol",
+      "Subtítulos/audio de TV y radio",
+      "APIs de CMF y ChileCompra"
+    ],
+    "actors": [
+      "Ingest Worker",
+      "Signal Normalizer",
+      "Taxonomy Classifier"
+    ],
+    "steps": [
+      "Captura de stream crudo",
+      "Normalización a formato común",
+      "Clasificación por tipo de señal"
+    ],
+    "states": [
+      "Raw_Ingested",
+      "Normalized",
+      "Classified_By_Family"
+    ],
+    "outputs": [
+      "Event Stream clasificado en las 5 familias de señales corporativas"
+    ],
+    "exceptions": [
+      "Caída de conectividad en fuentes regulatorias estatales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SIGNAL_FAMILIES",
+      "type": "taxonomia",
+      "name": "Familias de Señales de Entorno",
+      "aliases": [
+        "Signal Taxonomy"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SIGNAL_FAMILIES",
+      "predicate": "estructura_ingesta_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F01-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Naturaleza de la señal",
+      "Prensa": "Artículos editoriales con autoría, línea editorial y latencia horaria.",
+      "Reguladores": "Documentos normativos formales, hechos esenciales vinculantes y efectos jurídicos inmediatos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe implementar conectores modulares independientes para cada una de las 5 familias para evitar cuellos de botella en la ingesta.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F02"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

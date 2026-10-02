@@ -1,0 +1,147 @@
+{
+  "question_id": "P04-F21",
+  "pilar": "P04",
+  "eje": "Versiones y temporalidad",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué regla prevalece cuando un documento fue corregido, retirado o reemplazado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La regla que prevalece se rige por el Principio de No-Destrucción Histórica y Prevalencia de Superación Normativa (W3C DCAT-3 y PROV-O): 1) Regla de Inmutabilidad: el documento original nunca se elimina ni se sobreescribe físicamente; su hash SHA-256 se preserva para auditoría y peritaje legal; 2) Regla de Superación Activa (`dcterms:replaces`): al ingresar un documento rectificado (e.g. fe de erratas o nueva versión de política), el sistema crea un enlace formal `doc_nuevo dcterms:replaces doc_antiguo` y anota en el anterior `doc_antiguo dcterms:isReplacedBy doc_nuevo`; 3) Regla de Prevalencia en Consultas Vigentes: para cualquier consulta sobre la postura actual, el motor de búsqueda enruta la respuesta exclusivamente a la versión de reemplazo; y 4) Regla de Documento Retirado: si un documento fue retirado sin sustituto (e.g. retiro de comunicado erróneo), se le asigna `status: 'Retirado'`, quedando bloqueado para vocería y arrojando una alerta explícita si se intenta citar.",
+  "findings": [
+    {
+      "claim_id": "P04-F21-C1",
+      "claim": "Los documentos reemplazados o retirados se preservan inmutables para auditoría pero quedan subordinados algorítmicamente mediante relaciones dcterms:replaces para consultas sobre la postura vigente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Gobernanza del Ciclo de Vida Documental"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 4: Fase 5: Protocolo de Deprecación, Fe de Erratas y Control de Acceso",
+          "excerpt_short": "Cuando una empresa reexpresa cifras, el documento original no se borra (garantía de auditoría histórica); se anota con dcterms:isReplacedBy y se crea un enlace de superación en el Grafo.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "d1f9b36e-6fd4-411a-8e8a-da15aa5ed9b8",
+          "source_title": "W3C DCAT-3: Data Catalog Vocabulary Version 3",
+          "original_url": "https://www.w3.org/TR/vocab-dcat-3/",
+          "locator": "Dataset and Document Versioning",
+          "excerpt_short": "dcterms:replaces expresses that a resource has replaced another resource in terms of validity and authority.",
+          "source_date": "2024-05-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación W3C DCAT-3 y protocolo formal de deprecación del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Nuevo documento corregido o fe de erratas",
+      "Documento original en base"
+    ],
+    "actors": [
+      "Lifecycle Manager",
+      "Graph Version Linker",
+      "Search Indexer"
+    ],
+    "steps": [
+      "Verificación de aprobación de la corrección",
+      "Preservación del original con flag superseded",
+      "Creación de tripleta dcterms:replaces",
+      "Actualización del índice de búsqueda vigente"
+    ],
+    "states": [
+      "Active_Document",
+      "Superseded_Preserved",
+      "Replacement_Active"
+    ],
+    "outputs": [
+      "Grafo actualizado con relación formal de superación y exclusión de búsquedas vigentes"
+    ],
+    "exceptions": [
+      "Corrección parcial que solo afecta a una tabla o párrafo específico"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SUPERSEDED_PROTOCOL",
+      "type": "protocolo",
+      "name": "Protocolo de Superación y Deprecación Documental",
+      "aliases": [
+        "Document Superseding Protocol"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SUPERSEDED_PROTOCOL",
+      "predicate": "regula_sustitucion_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F21-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Gestión de correcciones",
+      "Borrado o sobreescritura ciega": "Destruye la evidencia de lo que se dijo originalmente, impidiendo peritajes de auditoría.",
+      "Superación con linaje PROV-O": "Conserva la historia completa y garantiza que el vocero solo use la versión vigente."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe impedir el borrado físico de documentos y aplicar rigurosamente este protocolo de superación.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

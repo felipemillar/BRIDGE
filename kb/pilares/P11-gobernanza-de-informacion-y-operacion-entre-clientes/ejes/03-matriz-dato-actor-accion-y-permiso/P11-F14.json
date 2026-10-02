@@ -1,0 +1,164 @@
+{
+  "question_id": "P11-F14",
+  "pilar": "P11",
+  "eje": "Matriz dato, actor, acción y permiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Cómo se heredan, revocan y comprueban permisos del origen al resultado?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La propagación y revocación de permisos a lo largo del ciclo de inferencia y transformación documental se gobierna mediante tres principios arquitectónicos: 1) Principio de Herencia de Máxima Restricción (High Water Mark Principle): Todo documento, fragmento vectorial, resumen sintetizado o respuesta RAG generada a partir de múltiples fuentes hereda automáticamente la clasificación más restrictiva de cualquiera de sus insumos primarios (si un borrador utiliza fuentes D1 y D3, la derivada resultante se clasifica estrictamente como D3 y queda sujeta a sus mismos controles y permisos); 2) Revocación en Cascada y en Tiempo Real: La revocación de privilegios a un usuario o la desclasificación/baja de un activo documental se propaga inmediatamente mediante invalidación de tokens de corta duración (JWT con TTL de 15 minutos), listas negras en caché Redis de baja latencia y regeneración de listas de acceso en el motor de políticas, impidiendo que sesiones activas sigan leyendo datos revocados; y 3) Comprobación Dinámica en la Entrega (Egress Authorization Check): Antes de transmitir la respuesta final al usuario, el sistema evalúa nuevamente los atributos del destinatario frente a la clasificación consolidada del resultado, bloqueando la entrega si el usuario carece de permiso para el nivel resultante.",
+  "findings": [
+    {
+      "claim_id": "P11-F14-C1",
+      "claim": "La gobernanza de permisos exige la herencia de máxima restricción (High Water Mark) en derivados sintéticos, revocación en cascada vía invalidación de tokens en Redis y comprobación dinámica previa a la entrega final.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "permission_inheritance_and_revocation",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 2.3 'Herencia de Clasificación y Revocación Dinámica'",
+          "retrieved_at": null,
+          "excerpt_short": "Herencia High Water Mark: Toda síntesis o respuesta RAG hereda la clasificación más alta de sus fuentes base. Revocación en cascada mediante JWT con TTL de 15 min y listas negras en Redis.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations",
+          "source_id": "24c7952c-3d6a-417c-8e7d-746065c9ca20",
+          "locator": "Control AC-4 'Information Flow Enforcement'",
+          "retrieved_at": null,
+          "excerpt_short": "Enforce approved authorizations for controlling the flow of information within the system and between connected systems based on data classification and label preservation rules.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Cloud Security Alliance: Cloud Controls Matrix (CCM v4) and Shared Responsibility",
+          "source_id": "f6cdbafa-a8d6-4918-97f5-a8d6bf03341b",
+          "locator": "Domain IAM-03 'Access Revocation and Policy Synchronization'",
+          "retrieved_at": null,
+          "excerpt_short": "Establish procedures to promptly revoke access upon termination of employment or business relationship, ensuring revocation propagates across distributed cached sessions and linked assets.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los requerimientos de control de flujo de información NIST SP 800-53 AC-4, CSA CCM v4 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fuentes consultadas por el RAG",
+      "Respuesta generada por el LLM",
+      "Perfil de permisos del usuario"
+    ],
+    "actors": [
+      "Linter de Herencia BRIDGE",
+      "Validador de Entrega (Egress Gate)",
+      "Servidor de Autorización"
+    ],
+    "steps": [
+      "Cálculo de la clasificación máxima entre todas las fuentes que aportaron fragmentos al contexto",
+      "Asignación de la etiqueta heredada (e.g., D3) a la respuesta generada",
+      "Inspección de la lista de revocación de sesiones en Redis",
+      "Verificación de que el usuario emisor de la consulta posea permisos activos para el nivel heredado",
+      "Si el usuario está autorizado: Entrega de la respuesta",
+      "Si la sesión fue revocada o carece de permiso para el nivel heredado: Supresión del contenido y retorno de mensaje de acceso restringido"
+    ],
+    "states": [
+      "SOURCES_TAGGED",
+      "MAX_TIER_COMPUTED",
+      "REVOCATION_CHECKED",
+      "DELIVERY_APPROVED_OR_FILTERED"
+    ],
+    "outputs": [
+      "Respuesta entregada con metadatos de herencia de seguridad"
+    ],
+    "exceptions": [
+      "Si una de las fuentes fue marcada como eliminada o revocada durante el proceso de inferencia, la respuesta se descarta y se re-ejecuta el pipeline"
+    ]
+  },
+  "entities": [
+    "High Water Mark",
+    "NIST SP 800-53 AC-4",
+    "Revocación en Cascada",
+    "CSA CCM v4",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Fuentes Base",
+      "to": "Resultado Derivado",
+      "type": "INHERITS_MAX_RESTRICTION"
+    },
+    {
+      "from": "Redis Blacklist",
+      "to": "Tokens JWT",
+      "type": "INVALIDATES_IMMEDIATELY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Pérdida de clasificación en salidas de IA vs Herencia formal High Water Mark",
+      "diferencia": "La pérdida de clasificación permite que resúmenes de documentos confidenciales se envíen a empleados comunes; la herencia High Water Mark preserva el blindaje confidencial en todo derivado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "classification_inheritance_fidelity": "100% de derivados catalogados con la cota superior de sus fuentes",
+    "revocation_propagation_latency_seconds": "< 3 segundos para propagar la revocación de un usuario en todos los nodos"
+  },
+  "bridge_implications": "Garantiza que la IA generativa de BRIDGE no sea utilizada como mecanismo indirecto para lavar clasificaciones o eludir controles de acceso.",
+  "open_gaps": [
+    "Redacción automática de fragmentos D3 en respuestas híbridas para permitir entregar las partes D1/D2 a usuarios sin credencial D3."
+  ],
+  "next_question_ids": [
+    "P11-F15",
+    "P11-F16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

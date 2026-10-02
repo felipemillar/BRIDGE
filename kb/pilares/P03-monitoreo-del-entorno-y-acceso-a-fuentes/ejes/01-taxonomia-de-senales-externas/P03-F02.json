@@ -1,0 +1,124 @@
+{
+  "question_id": "P03-F02",
+  "pilar": "P03",
+  "eje": "Taxonomía de señales externas",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué metadatos mínimos permiten comparar noticias, publicaciones, alertas y documentos oficiales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El esquema canónico de metadatos mínimos para homologar señales heterogéneas consta de 8 atributos obligatorios: 1) `signal_id` (UUID único determinístico); 2) `timestamp_published` (marca temporal ISO-8601 con zona horaria UTC/local); 3) `source_type` (prensa, red_social, broadcast, regulador, comunidad); 4) `source_identifier` (medio, handle, canal, boletín o registro oficial); 5) `author_or_issuer` (periodista, usuario verificado u organismo emisor); 6) `content_payload` (texto completo, transcripción o extracto estructurado); 7) `entities_extracted` (entidades nombradas normalizadas con URIs de Wikidata/registro local); y 8) `provenance_url_or_locator` (URL permanente, identificador oficial de expediente o rango temporal de emisión).",
+  "findings": [
+    {
+      "claim_id": "P03-F02-C1",
+      "claim": "La homologación analítica entre noticias, redes sociales y resoluciones regulatorias requiere una estructura común de 8 metadatos fundamentales con identificadores de procedencia inmutables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Sistemas de Inteligencia P03"
+      },
+      "evidence": [
+        {
+          "source_id": "c1d4d3e2-d64c-49c9-9c54-cfcd11a97967",
+          "source_title": "Event Registry & NewsAPI.ai Developer Documentation",
+          "original_url": "https://www.newsapi.ai/documentation/examples",
+          "locator": "Core Article Object & Event Representation",
+          "excerpt_short": "Event Registry represents each news item with uri, dateTime, source, authors, body, extracted entities, and assigned event uri.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificado contra especificaciones técnicas de APIs de eventos y noticias.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Payloads nativos de proveedores de noticias, redes y APIs estatales"
+    ],
+    "actors": [
+      "Metadata Normalizer"
+    ],
+    "steps": [
+      "Extracción de timestamp",
+      "Resolución de autor",
+      "Asignación de UUID",
+      "Generación de envelope JSON-LD"
+    ],
+    "states": [
+      "Raw_Payload",
+      "Schema_Mapped",
+      "Validated_Envelope"
+    ],
+    "outputs": [
+      "Document Envelope canónico normalizado"
+    ],
+    "exceptions": [
+      "Falta de marcas temporales precisas en feeds RSS antiguos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_SIGNAL_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Canónico de Metadatos de Señal",
+      "aliases": [
+        "Canonical Signal Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_SIGNAL_SCHEMA",
+      "predicate": "estandariza_mensajes_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F02-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Adoptar el esquema de 8 metadatos en Kafka/RabbitMQ para garantizar interoperabilidad con el grafo de conocimiento.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

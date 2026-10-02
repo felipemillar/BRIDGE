@@ -1,0 +1,142 @@
+{
+  "question_id": "P11-C04",
+  "pilar": "P11",
+  "eje": "Separación entre clientes",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué sigue sin prueba sobre separación entre clientes, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En la separación entre clientes: 1) Lo que sigue sin prueba empírica concluyente: La inmunidad del sistema ante ataques de inversión de embeddings (reconstrucción textual de fragmentos sensibles a partir de vectores numéricos) y la ausencia total de canales laterales (side-channel attacks basados en tiempos de inferencia compartida en clústeres de GPUs en nubes de terceros); 2) Fuente que falló o es parcial: La documentación oficial de Qdrant y los whitepapers de AWS sobre aislamiento multi-tenant describen exhaustivamente el particionamiento de metadatos y el cifrado de almacenamiento, pero no proporcionan estudios empíricos sobre técnicas de inversión adversarial de embeddings generados por modelos de frontera ni garantizan la ausencia de fugas temporales en capas de virtualización de GPUs compartidas; y 3) Validación mínima que resolvería la incertidumbre: a) Ejecutar un estudio experimental de ataque de inversión de embeddings sobre un subconjunto de vectores de prueba de BRIDGE para cuantificar la información recuperable; b) Desplegar un mecanismo de adición de ruido diferencial controlado (Differential Privacy en embeddings) en caso de detectarse vectores vulnerables; y c) Incorporar jitter aleatorio (5 a 20 ms) en los tiempos de respuesta de la API para neutralizar cualquier análisis estadístico de canal lateral.",
+  "findings": [
+    {
+      "claim_id": "P11-C04-C1",
+      "claim": "Sigue sin prueba la resistencia absoluta frente a ataques de inversión de embeddings y canales laterales en hardware compartido; la documentación cloud es parcial al omitir estos vectores; y la validación mínima requiere pruebas adversariales de inversión y adición de jitter temporal.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "client_separation_open_gaps_and_validation",
+      "evidence": [
+        {
+          "source_title": "OWASP GenAI: Top 10 for Large Language Model Applications 2025",
+          "source_id": "83d92341-65c3-4adf-877a-8cf4b4cd29f2",
+          "locator": "Item LLM02: Sensitive Information Disclosure and Vector Inversion",
+          "retrieved_at": null,
+          "excerpt_short": "Embeddings themselves can potentially leak sensitive information through vector inversion attacks where original text inputs are approximated from high-dimensional representations.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "Qdrant Documentation: Multitenancy and Payload-based Partitioning",
+          "source_id": "1c6d441b-79bd-430c-9e06-48a208a341e5",
+          "locator": "Section 'Multitenancy Limitations'",
+          "retrieved_at": null,
+          "excerpt_short": "Payload partitioning provides logical separation within shared collections. Physical resource isolation requires dedicated collections or clusters.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evaluación científica rigurosa y no complaciente de los límites actuales de la seguridad en representaciones vectoriales.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Vectores de prueba de alta sensibilidad",
+      "Herramientas de ataque de inversión de embeddings",
+      "Telemetría de tiempo de GPU"
+    ],
+    "actors": [
+      "Investigador de Seguridad de IA",
+      "CISO",
+      "Laboratorio de Pentest"
+    ],
+    "steps": [
+      "Generación de embeddings a partir de 100 fragmentos con secretos corporativos D3",
+      "Intento de reconstrucción sintáctica utilizando redes generativas adversariales (GANs) de inversión vectorial",
+      "Medición del BLEU score y similitud semántica entre el texto original y el texto reconstruido",
+      "Prueba de detección de actividad vecina en clúster mediante medición de latencias micro-temporales",
+      "Implementación de retardos artificiales aleatorios (jitter) y particionamiento de colecciones si el riesgo supera el umbral de tolerancia"
+    ],
+    "states": [
+      "INVERSION_ATTACK_SIMULATED",
+      "LEAKAGE_METRICS_CALCULATED",
+      "DEFENSIVE_JITTER_EVALUATED"
+    ],
+    "outputs": [
+      "Reporte empírico de resistencia criptográfica de representaciones vectoriales"
+    ],
+    "exceptions": [
+      "Si un cliente exige aislamiento físico total, se ofrece la opción de clúster dedicado de Qdrant en su propia VPC"
+    ]
+  },
+  "entities": [
+    "Ataques de Inversión de Vectores",
+    "Canal Lateral de GPU",
+    "Qdrant Dedicated Cluster",
+    "OWASP GenAI LLM02"
+  ],
+  "relations": [
+    {
+      "from": "Inversión de Vectores",
+      "to": "Qdrant Payload Partitioning",
+      "type": "CHALLENGES_ISOLATION_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Asumir que un vector es matemáticamente irreversible vs Comprobar empíricamente la resistencia a inversión",
+      "diferencia": "Asumir irreversibilidad ignora avances recientes en descifrado de embeddings; comprobar empíricamente permite calibrar las salvaguardas y cifrar los vectores en reposo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "vector_inversion_bleu_score_limit": "< 0.10 (reconstrucción ininteligible)",
+    "api_timing_jitter_range_ms": "5 a 20 ms"
+  },
+  "bridge_implications": "Posiciona a BRIDGE a la vanguardia de la ciberseguridad para IA al abordar amenazas de última generación que la competencia desconoce.",
+  "open_gaps": [
+    "Maduración de librerías comerciales de privacidad diferencial aplicadas a embeddings semánticos."
+  ],
+  "next_question_ids": [
+    "P11-C05",
+    "P11-C06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

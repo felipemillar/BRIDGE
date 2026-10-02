@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X04",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 9,
+  "subeje": "Adquisiciones y estructura de grupos",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar adquisiciones y estructura de grupos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo de datos corporativo con las siguientes especificaciones: 1) Variables: Identificador de entidad (`vendor_id`), nombre comercial (`brand_name`), razón social legal (`legal_entity_name`), identificador del beneficiario final (`ultimate_parent_id`), tipo de propietario (`fondo_private_equity`, `holding_comunicaciones`, `empresa_cotizada`, `fundadores_privados`), fecha efectiva de control (`effective_control_date`), código de filing regulatorio (`sec_filing_ref`), estado de unificación de datos (`datos_segregados`, `datos_federados`, `backend_unificado`), y nivel de verificación registral (`verificado_registros_publicos`, `propiedad_no_verificada`); 2) Categorías: Proveedor independiente autónomo, subsidiaria operativa de holding, y producto absorbido; 3) Relaciones: `Marca -> SubsidiariaDe -> Holding`, `Holding -> ControladoPor -> BeneficiarioFinal`, `Producto_A -> Comparte_Backend_Con -> Producto_B`; 4) Condiciones de frontera: Prohibición de inferir que dos marcas de un mismo holding comparten datos o APIs sin una prueba técnica independiente comprobable.",
+  "findings": [
+    {
+      "claim_id": "P02-X04-C1",
+      "claim": "La modelación estructurada de grupos corporativos exige representar explícitamente el estado de unificación de backend y el beneficiario final para evitar sesgos de atribución tecnológica errónea.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Datos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Data Model Specifications for Corporate Group Structures",
+          "excerpt_short": "Schema enforcing strict distinction between legal corporate ownership and technical backend integration across acquired software assets.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:48:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar de modelación ontológica corporativa.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Esquema relacional de grupos corporativos",
+      "Registros mercantiles",
+      "Auditorías de integración técnica"
+    ],
+    "actors": [
+      "Arquitecto de Ontologías",
+      "Analista de Inteligencia Corporativa"
+    ],
+    "steps": [
+      "Diseño de tablas de entidades y relaciones de control",
+      "Ingreso de atributos de M&A y filings",
+      "Validación de integridad referencial del árbol de grupos"
+    ],
+    "states": [
+      "Esquema_Modelado",
+      "Datos_Poblados",
+      "Grafo_Generado"
+    ],
+    "outputs": [
+      "Grafo estructurado de propiedad corporativa e integración técnica"
+    ],
+    "exceptions": [
+      "Holdings con estructuras offshore complejas que ocultan el beneficiario final"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODELO_GRUPOS",
+      "type": "modelo_datos",
+      "name": "Esquema Estructurado de Grupos y M&A",
+      "aliases": [
+        "Corporate Group Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODELO_GRUPOS",
+      "predicate": "exige_distincion_de",
+      "object_id": "Integracion_Backend_Real",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X04-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo Estructurado vs Lista Plana de Competidores",
+      "Modelo Estructurado": "Permite consultar qué proveedores pertenecen al mismo fondo de inversión y comparten riesgos de capital.",
+      "Lista Plana": "Trata a Brandwatch y Cision como competidores feroces ignorando que tienen el mismo dueño."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe modelar la estructura de sus competidores y de sus clientes corporativos con este mismo nivel de precisión ontológica.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:48:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

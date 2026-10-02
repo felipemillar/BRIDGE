@@ -1,0 +1,159 @@
+{
+  "question_id": "P11-F24",
+  "pilar": "P11",
+  "eje": "Ciclo de vida y retención",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra ciclo de vida y retención sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto: Ejercicio del Derecho de Supresión de Datos Personales por Ex-Dirigente Vecinal tras Término de Mesa de Diálogo (Comunidad Los Vilos). Entradas: 1) Solicitud formal de ejercicio de derecho de cancelación (supresión) enviada por don Carlos Henríquez, ex-presidente de la Junta de Vecinos Los Vilos, invocando la Ley 19.628 / 21.719 para que se elimine su número de teléfono celular personal, correo y notas de opinión de la base de datos de la empresa; 2) Verificación legal: El Fiscal confirma que la mesa de diálogo del proyecto cerró formalmente hace 6 meses y que no existen procesos judiciales ni obligaciones de Legal Hold pendientes sobre sus datos; 3) Activo objetivo: Registro `D4_VECINO_084` almacenado con clave CMK específica en KMS y vectorizado en Qdrant. Proceso: El DPO autoriza la purga; el orquestador de BRIDGE ejecuta el protocolo en 5 pasos: A) Destrucción de la DEK específica en KMS (Crypto-shredding); B) Llamada síncrona a Qdrant eliminando los 12 puntos vectoriales con `payload: {person_id: 'VECINO_084'}`; C) Desalojo forzado (`UNLINK`) de entradas en Redis; D) Marcado del registro en base de datos relacional como `TOMBSTONE_PURGED` registrando fecha, motivo y certificado hash; E) Ejecución de test adversarial comprobando que consultas sobre el dirigente retornan recall de 0.0%. Resultado Esperado: Los datos personales del ex-dirigente quedan matemáticamente irrecuperables en almacenamiento, memoria vectorial y caché; se emite el 'Certificado de Sanitización N° PURGE-2026-084' firmado por el DPO; la respuesta formal se entrega al solicitante en menos de 5 días hábiles; el libro mayor de auditoría acredita el cumplimiento impecable de la Ley 19.628 / 21.719 sin afectar las actas institucionales públicas de la empresa.",
+  "findings": [
+    {
+      "claim_id": "P11-F24-C1",
+      "claim": "El caso operacionaliza el ejercicio del derecho de supresión de datos personales (D4) de un ex-dirigente comunitario, aplicando crypto-shredding de la DEK, purga vectorial en Qdrant, desalojo de caché y emisión de certificado de sanitización WORM.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_data_erasure_execution",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 1 'Escenario de Referencia: Supresión de Datos Personales de Dirigente Comunitario'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de derecho de supresión comunitaria: Solicitud formal de ex-dirigente -> Verificación de ausencia de Legal Hold -> Crypto-shredding en KMS -> Purga de vectores en Qdrant -> Certificado de eliminación firmado por DPO.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley N° 21.719 Protección de Datos Personales y Agencia de Protección de Datos",
+          "source_id": "c53c998d-3ecf-4f01-bab6-ddd2ce34066a",
+          "locator": "Artículos 5 y 16 'Derecho de Supresión o Cancelación'",
+          "retrieved_at": null,
+          "excerpt_short": "El titular tendrá derecho a exigir la supresión de sus datos personales cuando hayan dejado de ser necesarios o pertinentes para los fines para los cuales hubieren sido recolectados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los requerimientos de la Ley 21.719 y el escenario documentado en el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Carta formal de ex-dirigente solicitando eliminación de PII",
+      "Registro D4_VECINO_084 en base de datos",
+      "Informe de no objeción del Fiscal Legal"
+    ],
+    "actors": [
+      "Ex-Dirigente Comunitario",
+      "Oficial DPO",
+      "Orquestador de Purga BRIDGE",
+      "KMS",
+      "Qdrant",
+      "Redis"
+    ],
+    "steps": [
+      "Ingreso de la solicitud ARCO-P en el panel de cumplimiento",
+      "Fiscal verifica ausencia de juicios pendientes (no Legal Hold)",
+      "DPO aprieta el botón de ejecución de purga autorizada",
+      "Destrucción síncrona de la DEK en el servicio KMS",
+      "Borrado de 12 vectores en Qdrant con confirmación de 0 remanentes",
+      "Desalojo de claves en Redis",
+      "Generación de tupla Tombstone y certificado criptográfico",
+      "Notificación formal de cierre al ex-dirigente"
+    ],
+    "states": [
+      "REQUEST_FILED",
+      "LEGAL_CLEARANCE_OBTAINED",
+      "CRYPTO_SHREDDED",
+      "VECTORS_PURGED",
+      "CERTIFICATE_ISSUED"
+    ],
+    "outputs": [
+      "Datos de ex-dirigente purgados de forma irrecuperable",
+      "Certificado de Sanitización PURGE-2026-084 entregado",
+      "Registro de auditoría cerrado e inmutable"
+    ],
+    "exceptions": [
+      "Si el ex-dirigente figurara como testigo en un litigio ambiental activo, la supresión se suspendería por mandato legal"
+    ]
+  },
+  "entities": [
+    "Los Vilos",
+    "Carlos Henríquez",
+    "Ley 21.719",
+    "Qdrant",
+    "Crypto-shredding",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Solicitud ARCO-P",
+      "to": "DPO",
+      "type": "ADJUDICATED_BY"
+    },
+    {
+      "from": "D4_VECINO_084",
+      "to": "Certificado de Purga",
+      "type": "EVIDENCED_AS_DESTROYED"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Prometer borrado pero dejar vectores en la IA vs Purga matemática coordinada",
+      "diferencia": "Prometer borrado sin purgar vectores expone a la empresa a multas millonarias de la Agencia de Datos si el LLM cita al vecino; la purga coordinada garantiza recall 0%."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "arco_request_turnaround_days": "< 5 días hábiles para ejecutar la supresión y certificar la purga",
+    "post_erasure_pii_recall": "0.0% de coincidencias de datos de contacto del dirigente en RAG"
+  },
+  "bridge_implications": "Demuestra la madurez operativa de BRIDGE para garantizar cumplimiento de la Ley 21.719 y evitar sanciones de la futura Agencia de Protección de Datos de Chile.",
+  "open_gaps": [
+    "Automatización del envío de certificados de supresión a la casilla digital ciudadana del titular."
+  ],
+  "next_question_ids": [
+    "P11-F25",
+    "P11-C07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

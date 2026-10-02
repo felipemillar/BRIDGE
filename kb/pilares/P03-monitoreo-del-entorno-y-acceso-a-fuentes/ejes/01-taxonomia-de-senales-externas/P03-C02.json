@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C02",
+  "pilar": "P03",
+  "eje": "Taxonomía de señales externas",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué sigue sin prueba sobre taxonomía de señales externas, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba empírica la capacidad de una taxonomía algorítmica automatizada para predecir con exactitud si una señal débil de baja intensidad (ej. reclamo en junta de vecinos o publicación en foro comunal) escalará efectivamente a un conflicto regulatorio o paro operacional mayor: 1) Brecha: No existe una formalización matemática del umbral de ignición de crisis de asuntos públicos; 2) Fuente fallida/parcial: Las suites comerciales como Meltwater y Cision publican casos de marketing retrospectivos que seleccionan eventos ya conocidos pero omiten su tasa de falsos positivos en señales débiles; 3) Validación mínima: Ejecutar la Etapa 1 del protocolo empírico de P03 ('Test de Crisis Históricas') evaluando 10 casos históricos documentados de alta conmoción corporativa en Chile entre 2018 y 2025, midiendo si el sistema habría emitido alertas con al menos 72 horas de anticipación con una precisión P >= 0.80 sobre el corpus ciego de señales precursoras.",
+  "findings": [
+    {
+      "claim_id": "P03-C02-C1",
+      "claim": "Sigue sin prueba la capacidad predictiva de señales débiles para anticipar crisis mayores, requiriendo validación retrospectiva mediante el Test de Crisis Históricas con 10 casos chilenos 2018-2025.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Protocolo de Validación P03"
+      },
+      "evidence": [
+        {
+          "source_id": "443e6667-3d26-48ad-b56a-bb825e9ea387",
+          "source_title": "P03_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 4: Etapa 1 - Construcción del Benchmark Retrospectivo",
+          "excerpt_short": "Seleccionar 10 casos históricos documentados de alto impacto... Reconstruir el archivo histórico 60 días previos... Criterio: Detección con al menos 72 horas de anticipación en el 70% de los casos con P >= 0.80.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del protocolo formal de validación empírica de P03.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Archivo histórico de 10 crisis chilenas 2018-2025",
+      "Pipeline de señales P03"
+    ],
+    "actors": [
+      "Validation Auditor",
+      "Historical Corpus Ingester"
+    ],
+    "steps": [
+      "Reconstrucción de 60 días previos",
+      "Ejecución ciega de algoritmos",
+      "Medición de MTTD y precisión"
+    ],
+    "states": [
+      "Historical_Corpus_Loaded",
+      "Blind_Test_Executed",
+      "Empirical_Validation_Scored"
+    ],
+    "outputs": [
+      "Reporte de validación empírica con MTTD y precisión demostrada"
+    ],
+    "exceptions": [
+      "Pérdida de archivos digitales de noticias locales de 2018 por cierre de sitios"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TEST_CRISIS_HISTORICAS",
+      "type": "protocolo_validacion",
+      "name": "Test de Crisis Históricas de Asuntos Públicos",
+      "aliases": [
+        "Historical Crisis Benchmark"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TEST_CRISIS_HISTORICAS",
+      "predicate": "valida_capacidad_predictiva_de",
+      "object_id": "Taxonomia_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C02-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Mean Time to Detect (MTTD) Anticipado",
+      "numerator": "Horas de anticipación de la alerta respecto a la primera portada nacional",
+      "denominator": "10 crisis históricas evaluadas",
+      "context": "Meta: anticipación >= 72 horas en al menos el 70% de los casos"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Ejecutar el Test de Crisis Históricas como puerta de calidad antes de certificar el motor de escucha de BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_P03_WEAK_SIGNALS",
+      "description": "Falta de demostración empírica de predicción de señales débiles",
+      "action": "Ejecutar Etapa 1 de validación con 10 crisis chilenas"
+    }
+  ],
+  "next_question_ids": [
+    "P03-C03"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

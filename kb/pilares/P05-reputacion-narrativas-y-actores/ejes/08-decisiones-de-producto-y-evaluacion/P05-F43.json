@@ -1,0 +1,147 @@
+{
+  "question_id": "P05-F43",
+  "pilar": "P05",
+  "eje": "Decisiones de producto y evaluación",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué vista o alerta ayudaría a explicar una narrativa a un ejecutivo sin exagerar su certeza?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La vista ejecutiva diseñada en el corpus para explicar una narrativa sin exagerar su certeza se estructura en un 'Executive Narrative Brief' de tres componentes calibrados: 1) Resumen de Encuadre Sintético (Framing de Entman): Presenta en un lenguaje directo y desprovisto de jerga técnica las cuatro dimensiones diagnósticas del relato: Problema alegado, Causante señalado, Juicio moral dominante y Remedio normativo exigido por los críticos; 2) Semáforo Epistémico y Nivel de Fase del Asunto: Indica si la narrativa se encuentra en estado de Señal Débil (periférica), Emergente (blogs/redes) o Mainstream (prensa nacional/parlamento), acompañando el diagnóstico con una barra de confianza de 3 niveles (Baja, Media, Alta) sustentada en el número de fuentes independientes y la presencia o ausencia de expedientes públicos oficiales; 3) Banda de Incertidumbre y Advertencia de Sesgos: Explicita las limitaciones del dato (e.g. 'Alerta: El 92% de las menciones provienen de cuentas hiperactivas en redes sociales sin eco en medios acreditados ni en reguladores; riesgo de falso positivo por cámara de eco'). Esta arquitectura entrega al C-level una visión accionable de la amenaza sin generar pánico directivo innecesario ni sobrestimar la precisión del modelo algorítmico.",
+  "findings": [
+    {
+      "claim_id": "P05-F43-C1",
+      "claim": "La comunicación de inteligencia narrativa al C-level exige acoplar el encuadre semántico con bandas de incertidumbre explícitas y notas de advertencia de sesgos de canal.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Diseño de Interfaz BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 7.1: Módulos y Algoritmos Requeridos (Alertas Ejecutivas y Briefs de Apoyo)",
+          "excerpt_short": "Diseño de briefs de apoyo para comités de crisis que evitan sobrecarga cognitiva y explican narrativas sin exagerar su certeza.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "ac368278-a8b8-4d46-b16f-8e90e2055046",
+          "source_title": "Cision: Executive Briefings & Strategic Media Insights for Corporate Affairs",
+          "original_url": "https://www.cision.com/solutions/insights-analysis/",
+          "locator": "Whitepaper: Designing Executive Briefs for C-Suite Decision Making",
+          "excerpt_short": "Executive briefings must distill complex narrative velocity into concise diagnostic frames while explicitly highlighting confidence intervals and data caveats.",
+          "source_date": "2024-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Basado en los lineamientos de diseño de inteligencia ejecutiva de Cision y arquitectura funcional de BRIDGE.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Datos agregados de medios y redes",
+      "Clasificación de encuadre",
+      "Métricas de dispersión y volumen"
+    ],
+    "actors": [
+      "Diseñador de UI/UX",
+      "Analista de Inteligencia Corporativa",
+      "Director Ejecutivo"
+    ],
+    "steps": [
+      "Extracción de los 4 componentes de Entman",
+      "Cálculo de la puntuación de certeza epistémica",
+      "Renderizado del widget ejecutivo con advertencias de sesgo"
+    ],
+    "states": [
+      "Raw_Signals_Synthesized",
+      "Confidence_Scored",
+      "Executive_View_Rendered"
+    ],
+    "outputs": [
+      "Ficha Ejecutiva de Narrativa de 1 página con semáforo de confianza"
+    ],
+    "exceptions": [
+      "Modelos de lenguaje que generen afirmaciones categóricas de riesgo extremo basadas en datos anecdóticos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_EXECUTIVE_BRIEF_UI",
+      "type": "interfaz_sistema",
+      "name": "Vista Ejecutiva de Alerta Narrativa",
+      "aliases": [
+        "Executive Narrative Brief UI"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_EXECUTIVE_BRIEF_UI",
+      "predicate": "comunica_diagnostico_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F43-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Estilo de reporte ejecutivo",
+      "Alerta Comercial Tradicional": "'¡Crisis en Twitter! Caída del 80% en sentimiento, se sugiere comunicado masivo inmediato'.",
+      "Brief Epistémico BRIDGE": "'Narrativa emergente sobre agua en cuenca norte; volumen acotado a 12 cuentas; sin impacto en regulador; certeza Media-Baja; recomendación: monitoreo pasivo'."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Dashboard C-Suite",
+      "implication": "BRIDGE debe incorporar una tarjeta visual de alerta de certeza epistémica que impida a los directivos sobrestimar el impacto de controversias en redes sociales.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F44"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

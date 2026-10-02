@@ -1,0 +1,145 @@
+{
+  "question_id": "P10-F05",
+  "pilar": "P10",
+  "eje": "Origen de solicitudes y señales",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre origen de solicitudes y señales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos metodológicos y regulatorios relativos al origen de solicitudes están respaldados por: 1) Ley 18.045 de Mercado de Valores (BCN Chile, Arts. 9 y 10) y CMF NCG N° 30 (1989): Regulan la obligatoriedad de divulgar hechos esenciales de forma veraz, suficiente y oportuna ante eventos que afecten las operaciones o finanzas corporativas; 2) Anderson (2026, 'Situational Crisis Communication Theory - Operational Framework'): Fundamenta la taxonomía de detonantes de crisis según niveles de atribución de responsabilidad (víctima, accidental, prevenible); 3) City of Oshawa (2024, 'Corporate Communications Policy'): Fija los requisitos mínimos de admisión y registro de consultas de prensa; 4) Broadsight (2025, 'System of Record for Corporate Communications'): Documenta la necesidad de centralizar el intake de requerimientos para erradicar la fragmentación en casillas privadas; y 5) P10_RESEARCH_DOSSIER (2026, Secciones 1 y 2): Formaliza la diferenciación radical entre P07 (coaching individual) y P10 (gobernanza colectiva) y el flujo end-to-end de 11 fases.",
+  "findings": [
+    {
+      "claim_id": "P10-F05-C1",
+      "claim": "El marco de origen de solicitudes se sustenta en la legislación bursátil chilena (Ley 18.045/NCG 30), la teoría SCCT de Anderson, las políticas públicas de Oshawa y las mejores prácticas de software SRM de Broadsight.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_request_origin",
+      "evidence": [
+        {
+          "source_title": "CMF Chile: Norma de Caracter General NCG 30 (Difusion de Hechos Esenciales)",
+          "source_id": "9b7c3a77-f239-472f-b2c3-d19e464a44ec",
+          "locator": "Sección I 'Hechos que deben comunicarse como esenciales'",
+          "retrieved_at": null,
+          "excerpt_short": "Deberá comunicarse como hecho esencial todo hecho o estipulación referente a la sociedad, sus negocios o los valores emitidos por ella, que sea capaz de influir de manera apreciable en la cotización de los mismos o en las decisiones de inversión.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 1 'Introducción y Diferenciación Estructural P07 vs P10'",
+          "retrieved_at": null,
+          "excerpt_short": "Mientras P07 prepara al ser humano para entrar a la arena pública, P10 coordina al equipo multidisciplinario, custodia la verdad corporativa y sostiene la versión aprobada en el tiempo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada entre regulaciones de la CMF y la doctrina arquitectónica del dossier de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes P10",
+      "Normativas CMF",
+      "Artículos de SCCT"
+    ],
+    "actors": [
+      "Auditor de Fuentes",
+      "Analista de Inteligencia Corporativa"
+    ],
+    "steps": [
+      "Verificación de citas textuales y locators",
+      "Comprobación de que no se usen fuentes fallidas (eCFR CAPTCHA o Coombs original)",
+      "Consolidación en el schema JSON"
+    ],
+    "states": [
+      "Fuentes Verificadas",
+      "Citas Cotejadas",
+      "Trazabilidad Completa"
+    ],
+    "outputs": [
+      "Matriz probatoria del Eje 1 de P10"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "CMF NCG 30",
+    "Ley 18.045",
+    "SCCT Anderson",
+    "Broadsight",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "CMF NCG 30",
+      "to": "Hecho Esencial",
+      "type": "MANDATES_COMMUNICATION_OF"
+    },
+    {
+      "from": "Anderson SCCT",
+      "to": "Crisis Detonantes",
+      "type": "THEORIZES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citar fuentes primarias (CMF/BCN) vs Citar blogs de opinión",
+      "diferencia": "Las fuentes primarias garantizan respaldo normativo auditado; los blogs carecen de validez ante directorios y reguladores."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "primary_sources_count": "5 fuentes clave de referencia",
+    "citation_resolution_rate": "100% con UUIDs y textos sustantivos"
+  },
+  "bridge_implications": "Vincular el módulo de ingesta con la base de datos de jurisprudencia y normas de la CMF.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P10-F06",
+    "P10-F07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

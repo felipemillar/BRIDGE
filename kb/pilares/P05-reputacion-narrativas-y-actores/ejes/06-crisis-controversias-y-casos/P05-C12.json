@@ -1,0 +1,140 @@
+{
+  "question_id": "P05-C12",
+  "pilar": "P05",
+  "eje": "Crisis, controversias y casos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué sigue sin prueba sobre crisis, controversias y casos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis de gaps documentado en P05_GAPS_AND_VALIDATION establece: 1) Lo que sigue sin prueba matemática formal: La curva exacta de decaimiento temporal y restitución de confianza reputacional post-crisis. Aunque se sabe que la recuperación requiere años de sacrificios verificables, no existe un modelo matemático estandarizado que prediga con precisión cuántos meses tardará una compañía en recuperar su nivel previo de favorabilidad tras una compensación histórica como la del caso Tissue; 2) Qué fuente es parcial o falló: Fallan los monitores de reputación anuales tradicionales (como Merco o RepTrak), los cuales omiten o aplazan la inclusión de empresas en crisis abiertas, generando un vacío de datos longitudinales durante el período álgido del conflicto; 3) Validación mínima que resolvería la incertidumbre: Implementar un panel de seguimiento longitudinal de cohortes fijas de opinión pública y clientes con mediciones semestrales durante 5 años posteriores a la resolución judicial de una crisis emblemática, midiendo la tasa de desvanecimiento del recuerdo negativo (\nrecuperación gamma) en función de hitos de compensación y cambios de gobernanza acreditados.",
+  "findings": [
+    {
+      "claim_id": "P05-C12-C1",
+      "claim": "La modelación cuantitativa de la tasa de recuperación de confianza post-crisis carece de series temporales continuas de largo plazo en Chile, requiriendo estudios de panel de cohortes fijas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Investigación Longitudinal de Crisis"
+      },
+      "evidence": [
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1: Desfase Temporal entre Monitoreo en Tiempo Real y Métricas Estructurales",
+          "excerpt_short": "Los monitores de reputación consolidados operan en ciclos anuales o semestrales debido a la complejidad de las encuestas, dejando lagunas de información en la trayectoria de recuperación post-crisis.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío empírico documentado en la literatura de longitudinalidad de reputación corporativa.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Series temporales de encuestas post-crisis",
+      "Hitos de cumplimiento de compensaciones"
+    ],
+    "actors": [
+      "Investigador de Opinión Pública",
+      "Analista de Inteligencia"
+    ],
+    "steps": [
+      "Diseño de panel de seguimiento de 5 años",
+      "Medición de asociaciones cognitivas espontáneas con la marca",
+      "Ajuste de modelos de decaimiento exponencial"
+    ],
+    "states": [
+      "Cohort_Established",
+      "Longitudinal_Tracking_Active",
+      "Recovery_Curve_Modelled"
+    ],
+    "outputs": [
+      "Curva empírica de retorno de confianza post-crisis"
+    ],
+    "exceptions": [
+      "Nuevas contingencias operacionales que reinicien el ciclo de pérdida de confianza"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RECOVERY_CURVE_GAP",
+      "type": "vacio_metodologico",
+      "name": "Brecha de Modelación de Curvas de Recuperación",
+      "aliases": [
+        "Post-Crisis Recovery Curve Gap"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RECOVERY_CURVE_GAP",
+      "predicate": "limita_modelado_de",
+      "object_id": "ENT_CRISIS_SCHEMA",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P05-C12-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Enfoque de monitoreo",
+      "Encuesta Anual Aislada": "Una foto estática al año que no permite correlacionar el efecto de la compensación con la recuperación.",
+      "Panel de Cohortes Continuo": "Mide mes a mes cómo la entrega del dinero del SERNAC o la renovación del directorio reduce la tasa de animadversión hacia la marca."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Monitor de Recuperación",
+      "implication": "BRIDGE debe permitir registrar el hito de compensación y proyectar un intervalo de confianza de 24 a 48 meses para la estabilización de los indicadores de reputación.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_POST_CRISIS_LONGITUDINAL",
+      "description": "Falta de modelos cuantitativos calibrados sobre la velocidad de recuperación reputacional post-compensación en Chile.",
+      "severity": "media",
+      "status": "documentado"
+    }
+  ],
+  "next_question_ids": [
+    "P05-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

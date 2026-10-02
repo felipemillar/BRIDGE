@@ -1,0 +1,145 @@
+{
+  "question_id": "P07-F05",
+  "pilar": "P07",
+  "eje": "Objetivo del brief ejecutivo",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre objetivo del brief ejecutivo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El objetivo del brief ejecutivo se respalda en una jerarquía convergente de fuentes primarias y marcos regulatorios: 1) Ámbito de Gobernanza y C-Suite: Page Society (2021, 'The CCO as Pacesetter'; 2023, 'Beyond Communication') y OECD Principles of Corporate Governance (OECD-LEGAL-0413, 2023), que fundamentan la alineación entre conducta corporativa y revelación estratégica; 2) Ámbito de Arquitectura de Mensajes: Umbrex (2022, 'The Message House Framework') y Comms Manoeuvres (2023, 'Media Training for CEOs'); 3) Ámbito de Suites de Inteligencia Ejecutiva: Cision (2024, 'Executive Briefings'), Signal AI (2024, 'External Intelligence into Copilot') y Dow Jones Factiva (2024); 4) Ámbito Legal y Regulatorio Chileno: Ley 20.730 de Lobby (BCN, 2014) y CMF Norma de Carácter General NCG 461 (2021); y 5) Síntesis Metodológica Rectora: P07_RESEARCH_DOSSIER y P07_EVIDENCE_MAP (Septiembre 2026).",
+  "findings": [
+    {
+      "claim_id": "P07-F05-C1",
+      "claim": "Existe una base probatoria interdisciplinaria sólida que vincula la teoría del CCO estratégico, la ingeniería de mensajes ejecutivos y los mandatos regulatorios de transparencia pública y gobierno corporativo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_inventory",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje A) y Sección 3",
+          "excerpt_short": "Eje A: Informes Matinales, Briefings Ejecutivos y Preparación de Directorios. Respaldado con Nivel 1 de confianza por Page Society (Beyond Communication 2023), Cision (Executive Briefings 2024), Signal AI (External Intelligence 2024), Ley 20.730 (BCN Chile) y CMF NCG 461. Se consolida el brief como documento vinculante de gobernanza y protección ejecutiva.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "P07_SOURCE_INDEX: Índice Maestro de Fuentes y Trazabilidad",
+          "source_id": "2aa83224-9070-47c7-a522-1cae52d2958a",
+          "locator": "Tabla de Fuentes Activas P07",
+          "excerpt_short": "Inventario de fuentes primarias activas para Preparación Ejecutiva: 39 fuentes catalogadas, de las cuales 34 son textos externos sustantivos (Page, OECD, CMF, BCN, Cision, Factiva, Umbrex, NIST) y 4 documentos de síntesis técnica.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada completa contra el inventario y mapa de evidencia congelado en P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_fuentes_objetivo_brief": [
+      {
+        "ambito": "Gobernanza CCO",
+        "fuente": "Page Society (2021, 2023) / OECD (2023)",
+        "aporte": "Alineación de objetivos estratégicos con deber de fiduciario y gobierno corporativo."
+      },
+      {
+        "ambito": "Estructura Discursiva",
+        "fuente": "Umbrex (2022) / Comms Manoeuvres (2023)",
+        "aporte": "Message house, bridging, hooking y flagging para control de entrevista."
+      },
+      {
+        "ambito": "Inteligencia de Mercado",
+        "fuente": "Cision (2024) / Signal AI (2024) / Factiva (2024)",
+        "aporte": "Síntesis en 60 segundos y alertas tempranas del entorno."
+      },
+      {
+        "ambito": "Cumplimiento Regulatorio",
+        "fuente": "Ley 20.730 Lobby / CMF NCG 461 (BCN)",
+        "aporte": "Límites legales de revelación y registro obligatorio en InfoLobby."
+      }
+    ]
+  },
+  "entities": [
+    "Page Society",
+    "OECD",
+    "Umbrex",
+    "Cision",
+    "Signal AI",
+    "BCN Chile",
+    "CMF"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Fuentes Originales",
+      "type": "indexes_and_rates"
+    },
+    {
+      "from": "Ley 20.730",
+      "to": "Reuniones de Lobby",
+      "type": "mandates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fuentes Académicas vs Regulatorias",
+      "diferencia": "Las fuentes académicas guían la efectividad comunicacional; las regulatorias fijan barreras penales y administrativas infranqueables."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "verified_sources_count": "10 fuentes primarias citadas directamente",
+    "evidence_tier": "Nivel 1 (Muy Alta Confiabilidad)"
+  },
+  "bridge_implications": "Garantizar que en cada brief emitido por BRIDGE se exponga el árbol de citas con hipervínculos navegables a estas fuentes canónicas.",
+  "open_gaps": [
+    "Monitoreo continuo de cambios reglamentarios en Contraloría General de la República respecto a dictámenes de la Ley de Lobby."
+  ],
+  "next_question_ids": [
+    "P07-F06",
+    "P07-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T04:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

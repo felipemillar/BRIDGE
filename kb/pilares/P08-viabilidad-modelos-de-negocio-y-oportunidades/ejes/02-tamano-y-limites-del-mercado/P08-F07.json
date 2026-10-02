@@ -1,0 +1,154 @@
+{
+  "question_id": "P08-F07",
+  "pilar": "P08",
+  "eje": "Tamaño y límites del mercado",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué datos originales permiten estimar compradores accesibles en Chile y Latinoamérica?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los datos originales del corpus (CMF Chile, rankings empresariales de la Cámara de Comercio de Santiago y estudios de Michael Page y LLYC) permiten estimar el mercado accesible: En Chile, el universo total (TAM) es de aproximadamente 300 grandes corporaciones; el mercado accesible útil (SAM) se compone de 120 a 150 empresas con gerencias formales de asuntos corporativos, alta exposición regulatoria y presupuestos dedicados; y el mercado objetivo capturable inicial (SOM) es de 25 a 40 clientes en 24 a 36 meses. A nivel latinoamericano (expansión andina hacia Perú, Colombia y México), el SAM asciende a entre 800 y 1.200 grandes empresas corporativas en sectores regulados.",
+  "findings": [
+    {
+      "claim_id": "P08-F07-C1",
+      "claim": "El mercado accesible en Chile para plataformas Tech-Enabled de asuntos corporativos está acotado a 120-150 corporaciones de primer nivel, escalable regionalmente a 800-1.200 empresas en LatAm.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "market_size_estimation",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 2.1 'Dimensionamiento de Mercado: TAM, SAM y SOM en Chile y LatAm'",
+          "excerpt_short": "El dimensionamiento del mercado objetivo se sustenta en datos del registro de emisores de la CMF y asociaciones gremiales: En Chile existen aproximadamente 300 sociedades anónimas abiertas y grandes conglomerados (TAM). De estos, entre 120 y 150 operan en sectores de alta intensidad regulatoria y conflictividad pública con gerencias de asuntos corporativos estructuradas (SAM). El SOM realista para una solución Tech-Enabled con cuotas de USD 4.500 a USD 6.500 mensuales se sitúa entre 25 y 40 clientes corporativos en una ventana de 2 a 3 años, generando un ARR de USD 1.35M a USD 2.6M.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Michael Page Chile: Estudios de Remuneraciones y Perfiles en Asuntos Corporativos",
+          "source_id": "b20afdaf-2d4b-40d1-9af6-d6b923893bda",
+          "locator": "Capítulo 'Estructura Salarial y Demanda de Equipos de Asuntos Corporativos', p. 18-22",
+          "excerpt_short": "Se identifican más de 140 corporaciones de gran escala en Chile con gerencias exclusivas de Asuntos Corporativos, Comunicaciones Externas y Relaciones Institucionales, con dotaciones de 3 a 12 profesionales internos por equipo y presupuestos de operación especializados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre registros de emisores CMF, estudios de PageGroup y proyecciones del Dossier P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registro CMF de Sociedades Anónimas",
+      "Padrón de empresas mineras de Sonami/Cochilco",
+      "Catastro de generadoras eléctricas"
+    ],
+    "actors": [
+      "Equipo Comercial BRIDGE",
+      "Analista de Inteligencia de Mercado",
+      "Director de Cuentas"
+    ],
+    "steps": [
+      "Filtrado de emisores por facturación > USD 50M",
+      "Identificación de CCOs y VPs en LinkedIn/InfoLobby",
+      "Categorización en TAM/SAM/SOM",
+      "Construcción de pipeline comercial"
+    ],
+    "states": [
+      "Universo Crudo (TAM)",
+      "Filtrado Calificado (SAM)",
+      "Target Inmediato (SOM)"
+    ],
+    "outputs": [
+      "Pipeline de 50 cuentas prioritarias en Chile"
+    ],
+    "exceptions": [
+      "Empresas en proceso de fusión o liquidación concursal"
+    ]
+  },
+  "entities": [
+    "CMF Chile",
+    "Michael Page Chile",
+    "TAM",
+    "SAM",
+    "SOM",
+    "IPSA"
+  ],
+  "relations": [
+    {
+      "from": "Grandes Corporaciones Chile",
+      "to": "TAM (300 empresas)",
+      "type": "comprises"
+    },
+    {
+      "from": "Sectores Regulados con Dircom",
+      "to": "SAM (120-150 empresas)",
+      "type": "comprises"
+    },
+    {
+      "from": "BRIDGE Target 36m",
+      "to": "SOM (25-40 clientes)",
+      "type": "targets"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Mercado masivo SaaS vs Mercado Enterprise Asuntos Corporativos",
+      "diferencia": "El SaaS masivo busca miles de usuarios a USD 30/mes con alto churn; el mercado corporativo busca 30-50 clientes a USD 60K/año con contratos plurianuales y churn < 5%."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "tam_chile": "300 empresas (TAM: ~USD 18M anuales)",
+    "sam_chile": "120-150 empresas (SAM: ~USD 8M anuales)",
+    "som_chile_3y": "25-40 clientes (SOM: USD 1.35M - USD 2.6M ARR)"
+  },
+  "bridge_implications": "Concentrar la fuerza de ventas en el grupo de las 50 empresas mineras, energéticas y bancarias líderes de Chile antes de intentar dispersarse en otros países.",
+  "open_gaps": [
+    "Verificación de la tasa de cambio de ejecutivos de asuntos corporativos entre empresas del IPSA."
+  ],
+  "next_question_ids": [
+    "P08-F08",
+    "P08-F09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "question_id": "P03-C04",
+  "pilar": "P03",
+  "eje": "Acceso a prensa y web abierta",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué sigue sin prueba sobre acceso a prensa y web abierta, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la exhaustividad de la cobertura en tiempo real de medios hiperlocales e impresos de regiones chilenas que carecen de RSS o streaming continuo: 1) Brecha: Se desconoce el porcentaje exacto de noticias comunales que se pierden por no estar digitalizadas formalmente; 2) Fuente fallida/parcial: GDELT 2.0 y agregadores globales sufren un sesgo metropolitano severo hacia medios de Santiago, omitiendo boletines y prensa de localidades mineras o agrícolas; 3) Validación mínima: Diseñar un panel territorial de control con 50 eventos comunales reales ocurridos en 5 regiones estratégicas (Antofagasta, Atacama, Valparaíso, Biobío y Araucanía), comparando cuántos de esos eventos fueron capturados por el pipeline automatizado frente a los archivos físicos y digitales de los diarios locales, calculando la cobertura efectiva real (Recall).",
+  "findings": [
+    {
+      "claim_id": "P03-C04-C1",
+      "claim": "La cobertura de prensa hiperlocal e impresa no digitalizada carece de medición empírica de exhaustividad, requiriendo un panel de control con 50 eventos comunales en 5 regiones de Chile.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (5 Regiones)",
+        "actor": "Auditoría Territorial P03"
+      },
+      "evidence": [
+        {
+          "source_id": "443e6667-3d26-48ad-b56a-bb825e9ea387",
+          "source_title": "P03_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 2.1: Prensa Impresa Hiperlocal no Digitalizada",
+          "excerpt_short": "Boletines comunales, periódicos locales de circulación restringida... siguen teniendo impacto decisivo... pero carecen de indexación digital en tiempo real.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de los vacíos territoriales identificados en P03_GAPS_AND_VALIDATION.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de 50 eventos comunales reales",
+      "Flujo de noticias capturadas"
+    ],
+    "actors": [
+      "Regional Auditor",
+      "Recall Evaluator"
+    ],
+    "steps": [
+      "Selección de eventos locales",
+      "Cotejo con capturas del pipeline",
+      "Cálculo de Recall territorial"
+    ],
+    "states": [
+      "Events_Identified",
+      "Pipeline_Cross_Checked",
+      "Recall_Calculated"
+    ],
+    "outputs": [
+      "Métrica formal de cobertura territorial hiperlocal"
+    ],
+    "exceptions": [
+      "Medios locales que cierran operaciones durante el periodo de estudio"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_AUDITORIA_TERRITORIAL_PRENSA",
+      "type": "protocolo_evaluacion",
+      "name": "Panel de Auditoría Territorial de Prensa",
+      "aliases": [
+        "Territorial Press Audit Panel"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_AUDITORIA_TERRITORIAL_PRENSA",
+      "predicate": "mide_cobertura_de",
+      "object_id": "Eje_Prensa_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-C04-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Cobertura Territorial Hiperlocal",
+      "numerator": "Eventos comunales detectados por el sistema",
+      "denominator": "50 eventos comunales auditados en terreno",
+      "context": "Medición empírica de ceguera en regiones"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Establecer acuerdos de corresponsalía digital con medios regionales para cerrar el punto ciego de prensa provincial en BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_P03_REGIONAL_PRESS",
+      "description": "Falta de medición de cobertura de prensa hiperlocal no digitalizada",
+      "action": "Implementar panel territorial con 50 eventos comunales"
+    }
+  ],
+  "next_question_ids": [
+    "P03-C05"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "question_id": "P08-F02",
+  "pilar": "P08",
+  "eje": "Problema, segmento y disposición a pagar",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué evidencia separa interés declarado por IA de presupuesto y compra reales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus separa drásticamente el interés discursivo en 'Inteligencia Artificial' (que no pasa de pilotos de prueba o licencias individuales de ChatGPT Plus de $20 USD/mes) de la contratación corporativa formal (Enterprise Software / Retainers). La compra real requiere: 1) Mitigación de riesgos de ciberseguridad, privacidad y soberanía de datos (cumplimiento Ley 21.719 en Chile y cláusulas zero data retention de proveedores de LLM); 2) Garantía de precisión factual (cero alucinaciones respaldadas en fuentes citables auditables); y 3) Un modelo Tech-Enabled que combine software con revisión humana especializada (HITL), ya que las gerencias rechazan el SaaS puro desatendido para decisiones de alta exposición pública.",
+  "findings": [
+    {
+      "claim_id": "P08-F02-C1",
+      "claim": "El presupuesto corporativo en asuntos corporativos solo se libera cuando la solución incluye salvaguardas de gobernanza de datos y supervisión humana experta.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "enterprise_procurement_ai",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 1.2 'Diferenciación entre Hype de IA y Procurement Corporativo'",
+          "excerpt_short": "Existe un abismo entre el interés cosmético en IA generativa (donde directivos usan chatbots para redactar comunicados) y la disposición real a firmar contratos de USD 40.000 a USD 80.000 anuales. El procurement corporativo exige tres condiciones innegociables: 1) Certificaciones de seguridad de la información y privacidad conforme a la Ley 21.719; 2) Ausencia total de alucinaciones en cifras y marcos normativos; y 3) Un componente humano experto (HITL) que filtre y contextualice los hallazgos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "PRSA: Guidance on Artificial Intelligence and Ethics in Communications",
+          "source_id": "8aa1bd49-38e4-4528-9a67-b4b2c3c6b6d3",
+          "locator": "Sección 'Procurement and Enterprise AI Governance', p. 5-7",
+          "excerpt_short": "Enterprise adoption of AI in communications mandates rigorous governance. Organizations must require zero-data-retention agreements from AI model vendors and enforce mandatory human-in-the-loop oversight to uphold professional standards and mitigate reputational risks.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia entre las directrices éticas de PRSA y el dossier de compras corporativas de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Propuesta de valor SaaS",
+      "Evaluación de CISO / Seguridad",
+      "Revisión Legal / Compliance",
+      "Comité de Compras"
+    ],
+    "actors": [
+      "Gerente de Asuntos Públicos (Sponsor)",
+      "CISO (Aprobador Técnico)",
+      "Fiscalía Legal (Aprobador Normativo)",
+      "Gerente de Finanzas (Presupuesto)"
+    ],
+    "steps": [
+      "Demostración ejecutiva",
+      "Filtro de CISO (seguridad y soberanía de datos)",
+      "Prueba de concepto controlada con HITL",
+      "Firma de contrato anual"
+    ],
+    "states": [
+      "Lead Calificado",
+      "Due Diligence de Seguridad",
+      "Piloto HITL",
+      "Contrato Enterprise"
+    ],
+    "outputs": [
+      "Contrato anual de Tech-Enabled Service",
+      "SLA de disponibilidad y precisión"
+    ],
+    "exceptions": [
+      "Veto de CISO si los datos internos se usan para reentrenar modelos fundacionales"
+    ]
+  },
+  "entities": [
+    "CISO",
+    "PRSA",
+    "Fiscalía Corporativa",
+    "Ley 21.719",
+    "Procurement"
+  ],
+  "relations": [
+    {
+      "from": "Interés en IA",
+      "to": "Filtro de Seguridad CISO",
+      "type": "conditioned_by"
+    },
+    {
+      "from": "Presupuesto Real",
+      "to": "Tech-Enabled Service con HITL",
+      "type": "allocated_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Chatbot genérico vs BRIDGE Enterprise",
+      "diferencia": "Un chatbot genérico alucina y filtra datos; BRIDGE opera en tenant aislado con gobernanza de datos y validación de analista senior."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "enterprise_sales_cycle": "3 a 6 meses en empresas IPSA",
+    "pilot_conversion_rate": "> 60% cuando incluye analista HITL asignado"
+  },
+  "bridge_implications": "BRIDGE no debe posicionarse como 'otra herramienta de IA' desatendida, sino como un servicio de inteligencia aumentada respaldado por analistas senior y cumplimiento normativo.",
+  "open_gaps": [
+    "Verificación de los estándares de homologación de proveedores de software en BHP, Codelco y Enel Chile."
+  ],
+  "next_question_ids": [
+    "P08-F03",
+    "P08-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

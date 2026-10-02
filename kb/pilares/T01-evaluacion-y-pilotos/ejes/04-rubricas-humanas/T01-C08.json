@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-C08",
+  "pilar": "T01",
+  "eje": "Rúbricas humanas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre rúbricas humanas, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica suficiente la consistencia inter-juez entre evaluadores de distintas disciplinas (abogados corporativos vs directores de comunicaciones vs relacionadores comunitarios): 1) Vacío Identificado: Lo que un abogado clasifica como 'lenguaje riesgoso e inaceptable' (nota 1.0 por riesgo de litigio) suele ser calificado por el director de comunicaciones como 'tono empático y persuasivo' (nota 5.0), lo cual deprime el coeficiente de acuerdo Krippendorff's alpha por debajo de 0.50 si no existe una pauta unificada; 2) Fuente Fallida / Parcial: SummEval (Fabbri et al. 2021) evaluó periodistas homogéneos sobre noticias breves, no profesionales multidisciplinarios de empresas mineras o financieras; y 3) Validación Mínima Necesaria: Sesión de calibración y prueba ciega con 9 evaluadores (3 legales, 3 de comunicaciones, 3 comunitarios) sobre 30 borradores limítrofes para formalizar una Guía de Anclaje Semántico Multidisciplinar.",
+  "findings": [
+    {
+      "claim_id": "T01-C08-C1",
+      "claim": "El acuerdo inter-juez en la evaluación humana de textos corporativos sufre de varianza extrema debida a la heterogeneidad disciplinar entre abogados y directores de comunicaciones, aspecto no resuelto por la literatura científica disponible en el corpus.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "The Bridge Intelligence Panel"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 4: Limitations of Annotator Demographics",
+          "excerpt_short": "Annotator agreement degrades significantly when evaluators hold divergent professional backgrounds or conflicting normative goals for summary utility.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Limitación documentada en SummEval al extrapolar a paneles interdisciplinarios.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "30 casos limítrofes con tensión legal-comunicacional",
+      "Panel de 9 jueces interdisciplinarios"
+    ],
+    "actors": [
+      "Moderador de Consenso",
+      "3 Abogados",
+      "3 Comunicadores",
+      "3 Comunitarios"
+    ],
+    "steps": [
+      "Evaluar de forma ciega e independiente los 30 casos",
+      "Calcular Krippendorff's alpha inter-disciplinar basal",
+      "Conducir taller de calibración semántica para alinear definiciones de 'tono seguro'",
+      "Re-evaluar y comprobar elevación de Alpha por sobre 0.70"
+    ],
+    "states": [
+      "EVALUACION_CIEGA_INICIAL",
+      "CALCULO_ALPHA_DISPAR",
+      "TALLER_CALIBRACION",
+      "CONSENSO_ALCANZADO"
+    ],
+    "outputs": [
+      "Guía de Anclaje Semántico Multidisciplinar",
+      "Dataset de Calibración Inter-disciplinar"
+    ],
+    "exceptions": [
+      "Si un abogado mantiene el veto legal de una frase, el criterio de prudencia jurídica prevalece en la versión final"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "PANEL_INTERDISCIPLINAR",
+      "type": "experimento",
+      "name": "Panel Evaluador Interdisciplinar",
+      "aliases": [
+        "Legal vs Comms vs Community"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "PANEL_INTERDISCIPLINAR",
+      "predicate": "calibra_rubricas_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C08-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Krippendorff's alpha post-calibración interdisciplinar",
+      "denominator": "Evaluaciones de panel de 9 jueces",
+      "target": ">= 0.70"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "El módulo Hablar debe ofrecer modos de salida configurables: 'Modo Rigor Legal' vs 'Modo Cercanía Comunitaria' para satisfacer a ambos perfiles.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Varianza y desacuerdo evaluativo sistemático entre abogados corporativos y directores de comunicaciones sobre la aceptabilidad de un borrador",
+      "minimum_validation": "Taller y prueba ciega con panel de 9 profesionales multidisciplinarios para calibrar anclas semánticas",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "T01-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

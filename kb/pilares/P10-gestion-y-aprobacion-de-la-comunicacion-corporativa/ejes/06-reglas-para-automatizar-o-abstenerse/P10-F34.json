@@ -1,0 +1,149 @@
+{
+  "question_id": "P10-F34",
+  "pilar": "P10",
+  "eje": "Reglas para automatizar o abstenerse",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar reglas para automatizar o abstenerse de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La estructuración algorítmica de las decisiones de automatización y abstención exige modelar: 1) Entidad AutomationRule (rule_id, task_type: [FORMATTING, RAG_DRAFTING, SENTIMENT_MONITORING], max_permitted_risk_level: [LOW], human_gate_required: boolean, model_temperature_limit: float); 2) Entidad AbstentionTrigger (trigger_id, signal_category: [ACTIVE_LITIGATION, UNCONFIRMED_RUMOR, INSIDER_INFORMATION, LACK_OF_ROOT_CAUSE, PRIVACY_CONFIDENTIALITY], detection_pattern_regex, required_action: [ENFORCE_SILENCE, ROUTE_TO_LEGAL, ISSUE_HOLDING_STATEMENT]); 3) Métricas de Control Humano (review_session_id, user_id, dwell_time_seconds, word_count, reading_speed_wpm, comments_added_count, checklist_items_verified_json); y 4) Condiciones Lógicas de Seguridad (is_automated_publish_blocked == true, if (risk_score >= 0.4) -> force_human_review(), if (has_active_red_line) -> block_generation_and_alert_legal()).",
+  "findings": [
+    {
+      "claim_id": "P10-F34-C1",
+      "claim": "Las reglas de automatización y abstención requieren tipificación de tareas de bajo riesgo, expresiones regulares de detección de temas prohibidos y métricas telemétricas de revisión estructuradas en el motor de políticas de comunicaciones.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_decision_rules_schema",
+      "evidence": [
+        {
+          "source_title": "P10_RESEARCH_DOSSIER: Arquitectura de Gestion, Aprobacion y Mantenimiento",
+          "source_id": "49c765d6-20d4-4361-9fc7-ee10bd457b96",
+          "locator": "Sección 4 'Modelo de Datos de Reglas de Decisión y Control Humano'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de gobernanza algorítmica: PolicyRule, SignalEvaluator, ReviewSessionTelemetry, AbstentionMatrix. Invariante: Nunca permitir publicación sin sesión telemétrica con dwell_time > umbral_mínimo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: Product Workflow and Communications Knowledge",
+          "source_id": "02051e28-a4c6-4597-b381-8763e0d81aec",
+          "locator": "Section 'Policy Engine and Guardrail Representations'",
+          "retrieved_at": null,
+          "excerpt_short": "Structured policy representations map incoming communications against operational triggers, applying algorithmic halts whenever unverified or legally perilous subjects are detected.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño de esquemas y motores de reglas coherente con la arquitectura general del sistema BRIDGE.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de políticas en JSON/YAML",
+      "Texto del requerimiento o borrador",
+      "Perfil del operador"
+    ],
+    "actors": [
+      "Motor de Reglas de BRIDGE",
+      "Servicio de Evaluación de Riesgo",
+      "Oficial de Cumplimiento"
+    ],
+    "steps": [
+      "Carga de reglas de abstención y automatización en el motor de inferencia",
+      "Evaluación en tiempo real del borrador frente a las reglas",
+      "Cálculo de puntuación de riesgo compuesta (semántica + jurídica + canal)",
+      "Disparo de acciones automáticas (bloqueo, advertencia o ruteo)",
+      "Generación de reporte de cumplimiento para la sesión"
+    ],
+    "states": [
+      "POLICIES_LOADED",
+      "INPUT_EVALUATED",
+      "RISK_CALCULATED",
+      "GUARDRAILS_APPLIED"
+    ],
+    "outputs": [
+      "Estructura de decisión validada con directivas de ejecución"
+    ],
+    "exceptions": [
+      "Conflictos entre reglas se resuelven bajo el principio de máxima precaución (abstención o escalamiento a Legal)"
+    ]
+  },
+  "entities": [
+    "Policy Engine",
+    "AbstentionTrigger",
+    "AutomationRule",
+    "Broadsight Knowledge",
+    "P10_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "AbstentionTrigger",
+      "to": "Flujo de Publicación",
+      "type": "HALTS_AND_ROUTES_TO_LEGAL"
+    },
+    {
+      "from": "ReviewSessionTelemetry",
+      "to": "Firma Digital",
+      "type": "VALIDATES_GENUINENESS"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Políticas en PDF no leídas vs Motor de políticas codificado",
+      "diferencia": "Las políticas en PDF se ignoran durante las emergencias; el motor codificado bloquea la pantalla e impide físicamente saltarse los controles."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "policy_rule_evaluation_latency_ms": "Tiempo en milisegundos para evaluar todas las reglas de abstención",
+    "rule_coverage_completeness": "% de tipologías de riesgo con al menos una regla de detección asociada"
+  },
+  "bridge_implications": "BRIDGE debe implementar un Policy Engine ligero en TypeScript/Python que evalúe las reglas de decisión de forma síncrona en cada transición de estado.",
+  "open_gaps": [
+    "Optimización de modelos locales de embeddings para detectar temas litigiosos sin latencia en la UI."
+  ],
+  "next_question_ids": [
+    "P10-F35",
+    "P10-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

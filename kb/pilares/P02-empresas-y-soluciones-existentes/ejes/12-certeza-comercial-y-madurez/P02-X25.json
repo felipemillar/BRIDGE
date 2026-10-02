@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X25",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Certeza comercial y madurez",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué pruebas públicas diferencian producto disponible, piloto cerrado, beta y mera propuesta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El marco epistemológico de P02 fija cuatro niveles probatorios estrictos para discriminar la madurez de los productos: 1) Producto Disponible Comercial / Oferta Pública Demostrada (OPD): el software cuenta con portal comercial activo, especificaciones de producto, términos de servicio públicos, documentación de soporte y clientes activos con facturación recurrente (e.g. Litoralpress, Broadsight, Meltwater, Cision, Quorum); 2) Documentación Técnica Identificada (DTI): el vendor dispone de manuales de arquitectura, documentación formal de APIs, esquemas de bases de datos o evaluaciones de analistas independientes (e.g. Forrester Wave para AlphaSense, specs de Glean); 3) Beta Cerrada o Piloto / Declaración en Marketing (FD): capacidades anunciadas en blogs, notas de prensa o páginas de producto donde no existen manuales de API públicos ni clientes verificables nombrados (e.g. agentes de predicción cognitiva en Burson Decipher o funciones autónomas de redacción de crisis); 4) Mera Propuesta / Hipótesis de Diseño: modelos de referencia conceptual y formulaciones teóricas sin código comercial desplegado (e.g. The Bridge Intelligence); Nota de rigor: en el universo de los 70 proveedores comerciales, NINGUNO cuenta con una 'Prueba Operacional Realizada' (POR) independiente en el contexto del benchmark de investigación.",
+  "findings": [
+    {
+      "claim_id": "P02-X25-C1",
+      "claim": "El marco epistemológico de P02 clasifica la madurez comercial en cuatro niveles objetivos (OPD, DTI, FD e hipótesis de diseño), certificando que ninguno de los 70 proveedores comerciales ha sido sometido a una prueba operacional realizada (POR) independiente en este estudio.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Marco Epistemológico P02"
+      },
+      "evidence": [
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Epistemic Hierarchy and Maturity Levels Framework",
+          "excerpt_short": "Formal scale distinguishing OPD (Demonstrated Public Offering), DTI (Identified Technical Documentation), FD (Marketing Claim), and POR (Performed Operational Proof = zero instances among the 70 commercial vendors).",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:54:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de las definiciones del atlas de reconciliación de P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Páginas comerciales de producto",
+      "Manuales de API y guías técnicas",
+      "Marco de certeza comercial de P02"
+    ],
+    "actors": [
+      "Auditor Epistémico",
+      "Evaluador de Madurez de Producto"
+    ],
+    "steps": [
+      "Inspección de documentación pública disponible",
+      "Asignación de categoría probatoria (OPD, DTI, FD, Hipótesis)",
+      "Control de consistencia frente a la escala de evidencia"
+    ],
+    "states": [
+      "Documentos_Inspeccionados",
+      "Nivel_Asignado",
+      "Calificacion_Registrada"
+    ],
+    "outputs": [
+      "Clasificación de madurez probatoria por proveedor"
+    ],
+    "exceptions": [
+      "Nuevos lanzamientos que aporten manuales de API posteriores a la fecha de corte"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ESCALA_EVIDENCIA_P02",
+      "type": "marco_metodologico",
+      "name": "Escala Epistémica de Certeza Comercial P02",
+      "aliases": [
+        "P02 Evidence Scale"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ESCALA_EVIDENCIA_P02",
+      "predicate": "fija_cero_instancias_de_por_en",
+      "object_id": "70_Proveedores_Comerciales",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X25-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Declaración en Marketing (FD) vs Oferta Pública Demostrada (OPD)",
+      "Declaración en Marketing": "Un titular en la web prometiendo 'asistente autónomo de crisis con IA'.",
+      "Oferta Pública Demostrada": "Software que puede contratarse hoy, con términos de servicio, manuales de usuario y clientes reales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe transparentar su estatus de hipótesis de diseño y aspirar a ser el primer desarrollo sometido a una prueba POR formal.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X26"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:54:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

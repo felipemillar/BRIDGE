@@ -1,0 +1,146 @@
+{
+  "question_id": "P08-F41",
+  "pilar": "P08",
+  "eje": "Diferenciación como hipótesis",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre diferenciación como hipótesis?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos de este eje se respaldan en cinco fuentes principales del corpus: 1) Arthur W. Page Society ('Building Belief' y 'Strategic Plan 2024-2026'), que conceptualiza la necesidad de integrar las operaciones internas con la voz corporativa externa; 2) McKinsey & Company (2024-2026), que valida que la ventaja competitiva en asuntos corporativos reside en la capacidad de anticipación y no en el volumen de clippings; 3) P08_QUALITY_ADDENDUM (2026), que establece la jerarquía de valor y los umbrales cuantitativos de falsación; 4) BCN Chile (2024-2026), con el marco normativo de la Ley 20.730 de Lobby y su plataforma InfoLobby; y 5) CMF Chile (2025-2026), con la regulación de divulgación de hechos esenciales y memorias bajo NCG 461.",
+  "findings": [
+    {
+      "claim_id": "P08-F41-C1",
+      "claim": "La tesis de diferenciación integra doctrina de liderazgo corporativo internacional (Page Society, McKinsey) con las fuentes institucionales chilenas que sustentan el cruce operativo (BCN, CMF, InfoLobby).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "bibliographic_differentiation_evidence",
+      "evidence": [
+        {
+          "source_title": "Arthur W. Page Society: Strategic Plan 2024-2026 & Future of CCO",
+          "source_id": "0a79d354-4b9b-4e32-abf6-c76b965831cd",
+          "locator": "Strategic Priorities 'Integrating Stakeholder Intelligence into Core Business', p. 5-8",
+          "excerpt_short": "The defining capability of future corporate affairs teams is relational intelligence: the capacity to link societal trends and stakeholder interactions directly into operational decision-making.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 20.730 Regula el Lobby y Gestiones de Intereses Particulares",
+          "source_id": "2535d740-5434-4d16-9601-0e9b6e9fdd0a",
+          "locator": "Artículos 5 a 9 'Registro Público de Agendas y Audiencias de Autoridades'",
+          "excerpt_short": "Las autoridades y funcionarios sujetos pasivos de la ley deben registrar obligatoriamente las audiencias, donaciones y viajes, constituyendo una base de datos pública y trazable de las interacciones de intereses particulares con el Estado.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el corpus de P08 de las fuentes legales y doctrinales que respaldan el cruce relacional.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Informes Page Society",
+      "Leyes BCN Chile",
+      "Dossier y Addendum P08"
+    ],
+    "actors": [
+      "Investigador Antigravity",
+      "Auditor de Citas"
+    ],
+    "steps": [
+      "Verificación de concordancia de citas",
+      "Cotejo de artículos de ley",
+      "Consolidación en repositorio de evidencia"
+    ],
+    "states": [
+      "Fuentes Localizadas",
+      "Citas Cotejadas",
+      "Aprobado"
+    ],
+    "outputs": [
+      "Catálogo de respaldo del Eje 7"
+    ],
+    "exceptions": [
+      "Reformas a la Ley de Lobby en tramitación en el Congreso que amplíen el catálogo de sujetos pasivos"
+    ]
+  },
+  "entities": [
+    "Arthur W. Page Society",
+    "McKinsey",
+    "BCN Chile",
+    "Ley 20.730",
+    "CMF Chile",
+    "NCG 461"
+  ],
+  "relations": [
+    {
+      "from": "Ley 20.730 (BCN)",
+      "to": "Módulo Relacionar",
+      "type": "provides_data_for"
+    },
+    {
+      "from": "Page Society / McKinsey",
+      "to": "Tesis de Valor Integrado",
+      "type": "validates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citas genéricas sobre 'reputación' vs Respaldo normativo específico",
+      "diferencia": "Las citas generales no convencen a un abogado o CFO; respaldar la propuesta en la Ley 20.730 y NCG 461 otorga rigor institucional inobjetable."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "statutory_sources_count": "2 leyes chilenas críticas (Ley 20.730 y Ley 21.719)",
+    "institutional_frameworks": "CMF NCG 461 y Sistema SNIFA de la SMA"
+  },
+  "bridge_implications": "Incorporar citas directas a la Ley 20.730 y NCG 461 en todas las propuestas de valor corporativas.",
+  "open_gaps": [
+    "Monitorear el proyecto de ley que moderniza la Ley de Lobby actualmente radicado en la Comisión de Gobierno Interior."
+  ],
+  "next_question_ids": [
+    "P08-F42",
+    "P08-F43"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

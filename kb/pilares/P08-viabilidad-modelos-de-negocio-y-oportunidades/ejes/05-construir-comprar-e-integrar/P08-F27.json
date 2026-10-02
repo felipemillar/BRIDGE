@@ -1,0 +1,150 @@
+{
+  "question_id": "P08-F27",
+  "pilar": "P08",
+  "eje": "Construir, comprar e integrar",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué prueba técnica y comercial debería anteceder una decisión de integración?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Antes de comprometer capital o firmar contratos plurianuales de integración de cualquier API o proveedor externo, el corpus exige ejecutar un protocolo dual de validación en 14 días: 1) Prueba Técnica (Proof of Concept - PoC): Evaluación de latencia P95 (< 3.000 ms en inferencia y < 5.000 ms en búsqueda semántica de gran volumen), tasa de errores HTTP (< 0.1% en 10.000 llamadas continuas de estrés), fidelidad de extracción factual (> 98% sin alucinaciones en un dataset de control de 200 resoluciones de la SMA y leyes chilenas) y compatibilidad de seguridad (cifrado en tránsito TLS 1.3, soporte SSO SAML 2.0 y certificación SOC 2 / ISO 27001); y 2) Prueba Comercial (Commercial Diligence): Análisis de TCO marginal escalable a 50 clientes sin saltos exponenciales de tarifa, evaluación de cláusulas de salida y penalizaciones por rescisión anticipada, y confirmación de 'Zero Data Retention' sin excepciones.",
+  "findings": [
+    {
+      "claim_id": "P08-F27-C1",
+      "claim": "Toda integración de proveedores debe superar una prueba técnica de estrés de 14 días y una auditoría de condiciones comerciales y privacidad antes de su adopción en producción.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "integration_validation_protocol",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 5.3 'Protocolo de Validación Técnica y Comercial de Integraciones'",
+          "excerpt_short": "Protocolo obligatorio de integración: Antes de integrar formalmente un componente externo, se exige un benchmark de 14 días evaluando cuatro compuertas técnicas: latencia P95 inferior a 3 segundos, disponibilidad del 99.9%, precisión factual superior al 98% sobre documentos regulatorios chilenos, y cumplimiento estricto del estándar Zero Data Retention. Comercialmente, se debe modelar la curva de costos unitarios hasta 100 clientes asegurando que el costo de la API no degrade el margen bruto objetivo del 70%.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 6 'Compuertas de Decisión Técnica'",
+          "excerpt_short": "Se veta de forma terminante cualquier proveedor de IA que no ofrezca por contrato el compromiso de no utilizar los datos del cliente para entrenamiento ni evaluación de modelos fundacionales.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Parámetros de prueba y compuertas de decisión claramente especificados en P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Candidato a proveedor",
+      "Dataset de prueba chileno (SMA/BCN/CMF)",
+      "Criterios de aceptación"
+    ],
+    "actors": [
+      "QA Lead",
+      "Security Architect",
+      "CFO"
+    ],
+    "steps": [
+      "Ejecución de test de estrés de 10.000 llamadas",
+      "Auditoría de respuestas y detección de alucinaciones",
+      "Revisión de términos contractuales y DPA",
+      "Emisión de dictamen de aprobación o rechazo"
+    ],
+    "states": [
+      "Candidato en PoC",
+      "Test en Ejecución",
+      "Auditado",
+      "Aprobado / Vetado"
+    ],
+    "outputs": [
+      "Reporte de certificación de proveedor"
+    ],
+    "exceptions": [
+      "Proveedores que no cumplan el estándar SOC 2 son descartados inmediatamente sin iniciar el PoC técnico"
+    ]
+  },
+  "entities": [
+    "Protocolo PoC 14 días",
+    "Latencia P95",
+    "Zero Data Retention",
+    "SOC 2",
+    "Margen Bruto 70%"
+  ],
+  "relations": [
+    {
+      "from": "Proveedor Externo",
+      "to": "PoC Técnico 14 días",
+      "type": "evaluated_by"
+    },
+    {
+      "from": "Superación de PoC",
+      "to": "Integración a Producción",
+      "type": "authorizes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Integración impulsiva vs Protocolo de validación riguroso",
+      "diferencia": "Integrar sin pruebas amarra a la empresa a costos ocultos y fallas de servicio; el protocolo de 14 días garantiza estabilidad y rentabilidad predecible."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "latency_p95_threshold": "< 3.000 ms",
+    "factual_accuracy_benchmark": "> 98% sobre dataset regulatorio chileno",
+    "http_error_rate_max": "< 0.1%"
+  },
+  "bridge_implications": "Crear el banco de pruebas automatizado de 200 casos regulatorios chilenos para correrlo contra cualquier nuevo modelo o versión de LLM antes de desplegarlo a los clientes.",
+  "open_gaps": [
+    "Determinar el costo de contratar una suite de pruebas de penetración (pentest) externa para la homologación corporativa."
+  ],
+  "next_question_ids": [
+    "P08-F28",
+    "P08-F29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

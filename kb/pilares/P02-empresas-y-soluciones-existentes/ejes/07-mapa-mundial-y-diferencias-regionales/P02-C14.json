@@ -1,0 +1,141 @@
+{
+  "question_id": "P02-C14",
+  "pilar": "P02",
+  "eje": "Mapa mundial y diferencias regionales",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué sigue sin prueba sobre mapa mundial y diferencias regionales, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba la viabilidad técnica y legal de estandarizar la ingesta automatizada de resoluciones de los 345 municipios de Chile, Juzgados de Policía Local y tribunales ambientales regionales: 1) Brecha: Ninguna plataforma comercial ha demostrado un conector API continuo y limpio para actas municipales de concejo comunal o dictámenes sanitarios de seremis en regiones, donde se originan clausuras y paralizaciones operacionales; 2) Fuentes fallidas/parciales: Los proveedores de inteligencia legislativa (FiscalNote, Polit-X) muestran ingesta del Congreso Nacional o Diarios Oficiales centrales, pero carecen de infraestructura para el nivel municipal descentralizado; 3) Validación mínima: Diseñar y ejecutar un piloto de web scraping y estandarización documental sobre 20 municipalidades de comunas mineras e industriales en Chile (e.g. Antofagasta, Calama, Huasco, Mejillones, Quintero), evaluando estabilidad de los portales de transparencia y latencia de captura.",
+  "findings": [
+    {
+      "claim_id": "P02-C14-C1",
+      "claim": "La ingesta estructurada de resoluciones municipales, actas de concejo comunal y decretos edilicios carece de soluciones comerciales maduras en América Latina, manteniéndose como un vacío tecnológico no resuelto.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / América Latina",
+        "actor": "Ecosistema GovTech Local"
+      },
+      "evidence": [
+        {
+          "source_id": "1c55d819-caf7-4138-b3fe-15f9bfb47d86",
+          "source_title": "P02_GLOBAL_GAPS_AND_VALIDATION_V1",
+          "original_url": null,
+          "locator": "Municipal and Local Regulatory Ingestion Gap",
+          "excerpt_short": "No commercial vendor provides automated ingestion pipelines for municipal-level council decrees, building permits, or local environmental sanctions in Latin America.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:46:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación de vacíos de integración en plataformas GovTech de la región.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Portales de Transparencia Activa de 20 municipios",
+      "Herramientas de scraping automatizado",
+      "Esquemas de normalización de decretos"
+    ],
+    "actors": [
+      "Ingeniero de Datos GovTech",
+      "Especialista en Derecho Administrativo Municipal"
+    ],
+    "steps": [
+      "Mapeo de arquitectura web de los portales edilicios",
+      "Desarrollo de conectores de ingesta",
+      "Medición de tasa de éxito de descarga y parsing",
+      "Evaluación de costos de mantenimiento"
+    ],
+    "states": [
+      "Portales_Mapeados",
+      "Conectores_Probados",
+      "Factibilidad_Determinada"
+    ],
+    "outputs": [
+      "Estudio de factibilidad técnica de ingesta municipal descentralizada"
+    ],
+    "exceptions": [
+      "Portales municipales fuera de servicio o protegidos por captchas dinámicos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PILOTO_MUNICIPAL",
+      "type": "piloto_tecnico",
+      "name": "Piloto de Ingesta Regulatoria Municipal Descentralizada",
+      "aliases": [
+        "Municipal Ingestion Pilot"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PILOTO_MUNICIPAL",
+      "predicate": "investiga_viabilidad_de",
+      "object_id": "Ingesta_Normativa_Local",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-C14-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Regulación Centralizada (Diario Oficial) vs Regulación Descentralizada (Municipios)",
+      "Regulación Centralizada": "Un único portal web estructurado con publicación diaria predecible.",
+      "Regulación Descentralizada": "345 sitios web heterogéneos, formatos PDF escaneados no estándares y nula estabilidad de servidores."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Relacionar",
+      "implication": "BRIDGE puede crear una barrera de entrada formidable si logra resolver la ingesta automatizada de decretos municipales en zonas de alta inversión industrial.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap_id": "GAP_MUNICIPAL_INGESTION",
+      "description": "Falta de prueba de ingesta automatizada de municipios en Chile",
+      "action": "Ejecutar piloto de scraping en 20 comunas"
+    }
+  ],
+  "next_question_ids": [
+    "P02-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:46:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

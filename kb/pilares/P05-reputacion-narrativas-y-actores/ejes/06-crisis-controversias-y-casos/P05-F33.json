@@ -1,0 +1,145 @@
+{
+  "question_id": "P05-F33",
+  "pilar": "P05",
+  "eje": "Crisis, controversias y casos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué lecciones de esos casos son transferibles y cuáles dependen del sector o territorio?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis comparativo documenta con nitidez qué lecciones son universalmente transferibles a cualquier industria y cuáles dependen estrictamente del sector económico y territorio: 1) Lecciones Universalmente Transferibles: a) Ineficacia de la comunicación cosmética: Las campañas de imagen publicitaria no pueden contrarrestar fallas graves de conducta objetiva ni salvar a una empresa de la sanción moral ciudadana; b) Validez de la teoría SCCT de Coombs: En crisis intencionales/prevenibles, la negación agrava irreversiblemente el daño legal y reputacional; c) La cooperación temprana con el regulador mitiga riesgos penales y financieros; d) El principio de Page de que el carácter corporativo se expresa a través de los colaboradores y conductas reales; 2) Lecciones Específicas de Sector o Territorio: a) En sectores extractivos, energéticos e infraestructura territorial: La Licencia Social para Operar (SLO) y el cumplimiento de normativas de pueblos originarios (Convenio 169 OIT y participación ciudadana del SEIA) son condiciones sine qua non de viabilidad física; no pueden gestionarse con relaciones públicas en Santiago y dependen del arraigo en cuencas y caletas locales; b) En consumo masivo y retail B2C: La alta elasticidad de sustitución de marcas permite al consumidor castigar comercialmente con boicots directos inmediatos, exigiendo compensaciones monetarias visibles para recuperar cuota de mercado; c) En servicios regulados (banca, sanitarias, telecomunicaciones): La reputación ante el regulador sectorial (CMF, SISS, SUBTEL) prevalece sobre la opinión pública, determinando la concesión del servicio.",
+  "findings": [
+    {
+      "claim_id": "P05-F33-C1",
+      "claim": "Los principios de respuesta a crisis y gobernanza ética son universales, mientras que la gestión de legitimidad territorial en Chile está supeditada a normativas indígenas y ambientales intransferibles.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Global",
+        "actor": "Corporaciones Multisectoriales"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 6: Lecciones para Asuntos Corporativos",
+          "excerpt_short": "Diferenciación entre lecciones de consumo masivo (Tissue) y lecciones territoriales de infraestructura (Convenio 169 OIT y SLO).",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "50e7cfce-93a6-4d51-a53e-50aa586579f3",
+          "source_title": "Boutilier & Thomson: Modelling and Measuring the Social License to Operate (SLO)",
+          "original_url": "https://www.socialicense.com/publications/Modelling_and_Measuring_the_SLO.pdf",
+          "locator": "Sección: Site-Specific Social License",
+          "excerpt_short": "Social license is inherently site-specific and cannot be transferred across operating regions or managed through broad media campaigns.",
+          "source_date": "2011-09-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Distinción fundamentada en literatura comparada de crisis y modelos de licencia social territoriales.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Perfil sectorial de la empresa (B2B, B2C, Extractivo, Financiero)",
+      "Ubicación territorial de las faenas"
+    ],
+    "actors": [
+      "Director de Estrategia Corporativa",
+      "Consultor Territorial"
+    ],
+    "steps": [
+      "Identificación de vulnerabilidades sectoriales específicas",
+      "Selección de manual de respuesta calibrado al sector",
+      "Alineación de vocerías territoriales vs nacionales"
+    ],
+    "states": [
+      "Profile_Classified",
+      "Context_Calibrated",
+      "Playbook_Tailored"
+    ],
+    "outputs": [
+      "Manual de Gestión de Contingencias contextualizado por industria"
+    ],
+    "exceptions": [
+      "Aplicar un manual de relaciones públicas de retail a una crisis de consulta indígena minera"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TRANSFERABILITY_FRAMEWORK",
+      "type": "marco_metodologico",
+      "name": "Marco de Transferibilidad de Lecciones de Crisis",
+      "aliases": [
+        "Sectoral Transferability"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TRANSFERABILITY_FRAMEWORK",
+      "predicate": "condiciona_manual_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F33-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Especificidad territorial",
+      "Sector Retail / Consumo Masivo": "Impacto nacional centralizado, sensible a campañas digitales y compensaciones SERNAC.",
+      "Sector Minero / Forestal / Energía": "Impacto localizado en comunidades rurales y cuencas, sensible a diálogo presencial y Convenio 169 OIT."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Configurador Sectorial",
+      "implication": "BRIDGE debe adaptar sus árboles de decisión y diagnósticos de riesgo según si la empresa usuaria opera en industrias con faenas territoriales o en servicios B2C.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

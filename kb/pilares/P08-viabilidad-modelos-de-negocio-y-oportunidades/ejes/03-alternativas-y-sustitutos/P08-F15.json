@@ -1,0 +1,148 @@
+{
+  "question_id": "P08-F15",
+  "pilar": "P08",
+  "eje": "Alternativas y sustitutos",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué comparación del dossier debe corregirse a la luz de la fe de erratas de P02?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "A la luz de la fe de erratas obligatoria de P02 (`00_P02_GLOBAL_READ_ME_AND_ERRATA`), deben corregirse tres comparaciones erróneas que figuraban en las versiones preliminares del dossier: 1) Las 70 entidades catalogadas en el atlas de P02 no corresponden a 70 soluciones corporativas independientes y operativas, sino a fichas de catálogo que incluyen productos descontinuados, funciones accesorias y marcas de un mismo holding; 2) Las declaraciones comerciales de vendors globales (como 'IA predictiva de riesgos' de Signal AI o 'monitoreo parlamentario omnicanal' de FiscalNote) son claims publicitarios no respaldados empíricamente, pues no operan en Chile ni procesan el Diario Oficial o InfoLobby; y 3) Debe eliminarse la afirmación de que el software puro reemplaza al consultor, ya que sin el componente humano experto (HITL), ninguna herramienta tecnológica existente supera la barrera de confianza y precisión exigida por un Directorio.",
+  "findings": [
+    {
+      "claim_id": "P08-F15-C1",
+      "claim": "La fe de erratas de P02 obliga a rectificar cualquier supuesto de que existen 70 competidores directos o que los vendors globales poseen capacidades operativas reales en el entorno institucional chileno.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "p02_errata_reconciliation",
+      "evidence": [
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 1 'Precedencia Editorial y Rectificaciones desde P02'",
+          "excerpt_short": "Conforme a la fe de erratas canónica de P02 (00_P02_GLOBAL_READ_ME_AND_ERRATA), se corrigen las siguientes distorsiones: 1) El mercado no tiene 70 competidores viables para BRIDGE, sino menos de 5 alternativas reales en Chile (agencias locales consolidadas y 2 softwares extranjeros con presencia testimonial); 2) Los discursos comerciales de 'predicción algorítmica de crisis' deben catalogarse como meras hipótesis de marketing no demostradas; y 3) El software desatendido no es un sustituto viable en el C-Suite chileno.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 3.3 'Rectificación de Comparaciones según Errata Canónica'",
+          "excerpt_short": "Se rectifica formalmente: los catálogos comerciales no constituyen prueba de madurez tecnológica. Ningún proveedor internacional listado en P02 posee integraciones nativas auditadas con la plataforma InfoLobby de la Ley 20.730 ni con el Sistema Nacional de Información de Fiscalización Ambiental (SNIFA) de la SMA.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación estricta de la regla de precedencia editorial canónica de P02 y P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+      "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+      "P08_QUALITY_ADDENDUM"
+    ],
+    "actors": [
+      "Auditor Editorial",
+      "Lead Researcher",
+      "Arquitecto de BRIDGE"
+    ],
+    "steps": [
+      "Revisión de afirmaciones preliminares sobre competidores",
+      "Depuración de claims comerciales no verificados",
+      "Actualización del mapa competitivo con fuentes locales reales"
+    ],
+    "states": [
+      "Distorsión Detectada",
+      "Regla de Precedencia Aplicada",
+      "Texto Rectificado"
+    ],
+    "outputs": [
+      "Matriz de competencia saneada y objetiva"
+    ],
+    "exceptions": [
+      "Identificación de nuevos entrantes locales que requieran catalogación independiente"
+    ]
+  },
+  "entities": [
+    "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+    "P08_QUALITY_ADDENDUM",
+    "FiscalNote",
+    "Signal AI",
+    "SNIFA",
+    "InfoLobby"
+  ],
+  "relations": [
+    {
+      "from": "Fe de Erratas P02",
+      "to": "Dossier Preliminar",
+      "type": "overrules"
+    },
+    {
+      "from": "Vendors Globales",
+      "to": "Inexistencia de Conectores SMA/InfoLobby",
+      "type": "characterized_by"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "70 competidores aparentes vs 5 alternativas reales",
+      "diferencia": "La catalogación cruda sugería un mercado saturado; el filtro de erratas demuestra un mercado chileno desatendido en soluciones de inteligencia regulatoria profunda."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "reconciled_real_competitors_chile": "< 5 alternativas relevantes en el mercado corporativo",
+    "unsupported_vendor_claims_excluded": "100% de claims de 'predicción mágica' reclasificados como hipótesis comercial"
+  },
+  "bridge_implications": "No intimidarse por la lista de 70 nombres de P02; la oportunidad real de mercado en Chile está abierta porque ninguno resuelve la tríada regulatorio-operativo-HITL local.",
+  "open_gaps": [
+    "Verificar si FiscalNote o Quorum tienen planes de abrir oficinas de desarrollo en Santiago."
+  ],
+  "next_question_ids": [
+    "P08-F16",
+    "P08-F17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

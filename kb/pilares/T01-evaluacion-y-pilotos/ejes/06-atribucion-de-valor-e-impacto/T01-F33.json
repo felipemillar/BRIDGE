@@ -1,0 +1,155 @@
+{
+  "question_id": "T01-F33",
+  "pilar": "T01",
+  "eje": "Atribución de valor e impacto",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué indicador temprano puede usarse sin prometer impacto final?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El mejor indicador temprano (Leading Indicator) para medir el valor real de The Bridge Intelligence durante un piloto de 4 a 6 semanas, sin prometer impacto reputacional final, es la Tasa de Utilización Efectiva y Ahorro Neto de Tiempo Validado por el Analista (Validated Net Time Savings Rate / WAP - Weekly Active Professional): 1) Fórmula Operativa: Horas históricas dedicadas a la tarea menos horas insumidas con asistencia de BRIDGE (incluyendo tiempo de revisión humana), condicionado a que el entregable mantenga un puntaje de consistencia factual >= 4.5/5.0; 2) Tasa de Aceptación de Borradores (Draft Acceptance Rate): Porcentaje de párrafos o síntesis generados por el módulo Hablar que son aprobados e incorporados al documento final sin necesidad de reescritura total (meta >= 70%); y 3) Tasa de Reducción del Ciclo de Aprobación Interna: Reducción del tiempo transcurrido desde la solicitud del área de negocios hasta el visto bueno legal (meta >= 40% de reducción).",
+  "findings": [
+    {
+      "claim_id": "T01-F33-C1",
+      "claim": "El marco AMEC (f7ad452c) define los indicadores tempranos operativos (outcomes intermedios de eficiencia y adopción) como la métrica más confiable y honesta para pilotos de software corporativo, demostrando viabilidad y retorno antes de que puedan medirse impactos de largo plazo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020",
+        "region": "Global",
+        "actor": "AMEC Global"
+      },
+      "evidence": [
+        {
+          "source_id": "f7ad452c-58e4-47a4-81ba-7248495038a3",
+          "source_title": "AMEC - Integrated Evaluation Framework for Public Relations & Corporate Affairs",
+          "original_url": null,
+          "locator": "Intermediary Metrics & Leading Indicators, p. 4",
+          "excerpt_short": "Leading indicators measure process velocity, workflow adoption, and intermediate organizational efficiency without relying on speculative long-term reputation claims.",
+          "source_date": "2020",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Directriz metodológica AMEC para evaluación intermedia.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Logs de edición y aceptación de borradores",
+      "Marcas de tiempo de flujo de aprobación"
+    ],
+    "actors": [
+      "Analista usuario del piloto",
+      "Líder de Proyecto del Cliente"
+    ],
+    "steps": [
+      "Registrar la hora de inicio de la tarea y la versión inicial provista por BRIDGE",
+      "Calcular el tiempo invertido por el analista en verificar citas y ajustar estilo",
+      "Medir el porcentaje del texto generado que fue retenido en la versión final",
+      "Comparar contra el tiempo de referencia histórico registrado en el preflight"
+    ],
+    "states": [
+      "GENERACION_BORRADOR",
+      "EDICION_HUMANA",
+      "APROBACION_FLUJO",
+      "COMPUTO_AHORRO"
+    ],
+    "outputs": [
+      "Métrica de Ahorro Neto Validado",
+      "Tasa de Adopción de Borradores"
+    ],
+    "exceptions": [
+      "Si un entregable requiere reescritura total por alucinación factual, el ahorro de tiempo se computa como 0%"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "AHORRO_NETO_VALIDADO",
+      "type": "metrica",
+      "name": "Ahorro Neto de Tiempo Validado",
+      "aliases": [
+        "Validated Net Time Savings"
+      ]
+    },
+    {
+      "entity_id": "DRAFT_ACCEPTANCE_RATE",
+      "type": "metrica",
+      "name": "Tasa de Aceptación de Borradores",
+      "aliases": [
+        "Draft Retention Rate"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "AHORRO_NETO_VALIDADO",
+      "predicate": "sirve_como_indicador_temprano_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F33-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Indicador Temprano (Ahorro Neto Validado)",
+      "item_b": "Indicador Tardío (Score Reputacional Anual)",
+      "dimension": "Accionabilidad en piloto",
+      "conclusion": "El ahorro neto es medible en 3 semanas y directamente atribuible al uso del software; el score anual tarda 12 meses y depende de factores exógenos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Ahorro neto de tiempo validado",
+      "denominator": "Horas hombre históricas de la tarea",
+      "target": ">= 50%"
+    },
+    {
+      "metric": "Tasa de aceptación de borradores",
+      "denominator": "Total párrafos generados por Hablar",
+      "target": ">= 70%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Proporciona la métrica central de justificación económica para la compuerta G2 y el cierre comercial G3.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F34",
+    "T01-F35"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

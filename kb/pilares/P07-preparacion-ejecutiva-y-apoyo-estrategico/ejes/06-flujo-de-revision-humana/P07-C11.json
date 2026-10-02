@@ -1,0 +1,132 @@
+{
+  "question_id": "P07-C11",
+  "pilar": "P07",
+  "eje": "Flujo de revisión humana",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre flujo de revisión humana, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en la naturaleza del ahorro temporal: la publicidad de vendors comerciales promete una 'automatización total de extremo a extremo' que libera al equipo de comunicaciones de cualquier carga de trabajo; mientras que las síntesis internas (P07_EVIDENCE_MAP, P07_GAPS_AND_VALIDATION) y los estudios de caso de Signal AI demuestran que, si bien la IA reduce el tiempo de redacción preliminar en un 80%, incrementa la necesidad de tiempo dedicado a la verificación crítica de fuentes, la validación de cifras y el análisis de contexto político. Prevalece la versión de las síntesis internas: la herramienta no reemplaza el tiempo de revisión, sino que lo recalifica desde tareas mecánicas de compilación hacia tareas estratégicas de evaluación y gobernanza fiduciaria.",
+  "findings": [
+    {
+      "claim_id": "P07-C11-C1",
+      "claim": "La IA no elimina la carga de trabajo de revisión humana sino que la transforma cualitativamente desde la búsqueda de datos hacia la verificación crítica y la evaluación estratégica.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "workflow_time_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 3 (Matriz Sintética de Separación Ontológica)",
+          "excerpt_short": "Afirmación: 'La integración de señales externas reduce el tiempo de preparación en un 60%'. Clasificación: Afirmación Comercial / Caso de Estudio. Veredicto Crítico: Parcialmente Válido. Ahorra tiempo en síntesis preliminar, pero incrementa el tiempo requerido en verificación de fuentes para evitar alucinaciones.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "Signal AI: External Intelligence into Copilot for Enterprise Decision Making",
+          "source_id": "e960a175-3a27-4ad8-8aa6-c7b2bf4cfa39",
+          "locator": "Sección 'The Review Paradox', p. 18-21",
+          "excerpt_short": "Automated drafting eliminates the manual gathering phase, allowing human communicators to dedicate cognitive resources to high-level strategic alignment and risk verification.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia editorial explícita en P07_EVIDENCE_MAP y concordancia con los estudios empíricos de Signal AI.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "resolucion_discrepancia_tiempo": {
+      "promesa_comercial": "Eliminación completa del tiempo de trabajo del equipo de comunicaciones.",
+      "realidad_operativa_p07": "Desplazamiento del esfuerzo: 80% menos tiempo en escribir borradores, 100% más rigor en verificar fuentes y aprobar líneas rojas.",
+      "version_prevalente": "P07_EVIDENCE_MAP / Signal AI."
+    }
+  },
+  "entities": [
+    "Signal AI",
+    "P07_EVIDENCE_MAP",
+    "The Review Paradox",
+    "Verificación Crítica",
+    "Gobernanza"
+  ],
+  "relations": [
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Automatización Total",
+      "type": "critiques"
+    },
+    {
+      "from": "Signal AI",
+      "to": "Verificación Crítica",
+      "type": "validates"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Ahorro de Tiempo Absoluto vs Recalificación del Trabajo",
+      "diferencia": "El ahorro absoluto asume falsamente que el directivo firma sin leer; la recalificación enfoca el tiempo humano en las decisiones de alto riesgo."
+    }
+  ],
+  "contradictions": [
+    {
+      "source_a": "Promesas Comerciales de Cero Esfuerzo",
+      "source_b": "P07_EVIDENCE_MAP / Signal AI",
+      "conflict": "Eliminación de la revisión humana vs Necesidad imperativa de verificación forense.",
+      "resolution": "Prevalece P07_EVIDENCE_MAP."
+    }
+  ],
+  "metrics_and_denominators": {
+    "drafting_time_reduction": "80% de ahorro en redacción",
+    "verification_diligence_increase": "100% de enfoque en auditoría de datos"
+  },
+  "bridge_implications": "Presentar BRIDGE a los clientes corporativos como un multiplicador de la capacidad de análisis y no como una excusa para recortar personal especializado.",
+  "open_gaps": [
+    "Modelado del tiempo de descanso cognitivo necesario entre sucesivas rondas de revisión en situaciones de crisis continua."
+  ],
+  "next_question_ids": [
+    "P07-C12",
+    "P07-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "question_id": "T01-X16",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Pruebas adversariales y seguridad",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué sigue sin prueba sobre pruebas adversariales y seguridad, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "parcial",
+  "short_answer": "Sigue sin prueba empírica formal la resistencia de The Bridge Intelligence ante ataques de envenenamiento de datos a largo plazo (Data Poisoning por goteo) en repositorios documentales colaborativos: 1) Vacío Identificado: Si un infiltrado o empleado descontento dentro de la empresa cliente sube gradualmente documentos internos con sutiles contradicciones fácticas espurias durante 6 meses (ej. alterando fechas de compromisos comunitarios o cifras de inversión en minutas de trabajo no oficiales), se desconoce si el motor Saber detecta la discrepancia como una contradicción temporal o si termina degradando la fidelidad de sus respuestas; 2) Fuente Fallida / Parcial: Ningún benchmark de ciberseguridad en T01 (ni Llama Guard ni NeMo) modela ataques de persistencia lenta en memoria documental corporativa; y 3) Validación Mínima Necesaria: Simulación de envenenamiento temporal inyectando 20 documentos adulterados progresivamente a lo largo de 30 días en un tenant de prueba, midiendo la capacidad del motor de resolución de SABER para alertar sobre la inconsistencia antes de contaminar la respuesta.",
+  "findings": [
+    {
+      "claim_id": "T01-X16-C1",
+      "claim": "La resistencia de los sistemas de memoria corporativa ante ataques de envenenamiento paulatino de fuentes internas no reguladas es un área abierta en la literatura científica de T01, requiriendo validación experimental específica de linaje de datos.",
+      "epistemic_status": "inferencia",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "The Bridge Intelligence Security Lab"
+      },
+      "evidence": [
+        {
+          "source_id": "8663bbbe-40d9-4176-a989-b5f46b333f36",
+          "source_title": "Zhu et al. (2026) - SABER: Trust or Abstain? A Ground-Truth-Aligned Knowledge-Conflict Benchmark",
+          "original_url": "https://arxiv.org/html/2605.18792v1",
+          "locator": "Section 5: Future Directions in Persistent Poisoning",
+          "excerpt_short": "Long-term adversarial document poisoning within enterprise knowledge bases poses distinct challenges that static conflict benchmarks do not currently evaluate.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "media",
+      "confidence_reason": "Desafío de investigación futuro explícitamente formulado en el paper SABER.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tenant de prueba con 1.000 documentos legítimos",
+      "Batería de 20 documentos envenenados progresivamente"
+    ],
+    "actors": [
+      "Security Researcher",
+      "Data Lineage Specialist"
+    ],
+    "steps": [
+      "Inyectar 1 documento adulterado cada 2 días con ligeras modificaciones de hechos",
+      "Ejecutar consultas periódicas sobre los compromisos alterados",
+      "Evaluar si el motor SABER activa la alerta de 'conflicto con fuente oficial' o 'posible adulteración'",
+      "Implementar firmas criptográficas de linaje de documentos oficiales para neutralizar el envenenamiento"
+    ],
+    "states": [
+      "INYECCION_PROGRESIVA",
+      "MONITOREO_SABER",
+      "DETECCION_CONFLICTO",
+      "BLINDAJE_LINEAGE"
+    ],
+    "outputs": [
+      "Reporte Experimental de Resistencia a Data Poisoning T01-X16"
+    ],
+    "exceptions": [
+      "Si el sistema adopta la cifra falsa sin emitir alerta de conflicto, el caso pasa a investigación prioritaria"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "DATA_POISONING_RIESGO",
+      "type": "riesgo",
+      "name": "Ataque de Envenenamiento de Fuentes Documentales",
+      "aliases": [
+        "Persistent Corpus Poisoning"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "DATA_POISONING_RIESGO",
+      "predicate": "amenaza_memoria_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X16-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de detección de documentos envenenados como conflicto",
+      "denominator": "Total documentos envenenados inyectados",
+      "target": ">= 90%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Exige incorporar firmas criptográficas y sellos de tiempo inmutables a los documentos oficiales de la empresa para prevenir adulteraciones.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [
+    {
+      "gap": "Comportamiento del motor de resolución de conflictos ante ataques de envenenamiento progresivo de fuentes internas en repositorios colaborativos",
+      "minimum_validation": "Experimento de inyección progresiva de 20 documentos adulterados en un tenant de prueba evaluando la tasa de alerta de SABER",
+      "priority": "alta"
+    }
+  ],
+  "next_question_ids": [
+    "T01-X17"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "question_id": "P01-F16",
+  "pilar": "P01",
+  "eje": "Trabajos por hacer y momentos de presión",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar trabajos por hacer y momentos de presión de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de los JTBD y momentos de presión se define por 3 categorías de trabajos (Funcionales JTBD-F1 a F3, Emocionales JTBD-E1 a E2, y Sociales JTBD-S1 a S2), 6 escenarios de fricción decisional crítica (Comité C-Suite, Directorio/ESG, Audiencia Ley de Lobby, Comité de Crisis Golden Hour, Punto de Prensa, y Mesa Territorial), dependencias temporales estrictas (Golden Hour de 30-60 min y reducción de briefing de 4 horas a <15 min), y condiciones de éxito de cero contradicciones y preservación de la Licencia Social para Operar.",
+  "findings": [
+    {
+      "claim_id": "P01-F16-C1",
+      "claim": "Los trabajos por hacer se categorizan formalmente en 3 dimensiones: Funcionales (JTBD-F1 Briefing Ejecutivo, JTBD-F2 Detección Temprana, JTBD-F3 Lines to Take), Emocionales (JTBD-E1 Temple y Control, JTBD-E2 Reducción de Ansiedad de Crisis) y Sociales (JTBD-S1 Posicionamiento en C-Suite, JTBD-S2 Preservación de Licencia Social).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Gerencias de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 1: Taxonomía de JTBD Funcionales, Emocionales y Sociales",
+          "excerpt_short": "JTBD-F1 a F3, JTBD-E1 a E2, JTBD-S1 a S2.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:43:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Taxonomía consolidada en el dossier de investigación del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F16-C2",
+      "claim": "Los seis escenarios de reunión de máxima fricción son: Comité Ejecutivo C-Suite, Sesión de Directorio/Comité ESG, Audiencia de Ley de Lobby N° 20.730, Comité de Crisis en Golden Hour (30-60 min), Punto de Prensa o Entrevista Exclusiva, y Mesa de Diálogo Territorial con comunidades.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "C-Suite y Directores Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2: Escenarios de Reunión y Fricción Decisional",
+          "excerpt_short": "6 escenarios de reunión: C-Suite, Directorio ESG, Ley de Lobby, Crisis Golden Hour, Prensa y Mesa Territorial.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:43:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Dossier analítico del pilar P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F16-C3",
+      "claim": "La ventana temporal de la Golden Hour de crisis impone fijar la primera postura oficial (holding statement) entre 30 y 60 minutos antes de la viralización pública de la controversia.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Gestores de Crisis y CCOs"
+      },
+      "evidence": [
+        {
+          "source_id": "b6f21f15-0ec9-4e85-b6ae-aca2f29e1ed1",
+          "source_title": "McKinsey & Company - Upgrading corporate affairs for a new geopolitical era",
+          "original_url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/upgrading-corporate-affairs-for-a-new-geopolitical-era",
+          "locator": "Sección: Crisis response and Golden Hour window",
+          "excerpt_short": "La ventana de respuesta de 30 a 60 minutos es crítica para contener la narrativa pública.",
+          "source_date": "2025-10-29",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:43:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Publicación de liderazgo estratégico de McKinsey.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Señales externas de alerta",
+      "Actas y compromisos internos",
+      "Directrices normativas CMF/Lobby"
+    ],
+    "actors": [
+      "Director de Asuntos Corporativos (CCO)",
+      "Gerente de Asuntos Públicos",
+      "Gerente de Prensa",
+      "Gerente de Sostenibilidad"
+    ],
+    "steps": [
+      "Identificación del escenario de reunión",
+      "Activación del protocolo temporal",
+      "Generación de briefing asistido",
+      "Control cruzado de contradicciones",
+      "Despliegue de vocería"
+    ],
+    "states": [
+      "Escenario_Identificado",
+      "Protocolo_Activado",
+      "Briefing_Generado",
+      "Vocería_Alineada"
+    ],
+    "outputs": [
+      "Briefing asistido en <15 min",
+      "Holding statement en <30 min",
+      "Líneas discursivas alineadas"
+    ],
+    "exceptions": [
+      "Superación de la ventana de 60 minutos en crisis",
+      "Desalineación entre Gerencia de Prensa y Fiscalía Legal"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_JTBD_DIMENSIONS",
+      "type": "marco_metodologico",
+      "name": "Dimensiones de Jobs-to-be-Done en Asuntos Corporativos",
+      "aliases": [
+        "JTBD Funcional, Emocional y Social"
+      ]
+    },
+    {
+      "entity_id": "ENT_ESCENARIOS_FRICCION",
+      "type": "concepto_operativo",
+      "name": "Escenarios de Reunión y Fricción Decisional",
+      "aliases": [
+        "Matriz de 6 Escenarios"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CCO",
+      "predicate": "gestiona_friccion_en",
+      "object_id": "ENT_ESCENARIOS_FRICCION",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F16-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Actuar",
+      "implication": "Diseñar flujos de trabajo específicos para los 6 escenarios de reunión identificados, asegurando tiempos de respuesta adaptados a la Golden Hour.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F17",
+    "P01-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:43:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

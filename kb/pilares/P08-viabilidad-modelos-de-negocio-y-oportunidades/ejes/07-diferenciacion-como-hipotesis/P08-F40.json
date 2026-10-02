@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F40",
+  "pilar": "P08",
+  "eje": "Diferenciación como hipótesis",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar diferenciación como hipótesis de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la diferenciación como hipótesis exige formalizar: 1) Variables de Diferenciación (índice de integración inter-módulos, porcentaje de briefs que cruzan datos internos con externos, grado de defensibilidad técnica de los conectores locales, tasa de éxito en objeciones de seguridad); 2) Categorías de Hipótesis (Hipótesis de Valor del Cruce Interno, Hipótesis de Resistencia al Cambio de Agencias, Hipótesis de Barrera de Entrada Local frente a Software Global); 3) Relaciones de Validación (correlación entre uso del módulo 'Saber' y renovación de contrato, impacto de la certificación HITL en la disposición a pagar); y 4) Condiciones de Salida / Pivote (regla de detención comercial si tras 15 entrevistas el WTP promedio no supera USD 3.000/mes, protocolo de apertura de conectores a agencias si el canal directo corporativo se satura).",
+  "findings": [
+    {
+      "claim_id": "P08-F40-C1",
+      "claim": "El modelo estructurado trata la diferenciación como una hipótesis cuantitativa auditable, asociando métricas operativas a compuertas de confirmación o descarte.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "differential_hypothesis_ontology",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 7.4 'Formalización Estructurada de Hipótesis de Diferenciación'",
+          "excerpt_short": "El esquema de diferenciación se parametriza vinculando las entidades 'Hipotesis_Diferencial', 'Metrica_Validacion', 'Umbral_Falsacion' y 'Accion_Pivote'. Cada hito comercial actualiza la probabilidad bayesiana de la ventaja competitiva, evitando el autoengaño metodológico en el desarrollo del producto.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_EVIDENCE_MAP",
+          "source_id": "1323b514-5154-49f7-b105-42766ddbcaf5",
+          "locator": "Eje 7: Diferenciación como Hipótesis - Estructura de Entidades",
+          "excerpt_short": "Ontología de validación: 'Hipotesis' -> 'Prueba_Empirica' -> 'Resultado_Observado' -> 'Estado_Validacion' (confirmada, refutada, en_observacion).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diseño ontológico riguroso y formalizado en la documentación técnica de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Registro de entrevistas comerciales",
+      "Métricas de uso de módulos",
+      "Feedback de clientes"
+    ],
+    "actors": [
+      "Product Manager",
+      "Lead Architect",
+      "Comité Asesor"
+    ],
+    "steps": [
+      "Ingreso de datos empíricos de clientes",
+      "Actualización de métricas de validación",
+      "Revisión trimestral de hipótesis en ontología",
+      "Decisión de ajuste de producto"
+    ],
+    "states": [
+      "Hipótesis Planteada",
+      "Pruebas en Curso",
+      "Validada Empíricamente",
+      "Pivote Activado"
+    ],
+    "outputs": [
+      "Matriz estructurada de hipótesis de diferenciación actualizada"
+    ],
+    "exceptions": [
+      "Diferenciación percibida heterogénea entre sectores minero y bancario que obligue a bifurcar la ontología"
+    ]
+  },
+  "entities": [
+    "Hipótesis de Diferenciación",
+    "Umbral de Falsación",
+    "Probabilidad Bayesiana",
+    "Acción de Pivote",
+    "Ontología de Validación"
+  ],
+  "relations": [
+    {
+      "from": "Prueba Empírica",
+      "to": "Hipótesis de Diferenciación",
+      "type": "updates_confidence_of"
+    },
+    {
+      "from": "Superación de Umbral",
+      "to": "Acción de Pivote",
+      "type": "triggers"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Certeza dogmática de startup vs Gestión por hipótesis falsables",
+      "diferencia": "La certeza dogmática lleva a construir productos que nadie compra; la gestión por hipótesis falsables ajusta la propuesta a la realidad del mercado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "hypothesis_confidence_score": "Escala probabilística 0.0 - 1.0 actualizada con cada piloto",
+    "decision_gate_frequency": "Revisión trimestral obligatoria"
+  },
+  "bridge_implications": "Mantener esta matriz de hipótesis visible en el repositorio de BRIDGE para orientar las prioridades de desarrollo del equipo de ingeniería.",
+  "open_gaps": [
+    "Establecer el protocolo de entrevistas a ciegas para evitar sesgos de cortesía de los entrevistados."
+  ],
+  "next_question_ids": [
+    "P08-F41",
+    "P08-F42"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

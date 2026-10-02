@@ -1,0 +1,146 @@
+{
+  "question_id": "P08-F47",
+  "pilar": "P08",
+  "eje": "Experimentos comerciales",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre experimentos comerciales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos y metodologías de los experimentos comerciales se fundamentan en cinco fuentes principales del corpus: 1) Arthur W. Page Society ('Strategic Plan 2024-2026' y 'Beyond Communication'), que orienta los criterios de adopción y evaluación tecnológica en grandes corporaciones; 2) McKinsey & Company (2024-2026), que detalla los procesos de transformación ágil y pilotos de innovación en asuntos públicos y regulatorios; 3) PRSA Guidance on AI & Ethics (2024-2026), que establece las directrices de consentimiento informado y confidencialidad en pruebas piloto corporativas; 4) P08_QUALITY_ADDENDUM (2026), que formaliza los controles antifraude cognitivo y las reglas de decisión de compuertas; y 5) Cámara de Comercio de Santiago (2025-2026), cuyos estudios sobre compras corporativas de innovación en Chile respaldan la duración de 60 días para pruebas de concepto en grandes empresas.",
+  "findings": [
+    {
+      "claim_id": "P08-F47-C1",
+      "claim": "El diseño de experimentos comerciales combina metodologías globales de compras corporativas (McKinsey, Page Society) con la práctica institucional de adopción de tecnología en Chile (CCS, PRSA).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "bibliographic_commercial_experiments_evidence",
+      "evidence": [
+        {
+          "source_title": "McKinsey & Company: Upgrading Corporate Affairs for a New Geopolitical Era",
+          "source_id": "99c84fdd-b5ba-4db1-b9ae-dfea068efc5b",
+          "locator": "Sección 'Agile Experimentation and Capability Building', p. 14-18",
+          "excerpt_short": "Corporate affairs transformations must proceed through structured, time-boxed pilots with clear decision gates. Organizations should avoid open-ended trials and instead evaluate functional tools against specific high-stakes scenarios such as legislative shifts or regulatory inspections.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "Cámara de Comercio de Santiago: Comités de Asuntos Corporativos e IA Empresarial",
+          "source_id": "be654fcc-5a18-4ae6-85e2-ee12b9cf479e",
+          "locator": "Capítulo 'Procesos de Compra y Homologación de Soluciones Innovadoras', p. 20-24",
+          "excerpt_short": "Las empresas líderes en Chile establecen períodos de prueba remunerados de 60 a 90 días para validar el retorno de inversión y la compatibilidad con sus sistemas de cumplimiento antes de firmar contratos de suscripción anual.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de las recomendaciones de McKinsey y la CCS en el corpus P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Estudios McKinsey",
+      "Guías CCS",
+      "Normativas PRSA",
+      "Addendum P08"
+    ],
+    "actors": [
+      "Investigador Antigravity",
+      "Auditor de Metodología"
+    ],
+    "steps": [
+      "Cotejo de fuentes de experimentación",
+      "Verificación de plazos recomendados",
+      "Consolidación bibliográfica"
+    ],
+    "states": [
+      "Fuentes Verificadas",
+      "Citas Cotejadas",
+      "Aprobado"
+    ],
+    "outputs": [
+      "Catálogo de respaldo del Eje 8"
+    ],
+    "exceptions": [
+      "Ajustes en los tiempos de homologación según la industria del cliente"
+    ]
+  },
+  "entities": [
+    "McKinsey & Company",
+    "Cámara de Comercio de Santiago",
+    "Arthur W. Page Society",
+    "PRSA",
+    "P08_QUALITY_ADDENDUM"
+  ],
+  "relations": [
+    {
+      "from": "McKinsey / CCS",
+      "to": "Metodología de Pilotos 60 Días",
+      "type": "validates"
+    },
+    {
+      "from": "PRSA / Addendum P08",
+      "to": "Controles Antifraude Cognitivo",
+      "type": "establishes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Prácticas de Silicon Valley vs Prácticas del mercado chileno",
+      "diferencia": "El mercado chileno es más conservador y formal; exige contratos de piloto claros, cumplimiento estricto de seguridad y acompañamiento humano cercano."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "pilot_duration_benchmark_chile": "60 a 90 días según estándares CCS",
+    "decision_gate_rigor": "Evaluación contra KPIs firmados"
+  },
+  "bridge_implications": "Adaptar el lenguaje de los contratos de piloto a las prácticas habituales de las gerencias de adquisiciones de las empresas chilenas.",
+  "open_gaps": [
+    "Recopilar plantillas estándar de acuerdos de prueba de concepto usadas por mineras en Chile."
+  ],
+  "next_question_ids": [
+    "P08-F48",
+    "P08-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

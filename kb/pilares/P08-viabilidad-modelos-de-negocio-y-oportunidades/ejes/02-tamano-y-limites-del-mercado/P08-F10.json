@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F10",
+  "pilar": "P08",
+  "eje": "Tamaño y límites del mercado",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar tamaño y límites del mercado de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de este eje requiere formalizar: 1) Variables de Tamaño (número de empresas en TAM, SAM y SOM, facturación corporativa mínima, gasto promedio anual en asuntos públicos); 2) Categorías de Límites (criterios de elegibilidad territorial, exclusión de PyMEs, restricción de sector público no regulado, impedimento técnico on-premise); 3) Relaciones de Mercado (pertenencia sectorial, sustitución de gasto respecto a agencias de comunicaciones, dependencia de proveedores de datos); y 4) Condiciones de Captura (capacidad operativa de analistas HITL de 1 a 4 clientes, cuota mensual de USD 4.5K a 6.5K, tasa de retención anual esperada > 90%).",
+  "findings": [
+    {
+      "claim_id": "P08-F10-C1",
+      "claim": "El modelo de datos del mercado debe articular las restricciones de capacidad operativa interna con las cotas superiores de absorción de clientes del mercado chileno y regional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "market_boundary_ontology",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 2.4 'Esquema Estructurado de Límites y Capacidad de Mercado'",
+          "excerpt_short": "La frontera del mercado no está fijada únicamente por la cantidad de empresas compradoras, sino por el ratio de escalabilidad del componente HITL: cada analista senior asignado puede atender con máxima calidad técnica a un máximo de 4 cuentas corporativas. De esta forma, la capacidad instalada y la tasa de incorporación de nuevos clientes se modelan en función de la dotación y de las condiciones de no-exclusión técnica.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_EVIDENCE_MAP",
+          "source_id": "1323b514-5154-49f7-b105-42766ddbcaf5",
+          "locator": "Eje 2: Tamaño y Límites del Mercado - Estructura de Entidades",
+          "excerpt_short": "Mapeo de entidades: 'Mercado_Nacional', 'Subsegmento_Regulado', 'Criterio_Exclusion', 'Capacidad_HITL' vinculadas por relaciones de capacidad máxima y umbral de entrada.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Coherencia conceptual entre la capacidad humana de entrega y los límites del mercado en P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Base de datos de corporaciones",
+      "Métricas de ratio cliente/analista",
+      "Costos marginales"
+    ],
+    "actors": [
+      "Chief Revenue Officer (CRO)",
+      "Chief Operating Officer (COO)",
+      "Data Architect"
+    ],
+    "steps": [
+      "Actualización periódica de empresas en el SAM",
+      "Aplicación de filtros de exclusión",
+      "Cálculo de capacidad disponible de analistas HITL",
+      "Asignación de cuotas comerciales"
+    ],
+    "states": [
+      "Capacidad Disponible",
+      "Capacidad en Límite",
+      "Contratación de Nuevo Analista Requerida"
+    ],
+    "outputs": [
+      "Cuadro de mando de capacidad de mercado y límites de absorción"
+    ],
+    "exceptions": [
+      "Sobredemanda que obligue a pausar nuevos onboardings para preservar SLA"
+    ]
+  },
+  "entities": [
+    "TAM",
+    "SAM",
+    "SOM",
+    "Ratio HITL",
+    "Capacidad Instalada",
+    "SLA"
+  ],
+  "relations": [
+    {
+      "from": "Capacidad Analista (1:4)",
+      "to": "Límite de Captura Mensual",
+      "type": "constrains"
+    },
+    {
+      "from": "SAM Chile (150)",
+      "to": "Techo de Penetración Nacional",
+      "type": "bounds"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Crecimiento ilimitado de SaaS puro vs Crecimiento escalonado Tech-Enabled",
+      "diferencia": "El SaaS puro puede sumar 1.000 clientes sin contratar personas; el Tech-Enabled exige contratar 1 analista por cada 4 clientes nuevos, garantizando alta fidelización y margen > 70%."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "analyst_to_client_ratio": "1 analista senior por cada 4 clientes corporativos",
+    "retention_rate_target": "> 90% anual"
+  },
+  "bridge_implications": "Diseñar el plan de contrataciones operativas de BRIDGE sincronizado con el cierre de cada grupo de 4 clientes corporativos.",
+  "open_gaps": [
+    "Determinar el tiempo de inducción (onboarding) requerido para que un analista nuevo opere con autonomía."
+  ],
+  "next_question_ids": [
+    "P08-F11",
+    "P08-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

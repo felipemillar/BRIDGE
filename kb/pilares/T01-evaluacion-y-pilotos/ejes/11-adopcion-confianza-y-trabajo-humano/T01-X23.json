@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-X23",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Adopción, confianza y trabajo humano",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre adopción, confianza y trabajo humano, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en adopción y trabajo humano: 1) Discrepancia: Las notas iniciales asumían que una tasa de aprobación de borradores del 100% sin modificaciones era el 'ideal utópico' de éxito de un sistema generativo en asuntos corporativos; 2) Versión que Prevalece: Según SummEval (9df1af53) y T01_QUALITY_ADDENDUM (45782049), prevalece el principio de que una tasa de modificación humana cero (Diff Ratio = 0) constituye una señal de alarma crítica de complacencia ciega (rubber-stamping) y abandono del deber de supervisión. En entornos corporativos de alta responsabilidad, el estándar óptimo de control humano exige una tasa de edición de entre el 15% y el 30%, donde el analista aporta contexto táctico, matiz diplomático y reservas legales indelegables, validando que el profesional leyó y auditó el borrador.",
+  "findings": [
+    {
+      "claim_id": "T01-X23-C1",
+      "claim": "T01_QUALITY_ADDENDUM establece que la ausencia total de edición humana en borradores corporativos generados por IA refleja complacencia automatizada y no excelencia del modelo, exigiendo un ratio de edición saludable para certificar la compuerta G2.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 11: La Falacia de la Aprobación al 100% sin Edición",
+          "excerpt_short": "Un Diff Ratio de 0.00 es una bandera roja de complacencia peligrosa. El valor de la IA reside en entregar un borrador 80% terminado para que el analista aplique el 20% de juicio crítico experto.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma metodológica canónica interna de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Métricas iniciales que celebraban Diff Ratio = 0",
+      "T01_QUALITY_ADDENDUM"
+    ],
+    "actors": [
+      "Auditor de QA",
+      "Product Manager"
+    ],
+    "steps": [
+      "Reconfigurar los dashboards de éxito de cliente para alertar ante Diff Ratio = 0",
+      "Establecer la banda saludable de edición humana entre 15% y 30%",
+      "Capacitar a los supervisores de clientes para no fomentar la copia pasiva",
+      "Integrar el índice de supervisión activa en el reporte de compuerta G2"
+    ],
+    "states": [
+      "REVISION_METRICAS_ADOPCION",
+      "CONFIGURACION_BANDA_EDICION",
+      "ALERTA_COMPLACENCIA",
+      "DASHBOARD_ACTUALIZADO"
+    ],
+    "outputs": [
+      "Política de Supervisión Humana y Banda de Edición Saludable"
+    ],
+    "exceptions": [
+      "En tareas rutinarias de extracción de datos puntuales, se tolera Diff Ratio < 5% siempre que el dwell time sea > 3s"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "BANDA_EDICION_SALUDABLE",
+      "type": "metrica",
+      "name": "Banda de Edición Saludable (15% - 30%)",
+      "aliases": [
+        "Healthy Human Diff Ratio"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "BANDA_EDICION_SALUDABLE",
+      "predicate": "reemplaza_a",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X23-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Aprobación al 100% sin cambios (Diff = 0)",
+      "item_b": "Aprobación con Edición Humana (Diff = 15-30%)",
+      "dimension": "Gobernanza y seguridad",
+      "conclusion": "Diff = 0 refleja abandono del control humano; Diff = 15-30% prueba sinergia óptima entre velocidad de IA y juicio humano experto."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de borradores dentro de la banda de edición saludable",
+      "denominator": "Total borradores aprobados para exportación",
+      "target": ">= 75%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Protege a los directores legales al asegurar que ningún documento sale de la empresa sin intervención de juicio humano experto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "question_id": "P01-C15",
+  "pilar": "P01",
+  "eje": "Descubrimiento y validación de usuarios",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre descubrimiento y validación de usuarios, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en la concepción del proceso de descubrimiento: las fuentes comerciales de software y consultoría (McKinsey 2025) asumen un proceso de descubrimiento lineal centrado únicamente en el usuario final (el CCO o equipo de prensa que necesita minutas rápidas), presuponiendo que satisfacer al usuario garantiza la adopción comercial. En contraste, las síntesis internas (P01_RESEARCH_DOSSIER, P01_EVIDENCE_MAP) demuestran que en asuntos corporativos de alta complejidad la validación B2B requiere abordar la Tríada de Personas: 1) El Usuario (busca rapidez y cero alucinaciones); 2) El Comprador (CEO/VP, busca blindaje y justificación de presupuesto); y 3) El Aprobador (CISO y Fiscal Legal, quienes exigen aislamiento criptográfico y poseen poder de veto vinculante si los datos se exponen a modelos públicos). Prevalece la versión de las síntesis internas: la aprobación de seguridad y cumplimiento legal es una condición previa no negociable para cualquier adopción corporativa.",
+  "findings": [
+    {
+      "claim_id": "P01-C15-C1",
+      "claim": "Frente al enfoque de venta lineal de software que se enfoca solo en resolver las tareas del usuario operativo, las síntesis internas de P01 estructuran la adopción institucional mediante la Tríada B2B: el Usuario Final (User Persona), el Comprador Presupuestario (Buyer Persona) y el Aprobador de Ciberseguridad y Compliance (Approver Persona), este último con capacidad de veto absoluto sobre la compra.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global / Chile",
+        "actor": "Comités de Compras B2B y CISOs"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección: Mapa de Actores del Ecosistema B2B (Usuario, Comprador, Aprobador)",
+          "excerpt_short": "El CISO y el Fiscal Legal ejercen poder de veto si se exponen documentos reservados a modelos públicos.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:17:00-03:00"
+        },
+        {
+          "source_id": "059b0334-329a-41a0-8dd9-44d7ea87aeca",
+          "source_title": "P01_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Matriz de Aprobación B2B e Hipótesis HT-3",
+          "excerpt_short": "La viabilidad del producto depende de la arquitectura de seguridad antes que de la venta de características funcionales.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:17:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estructura metodológica validada en los dossiers de investigación de P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C15-C2",
+      "claim": "Las síntesis internas corrigen la categorización de los Jobs-to-be-Done (JTBD), dividiéndolos en tres niveles: Funcionales (cruzar conocimiento interno con señales externas), Emocionales (reducir la ansiedad directiva ante preguntas difíciles) y Sociales (proteger la legitimidad pública de la compañía).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Marco Teórico JTBD en BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Estructuración de JTBD Funcionales, Emocionales y Sociales",
+          "excerpt_short": "Clasificación rigurosa de las tres capas de dolor que justifican la adopción de tecnología.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:17:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco conceptual de ingeniería de producto de P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Casos de uso del usuario operativo",
+      "Políticas de ciberseguridad corporativa",
+      "Presupuesto anual C-Suite"
+    ],
+    "actors": [
+      "Dircom (Usuario)",
+      "CEO (Comprador)",
+      "CISO (Aprobador)",
+      "Fiscal Legal (Aprobador)"
+    ],
+    "steps": [
+      "Identificación de dolor en el equipo operativo",
+      "Demostración de propuesta de valor al Comprador",
+      "Evaluación de arquitectura de datos por CISO/Legal",
+      "Dictamen de aprobación o veto vinculante"
+    ],
+    "states": [
+      "Descubrimiento_Usuario",
+      "Interes_Comprador",
+      "Evaluacion_Seguridad",
+      "Aprobacion_Corporativa"
+    ],
+    "outputs": [
+      "Contrato de Adopción Corporativa B2B"
+    ],
+    "exceptions": [
+      "Veto de CISO por riesgo de fuga de información corporativa sensible"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_TRIADA_B2B",
+      "type": "modelo_adopcion",
+      "name": "Tríada B2B de Asuntos Corporativos (Usuario, Comprador, Aprobador)",
+      "aliases": [
+        "Ecosistema B2B de Decisión"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_TRIADA_B2B",
+      "predicate": "determina_exito_adopcion_de",
+      "object_id": "Software_Inteligencia_Ejecutiva",
+      "valid_from": "2025",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Descubrimiento de Usuario Tradicional vs Tríada B2B Corporativa",
+      "Enfoque Tradicional": "Validar si al analista de comunicaciones le gusta la interfaz y redacta comunicados más rápido.",
+      "Enfoque Tríada B2B (Prevaleciente)": "Validar simultáneamente utilidad operativa, retorno directivo y cumplimiento estricto de seguridad con el CISO."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Estructurar los materiales comerciales y técnicos de BRIDGE diferenciando argumentos de velocidad para el usuario y garantías de cifrado/VPC para el CISO y Fiscal.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:17:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

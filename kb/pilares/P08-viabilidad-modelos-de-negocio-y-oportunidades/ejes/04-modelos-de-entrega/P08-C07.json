@@ -1,0 +1,155 @@
+{
+  "question_id": "P08-C07",
+  "pilar": "P08",
+  "eje": "Modelos de entrega",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre modelos de entrega, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia central radica en la viabilidad de la automatización total de los briefs ejecutivos: Los borradores técnicos iniciales del dossier sugerían la posibilidad de un modelo 100% autónomo (Agentic Autonomous Delivery) que enviara briefs directamente al teléfono del CEO sin intervención humana, reduciendo costos a casi cero. Sin embargo, las fuentes éticas de PRSA, las directrices de Arthur W. Page Society y el P08_QUALITY_ADDENDUM rechazan categóricamente esta visión por considerarla una negligencia profesional que expone a la empresa a riesgos reputacionales y regulatorios graves derivados de alucinaciones sutiles. Prevalece la regla del QUALITY_ADDENDUM: la supervisión humana (HITL) es obligatoria y no negociable en todas las entregas ejecutivas, debiendo firmar el analista senior cada brief antes de su liberación.",
+  "findings": [
+    {
+      "claim_id": "P08-C07-C1",
+      "claim": "Conforme al P08_QUALITY_ADDENDUM y la doctrina PRSA/Page Society, se descarta el modelo de entrega 100% desatendido y se impone la revisión humana obligatoria (HITL) como requisito estructural de entrega.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "delivery_model_reconciliation",
+      "evidence": [
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 5 'Validación Cruzada de Modelos de Entrega'",
+          "excerpt_short": "Precedencia obligatoria: Se prohíbe taxativamente la comercialización de BRIDGE como un sistema desatendido sin revisión humana. El valor central de la empresa ante el Directorio y los órganos reguladores es la certificación de precisión firmada por un analista senior calificado. El software autónomo es una fantasía técnica que destruye la confianza institucional.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "PRSA: Guidance on Artificial Intelligence and Ethics in Communications",
+          "source_id": "8aa1bd49-38e4-4528-9a67-b4b2c3c6b6d3",
+          "locator": "Sección 'Professional Duty of Care & AI Systems', p. 4-6",
+          "excerpt_short": "Delegating public affairs intelligence entirely to autonomous AI systems violates professional codes of conduct. Human oversight is mandatory to verify facts, evaluate nuances, and uphold fiduciary responsibility.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los principios deontológicos de PRSA y el mandato editorial de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borrador de automatización autónoma",
+      "PRSA Guidance",
+      "P08_QUALITY_ADDENDUM"
+    ],
+    "actors": [
+      "Comité de Gobernanza",
+      "CTO",
+      "Lead Researcher"
+    ],
+    "steps": [
+      "Detección de propuesta de automatización desatendida",
+      "Aplicación de precedencia de QUALITY_ADDENDUM",
+      "Establecimiento de barrera de software HITL obligatoria"
+    ],
+    "states": [
+      "Automatización Propuesta",
+      "Objeción Ética y de Calidad",
+      "Modelo Híbrido Ratificado"
+    ],
+    "outputs": [
+      "Política inmutable de Human-in-the-Loop en BRIDGE"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "P08_QUALITY_ADDENDUM",
+    "PRSA Guidance",
+    "Autonomous AI",
+    "Human-in-the-Loop Mandatorio",
+    "Firma de Analista"
+  ],
+  "relations": [
+    {
+      "from": "QUALITY_ADDENDUM",
+      "to": "Automatización Total",
+      "type": "prohibits"
+    },
+    {
+      "from": "PRSA / Page Society",
+      "to": "Human-in-the-Loop Mandatorio",
+      "type": "requires"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Entrega autónoma sin filtro vs Entrega certificada HITL",
+      "diferencia": "La entrega autónoma ahorra sueldos pero genera alucinaciones que provocan la cancelación del cliente; el HITL asegura 100% de precisión y lealtad corporativa."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P08-F20-C1",
+        "P08-C07-C1"
+      ],
+      "difference": "Discrepancia entre la ambición técnica de automatización pura y el imperativo ético/operativo de revisión experta.",
+      "resolution": "resuelta",
+      "reason": "El P08_QUALITY_ADDENDUM y la PRSA consagran la primacía de la responsabilidad profesional humana."
+    }
+  ],
+  "metrics_and_denominators": {
+    "hitl_enforcement_rate": "100% de briefs enviados a clientes con certificación humana registrada"
+  },
+  "bridge_implications": "Bloquear a nivel de código en el backend de BRIDGE cualquier despacho de brief a cliente final que no cuente con el token de aprobación del analista HITL.",
+  "open_gaps": [
+    "Establecer un protocolo de respaldo si el analista de turno sufre un corte de energía o conectividad durante una emergencia."
+  ],
+  "next_question_ids": [
+    "P08-C08",
+    "P08-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

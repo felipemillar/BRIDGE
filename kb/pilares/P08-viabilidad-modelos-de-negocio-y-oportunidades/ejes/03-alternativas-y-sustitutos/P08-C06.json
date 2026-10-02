@@ -1,0 +1,144 @@
+{
+  "question_id": "P08-C06",
+  "pilar": "P08",
+  "eje": "Alternativas y sustitutos",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué sigue sin prueba sobre alternativas y sustitutos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba empírica suficiente la tasa de canibalización o colaboración con las grandes agencias de asuntos públicos (ej. LLYC, Azerta, Imaginaccion): no está comprobado si estas agencias adoptarán a BRIDGE como su herramienta de cabecera (actuando como canal revendedor) o si lo verán como una amenaza directa e intentarán vetarlo ante sus clientes. Respecto a fuentes fallidas del corpus, fallaron las fuentes 6fb2d4e3-5fd3-4e21-8e3a-da652fba30fc y 111b114d-dbb0-4bfd-9ffc-beecbf92f3dd (ambas del Institute for Public Relations - IPR), cuyos enlaces arrojaron errores 404 de página; fueron sustituidas canónicamente por la guía oficial de PRSA sobre IA y Ética (8aa1bd49-38e4-4528-9a67-b4b2c3c6b6d3) y la doctrina de Page Society. La validación mínima consiste en conducir 3 entrevistas reservadas con socios directores de agencias chilenas medianas evaluando un acuerdo piloto de marca blanca ('powered by BRIDGE').",
+  "findings": [
+    {
+      "claim_id": "P08-C06-C1",
+      "claim": "La dinámica competitiva o asociativa entre BRIDGE y las agencias tradicionales de asuntos públicos es una incógnita abierta que requiere pruebas de canal de reventa con socios directores.",
+      "epistemic_status": "inferencia",
+      "scope": "agency_channel_uncertainty",
+      "evidence": [
+        {
+          "source_title": "P08_GAPS_AND_VALIDATION",
+          "source_id": "b37bbf38-9c0d-4dc9-bf01-ac0b24ed0bd4",
+          "locator": "Sección 3 'Vacíos de Información Críticos: Eje 3'",
+          "excerpt_short": "Falta validación de campo sobre si las consultoras de comunicación aceptarán un modelo de partner tecnológico o si intentarán desarrollar internamente herramientas rudimentarias para retener sus retainers de monitoreo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "fuentes/P08.json: Manifiesto de Fuentes",
+          "source_id": "6fb2d4e3-5fd3-4e21-8e3a-da652fba30fc",
+          "locator": "Registro de Estado de Fuentes IPR",
+          "excerpt_short": "Fuentes 6fb2d4e3 y 111b114d del IPR catalogadas como fallida_o_bloqueada. Sustituidas canónicamente por PRSA Guidance on AI & Ethics (8aa1bd49-38e4-4528-9a67-b4b2c3c6b6d3).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "fallida",
+          "relationship": "apoya",
+          "text_status_original": "texto_sustantivo",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Vacío metodológico catalogado formalmente en P08 con sustituto canónico validado.",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "fuente_no_sustantiva",
+          "confianza_numerica_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Lista de agencias de asuntos públicos en Chile",
+      "Propuesta de valor para partners"
+    ],
+    "actors": [
+      "Director de Alianzas BRIDGE",
+      "Socio Director de Agencia"
+    ],
+    "steps": [
+      "Reunión confidencial con 3 agencias",
+      "Presentación de modelo de suscripción 'Agency Edition'",
+      "Evaluación de disposición a revender la plataforma"
+    ],
+    "states": [
+      "Incertidumbre de Canal",
+      "Sondeo de Agencias",
+      "Modelo Partner Definido"
+    ],
+    "outputs": [
+      "Términos de referencia para canal de agencias"
+    ],
+    "exceptions": [
+      "Agencias vinculadas a holdings internacionales (ej. Burson) que tengan exclusividad de herramientas globales"
+    ]
+  },
+  "entities": [
+    "P08_GAPS_AND_VALIDATION",
+    "6fb2d4e3-5fd3-4e21-8e3a-da652fba30fc",
+    "111b114d-dbb0-4bfd-9ffc-beecbf92f3dd",
+    "PRSA Guidance",
+    "Canal de Agencias"
+  ],
+  "relations": [
+    {
+      "from": "Fuentes IPR Fallidas",
+      "to": "PRSA Guidance (8aa1bd49)",
+      "type": "substituted_by"
+    },
+    {
+      "from": "Canal de Agencias",
+      "to": "Aceleración de Escala",
+      "type": "potentially_enables"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Venta directa a empresas vs Venta a través de agencias",
+      "diferencia": "La venta directa da mayor margen (100% de la cuota); el canal de agencias acelera la distribución y neutraliza la resistencia competitiva."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "agency_partner_target_count": "3 agencias para validación de canal",
+    "rev_share_discount_range": "20% a 30% de descuento mayorista para agencias"
+  },
+  "bridge_implications": "Desarrollar una propuesta de 'BRIDGE for Agencies' que transforme a potenciales detractores en promotores comerciales de la plataforma.",
+  "open_gaps": [
+    "Verificar si las agencias tradicionales chilenas cuentan con analistas capaces de interactuar técnicamente con BRIDGE."
+  ],
+  "next_question_ids": [
+    "P08-C07",
+    "P08-C08"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

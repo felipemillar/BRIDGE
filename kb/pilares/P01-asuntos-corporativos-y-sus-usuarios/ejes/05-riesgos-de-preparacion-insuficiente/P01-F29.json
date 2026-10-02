@@ -1,0 +1,167 @@
+{
+  "question_id": "P01-F29",
+  "pilar": "P01",
+  "eje": "Riesgos de preparación insuficiente",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre riesgos de preparación insuficiente?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El tema se respalda en 10 fuentes primarias analizadas bajo 4 categorías epistemológicas: Hechos Documentados (Ley N° 20.730 de Lobby; NCG 461/519 de la CMF; Dircom ECE 2025; LCM/ECM de EUPRERA; Merco Chile auditado por KPMG; Cadem Marcas Ciudadanas Jun 2026); Evidencia Académica (Global Capability Framework 2021; Page Society 2022/2023; PRSA Code of Ethics con ESA #22 de Jul 2026); Afirmaciones Comerciales (McKinsey Oct 2025 sobre AI Lighthouses); e Hipótesis de Trabajo (HT-1, HT-2 y HT-3). Se reiteran 4 vacíos de evidencia delimitados formalmente.",
+  "findings": [
+    {
+      "claim_id": "P01-F29-C1",
+      "claim": "El Código de Ética de la PRSA y su Actuación Ética Específica (ESA #22, julio 2026) establecen que la utilización de agentes de IA en asuntos corporativos requiere rendición de cuentas humana estricta, prohibiendo delegar la verdad fáctica en automatizaciones sin supervisión directiva.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-07",
+        "region": "Global / Estados Unidos",
+        "actor": "PRSA"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 3: Deontología Profesional y Estándares PRSA ESA #22",
+          "excerpt_short": "PRSA ESA #22 (Julio 2026): Estricta supervisión humana y rendición de cuentas sobre el uso de agentes de IA en comunicación estratégica.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma deontológica profesional internacional de la PRSA.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F29-C2",
+      "claim": "Las cuatro brechas críticas de evidencia (Knowledge Gaps) formalizadas en P01_GAPS_AND_VALIDATION delimitan que no se debe dar por hecho la reducción de 4 horas a 15 minutos (HT-2), la efectividad longitudinal de la IA en la Licencia Social, las matrices de objeción técnica de CISOs ni la trazabilidad cuantitativa de InfoLobby.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Corpus P01"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Knowledge Gaps 1 a 4 y Protocolo de Validación",
+          "excerpt_short": "Delimitación de vacíos empíricos para no confundir hipótesis de diseño con hechos probados.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:52:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Protocolo de control epistemológico del corpus.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Fuentes deontológicas",
+      "Marcos normativos",
+      "Registros de gaps"
+    ],
+    "actors": [
+      "Investigador de Integridad",
+      "Auditor Metodológico"
+    ],
+    "steps": [
+      "Verificación de fecha y autenticidad",
+      "Asignación de estatus epistemológico",
+      "Registro de vacíos no resueltos"
+    ],
+    "states": [
+      "Fuentes_Auditadas",
+      "Estatus_Fijado",
+      "Vacíos_Aislados"
+    ],
+    "outputs": [
+      "Tabla de Trazabilidad Rigurosa"
+    ],
+    "exceptions": [
+      "Confusión entre afirmación de consultora (AC) y evidencia académica (EA)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRSA_ESA22",
+      "type": "norma_deontologica",
+      "name": "PRSA Ethical Standard Advisory #22",
+      "aliases": [
+        "PRSA ESA #22 (Julio 2026)"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRSA_ESA22",
+      "predicate": "regula_uso_de",
+      "object_id": "Inteligencia_Artificial_Corporativa",
+      "valid_from": "2026-07",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F29-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gobernanza",
+      "implication": "Alinear la arquitectura de BRIDGE con los principios deontológicos de PRSA ESA #22 exigiendo siempre la validación y firma humana de los análisis.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F30",
+    "P01-F31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:52:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

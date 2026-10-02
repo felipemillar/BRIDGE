@@ -1,0 +1,163 @@
+{
+  "question_id": "T01-X18",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Adopción, confianza y trabajo humano",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fricción de adopción aparece al pedir permisos, revisión y trazabilidad?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La imposición de controles estrictos de gobernanza, roles DACI y trazabilidad de citas genera tres puntos de fricción sistemáticos en la adopción del usuario: 1) Fricción de Permisos y Clasificación de Datos (RBAC Friction): Resistencia de los analistas al encontrar fuentes bloqueadas por pertenecer a categorías 'Confidencial' o de otra gerencia, lo que induce la tentación de solicitar privilegios universales ('Admin') o recurrir a LLMs comerciales no gobernados (Shadow AI como ChatGPT personal); 2) Fricción de Cadena de Aprobación Obligatoria: Bloqueos temporales en el módulo Hablar cuando el sistema impide exportar un comunicado oficial sin la firma digital del aprobador formal (Accountable), percibido como lentitud burocrática por analistas que buscan inmediatez; y 3) Fricción de Sobrecarga de Trazabilidad: Fatiga cognitiva derivada de tener que justificar las ediciones manuales o clasificar motivos de cambio en mensajes ya auditados. Mitigación en BRIDGE: Aprobación fluida en un clic desde interfaces móviles y flujos de pre-autorización delegada.",
+  "findings": [
+    {
+      "claim_id": "T01-X18-C1",
+      "claim": "Cooper (2016-2025) y T01_QUALITY_ADDENDUM señalan que los controles de seguridad y gobernanza excesivamente rígidos o mal diseñados provocan el rechazo de los usuarios operativos e impulsan el uso clandestino de herramientas de IA no autorizadas (Shadow AI), destruyendo los objetivos del piloto.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global",
+        "actor": "Cooper Stage-Gate & T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & Agile Integration",
+          "original_url": null,
+          "locator": "Change Management and User Friction in Enterprise Deployments",
+          "excerpt_short": "Complex permission hurdles and cumbersome verification workflows lead users to bypass the authorized system in favor of frictionless consumer tools.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 11: Fricción Operativa y Mitigación de Shadow AI",
+          "excerpt_short": "La gobernanza debe ser ergonómica. Si pedir un permiso toma más de 2 minutos, el analista recurre a ChatGPT sin control.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diagnóstico de gestión del cambio en literatura rectora.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Tickets de soporte por denegación de permisos",
+      "Encuestas semanales de fricción de usuario"
+    ],
+    "actors": [
+      "UX Designer",
+      "Product Operations Lead",
+      "Administrador de Tenants"
+    ],
+    "steps": [
+      "Identificar las fuentes y acciones que generan más del 50% de las solicitudes de permiso",
+      "Implementar flujos de aprobación 'just-in-time' de permisos temporales en 1 clic",
+      "Monitorear la tasa de bypass hacia herramientas Shadow AI mediante telemetría corporativa",
+      "Ajustar la granularidad de las categorías de datos para reducir bloqueos innecesarios"
+    ],
+    "states": [
+      "MONITOREO_FRICCION",
+      "ANALISIS_CUELLOS_BOTELLA",
+      "SIMPLIFICACION_FLUJOS",
+      "ADOPCION_FLUIDA"
+    ],
+    "outputs": [
+      "Matriz de Fricción Operativa y Planes de Ergonomía"
+    ],
+    "exceptions": [
+      "Ninguna simplificación ergonómica puede relajar las fronteras de aislamiento cross-tenant ni la protección de datos personales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "FRICCION_GOBERNANZA",
+      "type": "riesgo",
+      "name": "Fricción de Gobernanza y Permisos",
+      "aliases": [
+        "Permission & Traceability Friction"
+      ]
+    },
+    {
+      "entity_id": "RIESGO_SHADOW_AI",
+      "type": "riesgo",
+      "name": "Riesgo de Shadow AI",
+      "aliases": [
+        "Uso Clandestino de ChatGPT"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "FRICCION_GOBERNANZA",
+      "predicate": "induce",
+      "object_id": "RIESGO_SHADOW_AI",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X18-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Gobernanza Burocrática Rígida",
+      "item_b": "Gobernanza Ergonómica en 1 Clic (BRIDGE)",
+      "dimension": "Impacto en adopción",
+      "conclusion": "La gobernanza rígida genera rechazo y Shadow AI; la gobernanza ergonómica mantiene trazabilidad total con adopción superior al 70%."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tiempo promedio de resolución de solicitud de permisos",
+      "denominator": "Total solicitudes de acceso a documentos restringidos",
+      "target": "<= 15 minutos"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Asegura que las exigencias de auditoría no destruyan la velocidad operativa que justifica la compra de BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

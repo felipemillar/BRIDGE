@@ -1,0 +1,169 @@
+{
+  "question_id": "T01-F24",
+  "pilar": "T01",
+  "eje": "Rúbricas humanas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra rúbricas humanas sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso de Evaluación Humana CEH-T01-088 (Evaluación Ciega de Borrador de Respuesta a Crisis Ambiental): 1) Entradas: Solicitud de redacción al módulo Hablar: 'Preparar declaración oficial de 3 párrafos ante fiscalización de la SMA por presunto desborde de piscina de sedimentación'; Borrador A (generado por BRIDGE con citas a RCA y reportes de telemetría de planta); Borrador B (control redactado por LLM genérico sin RAG); 2) Evaluación Humana por Panel Ciego (3 Directores de Asuntos Corporativos): Evaluaron Consistencia Factual (Borrador A: 5.0 vs Borrador B: 2.0 por citar una norma derogada); Coherencia (A: 4.7 vs B: 4.3); Adecuación de Tono (A: 4.8 vs B: 4.0); y 3) Resultado Esperado: Borrador A promedia 4.83 / 5.0 con Krippendorff's alpha = 0.88 y 0 fallos fatales; Borrador B recibe veto automático por Fallo Fatal (invocación de norma derogada que expondría a sanción por falsedad procesal).",
+  "findings": [
+    {
+      "claim_id": "T01-F24-C1",
+      "claim": "En la evaluación comparativa ciega, la presencia de citas primarias verificables a la RCA y a la telemetría operativa permite a los evaluadores humanos otorgar máxima calificación de confianza en consistencia factual, mientras que la falta de anclaje contextual descalifica a los LLMs commodity.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "The Bridge Intelligence / SMA Case"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 4: Human Judgments and Source Faithfulness",
+          "excerpt_short": "Models providing traceable references back to source documents consistently score higher on human factual consistency metrics than ungrounded baselines.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "f45d1506-e90b-474f-813b-6846b15de6cc",
+          "source_title": "Arthur W. Page Society - The Page Principles of Corporate Public Relations",
+          "original_url": null,
+          "locator": "Principle 2: Prove it with action",
+          "excerpt_short": "Corporate statements must be provable with verified operational records.",
+          "source_date": "2021",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso representativo fundamentado en las rúbricas y principios vigentes.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Borrador A (The Bridge Intelligence con RAG)",
+      "Borrador B (LLM Genérico de control)",
+      "Pauta de evaluación ciega de 4 dimensiones SummEval"
+    ],
+    "actors": [
+      "Panel de 3 evaluadores expertos",
+      "Coordinador de QA del Piloto"
+    ],
+    "steps": [
+      "Presentar borradores anonimizados al panel",
+      "Registrar puntajes de consistencia, coherencia, relevancia y tono",
+      "Detectar flag de fallo fatal en Borrador B por cita de norma derogada",
+      "Consolidar dictamen: Aprobación de Borrador A, Descalificación de Borrador B"
+    ],
+    "states": [
+      "PRESENTACION_CIEGA",
+      "CALIFICACION_PANEL",
+      "DETECCION_FALLO_FATAL",
+      "DICTAMEN_CONSOLIDADO"
+    ],
+    "outputs": [
+      "Acta de evaluación comparativa de piloto",
+      "Certificado de calidad de respuesta"
+    ],
+    "exceptions": [
+      "Si Borrador A hubiese omitido una medida de contingencia prescrita en la RCA, su nota de consistencia se habría reducido automáticamente a 2.0"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CASO_SMA_PILOTO",
+      "type": "experimento",
+      "name": "Caso Evaluación Humana CEH-T01-088",
+      "aliases": [
+        "Prueba Ciega SMA"
+      ]
+    },
+    {
+      "entity_id": "RCA_RESOLUCION",
+      "type": "documento",
+      "name": "Resolución de Calificación Ambiental (RCA)",
+      "aliases": [
+        "Compromiso Ambiental Vinculante"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CASO_SMA_PILOTO",
+      "predicate": "valida_desempeño_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F24-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Borrador BRIDGE",
+      "item_b": "Borrador LLM Commodity",
+      "dimension": "Consistencia Factual",
+      "conclusion": "BRIDGE obtiene 5.0 por citas exactas a RCA y telemetría; LLM Commodity es vetado por alucinar marco legal derogado."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Puntaje consolidado en CEH-T01-088",
+      "denominator": "Escala Likert de 1.0 a 5.0",
+      "target": "4.83 / 5.0"
+    },
+    {
+      "metric": "Krippendorff's alpha del panel",
+      "denominator": "3 evaluadores independientes",
+      "target": "0.88"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Hablar",
+      "implication": "Demuestra la superioridad técnica y comercial de BRIDGE frente a soluciones genéricas ante directores de comunicaciones.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

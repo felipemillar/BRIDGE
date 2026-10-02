@@ -1,0 +1,149 @@
+{
+  "question_id": "P05-F31",
+  "pilar": "P05",
+  "eje": "Crisis, controversias y casos",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué secuencias observables aparecen en los casos chilenos del corpus?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis comparado de los casos emblemáticos chilenos documentados en el corpus (caso Colusión del Papel Tissue CMPC/SCA, y conflictos socioambientales en el SEIA como Dominga y Pascua Lama) revela una secuencia temporal observable recurrente estructurada en seis fases: 1) Incubación y Normalización de la Desviación: Operación prolongada de prácticas ilícitas (fijación de precios y cuotas de mercado por más de 10 años) o desatención sistemática de reclamos comunitarios de base; 2) Detonante Externo y Revelación Pública: Acción de un actor fiscalizador o judicial con poder coercitivo (requerimiento de la FNE ante el TDLC o admisión a trámite de recursos de protección en tribunales ambientales); 3) Explosión Mediática y Derrumbe Inmediato de Imagen: Cobertura intensiva en medios masivos, generación de memes virales y condena transversal en la esfera pública, provocando una caída vertical en los índices perceptuales de confianza ciudadana en cuestión de días; 4) Divergencia de Estrategias Institucionales de Respuesta: Bifurcación entre posturas de delación/cooperación (CMPC) vs litigación defensiva alegando coacción (SCA); 5) Cristalización Jurídica y Castigo Material: Sentencias definitivas de la Corte Suprema, imposición de multas máximas y acuerdos compensatorios con el SERNAC y consumidores; y 6) Reconstrucción Prolongada y Condicional: Proceso plurianual de recomposición de legitimidad supeditado a sacrificios económicos tangibles (US$ 150M), renovación total de directorios y reformas verificables de compliance.",
+  "findings": [
+    {
+      "claim_id": "P05-F31-C1",
+      "claim": "Los casos corporativos chilenos de alta notoriedad evidencian una trayectoria secuencial típica desde la incubación oculta hasta la sanción judicial y la reestructuración forzada de gobernanza.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2015-2026",
+        "region": "Chile",
+        "actor": "Mercado Regulado Chileno"
+      },
+      "evidence": [
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 6: Análisis de Casos de Estudio y Evidencia Empírica",
+          "excerpt_short": "Secuencia documentada en Caso Tissue (CMPC/SCA) y conflictos socioambientales: incubación, explosión mediática, colapso de confianza, litigación suprema y reconstrucción de gobernanza.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "07fa821a-9a20-4e9c-a917-24b0cde7fc98",
+          "source_title": "FNE Chile: Sentencia Condenatoria Colusión Papel Tissue CMPC y SCA (Caso Reputacional)",
+          "original_url": "https://www.fne.gob.cl/corte-suprema-condena-a-cmpc-y-sca-por-colusion-en-el-mercado-del-papel-tissue/",
+          "locator": "Sentencia de la Corte Suprema, considerando vigésimo",
+          "excerpt_short": "Traza la cronología del acuerdo colusorio desde el año 2000 hasta la delación en 2015 y la sentencia condenatoria definitiva en 2020.",
+          "source_date": "2020-01-06",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Secuencia empírica acreditada en expedientes judiciales públicos de la Corte Suprema de Chile.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cronología judicial de expedientes",
+      "Monitoreo histórico de prensa de crisis",
+      "Reportes de sostenibilidad anuales"
+    ],
+    "actors": [
+      "Tribunales de Justicia",
+      "Fiscalía Nacional Económica",
+      "Directorio Corporativo",
+      "Opinión Pública"
+    ],
+    "steps": [
+      "Mapeo cronológico de eventos críticos",
+      "Identificación de fases de incubación, explosión y reconstrucción",
+      "Extracción de patrones de vulnerabilidad organizacional"
+    ],
+    "states": [
+      "Incubation_Latent",
+      "Outbreak_Public",
+      "Adjudication_Firm",
+      "Restitution_Active"
+    ],
+    "outputs": [
+      "Línea de tiempo estructurada de la crisis corporativa"
+    ],
+    "exceptions": [
+      "Acuerdos extrajudiciales tempranos que previenen la fase de litigación pública masiva"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CHILE_CRISIS_SEQUENCE",
+      "type": "patron_empirico",
+      "name": "Secuencia de Crisis Corporativa en Chile",
+      "aliases": [
+        "Chilean Corporate Crisis Pattern"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CHILE_CRISIS_SEQUENCE",
+      "predicate": "describe_fases_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2015",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F31-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fases de la crisis",
+      "Fase de Imagen (Días 1 a 30)": "Afectación emocional superficial, linchamiento en redes sociales y portadas de prensa.",
+      "Fase Reputacional (Años 1 a 5)": "Sanción legal, pérdida de contratos fiduciarios, costo de capital elevado y reestructuración de directorio."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Gestor de Contingencias",
+      "implication": "BRIDGE debe permitir ubicar cualquier controversia en curso dentro de las 6 fases de la secuencia chilena para predecir los hitos institucionales que vendrán a continuación.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F32"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

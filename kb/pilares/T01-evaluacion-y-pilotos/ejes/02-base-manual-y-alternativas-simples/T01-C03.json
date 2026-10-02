@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-C03",
+  "pilar": "T01",
+  "eje": "Base manual y alternativas simples",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre base manual y alternativas simples, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en base manual y controles: 1) Discrepancia: Las notas iniciales sugerían que un modelo de lenguaje web genérico (como ChatGPT Enterprise o Claude.ai sin RAG) representaba un control contemporáneo suficiente para evaluar a BRIDGE; 2) Versión que Prevalece: Según T01_QUALITY_ADDENDUM (45782049) y las directrices AMEC (92dfdc7c), prevalece la obligatoriedad de utilizar una batería de cuatro cohortes de control independientes: Control 0 (manual analista tradicional en Word/SharePoint), Control 1 (búsqueda léxica BM25 / Elasticsearch), Control 2 (LLM commodity sin RAG gobernado) y Control 3 (agencia externa tradicional con latencia 24h). Solo al superar simultáneamente los cuatro controles en fidelidad, latencia y costo unitario se demuestra la ventaja competitiva no sustituible de BRIDGE.",
+  "findings": [
+    {
+      "claim_id": "T01-C03-C1",
+      "claim": "T01_QUALITY_ADDENDUM establece que un piloto que solo se compara contra ChatGPT carece de validez científica, pues ignora que muchas corporaciones ya resuelven la búsqueda con motores léxicos internos (BM25) o agencias de clipping de bajo costo, siendo obligatorio superar a todos los controles contemporáneos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 1: Cuatro Cohortes de Control Obligatorias",
+          "excerpt_short": "No basta con vencer a ChatGPT. El piloto debe demostrar superioridad frente a la búsqueda léxica BM25, la agencia tradicional y el proceso manual puro.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Mandato rector canónico interno de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Resultados de pruebas sobre 4 cohortes de control",
+      "Matriz de comparación multicriterio"
+    ],
+    "actors": [
+      "Auditor de QA",
+      "ML Benchmark Lead"
+    ],
+    "steps": [
+      "Ejecutar el testset contra Control 0 (manual), Control 1 (BM25), Control 2 (LLM genérico) y Control 3 (agencia)",
+      "Medir delta de precisión, tiempo y costo frente a cada control",
+      "Verificar que BRIDGE supere a los 4 controles en la frontera de Pareto",
+      "Publicar matriz comparativa completa para la compuerta G1"
+    ],
+    "states": [
+      "EJECUCION_CONTROLES",
+      "COMPUTO_DELTAS",
+      "ANALISIS_PARETO",
+      "MATRIZ_CERTIFICADA"
+    ],
+    "outputs": [
+      "Matriz de Rendimiento Multicontrol T01"
+    ],
+    "exceptions": [
+      "Si BM25 supera a BRIDGE en tiempo de respuesta con igual precisión factual, se debe optimizar el ranking híbrido"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CUATRO_CONTROLES_T01",
+      "type": "experimento",
+      "name": "Batería de 4 Cohortes de Control",
+      "aliases": [
+        "Control 0, 1, 2, 3"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CUATRO_CONTROLES_T01",
+      "predicate": "evalua_ventaja_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C03-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Evaluación con 1 Solo Control (ChatGPT)",
+      "item_b": "Evaluación con 4 Controles Rigurosos",
+      "dimension": "Validez de mercado",
+      "conclusion": "1 solo control es un strawman comercial vulnerable; 4 controles blindan el producto ante cualquier objeción de compras."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de victorias de BRIDGE sobre controles",
+      "denominator": "Total escenarios de prueba ejecutados",
+      "target": ">= 90%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Proporciona argumentos comerciales irrefutables frente a la competencia de software generalista y agencias.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-C04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

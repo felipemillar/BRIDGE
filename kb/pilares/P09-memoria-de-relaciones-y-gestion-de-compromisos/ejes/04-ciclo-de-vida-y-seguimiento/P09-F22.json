@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F22",
+  "pilar": "P09",
+  "eje": "Ciclo de vida y seguimiento",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar ciclo de vida y seguimiento de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del ciclo de vida y seguimiento exige: 1) Entidad de Hitos: `Entity_Milestone` con atributos (milestone_id, commitment_id, title, due_date, status, completion_percentage, evidence_id); 2) Entidad de Registro de Auditoría: `Entity_AuditTrail` con atributos (audit_id, entity_type, entity_id, previous_state, new_state, changed_by_user_id, timestamp, justification_text); 3) Entidad de Alertas: `Entity_Alert` con atributos (alert_id, commitment_id, alert_type [T-30, T-15, T-7, overdue], recipient_user_id, sent_at, channel, acknowledged_at); 4) Relaciones Grafo: `HAS_MILESTONE`, `LOGGED_IN_AUDIT`, `TRIGGERED_ALERT`, `SUPERSEDES`; 5) Condiciones de Integridad: Prohibición de valores negativos en avance porcentual (0 a 100), verificación obligatoria de secuencia cronológica (milestone.due_date <= commitment.due_date), y restricción de llaves foráneas en cascada que impidan eliminar compromisos con historial asociado.",
+  "findings": [
+    {
+      "claim_id": "P09-F22-C1",
+      "claim": "El modelo relacional estructura el ciclo de vida mediante entidades normalizadas para hitos intermedios, alertas programadas y pistas de auditoría append-only con restricciones de integridad de base de datos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_lifecycle_tracking",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades y Relaciones (ERD) — Entidades de Soporte Operativo'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades de soporte al ciclo de vida: Entity_Milestone (descomposición en entregables), Entity_Alert (registro de despachos de advertencia) y Entity_AuditTrail (registro inmutable de transiciones de estado y justificaciones).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Simply Stakeholders: Commitments Tracking Tools That Close The Loop",
+          "source_id": "f962cf2b-33d3-49ae-8215-baee33ff1e4a",
+          "locator": "Section 'Milestone Deconstruction and Progress Telemetry', p. 20-25",
+          "retrieved_at": null,
+          "excerpt_short": "A single due date is rarely enough for complex multi-year commitments; breaking them down into discrete auditable milestones allows early detection of operational slippage.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Simply Stakeholders y el esquema relacional de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de hitos",
+      "Cambios de estado",
+      "Eventos de cron"
+    ],
+    "actors": [
+      "Backend BRIDGE",
+      "Base de Datos PostgreSQL",
+      "Servicio de Métricas"
+    ],
+    "steps": [
+      "Inserción de hitos al crear el compromiso",
+      "Generación de alertas programadas",
+      "Actualización de porcentajes de avance",
+      "Registro automático en audit trail"
+    ],
+    "states": [
+      "Hitos Programados",
+      "Alertas en Cola",
+      "Auditoría Sincronizada"
+    ],
+    "outputs": [
+      "Tablero de telemetría de compromisos activos y curva S de avance"
+    ],
+    "exceptions": [
+      "Hitos con fecha posterior al compromiso padre son rechazados por validación Pydantic"
+    ]
+  },
+  "entities": [
+    "Entity_Milestone",
+    "Entity_AuditTrail",
+    "Entity_Alert",
+    "Curva S de Avance",
+    "Simply Stakeholders"
+  ],
+  "relations": [
+    {
+      "from": "Entity_Commitment",
+      "to": "Entity_Milestone",
+      "type": "HAS_MILESTONE"
+    },
+    {
+      "from": "Entity_Commitment",
+      "to": "Entity_Alert",
+      "type": "TRIGGERED_ALERT"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Monitoreo por un único plazo vs Desglose en hitos intermedios",
+      "diferencia": "El plazo único solo alerta cuando el daño está hecho; los hitos permiten corregir desviaciones operacionales con meses de anticipación."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "milestone_completion_scale": "0% a 100% numérico entero",
+    "audit_trail_retention": "Permanente e inmutable (política de 0 purga de datos)"
+  },
+  "bridge_implications": "Crear las tablas `commitment_milestones`, `commitment_alerts` y `commitment_audit_log` en PostgreSQL.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F23",
+    "P09-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

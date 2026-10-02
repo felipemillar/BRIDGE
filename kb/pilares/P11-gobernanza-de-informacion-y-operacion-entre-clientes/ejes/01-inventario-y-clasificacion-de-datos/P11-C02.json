@@ -1,0 +1,143 @@
+{
+  "question_id": "P11-C02",
+  "pilar": "P11",
+  "eje": "Inventario y clasificación de datos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué sigue sin prueba sobre inventario y clasificación de datos, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el dominio de taxonomía y gobierno de datos: 1) Lo que sigue sin prueba empírica: La fiabilidad y consistencia de la clasificación automática de documentos no estructurados (D1 a D5) ejecutada por modelos de lenguaje en tiempo de ingesta sin supervisión humana. No existen pruebas concluyentes de que un LLM clasifique con 100% de recall fragmentos mixtos que combinan opiniones corporativas generales (D2) con datos personales sensibles de ejecutivos (D4) o secretos estratégicos de precios (D3); 2) Fuente que falló o es parcial: Las síntesis preliminares asumían la viabilidad de auto-etiquetado algorítmico sin aportar datasets de validación, y las publicaciones de NIST SP 800-162 proporcionan el modelo conceptual de atributos pero no miden tasas de error de inferencia en clasificación documental; y 3) Validación mínima que resolvería la incertidumbre: Implementar el principio de 'Responsabilidad Humana Nominal' (Single Point of Accountability), donde el Data Owner del cliente valida obligatoriamente la clasificación inicial en un panel de doble confirmación, complementado con un benchmark ciego de 500 documentos corporativos reales chilenos para auditar la precisión y recall del clasificador automático, exigiendo recall > 99.5% para D4 y D5 antes de permitir etiquetado desatendido.",
+  "findings": [
+    {
+      "claim_id": "P11-C02-C1",
+      "claim": "Sigue sin prueba la infalibilidad del auto-etiquetado de documentos mediante LLM; las fuentes iniciales asumieron su viabilidad sin métricas empíricas; y la validación mínima exige aprobación humana nominal del Data Owner y un benchmark ciego de 500 documentos con recall > 99.5%.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "taxonomy_open_gaps_and_validation",
+      "evidence": [
+        {
+          "source_title": "P11_VERIFICATION_CORRECTIONS: Reconciliación Categorial Estricta (Síntesis Interna)",
+          "source_id": "49d7882a-096d-4bf2-b56c-39fe8af3d7f6",
+          "locator": "Sección 'Gaps Críticos y Calibración Epistémica'",
+          "retrieved_at": null,
+          "excerpt_short": "La auto-clasificación desatendida de documentos D1 a D5 por IA carece de prueba empírica en el corpus. Se exige validación humana y responsabilidad nominal indelegable del Data Owner.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-162: Guide to Attribute Based Access Control (ABAC) Definition and Considerations",
+          "source_id": "2a88e293-2b53-4430-8dca-26e545448a9f",
+          "locator": "Section 3 'Attribute Management and Data Integrity'",
+          "retrieved_at": null,
+          "excerpt_short": "Attributes must be verified for accuracy and authenticity prior to policy evaluation, as misclassified resource attributes lead to unauthorized access or denial of legitimate operations.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación lúcida de un riesgo técnico no resuelto por la literatura existente y propuesta de protocolo de prueba empírico riguroso.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Muestra documental heterogénea",
+      "Algoritmo de clasificación de prueba",
+      "Rótulos de oro verificados por abogados"
+    ],
+    "actors": [
+      "Data Owner",
+      "Ingeniero de ML de BRIDGE",
+      "Auditor de Calidad"
+    ],
+    "steps": [
+      "Selección de 500 documentos corporativos representativos con clasificación humana certificada (Gold Standard)",
+      "Ejecución de la inferencia de clasificación automática sobre el conjunto a ciegas",
+      "Cálculo de matriz de confusión (falsos positivos y falsos negativos por categoría D1-D5)",
+      "Evaluación del criterio de parada: recall >= 99.5% en D4 (datos personales) y D3/D5 (secretos comerciales)",
+      "Si el umbral no se alcanza, se mantiene mandatoria la aprobación humana manual en el flujo de ingesta"
+    ],
+    "states": [
+      "BENCHMARK_PREPARED",
+      "BLIND_TEST_RUN",
+      "CONFUSION_MATRIX_EVALUATED",
+      "GATE_DECISION_SEALED"
+    ],
+    "outputs": [
+      "Reporte estadístico de fiabilidad clasificatoria que respalda o restringe el uso de auto-clasificación"
+    ],
+    "exceptions": [
+      "Cualquier documento clasificado con confianza algorítmica < 90% se enruta automáticamente a revisión manual humana"
+    ]
+  },
+  "entities": [
+    "Auto-clasificador LLM",
+    "Gold Standard Dataset",
+    "NIST SP 800-162",
+    "Data Owner Nominal"
+  ],
+  "relations": [
+    {
+      "from": "Data Owner Nominal",
+      "to": "Auto-clasificador LLM",
+      "type": "SUPERVISES_AND_VALIDATES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Auto-clasificación a ciegas sin supervisión vs Clasificación asistida con aprobación de Data Owner",
+      "diferencia": "La auto-clasificación a ciegas arriesga fugas por desclasificación errónea; la clasificación asistida combina velocidad de IA con responsabilidad humana jurídica."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "unsupervised_classification_recall_target": "> 99.5% en categorías sensibles",
+    "gold_standard_sample_size": "500 documentos corporativos rotulados"
+  },
+  "bridge_implications": "Establece un estándar defensivo que evita sanciones legales por catalogar erróneamente datos personales sensibles como públicos.",
+  "open_gaps": [
+    "Construcción del dataset sintético representativo de contratos y actas corporativas chilenas."
+  ],
+  "next_question_ids": [
+    "P11-C03",
+    "P11-C04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

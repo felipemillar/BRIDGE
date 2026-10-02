@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-C15",
+  "pilar": "T01",
+  "eje": "Costos y continuidad operacional",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre costos y continuidad operacional, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en costos y continuidad: 1) Discrepancia: Las notas preliminares asumían una arquitectura monolítica dependiente de un único proveedor de API en la nube (OpenAI), considerando las caídas del servicio como 'eventos de fuerza mayor no mitigables'; 2) Versión que Prevalece: Según T01_QUALITY_ADDENDUM (45782049) y la arquitectura de NeMo Guardrails (dee0924c), prevalece el diseño de resiliencia multi-proveedor con conmutación en caliente (circuit breaker): ante cualquier degradación o corte de la API primaria de Azure OpenAI, el orquestador redirige el tráfico en menos de 2.0 segundos (RTO < 5s) hacia Anthropic Claude en AWS Bedrock sin pérdida de contexto (RPO = 0) y preservando los mismos guardrails corporativos. El TCO de inferencia se modela de forma estricta según ArXiv 2025 (f57279c5) para asegurar márgenes brutos > 75%.",
+  "findings": [
+    {
+      "claim_id": "T01-C15-C1",
+      "claim": "T01_QUALITY_ADDENDUM establece la obligatoriedad de arquitecturas multi-proveedor con circuit breaker programable, desestimando la justificación de cortes de servicio por caídas de un único proveedor de nube.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 8: Resiliencia Multi-Proveedor y Circuit Breakers",
+          "excerpt_short": "No es aceptable atribuir una caída del servicio a OpenAI. La plataforma debe implementar conmutación en caliente multi-proveedor para garantizar un SLA de 99.9%.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma técnica y de SLA canónica interna de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Diseño monolítico preliminar",
+      "Arquitectura multi-proveedor de NeMo Guardrails"
+    ],
+    "actors": [
+      "Chief Technology Officer",
+      "Lead SRE"
+    ],
+    "steps": [
+      "Configurar endpoints primarios y secundarios en el orquestador de inferencia",
+      "Implementar healthchecks continuos con detección de fallos en < 800 ms",
+      "Probar conmutación automática entre Azure OpenAI y AWS Bedrock",
+      "Formalizar el compromiso de SLA del 99.9% en el catálogo de servicios"
+    ],
+    "states": [
+      "CONFIGURACION_FAILOVER",
+      "PRUEBA_CONMUTACION",
+      "VALIDACION_GUARDRAILS",
+      "SLA_CERTIFICADO"
+    ],
+    "outputs": [
+      "Arquitectura Multi-Proveedor Certificada T01"
+    ],
+    "exceptions": [
+      "Si la conmutación secundaria presenta un costo 3x superior, se limita temporalmente la longitud de contexto"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CIRCUIT_BREAKER_CANONICO",
+      "type": "producto",
+      "name": "Circuit Breaker Multi-Proveedor",
+      "aliases": [
+        "Resilience Architecture"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CIRCUIT_BREAKER_CANONICO",
+      "predicate": "reemplaza_a",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Arquitectura Mono-Proveedor",
+      "item_b": "Arquitectura Multi-Proveedor con Circuit Breaker",
+      "dimension": "Disponibilidad corporativa",
+      "conclusion": "Mono-proveedor expone al cliente a cortes aleatorios; multi-proveedor asegura continuidad de negocio continua."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Disponibilidad mensual de servicio (SLA)",
+      "denominator": "Minutos totales del mes",
+      "target": ">= 99.9%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite firmar acuerdos de nivel de servicio con penalizaciones financieras con total tranquilidad técnica.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-C16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

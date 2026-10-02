@@ -1,0 +1,145 @@
+{
+  "question_id": "P09-F05",
+  "pilar": "P09",
+  "eje": "Mapa de actores y relaciones",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre mapa de actores y relaciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos de este eje se respaldan en cinco fuentes canónicas del corpus: 1) International Finance Corporation (IFC / Banco Mundial, 2024-2026), cuyo manual 'Stakeholder Engagement Good Practice Handbook' define la tipología y los procesos de caracterización de comunidades y grupos vulnerables; 2) AccountAbility (AA1000SES, 2024-2026), que consagra el principio de inclusividad y la distinción entre representación formal y opiniones individuales; 3) Tractivity (2025-2026), que documenta la diferencia estructural entre CRMs y SRMs y las variables de mapeo de influencia; 4) Boréalis (2025-2026), que provee las especificaciones de vinculación de actores a expedientes regulatorios; y 5) Biblioteca del Congreso Nacional (BCN Chile, 2024-2026), con los textos de la Ley 20.730 de Lobby y el Decreto 236 que promulga el Convenio 169 de la OIT.",
+  "findings": [
+    {
+      "claim_id": "P09-F05-C1",
+      "claim": "La fundamentación teórica y jurídica del mapa de actores descansa en estándares multilaterales (IFC, AA1000SES), literatura de software SRM (Tractivity, Boréalis) y legislación chilena (Ley 20.730, Convenio 169 OIT).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "bibliographic_stakeholder_evidence",
+      "evidence": [
+        {
+          "source_title": "P09_SOURCE_INDEX",
+          "source_id": "c4e539b4-1e98-4d21-9ce5-92e2a1603487",
+          "locator": "Sección 'Índice de Fuentes para Mapa de Actores y Relaciones'",
+          "retrieved_at": null,
+          "excerpt_short": "El corpus sustenta el modelado relacional en dos pilares: la doctrina internacional de relacionamiento comunitario (IFC, AccountAbility) y el marco de gobernanza pública chileno (BCN Ley de Lobby y Convenio 169).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Decreto N° 236 Promulga el Convenio 169 de la OIT sobre Pueblos Indígenas y Tribales",
+          "source_id": "65fedfa1-07ba-47e6-95fd-4e583549d3b9",
+          "locator": "Artículos 6 y 7 'Deber de Consulta y Participación de Comunidades'",
+          "retrieved_at": null,
+          "excerpt_short": "Los gobiernos deberán consultar a los pueblos interesados, mediante procedimientos apropiados y en particular a través de sus instituciones representativas, cada vez que se prevean medidas legislativas o administrativas susceptibles de afectarles directamente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación exhaustiva de fuentes en el catálogo canónico de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio documental P09",
+      "Manifiesto fuentes/P09.json"
+    ],
+    "actors": [
+      "Investigador Antigravity",
+      "Auditor Bibliográfico"
+    ],
+    "steps": [
+      "Verificación de UUIDs de fuentes",
+      "Extracción de pasajes literales",
+      "Comprobación de vigencia de tratados"
+    ],
+    "states": [
+      "Fuentes Catalogadas",
+      "Citas Cotejadas",
+      "Aprobado"
+    ],
+    "outputs": [
+      "Registro bibliográfico del Eje 1"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "IFC World Bank",
+    "AA1000SES",
+    "Tractivity",
+    "Boréalis",
+    "BCN Chile",
+    "Convenio 169 OIT"
+  ],
+  "relations": [
+    {
+      "from": "Convenio 169 OIT",
+      "to": "Instituciones Representativas Indígenas",
+      "type": "mandates_consultation_with"
+    },
+    {
+      "from": "IFC / AA1000",
+      "to": "Estándar de Mapeo de Stakeholders",
+      "type": "defines"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Prácticas informales de relacionamiento vs Estándares internacionales auditables",
+      "diferencia": "Las prácticas informales no resisten una auditoría de bancos multilaterales ni un juicio ambiental; aplicar IFC y AA1000SES blinda la viabilidad del proyecto."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "multilateral_standards_count": "2 estándares globales de referencia (IFC Handbook, AA1000SES)",
+    "chilean_statutes_count": "2 normas legales obligatorias (Ley 20.730, DTO 236 Convenio 169)"
+  },
+  "bridge_implications": "Incluir en los briefs ejecutivos de BRIDGE la referencia al estándar IFC y Convenio 169 OIT cuando el interlocutor sea una comunidad indígena o rural.",
+  "open_gaps": [
+    "Verificar la jurisprudencia reciente de la Corte Suprema chilena sobre representatividad indígena."
+  ],
+  "next_question_ids": [
+    "P09-F06",
+    "P09-F07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

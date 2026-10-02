@@ -1,0 +1,169 @@
+{
+  "question_id": "P10-C07",
+  "pilar": "P10",
+  "eje": "RACI, DACI y cadena de aprobación",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre rACI, DACI y cadena de aprobación, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal giraba en torno a la atribución de la firma final en situaciones de emergencia: Síntesis preliminares planteaban que el redactor de turno o el oficial de prensa en terreno podía auto-aprobar y despachar declaraciones de contingencia para cumplir con la inmediatez de las redes sociales; en fuerte contradicción, los preceptos de la Ley 18.045 de Mercado de Valores (Art. 9 y 10) y las especificaciones de Broadsight y Sprinklr establecen que la responsabilidad jurídica sobre lo divulgado es fiduciaria e indelegable, exigiendo el Principio de Cuatro Ojos en todo momento. Conforme a P10_VERIFICATION_CORRECTIONS (f043631e), que rige canónicamente, prevalece la versión de Broadsight y la Ley 18.045: La urgencia jamás habilita la auto-aprobación del redactor; en situaciones de crisis extrema, la inmediatez se resuelve mediante el despacho de 'Holding Statements' previamente redactados y pre-aprobados formalmente por el Directorio/Comité de Crisis, o mediante escalamiento automático hacia subrogantes designados estatutariamente, preservando de forma absoluta la segregación de funciones.",
+  "findings": [
+    {
+      "claim_id": "P10-C07-C1",
+      "claim": "Conforme a P10_VERIFICATION_CORRECTIONS, la urgencia operacional jamás invalida la segregación de funciones ni autoriza la auto-aprobación del redactor, debiendo resolverse la inmediatez mediante subrogantes o plantillas pre-aprobadas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "governance_chain_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Prevalencia Canónica: Segregación Indeleble de Funciones'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica: La urgencia jamás justifica el bypass de controles. La auto-aprobación está prohibida por arquitectura. Las crisis se gestionan con holding statements pre-aprobados y matrices de subrogancia.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "Broadsight: System of Record for Corporate Communications",
+          "source_id": "a8a48a2b-3621-422f-92fe-03700efebe57",
+          "locator": "Section 'Separation of Author and Signer'",
+          "retrieved_at": null,
+          "excerpt_short": "A system of record programmatically enforces that no content creator can authorize their own assets, ensuring an authentic external eye validates every outbound transmission.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Ley 18.045 de Mercado de Valores (Hechos Esenciales)",
+          "source_id": "737c1e8d-4a41-4178-8259-fd4d44800419",
+          "locator": "Artículos 9 y 10",
+          "retrieved_at": null,
+          "excerpt_short": "La responsabilidad por la veracidad y oportunidad de los hechos esenciales recae indelegablemente en los directores y administradores de la entidad inscrita.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Resolución normativa y arquitectónica taxativa en las correcciones canónicas rectoras.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Incidente grave en desarrollo",
+      "Solicitud de despacho urgente",
+      "Matriz de subrogantes"
+    ],
+    "actors": [
+      "Redactor en Terreno",
+      "Motor de Escalamiento BRIDGE",
+      "Subrogante Legal",
+      "Director de Crisis"
+    ],
+    "steps": [
+      "Recepción del requerimiento de comunicación urgente",
+      "Intento de despacho inmediato por el redactor bloqueado por el sistema",
+      "Activación de holding statement pre-aprobado para el tipo de incidente",
+      "Escalamiento automático al subrogante habilitado ante ausencia del titular",
+      "Firma ejecutiva del subrogante emitida en menos de 10 minutos",
+      "Despacho autorizado preservando la segregación de funciones"
+    ],
+    "states": [
+      "INCIDENT_ALERT",
+      "BYPASS_ATTEMPT_BLOCKED",
+      "PRE_APPROVED_TEMPLATE_SELECTED",
+      "DELEGATE_SIGNED",
+      "DISPATCHED_SECURELY"
+    ],
+    "outputs": [
+      "Comunicado de emergencia validado sin omisión de controles"
+    ],
+    "exceptions": [
+      "Si ningún aprobador responde, se emite únicamente el holding statement genérico institucional pre-cargado en frío"
+    ]
+  },
+  "entities": [
+    "Segregación de Funciones",
+    "Holding Statement Pre-Aprobado",
+    "Ley 18.045",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "Auto-Aprobación",
+      "type": "PROHIBITS_ABSOLUTELY"
+    },
+    {
+      "from": "Emergencia Operacional",
+      "to": "Holding Statement Pre-Aprobado",
+      "type": "RESOLVES_IMMEDIACY_WITH"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Auto-aprobación del redactor en pánico vs Uso de plantilla pre-aprobada",
+      "diferencia": "El redactor en pánico emite declaraciones erróneas que comprometen a la empresa; la plantilla pre-aprobada asegura serenidad, empatía y apego a la ley."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Auto-aprobación en emergencia vs Segregación estricta",
+      "resolution": "Prevalece la segregación estricta; prohibida la auto-aprobación bajo cualquier régimen."
+    }
+  ],
+  "metrics_and_denominators": {
+    "segregation_violation_rate": "0% de mensajes publicados sin firma de revisor independiente"
+  },
+  "bridge_implications": "Garantiza a los directores corporativos que ningún colaborador de comunicaciones podrá emitir declaraciones unilaterales que expongan penalmente a la mesa directiva.",
+  "open_gaps": [
+    "Protocolos de delegación biométrica en dispositivos móviles para directores que viajan en vuelos comerciales."
+  ],
+  "next_question_ids": [
+    "P10-C08",
+    "P10-C09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

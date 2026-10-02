@@ -1,0 +1,177 @@
+{
+  "question_id": "P01-F24",
+  "pilar": "P01",
+  "eje": "Reuniones y decisiones críticas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra reuniones y decisiones críticas sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso de un conglomerado minero-energético en el norte de Chile que enfrenta una revisión de permisos ambientales y protestas territoriales ilustra el tema: con entradas de RCA vigentes, reportes CMF NCG 461, actas previas de InfoLobby y petitorios comunitarios, el CCO y Asuntos Públicos sostienen la audiencia de lobby con la autoridad ambiental mientras Sostenibilidad atiende la mesa comunitaria; las decisiones se adoptan con cero contradicciones intergerenciales, logrando registrar el acta en InfoLobby en menos de 24 horas y preservando la continuidad operacional.",
+  "findings": [
+    {
+      "claim_id": "P01-F24-C1",
+      "claim": "En un conflicto territorial minero-energético en Chile, las entradas operativas integran las RCA vigentes, la Memoria Integrada CMF NCG 461, el historial de InfoLobby y el monitoreo de recursos judiciales y demandas comunitarias en tiempo real.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Conglomerado Minero-Energético"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2: Caso Práctico Minero-Energético en Chile",
+          "excerpt_short": "Entradas del caso: RCA ambiental, compromisos CMF NCG 461, InfoLobby y demandas territoriales.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:47:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso práctico detallado en el dossier P01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F24-C2",
+      "claim": "El resultado esperado verifica tres logros: inscripción de la audiencia en InfoLobby en <24 horas, consistencia fáctica del 100% con la Memoria CMF NCG 461, y preservación de la Licencia Social para Operar evitando la paralización de la faena.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Gerencia General y Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2: Resultados Verificables del Caso Minero",
+          "excerpt_short": "Registro en InfoLobby en <24 horas, 100% consistencia con CMF y continuidad de faena sin paralizaciones.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:47:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación de resultados verificables en el dossier.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "RCA operacional",
+      "Memoria CMF NCG 461",
+      "Actas InfoLobby",
+      "Petitorios comunitarios"
+    ],
+    "actors": [
+      "CCO",
+      "Gerente de Asuntos Públicos",
+      "Gerente de Sostenibilidad",
+      "Autoridad Ambiental",
+      "Comunidad Local"
+    ],
+    "steps": [
+      "Preparación de briefing cruzado",
+      "Audiencia de lobby ante autoridad ambiental",
+      "Mesa de diálogo comunitaria simultánea",
+      "Firma de adenda socioambiental",
+      "Inscripción en InfoLobby"
+    ],
+    "states": [
+      "Conflicto_Detectado",
+      "Briefing_Consolidado",
+      "Negociación_Paralela",
+      "Acuerdos_Suscritos",
+      "Cumplimiento_Registrado"
+    ],
+    "outputs": [
+      "Briefing ejecutivo trazable",
+      "Adenda comunitaria",
+      "Acta oficial InfoLobby"
+    ],
+    "exceptions": [
+      "Oferta económica informal del vocero en terreno que contradice el presupuesto aprobado por el Directorio"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_MINERO_NORTE",
+      "type": "caso_estudio",
+      "name": "Caso de Diálogo Territorial y Permisos Ambientales en Minería",
+      "aliases": [
+        "Conflicto Minero Norte de Chile"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CCO",
+      "predicate": "lidera_respuesta_en",
+      "object_id": "ENT_CASO_MINERO_NORTE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F24-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Relacionar",
+      "implication": "Conectar en tiempo real las demandas territoriales con las restricciones financieras y normativas de la sede central.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F25",
+    "P01-F26"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:47:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

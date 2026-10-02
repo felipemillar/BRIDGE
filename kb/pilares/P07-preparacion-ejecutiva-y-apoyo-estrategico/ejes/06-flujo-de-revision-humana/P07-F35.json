@@ -1,0 +1,147 @@
+{
+  "question_id": "P07-F35",
+  "pilar": "P07",
+  "eje": "Flujo de revisión humana",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre flujo de revisión humana?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Se respaldan en cinco fuentes canónicas del corpus: 1) Marcos de Supervisión y Rendición de Cuentas de IA: NIST AI RMF 1.0 (2023, funciones GOVERN 1.2 y MANAGE 2.4) y NIST Generative AI Profile (NIST AI 600-1, 2024) sobre arquitectura Human-in-the-Loop; 2) Estándares Éticos y Deontológicos: PR Council (2024, 'Ethical Standards and Guidelines for Generative AI in PR') sobre firma humana obligatoria y prohibición de salidas no supervisadas; 3) Liderazgo y CommTech: Page Society (2022, 'CommTech and Progression Paths for CCOs') sobre diseño de flujos de trabajo de comunicación corporativa; 4) Monitoreo de Crisis en Tiempo Real: Meltwater (2024, 'Social Media Crisis Response & GenAI Lens') sobre colapso de la 'Golden Hour' y latencias de respuesta; y 5) Síntesis Metodológica Rectora: P07_RESEARCH_DOSSIER y P07_EVIDENCE_MAP (Septiembre 2026).",
+  "findings": [
+    {
+      "claim_id": "P07-F35-C1",
+      "claim": "Los flujos de revisión humana colegiada y los SLAs de latencia se fundamentan en estándares de ingeniería de sistemas de IA, guías éticas de relaciones públicas y estudios de dinámicas de crisis digitales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_grounding",
+      "evidence": [
+        {
+          "source_title": "P07_EVIDENCE_MAP: Mapeo de Evidencia, Citas y Contradicciones",
+          "source_id": "7a3e74ff-b2da-4876-a3c6-d79f5d53094b",
+          "locator": "Sección 2 (Eje E) y Sección 3",
+          "excerpt_short": "Eje E: Supervisión Humana (Human-in-the-Loop) y Límites de Recomendaciones. Respaldado con Nivel 1 por NIST AI RMF 1.0 (2023), PR Council (2024), Meltwater (2024) y Page Society (2022). Se valida que la intervención humana no es un cuello de botella opcional sino una condición indispensable de legalidad y mitigación de riesgo corporativo.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "PR Council: Ethical Standards and Guidelines for Generative AI",
+          "source_id": "f377819a-f643-4b8b-8c72-e531bd9d01ca",
+          "locator": "Principio 2: 'Human in the Loop is Non-Negotiable', p. 3-5",
+          "excerpt_short": "A qualified communications professional must review and approve all AI-assisted outputs before distribution to executive leadership, media outlets, or regulatory bodies. Automation ends where strategic judgment begins.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada directa contra el mapa de evidencia y las directrices profesionales del PR Council.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "matriz_fuentes_flujo_humano": [
+      {
+        "ambito": "Gobernanza de IA",
+        "fuente": "NIST AI RMF 1.0 / NIST AI 600-1",
+        "aporte": "Diseño de salvaguardas HITL y pistas de auditoría inmutables."
+      },
+      {
+        "ambito": "Ética Profesional",
+        "fuente": "PR Council (2024)",
+        "aporte": "Mandato no negociable de revisión humana calificada."
+      },
+      {
+        "ambito": "Gestión de Flujos",
+        "fuente": "Page Society (2022)",
+        "aporte": "Modelos de madurez en CommTech y orquestación de aprobaciones."
+      },
+      {
+        "ambito": "Dinámica de Crisis",
+        "fuente": "Meltwater (2024)",
+        "aporte": "Parámetros de latencia (< 20 minutos) en entornos virales."
+      },
+      {
+        "ambito": "Síntesis Metodológica",
+        "fuente": "P07_RESEARCH_DOSSIER / EVIDENCE_MAP",
+        "aporte": "Protocolos de aprobación y plantillas operativas integradas."
+      }
+    ]
+  },
+  "entities": [
+    "NIST AI RMF",
+    "PR Council",
+    "Page Society",
+    "Meltwater",
+    "P07_EVIDENCE_MAP"
+  ],
+  "relations": [
+    {
+      "from": "PR Council",
+      "to": "Human-in-the-Loop",
+      "type": "mandates"
+    },
+    {
+      "from": "P07_EVIDENCE_MAP",
+      "to": "Meltwater",
+      "type": "synthesizes_slas_from"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Revisión Informal vs Flujo Normado NIST/PR Council",
+      "diferencia": "La revisión informal carece de trazabilidad y permite omisiones graves; el flujo normado garantiza cumplimiento fiduciario y protección ante investigaciones judiciales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "canonical_references_count": "5 cuerpos doctrinales contrastados",
+    "statutory_robustness": "Nivel 1 de certidumbre analítica"
+  },
+  "bridge_implications": "Documentar estos estándares en los acuerdos de nivel de servicio y manuales de usuario corporativos de BRIDGE.",
+  "open_gaps": [
+    "Medición del impacto de la fatiga cognitiva de los revisores humanos durante crisis prolongadas de más de 48 horas."
+  ],
+  "next_question_ids": [
+    "P07-F36",
+    "P07-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "question_id": "P02-F02",
+  "pilar": "P02",
+  "eje": "Universo comercial y deduplicación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué criterios separan proveedor comercial, asociación, estándar, consultora y propuesta de referencia?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La metodología de P02 establece 5 categorías conceptuales excluyentes: 1) Proveedor Comercial Competitivo (N_comm=70): empresa con fines de lucro que licencia software B2B, APIs de datos o plataformas para uso operativo continuo (ej. Meltwater, Signal AI, Quorum, AlphaSense); 2) Asociación Profesional / Gremio: organización no gubernamental sin fines de lucro que agrupa profesionales y emite directrices éticas o formativas sin comercializar software (ej. AMEC, Arthur W. Page Society); 3) Estándar / Marco Teórico: metodología conceptual de medición o buenas prácticas, no un producto de software (ej. Barcelona Principles 3.0 de AMEC, CommTech Framework de Page Society); 4) Consultora Estratégica / Asesoría Humana: firma de servicios profesionales que factura por honorarios/retainer y resuelve requerimientos con analistas humanos (ej. Tironi, Azerta, Extend, Kreab, Edelman) o agencias híbridas con tecnología cautiva no transferible como SaaS (ej. Burson con Limbik, LLYC con Bespoke/Minerva); 5) Propuesta de Referencia / Sujeto de Estudio: modelo arquitectónico objeto de contraste comparativo (The Bridge Intelligence), tratado estrictamente como hipótesis de diseño a validar y excluido del total de competidores comerciales.",
+  "findings": [
+    {
+      "claim_id": "P02-F02-C1",
+      "claim": "Para evitar la distorsión del mercado, la fe de erratas y el atlas reconciliado excluyen del denominador de competidores a las asociaciones profesionales (AMEC, Page Society), a los estándares conceptuales (Barcelona Principles 3.0) y a la propuesta de referencia (The Bridge Intelligence), fijando el denominador en exactamente 70 proveedores comerciales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-10-01",
+        "region": "Global",
+        "actor": "Metodología de Auditoría BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
+          "source_title": "00_P02_GLOBAL_READ_ME_AND_ERRATA",
+          "original_url": null,
+          "locator": "Sección: Criterios de Clasificación y Reconciliación del Denominador",
+          "excerpt_short": "Exclusión de asociaciones (AMEC, Page Society) y de la propuesta de referencia (The Bridge) del denominador comercial de 70 proveedores.",
+          "source_date": "2026-10-01",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        },
+        {
+          "source_id": "339114e9-8d29-48b7-8e88-8e52f15ceebc",
+          "source_title": "P02_GLOBAL_ATLAS_RECONCILIATION_V1",
+          "original_url": null,
+          "locator": "Taxonomía de Entidades y Criterios de Exclusión",
+          "excerpt_short": "Clasificación rigurosa entre proveedores de software, asociaciones, marcos metodológicos y consultoras.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Definición metodológica autoritativa de la fe de erratas del pilar.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P02-F02-C2",
+      "claim": "Las consultoras y agencias de comunicación estratégica (Tironi, Azerta, Extend, LLYC, Burson) constituyen sustitutos funcionales o híbridos tecnológicos, distinguiéndose del software SaaS puro por facturar retainers de horas humanas y no transferir su tecnología como autoservicio independiente.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / Global",
+        "actor": "Consultoras de Asuntos Corporativos"
+      },
+      "evidence": [
+        {
+          "source_id": "8445acb1-1da5-4f0e-a98a-c9c3d8dac8a1",
+          "source_title": "P02_GLOBAL_COMPANY_ATLAS_V1",
+          "original_url": null,
+          "locator": "Categoría 6: Agencias y Consultoras Estratégicas",
+          "excerpt_short": "Las consultoras resuelven el problema con equipos humanos de asesores, operando como sustitutos del software.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:25:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del modelo de negocio en el atlas de empresas de P02.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Modelo de ingresos",
+      "Naturaleza jurídica",
+      "Disponibilidad de software"
+    ],
+    "actors": [
+      "Analista Metodológico",
+      "Proveedores de Software",
+      "Asociaciones",
+      "Consultoras"
+    ],
+    "steps": [
+      "Evaluación de fines de lucro",
+      "Verificación de software SaaS entregable",
+      "Detección de estándares o marcos conceptuales",
+      "Clasificación en uno de los 5 arquetipos"
+    ],
+    "states": [
+      "Entidad_Evaluada",
+      "Arquetipo_Asignado",
+      "Denominador_Filtrado"
+    ],
+    "outputs": [
+      "Población depurada de proveedores comerciales independientes"
+    ],
+    "exceptions": [
+      "Agencias de servicios con herramientas propietarias de uso interno exclusivo (modelos híbridos)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ARQ_PROV_COMERCIAL",
+      "type": "arquetipo_mercado",
+      "name": "Proveedor Comercial Competitivo",
+      "aliases": [
+        "SaaS Vendor B2B"
+      ]
+    },
+    {
+      "entity_id": "ARQ_ASOCIACION",
+      "type": "arquetipo_mercado",
+      "name": "Asociación Profesional / Gremio",
+      "aliases": [
+        "Organización Sin Fines de Lucro"
+      ]
+    },
+    {
+      "entity_id": "ARQ_ESTANDAR",
+      "type": "arquetipo_mercado",
+      "name": "Estándar / Marco Teórico",
+      "aliases": [
+        "Framework Metodológico"
+      ]
+    },
+    {
+      "entity_id": "ARQ_CONSULTORA",
+      "type": "arquetipo_mercado",
+      "name": "Consultora Estratégica / Asesoría",
+      "aliases": [
+        "Sustituto Humano de Servicio"
+      ]
+    },
+    {
+      "entity_id": "ARQ_REFERENCIA",
+      "type": "arquetipo_mercado",
+      "name": "Propuesta de Referencia",
+      "aliases": [
+        "The Bridge Intelligence Hypothesis"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ARQ_PROV_COMERCIAL",
+      "predicate": "conforma_denominador",
+      "object_id": "N_comm_70",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F02-C1"
+    },
+    {
+      "subject_id": "ARQ_ASOCIACION",
+      "predicate": "excluida_de",
+      "object_id": "N_comm_70",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F02-C1"
+    },
+    {
+      "subject_id": "ARQ_REFERENCIA",
+      "predicate": "excluida_de",
+      "object_id": "N_comm_70",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F02-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Software SaaS vs Consultoría Humana Estratégica",
+      "Software SaaS B2B": "Herramienta accesible por suscripción de autoservicio que automatiza flujos continuos.",
+      "Consultoría Estratégica": "Servicio intensivo en horas de profesionales senior cobrado por iguala o proyecto."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Transversal",
+      "implication": "Posicionar a BRIDGE frente a software SaaS en eficiencia y frente a consultoras en velocidad y costo, reconociendo a las consultoras como socios o sustitutos híbridos.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F03",
+    "P02-F04"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:25:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

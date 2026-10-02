@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F45",
+  "pilar": "P08",
+  "eje": "Experimentos comerciales",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué controles impiden interpretar un piloto sin comprador como validación del negocio?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para blindar la evaluación contra falsos positivos y autoengaño, el corpus impone tres controles metodológicos innegociables: 1) Prohibición Absoluta de Pilotos Gratuitos ('Zero Free Pilots'): Si una empresa no está dispuesta a pagar al menos USD 2.500/mes durante la prueba o a firmar una Carta de Intención (LOI) vinculante condicionada a SLA, se califica como 'curiosidad académica' o 'sesgo de cortesía' y no se contabiliza como validación de negocio; 2) Validación del Comprador Económico (Economic Buyer Sign-off): El sponsor del piloto debe ser el CCO, VP de Asuntos Corporativos o Gerente General con facultad de firma presupuestaria verificada; la aprobación o entusiasmo de analistas junior o practicantes no cuenta como validación comercial; y 3) Métrica Dura de Conversión Financiera: El éxito de un piloto se mide exclusivamente por la emisión de la orden de compra corporativa anual; métricas vanidosas como 'número de logins', 'elogios en reuniones' o 'NPS alto sin pago' se descartan taxativamente.",
+  "findings": [
+    {
+      "claim_id": "P08-F45-C1",
+      "claim": "Los controles metodológicos de BRIDGE prohíben considerar el interés discursivo, el uso gratuito o el entusiasmo de usuarios no compradores como prueba de viabilidad comercial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "commercial_controls_anti_false_positives",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 8.3 'Controles Metodológicos contra Falsos Positivos de Validación'",
+          "excerpt_short": "Reglas de control antifraude cognitivo: 1) Ningún piloto gratuito califica como tracción; la disposición a pagar dinero real es el único termómetro de dolor; 2) El interlocutor debe ser el titular de la línea presupuestaria de Asuntos Corporativos; el visto bueno de un jefe de comunicaciones sin presupuesto es un falso positivo; 3) La única métrica de cierre válida es la orden de compra anual. Cualquier informe que declare validado el negocio basándose en 'buena recepción' o 'felicitaciones por la demo' queda anulado metodológicamente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 9.2 'Filtros de Validación Corporativa'",
+          "excerpt_short": "La trampa más común en el software B2B en Chile es el piloto eterno no pagado que desgasta al equipo de ingeniería sin llegar jamás a la firma del contrato.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Controles metodológicos rigurosos establecidos en el dossier y addendum de calidad de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitudes de pilotos",
+      "Comprobación de poder de firma del interlocutor",
+      "Términos de servicio de piloto"
+    ],
+    "actors": [
+      "Auditor Comercial",
+      "CRO",
+      "Comité de Ética y Validación"
+    ],
+    "steps": [
+      "Verificación de cargo del sponsor en InfoLobby/LinkedIn",
+      "Exigencia de pago del fee de compromiso",
+      "Monitoreo del hito de orden de compra",
+      "Calificación estricta de validación"
+    ],
+    "states": [
+      "Solicitud Evaluada",
+      "Pago Confirmado",
+      "En Prueba",
+      "Validado Financieramente / Descartado"
+    ],
+    "outputs": [
+      "Registro auditable de pilotos financieramente válidos"
+    ],
+    "exceptions": [
+      "Casos excepcionales de entidades académicas o ONGs que se tramitan bajo convenios de investigación explícitamente separados de la validación comercial"
+    ]
+  },
+  "entities": [
+    "Falso Positivo Comercial",
+    "Economic Buyer",
+    "Zero Free Pilots",
+    "Skin in the Game",
+    "Orden de Compra"
+  ],
+  "relations": [
+    {
+      "from": "Piloto sin Pago",
+      "to": "Falso Positivo Comercial",
+      "type": "classifies_as"
+    },
+    {
+      "from": "Orden de Compra Anual",
+      "to": "Validación de Negocio Real",
+      "type": "constitutes"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Métricas vanidosas (Logins, elogios) vs Métrica dura (Orden de compra)",
+      "diferencia": "Los elogios no pagan sueldos ni demuestran dolor; la orden de compra anual firmada por el CCO demuestra que el producto resuelve un problema crítico."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "pilot_payment_enforcement": "100% de los pilotos de validación deben ser pagados",
+    "decision_maker_seniority": "Sponsor debe ser CCO, VP o Director con presupuesto"
+  },
+  "bridge_implications": "Implementar estos tres controles en el manual de procedimientos comerciales de BRIDGE para proteger la disciplina financiera del equipo.",
+  "open_gaps": [
+    "Verificar si las empresas del Estado tienen impedimentos normativos para pagar pilotos previos a licitaciones."
+  ],
+  "next_question_ids": [
+    "P08-F46",
+    "P08-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "question_id": "P11-F06",
+  "pilar": "P11",
+  "eje": "Inventario y clasificación de datos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra inventario y clasificación de datos sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso Concreto: Ingesta, Clasificación y Enrutamiento Seguro de Carpeta de Antecedentes de Expansión Minera (Faena Pelambres). Entradas: 1) Paquete de 3 documentos subido por el Gerente de Proyectos: A) Resumen Ejecutivo de la RCA pública aprobada por el SEA (D1 Público); B) Minuta interna de cronograma y proveedores locales de transporte (D2 Interno); C) Anexo con nombres, teléfonos y correos de 15 dirigentes vecinales de la cuenca del Choapa junto a notas de sus posturas comunitarias (D4 Datos Personales); 2) Tenant autenticado: Minera Los Pelambres (`tenant_id: MLP-CORP-01`); 3) Motor de clasificación y sanitización de BRIDGE activado. Proceso: El sistema ingesta los archivos; etiqueta automáticamente A como D1 y B como D2; al procesar C, detecta entidades PII (nombres, números telefónicos y correos), verificando que no existan datos sensibles íntimos (religión, salud); aplica tokenización criptográfica a los teléfonos y correos generando seudónimos; clasifica C como D4 y asigna como Data Owner nominal al Gerente de Asuntos Públicos; habilita la vectorización de A y B en la colección general de RAG del tenant, pero confina los vectores de C a una subcolección de acceso restringido con clave CMK específica de Asuntos Comunitarios. Resultado Esperado: En el inventario de datos, los 3 activos quedan registrados con metadatos completos y dueño asignado; un analista general del tenant puede buscar en el RAG y recuperar los antecedentes de la RCA y cronograma (A y B), pero sus consultas no recuperan ni exponen los teléfonos ni correos de los dirigentes comunitarios (C), preservando el estricto cumplimiento de la Ley 19.628 / 21.719 y los controles NIST SP 800-53.",
+  "findings": [
+    {
+      "claim_id": "P11-F06-C1",
+      "claim": "El caso documenta la ingesta de un paquete heterogéneo (D1, D2, D4), ilustrando la detección y tokenización de PII, la asignación de Data Owner nominal y el aislamiento en subcolecciones restringidas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "case_study_inventory_execution",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 1 'Contexto Operativo' & Sección 2 'Escenario de Referencia Ingesta'",
+          "retrieved_at": null,
+          "excerpt_short": "Caso de ingesta de faena: Desglose de documentos públicos (RCA), internos (cronogramas) y personales (contactos vecinales). Tokenización de PII previo a vectorización restringida por rol y clave CMK.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "OWASP GenAI: Top 10 for Large Language Model Applications 2025",
+          "source_id": "83d92341-65c3-4adf-877a-8cf4b4cd29f2",
+          "locator": "LLM06 'Sensitive Information Disclosure Mitigation'",
+          "retrieved_at": null,
+          "excerpt_short": "Scrub personal identifiable information (PII) before documents enter the embedding pipeline, restricting queries retrieving sensitive attributes to specialized authorized roles.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las recomendaciones de mitigación de OWASP GenAI 2025 y el caso modelado en el dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento RCA (D1)",
+      "Minuta de proveedores (D2)",
+      "Ficha de contactos vecinales con PII (D4)",
+      "Tenant ID MLP-CORP-01"
+    ],
+    "actors": [
+      "Gerente de Proyectos",
+      "Motor de Clasificación BRIDGE",
+      "Módulo de Tokenización",
+      "Qdrant Vector DB"
+    ],
+    "steps": [
+      "Cálculo de hashes de origen para los 3 archivos",
+      "Clasificación automática por etiquetas D1, D2 y D4",
+      "Extracción y pseudonimización de teléfonos y correos en el archivo D4",
+      "Asignación de Data Owner nominal para cada archivo",
+      "Vectorización de D1 y D2 en colección general con payload `MLP-CORP-01`",
+      "Vectorización de D4 en subcolección protegida accesible solo por rol `COMMUNITY_LEAD`",
+      "Emisión de registro inmutable en el inventario de activos"
+    ],
+    "states": [
+      "PACKAGE_INGESTED",
+      "PII_TOKENIZED",
+      "ASSETS_CLASSIFIED",
+      "SEGREGATED_EMBEDDINGS_STORED"
+    ],
+    "outputs": [
+      "3 activos registrados en inventario con dueño formal",
+      "Índices vectoriales segregados y protegidos contra filtraciones"
+    ],
+    "exceptions": [
+      "Si el archivo D4 hubiera contenido registros médicos o antecedentes penales de vecinos, el sistema lo habría rechazado en la compuerta"
+    ]
+  },
+  "entities": [
+    "Faena Pelambres",
+    "RCA",
+    "Choapa",
+    "Tokenización PII",
+    "Qdrant",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Ficha Vecinal",
+      "to": "Tokenización PII",
+      "type": "SANITIZED_BY"
+    },
+    {
+      "from": "RCA",
+      "to": "Colección General RAG",
+      "type": "INDEXED_INTO"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Subir el archivo de contactos a ChatGPT Enterprise vs Procesamiento en BRIDGE",
+      "diferencia": "Subir a ChatGPT expone los datos personales a subprocesadores externos; el procesamiento en BRIDGE pseudonimiza la PII y la confina en bóvedas criptográficas locales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "case_pii_sanitization_rate": "100% de teléfonos y correos tokenizados antes de generar vectores",
+    "access_control_verification_score": "0 fugas de datos de dirigentes a usuarios sin rol de asuntos comunitarios"
+  },
+  "bridge_implications": "Demuestra la viabilidad práctica y la superioridad de seguridad del motor de BRIDGE para faenas mineras e industriales de alta sensibilidad comunitaria.",
+  "open_gaps": [
+    "Protocolos de destokenización autorizada en pantalla mediante doble factor de autenticación (2FA)."
+  ],
+  "next_question_ids": [
+    "P11-F07",
+    "P11-C01"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

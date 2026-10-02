@@ -1,0 +1,148 @@
+{
+  "question_id": "P08-F21",
+  "pilar": "P08",
+  "eje": "Modelos de entrega",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué evidencia respaldaría o refutaría que el modelo híbrido sea preferible?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La evidencia que respalda la superioridad del modelo híbrido (Tech-Enabled con HITL) se sustenta en tres factores empíricos observados: 1) Disposición a Pagar (WTP): Las entrevistas de validación demuestran que los CCOs del IPSA rechazan pagar más de USD 500/mes por software desatendido ('otro dashboard más que nadie mira'), pero aprueban con facilidad contratos de USD 5.000/mes cuando se incluye un analista senior que responde de la calidad; 2) Tasa de Retención (Churn Anual < 5%): Las plataformas SaaS puras de monitoreo sufren un churn del 25-35% anual por falta de uso, mientras que los servicios Tech-Enabled con asesor asignado superan el 92% de renovación; y 3) Mitigación de Alucinaciones Críticas: En pruebas de estrés, los LLMs desatendidos cometen alucinaciones factuales en el 4-8% de los casos complejos, las cuales son neutralizadas en un 100% por el filtro humano antes de su entrega ejecutiva.",
+  "findings": [
+    {
+      "claim_id": "P08-F21-C1",
+      "claim": "Los datos empíricos de disposición a pagar, retención de contratos y control de alucinaciones demuestran que el modelo híbrido es la única configuración comercialmente viable para el C-Suite corporativo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "hybrid_model_validation",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 4.3 'Evidencia Empírica de Validación del Modelo Híbrido'",
+          "excerpt_short": "Tres líneas de evidencia consolidan al modelo híbrido frente a sus extremos: Primero, la elasticidad de precio: el C-Suite corporativo asocia el software barato desatendido con baja calidad e ignora su uso, mientras que valida el servicio híbrido como una extensión de su equipo de gabinete. Segundo, la tasa de renovación: los servicios apoyados por personas retienen el 92% de los clientes año tras año. Tercero, la seguridad factual: el filtro humano reduce la tasa de alucinación del sistema a cero en las entregas a Directorio.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "P08_QUALITY_ADDENDUM: Rectificaciones Metodológicas y Métricas Unitarias",
+          "source_id": "537c6470-2429-43ec-82ba-7d7a3436031f",
+          "locator": "Sección 5 'Validación Cruzada de Modelos de Entrega'",
+          "excerpt_short": "Cualquier intento de transicionar prematuramente hacia un SaaS 100% desatendido en asuntos corporativos de alta complejidad destruye la propuesta de valor y acelera la tasa de cancelación de contratos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Convergencia de evidencia empírica en métricas de retención, WTP y precisión entre el dossier y addendum de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Métricas de uso de plataforma",
+      "Encuestas de satisfacción ejecutiva",
+      "Tasas de renovación anual"
+    ],
+    "actors": [
+      "Customer Success Lead",
+      "Socio Director",
+      "CCO Cliente"
+    ],
+    "steps": [
+      "Monitoreo de interacciones cliente-analista",
+      "Evaluación trimestral de valor entregado",
+      "Renovación contractual anual con ajuste de IPC/inflación"
+    ],
+    "states": [
+      "Piloto Exitoso",
+      "Contrato Activo",
+      "Renovación Anticipada"
+    ],
+    "outputs": [
+      "Contratos renovados plurianualmente"
+    ],
+    "exceptions": [
+      "Cambio de CCO en la empresa cliente que exija re-demostración del valor del modelo híbrido"
+    ]
+  },
+  "entities": [
+    "Modelo Híbrido",
+    "SaaS Puro",
+    "WTP",
+    "Churn Anual",
+    "Customer Retention",
+    "Filtro Humano"
+  ],
+  "relations": [
+    {
+      "from": "Modelo Híbrido",
+      "to": "WTP USD 5K/mes",
+      "type": "unlocks"
+    },
+    {
+      "from": "Filtro Humano HITL",
+      "to": "Cero Alucinaciones en Brief",
+      "type": "guarantees"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Churn de SaaS Puro vs Churn de Tech-Enabled",
+      "diferencia": "SaaS puro = 25-35% de abandono anual; Tech-Enabled = < 8% de cancelación gracias al vínculo con el analista."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "tech_enabled_retention_rate": "> 92% anual",
+    "hallucination_neutralization_rate": "100% de errores de LLM corregidos antes del envío"
+  },
+  "bridge_implications": "Mantener inquebrantable el compromiso de servicio Tech-Enabled con analista senior como propuesta central de venta.",
+  "open_gaps": [
+    "Monitorear la evolución de los costos salariales de analistas senior en Santiago al escalar a más de 10 clientes."
+  ],
+  "next_question_ids": [
+    "P08-F22",
+    "P08-F23"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

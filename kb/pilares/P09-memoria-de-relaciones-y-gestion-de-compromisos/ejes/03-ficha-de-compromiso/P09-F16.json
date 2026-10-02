@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F16",
+  "pilar": "P09",
+  "eje": "Ficha de compromiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar ficha de compromiso de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de la Ficha de Compromiso exige: 1) Identificadores y Metadatos: `commitment_id` (UUID), `code` (slug alfanumérico), `title`, `description_smart`, `category` (ambiental, social, laboral, infraestructura, lobby_acuerdo), `origin_type` (rca_legal, voluntary_dialogue, grievance_resolution); 2) Roles y Asignaciones: `owner_user_id` (responsable corporativo), `beneficiary_type` (persona, comunidad, institución), `beneficiary_id`, `approver_user_id`; 3) Parámetros Temporales y Económicos: `commitment_date`, `due_date`, `milestones_json` (hitos de control), `budget_currency`, `budget_allocated`, `budget_spent`; 4) Estado y Evidencia: `status` (enum de 8 estados de la máquina de estados), `criticality` (low, medium, high, critical), `evidence_requirement_type` (acta_recepcion, informe_tecnico, comprobante_sma, foto_geolocalizada), `evidence_document_id`; 5) Condiciones Lógicas: Restricción de unicidad del dueño, integridad referencial con el acta de origen, y bloqueo de transición a CUMPLIDO_CERRADO sin archivo adjunto validado.",
+  "findings": [
+    {
+      "claim_id": "P09-F16-C1",
+      "claim": "El esquema estructurado de la Ficha de Compromiso exige atributos de identificación, responsabilidades unívocas, calendario de hitos, estados estandarizados y regla obligatoria de evidencia probatoria para el cierre.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_commitment_card",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades y Relaciones (ERD) — Tabla Entity_Commitment'",
+          "retrieved_at": null,
+          "excerpt_short": "Campos de la entidad Entity_Commitment: id, code, title, description, category, origin_interaction_id, owner_user_id, beneficiary_id, creation_date, due_date, status, criticality, evidence_type_required, evidence_ref. Regla de integridad: No se permite estado CLOSED sin evidence_ref verificado.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: The Proving Problem — Why DIY AI Can't Prove Compliance (Commitment Tracking)",
+          "source_id": "27ce9bc8-70cf-4dc0-ac19-d8787d3bccd6",
+          "locator": "Section 'Database Architecture for Corporate Commitments', p. 18-22",
+          "retrieved_at": null,
+          "excerpt_short": "A structured database table for commitments must enforce foreign keys to the original consultation event and prohibit status progression to closed without an approved verification record.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia técnica rigurosa entre Boréalis y el ERD del dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Modelo relacional SQL / Pydantic schema",
+      "Catálogo de tipos de evidencia",
+      "Reglas de validación de negocio"
+    ],
+    "actors": [
+      "Ingeniero de Software BRIDGE",
+      "Arquitecto de Datos",
+      "Líder de Calidad"
+    ],
+    "steps": [
+      "Definición de modelo Pydantic en FastAPI",
+      "Creación de migración Alembic en PostgreSQL",
+      "Implementación de constraints CHECK y FOREIGN KEY",
+      "Tests de integridad unitarios"
+    ],
+    "states": [
+      "Esquema Diseñado",
+      "Migración Ejecutada",
+      "Constraints Validadas"
+    ],
+    "outputs": [
+      "Tabla `commitments` normalizada y robusta"
+    ],
+    "exceptions": [
+      "Intentos de insertar compromisos con dueño nulo son interceptados por constraint NOT NULL"
+    ]
+  },
+  "entities": [
+    "Entity_Commitment",
+    "Pydantic Schema",
+    "PostgreSQL",
+    "Boréalis SRM",
+    "Check Constraint"
+  ],
+  "relations": [
+    {
+      "from": "Entity_Commitment",
+      "to": "Entity_Evidence",
+      "type": "REQUIRES_EVIDENCE_TO_CLOSE"
+    },
+    {
+      "from": "Entity_Commitment",
+      "to": "Entity_Interaction",
+      "type": "REFERENCES_SOURCE_INTERACTION"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Estructura no relacional flexible vs Esquema relacional estricto",
+      "diferencia": "El esquema estricto previene corrupción de datos y garantiza que ningún compromiso carezca de plazo o dueño."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "fields_with_not_null_constraint": "11 de 14 campos",
+    "integrity_enforcement_level": "Nivel de base de datos (DB constraints)"
+  },
+  "bridge_implications": "Generar las entidades Pydantic correspondientes en el backend de BRIDGE para asegurar que la API rechace payloads incompletos.",
+  "open_gaps": [
+    "Ninguno identificado."
+  ],
+  "next_question_ids": [
+    "P09-F17",
+    "P09-F18"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

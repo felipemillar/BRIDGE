@@ -1,0 +1,130 @@
+{
+  "question_id": "P03-F42",
+  "pilar": "P03",
+  "eje": "Alertas útiles y latencia",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra alertas útiles y latencia sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Caso: Manejo estructurado de una alerta sobre una paralización imprevista de transporte de carga en la Ruta 5 Norte que impacta los suministros de una faena minera. Entradas: 1) Publicación en Bluesky (Jetstream) de dirigente gremial camionero anunciando corte de ruta (TTD: 8 segundos); 2) Nota de radio regional de Antofagasta confirmando el bloqueo de la carretera (TTD: 12 minutos); 3) Alerta meteorológica oficial de SENAPRED por marejadas anormales en el puerto de embarque; y 4) Algoritmo de clustering que agrupa las 3 señales en el evento madre `EVENT_BLOQUEO_RUTA5_01`. Resultado esperado: El sistema reconoce el evento como 'Severidad Crítica para Operaciones', calcula un TTD consolidado de 4 minutos y un TTV de 7 minutos tras confirmación cruzada con la radio regional; despacha una alerta push inmediata al Gerente de Operaciones y Gerente de Asuntos Públicos con el mapa de corte y fragmento de audio radial verificado; mientras que para la alta dirección (C-Suite) compila un reporte ejecutivo conciso 20 minutos después indicando el plan de contingencia sin saturarlos con las 40 publicaciones derivadas que circularon en redes sociales.",
+  "findings": [
+    {
+      "claim_id": "P03-F42-C1",
+      "claim": "Un caso estructurado de alerta útil combina detección subminuto en redes abiertas, verificación cruzada con broadcast regional y despacho selectivo por rol directivo, minimizando la fatiga de alertas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (Ruta 5 Norte / Antofagasta)",
+        "actor": "Caso Alertas P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.1 y 2.3: Ingesta Multicanal y Broadcast",
+          "excerpt_short": "Requiere un conector de ingesta directo sobre medios regionales... para captar señales tempranas... combinado con streaming de baja latencia.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación basada en los modelos operativos documentados del mapa de evidencia.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Bluesky Post",
+      "Radio Regional Antofagasta",
+      "Alerta SENAPRED"
+    ],
+    "actors": [
+      "Event Matcher",
+      "Severity Evaluator",
+      "Selective Dispatcher"
+    ],
+    "steps": [
+      "Ingesta subminuto",
+      "Clustering semántico",
+      "Verificación cruzada",
+      "Despacho selectivo por rol"
+    ],
+    "states": [
+      "Signal_Detected",
+      "Event_Cross_Verified",
+      "Role_Alerts_Dispatched"
+    ],
+    "outputs": [
+      "Alerta crítica inmediata a operaciones y briefing conciso al C-Suite"
+    ],
+    "exceptions": [
+      "Desbloqueo repentino de la ruta antes de despachar el reporte al directorio"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_BLOQUEO_RUTA",
+      "type": "caso_de_uso",
+      "name": "Caso Demostrativo Alerta Crítica Bloqueo de Ruta",
+      "aliases": [
+        "Route Blockade Critical Alert Case"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_BLOQUEO_RUTA",
+      "predicate": "valida_gobernanza_de",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F42-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Implementar canales de despacho diferenciados (push inmediato vs briefing conciso) según la jerarquía corporativa en BRIDGE.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-C13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

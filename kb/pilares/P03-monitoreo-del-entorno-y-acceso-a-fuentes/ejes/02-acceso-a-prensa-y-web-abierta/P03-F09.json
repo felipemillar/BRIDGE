@@ -1,0 +1,154 @@
+{
+  "question_id": "P03-F09",
+  "pilar": "P03",
+  "eje": "Acceso a prensa y web abierta",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué evidencia específica hay de cobertura de medios locales chilenos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La evidencia empírica demuestra una asimetría estructural severa: 1) Ceguera de suites globales: Ni Meltwater, ni Cision, ni Factiva garantizan cobertura sistemática de diarios electrónicos comunales, radios regionales ni periódicos impresos de provincias en Chile (como El Rancagüino, El Día de La Serena, La Estrella del Norte o El Llanquihue); 2) Cobertura especializada demostrada: Litoralpress es el único proveedor documentado con infraestructura instalada para monitoreo exhaustivo de más de 200 radioemisoras regionales y medios comunales en las 16 regiones de Chile; 3) Sesgo metropolitano: Los agregadores abiertos (GDELT) indexan casi exclusivamente medios domiciliados en Santiago (Emol, La Tercera, DF, BioBioChile), ignorando medios comunitarios donde se incuban los conflictos socioambientales y vecinales.",
+  "findings": [
+    {
+      "claim_id": "P03-F09-C1",
+      "claim": "Los agregadores y suites globales presentan un sesgo metropolitano crítico, subrepresentando crónicamente la prensa provincial y regional chilena, la cual es cubierta de forma demostrada únicamente por proveedores locales como Litoralpress.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile (16 Regiones)",
+        "actor": "Ecosistema de Medios Regionales"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 2.1: Prensa y Web Abierta - Hipótesis Operativa",
+          "excerpt_short": "Para una corporación que opera en Chile... requiere un conector de ingesta directo sobre los portales de noticias regionales chilenos... para captar señales tempranas antes de que lleguen a los medios de circulación nacional.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:05:00-03:00"
+        },
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 2.4: Legislación Chilena (Ley 17.336)",
+          "excerpt_short": "El monitoreo que involucre reproducción o almacenamiento de obras periodísticas protegidas sin autorización conlleva contingencias jurídicas que deben gestionarse mediante acuerdos directos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:05:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación del atlas de cobertura territorial y vacíos de medios regionales en Chile.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de 150 medios provinciales chilenos",
+      "Feeds directos de portales comunales"
+    ],
+    "actors": [
+      "Regional News Harvester",
+      "Litoralpress API Connector"
+    ],
+    "steps": [
+      "Escaneo de portales regionales",
+      "Ingesta sindicada",
+      "Filtrado por comuna/región"
+    ],
+    "states": [
+      "Targeted_Provinces",
+      "Harvester_Active",
+      "Regional_News_Ingested"
+    ],
+    "outputs": [
+      "Flujo de noticias regionales chilenas geolocalizadas"
+    ],
+    "exceptions": [
+      "Caídas de servidores locales de diarios comunales pequeños"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PRENSA_REGIONAL_CHILE",
+      "type": "medio_comunicacion",
+      "name": "Ecosistema de Prensa Regional y Provincial de Chile",
+      "aliases": [
+        "Chilean Regional Press"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRENSA_REGIONAL_CHILE",
+      "predicate": "requiere_conector_local_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cobertura regional chilena",
+      "Suites Globales (Meltwater/Cision)": "Cobertura limitada a principales diarios de Santiago y portales nacionales.",
+      "Especialistas Locales (Litoralpress)": "Monitoreo comprobado en 16 regiones, prensa comunal y radios locales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Cobertura de Medios Regionales Chilenos",
+      "numerator": "Medios locales efectivamente monitoreados",
+      "denominator": "Total de medios regionales acreditados en Archi y Anatel",
+      "context": "Evaluación de cobertura de fuentes de información comunitaria en Chile"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "BRIDGE debe construir un conector dedicado para diarios regionales chilenos o integrarse mediante API comercial con Litoralpress.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:05:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

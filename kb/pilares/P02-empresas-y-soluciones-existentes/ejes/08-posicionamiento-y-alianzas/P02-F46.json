@@ -1,0 +1,137 @@
+{
+  "question_id": "P02-F46",
+  "pilar": "P02",
+  "eje": "Posicionamiento y alianzas",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar posicionamiento y alianzas de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo de datos con las siguientes especificaciones: 1) Variables: Decisión tecnológica (`build`, `buy`, `partner`), tipo de alianza (`proveedor_datos`, `integrador_saas`, `canal_consultoria`), nivel de criticidad (`nuclear_core_ip`, `infraestructura_comoditizada`), costo estimado de integración (`capex_desarrollo`, `opex_licenciamiento`), y nivel de madurez probada (`OPD`, `FD`, `DTI`, `POR`); 2) Categorías: Componentes propietarios diferenciales, componentes tercerizados estandarizados, y servicios expertos complementarios; 3) Relaciones: `Capacidad_Funcional -> Asignada_A -> [Build, Buy, Partner]`, `Aliado_Estrategico -> Provee -> Tipo_Dato`, `Hipotesis_Diferencial -> Vinculada_A -> Metrica_POR`; 4) Condiciones de frontera: Prohibición de asignar la categoría 'Build' a cualquier función donde existan APIs comerciales consolidadas de mercado con costo marginal decreciente y sin diferenciación estratégica.",
+  "findings": [
+    {
+      "claim_id": "P02-F46-C1",
+      "claim": "La modelación estructurada de decisiones de producto exige separar con precisión los activos que constituyen propiedad intelectual estratégica de aquellos que corresponden a insumos de datos transaccionales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura Empresarial"
+      },
+      "evidence": [
+        {
+          "source_id": "b5217662-c6f0-4529-8282-f5d17339b7fa",
+          "source_title": "P02_GLOBAL_MARKET_MAP_V1",
+          "original_url": null,
+          "locator": "Strategic Positioning Taxonomy and Decision Schema",
+          "excerpt_short": "Defines relational attributes for build vs buy decisions, tracking technical dependency, vendor lock-in risks, and IP differentiation.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:42:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar de arquitectura de software y estrategia corporativa.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evaluación de capacidades del mercado",
+      "Objetivos de rentabilidad y plazo",
+      "Matriz de riesgos de vendor lock-in"
+    ],
+    "actors": [
+      "Comité de Estrategia y Tecnología",
+      "Director de Finanzas",
+      "Arquitecto Jefe"
+    ],
+    "steps": [
+      "Clasificación de componentes según diferenciación",
+      "Asignación de modalidad (Build/Buy/Partner)",
+      "Modelación en el repositorio de arquitectura",
+      "Revisión trimestral de dependencias"
+    ],
+    "states": [
+      "Componente_Evaluado",
+      "Estrategia_Asignada",
+      "Contrato_Modelado"
+    ],
+    "outputs": [
+      "Mapa de arquitectura tecnológica y alianzas estructuradas"
+    ],
+    "exceptions": [
+      "Quiebra o discontinuación del servicio de un socio tecnológico crítico"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODELO_POSICIONAMIENTO",
+      "type": "modelo_datos",
+      "name": "Esquema Estructurado Posicionamiento y Alianzas",
+      "aliases": [
+        "Schema Positioning"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODELO_POSICIONAMIENTO",
+      "predicate": "aplica_criterio_de",
+      "object_id": "Minimizacion_Vendor_LockIn",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F46-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Modelo Estructurado de Alianzas vs Dependencia Informal",
+      "Modelo Estructurado": "Evalúa riesgos de sustitución, SLAs, costos de cambio y planes de contingencia.",
+      "Dependencia Informal": "Expone a la empresa a fallas imprevistas si el proveedor externo cancela el acceso a sus datos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe construir su arquitectura con interfaces abstractas que permitan cambiar de proveedor de datos sin modificar el núcleo del software.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F47",
+    "P02-F48"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:42:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

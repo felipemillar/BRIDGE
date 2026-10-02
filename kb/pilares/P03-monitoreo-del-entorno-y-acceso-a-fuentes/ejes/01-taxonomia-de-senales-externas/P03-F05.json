@@ -1,0 +1,139 @@
+{
+  "question_id": "P03-F05",
+  "pilar": "P03",
+  "eje": "Taxonomía de señales externas",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre taxonomía de señales externas?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos de la taxonomía de señales externas están respaldados por: 1) Estándares de medición comunicacional: AMEC Barcelona Principles 3.0 (2020), que fundamenta el abandono de impresiones superficiales y exige medir outcomes organizacionales e institucionales; 2) Normalización de eventos noticiosos y clustering: Event Registry API Documentation (2026) y GDELT 2.0 Global Event Database (2015-2026), que especifican la extracción de actores, eventos y tono multilingüe en intervalos de 15 minutos; 3) Normativa de divulgación y materialidad: Ley 18.045 de Mercado de Valores y Resoluciones de la CMF Chile (2026), y SEC EDGAR System Guidelines para Form 8-K/10-K (2026); y 4) Rectificación editorial y deslinde metodológico: P03_QUALITY_ADDENDUM (Septiembre 2026, Sección 2), que desvincula taxativamente la coordinación temporal de la falsedad discursiva y establece el carácter no oficial de precios de redes.",
+  "findings": [
+    {
+      "claim_id": "P03-F05-C1",
+      "claim": "El respaldo documental primario de la taxonomía de señales se distribuye entre estándares internacionales AMEC, APIs de eventos masivos (GDELT, Event Registry), leyes de mercado de valores (CMF, SEC) y la adenda de calidad P03.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Chile / EE.UU. / Europa",
+        "actor": "Corpus Canónico P03"
+      },
+      "evidence": [
+        {
+          "source_id": "e895c495-1608-46f4-b921-ca7bb60aac75",
+          "source_title": "P03_QUALITY_ADDENDUM",
+          "original_url": null,
+          "locator": "Sección 1 y 2: Propósito y Rectificaciones Específicas",
+          "excerpt_short": "Esta adenda tiene como propósito auditar, calibrar y rectificar las aseveraciones analíticas... deslindando hechos técnicos directamente verificables respecto a inferencias operativas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:00:00-03:00"
+        },
+        {
+          "source_id": "6ad73a33-ba1d-48af-899d-b0a20126725f",
+          "source_title": "GDELT 2.0 Global Event Database Documentation",
+          "original_url": "https://blog.gdeltproject.org/gdelt-2-0-our-global-world-in-realtime/",
+          "locator": "GDELT 2.0 Architecture and Update Intervals",
+          "excerpt_short": "GDELT 2.0 translates and monitors global news in over 100 languages, updating its Event, Mentions, and Global Knowledge Graph tables every 15 minutes.",
+          "source_date": "2015",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Trazabilidad cruzada de fuentes primarias y documentos canónicos del pilar.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Repositorio de fuentes P03",
+      "Índice de citas primarias"
+    ],
+    "actors": [
+      "Compliance Auditor",
+      "Evidence Verifier"
+    ],
+    "steps": [
+      "Verificación de URL/UUID",
+      "Comprobación de fecha de vigencia",
+      "Cotejo de pasajes"
+    ],
+    "states": [
+      "Unverified_Citation",
+      "Source_Retrieved",
+      "Citations_Audited"
+    ],
+    "outputs": [
+      "Matriz de respaldo de evidencia verificada"
+    ],
+    "exceptions": [
+      "Fuentes con cambios de endpoints en portales gubernamentales"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CANONICAL_CORPUS_P03",
+      "type": "corpus_documental",
+      "name": "Corpus Canónico de Evidencia P03",
+      "aliases": [
+        "P03 Evidence Corpus"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CANONICAL_CORPUS_P03",
+      "predicate": "respalda_afirmaciones_de",
+      "object_id": "Pilar_P03",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F05-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "Mantener una base de datos de referencias canónicas con hash inmutable para todas las señales ingeridas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

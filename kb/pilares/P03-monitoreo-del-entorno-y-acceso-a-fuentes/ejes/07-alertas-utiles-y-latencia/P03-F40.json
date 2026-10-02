@@ -1,0 +1,127 @@
+{
+  "question_id": "P03-F40",
+  "pilar": "P03",
+  "eje": "Alertas útiles y latencia",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar alertas útiles y latencia de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada exige: 1) Variables técnicas y de telemetría: `alert_id` (UUID), `severity_level` (critica, alta, media, baja), `ttd_seconds`, `ttv_seconds`, `dispatch_channel` (push_app, email_digest, instant_messaging), `target_role` (c_suite, asuntos_publicos, analista), y `circuit_breaker_active` (booleano); 2) Categorías de alerta: Ruptura_Operacional, Disputa_Regulatoria, Alerta_Temprana_Prensa, Evento_Material_Bursatil y Tension_Comunitaria; 3) Relaciones en grafo: `despachada_a` (Usuario/Rol Directivo), `consolida_senales` (Lista de IDs de Señal), `provocada_por_evento` (Evento Madre), y `escala_a` (Nivel Jerárquico Superior); y 4) Condiciones de integridad: toda alerta calificada como crítica debe incorporar obligatoriamente un enlace al documento o audio original que permite la verificación independiente del tomador de decisiones.",
+  "findings": [
+    {
+      "claim_id": "P03-F40-C1",
+      "claim": "El modelado estructurado de alertas debe integrar métricas de latencia TTD/TTV, códigos de severidad por rol y enlaces directos a la evidencia primaria que respalda la notificación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Modelado Estructurado P03"
+      },
+      "evidence": [
+        {
+          "source_id": "73488fee-1939-4426-b579-d9ca61c6eaa3",
+          "source_title": "P03_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 1: Marco Epistemológico",
+          "excerpt_short": "Para garantizar la máxima rigurosidad analítica... se requiere que toda afirmación empírica pueda rastrearse hasta una fuente original y un localizador comprobable.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación con el marco de calidad y esquema de notificaciones de P03.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Evento clasificado",
+      "Reglas de notificación por rol"
+    ],
+    "actors": [
+      "Alert Schema Generator",
+      "Evidence Linker"
+    ],
+    "steps": [
+      "Asignación de severidad",
+      "Vinculación de evidencia primaria",
+      "Generación de envelope de alerta"
+    ],
+    "states": [
+      "Event_Ready",
+      "Alert_Enriched",
+      "Dispatched"
+    ],
+    "outputs": [
+      "Objeto estructurado de alerta corporativa"
+    ],
+    "exceptions": [
+      "Falta de enlace permanente en fuentes de broadcast efímeras"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ALERT_SCHEMA",
+      "type": "esquema_datos",
+      "name": "Esquema Estructurado de Alertas y Latencia",
+      "aliases": [
+        "Alert & Latency Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ALERT_SCHEMA",
+      "predicate": "define_notificaciones_en",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F40-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Adoptar el esquema con soporte explícito de trazabilidad de evidencia para blindar la credibilidad de las alertas ejecutivas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F41"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T02:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "question_id": "P06-X28",
+  "pilar": "P06",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Ablación y valor del cruce",
+  "tipo": "X",
+  "notebook_id": "2c5dc262-44fc-43f8-b6e2-c993ed32835b",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar ablación y valor del cruce de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del experimento de ablación y valor del cruce exige modelar: 1) Variables del experimento: `experiment_id`, `ablation_condition` (Solo_Externo, Solo_Interno, Hibrido_Sin_Grafo, Hibrido_TGRAG_Completo), `test_case_id`, `execution_timestamp`, `token_count_context`, `token_count_output`, `latency_seconds`, `ragas_faithfulness`, `ragas_answer_relevance`, `trulens_groundedness`; 2) Variables de evaluación humana: `expert_evaluator_id`, `contextualization_score` (1-5), `factual_accuracy_score` (1-5), `actionability_score` (1-5), `hallucination_flag` (boolean), `decision_utility_ratio`; 3) Relaciones: `EVALUATES_CONDITION(experiment, ablation_condition)`, `PRODUCED_SCORE(evaluator, experiment)`, `OUTPERFORMS(condition_a, condition_b)`; 4) Condiciones de validez: Anonimización estricta de las salidas antes de presentarlas a los jueces, doble evaluación ciega y significancia estadística obligatoria ($p < 0.05$) antes de publicar claims de rendimiento.",
+  "findings": [
+    {
+      "claim_id": "P06-X28-C1",
+      "claim": "El esquema estructurado de ablación combina métricas algorítmicas de fidelidad Ragas con evaluaciones ciegas de utilidad por expertos.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Global",
+        "actor": "Evaluación Científica de Sistemas RAG"
+      },
+      "evidence": [
+        {
+          "source_id": "7b706c54-6b44-48fe-a0ba-be07e722be6b",
+          "source_title": "Es et al. (2023) - Ragas: Automated Evaluation of RAG",
+          "original_url": "https://arxiv.org/abs/2309.15217",
+          "locator": "Section 4: Experimental Setup & Metric Schemas",
+          "excerpt_short": "Structured evaluation schemas pair automatic reference-free metrics with blinded human judgment records to establish robust ablation benchmarks.",
+          "source_date": "2023-09-27",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Especificación coherente con el framework científico de evaluación Ragas.",
+      "epistemic_status_original": "diseno_de_datos_formal",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Resultados de ejecuciones de ablación"
+    ],
+    "actors": [
+      "Investigador de IA",
+      "Base de Datos de Evaluación MLflow / Weights & Biases"
+    ],
+    "steps": [
+      "Registro de corridas experimentales",
+      "Almacenamiento de matrices de evaluación",
+      "Cálculo de significancia estadística"
+    ],
+    "states": [
+      "Runs_Logged",
+      "Metrics_Aggregated"
+    ],
+    "outputs": [
+      "Dataset relacional de pruebas de ablación"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_ABLATION_SCHEMA",
+      "type": "modelo_datos_evaluacion",
+      "name": "Esquema Estructurado de Pruebas de Ablación",
+      "aliases": [
+        "Ablation Data Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_ABLATION_SCHEMA",
+      "predicate": "estructura_datos_de",
+      "object_id": "ENT_ABLATION_SUITE",
+      "valid_from": "2023-09-01",
+      "valid_to": null,
+      "evidence_claim_id": "P06-X28-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite auditar científicamente la mejora algorítmica continua de BRIDGE versión tras versión.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P06-X29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

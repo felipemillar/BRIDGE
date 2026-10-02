@@ -1,0 +1,146 @@
+{
+  "question_id": "P09-F45",
+  "pilar": "P09",
+  "eje": "Calidad, acceso y correcciones",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué rectificaciones de P09_VERIFICATION_CORRECTIONS prevalecen sobre el dossier original?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En virtud del mandato rector y de la regla canónica de prevalencia editorial, las rectificaciones de `P09_VERIFICATION_CORRECTIONS` (`f7d21328`) prevalecen taxativamente sobre `P09_QUALITY_ADDENDUM` y los dossiers iniciales en 5 puntos críticos: 1) Rectificación R1 (Privacidad y Ley 21.719): Prohibición estricta y absoluta de registrar datos sensibles privados (salud, creencias religiosas, ideología política personal); 2) Rectificación R2 (Inmutabilidad y FSM): Prohibición del comando UPDATE destructivo en compromisos; los cambios deben transitar obligatoriamente a `RENEGOCIADO` creando versiones sucesoras enlazadas (v2) y registrando justificación formal; 3) Rectificación R3 (Single Point of Accountability): Prohibición de asignar compromisos a gerencias o grupos; debe existir un único dueño persona natural con nombre y correo corporativo; 4) Rectificación R4 (Delimitación Legal): Declaración explícita de que BRIDGE es una herramienta de gestión y no provee asesoría legal ni garantiza sentencias favorables; y 5) Rectificación R5 (Depuración de Fuentes): Exclusión de fuentes fallidas o no sustantivas (Darzin, SustaiNet, URLs de INDH caídas y PRSA) y su reemplazo exclusivo por sustitutos canónicos verificados (Boréalis, Tractivity, Kancha y Prowly).",
+  "findings": [
+    {
+      "claim_id": "P09-F45-C1",
+      "claim": "P09_VERIFICATION_CORRECTIONS prevalece jerárquicamente sobre cualquier síntesis anterior, consagrando la prohibición de datos sensibles, la inmutabilidad de estados, el dueño individual único, el límite de asesoría legal y la sustitución de fuentes fallidas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "canonical_verification_corrections_precedence",
+      "evidence": [
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Sección 'Prevalencia Jerárquica y Reglas Editoriales Rectoras'",
+          "retrieved_at": null,
+          "excerpt_short": "Este documento constituye la norma canónica prevalente para el Pilar P09. Sus rectificaciones sobre protección de datos personales (Ley 21.719), inmutabilidad de compromisos, titularidad individual y delimitación legal prevalecen sobre el dossier inicial y addendums previos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "P09_OECD_SCOPE_CORRECTION",
+          "source_id": "42eb25f9-bb90-49b6-82d5-32220b2e6f7c",
+          "locator": "Sección 'Armonización con Verification Corrections'",
+          "retrieved_at": null,
+          "excerpt_short": "Se ratifica que el informe OECD Lobbying 2024 opera como estudio comparativo y no como derecho vinculante chileno, en total armonía con las rectificaciones de P09_VERIFICATION_CORRECTIONS.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Aplicación directa del mandato rector de prevalencia de VERIFICATION_CORRECTIONS.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Documento P09_VERIFICATION_CORRECTIONS",
+      "Textos de síntesis previas"
+    ],
+    "actors": [
+      "Auditor Canónico",
+      "Arquitecto de Conocimiento BRIDGE"
+    ],
+    "steps": [
+      "Cotejo de discrepancias entre versiones",
+      "Aplicación de la regla de precedencia",
+      "Corrección de modelos de datos y esquemas JSON",
+      "Certificación de cumplimiento en bitácora"
+    ],
+    "states": [
+      "Discrepancias Evaluadas",
+      "Prevalencia Aplicada",
+      "Modelos Canónicos Aprobados"
+    ],
+    "outputs": [
+      "Esquema de conocimiento normalizado conforme a P09_VERIFICATION_CORRECTIONS"
+    ],
+    "exceptions": [
+      "Cualquier regla anterior en conflicto con las 5 rectificaciones se considera derogada"
+    ]
+  },
+  "entities": [
+    "P09_VERIFICATION_CORRECTIONS",
+    "P09_OECD_SCOPE_CORRECTION",
+    "Prevalencia Canónica",
+    "Ley 21.719",
+    "FSM 8 Estados"
+  ],
+  "relations": [
+    {
+      "from": "P09_VERIFICATION_CORRECTIONS",
+      "to": "P09_QUALITY_ADDENDUM",
+      "type": "SUPERSEDES"
+    },
+    {
+      "from": "P09_VERIFICATION_CORRECTIONS",
+      "to": "P09_RESEARCH_DOSSIER",
+      "type": "RECTIFIES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Dossier preliminar sin corregir vs Norma canónica rectificada",
+      "diferencia": "El dossier preliminar permitía nombres de departamentos como dueños y fuentes de prueba; la rectificación canónica impone rigor absoluto de producción."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "canonical_corrections_count": "5 rectificaciones mayores obligatorias",
+    "precedence_enforcement_rate": "100% en todas las respuestas del pilar"
+  },
+  "bridge_implications": "Garantizar que todo el código y modelos de datos de BRIDGE implementen estrictamente estas 5 rectificaciones.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F46",
+    "P09-F47"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

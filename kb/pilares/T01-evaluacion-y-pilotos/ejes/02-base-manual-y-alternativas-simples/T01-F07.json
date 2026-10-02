@@ -1,0 +1,165 @@
+{
+  "question_id": "T01-F07",
+  "pilar": "T01",
+  "eje": "Base manual y alternativas simples",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Cómo realiza hoy un analista el mismo trabajo sin la aplicación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En la práctica corporativa actual sin la plataforma BRIDGE, un analista de asuntos corporativos ejecuta sus labores a través de un proceso artesanal, fragmentado y altamente dependiente de la memoria individual, caracterizado por cinco etapas operativas: 1) Dispersión en Silos de Búsqueda: El analista debe rastrear manualmente información en repositorios desconectados: carpetas compartidas de red en SharePoint o Google Drive, correos electrónicos en Outlook, intranets institucionales, sitios web de reguladores (CMF, BCN, Diario Oficial) y servicios de clipping de prensa en PDF contratados a agencias externas (ej. Cision); 2) Síntesis y Copiado Manual: Lee fragmentos desestructurados, realiza resúmenes en blocs de notas o documentos de Microsoft Word mediante 'copiar y pegar', sin trazabilidad automatizada de procedencia ni verificación cruzada de versiones vigentes; 3) Validación Factual Informada por Consulta Oral: Para verificar si una declaración o cifra compromete a la empresa o contradice un hecho esencial previo, el analista recurre a llamadas telefónicas o mensajes informales de Teams/Slack a colegas antiguos o al área legal; 4) Registro de Compromisos en Hojas de Cálculo Personales: Los acuerdos con autoridades o dirigentes comunitarios se anotan en archivos Excel locales que carecen de alertas automáticas, seguimiento de estados o auditoría inmutable, perdiéndose sistemáticamente ante la rotación del personal; y 5) Carga Horaria y Riesgo Latente: La preparación de una minuta ejecutiva de posición o un informe de riesgo de entorno consume entre 4 y 8 horas hombre por caso, con un riesgo estructural permanente de omisión involuntaria de antecedentes críticos y alucinación humana por fatiga cognitiva.",
+  "findings": [
+    {
+      "claim_id": "T01-F07-C1",
+      "claim": "El trabajo manual actual de un analista de asuntos corporativos es fragmentado y consume de 4 a 8 horas por minuta, disperso en SharePoint, correos, clippings en PDF y Excels personales sin trazabilidad criptográfica ni prevención de amnesia institucional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "analyst_manual_baseline_workflow",
+      "evidence": [
+        {
+          "source_title": "T01_RESEARCH_DOSSIER: Arquitectura de Validación, Pilotos, Casos de Prueba y Rúbricas (Síntesis Interna)",
+          "source_id": "ce4d8135-f66d-46f0-bc63-4f80f88f6b55",
+          "locator": "Sección 3 'Línea Base Manual y Flujos de Trabajo Tradicionales'",
+          "excerpt_short": "Marco de evaluación de pilotos corporativos con compuertas cuantitativas y diseño experimental riguroso.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "Cision - Executive Briefings & Strategic Media Insights",
+          "source_id": "b6a955fc-bfb8-47d5-bb7e-33367ed2a488",
+          "locator": "Section 'Workflow Integration and Executive Briefing Production'",
+          "excerpt_short": "Regula las gestiones de intereses particulares y exige registro estricto de audiencias y comunicaciones oficiales ante la autoridad.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_title": "Noy & Zhang (2023) - Experimental Evidence on the Productivity Effects of Generative AI (Science)",
+          "source_id": "2964a62c-c2b3-4a93-8bde-343f3fb2470e",
+          "locator": "Analysis of Baseline Writing Tasks",
+          "excerpt_short": "Corporate reputation depends 90% on operational behavior and 10% on communication; truth and action govern institutional trust.",
+          "retrieved_at": null,
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre estudios empíricos de productividad profesional y la documentación de procesos en asuntos corporativos.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Solicitud de minuta ejecutiva",
+      "Archivos PDF en carpetas compartidas",
+      "Búsquedas manuales en navegador"
+    ],
+    "actors": [
+      "Analista de Asuntos Corporativos",
+      "Jefe de Comunicaciones",
+      "Agencia de Clipping"
+    ],
+    "steps": [
+      "Recepción de la asignación de tarea por correo electrónico",
+      "Búsqueda manual de antecedentes en carpetas de SharePoint y correos históricos (1.5 horas)",
+      "Descarga y lectura rápida de reportes de prensa y leyes en navegador (1.5 horas)",
+      "Redacción del borrador en Word integrando citas manuales no normalizadas (2.0 horas)",
+      "Revisión y envío por correo a gerencia para validación informal (1.0 hora)",
+      "Archivo del entregable en disco local sin registro estructurado de compromisos"
+    ],
+    "states": [
+      "TASK_RECEIVED",
+      "MANUAL_SEARCHING",
+      "UNSTRUCTURED_DRAFTING",
+      "INFORMAL_REVIEW",
+      "UNAUDITED_FILED"
+    ],
+    "outputs": [
+      "Documento de Word susceptible a errores de cita, desactualización y desalineación con la postura oficial"
+    ],
+    "exceptions": [
+      "Si el analista que conoce el caso está de vacaciones o renuncia, la preparación de la minuta se retrasa más de 48 horas"
+    ]
+  },
+  "entities": [
+    "Línea Base Manual",
+    "SharePoint",
+    "Cision Clipping",
+    "Noy & Zhang (2023)",
+    "Amnesia Institucional"
+  ],
+  "relations": [
+    {
+      "from": "Línea Base Manual",
+      "to": "Amnesia Institucional",
+      "type": "PROPAGATES_RISK_OF"
+    },
+    {
+      "from": "Analista Manual",
+      "to": "SharePoint",
+      "type": "QUERIES_INEFFICIENTLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Flujo manual artesanal vs Flujo asistido por BRIDGE",
+      "diferencia": "El flujo manual tarda de 4 a 8 horas con alta probabilidad de omitir documentos clave; BRIDGE recupera hechos con RLS y genera borradores trazables en menos de 20 minutos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "manual_task_completion_hours": "4 a 8 horas por minuta",
+    "manual_citation_verification_rate": "< 65% de citas formalmente rastreables a la fuente primaria"
+  },
+  "bridge_implications": "Permite cuantificar con precisión el costo de ineficiencia que pagan hoy las empresas antes de implementar BRIDGE.",
+  "open_gaps": [
+    "Medición de diferencias de velocidad y precisión manual entre analistas junior y analistas senior."
+  ],
+  "next_question_ids": [
+    "T01-F08",
+    "T01-F09"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

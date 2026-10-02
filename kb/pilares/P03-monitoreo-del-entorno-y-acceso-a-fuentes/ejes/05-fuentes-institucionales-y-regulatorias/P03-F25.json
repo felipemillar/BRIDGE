@@ -1,0 +1,147 @@
+{
+  "question_id": "P03-F25",
+  "pilar": "P03",
+  "eje": "Fuentes institucionales y regulatorias",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "a2afe847-a988-40f1-9432-9e596b74b376",
+  "question_text": "¿Qué registros, organismos y boletines son prioritarios para Chile y para un despliegue multinacional?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los registros y boletines prioritarios se dividen en dos niveles operativos: 1) Nivel Nacional (Chile): a) Comisión para el Mercado Financiero (CMF): hechos esenciales, sanciones y circulares normativas de emisores de valores; b) Diario Oficial de la República de Chile: decretos supremos, leyes promulgadas y resoluciones ministeriales; c) Dirección ChileCompra (Mercado Público): API de datos abiertos bajo estándar OCDS para licitaciones públicas y compras ágiles; d) Congreso Nacional (Cámara de Diputadas/Diputados y Senado): sistema de tramitación de boletines de proyectos de ley e informes de comisiones; e) Servicio de Evaluación Ambiental (SEIA / e-SEIA): declaraciones y estudios de impacto ambiental (DIA/EIA) y resoluciones de calificación ambiental (RCA); y f) InfoLobby (Consejo para la Transparencia): registros de audiencias de autoridades y lobbistas; y 2) Nivel Multinacional: a) SEC EDGAR (EE.UU.): divulgación obligatoria de eventos materiales no programados (Form 8-K dentro de 4 días hábiles) e informes anuales (Form 10-K/20-F) vía API REST pública; y b) Gacetas oficiales y reguladores bursátiles equivalentes de América Latina (CNBV en México, CVM en Brasil, SMV en Perú).",
+  "findings": [
+    {
+      "claim_id": "P03-F25-C1",
+      "claim": "Los registros regulatorios prioritarios combinan portales bursátiles (CMF en Chile, SEC EDGAR en EE.UU.), contratación pública (ChileCompra OCDS) y boletines oficiales legislativos y ambientales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile / EE.UU. / Regional",
+        "actor": "Organismos Oficiales P03"
+      },
+      "evidence": [
+        {
+          "source_id": "ccc863f8-d879-4693-b10c-015f8ae278fa",
+          "source_title": "CMF Chile - Sistema de Consulta de Hechos Esenciales y Normativa",
+          "original_url": "https://www.cmfchile.cl/portal/principal/623/w4-propertyvalue-48783.html",
+          "locator": "Portal de Divulgación de Hechos Esenciales",
+          "excerpt_short": "Sistema de consulta pública en línea de hechos esenciales y normativa emitidos por entidades fiscalizadas en el mercado de valores.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:20:00-03:00"
+        },
+        {
+          "source_id": "be4fb72f-480d-4820-b0ac-a1a734b17482",
+          "source_title": "SEC EDGAR API Developer Resources & Dissemination Guidelines",
+          "original_url": "https://www.sec.gov/about/developer-resources",
+          "locator": "EDGAR System Submissions - Form 8-K Real-Time Stream",
+          "excerpt_short": "Public companies must disclose material corporate events on Form 8-K, accessible via the SEC's real-time JSON APIs and company submission endpoints.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:20:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa de especificaciones oficiales de CMF y SEC EDGAR.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Endpoints CMF",
+      "API ChileCompra OCDS",
+      "Feed EDGAR SEC",
+      "Boletines Congreso"
+    ],
+    "actors": [
+      "Regulatory Ingest Worker",
+      "Official Gazettes Harvester"
+    ],
+    "steps": [
+      "Consulta programada de APIs oficiales",
+      "Parseo de documentos normativos",
+      "Normalización a formato estructurado"
+    ],
+    "states": [
+      "Official_Feed_Polled",
+      "Document_Downloaded",
+      "Regulatory_Event_Emitted"
+    ],
+    "outputs": [
+      "Flujo de eventos regulatorios e institucionales verificados"
+    ],
+    "exceptions": [
+      "Mantenimiento no programado en los servidores de la CMF o Mercado Público"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_OFFICIAL_REGISTRIES",
+      "type": "organismos_reguladores",
+      "name": "Ecosistema de Registros Oficiales Prioritarios",
+      "aliases": [
+        "Official Regulatory Registries"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_OFFICIAL_REGISTRIES",
+      "predicate": "emite_senales_oficiales_hacia",
+      "object_id": "BRIDGE_Modulo_Escuchar",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P03-F25-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Naturaleza de la fuente oficial",
+      "CMF Chile": "Divulgación de hechos esenciales de sociedades anónimas abiertas en Chile.",
+      "SEC EDGAR": "Reportes obligatorios Form 8-K/10-K para corporaciones con cotización en mercados estadounidenses."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Escuchar",
+      "implication": "Conectar BRIDGE directamente a la API de la CMF y SEC EDGAR para capturar información financiera y de gobernanza con fuerza legal vinculante.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P03-F26"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:20:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

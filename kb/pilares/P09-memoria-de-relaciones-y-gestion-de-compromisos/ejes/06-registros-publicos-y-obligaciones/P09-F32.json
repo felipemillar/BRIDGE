@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F32",
+  "pilar": "P09",
+  "eje": "Registros públicos y obligaciones",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Cómo comprobar vigencia, jurisdicción y estado de un trámite antes de citarlo?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para evitar citar actos administrativos obsoletos, anulados o incompetentes, el sistema aplica un protocolo de verificación en 4 pasos: 1) Comprobación de Vigencia: Verificar que la resolución administrativa (RCA, dictamen o resolución sancionatoria) no haya sido revocada, suspendida por recurso de protección o modificada por una RCA posterior, consultando el número y año exacto en e-SEIA o SNIFA; 2) Verificación de Jurisdicción y Competencia: Validar si la autoridad emisora posee competencia territorial y material (e.g., Dirección Regional del SEA vs Dirección Ejecutiva central; SMA regional vs Superintendente Nacional); 3) Estado Procesal del Trámite: Determinar si el expediente se encuentra en tramitación activa, aprobado a firme, en plazo de reclamación administrativa (Art. 20 Ley 19.300 ante Comité de Ministros) o judicializado ante el Tribunal Ambiental respectivo (1°, 2° o 3° TA); y 4) Registro de Timestamp y Metadatos: Almacenar en BRIDGE la fecha/hora de la consulta al registro público, el hash del documento descargado y el URL canónico del expediente.",
+  "findings": [
+    {
+      "claim_id": "P09-F32-C1",
+      "claim": "Antes de invocar o citar un trámite público, el sistema exige comprobar su vigencia en el portal oficial, su estado procesal (firme, impugnado o en trámite) y la competencia jerárquica de la autoridad emisora.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "public_records_validation_protocol",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 3 'Flujo Operativo de Gestión en 6 Fases (Protocolo de Validación de Fuentes Públicas)'",
+          "retrieved_at": null,
+          "excerpt_short": "Protocolo de Validación Pública: Ningún acto o trámite puede registrarse como vinculante sin verificar: 1) Estado en plataforma oficial (firme vs impugnado), 2) Instancia de apelación abierta (Tribunal Ambiental o Suprema), 3) Fecha exacta de última actualización del expediente.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "SMA Chile: Resolución Exenta N° 844 (2012) — Normas de Carácter General sobre Fiscalización",
+          "source_id": "c8a55caf-b060-42dc-b88e-e16fd1e5d1ac",
+          "locator": "Artículo 4 'Publicidad y Validez de las Actas de Fiscalización'",
+          "retrieved_at": null,
+          "excerpt_short": "Las actas de fiscalización e informes técnicos gozan de presunción de veracidad respecto de los hechos constatados, pero su validez jurídica depende de la notificación oportuna y de la ausencia de medidas cautelares judiciales que suspendan sus efectos.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las normas de la SMA y el protocolo de validación del dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Número de expediente",
+      "Identificador de RCA o sanción",
+      "URL oficial del portal público"
+    ],
+    "actors": [
+      "Abogado de Asuntos Corporativos",
+      "Motor de Verificación BRIDGE",
+      "Auditor de Cumplimiento"
+    ],
+    "steps": [
+      "Consulta automatizada al portal institucional (e-SEIA/SNIFA)",
+      "Lectura del último evento procesal en la carátula",
+      "Validación contra plazos de reclamación legal",
+      "Asignación de sello de vigencia en la ficha de BRIDGE"
+    ],
+    "states": [
+      "Consulta Iniciada",
+      "Estado Verificado",
+      "Vigencia Certificada"
+    ],
+    "outputs": [
+      "Metadata de vigencia con sello temporal inmutable"
+    ],
+    "exceptions": [
+      "Expedientes con recursos de casación pendientes ante la Corte Suprema se etiquetan como 'Vigente Bajo Litigio Pendiente'"
+    ]
+  },
+  "entities": [
+    "e-SEIA",
+    "SNIFA",
+    "Tribunales Ambientales",
+    "Corte Suprema",
+    "Res. Ex. 844/2012 SMA"
+  ],
+  "relations": [
+    {
+      "from": "Trámite Público",
+      "to": "Tribunal Ambiental",
+      "type": "MAY_BE_CHALLENGED_BEFORE"
+    },
+    {
+      "from": "Ficha BRIDGE",
+      "to": "Portal Oficial",
+      "type": "VERIFIES_STATE_AGAINST"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Citar borrador de prensa vs Citar expediente administrativo oficial",
+      "diferencia": "La prensa suele informar sobre reclamaciones presentadas sin verificar si fueron admisibles; el expediente oficial certifica el estado legal efectivo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "validation_dimensions_count": "4 dimensiones (vigencia, jurisdicción, estado procesal, timestamp)",
+    "cache_ttl_public_records": "24 horas máximo para estados de litigio"
+  },
+  "bridge_implications": "Incorporar en los campos de enlace público de BRIDGE una etiqueta dinámica de estado: 'A Firme', 'En Reclamación', 'Suspendido' o 'En Trámite'.",
+  "open_gaps": [
+    "Automatizar la detección de causas en las tablas del 2° Tribunal Ambiental de Santiago."
+  ],
+  "next_question_ids": [
+    "P09-F33",
+    "P09-F34"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

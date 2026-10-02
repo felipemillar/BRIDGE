@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F28",
+  "pilar": "P09",
+  "eje": "Territorio y participación",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar territorio y participación de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de territorio y participación exige: 1) Entidad Territorial: `Entity_Territory` con atributos (territory_id, commune_code [código CUT chileno], region, watershed_basin, indigenous_ancestral_territory_flag, rca_influence_area_type [directa, indirecta]); 2) Entidad de Quejas y Conflictos: `Entity_Grievance` con atributos (grievance_id, actor_id, core_issue_taxonomy, severity, status, resolution_commitment_id); 3) Relaciones Grafo: `LOCATED_IN_TERRITORY`, `HAS_INDIGENOUS_PRESENCE`, `AFFECTS_BASIN`, `RESOLVED_BY_COMMITMENT`; 4) Condiciones de Integridad: Validación de códigos comunales contra el estándar oficial de la SUBDERE, georreferenciación de polígonos de faena en WGS84 o Sirgas Chile, y correspondencia biunívoca entre quejas cerradas y compromisos probados.",
+  "findings": [
+    {
+      "claim_id": "P09-F28-C1",
+      "claim": "El esquema de territorio y participación estructura polígonos geoespaciales, cuencas, códigos comunales CUT y quejas comunitarias vinculadas a compromisos de remediación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "structured_data_model_territory_and_participation",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades y Relaciones (ERD) — Entidades Territoriales'",
+          "retrieved_at": null,
+          "excerpt_short": "Entidades territoriales: Entity_Territory (comuna CUT, cuenca, área de influencia RCA) y Entity_Grievance (mecanismo de reclamos bajo Principio 31). Relaciones espaciales y de causalidad vinculan los compromisos operacionales con las parcelas o poblados afectados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "ICMM: Human Rights Due Diligence Maturity Matrix (2024) — Community Engagement",
+          "source_id": "71d00453-c0fc-454a-9348-0b36a7f9430c",
+          "locator": "Level 4 'Structured Grievance and Spatial Mapping of Impacts', p. 16-20",
+          "retrieved_at": null,
+          "excerpt_short": "Leading mining companies integrate geographic information systems (GIS) with community grievance registers to correlate operational incidents with localized community concerns.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los estándares de la ICMM y la arquitectura territorial del dossier.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Shapefiles de área de influencia RCA",
+      "Códigos CUT SUBDERE",
+      "Catastro de quejas territoriales"
+    ],
+    "actors": [
+      "Especialista GIS",
+      "Analista de Asuntos Comunitarios",
+      "Backend GeoDjango/PostGIS BRIDGE"
+    ],
+    "steps": [
+      "Carga de polígonos geográficos en PostGIS",
+      "Indexación espacial de comunidades y faenas",
+      "Enlace de eventos de interacción al punto territorial correspondiente",
+      "Cálculo de métricas de cobertura y salience territorial"
+    ],
+    "states": [
+      "Capa Territorial Cargada",
+      "Indexación Espacial OK",
+      "Consultas Habilitadas"
+    ],
+    "outputs": [
+      "Mapa interactivo de actores y compromisos en BRIDGE"
+    ],
+    "exceptions": [
+      "Zonas de límite comunal difuso son modeladas mediante intersección espacial de polígonos"
+    ]
+  },
+  "entities": [
+    "Entity_Territory",
+    "PostGIS",
+    "Código CUT SUBDERE",
+    "ICMM Maturity Matrix",
+    "Entity_Grievance"
+  ],
+  "relations": [
+    {
+      "from": "Entity_Org",
+      "to": "Entity_Territory",
+      "type": "LOCATED_IN"
+    },
+    {
+      "from": "Entity_Grievance",
+      "to": "Entity_Territory",
+      "type": "OCCURS_AT"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Lista plana de direcciones vs Modelamiento geoespacial",
+      "diferencia": "La lista plana no permite ver patrones de proximidad a tranques o cursos de agua; el modelamiento geoespacial revela la concentración territorial del impacto."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "geospatial_datum": "WGS84 / SIRGAS Chile",
+    "spatial_query_latency": "< 200 ms"
+  },
+  "bridge_implications": "Incorporar soporte PostGIS en la base de datos de BRIDGE para permitir búsquedas geoespaciales por radio de influencia en torno a faenas.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F29",
+    "P09-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

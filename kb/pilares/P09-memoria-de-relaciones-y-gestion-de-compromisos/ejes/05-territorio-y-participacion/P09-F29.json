@@ -1,0 +1,145 @@
+{
+  "question_id": "P09-F29",
+  "pilar": "P09",
+  "eje": "Territorio y participación",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre territorio y participación?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos normativos y metodológicos relativos a territorio y participación están respaldados por: 1) Decreto N° 236 de BCN Chile (Convenio 169 de la OIT): Arts. 6, 7 y 15 sobre derechos de consulta y prioridades de desarrollo de pueblos indígenas; 2) Instructivos del SEA Chile (2020-2024): Metodología de relacionamiento y consulta con GHPPI en el marco del RSEIA; 3) Naciones Unidas (Principio 31 de los Principios Rectores sobre Empresas y DDHH): Criterios de efectividad para mecanismos de quejas operacionales; 4) ICMM (2024, 'Human Rights Due Diligence Maturity Matrix'): Estándares de debida diligencia en derechos humanos y mapeo espacial de reclamos comunitarios; y 5) RiuNet (2023, Cap. 5): Estrategias organizacionales de mitigación de la amnesia corporativa en entornos comunitarios de alta rotación.",
+  "findings": [
+    {
+      "claim_id": "P09-F29-C1",
+      "claim": "El marco de territorio y participación se fundamenta en el derecho internacional indígena (Convenio 169 OIT), la doctrina ambiental del SEA, los Principios Rectores de la ONU y las matrices de debida diligencia de la ICMM.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_territory_participation",
+      "evidence": [
+        {
+          "source_title": "ICMM: Human Rights Due Diligence Maturity Matrix (2024) — Community Engagement",
+          "source_id": "71d00453-c0fc-454a-9348-0b36a7f9430c",
+          "locator": "Section 'Stakeholder Engagement and Operational Grievance Tracking', p. 8-12",
+          "retrieved_at": null,
+          "excerpt_short": "A maturity approach requires systematic tracking of community agreements, accessible dispute resolution channels, and demonstrable respect for traditional authorities and vulnerable groups.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "BCN Chile: Decreto N° 236 Promulga el Convenio 169 de la OIT sobre Pueblos Indígenas y Tribales",
+          "source_id": "65fedfa1-07ba-47e6-95fd-4e583549d3b9",
+          "locator": "Artículo 7",
+          "retrieved_at": null,
+          "excerpt_short": "Los pueblos interesados deberán tener el derecho de decidir sus propias prioridades en lo que atañe al proceso de desarrollo, en la medida en que éste afecte a sus vidas, creencias, instituciones y bienestar espiritual y a las tierras que ocupan o utilizan.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación cruzada consistente entre tratados internacionales y estándares de la industria minera.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.98,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes P09",
+      "Tratados internacionales",
+      "Guías sectoriales"
+    ],
+    "actors": [
+      "Auditor de Cumplimiento",
+      "Especialista en Asuntos Indígenas"
+    ],
+    "steps": [
+      "Verificación de fuentes oficiales en BCN Chile",
+      "Cotejo de estándares de debida diligencia",
+      "Consolidación de citas"
+    ],
+    "states": [
+      "Fuentes Validadas",
+      "Citas Aprobadas",
+      "Trazabilidad Cerrada"
+    ],
+    "outputs": [
+      "Matriz probatoria del Eje 5"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "Convenio 169 OIT",
+    "ICMM",
+    "Naciones Unidas",
+    "SEA Chile",
+    "RiuNet"
+  ],
+  "relations": [
+    {
+      "from": "Convenio 169",
+      "to": "GHPPI",
+      "type": "PROTECTS_RIGHTS_OF"
+    },
+    {
+      "from": "ICMM",
+      "to": "Empresas Mineras",
+      "type": "ESTABLISHES_DUE_DILIGENCE_FOR"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Derecho consuetudinario indígena vs Normativa administrativa general",
+      "diferencia": "El derecho consuetudinario exige considerar las formas tradicionales de toma de decisiones en asamblea comunitaria."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "international_treaties_count": "1 tratado ratificado por Chile (Convenio 169)",
+    "corporate_benchmarks_count": "2 estándares globales (ONU Principio 31 e ICMM)"
+  },
+  "bridge_implications": "Citar estos estándares en las memorias y reportes de sustentabilidad generados automáticamente desde BRIDGE.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-F30",
+    "P09-F31"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

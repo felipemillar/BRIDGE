@@ -1,0 +1,143 @@
+{
+  "question_id": "P11-C12",
+  "pilar": "P11",
+  "eje": "Controles comprobables",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué sigue sin prueba sobre controles comprobables, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En el dominio de controles comprobables: 1) Lo que sigue sin prueba empírica: La verificación formal de controles de aislamiento en flujos multi-agente recursivos donde múltiples agentes autónomos encadenan invocaciones dinámicas de herramientas (tools), generando llamadas a sub-modelos o conectores en cascada con riesgo de fuga por acumulación contextual o agregación no intencionada; 2) Fuente que falló o es parcial: Los catálogos estandarizados de controles (NIST SP 800-53 Rev. 5, SOC 2) fueron diseñados para arquitecturas estáticas deterministas y no contemplan esquemas de evaluación continua para grafos de agentes con branching no predecible; y 3) Validación mínima que resolvería la incertidumbre: Construir una suite de simulación y testing adversarial de agentes en un entorno de sandbox (CI/CD) que ejecute 1.000 trazas de interacción multi-agente complejas, inyectando condiciones de borde y verificando que en cada transición del grafo se evalúe síncronamente una aserción de no-fuga trans-tenant con 100% de éxito.",
+  "findings": [
+    {
+      "claim_id": "P11-C12-C1",
+      "claim": "Sigue sin prueba la robustez de controles en flujos multi-agente con branching dinámico; los catálogos tradicionales (SOC 2, NIST) son parciales para arquitecturas agénticas; y la validación mínima requiere simular 1.000 trazas en sandbox verificando el aislamiento en cada salto.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "verifiable_controls_open_gaps_and_validation",
+      "evidence": [
+        {
+          "source_title": "NIST AI 100-1: Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+          "source_id": "72884cc7-3122-4b9b-8fdb-aca048581f16",
+          "locator": "Section 3.2 'Third-Party and Multi-Component Risks'",
+          "retrieved_at": null,
+          "excerpt_short": "AI systems composed of multiple interacting models and tools introduce emergent risks that cannot be verified by testing isolated components independently.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 6 'Pruebas de Aceptación para Pilotos Enterprise'",
+          "retrieved_at": null,
+          "excerpt_short": "Pruebas de aislamiento en flujos agénticos automatizados.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Identificación pionera de un desafío crítico en la verificación de seguridad para agentes de IA de última generación.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Grafo de ejecución multi-agente",
+      "1.000 escenarios adversariales simulados",
+      "Sandbox de CI/CD"
+    ],
+    "actors": [
+      "Simulador de Agentes",
+      "Validador de Trazas de Invarianza",
+      "CISO"
+    ],
+    "steps": [
+      "Despliegue del entorno efímero de prueba en el pipeline de CI/CD",
+      "Ejecución de 1.000 escenarios donde agentes interactúan y llaman herramientas cruzadas",
+      "Inspección de la memoria contextual de cada agente tras cada paso del grafo",
+      "Aserción matemática: ningún estado del agente debe contener datos de un tenant no autorizado",
+      "Emisión de la certificación de invarianza multi-agente"
+    ],
+    "states": [
+      "SANDBOX_INITIALIZED",
+      "1000_TRACES_EXECUTING",
+      "INVARIANCE_CHECKED",
+      "MULTI_AGENT_CERTIFIED"
+    ],
+    "outputs": [
+      "Garantía reproducible de que los agentes autónomos respetan los límites de tenencia en todo momento"
+    ],
+    "exceptions": [
+      "Si un solo agente acumula contexto de otro tenant, la build de CI/CD falla y bloquea el despliegue a producción"
+    ]
+  },
+  "entities": [
+    "NIST AI 100-1 AI RMF",
+    "Multi-Agent Testing Suite",
+    "Invariance Assertion Engine",
+    "CI/CD Sandbox"
+  ],
+  "relations": [
+    {
+      "from": "Multi-Agent Testing Suite",
+      "to": "Flujos Agénticos Complejos",
+      "type": "VERIFIES_ISOLATION_OF"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Probar agentes manualmente vs Simulación automatizada de 1.000 trazas en sandbox",
+      "diferencia": "La prueba manual es anecdótica e incompleta; la simulación de 1.000 trazas estresa todas las combinaciones y demuestra robustez estadística."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "multi_agent_isolation_pass_rate": "100% de trazas sin fuga",
+    "simulated_traces_count": "1.000 trazas ejecutadas por versión"
+  },
+  "bridge_implications": "Permite comercializar la funcionalidad agéntica avanzada de BRIDGE con la tranquilidad de que nunca se producirán fugas por efectos emergentes.",
+  "open_gaps": [
+    "Reducción del tiempo de ejecución de la suite de 1.000 trazas en pipelines de integración continua."
+  ],
+  "next_question_ids": [
+    "P11-C13",
+    "P11-C14"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

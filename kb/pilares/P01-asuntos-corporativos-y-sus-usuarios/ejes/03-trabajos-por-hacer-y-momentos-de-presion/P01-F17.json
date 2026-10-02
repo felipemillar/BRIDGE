@@ -1,0 +1,234 @@
+{
+  "question_id": "P01-F17",
+  "pilar": "P01",
+  "eje": "Trabajos por hacer y momentos de presión",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre trabajos por hacer y momentos de presión?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El tema está respaldado por 11 fuentes estructuradas en 4 niveles epistemológicos: Hechos Documentados (Dircom ECE 2025: 54% reporte a CEO; Ley 20.730 de Lobby; CMF NCG 461; LCM Brecha CommTech <30% adopción madura; Cadem Marcas Ciudadanas 2026; Merco Chile 2025 auditado por KPMG); Evidencia Académica (GCF Global Alliance 2021 sobre Inteligencia Contextual; Page Society 2022/2023 sobre el CCO Integrador; PRSA Code of Ethics); Afirmaciones Comerciales (McKinsey 2025 sobre agentes de IA y briefings); e Hipótesis de Trabajo de diseño (HT-1 y HT-2 sobre reducción de 4 horas a <15 min).",
+  "findings": [
+    {
+      "claim_id": "P01-F17-C1",
+      "claim": "Los informes de EUPRERA / Latin American Communication Monitor (LCM 2022-2024) documentan una severa brecha CommTech en América Latina: aunque más del 75% reconoce la relevancia de IA y datos, menos del 30% de los departamentos de comunicación dispone de herramientas maduras de CommTech o formación en algoritmos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2022-2024",
+        "region": "América Latina",
+        "actor": "EUPRERA / LCM"
+      },
+      "evidence": [
+        {
+          "source_id": "64f69761-40f4-4f00-82b4-5878cf7be69d",
+          "source_title": "EUPRERA - Latin American Communication Monitor (LCM) Portal y Resultados",
+          "original_url": "https://www.comunicacionpolitica.org/lcm-informe/",
+          "locator": "Sección: Brecha digital y analítica en departamentos de comunicación",
+          "excerpt_short": "Menos del 30% de los departamentos de comunicación en América Latina cuenta con herramientas maduras de CommTech.",
+          "source_date": "2024-06-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:43:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estudio empírico longitudinal académico de EUPRERA.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F17-C2",
+      "claim": "El Global Capability Framework (GCF 2021) de Global Alliance define como capacidad profesional clave la 'Inteligencia Contextual': habilidad de ver el panorama amplio (social, político, regulatorio, tecnológico) para anticipar amenazas y oportunidades estratégicas.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021",
+        "region": "Global",
+        "actor": "Global Alliance / Univ. of Huddersfield"
+      },
+      "evidence": [
+        {
+          "source_id": "4861a93d-b9c4-4972-bfeb-1d0902d65dd0",
+          "source_title": "Global Alliance - Global Capability Framework Official Benchmark",
+          "original_url": "https://www.globalalliancepr.org/global-capability-framework",
+          "locator": "Dimensión de Inteligencia Contextual",
+          "excerpt_short": "To provide contextual intelligence: You see the bigger picture – socially, culturally, politically, technologically and economically.",
+          "source_date": "2021-05-18",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:43:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco de referencia profesional global respaldado por universidades y asociaciones internacionales.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F17-C3",
+      "claim": "En los rankings de reputación en Chile, Merco (auditado por KPMG bajo norma ISAE 3000) y Cadem (Marcas Ciudadanas, 18ª edición 2026) establecen que la evaluación del C-Suite se vincula estrictamente a la conducta ética, transparencia y aporte a la calidad de vida comunitaria.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Chile",
+        "actor": "Merco Chile / Cadem"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección de Benchmarks Reputacionales: Merco y Cadem",
+          "excerpt_short": "Merco auditado bajo ISAE 3000 y Cadem Marcas Ciudadanas 2026 vinculan la reputación directiva a conducta ética y gobernanza.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T00:43:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Metodologías de auditoría y medición empírica consolidadas en el mercado chileno.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Estudios empíricos ECE y LCM",
+      "Marcos normativos chilenos",
+      "Estándares deontológicos GCF y PRSA"
+    ],
+    "actors": [
+      "Auditor de Fuentes",
+      "Analista de Investigación"
+    ],
+    "steps": [
+      "Verificación de afiliación de fuentes",
+      "Extracción de citas con localizador",
+      "Mapeo de nivel epistemológico",
+      "Registro de trazabilidad"
+    ],
+    "states": [
+      "Fuentes_Identificadas",
+      "Clasificadas",
+      "Trazabilidad_Verificada"
+    ],
+    "outputs": [
+      "Matriz de Trazabilidad Auditable"
+    ],
+    "exceptions": [
+      "Identificación de fuentes comerciales sin validación empírica independiente"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_EUPRERA_LCM",
+      "type": "organizacion_academica",
+      "name": "Latin American Communication Monitor (LCM / EUPRERA)",
+      "aliases": [
+        "LCM EUPRERA"
+      ]
+    },
+    {
+      "entity_id": "ENT_GLOBAL_ALLIANCE",
+      "type": "organizacion",
+      "name": "Global Alliance for Public Relations and Communication Management",
+      "aliases": [
+        "Global Alliance"
+      ]
+    },
+    {
+      "entity_id": "ENT_CADEM",
+      "type": "empresa_investigacion",
+      "name": "Cadem Chile",
+      "aliases": [
+        "Cadem Plaza Pública",
+        "Marcas Ciudadanas"
+      ]
+    },
+    {
+      "entity_id": "ENT_MERCO",
+      "type": "empresa_investigacion",
+      "name": "Merco Chile",
+      "aliases": [
+        "Monitor Empresarial de Reputación Corporativa"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GLOBAL_ALLIANCE",
+      "predicate": "publica_marco",
+      "object_id": "Global Capability Framework",
+      "valid_from": "2021",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F17-C2"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Porcentaje de adopción madura de CommTech en departamentos de comunicación en LatAm",
+      "value": "<30%",
+      "denominator": "Total de directores de comunicación encuestados por LCM en América Latina",
+      "source_claim_id": "P01-F17-C1"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Incorporar la noción de 'Inteligencia Contextual' del GCF como principio rector de la síntesis ejecutiva multivariable en BRIDGE.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F18",
+    "P01-F19"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T00:43:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

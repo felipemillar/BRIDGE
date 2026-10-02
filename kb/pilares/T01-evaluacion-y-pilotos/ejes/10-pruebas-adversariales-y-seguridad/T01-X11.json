@@ -1,0 +1,152 @@
+{
+  "question_id": "T01-X11",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Pruebas adversariales y seguridad",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué criterio de fallo detiene inmediatamente un piloto con datos reales?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "En The Bridge Intelligence rige el 'Protocolo de Detención Inmediata de Emergencia' (Hard Kill Switch), el cual cancela y aborta de forma irrevocable un piloto en producción ante la ocurrencia de cualquiera de los siguientes tres eventos de fallo crítico: 1) Fuga o Exfiltración Cross-Tenant Confirmada: Si un usuario de un cliente visualiza, cita o recibe un solo fragmento de texto o metadato perteneciente a otro cliente corporativo; 2) Divulgación No Autorizada de Datos Personales Sensibles o Hecho Esencial Reservado: Si el sistema genera una respuesta que expone datos regulados bajo la Ley 21.719 o hechos esenciales bajo reserva legal ante la CMF a un rol sin privilegios DACI correspondientes; y 3) Incumplimiento Grave de Integridad de Guardrails: Si se comprueba que una inyección de prompt logró que el modelo generara declaraciones oficiales falsas que fueron enviadas a un canal externo sin pasar por la aprobación humana prescrita. La ocurrencia de cualquiera de estos eventos activa el crypto-shredding de las claves del piloto y la apertura de un post-mortem en menos de 3 horas ante el CSIRT corporativo.",
+  "findings": [
+    {
+      "claim_id": "T01-X11-C1",
+      "claim": "T01_QUALITY_ADDENDUM estipula que la violación del aislamiento entre clientes o la divulgación no autorizada de hechos reservados constituye causal de rescisión contractual inmediata y detención técnica (Kill) instantánea del piloto, sin posibilidad de dispensa por parte del sponsor comercial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 10: Criterios de Aborto Inmediato (Hard Kill Switch)",
+          "excerpt_short": "Cualquier fuga cross-tenant o divulgación de hechos reservados activa el Kill Switch inmediato del piloto, revocando claves de acceso y congelando la base de datos.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma canónica interna de gobernanza y seguridad de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Alertas del monitor de integridad y SIEM",
+      "Reporte de incidente de seguridad"
+    ],
+    "actors": [
+      "Chief Security Officer (CSO)",
+      "SRE On-Call",
+      "Lead Legal"
+    ],
+    "steps": [
+      "Detectar evento de fallo crítico en la telemetría",
+      "Activar el Kill Switch: revocar tokens JWT del tenant e invalidar claves de cifrado en KMS",
+      "Notificar al CSIRT de la empresa cliente en un plazo máximo de 3 horas",
+      "Iniciar proceso de investigación forense y post-mortem formal"
+    ],
+    "states": [
+      "OPERACION_NORMAL",
+      "INCIDENTE_CRITICO_DETECTADO",
+      "KILL_SWITCH_ACTIVADO",
+      "POSTMORTEM_FORENSE"
+    ],
+    "outputs": [
+      "Acta de Detención de Emergencia de Piloto",
+      "Informe Forense de Incidente"
+    ],
+    "exceptions": [
+      "Ningún usuario puede reactivar el piloto hasta la emisión de un dictamen de remediación validado por auditor externo"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "KILL_SWITCH_EMERGENCIA",
+      "type": "evento",
+      "name": "Hard Kill Switch de Piloto",
+      "aliases": [
+        "Protocolo de Aborto Inmediato"
+      ]
+    },
+    {
+      "entity_id": "NOTIFICACION_CSIRT",
+      "type": "documento",
+      "name": "Notificación CSIRT 3h",
+      "aliases": [
+        "Alerta Temprana de Incidente"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "KILL_SWITCH_EMERGENCIA",
+      "predicate": "desencadena",
+      "object_id": "NOTIFICACION_CSIRT",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X11-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Fallo Técnico Ordinario (Timeout de API)",
+      "item_b": "Fallo Crítico de Seguridad (Fuga Cross-Tenant)",
+      "dimension": "Acción operacional",
+      "conclusion": "El fallo ordinario activa conmutación transparente en caliente; el fallo crítico de seguridad activa la detención total y aborto del piloto."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tiempo de respuesta ante activación de Kill Switch",
+      "denominator": "Minutos desde alerta hasta revocación de accesos",
+      "target": "<= 5 minutos"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Otorga las máximas garantías de mitigación de daños exigidas por los oficiales de seguridad de la información (CISO).",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

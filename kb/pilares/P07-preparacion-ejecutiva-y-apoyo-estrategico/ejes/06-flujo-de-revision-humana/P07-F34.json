@@ -1,0 +1,150 @@
+{
+  "question_id": "P07-F34",
+  "pilar": "P07",
+  "eje": "Flujo de revisión humana",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar flujo de revisión humana de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un schema de flujo de revisión humana (Human_Review_Workflow_Schema) compuesto por: 1) Metadatos de proceso (Workflow_Id, Document_Ref_Id, Regime_Mode [ROUTINE / CRISIS_EXPRESS]); 2) Cadena secuencial de revisores (Reviewer_Chain: Step_Index, Assigned_User_Id, Assigned_Role, Step_Status [PENDING, IN_REVIEW, COMPLETED, BYPASSED]); 3) Límites temporales y escalamiento (Step_Deadline_UTC, Auto_Escalate_After_Minutes, Escalation_Backup_User_Id); 4) Registro de modificaciones (Diff_Log: Field_Name, Pre_Edit_Value, Post_Edit_Value, Justification_Note); 5) Dictamen de resolución (Resolution_Status [APPROVED, REJECTED, CHANGES_REQUESTED], Rejection_Category); y 6) Condiciones de cierre (Firma_Digital_Valida = TRUE y todos los pasos obligatorios completados para habilitar el cambio de estado a 'OFFICIALLY_APPROVED').",
+  "findings": [
+    {
+      "claim_id": "P07-F34-C1",
+      "claim": "El modelado estructurado del flujo de revisión requiere orquestar cadenas secuenciales de aprobación con límites temporales estrictos, reasignación automática por timeout y captura de diffs.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "workflow_schema",
+      "evidence": [
+        {
+          "source_title": "P07_RESEARCH_DOSSIER: Análisis Técnico, Entregables y Plantillas",
+          "source_id": "92a53063-fd4f-482d-aff4-1735daeb8bb3",
+          "locator": "Sección 4.1 y Sección 6",
+          "excerpt_short": "Variables del schema de revisión HITL: Workflow_ID, Document_Type, Review_Stage, Assignee_List[], Step_Deadline, Escalation_Route (ej. si el CCO no responde en 15m de crisis, escala al Gerente General), Diff_Tracking[], Final_Signoff_Digest.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "NIST: AI Risk Management Framework (AI RMF 1.0)",
+          "source_id": "3e70b28e-2295-4ce6-9f9f-efc2bfd4a5bf",
+          "locator": "Función MANAGE 2.4, p. 30-34",
+          "excerpt_short": "Human-in-the-loop workflows must define clear operational handoffs, automated timeout triggers, and structured override protocols to prevent systemic bottlenecks during emergency operations.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre las pautas de orquestación de workflows de NIST AI RMF y la arquitectura del dossier P07.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "schema_workflow_revision": {
+      "workflow_id": "WF-REV-2026-10-01-44",
+      "documento_id": "BRF-DAILY-2026-10-01",
+      "modo_operativo": "ROUTINE",
+      "etapas": [
+        {
+          "etapa": 1,
+          "rol": "Ingeniero_Hidrico",
+          "usuario": "jperez_ops",
+          "estado": "COMPLETED",
+          "tiempo_respuesta_min": 18
+        },
+        {
+          "etapa": 2,
+          "rol": "Fiscal_Corporativo",
+          "usuario": "fmillar_legal",
+          "estado": "COMPLETED",
+          "tiempo_respuesta_min": 24
+        },
+        {
+          "etapa": 3,
+          "rol": "CCO",
+          "usuario": "mrodriguez_cco",
+          "estado": "COMPLETED",
+          "tiempo_respuesta_min": 12
+        }
+      ],
+      "tiempo_total_revision_min": 54,
+      "resolucion_final": "OFFICIALLY_APPROVED",
+      "firma_digital": "RSA-4096-SIGN:9a8b...1c"
+    }
+  },
+  "entities": [
+    "HumanReviewWorkflowSchema",
+    "NIST AI RMF",
+    "EscalationRoute",
+    "DiffTracking"
+  ],
+  "relations": [
+    {
+      "from": "HumanReviewWorkflowSchema",
+      "to": "Brief Ejecutivo",
+      "type": "manages_lifecycle_of"
+    },
+    {
+      "from": "HumanReviewWorkflowSchema",
+      "to": "EscalationRoute",
+      "type": "triggers_on_timeout"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Cadena de Correos vs Workflow Estructurado con SLAs",
+      "diferencia": "El correo no avisa cuando un revisor está offline ni tiene escalamiento automático; el workflow estructurado enruta al suplente si se supera el SLA."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "schema_attributes_count": "14 campos operacionales",
+    "escalation_reliability": "100% de reasignaciones en timeout"
+  },
+  "bridge_implications": "Implementar este motor de workflow de aprobación como un microservicio independiente en la arquitectura de BRIDGE.",
+  "open_gaps": [
+    "Gestión de revisiones en paralelo de múltiples departamentos cuando el tiempo de crisis no permite aprobación secuencial."
+  ],
+  "next_question_ids": [
+    "P07-F35",
+    "P07-F36"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "question_id": "P01-C09",
+  "pilar": "P01",
+  "eje": "Riesgos de preparación insuficiente",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre riesgos de preparación insuficiente, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepan en la tipificación de los riesgos: las fuentes normativas y éticas originales (Ley 20.730, CMF NCG 461, PRSA Code of Ethics, McKinsey 2025) abordan los riesgos como contingencias macro regulatorias, éticas (mentira por omisión) y de desinformación geopolítica. En contraste, las síntesis internas (P01_RESEARCH_DOSSIER, P01_EVIDENCE_MAP) tipifican el riesgo como una patología operativa interna: la 'cocina artesanal de madrugada', fragmentación de repositorios y burnout del equipo por minutas manuales de último minuto. Prevalencia editorial: En cuanto a la realidad legal y reputacional, prevalecen las fuentes empíricas y normativas (Ley 20.730, Merco, Cadem); sin embargo, en cuanto a la clasificación epistémica, el documento correctivo P01_GAPS_AND_VALIDATION prevalece sobre P01_RESEARCH_DOSSIER al clasificar el 'dolor operativo artesanal' y las cifras de impacto no como hechos probados en la literatura previa, sino como Hipótesis de Trabajo (HT) sujetas a validación de campo.",
+  "findings": [
+    {
+      "claim_id": "P01-C09-C1",
+      "claim": "Frente a las fuentes externas que conceptualizan el riesgo de preparación como sanciones legales (Ley N° 20.730 de Lobby y CMF NCG 461) o infracciones éticas formales (PRSA Code of Ethics), las síntesis internas de P01 identifican el riesgo en la fricción operacional cotidiana ('cocina artesanal de minutas', fragmentación documental y desconexión entre la memoria corporativa interna y las señales externas).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Chile / Global",
+        "actor": "Equipos de Asuntos Corporativos y Reguladores"
+      },
+      "evidence": [
+        {
+          "source_id": "8e654c6f-3c9f-4ab3-a971-f0d8fb887b27",
+          "source_title": "P01_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección: Patologías operativas de la preparación insuficiente",
+          "excerpt_short": "Minutas elaboradas de madrugada a partir de correos dispersos y PDFs inconexos.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        },
+        {
+          "source_id": "87978287-38ec-4b0f-bd60-e724e02362aa",
+          "source_title": "Biblioteca del Congreso Nacional de Chile - Ley N° 20.730",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=1060115",
+          "locator": "Arts. 5, 7 y 8",
+          "excerpt_short": "Sanciones por inconsistencia u omisión en declaraciones ante sujetos pasivos.",
+          "source_date": "2026-04-02",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Marco legal vinculante y análisis del dossier de investigación.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-C09-C2",
+      "claim": "El documento correctivo P01_GAPS_AND_VALIDATION establece la prevalencia editorial sobre las afirmaciones operativas de P01_RESEARCH_DOSSIER, reclasificando la severidad del 'dolor de preparación artesanal' como una Hipótesis de Trabajo (HT-1) que requiere comprobación mediante entrevistas y shadowing de campo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Chile",
+        "actor": "Auditoría Editorial BRIDGE"
+      },
+      "evidence": [
+        {
+          "source_id": "882b1e52-412f-4505-ae57-212def190031",
+          "source_title": "P01_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Corrección de Estatus Epistémico sobre Dolores de Preparación",
+          "excerpt_short": "El dolor artesanal no es un hecho empíricamente probado sino una hipótesis de diseño a testear.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Prevalencia explícita fijada por la regla de correcciones editoriales del mandato.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Demandas regulatorias",
+      "Consultas de medios",
+      "Información corporativa fragmentada"
+    ],
+    "actors": [
+      "Vocero",
+      "Director de Asuntos Corporativos",
+      "Regulador",
+      "Opinión Pública"
+    ],
+    "steps": [
+      "Detección de requerimiento urgente",
+      "Búsqueda en repositorios aislados",
+      "Emisión de mensaje con datos obsoletos",
+      "Contradicción detectada por terceros",
+      "Apertura de contingencia reputacional"
+    ],
+    "states": [
+      "Requerimiento_Ingresado",
+      "Preparacion_Incompleta",
+      "Mensaje_Emitido",
+      "Contradiccion_Expuesta"
+    ],
+    "outputs": [
+      "Inconsistencia pública y daño reputacional medible"
+    ],
+    "exceptions": [
+      "Detección temprana por revisión legal previa antes de la emisión del vocero"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_RIESGO_PREPARACION",
+      "type": "riesgo_operacional",
+      "name": "Riesgo de Preparación Insuficiente",
+      "aliases": [
+        "Patología de Cocina Artesanal"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_RIESGO_PREPARACION",
+      "predicate": "degrada",
+      "object_id": "Licencia_Social_Operar",
+      "valid_from": "2020",
+      "valid_to": null,
+      "evidence_claim_id": "P01-C09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Riesgo Externo vs Patología Operativa Interna",
+      "Fuentes Originales": "Riesgos ex-post: multas de reguladores, litigios y sanciones éticas formales.",
+      "Síntesis Interna": "Fricción ex-ante: pérdida de horas en búsqueda manual, estrés nocturno y puntos ciegos fácticos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Indexar automáticamente los repositorios de la empresa para suprimir la recopilación manual nocturna.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-C10",
+    "P01-C11"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:15:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "question_id": "T01-F29",
+  "pilar": "T01",
+  "eje": "Métricas y denominadores",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre métricas y denominadores?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El sistema de métricas y denominadores para The Bridge Intelligence se fundamenta en las siguientes fuentes originales y pasajes canónicos verificados en T01: 1) Es et al. (Ragas, 2023-09-27, ArXiv 01d6cab0, p. 2-4): Respalda la formulación matemática de Faithfulness, Answer Relevance y Context Recall; 2) Gao et al. (ALCE, 2023-05-23, ArXiv e1a0171b, p. 3-5): Respalda Citation Precision y Citation Recall; 3) Manakul et al. (SelfCheckGPT, 2023-03-15, ArXiv c103d2e1, p. 1-4): Respalda la medición de tasa de alucinación estocástica a nivel de oración sin contexto externo de referencia; 4) ArXiv 2025 (Cost-Benefit On-Premise vs Cloud, Fuente f57279c5, p. 4-7): Respalda la descomposición del costo unitario por consulta y latencias p95/p99; y 5) AMEC (Barcelona Principles 3.0, Fuente 92dfdc7c, Principios 2 y 3): Respalda la necesidad de denominadores canónicos y la separación entre métricas de actividad (outputs) y resultados organizacionales (outcomes).",
+  "findings": [
+    {
+      "claim_id": "T01-F29-C1",
+      "claim": "SelfCheckGPT (Manakul et al. 2023) proporciona el marco probabilístico para medir la inconsistencia factual del modelo muestreando múltiples respuestas a temperatura positiva, estableciendo una métrica de alucinación independiente de anotadores humanos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023",
+        "region": "Global",
+        "actor": "Manakul et al. / Cambridge University"
+      },
+      "evidence": [
+        {
+          "source_id": "c103d2e1-3f2f-4416-8206-358ab4f15f27",
+          "source_title": "Manakul et al. (2023) — SelfCheckGPT: Zero-Resource Hallucination Detection for Generative Large Language Models",
+          "original_url": "https://arxiv.org/pdf/2303.08896.pdf",
+          "locator": "Section 1: Introduction & Section 3: Methodology, p. 1-4",
+          "excerpt_short": "SelfCheckGPT samples multiple stochastic responses to assess token and sentence-level consistency, scoring hallucination without requiring external reference databases.",
+          "source_date": "2023-03-15",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto completo recuperado y verificado (35.370 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus bibliográfico T01",
+      "Registro de verificaciones"
+    ],
+    "actors": [
+      "Auditor Antigravity"
+    ],
+    "steps": [
+      "Mapear cada métrica de ingeniería a su paper fundacional",
+      "Validar localizadores de página y pasajes en PDFs sustantivos",
+      "Comprobar consistencia con directrices AMEC",
+      "Consolidar la matriz de fuentes del Eje 5"
+    ],
+    "states": [
+      "VERIFICACION_PAPERS",
+      "COMPROBACION_PASAJES",
+      "MATRIZ_FINALIZADA"
+    ],
+    "outputs": [
+      "Tabla canónica de evidencia para métricas y denominadores"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SELFCHECKGPT_PAPER",
+      "type": "documento",
+      "name": "Manakul et al. 2023 SelfCheckGPT PDF",
+      "aliases": [
+        "c103d2e1"
+      ]
+    },
+    {
+      "entity_id": "RAGAS_PAPER",
+      "type": "documento",
+      "name": "Es et al. 2023 Ragas PDF",
+      "aliases": [
+        "01d6cab0"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SELFCHECKGPT_PAPER",
+      "predicate": "aporta_metrica_a",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2023",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F29-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de fuentes resueltas en Eje 5",
+      "denominator": "Total fuentes citadas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Garantiza solidez científica ante comités técnicos y auditorías de compra de clientes.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F30"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

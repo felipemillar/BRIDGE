@@ -1,0 +1,165 @@
+{
+  "question_id": "P11-F13",
+  "pilar": "P11",
+  "eje": "Matriz dato, actor, acción y permiso",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué combinación de rol, propósito y clasificación autoriza cada acción?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La autorización en BRIDGE no depende únicamente de roles estáticos, sino de una matriz ABAC (Attribute-Based Access Control, según NIST SP 800-162) que evalúa cuatro dimensiones interdependientes: 1) Clasificación del Activo: D1 (Público), D2 (Interno), D3 (Confidencial Estratégico), D4 (Datos Personales), D5 (Secretos de Terceros); 2) Rol del Actor: A1 (Admin Tenant), A2 (Asuntos Corporativos Interno), A3 (Consultor Agencia Externa), A4 (Directivo C-Level / Legal) y A5 (Auditor de Cumplimiento); 3) Propósito Declarado de la Operación: Fines comunicacionales ordinarios, auditoría legal, respuesta a crisis o investigación de incidentes; y 4) Acción Solicitada: Create, Read, Update, Delete, Export, Vectorize y Sign-Off. Reglas cardinales de autorización: A3 (Agencias) solo puede leer D1 y D2 asignados a su proyecto, teniendo estrictamente bloqueada la lectura de D3, D4 y D5 y la exportación masiva; A2 accede a D1, D2 y a D4 en formato pseudonimizado; A4 accede a D3 bajo doble factor de autenticación para propósitos de gestión legal o de crisis; A1 administra usuarios pero no puede inspeccionar contenido D3/D4 sin elevación justificada de privilegios; y A5 solo accede a bitácoras de auditoría y metadatos sin contenido sensible.",
+  "findings": [
+    {
+      "claim_id": "P11-F13-C1",
+      "claim": "El control de acceso formal combina roles (A1 a A5), niveles de datos (D1 a D5), propósito operacional y tipos de acción bajo el estándar ABAC de NIST SP 800-162, aplicando el principio de mínimo privilegio exigido por SOC 2.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "abac_authorization_matrix",
+      "evidence": [
+        {
+          "source_title": "P11_RESEARCH_DOSSIER",
+          "source_id": "ddc8b1f3-0621-4ba1-9145-7b21d39c837b",
+          "locator": "Sección 2.2 'Matriz Operativa de Autorización y Retención'",
+          "retrieved_at": null,
+          "excerpt_short": "Matriz ABAC: Cruce formal de 5 roles (A1-A5) con 5 clases de datos (D1-D5) y 7 acciones. Consultores externos (A3) tienen prohibida la lectura de D3/D4/D5 y la exportación masiva.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-162: Guide to Attribute Based Access Control (ABAC) Definition and Considerations",
+          "source_id": "2a88e293-2b53-4430-8dca-26e545448a9f",
+          "locator": "Section 2.1 'ABAC Basic Concepts'",
+          "retrieved_at": null,
+          "excerpt_short": "Access is granted or denied based on an evaluation of subject attributes, object attributes, requested action, and environmental conditions against enterprise policy rules.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "AICPA: System and Organization Controls (SOC 2) Trust Services Criteria",
+          "source_id": "11c7c827-b3a4-4207-925a-f5bac2493a7b",
+          "locator": "Criteria CC6.3 'Access Restrictions and Least Privilege'",
+          "retrieved_at": null,
+          "excerpt_short": "The entity authorizes, modifies, and removes access to data, software, functions, and other protected information assets based on the principle of least privilege and job responsibilities.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los requerimientos de mínimo privilegio de SOC 2 CC6.3, el estándar ABAC NIST SP 800-162 y el dossier de P11.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Identidad y rol del usuario",
+      "Objeto solicitado y su clasificación D1-D5",
+      "Acción intentada",
+      "Propósito declarado"
+    ],
+    "actors": [
+      "Policy Decision Point (PDP)",
+      "Policy Enforcement Point (PEP) BRIDGE",
+      "Usuario Solicitante"
+    ],
+    "steps": [
+      "Interceptación de la solicitud en el PEP de la API",
+      "Consulta de atributos de sujeto y objeto al PDP",
+      "Evaluación de la política ABAC (reglas de combinación rol-dato-acción)",
+      "Si la solicitud involucra D3/D4: Verificación de propósito legítimo y MFA",
+      "Emisión de decisión: Permite o Deniega",
+      "Si se deniega: Bloqueo inmediato y registro de intento denegado en bitácora"
+    ],
+    "states": [
+      "REQUEST_INTERCEPTED",
+      "ATTRIBUTES_RESOLVED",
+      "POLICY_EVALUATED",
+      "ACCESS_GRANTED_OR_DENIED"
+    ],
+    "outputs": [
+      "Acción autorizada o rechazo estructurado con código de seguridad"
+    ],
+    "exceptions": [
+      "Intentos de consultores externos (A3) de acceder a D3 o exportar datos masivos disparan revocación automática de sesión"
+    ]
+  },
+  "entities": [
+    "NIST SP 800-162",
+    "ABAC",
+    "Mínimo Privilegio",
+    "SOC 2 Criteria CC6.3",
+    "P11_RESEARCH_DOSSIER"
+  ],
+  "relations": [
+    {
+      "from": "Usuario Solicitante",
+      "to": "PEP",
+      "type": "PRESENTS_REQUEST_TO"
+    },
+    {
+      "from": "PEP",
+      "to": "PDP",
+      "type": "EVALUATES_VIA_ABAC"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Roles estáticos simples (RBAC) vs Matriz multidimensional ABAC",
+      "diferencia": "El RBAC simple permite que un usuario lea archivos confidenciales fuera de horario laboral o sin justificación; el ABAC exige coherencia entre rol, tipo de dato, propósito y entorno."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "unauthorized_access_attempt_blocks": "100% de peticiones no autorizadas bloqueadas por el PEP",
+    "abac_evaluation_overhead_ms": "< 5 milisegundos de latencia por decisión de acceso"
+  },
+  "bridge_implications": "Permite a BRIDGE estructurar un motor de políticas de control de acceso desacoplado (e.g., Open Policy Agent - OPA) aplicable en todas las rutas de API.",
+  "open_gaps": [
+    "Integración de biometría continua para revalidar sesiones de directivos que acceden a D3 en dispositivos portátiles."
+  ],
+  "next_question_ids": [
+    "P11-F14",
+    "P11-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "question_id": "T01-X26",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 12,
+  "subeje": "Reproducción y seguimiento",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Cómo repetir el piloto después de cambiar fuentes o proveedores?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Cuando se actualizan fuentes corporativas (ej. publicación de una nueva memoria anual o modificación de una RCA ambiental) o se conmuta de proveedor de LLM (ej. migración de Azure OpenAI a Anthropic Claude en AWS Bedrock), el piloto debe repetirse mediante un Protocolo de Re-Evaluación de Regresión Controlada (Golden Benchmark Regression Testing): 1) Aislamiento del Cambio (Factorial Isolation): Se congela todo el pipeline excepto la variable modificada (ej. nuevo proveedor de LLM manteniendo idéntico corpus y prompts); 2) Re-ejecución Desatendida de la Suite de Referencia: Se ejecuta de forma automatizada la batería sellada de 200 casos de prueba (Golden Testset estratificado); 3) Verificación de No Degradación de Compuertas (Non-Regression Gates): Se exige que Citation Precision no caiga en más de 1.5 puntos porcentuales y que ningún caso presente fallo fatal; y 4) Comparación de Curvas de Costo y Latencia: Verificación en el modelo de ArXiv (2025 f57279c5) de que el nuevo proveedor mantenga el costo unitario por debajo de $0.025 USD y la latencia p95 < 5.0 s.",
+  "findings": [
+    {
+      "claim_id": "T01-X26-C1",
+      "claim": "Ragas (Es et al. 2023) y ARES (Saad-Falcon et al. 2023) formalizan que cualquier cambio de componentes en un sistema RAG (re-ranking, chunking, LLM) exige ejecutar pruebas de regresión contra un conjunto de referencia inmutable para certificar que la fidelidad no se degrada.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023",
+        "region": "Global",
+        "actor": "Es et al. & Saad-Falcon et al."
+      },
+      "evidence": [
+        {
+          "source_id": "01d6cab0-4331-4f04-b66e-4ad6c3fa6f78",
+          "source_title": "Es et al. (2023) — Ragas: Automated Evaluation of Retrieval Augmented Generation",
+          "original_url": "https://arxiv.org/pdf/2309.15217.pdf",
+          "locator": "Section 4: Continuous Regression Testing in Production RAG",
+          "excerpt_short": "Continuous evaluation against frozen benchmark sets enables engineering teams to validate model swaps and index updates without silent performance degradation.",
+          "source_date": "2023-09-27",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Principio estándar de MLOps y testing continuo de RAG.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Golden Benchmark de 200 casos sellado",
+      "Nueva versión de modelo o nuevo lote documental",
+      "Línea base previa de métricas"
+    ],
+    "actors": [
+      "MLOps Automation Pipeline",
+      "QA Test Lead"
+    ],
+    "steps": [
+      "Desplegar la nueva configuración en entorno de staging efímero",
+      "Ejecutar la suite completa de 200 casos de prueba de forma desatendida",
+      "Comparar automáticamente los scores de Ragas, ALCE y latencia frente a la línea base",
+      "Si los deltas son conformes (delta Precision >= -1.5%, Fallos Fatales = 0), aprobar el pase a producción"
+    ],
+    "states": [
+      "DEPLOY_STAGING",
+      "EJECUCION_REGRESION",
+      "ANALISIS_DIFF_METRICO",
+      "PROMOCION_O_ROLLBACK"
+    ],
+    "outputs": [
+      "Reporte Comparativo de Regresión MLOps T01-X26"
+    ],
+    "exceptions": [
+      "Si el nuevo proveedor incrementa la tasa de alucinación SelfCheckGPT en más de un 2%, se ejecuta rollback inmediato"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "PIPELINE_REGRESION_RAG",
+      "type": "producto",
+      "name": "Pipeline de Regresión Automatizada RAG",
+      "aliases": [
+        "Continuous Benchmark Runner"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "PIPELINE_REGRESION_RAG",
+      "predicate": "garantiza_estabilidad_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X26-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Cambio de Proveedor sin Pruebas (A Ciegas)",
+      "item_b": "Cambio con Suite de Regresión Automatizada",
+      "dimension": "Riesgo de producción",
+      "conclusion": "A ciegas introduce regresiones silenciosas en temas legales; con la suite de regresión se certifica la equivalencia funcional en menos de 30 minutos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tiempo de ejecución de la suite de regresión completa",
+      "denominator": "200 casos corporativos",
+      "target": "<= 20 minutos"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite actualizar modelos de LLM en cuestión de horas aprovechando reducciones de precio de la industria sin riesgo operacional.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X27"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

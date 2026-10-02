@@ -1,0 +1,133 @@
+{
+  "question_id": "T01-X12",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Pruebas adversariales y seguridad",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar pruebas adversariales y seguridad de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de las pruebas adversariales y la seguridad exige un modelo de datos formal compuesto por: 1) Entidad Ataque_Adversarial: ID de vector de ataque, tipología (Prompt Injection, Cross-Tenant Exfiltration, Expired Document, Homonym Confusion, Privilege Escalation), payload exacto inyectado, y severidad de riesgo (Media, Alta, Crítica); 2) Entidad Mecanismo_Defensa: Capa interceptora (Llama Guard, NeMo Guardrails, PostgreSQL RLS, Validador DACI), regla activada, y tiempo de respuesta en milisegundos; 3) Entidad Resultado_Defensa: Estatus (Bloqueado_Exitosamente, Sanitizado, Fallo_Parcial, Brecha_Seguridad), salida entregada al usuario y flag de activación de Kill Switch; 4) Relaciones de Mitigación: Vínculo entre cada tipología de amenaza y su control determinista asociado; y 5) Condiciones de Integridad: Validación de que cualquier evento categorizado con severidad 'Crítica' que resulte en 'Brecha_Seguridad' fuerce la transición de estado del tenant a 'CONGELADO_POR_SEGURIDAD'.",
+  "findings": [
+    {
+      "claim_id": "T01-X12-C1",
+      "claim": "El modelamiento estructurado de la ciberseguridad y pruebas adversariales conforme a la taxonomía Llama Guard (Inan et al. 2023) permite realizar auditorías de pentest automatizadas y continuas con trazabilidad completa de cada intento de explotación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023-2026",
+        "region": "Global",
+        "actor": "Inan et al. & NeMo Framework"
+      },
+      "evidence": [
+        {
+          "source_id": "d19f3dcf-70e4-4517-a33f-9003a2f46a7f",
+          "source_title": "Inan et al. (2023) — Llama Guard: LLM-based Input-Output Safeguard",
+          "original_url": "https://arxiv.org/pdf/2312.06674.pdf",
+          "locator": "Section 2: Safety Risk Taxonomy and Structured Logging, p. 2-4",
+          "excerpt_short": "Llama Guard establishes a structured classification schema for safety hazards, logging attack payloads, defensive triggers, and policy compliance.",
+          "source_date": "2023-12-07",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Taxonomía estándar de evaluación de seguridad de LLMs de texto completo.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición de JSON-Schema de Pruebas Adversariales",
+      "Logs de intentos de ataque"
+    ],
+    "actors": [
+      "Security Engineer",
+      "Auditor de Cumplimiento GRC"
+    ],
+    "steps": [
+      "Publicar el esquema de registro adversarial con categorías Llama Guard",
+      "Capturar telemetría de cada ataque inyectado en el entorno de pruebas",
+      "Verificar que se registre la regla de defensa que interceptó el payload",
+      "Generar reporte estructurado de vulnerabilidades y cobertura de seguridad"
+    ],
+    "states": [
+      "CONFIGURACION_TAXONOMIA",
+      "CAPTURA_PAYLOADS",
+      "AUDITORIA_INTERCEPCION",
+      "MATRIZ_SEGURIDAD_SELLADA"
+    ],
+    "outputs": [
+      "Catálogo Estructurado de Pruebas Adversariales T01-X12"
+    ],
+    "exceptions": [
+      "Si un intento de ataque no genera un log estructurado en el SIEM, la prueba se considera fallida"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SCHEMA_ADVERSARIAL_LOG",
+      "type": "documento",
+      "name": "Esquema Estructurado de Telemetría Adversarial",
+      "aliases": [
+        "Security Telemetry Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SCHEMA_ADVERSARIAL_LOG",
+      "predicate": "formaliza_ataques_en",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X12-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Completitud de telemetría en pruebas adversariales",
+      "denominator": "Total ataques inyectados en pentest",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite alimentar de forma nativa los centros de operaciones de seguridad (SOC) de clientes bancarios e industriales.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

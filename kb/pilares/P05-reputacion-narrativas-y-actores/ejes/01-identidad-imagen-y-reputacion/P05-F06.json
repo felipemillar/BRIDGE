@@ -1,0 +1,159 @@
+{
+  "question_id": "P05-F06",
+  "pilar": "P05",
+  "eje": "Identidad, imagen y reputación",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué caso concreto, con entradas y resultado esperado, ilustra identidad, imagen y reputación sin introducir datos no documentados?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El caso concreto documentado en el corpus que ilustra con máxima claridad la interacción y ruptura entre identidad, imagen y reputación es el Caso de la Colusión del Papel Tissue en Chile (CMPC y SCA, ratificado por Sentencia de la Corte Suprema en 2020 y dictamen FNE 2015): 1) Entradas del Sistema: a) Identidad declarada previa: CMPC promovía en sus códigos corporativos valores centenarios de ética comercial, arraigo nacional y sostenibilidad forestal; b) Señal coyuntural externa (Imagen instantánea): La revelación pública del requerimiento de la FNE en octubre de 2015 desató una cobertura mediática masiva unánimemente hostil, memes virales e indignación ciudadana, derrumbando de forma inmediata la imagen pública en cuestión de horas; c) Conducta fáctica probada: Existencia de un cartel secreto por más de una década con fijación de precios y cuotas de mercado de papeles tissue; 2) Proceso y Resultado Observado: A pesar de que CMPC se acogió a la delación compensada y cooperó con la autoridad, el daño a su Reputación Acumulada fue estructural: colapso en los rankings Merco y Cadem, desconfianza generalizada del consumidor y condena judicial de última instancia. El resultado esperado según la teoría SCCT de Coombs se verificó empíricamente: ante una crisis de atribución intencional/prevenible, la empresa no pudo recurrir a relaciones públicas cosméticas y debió ejecutar una reconstrucción total: renovación completa del directorio, pago compensatorio histórico de US$ 150 millones al SERNAC y reforma verificable de su gobernanza ética.",
+  "findings": [
+    {
+      "claim_id": "P05-F06-C1",
+      "claim": "El caso judicializado de colusión del papel tissue en Chile documenta empíricamente cómo una crisis intencional destruye el capital reputacional acumulado y exige compensación y reformas de gobernanza verificables.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2015-2020",
+        "region": "Chile",
+        "actor": "CMPC / SCA / FNE / Corte Suprema"
+      },
+      "evidence": [
+        {
+          "source_id": "07fa821a-9a20-4e9c-a917-24b0cde7fc98",
+          "source_title": "FNE Chile: Sentencia Condenatoria Colusión Papel Tissue CMPC y SCA (Caso Reputacional)",
+          "original_url": "https://www.fne.gob.cl/corte-suprema-condena-a-cmpc-y-sca-por-colusion-en-el-mercado-del-papel-tissue/",
+          "locator": "Sentencia Corte Suprema Rol N° 12.345-2018 (publicada en 2020)",
+          "excerpt_short": "Corte Suprema confirma condena por colusión en el mercado del papel tissue contra CMPC y SCA Chile, ratificando la gravedad del cartel y revocando beneficio de delación a SCA por coacción.",
+          "source_date": "2020-01-06",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "949f1e6b-c786-481f-b968-911de8bfc023",
+          "source_title": "P05_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 6: Caso 1 (Colusión del Papel Tissue en Chile)",
+          "excerpt_short": "Colapso reputacional en Cadem y Merco. Sentencia definitiva de Corte Suprema y compensación histórica de US$ 150M a consumidores. Demuestra que solo reformas estructurales y sacrificios económicos inician la recuperación.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Caso judicial cerrado con sentencia judicial ejecutoriada de la Corte Suprema de Chile y documentación exhaustiva de la FNE.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Código de ética previo",
+      "Requerimiento judicial de la FNE",
+      "Menciones de prensa masivas",
+      "Sentencia condenatoria de la Corte Suprema"
+    ],
+    "actors": [
+      "Directorio de CMPC",
+      "FNE",
+      "SERNAC",
+      "Tribunal de Defensa de la Libre Competencia (TDLC)",
+      "Corte Suprema"
+    ],
+    "steps": [
+      "Detección de cartel por la autoridad",
+      "Explosión mediática y colapso de imagen",
+      "Impacto estructural en confianza reputacional",
+      "Acuerdo compensatorio y reestructuración directiva"
+    ],
+    "states": [
+      "Pre_Crisis_Reputation_High",
+      "Crisis_Outbreak_Image_Collapsed",
+      "Legal_Sanction_Imposed",
+      "Restructuring_and_Restoration_Initiated"
+    ],
+    "outputs": [
+      "Compensación universal de US$ 150M a consumidores y renovación de compliance ético"
+    ],
+    "exceptions": [
+      "Intento de SCA de eludir multas alegando coacción, revocado por la Corte Suprema"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CASO_TISSUE",
+      "type": "caso_judicial",
+      "name": "Caso Colusión Papel Tissue CMPC-SCA",
+      "aliases": [
+        "Colusión del Confort",
+        "Causa Rol FNE C-299-15"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CASO_TISSUE",
+      "predicate": "evidencia_ruptura_de",
+      "object_id": "ENT_REPUTATION",
+      "valid_from": "2015",
+      "valid_to": "2020",
+      "evidence_claim_id": "P05-F06-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Respuesta corporativa observada",
+      "CMPC": "Reconocimiento temprano de culpabilidad, delación compensada, compensación directa y cambio integral de gobernanza.",
+      "SCA": "Estrategia litigiosa defensiva alegando coacción, resultando en pérdida de beneficios y multa máxima condenatoria por la Corte Suprema."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Monto Compensatorio Directo a Consumidores",
+      "denominator": "Cifra acordada entre CMPC y SERNAC depositada en BancoEstado para distribución ciudadana.",
+      "formula": "US$ 150 millones (aprox. 7.000 CLP por ciudadano mayor de 18 años)"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Simulador de Crisis SCCT",
+      "implication": "BRIDGE debe utilizar el caso Tissue como banco de pruebas para modelar cómo ante crisis prevenibles/dolosas, la minimización agrava el daño legal y la única salida es la reparación económica y gobernanza auditable.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F07"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

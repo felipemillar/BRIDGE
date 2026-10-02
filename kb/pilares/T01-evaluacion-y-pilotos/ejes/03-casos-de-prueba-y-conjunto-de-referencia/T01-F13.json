@@ -1,0 +1,196 @@
+{
+  "question_id": "T01-F13",
+  "pilar": "T01",
+  "eje": "Casos de prueba y conjunto de referencia",
+  "eje_n": 3,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué escenarios públicos y sintéticos cubren casos normales, ambiguos y críticos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Para evaluar integralmente los módulos de The Bridge Intelligence (thebridgeintelligence.ai), el conjunto de referencia (golden dataset) debe estratificarse en tres tipos de escenarios complementarios: 1) Escenarios Normales: Consultas fácticas estándar sobre hechos esenciales y memorias anuales corporativas públicas donde la evidencia es unívoca (benchmark ALCE / Gao et al. 2023); 2) Escenarios Ambiguos: Consultas con evidencia temporal desactualizada, versiones contradictorias de fuentes de prensa o vacíos de información donde el sistema debe calificar incertidumbre o abstenerse (benchmark SABER / Zhu et al. 2026); y 3) Escenarios Críticos / Adversariales: Inyecciones de prompt maliciosas, documentos con cláusulas de confidencialidad simuladas, y peticiones de divulgación de hechos reservados o datos personales protegidos por la Ley 21.719, evaluados bajo NeMo Guardrails (Rebedea et al. 2023) y Llama Guard (Inan et al. 2023).",
+  "findings": [
+    {
+      "claim_id": "T01-F13-C1",
+      "claim": "El benchmark SABER (Zhu et al. 2026) demuestra que la evaluación de sistemas RAG corporativos requiere someter al modelo a escenarios de conflicto de conocimiento (knowledge conflict), discriminando cuándo confiar en el contexto documental y cuándo abstenerse si la evidencia es ambigua o contradictoria.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Zhu et al. / SABER Benchmark"
+      },
+      "evidence": [
+        {
+          "source_id": "8663bbbe-40d9-4176-a989-b5f46b333f36",
+          "source_title": "Zhu et al. (2026) - SABER: Trust or Abstain? A Ground-Truth-Aligned Knowledge-Conflict Benchmark",
+          "original_url": "https://arxiv.org/html/2605.18792v1",
+          "locator": "Section 1: Introduction & Section 3: Benchmark Construction",
+          "excerpt_short": "SABER introduces a ground-truth-aligned benchmark evaluating whether RAG systems appropriately trust context, rely on parametric memory, or abstain when information conflicts or remains ambiguous.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evidencia científica experimental de ArXiv 2026 sobre conflictos de conocimiento en RAG.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "T01-F13-C2",
+      "claim": "La generación de escenarios sintéticos mediante ARES (Saad-Falcon et al. 2023) permite sintetizar cientos de pares consulta-documento para cubrir dominios corporativos especializados sin filtrar información confidencial de clientes reales durante la fase de prueba inicial.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2023",
+        "region": "Global",
+        "actor": "Saad-Falcon et al. / Stanford & UC Berkeley"
+      },
+      "evidence": [
+        {
+          "source_id": "bff33bd6-afbc-4544-b611-640f2023a150",
+          "source_title": "Saad-Falcon et al. (2023) — ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+          "original_url": "https://arxiv.org/pdf/2311.09476.pdf",
+          "locator": "Section 2: ARES Framework, p. 3-4",
+          "excerpt_short": "ARES utilizes synthetic query and passage generators to create domain-specific evaluation sets, subsequently refined by automated filtering and prediction-powered inference.",
+          "source_date": "2023-11-16",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Texto completo recuperado (PDF 20.305 caracteres).",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus documental público de prueba (CMF, memorias, prensa)",
+      "Generador sintético ARES",
+      "Batería de pruebas de inyección y conflictos SABER"
+    ],
+    "actors": [
+      "Equipo de QA y ML de BRIDGE",
+      "Especialistas corporativos externos de validación"
+    ],
+    "steps": [
+      "Compilar 100 escenarios normales de consultas corporativas fácticas",
+      "Generar 50 escenarios sintéticos con ambigüedad temporal y contradicciones normativas",
+      "Construir 50 escenarios críticos con intentos de inyección de prompt y exfiltración cross-tenant",
+      "Ejecutar el pipeline de BRIDGE sobre la suite de 200 escenarios"
+    ],
+    "states": [
+      "DISEÑO_CASOS",
+      "GOLDEN_DATASET_CONGELADO",
+      "EJECUCION_EVALUATIVA",
+      "ANALISIS_DISCREPANCIAS"
+    ],
+    "outputs": [
+      "Matriz de 200 casos de prueba estratificados",
+      "Registro de respuestas del sistema",
+      "Reporte de tasa de abstención"
+    ],
+    "exceptions": [
+      "Si un escenario crítico filtra datos sensibles no autorizados, el testsuite falla de forma inmediata (bloqueo G1)"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SABER_BENCHMARK",
+      "type": "producto",
+      "name": "SABER Knowledge-Conflict Benchmark",
+      "aliases": [
+        "Zhu et al. 2026"
+      ]
+    },
+    {
+      "entity_id": "ARES_EVAL",
+      "type": "producto",
+      "name": "ARES Evaluation Framework",
+      "aliases": [
+        "Saad-Falcon et al. 2023"
+      ]
+    },
+    {
+      "entity_id": "THE_BRIDGE",
+      "type": "organizacion",
+      "name": "The Bridge Intelligence",
+      "aliases": [
+        "thebridgeintelligence.ai"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SABER_BENCHMARK",
+      "predicate": "evalua",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F13-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Escenarios Normales",
+      "item_b": "Escenarios de Conflicto (SABER)",
+      "dimension": "Comportamiento del modelo",
+      "conclusion": "En casos normales el modelo responde fidedignamente citando; en casos de conflicto debe contrastar o abstenerse."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de abstención correcta en escenarios ambiguos",
+      "denominator": "Total escenarios ambiguos/contradictorios presentados",
+      "target": ">= 90%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "El módulo Saber debe implementar mecanismos de detección de conflicto temporal y factual antes de sintetizar respuestas.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F14",
+    "T01-F15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

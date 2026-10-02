@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-C09",
+  "pilar": "T01",
+  "eje": "Métricas y denominadores",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre métricas y denominadores, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en métricas y denominadores: 1) Discrepancia: Las notas iniciales mezclaban denominadores de actividad y resultado (ej. calculaban precisión dividiendo citas correctas por número total de oraciones gramaticales) y pretendían equiparar la exactitud de FreshQA sobre Wikipedia abierta con la exactitud requerida en hechos esenciales ante la CMF; 2) Versión que Prevalece: Según T01_QUALITY_ADDENDUM (45782049) y AMEC Barcelona Principles 3.0 (92dfdc7c), prevalece la regla de denominadores canónicos desacoplados: Citation Precision se calcula estrictamente sobre el total de citas emitidas (ALCE / Gao et al. 2023), Citation Recall sobre afirmaciones fácticas formuladas, y Faithfulness sobre oraciones contextuales (Ragas / Es et al. 2023). Queda taxativamente prohibido comparar porcentajes de acierto entre dominios abiertos y corpus corporativos cerrados.",
+  "findings": [
+    {
+      "claim_id": "T01-C09-C1",
+      "claim": "T01_QUALITY_ADDENDUM y el estándar AMEC prohíben la contaminación de denominadores y la equiparación de benchmarks de cultura general con la precisión exigida en marcos corporativos regulados.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM & AMEC"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 5: Regla de Homogeneidad de Denominadores",
+          "excerpt_short": "Los denominadores son inmutables por diseño métrico. No se admiten agregaciones que diluyan el error dividiendo por unidades no homogéneas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma metodológica canónica interna de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Cálculos preliminares con denominadores mixtos",
+      "Esquema canónico de métricas ALCE/Ragas"
+    ],
+    "actors": [
+      "Auditor de QA",
+      "MLOps Engineer"
+    ],
+    "steps": [
+      "Identificar fórmulas con denominadores híbridos en borradores antiguos",
+      "Re-calcular métricas aislando el denominador canónico estricto",
+      "Separar reportes de exactitud por dominio (abierto vs corporativo)",
+      "Validar que el 100% de los indicadores cumplan el estándar AMEC"
+    ],
+    "states": [
+      "REVISION_FORMULAS",
+      "RECALCULO_CANONICO",
+      "SEPARACION_DOMINIOS",
+      "CONFORMIDAD_METRICA"
+    ],
+    "outputs": [
+      "Reporte Canónico de Métricas y Denominadores"
+    ],
+    "exceptions": [
+      "Cualquier métrica que presente denominadores ambiguos queda descartada para la compuerta G1"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "DENOMINADORES_CANONICOS_AMEC",
+      "type": "metrica",
+      "name": "Denominadores Canónicos AMEC",
+      "aliases": [
+        "Regla de Desacoplamiento"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "DENOMINADORES_CANONICOS_AMEC",
+      "predicate": "reemplaza_a",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-C09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Denominador Mixto (Oraciones Totales)",
+      "item_b": "Denominador Específico (Citas Emitidas)",
+      "dimension": "Precisión matemática",
+      "conclusion": "El denominador mixto oculta citas espurias; el denominador específico castiga toda alucinación de respaldo."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de fórmulas corregidas bajo denominadores canónicos",
+      "denominator": "Total fórmulas evaluadas en T01",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Garantiza comparaciones justas y defendibles ante auditores técnicos de clientes.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-C10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

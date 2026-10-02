@@ -1,0 +1,128 @@
+{
+  "question_id": "P07-C10",
+  "pilar": "P07",
+  "eje": "Apoyo estratégico y límites",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "521c2c59-1c43-493b-abd9-7de2c7cf9dce",
+  "question_text": "¿Qué sigue sin prueba sobre apoyo estratégico y límites, qué fuente falló o es parcial, y qué validación mínima resolvería la incertidumbre?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Sigue sin prueba jurisprudencial la asignación de responsabilidad civil y penal en caso de que una recomendación estratégica de la IA, validada negligentemente por un revisor humano ('aprobación por automatismo'), cause una infracción de mercado (Ley 18.045) o ambiental (Ley 21.595 de Delitos Económicos). En este eje falló la fuente 'OECD: G20/OECD Principles of Corporate Governance' (UUID `48eb3b70-3946-45c0-ae2f-bb245af96324`, inaccesible), siendo sustituida formalmente por el texto legal oficial 'OECD Legal Instruments: G20/OECD Principles of Corporate Governance (OECD-LEGAL-0413)' (`13d8c510-9ee4-47fe-b580-51df8a77fa08`). La validación mínima requerida es un dictamen jurídico colegiado de expertos en derecho penal corporativo y derecho administrativo sancionador chileno que delimite los estándares de diligencia debida exigibles al revisor humano frente a recomendaciones generadas por algoritmos.",
+  "findings": [
+    {
+      "claim_id": "P07-C10-C1",
+      "claim": "El estándar legal de diligencia exigible a los directivos corporativos al revisar recomendaciones de IA bajo la nueva Ley de Delitos Económicos no está fijado por tribunales y requiere dictamen dogmático.",
+      "epistemic_status": "hipotesis_diseno",
+      "scope": "legal_liability_gap",
+      "evidence": [
+        {
+          "source_title": "P07_GAPS_AND_VALIDATION: Vacíos, Limitaciones y Validación",
+          "source_id": "fd6f65b3-1647-4925-ad7c-0b39a4443b71",
+          "locator": "Sección 2 (Limitaciones Operativas y Riesgos de Responsabilidad)",
+          "excerpt_short": "Brecha de Responsabilidad Legal: Si el sistema omite una línea roja y el ejecutivo incurre en una violación de la Ley 18.045 o genera alarma pública injustificada, la jurisprudencia no ha resuelto la responsabilidad del proveedor de software frente al deber de supervisión del C-Suite. Se requiere un protocolo de defensa fiduciaria.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        },
+        {
+          "source_title": "OECD: G20/OECD Principles of Corporate Governance",
+          "source_id": "48eb3b70-3946-45c0-ae2f-bb245af96324",
+          "locator": "Fuente 48eb3b70-3946-45c0-ae2f-bb245af96324",
+          "text_status": "fallida",
+          "excerpt_short": "OECD Corporate Governance catalogada como fallida (status_code: 3), sustituida por OECD Legal Instruments OECD-LEGAL-0413 (13d8c510-9ee4-47fe-b580-51df8a77fa08).",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "relationship": "apoya",
+          "text_status_original": "fallida_o_bloqueada",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T04:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación documental de la fuente fallida en el manifiesto P07 y de la brecha de responsabilidad legal en P07_GAPS.",
+      "epistemic_status_original": "hypothesis",
+      "confidence_original": 0.9,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "fuente_no_sustantiva",
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "estudio_responsabilidad_penal_ia": {
+      "problema": "Imputación de culpa in eligendo o culpa in vigilando a directivos por fallos de la IA bajo Ley 21.595.",
+      "fuente_fallida": "OECD Principles (48eb3b70-3946-45c0-ae2f-bb245af96324)",
+      "fuente_sustituta": "OECD Legal Instruments OECD-LEGAL-0413 (13d8c510-9ee4-47fe-b580-51df8a77fa08)",
+      "validacion_minima": "Dictamen dogmático de penalistas y administrativistas chilenos sobre deberes de cuidado algorítmico."
+    }
+  },
+  "entities": [
+    "OECD Legal Instruments",
+    "Ley 21.595",
+    "Ley 18.045",
+    "Diligencia Debida",
+    "P07_GAPS_AND_VALIDATION"
+  ],
+  "relations": [
+    {
+      "from": "OECD-LEGAL-0413",
+      "to": "OECD Principles",
+      "type": "substitutes_for"
+    },
+    {
+      "from": "P07_GAPS_AND_VALIDATION",
+      "to": "Dictamen Jurídico",
+      "type": "recommends"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Responsabilidad Directa del Algoritmo vs Deber de Vigilancia Humana",
+      "diferencia": "El algoritmo no tiene patrimonio ni puede ser encarcelado; la ley chilena sanciona penalmente a los administradores humanos que omitan controles de cumplimiento."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "failed_sources_count": "1 fuente fallida resuelta con sustituto oficial",
+    "statutory_risk_index": "Severidad crítica bajo Ley 21.595"
+  },
+  "bridge_implications": "Incorporar en las condiciones generales de contratación de BRIDGE una cláusula de exclusión de responsabilidad profesional y advertencia de revisión jurídica previa.",
+  "open_gaps": [
+    "Evolución de los primeros juicios orales en Chile donde se invoque el uso de herramientas de IA corporativa como eximente o atenuante."
+  ],
+  "next_question_ids": [
+    "P07-C11",
+    "P07-C12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T06:45:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

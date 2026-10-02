@@ -1,0 +1,145 @@
+{
+  "question_id": "T01-F22",
+  "pilar": "T01",
+  "eje": "Rúbricas humanas",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar rúbricas humanas de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada de las rúbricas humanas exige un modelo relacional estricto compuesto por: 1) Entidad Evaluador: ID del juez, rol corporativo (analista, director, abogado), nivel de seniority y hash de anonimización; 2) Entidad Criterio_Evaluacion: Nombre de dimensión (consistencia, relevancia, tono, citas), escala ordinal (1 a 5 Likert con anclas semánticas explícitas) y peso ponderado; 3) Entidad Evaluacion_Instancia: ID de caso, timestamp, puntaje asignado, justificación textual obligatoria en notas extremas (<=2 o =5), y tiempo dedicado a la revisión; 4) Entidad Flag_Fallo_Fatal: Booleano de activación, categoría del fallo (alucinación regulada, fuga cross-tenant, contradicción) y fragmento infractor; y 5) Condiciones de Integridad: Prohibición de evaluaciones sin justificación en notas reprobadas y cálculo automático de coeficientes de acuerdo inter-juez antes de consolidar el reporte.",
+  "findings": [
+    {
+      "claim_id": "T01-F22-C1",
+      "claim": "El diseño de benchmarks de evaluación como SummEval (Fabbri et al. 2021) demuestra que la estructura de captura de datos debe forzar anclas semánticas en cada nivel de la escala (1 = contradice totalmente el hecho; 3 = parcialmente respaldado; 5 = completamente fiel e inobjetable) para reducir la varianza entre evaluadores.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021",
+        "region": "Global",
+        "actor": "Fabbri et al. / SummEval"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 2: Annotator Instructions and Anchors, p. 3-4",
+          "excerpt_short": "Clear semantic anchors for each point on the 1-5 scale are essential to standardize human interpretation and improve inter-rater consistency.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Metodología de diseño de rúbricas verificada en el paper SummEval.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Definición formal de esquema de rúbrica",
+      "Formulario digital de captura",
+      "Logs de anotación"
+    ],
+    "actors": [
+      "Diseñador de QA",
+      "Panel de Jueces",
+      "Sistema de Consolidación de Datos"
+    ],
+    "steps": [
+      "Publicar esquema relacional con validaciones de rangos y tipos",
+      "Capturar evaluaciones con exigencia de justificación obligatoria en notas extremas",
+      "Auditar integridad de campos y flags de fallo fatal",
+      "Exportar dataset estructurado JSONL para análisis de concordancia"
+    ],
+    "states": [
+      "ESQUEMA_CONFIGURADO",
+      "CAPTURA_DATOS",
+      "VALIDACION_REGLAS",
+      "DATASET_CONSOLIDADO"
+    ],
+    "outputs": [
+      "Dataset relacional de rúbricas humanas",
+      "Matriz de consistencia por evaluador"
+    ],
+    "exceptions": [
+      "Si un evaluador asigna nota 1 o 2 sin justificación textual, el formulario no permite el envío"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "SCHEMA_RUBRICA",
+      "type": "documento",
+      "name": "Esquema Estructurado de Rúbricas Humanas",
+      "aliases": [
+        "Human Evaluation Schema"
+      ]
+    },
+    {
+      "entity_id": "ANCLA_SEMANTICA",
+      "type": "metrica",
+      "name": "Ancla Semántica Likert",
+      "aliases": [
+        "Guía de puntuación"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "SCHEMA_RUBRICA",
+      "predicate": "incorpora",
+      "object_id": "ANCLA_SEMANTICA",
+      "valid_from": "2021",
+      "valid_to": null,
+      "evidence_claim_id": "T01-F22-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de completitud de justificaciones en notas extremas",
+      "denominator": "Total notas <=2 o =5 asignadas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Permite auditar retrospectivamente el criterio de cada evaluador si surgen objeciones de clientes en el piloto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-F23",
+    "T01-F24"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

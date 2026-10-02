@@ -1,0 +1,292 @@
+{
+  "question_id": "P01-F04",
+  "pilar": "P01",
+  "eje": "Mandato y fronteras de asuntos corporativos",
+  "eje_n": 1,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "21152990-b13f-4cda-bd6c-0286ca855ff9",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar mandato y fronteras de asuntos corporativos de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige representar variables de posición jerárquica (54,4% reporte al CEO, 32,3% en Comité Ejecutivo), una taxonomía de seis roles funcionales, 11 capacidades en tres dominios del GCF, relaciones transversales en el C-Suite (CCO as Integrator) y condiciones críticas de tiempo de respuesta (Golden Hour <30 min), trazabilidad fáctica y aislamiento estricto de repositorios privados.",
+  "findings": [
+    {
+      "claim_id": "P01-F04-C1",
+      "claim": "La función exige estructurar una taxonomía funcional de seis roles: Director de Asuntos Corporativos/CCO, Asuntos Públicos/Lobby, Comunicaciones Externas, Comunicaciones Internas, Sostenibilidad/ESG y Portavoces Oficiales.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2025-2026",
+        "region": "Global/España/Chile",
+        "actor": "Estructuras Corporativas"
+      },
+      "evidence": [
+        {
+          "source_id": "11566961-aace-42d0-bdcc-6b9171cecded",
+          "source_title": "Dircom - El Estado de la Comunicación en España (ECE 2025): Reporte al CEO y Comité Ejecutivo",
+          "original_url": "https://www.dircom.org/2025/09/25/mas-de-la-mitad-de-los-dircoms-reportan-al-ceo-y-uno-de-cada-tres-esta-en-el-comite-ejecutivo-segun-el-estado-de-la-comunicacion-en-espana-2025/",
+          "locator": "Estructura organizativa y funciones prioritarias",
+          "excerpt_short": "El 54,4% de los directivos reporta al CEO y el 32,3% integra el Comité Ejecutivo, distribuyendo áreas de prensa, interna, sostenibilidad y asuntos públicos.",
+          "source_date": "2025-09-25",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Censo empírico de Dircom España con 565 profesionales validados.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F04-C2",
+      "claim": "El Global Capability Framework estructura 11 capacidades en tres dominios: Comunicación (investigar, impacto, narrativas), Organizacionales (confianza, reputación, inteligencia contextual) y Profesionales (liderazgo ético, negocios y finanzas).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2021-2026",
+        "region": "Global",
+        "actor": "Global Alliance / Univ. Huddersfield"
+      },
+      "evidence": [
+        {
+          "source_id": "4861a93d-b9c4-4972-bfeb-1d0902d65dd0",
+          "source_title": "Global Alliance - Global Capability Framework Official Benchmark",
+          "original_url": "https://globalalliancepr.org/resources/report-and-initiatives/global-capability-framework/",
+          "locator": "Los tres dominios y 11 capacidades universales",
+          "excerpt_short": "Define capacidades de inteligencia contextual, alineamiento de expectativas multistakeholder y deontología profesional.",
+          "source_date": "2021",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar global consensuado por asociaciones profesionales mundiales.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F04-C3",
+      "claim": "En Chile, la relación con reguladores está condicionada jurídicamente por la Ley N° 20.730 de Lobby (sujetos pasivos y registros públicos) y la relación financiera por la NCG 461 de la CMF (divulgación ASG obligatoria).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2014-2026",
+        "region": "Chile",
+        "actor": "Reguladores y Emisores de Valores"
+      },
+      "evidence": [
+        {
+          "source_id": "87978287-38ec-4b0f-bd60-e724e02362aa",
+          "source_title": "Biblioteca del Congreso Nacional de Chile - Ley N° 20.730 que Regula el Lobby y Gestiones de Intereses Particulares",
+          "original_url": "https://www.bcn.cl/leychile/navegar?idNorma=1060115",
+          "locator": "Artículos 2°, 3°, 4° y 8°",
+          "excerpt_short": "Obliga a registrar en agendas públicas las reuniones orientadas a influir en decisiones normativas o administrativas.",
+          "source_date": "2026-04-02",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:30:00-03:00"
+        },
+        {
+          "source_id": "72c69269-a06e-4c45-a916-1cd68b9af0be",
+          "source_title": "Comisión para el Mercado Financiero (CMF Chile) - NCG 461 y 519: Sostenibilidad y Gobierno Corporativo",
+          "original_url": "https://www.cmfchile.cl/portal/prensa/625/w4-article-101046.html",
+          "locator": "Marco de divulgación obligatoria",
+          "excerpt_short": "Exige reportar indicadores de sostenibilidad SASB/TCFD integrados en memorias corporativas.",
+          "source_date": "2025-11-26",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Normativa legal chilena vigente y fiscalizable.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    },
+    {
+      "claim_id": "P01-F04-C4",
+      "claim": "El Ethical Standards Advisory #22 de PRSA dictamina que la responsabilidad legal y ética sobre decisiones y contenidos de agentes de IA recae íntegra e indelegablemente en supervisores humanos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / EE.UU.",
+        "actor": "PRSA"
+      },
+      "evidence": [
+        {
+          "source_id": "ee802818-661a-4f0e-8890-2c28a372bf51",
+          "source_title": "PRSA - Code of Ethics: Professional Standards in Public Relations and Corporate Advocacy",
+          "original_url": "https://www.prsa.org/professional-development/prsa-resources/ethics",
+          "locator": "Ethical Standards Advisory #22 (julio 2026)",
+          "excerpt_short": "Human beings charged with active oversight of operations hold ownership of the situation and legal responsibility for AI agent outcomes.",
+          "source_date": "2026-07",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T00:30:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma ética institucional vinculante de la mayor asociación de relaciones públicas del mundo.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Demandas de crisis",
+      "Agenda regulatoria de lobby",
+      "Campañas corporativas"
+    ],
+    "actors": [
+      "Director de Asuntos Corporativos (CCO)",
+      "Asuntos Públicos",
+      "Prensa",
+      "Comunicaciones Internas",
+      "Sostenibilidad/ESG",
+      "Portavoz"
+    ],
+    "steps": [
+      "1. Recepción y clasificación de señales en categorías temáticas",
+      "2. Asignación según matriz de roles funcionales",
+      "3. Cruce transversal CCO-Integrator con Legal y Compliance",
+      "4. Validación de condiciones de frontera (seguridad B2B, Golden Hour)"
+    ],
+    "states": [
+      "Clasificado",
+      "En_Integracion_Transversal",
+      "Aprobado_por_Compliance",
+      "Emitido"
+    ],
+    "outputs": [
+      "Minuta de posición aprobada",
+      "Registro de audiencia pública",
+      "Memoria integrada ASG"
+    ],
+    "exceptions": [
+      "Alucinación de modelo sin supervisión humana que viola ESA #22 de PRSA",
+      "Filtración de repositorios internos hacia modelos públicos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GCF",
+      "type": "documento",
+      "name": "Global Capability Framework",
+      "aliases": [
+        "GCF"
+      ]
+    },
+    {
+      "entity_id": "ENT_PRSA_ESA22",
+      "type": "documento",
+      "name": "PRSA Ethical Standards Advisory #22",
+      "aliases": [
+        "ESA 22"
+      ]
+    },
+    {
+      "entity_id": "ENT_LEY_LOBBY",
+      "type": "documento",
+      "name": "Ley N° 20.730 de Lobby Chile"
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PRSA_ESA22",
+      "predicate": "condiciona_uso_de",
+      "object_id": "Agentes_IA",
+      "valid_from": "2026-07",
+      "valid_to": null,
+      "evidence_claim_id": "P01-F04-C4"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [
+    {
+      "claim_ids": [
+        "P01-F04-C1",
+        "P01-F04-C4"
+      ],
+      "difference": "Promesas comerciales ofrecen automatización no supervisada con IA para emitir declaraciones, mientras que la normativa deontológica de PRSA prohíbe taxativamente la delegación de responsabilidad ética a sistemas automatizados.",
+      "resolution": "resuelta",
+      "reason": "Prevalece la norma deontológica de PRSA (ESA #22, 2026) que exige control humano obligatorio."
+    }
+  ],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tiempo límite de respuesta de vocería en crisis (Golden Hour)",
+      "value": "<30 min",
+      "denominator": "Tiempo transcurrido desde la emergencia hasta la primera postura oficial"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "Estructurar la ontología de conocimiento de acuerdo con la taxonomía de los 6 roles funcionales corporativos.",
+      "status": "evidencia"
+    },
+    {
+      "module": "Hablar",
+      "implication": "Imponer un mecanismo de aprobación humana obligatoria conforme a ESA #22 de PRSA antes de despachar mensajes.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P01-F05",
+    "P01-F06"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T00:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "question_id": "P09-C03",
+  "pilar": "P09",
+  "eje": "Historial de interacción",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre historial de interacción, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia Principal: Algunas síntesis iniciales permitían que el relacionador comunitario ingresara 'minutas retrospectivas' semanas después del encuentro, o que editara el contenido de un acta cerrada si surgían desacuerdos posteriores con los participantes. Por el contrario, los estándares probatorios de Boréalis y la doctrina de auditoría exigen inmutabilidad estricta y registro inmediato. Versión Prevalente: Prevalece la regla de inmutabilidad estricta de `P09_VERIFICATION_CORRECTIONS` (`f7d21328`): las interacciones cerradas generan un hash criptográfico SHA-256 no editable; cualquier aclaración posterior debe ingresarse como una nueva nota o adenda con timestamp propio, prohibiendo la alteración retroactiva del texto del acta original.",
+  "findings": [
+    {
+      "claim_id": "P09-C03-C1",
+      "claim": "P09_VERIFICATION_CORRECTIONS prevalece prohibiendo la edición retroactiva de minutas cerradas y exigiendo el sellado criptográfico inmutable de las actas de interacción.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "contrast_interaction_history_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P09_VERIFICATION_CORRECTIONS: Rectificación Canónica y Auditoría de Cumplimiento",
+          "source_id": "f7d21328-c32d-45cf-a503-b5d5be5f65b1",
+          "locator": "Rectificación R2 'Inmutabilidad de Actas e Interacciones'",
+          "retrieved_at": null,
+          "excerpt_short": "Queda prohibida la edición destructiva de registros de reuniones cerradas. Todo cambio o complemento posterior debe registrarse como un nuevo evento vinculado, preservando el acta original inalterada con su hash de origen.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Boréalis: The Proving Problem — Why DIY AI Can't Prove Compliance (Commitment Tracking)",
+          "source_id": "27ce9bc8-70cf-4dc0-ac19-d8787d3bccd6",
+          "locator": "Section 'Tamper-Evident Minutes in Judicial Audits', p. 14-17",
+          "retrieved_at": null,
+          "excerpt_short": "A minute that can be edited after stakeholder departure loses all evidentiary weight in court. The record must be sealed immediately with immutable timestamps.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia plena entre Boréalis y la prevalencia canónica de P09_VERIFICATION_CORRECTIONS.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Minuta de reunión",
+      "Intento de edición posterior",
+      "Firma digital"
+    ],
+    "actors": [
+      "Relacionador Comunitario",
+      "Motor Transaccional BRIDGE",
+      "Auditor de Integridad"
+    ],
+    "steps": [
+      "Cierre formal del acta por las partes",
+      "Cálculo y persistencia de hash SHA-256",
+      "Bloqueo de campos de texto",
+      "Habilitación exclusiva de botón 'Añadir Adenda Aclaratoria'"
+    ],
+    "states": [
+      "Acta Abierta",
+      "Acta Sellada Inmutable",
+      "Adenda Vinculada"
+    ],
+    "outputs": [
+      "Registro inmutable con garantía de no repudio"
+    ],
+    "exceptions": [
+      "Errores tipográficos evidentes en nombres propios se corrigen mediante fe de erratas suscrita por el autor"
+    ]
+  },
+  "entities": [
+    "P09_VERIFICATION_CORRECTIONS",
+    "Boréalis SRM",
+    "Inmutabilidad SHA-256",
+    "No Repudio",
+    "Adenda Aclaratoria"
+  ],
+  "relations": [
+    {
+      "from": "Acta de Reunión",
+      "to": "Hash SHA-256",
+      "type": "SEALED_WITH"
+    },
+    {
+      "from": "Adenda Aclaratoria",
+      "to": "Acta Original",
+      "type": "AMENDS_WITHOUT_OVERWRITING"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Minuta editable en Google Docs vs Acta inmutable con hash",
+      "diferencia": "Google Docs permite alterar acuerdos sin dejar rastro claro para terceros; el acta inmutable con hash garantiza veracidad probatoria indiscutible."
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "Borradores iniciales: Permitían editar minutas hasta 30 días después del evento.",
+      "claim_b": "P09_VERIFICATION_CORRECTIONS: Exige sellado inmediato tras validación y prohíbe cualquier edición destructiva posterior.",
+      "resolution": "Prevalece canónicamente la regla de sellado inmutable inmediato de P09_VERIFICATION_CORRECTIONS."
+    }
+  ],
+  "metrics_and_denominators": {
+    "minutes_sealing_sla": "Máximo 48 horas tras finalizar el encuentro",
+    "immutability_enforcement": "100% de actas cerradas bloqueadas para UPDATE"
+  },
+  "bridge_implications": "Desactivar la función de edición en la interfaz una vez que el estado del acta transita a 'CERRADA_CONFORME'.",
+  "open_gaps": [
+    "Ninguno."
+  ],
+  "next_question_ids": [
+    "P09-C04",
+    "P09-F13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

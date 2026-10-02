@@ -1,0 +1,142 @@
+{
+  "question_id": "T01-X15",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Pruebas adversariales y seguridad",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre pruebas adversariales y seguridad, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Discrepancia y prevalencia en pruebas adversariales y seguridad: 1) Discrepancia: Las notas iniciales asumían que la seguridad del sistema quedaba suficientemente garantizada con las cláusulas contractuales de privacidad del proveedor del LLM (OpenAI/Microsoft) y que las pruebas adversariales eran opcionales o postergables para versiones posteriores; 2) Versión que Prevalece: Según T01_QUALITY_ADDENDUM (45782049) y la arquitectura de NeMo Guardrails (dee0924c), prevalece la obligatoriedad de ejecutar un pentest adversarial completo previo a la admisión de cualquier piloto con datos reales (Compuerta G0): se exige probar activamente inyección directa/indirecta, tentativas de fuga cross-tenant y resistencia ante documentos derogados (SABER / Zhu et al. 2026). La confianza nunca se delega en promesas contractuales de terceros; se comprueba con ingeniería de controles probados.",
+  "findings": [
+    {
+      "claim_id": "T01-X15-C1",
+      "claim": "T01_QUALITY_ADDENDUM suprime la complacencia contractual preliminar y establece que la superación de la compuerta G0 exige un pentest adversarial empírico con cero vulnerabilidades críticas, antes de permitir la ingesta de un solo documento corporativo real.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026-09-30",
+        "region": "Global",
+        "actor": "T01_QUALITY_ADDENDUM"
+      },
+      "evidence": [
+        {
+          "source_id": "45782049-59e3-46e7-9175-aad6605fc98e",
+          "source_title": "T01_QUALITY_ADDENDUM: Auditoría Canónica, Reconciliación Metodológica y Estándares de Prueba",
+          "original_url": null,
+          "locator": "Sección 10: Requisitos de Admisión G0 y Pentest",
+          "excerpt_short": "Las declaraciones contractuales de proveedores no sustituyen las pruebas técnicas. La compuerta G0 exige pentest formal con cero fallas críticas.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Norma metodológica canónica interna de T01.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Planes preliminares basados solo en contratos de nube",
+      "Protocolo de Pentest G0"
+    ],
+    "actors": [
+      "Auditor de QA",
+      "Lead de Ciberseguridad"
+    ],
+    "steps": [
+      "Rechazar la homologación de seguridad basada únicamente en PDFs de marketing de proveedores",
+      "Ejecutar la suite completa de 100 pruebas adversariales",
+      "Certificar ausencia de vulnerabilidades críticas y altas",
+      "Firmar acta de pase de compuerta de admisión G0"
+    ],
+    "states": [
+      "RECHAZO_CONTRATOS_PASIVOS",
+      "EJECUCION_PENTEST_G0",
+      "CERTIFICACION_CONTROLES",
+      "COMPUERTA_G0_SUPERADA"
+    ],
+    "outputs": [
+      "Acta Canónica de Seguridad de Admisión G0"
+    ],
+    "exceptions": [
+      "Si se detecta una sola vulnerabilidad media no mitigada, el ingreso de datos de clientes queda suspendido"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "PROTOCOLO_PENTEST_G0",
+      "type": "documento",
+      "name": "Protocolo de Pentest Adversarial G0",
+      "aliases": [
+        "Gate 0 Mandatory Pentest"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "PROTOCOLO_PENTEST_G0",
+      "predicate": "reemplaza_a",
+      "object_id": "DISCREPANCIA_EJE1",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X15-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "item_a": "Seguridad Contractual Pasiva (DPA de Proveedor)",
+      "item_b": "Seguridad Empírica Comprobada (Pentest G0)",
+      "dimension": "Certeza técnica",
+      "conclusion": "La seguridad contractual solo ofrece indemnizaciones tardías tras el desastre; el pentest empírico evita que la vulnerabilidad llegue a producción."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de vulnerabilidades críticas en Compuerta G0",
+      "denominator": "Total hallazgos de seguridad",
+      "target": "0 (cero absoluto)"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Convierte a The Bridge Intelligence en el benchmark de seguridad de software de IA en América Latina.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X16"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

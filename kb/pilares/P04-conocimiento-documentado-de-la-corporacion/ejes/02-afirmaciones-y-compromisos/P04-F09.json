@@ -1,0 +1,147 @@
+{
+  "question_id": "P04-F09",
+  "pilar": "P04",
+  "eje": "Afirmaciones y compromisos",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Cómo se enlazan afirmaciones y compromisos con documentos, actores y decisiones posteriores?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El enlace relacional entre afirmaciones, compromisos, documentos y decisiones se implementa mediante un Grafo de Conocimiento fundamentado en el estándar W3C PROV-O y el vocabulario FIBO (Financial Industry Business Ontology). Se configuran cuatro aristas direccionales tipadas: 1) Linaje Documental (`corp:wasStatedIn`): conecta la afirmación con el `corp:DocumentArtifact` y el hash de fragmento de origen; 2) Cadena de Responsabilidad (`prov:wasAttributedTo` / `prov:wasApprovedBy`): vincula el compromiso con el `org:BoardOfDirectors`, el comité temático o el directivo emisor; 3) Conciliación de Cumplimiento (`corp:reportsProgressFor` / `corp:fulfillsCommitment`): une los resultados (`corp:Outcome`) publicados en memorias posteriores con el nodo del compromiso original (`corp:Commitment`); y 4) Evolución y Sustitución (`prov:wasRevisionOf` / `dcterms:replaces`): enlaza decisiones de rectificación o retiro con el acta de directorio o hecho esencial que autorizó el cambio.",
+  "findings": [
+    {
+      "claim_id": "P04-F09-C1",
+      "claim": "La vinculación ontológica basada en W3C PROV-O y FIBO permite conectar un compromiso corporativo con su documento de origen, su aprobador colegiado y las memorias anuales que reportan su avance o modificación.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Ingeniería de Grafos Semánticos"
+      },
+      "evidence": [
+        {
+          "source_id": "5737d422-55c7-4103-9b0c-8148106d1fa0",
+          "source_title": "W3C PROV-O: The PROV Ontology",
+          "original_url": "https://www.w3.org/TR/prov-o/",
+          "locator": "Sección 3: Starting Point Terms",
+          "excerpt_short": "Defines core classes: Entity, Activity, Agent, and properties wasDerivedFrom, wasAttributedTo, wasRevisionOf, wasGeneratedBy to establish explicit provenance chains.",
+          "source_date": "2013-04-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 2.3: Trazabilidad Bitemporal y Linaje W3C PROV-O",
+          "excerpt_short": "corp:Outcome prov:wasDerivedFrom corp:Commitment, corp:Commitment prov:wasAttributedTo org:BoardOfDirectors, corp:Statement_v2 prov:wasRevisionOf corp:Statement_v1.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar formal W3C PROV-O y modelo relacional del dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Compromiso indexado",
+      "Reportes anuales subsecuentes",
+      "Actas de Directorio"
+    ],
+    "actors": [
+      "Graph Builder",
+      "Entity Linker",
+      "Provenance Resolver"
+    ],
+    "steps": [
+      "Identificación de entidades comunes",
+      "Generación de tripletas RDF/LPG",
+      "Inserción en base de datos de grafos"
+    ],
+    "states": [
+      "Isolated_Fact",
+      "Graph_Linked",
+      "Fully_Attributed"
+    ],
+    "outputs": [
+      "Subgrafo corporativo que traza el ciclo de vida íntegro de la afirmación"
+    ],
+    "exceptions": [
+      "Reporte posterior que menciona una cifra sin enlazar al compromiso original"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_PROVENANCE_GRAPH",
+      "type": "ontologia",
+      "name": "Grafo de Procedencia y Linaje Corporativo",
+      "aliases": [
+        "Corporate Provenance Knowledge Graph"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_PROVENANCE_GRAPH",
+      "predicate": "conecta_ciclo_vida_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F09-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Capacidad de trazabilidad",
+      "Búsqueda por texto plano": "Incapaz de determinar qué documento posterior modificó una meta previa.",
+      "Grafo W3C PROV-O": "Trazado determinístico de la cadena causal desde la promesa inicial hasta su última auditoría."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe permitir navegar el subgrafo de cada compromiso para responder con certeza sobre antecedentes históricos y decisiones tomadas.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F10"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

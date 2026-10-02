@@ -1,0 +1,149 @@
+{
+  "question_id": "P08-F20",
+  "pilar": "P08",
+  "eje": "Modelos de entrega",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "afe8fdb7-d63d-43ab-84e6-060fe6b8fd24",
+  "question_text": "¿Qué tareas se automatizan de forma segura y cuáles retienen revisión experta?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus establece una taxonomía rigurosa de delegación algorítmica: 1) Tareas Automatizables de Forma Segura (Zero-Risk Automation): Scraping y descarga de boletines oficiales (Diario Oficial, BCN, CMF, SMA SNIFA); normalización sintáctica y deduplicación de textos; extracción determinística de entidades (nombres de parlamentarios, leyes, expedientes sancionatorios); generación de embeddings vectoriales; y cálculo de métricas de volumen y latencia; 2) Tareas con Revisión Experta Obligatoria (Mandatory Expert Review): Fijación de la postura institucional y líneas rojas corporativas; validación de cifras que se presentarán ante comisiones del Congreso o tribunales; redacción de mensajes de vocería de contingencia (Bridging y Q&A); categorización de reuniones sensibles bajo la Ley de Lobby (Ley 20.730); y calificación de hechos esenciales y reservas bajo Ley 18.045.",
+  "findings": [
+    {
+      "claim_id": "P08-F20-C1",
+      "claim": "La automatización se limita estrictamente a la captura, extracción y preprocesamiento de información, reservando la evaluación de riesgo estratégico y las declaraciones a supervisión humana.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "automation_vs_expert_boundary",
+      "evidence": [
+        {
+          "source_title": "P08_RESEARCH_DOSSIER: Viabilidad, Modelos de Negocio y Oportunidades",
+          "source_id": "086dfcaf-9f04-476d-ba49-3072518e2809",
+          "locator": "Sección 4.2 'Matriz de Automatización Segura vs Supervisión Humana Mandatoria'",
+          "excerpt_short": "Regla operativa fundamental de gobernanza: Se automatiza el 100% de la recolección, parseo de texto, extracción de entidades y búsqueda vectorial. Por el contrario, se prohíbe taxativamente la automatización desatendida en tres ámbitos críticos: a) Determinación de hechos jurídicamente vinculantes o revelación de información bajo Ley 18.045; b) Aprobación de líneas rojas en negociaciones regulatorias; y c) Asignación de intencionalidad o posturas definitivas a actores clave sin corroboración humana.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        },
+        {
+          "source_title": "PRSA: Guidance on Artificial Intelligence and Ethics in Communications",
+          "source_id": "8aa1bd49-38e4-4528-9a67-b4b2c3c6b6d3",
+          "locator": "Sección 'Core Principles: Human Responsibility & Machine Limits', p. 3-5",
+          "excerpt_short": "While AI algorithms excel at high-speed data aggregation and initial summarization, ethical and professional responsibility remains strictly non-delegable. PR and corporate affairs practitioners must independently verify all AI outputs involving public statements, crisis responses, or factual claims regarding corporate conduct.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:15:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre los principios éticos de PRSA y la matriz de delegación de P08.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Flujo de datos brutos",
+      "Modelos de extracción",
+      "Plantilla de brief"
+    ],
+    "actors": [
+      "Pipelines de Ingesta (Automáticos)",
+      "Modelos LLM Tier 1/2",
+      "Analista de Asuntos Corporativos (HITL)"
+    ],
+    "steps": [
+      "Descarga e indexación automática",
+      "Generación de primer borrador algorítmico",
+      "Bloqueo de entrega hasta firma digital de analista",
+      "Liberación del brief validado"
+    ],
+    "states": [
+      "Descargado",
+      "Indexado",
+      "Borrador Pendiente de Firma",
+      "Aprobado por Humano"
+    ],
+    "outputs": [
+      "Briefing auditado con marca de validación humana"
+    ],
+    "exceptions": [
+      "Alerta roja de emergencia fuera de horario que envía resumen preliminar con marca explícita de 'Borrador No Validado'"
+    ]
+  },
+  "entities": [
+    "Zero-Risk Automation",
+    "Mandatory Expert Review",
+    "PRSA",
+    "Ley 18.045",
+    "Ley 20.730",
+    "Firma Digital"
+  ],
+  "relations": [
+    {
+      "from": "Ingesta y Extracción",
+      "to": "Automatización Segura",
+      "type": "assigned_to"
+    },
+    {
+      "from": "Líneas Rojas y Declaraciones",
+      "to": "Revisión Experta Mandatoria",
+      "type": "assigned_to"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Chatbot autónomo sin filtro vs Flujo de validación BRIDGE",
+      "diferencia": "El chatbot puede emitir una alucinación legal que cueste millones; BRIDGE impone un 'gatekeeper' humano que detiene cualquier imprecisión antes de que llegue al usuario."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "automated_processing_ratio": "85% del volumen de datos procesado algorítmicamente",
+    "human_touchpoint_ratio": "100% de los briefs ejecutivos revisados y firmados por un analista"
+  },
+  "bridge_implications": "Incorporar en el core de BRIDGE una barrera de software (guardrail) que impida enviar briefs definitivos sin la confirmación explícita del analista HITL.",
+  "open_gaps": [
+    "Determinar la velocidad promedio de revisión de un analista senior entrenado frente a un brief de 1 página."
+  ],
+  "next_question_ids": [
+    "P08-F21",
+    "P08-F22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:30:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

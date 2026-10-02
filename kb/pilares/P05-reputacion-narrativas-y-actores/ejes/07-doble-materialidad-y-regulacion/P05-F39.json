@@ -1,0 +1,148 @@
+{
+  "question_id": "P05-F39",
+  "pilar": "P05",
+  "eje": "Doble materialidad y regulación",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "0fc2e780-e279-4923-83c5-90fe621a4543",
+  "question_text": "¿Qué fuentes sustentan cada vínculo de materialidad y qué queda como hipótesis?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El corpus delimita con precisión probatoria qué aspectos de la materialidad están demostrados fácticamente y cuáles permanecen como hipótesis operacionales: 1) Hechos y Vínculos Demostrados con Fuentes Normativas: a) La exigencia jurídica vinculante de doble materialidad está formalizada en EFRAG ESRS IG 1 (2024) y en la NCG 461 de la CMF (2021/2025), requiriendo disclosure obligatorio de riesgos ESG y gobierno corporativo; b) El impacto de las controversias en la exclusión de índices bursátiles sostenibles (MSCI ESG, DJSI) y en multas judiciales de última instancia (Sentencia Corte Suprema caso Tissue CMPC/SCA por colusión y revocación de RCAs por tribunales ambientales); c) La exigencia de debida diligencia de derechos humanos y consulta indígena bajo Convenio 169 OIT (Decreto 236 BCN); 2) Hipótesis de Trabajo no Probadas Universalmente: a) La velocidad exacta y la cuantía matemática precisa en que una controversia comunitaria de mediana intensidad se traducirá en castigo de múltiplos bursátiles o alza de spread de bonos (depende de condiciones macroeconómicas y liquidez global); b) La efectividad predictiva de los modelos de inteligencia artificial para pronosticar con meses de antelación qué proyecto de ley parlamentario será aprobado efectivamente; c) La premisa de que todo consumidor castiga comercialmente productos de empresas cuestionadas éticamente cuando no existen bienes sustitutos directos.",
+  "findings": [
+    {
+      "claim_id": "P05-F39-C1",
+      "claim": "Los estándares regulatorios de doble materialidad son vinculantes y verificables, pero la cuantificación matemática anticipada del daño financiero derivado de controversias permanece en el plano de la estimación probabilística.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2024-2026",
+        "region": "Chile / Europa",
+        "actor": "Reguladores y Analistas Financieros"
+      },
+      "evidence": [
+        {
+          "source_id": "37d05536-6e21-4eed-88f6-8019b342ffa5",
+          "source_title": "P05_EVIDENCE_MAP",
+          "original_url": null,
+          "locator": "Sección 1: Eje 5 (Doble Materialidad y Convergencia Regulatoria)",
+          "excerpt_short": "Nivel de confianza MUY ALTO para EFRAG IG 1 y DEFINITIVO para la NCG 461 de la CMF. En cambio, los modelos predictivos de NLP requieren advertencias de sesgo.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        },
+        {
+          "source_id": "69d2cc32-f0e5-4943-91f2-b5a7a14cbcfb",
+          "source_title": "P05_GAPS_AND_VALIDATION",
+          "original_url": null,
+          "locator": "Sección 1: La Caja Negra de la Atribución Causal en Reputación Corporativa",
+          "excerpt_short": "Casi ningún estudio logra aislar con precisión la causalidad estricta entre comunicación y rentabilidad. La plataforma no debe prometer ROI publicitario directo.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T03:00:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Diferenciación rigurosa documentada en las síntesis internas de evidencia y gaps de P05.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Marcos regulatorios oficiales",
+      "Series de precios y múltiplos bursátiles",
+      "Monitoreo de controversias"
+    ],
+    "actors": [
+      "Auditor de Cumplimiento",
+      "Analista Cuantitativo de Riesgos"
+    ],
+    "steps": [
+      "Separación de requerimientos normativos obligatorios",
+      "Modelación probabilística de impactos financieros",
+      "Etiquetado epistémico de hechos vs hipótesis"
+    ],
+    "states": [
+      "Regulatory_Rules_Locked",
+      "Financial_Risk_Estimated",
+      "Epistemic_Status_Assigned"
+    ],
+    "outputs": [
+      "Matriz de Materialidad con trazabilidad de certeza epistémica"
+    ],
+    "exceptions": [
+      "Informes de consultoría que presentan correlaciones bursátiles como si fueran leyes físicas de causa-efecto"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_EPISTEMIC_MATERIALITY",
+      "type": "modelo_epistemico",
+      "name": "Matriz de Certeza de Materialidad",
+      "aliases": [
+        "Epistemic Materiality Matrix"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_EPISTEMIC_MATERIALITY",
+      "predicate": "delimita_alcance_de",
+      "object_id": "ENT_DOUBLE_MATERIALITY",
+      "valid_from": "2024",
+      "valid_to": null,
+      "evidence_claim_id": "P05-F39-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Nivel de certeza",
+      "Hecho Documentado": "La CMF exige reportar métricas ESG bajo NCG 461; la infracción acarrea sanciones de la autoridad.",
+      "Hipótesis Operativa": "La publicación de una memoria con buen rating ESG reducirá el spread crediticio de la firma en 25 puntos base."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Capa Epistémica",
+      "implication": "BRIDGE debe etiquetar explícitamente qué cálculos de impacto financiero son hechos regulados y cuáles son simulaciones de escenarios basados en hipótesis.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P05-F40"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T03:00:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

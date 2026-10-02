@@ -1,0 +1,134 @@
+{
+  "question_id": "P02-X12",
+  "pilar": "P02",
+  "eje": "Profundización especializada",
+  "eje_n": 10,
+  "subeje": "Proximidad funcional verificable",
+  "tipo": "X",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar proximidad funcional verificable de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Exige estructurar un modelo de datos de evaluación funcional con las siguientes especificaciones: 1) Variables: Identificador de solución (`solution_id`), grado de integración nativa (`1_a_4_modulos`), tipo de acoplamiento de datos (`nulo`, `export_manual_csv`, `api_rest_polled`, `bus_eventos_tiempo_real`), latencia de propagación de eventos inter-módulo (`segundos`, `minutos`, `horas`), soporte de auditoría cruzada (`trazabilidad_completa`, `trazabilidad_parcial`, `sin_trazabilidad`), y nivel de evidencia empírica (`OPD`, `FD`, `DTI`, `POR`); 2) Categorías: Proveedor de nicho mono-módulo, suite agregada post-adquisición, y suite nativa unificada; 3) Relaciones: `Proveedor -> Ofrece_Modulo -> Modulo_ID`, `Modulo_Origen -> Envia_Trigger_A -> Modulo_Destino`, `Evento_Crisis -> Propaga_A -> [Entidad_Actor, Entidad_Mensaje]`; 4) Condiciones de frontera: Regla estricta que prohíbe registrar un flujo como 'integrado' si requiere que un usuario humano copie y pegue datos entre pantallas o interfaces distintas.",
+  "findings": [
+    {
+      "claim_id": "P02-X12-C1",
+      "claim": "La modelación estructurada de proximidad funcional exige tipificar el mecanismo telemétrico de intercambio de datos, diferenciando las integraciones manuales por exportación de las arquitecturas reactivas por eventos nativos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Arquitectura de Software"
+      },
+      "evidence": [
+        {
+          "source_id": "b5217662-c6f0-4529-8282-f5d17339b7fa",
+          "source_title": "P02_GLOBAL_MARKET_MAP_V1",
+          "original_url": null,
+          "locator": "Functional Proximity Metrics and Data Coupling Taxonomy",
+          "excerpt_short": "Taxonomy defining levels of data coupling: from manual CSV export to native reactive event buses across the corporate affairs lifecycle.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Estándar de ingeniería de software para evaluación de integración de sistemas.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Matriz de capacidades de integración",
+      "Esquema de taxonomía de acoplamiento",
+      "Logs de prueba de eventos"
+    ],
+    "actors": [
+      "Arquitecto de Integración",
+      "Auditor de Software"
+    ],
+    "steps": [
+      "Inspección de mecanismos de intercambio de datos",
+      "Asignación de categoría de acoplamiento",
+      "Cálculo del índice de proximidad funcional"
+    ],
+    "states": [
+      "Mecanismo_Inspeccionado",
+      "Acoplamiento_Categorizado",
+      "Indice_Calculado"
+    ],
+    "outputs": [
+      "Ficha de proximidad funcional estructurada por proveedor"
+    ],
+    "exceptions": [
+      "Herramientas que utilizan middleware de terceros (e.g. Workato, Zapier) para simular integración nativa"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_MODELO_PROXIMIDAD",
+      "type": "modelo_datos",
+      "name": "Esquema Estructurado Proximidad Funcional",
+      "aliases": [
+        "Functional Proximity Schema"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_MODELO_PROXIMIDAD",
+      "predicate": "clasifica_acoplamiento_en",
+      "object_id": "Nativo_vs_Manual",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-X12-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Acoplamiento Reactivo Nativo vs Middleware Comercial Externo",
+      "Acoplamiento Reactivo": "Diseño en el mismo modelo relacional, sin costos de licencias intermedias, latencia de milisegundos.",
+      "Middleware Comercial": "Costo adicional por conector, riesgo de fallas de sincronización y mantención compleja de mapeos de datos."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Todos",
+      "implication": "BRIDGE debe construir su bus de eventos interno siguiendo esta especificación para garantizar acoplamiento nativo reactivo.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-X13"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

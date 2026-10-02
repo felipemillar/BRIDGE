@@ -1,0 +1,147 @@
+{
+  "question_id": "P09-F10",
+  "pilar": "P09",
+  "eje": "Historial de interacción",
+  "eje_n": 2,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué variables, categorías, relaciones y condiciones exige representar historial de interacción de forma estructurada?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La representación estructurada del historial de interacción exige: 1) Entidad Central: `Entity_Interaction` con atributos (interaction_id, type [lobby, community, media, regulatory, field_visit], channel [presencial, virtual, telefónico], date_time_start, date_time_end, location_geo, confidentiality_level); 2) Entidades Enlazadas: `Entity_Person` (asistentes con rol formal), `Entity_Org` (organizaciones representadas), `Entity_MeetingMinutes` (documento probatorio, hash SHA-256 de integridad), `Entity_Issue` (asuntos abordados con ponderación de impacto), y `Entity_Commitment` (promesas derivadas); 3) Relaciones Grafo: `HAD_INTERACTION_WITH`, `DISCUSSED_ISSUE`, `DOCUMENTED_IN`, `SPAWNED_COMMITMENT`; 4) Condiciones de Integridad: Prohibición de registros anónimos (debe existir un autor interno autenticado), inmutabilidad de actas cerradas mediante sellado de tiempo criptográfico, y segregación estricta de comentarios interpretativos.",
+  "findings": [
+    {
+      "claim_id": "P09-F10-C1",
+      "claim": "El modelo relacional formaliza la entidad Entity_Interaction vinculada mediante claves foráneas y aristas de grafo a personas, organizaciones, actas probatorias, asuntos y compromisos con sellado inmutable.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "relational_schema_interaction_history",
+      "evidence": [
+        {
+          "source_title": "P09_RESEARCH_DOSSIER",
+          "source_id": "c854373e-7807-46cf-89a9-e952131999d7",
+          "locator": "Sección 2 'Modelo Conceptual de Entidades y Relaciones (ERD) — Tabla Entity_Interaction'",
+          "retrieved_at": null,
+          "excerpt_short": "Entity_Interaction modela cada contacto con ID único, timestamp, tipología, canal, ubicación, enlaces a Entity_Person (participantes), Entity_Org (representadas), Entity_MeetingMinutes (actas) y Entity_Commitment (compromisos). Cada registro cerrado genera un hash inmutable.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "Simply Stakeholders: Commitments Tracking Tools That Close The Loop",
+          "source_id": "f962cf2b-33d3-49ae-8215-baee33ff1e4a",
+          "locator": "Whitepaper 'Structuring Interaction Data in Public Consultation', p. 14-19",
+          "retrieved_at": null,
+          "excerpt_short": "A structured interaction model ensures that every conversation is linked to both the macro stakeholder group and the micro commitments made, providing unbroken relational chains.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre Simply Stakeholders y el ERD de P09.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.95,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Schema JSON de interacción",
+      "Catálogo de tipos de eventos",
+      "Directorio de usuarios LDAP"
+    ],
+    "actors": [
+      "Administrador de Datos BRIDGE",
+      "Backend Relacional",
+      "Servicio de Criptografía"
+    ],
+    "steps": [
+      "Validación de esquema JSON",
+      "Verificación de claves foráneas de participantes",
+      "Cálculo de hash SHA-256",
+      "Inserción en base de datos transaccional y proyección al grafo"
+    ],
+    "states": [
+      "Validación Estructural OK",
+      "Registro Persistido",
+      "Grafo Actualizado"
+    ],
+    "outputs": [
+      "Registro normalizado en PostgreSQL y nodos en grafo Neo4j/NetworkX"
+    ],
+    "exceptions": [
+      "Registros con campos obligatorios vacíos son rechazados con código de error de validación"
+    ]
+  },
+  "entities": [
+    "Entity_Interaction",
+    "Entity_MeetingMinutes",
+    "SHA-256 Hash",
+    "Simply Stakeholders",
+    "PostgreSQL/Neo4j"
+  ],
+  "relations": [
+    {
+      "from": "Entity_Interaction",
+      "to": "Entity_MeetingMinutes",
+      "type": "evidenced_by"
+    },
+    {
+      "from": "Entity_Interaction",
+      "to": "Entity_Issue",
+      "type": "addresses"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Estructura plana en Excel vs Grafo relacional",
+      "diferencia": "Excel rompe la integridad referencial al duplicar nombres; el grafo preserva identificadores canónicos y trazabilidad de aristas."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "foreign_keys_integrity_check": "100% de aristas validadas",
+    "hash_algorithm": "SHA-256 para actas e interacciones cerradas"
+  },
+  "bridge_implications": "Implementar la tabla `interactions` en el esquema relacional de BRIDGE con disparadores de auditoría (audit triggers) append-only.",
+  "open_gaps": [
+    "Definir si los eventos híbridos (presencial + telemático) requieren modelar ubicaciones múltiples."
+  ],
+  "next_question_ids": [
+    "P09-F11",
+    "P09-F12"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

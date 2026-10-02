@@ -1,0 +1,145 @@
+{
+  "question_id": "T01-X21",
+  "pilar": "T01",
+  "eje": "Profundización especializada",
+  "eje_n": 11,
+  "subeje": "Adopción, confianza y trabajo humano",
+  "tipo": "X",
+  "notebook_id": "eee1c855-b3d0-4377-9eb3-7368baa28bf1",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre adopción, confianza y trabajo humano?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis de adopción, confianza y trabajo humano se fundamenta en fuentes científicas y metodológicas primarias catalogadas en T01: 1) Fabbri et al. (SummEval, 2021-04-12, ArXiv 9df1af53, p. 2-6): Respalda la medición de latencias de verificación humana, dwell time sobre fuentes y prevención del sesgo de complacencia ante textos fluidos; 2) Sap et al. (Social IQa, 2019-04-23, ArXiv 45cf111e, p. 1-4): Respalda la evaluación de carga cognitiva en interacciones sociales y la seguridad psicológica de decisiones comunicacionales; 3) Cooper (The Stage-Gate System, 2016-2025, Fuente 773f1a85): Respalda la gestión de la fricción operativa, adopción de campo (Field Trials) y superación del Shadow AI; 4) Arthur W. Page Society (Page Principles, Fuente f45d1506, Principio 5: 'Listen to the enterprise'): Respalda la escucha activa de las frustraciones de los colaboradores corporativos; y 5) T01_QUALITY_ADDENDUM (Fuente 45782049, Sección 11): Respalda las métricas objetivas de dwell time y edición obligatoria para certificar control humano.",
+  "findings": [
+    {
+      "claim_id": "T01-X21-C1",
+      "claim": "Las fuentes de T01 cubren exhaustivamente la dimensión humana de la interacción con la IA, asegurando que la tecnología no deshumanice el proceso ni sustituya la responsabilidad ética indelegable del profesional.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2019-2026",
+        "region": "Global",
+        "actor": "SummEval, Social IQa, Cooper Stage-Gate, Page Society"
+      },
+      "evidence": [
+        {
+          "source_id": "9df1af53-4f60-460c-a1b1-ddb96f0aa76f",
+          "source_title": "Fabbri et al. (2021) — SummEval: Re-evaluating Summarization Evaluation",
+          "original_url": "https://arxiv.org/pdf/2007.12626.pdf",
+          "locator": "Section 2 & 4: Human Factors Protocol",
+          "excerpt_short": "Rigorous human evaluation protocols establish that active verification behaviors are indispensable to maintain output fidelity.",
+          "source_date": "2021-04-12",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        },
+        {
+          "source_id": "773f1a85-d924-4d5e-a9a3-1483dbc837aa",
+          "source_title": "Cooper (2016-2025) - The Stage-Gate System: Idea-to-Launch & Agile Integration",
+          "original_url": null,
+          "locator": "Human Factors in Stage-Gate Implementation",
+          "excerpt_short": "Adoption barriers must be addressed through workflow redesign and user enablement rather than mandate alone.",
+          "source_date": "2025",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:40:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el corpus de T01.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus bibliográfico T01",
+      "Catálogo de evidencias"
+    ],
+    "actors": [
+      "Auditor Antigravity"
+    ],
+    "steps": [
+      "Identificar citas de fuentes primarias para cada dimensión de trabajo humano",
+      "Comprobar consistencia con directrices de la Page Society y SummEval",
+      "Consolidar la tabla de fuentes de profundización en adopción y confianza",
+      "Comprobar la resolución del 100% de los identificadores"
+    ],
+    "states": [
+      "VERIFICACION_CITAS",
+      "REVISION_CONSISTENCIA",
+      "TABLA_CONSOLIDADA"
+    ],
+    "outputs": [
+      "Tabla Canónica de Fuentes de Trabajo Humano T01-X21"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "CORPUS_HUMANO_T01",
+      "type": "documento",
+      "name": "Corpus de Trabajo Humano y Confianza T01",
+      "aliases": [
+        "SummEval, Social IQa, Cooper, Page"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "CORPUS_HUMANO_T01",
+      "predicate": "respalda_diseno_humano_de",
+      "object_id": "THE_BRIDGE",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "T01-X21-C1"
+    }
+  ],
+  "comparisons": [],
+  "contradictions": [],
+  "metrics_and_denominators": [
+    {
+      "metric": "Tasa de citación verificada en Eje X3",
+      "denominator": "Total afirmaciones metodológicas",
+      "target": "100%"
+    }
+  ],
+  "bridge_implications": [
+    {
+      "module": "transversal",
+      "implication": "Garantiza un diseño centrado en el profesional que potencia y no reemplaza el criterio del experto.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "T01-X22"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:40:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

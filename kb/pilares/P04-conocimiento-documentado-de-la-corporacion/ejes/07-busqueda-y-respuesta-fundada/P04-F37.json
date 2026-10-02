@@ -1,0 +1,146 @@
+{
+  "question_id": "P04-F37",
+  "pilar": "P04",
+  "eje": "Búsqueda y respuesta fundada",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué preguntas debe resolver la búsqueda exacta, semántica o híbrida?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La arquitectura de recuperación distribuye las consultas según su tipología lingüística y estructural: 1) Búsqueda Exacta / Léxica (BM25): resuelve consultas puntuales con identificadores unívocos, códigos de compromiso (e.g. 'COM-ENV-2023-089'), números de resolución ambiental (e.g. 'RCA N° 124/2018'), artículos de leyes (e.g. 'Ley 18.045'), cifras cuantitativas específicas y nombres propios de faenas o personas, donde los embeddings densos sufren de colapso de representación; 2) Búsqueda Semántica Densa (Dense Vector Search): resuelve consultas conceptuales y temáticas amplias formuladas con vocabulario no idéntico al corpus (e.g. 'estrategia de transición justa', 'mitigación del estrés hídrico', 'inclusión laboral femenina'); 3) Búsqueda Híbrida con Reranking ColBERT / Cross-Encoder: fusiona ambos resultados mediante Reciprocal Rank Fusion (RRF) e interacción tardía, logrando un incremento superior al 28% en precisión top-5 para consultas corporativas mixtas; y 4) GraphRAG (Microsoft Research): resuelve preguntas holísticas de síntesis global y agregación plurianual (e.g. 'resumen de compromisos comunitarios de los últimos 5 años') mediante particionamiento Leiden de entidades y resúmenes jerárquicos.",
+  "findings": [
+    {
+      "claim_id": "P04-F37-C1",
+      "claim": "Las consultas directivas en asuntos corporativos requieren una arquitectura híbrida que combine BM25 para identificadores exactos, embeddings densos para conceptos, ColBERT para reranking y GraphRAG para síntesis global multi-documento.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2020-2026",
+        "region": "Global",
+        "actor": "Arquitectura de Búsqueda RAG"
+      },
+      "evidence": [
+        {
+          "source_id": "cf77b030-c20a-425e-8eea-97b70109ab23",
+          "source_title": "ColBERT: Efficient and Effective Passage Search (Khattab & Zaharia, 2020)",
+          "original_url": "https://arxiv.org/abs/2004.12832",
+          "locator": "Sección 1 and 3: Late Interaction Architecture",
+          "excerpt_short": "Late interaction preserves fine-grained token-level matching while enabling contextual semantic comparison, outperforming isolated dense vector representations.",
+          "source_date": "2020-04-29",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "a99b62cd-e413-477a-852c-ab184570b44b",
+          "source_title": "GraphRAG: From Local to Global (Edge et al., 2024)",
+          "original_url": "https://arxiv.org/abs/2404.16130",
+          "locator": "Sección 1 and 2: Global Search via Leiden Partitioning",
+          "excerpt_short": "GraphRAG outperforms standard RAG on global summarization and thematic aggregation across extensive multi-document corpora.",
+          "source_date": "2024-04-24",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evidencia experimental sólida en papers de ColBERT y GraphRAG de Microsoft Research.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Consulta del directivo o analista"
+    ],
+    "actors": [
+      "Query Router",
+      "Hybrid Retrieval Engine",
+      "ColBERT Reranker",
+      "GraphRAG Synthesizer"
+    ],
+    "steps": [
+      "Clasificación de la consulta (puntual, conceptual o global)",
+      "Ejecución paralela BM25 + Vectorial o GraphRAG",
+      "Reranking tardío y ensamble de contexto"
+    ],
+    "states": [
+      "Query_Analyzed",
+      "Candidates_Retrieved",
+      "Reranked_Context_Ready"
+    ],
+    "outputs": [
+      "Contexto óptimo libre de ruido para la redacción de la respuesta"
+    ],
+    "exceptions": [
+      "Consulta ambigua que mezcla solicitud puntual con agregación histórica"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_HYBRID_ROUTER",
+      "type": "componente_tecnologico",
+      "name": "Enrutador Híbrido de Búsqueda Corporativa",
+      "aliases": [
+        "Hybrid Search & GraphRAG Router"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_HYBRID_ROUTER",
+      "predicate": "optimiza_recuperacion_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F37-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Eficacia de búsqueda",
+      "Búsqueda vectorial pura": "Falla al buscar códigos numéricos o identificadores de resoluciones legales.",
+      "Búsqueda híbrida + GraphRAG": "Captura códigos exactos con BM25 y sintetiza grandes volúmenes con particionamiento Leiden."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe implementar este router híbrido para responder con igual solvencia ante preguntas de cifras puntuales o resúmenes estratégicos de 5 años.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F38"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

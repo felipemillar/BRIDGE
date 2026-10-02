@@ -1,0 +1,158 @@
+{
+  "question_id": "P11-F23",
+  "pilar": "P11",
+  "eje": "Ciclo de vida y retención",
+  "eje_n": 4,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "64271ecf-776c-4692-b302-d936ea00a501",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre ciclo de vida y retención?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos, métodos de sanitización y períodos de retención se fundamentan en fuentes normativas y técnicas verificadas: 1) Estándar Federal de Sanitización de Medios: NIST SP 800-88 Rev. 2 (2014) 'Guidelines for Media Sanitization', que define los métodos Clear, Purge, Destroy y valida formalmente el Cryptographic Erase (Crypto-shredding); 2) Marcos de Retención y Disposición Segura en la Nube: Cloud Security Alliance CCM v4 (Dominios DSP-06 y DSP-07 sobre retención, disposición y registros de sanitización); 3) Legislación Chilena de Conservación y Supresión: BCN Ley N° 20.730 de Lobby (Art. 5-10, publicidad y conservación permanente), BCN Ley N° 21.719 (Art. 4, principio de limitación de plazo de conservación), BCN Ley N° 19.628 (norma transitoria vigente) y BCN Ley N° 21.663 de Ciberseguridad (Art. 9 sobre conservación de registros); 4) Derecho Comparado de Supresión: EUR-Lex Regulation (EU) 2016/679 GDPR (Art. 17 sobre derecho al olvido y supresión); y 5) Síntesis Técnica Canónica: P11_RESEARCH_DOSSIER (ddc8b1f3).",
+  "findings": [
+    {
+      "claim_id": "P11-F23-C1",
+      "claim": "El marco de retención y ciclo de vida descansa en la integración de estándares de sanitización (NIST SP 800-88 r2, CSA CCM v4), derecho mercantil y de ciberseguridad chileno (Código de Comercio, Leyes 20.730, 21.663, 21.719) y normas de protección de datos (GDPR Art. 17).",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_base_lifecycle_and_retention",
+      "evidence": [
+        {
+          "source_title": "P11_SOURCE_INDEX",
+          "source_id": "4608d794-4538-48e8-94fb-da95fb84e1e4",
+          "locator": "Sección 'Cluster 4: Ciclo de Vida, Retención y Sanitización'",
+          "retrieved_at": null,
+          "excerpt_short": "Mapeo de fuentes clave: NIST SP 800-88 r2 (Crypto-shredding), CSA CCM v4 (DSP-06/07), BCN Ley 20.730, BCN Ley 21.719, EUR-Lex GDPR Art. 17.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization",
+          "source_id": "eeffc975-0a8f-470f-80c9-13435bf0efd8",
+          "locator": "Section 3 'Information Sanitization Requirements'",
+          "retrieved_at": null,
+          "excerpt_short": "Sanitization must be performed in accordance with the security category of the information and the required confidence level, ensuring unauthorized disclosure risks are mitigated.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        },
+        {
+          "source_title": "EUR-Lex: Regulation (EU) 2016/679 General Data Protection Regulation (GDPR)",
+          "source_id": "a1653205-5048-4f9b-8b23-40d4908de893",
+          "locator": "Article 17(1) 'Right to Erasure'",
+          "retrieved_at": null,
+          "excerpt_short": "The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T07:10:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación textual rigurosa sobre los repositorios documentales indexados en fuentes/P11.json.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Catálogo de fuentes en fuentes/P11.json",
+      "Validación cruzada de citas"
+    ],
+    "actors": [
+      "Auditor Epistemológico",
+      "Investigador BRIDGE"
+    ],
+    "steps": [
+      "Revisión de citas directas de NIST SP 800-88 r2 y GDPR",
+      "Verificación de autenticidad en los textos del cuaderno",
+      "Mapeo de correspondencia en el índice de fuentes",
+      "Sistematización de citas en las respuestas de P11"
+    ],
+    "states": [
+      "SOURCES_VERIFIED",
+      "CITATIONS_ALIGNED",
+      "GROUNDING_VALIDATED"
+    ],
+    "outputs": [
+      "Cuerpo probatorio inexpugnable para los protocolos de sanitización"
+    ],
+    "exceptions": [
+      "Ninguna; las fuentes documentan directamente los estándares analizados"
+    ]
+  },
+  "entities": [
+    "NIST SP 800-88 r2",
+    "GDPR Art. 17",
+    "CSA CCM v4",
+    "Ley 21.719",
+    "P11_SOURCE_INDEX"
+  ],
+  "relations": [
+    {
+      "from": "NIST SP 800-88 r2",
+      "to": "Sanitización de Datos",
+      "type": "DEFINES_TECHNICAL_METHOD"
+    },
+    {
+      "from": "GDPR Art. 17",
+      "to": "Supresión",
+      "type": "ESTABLISHES_RIGHT"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Consejos abstractos de almacenamiento vs Protocolos formales de sanitización NIST",
+      "diferencia": "Los consejos abstractos carecen de fuerza jurídica probatoria; los protocolos NIST SP 800-88 r2 son el estándar de oro aceptado por cortes y reguladores internacionales."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "sanitization_citation_density": "100% de afirmaciones de purga respaldadas por citas directas de NIST y CSA"
+  },
+  "bridge_implications": "Garantiza a las compañías clientes que las políticas de retención y purga de BRIDGE cumplen con los estándares de debida diligencia más estrictos del mundo.",
+  "open_gaps": [
+    "Seguimiento de la publicación de las guías de sanitización de la futura Agencia de Protección de Datos de Chile."
+  ],
+  "next_question_ids": [
+    "P11-F24",
+    "P11-F25"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T07:10:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

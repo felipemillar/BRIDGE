@@ -1,0 +1,167 @@
+{
+  "question_id": "P10-C13",
+  "pilar": "P10",
+  "eje": "Canales y escenarios",
+  "eje_n": 7,
+  "subeje": null,
+  "tipo": "C",
+  "notebook_id": "ca5f3cec-cc73-4e48-9dc5-0a2330e73990",
+  "question_text": "¿Dónde discrepan fuentes originales y síntesis internas sobre canales y escenarios, y qué versión prevalece según las correcciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La discrepancia principal giraba en torno a la práctica de 'filtraciones exclusivas' o entrega preferencial anticipada a medios de prensa amigos: Prácticas de relaciones públicas convencionales recomendaban ofrecer la primicia de hechos relevantes bajo reserva informal a un periodista influyente antes de emitir comunicados públicos; en marcado conflicto, las regulaciones del mercado de valores de Chile (Ley 18.045, Art. 9 y NCG 30 CMF) y de EE.UU. (SEC Regulation FD, 17 CFR Part 243) sancionan severamente la divulgación selectiva y asimétrica de información material, considerándola una infracción penal o administrativa de uso de información privilegiada. Conforme a P10_VERIFICATION_CORRECTIONS (f043631e), prevalece la versión de la CMF y SEC Regulation FD: La divulgación de hechos esenciales o materias de impacto debe ser estrictamente simultánea al mercado y al público; si se produce una revelación selectiva inadvertida, la organización está obligada por ley a liberar el hecho esencial y el comunicado general de inmediato para restablecer la simetría de información.",
+  "findings": [
+    {
+      "claim_id": "P10-C13-C1",
+      "claim": "Conforme a P10_VERIFICATION_CORRECTIONS, prevalece la prohibición legal absoluta de filtraciones preferenciales y revelaciones selectivas (Ley 18.045, NCG 30, SEC Reg FD), exigiendo difusión pública simultánea con estricto embargo.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "channel_disclosure_discrepancy",
+      "evidence": [
+        {
+          "source_title": "P10_VERIFICATION_CORRECTIONS: Rectificación Canónica y Prevalencia de Fuentes",
+          "source_id": "f043631e-98ac-4b5b-8fc6-de772d489bcf",
+          "locator": "Sección 'Prevalencia Canónica: Simetría Informativa y Prohibición de Filtraciones'",
+          "retrieved_at": null,
+          "excerpt_short": "Prevalencia canónica: La divulgación selectiva está prohibida por Ley 18.045, NCG 30 y SEC Reg FD. No se admiten primicias informales de información material. La difusión a medios y regulador debe ser estrictamente simultánea.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "SEC: 17 CFR Part 243 Regulation FD (Fair Disclosure)",
+          "source_id": "3f46d22b-6bc7-4ac7-8fec-3e43847ca3f8",
+          "locator": "17 CFR § 243.100 'General Rule Regarding Selective Disclosure'",
+          "retrieved_at": null,
+          "excerpt_short": "Whenever an issuer discloses any material nonpublic information to certain enumerated persons, the issuer shall make public disclosure of that information simultaneously in the case of an intentional disclosure.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        },
+        {
+          "source_title": "CMF Chile: Norma de Caracter General NCG 30 (Difusion de Hechos Esenciales)",
+          "source_id": "9b7c3a77-f239-472f-b2c3-d19e464a44ec",
+          "locator": "Sección II 'Instrucciones sobre difusión simultánea'",
+          "retrieved_at": null,
+          "excerpt_short": "La difusión debe realizarse en forma simultánea a la transmisión a la Comisión, impidiendo que analistas o medios selectos reciban ventaja informativa.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T06:35:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Concordancia directa entre el ordenamiento jurídico bursátil chileno/estadounidense y las directrices canónicas de P10.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Hecho relevante de la compañía",
+      "Propuesta de despacho a medios",
+      "Normativa NCG 30 y Reg FD"
+    ],
+    "actors": [
+      "Fiscal Corporativo",
+      "Director de Comunicaciones",
+      "Mecanismo de Despacho BRIDGE"
+    ],
+    "steps": [
+      "Clasificación de la materialidad del hecho",
+      "Bloqueo de envío de borradores a periodistas individuales bajo embargo informal",
+      "Programación de la transmisión simultánea a CMF SEIL y a newswires públicos",
+      "Ejecución del despacho en paralelo al segundo exacto",
+      "Registro de constancia de entrega sincronizada en el libro mayor de auditoría"
+    ],
+    "states": [
+      "MATERIAL_FACT_IDENTIFIED",
+      "SELECTIVE_LEAK_BLOCKED",
+      "SIMULTANEOUS_DISPATCH_ARMED",
+      "BROADCAST_EXECUTED"
+    ],
+    "outputs": [
+      "Divulgación plenamente simétrica y conforme a la ley de valores"
+    ],
+    "exceptions": [
+      "Si un periodista filtra la información antes de tiempo, el sistema gatilla el envío masivo instantáneo a la CMF y medios generales"
+    ]
+  },
+  "entities": [
+    "SEC Regulation FD",
+    "CMF NCG 30",
+    "Simetría Informativa",
+    "Ley 18.045",
+    "P10_VERIFICATION_CORRECTIONS"
+  ],
+  "relations": [
+    {
+      "from": "P10_VERIFICATION_CORRECTIONS",
+      "to": "Filtración Preferencial",
+      "type": "SANCTIONS_AS_ILLEGAL"
+    },
+    {
+      "from": "Hecho Material",
+      "to": "CMF y Newswires",
+      "type": "MUST_DISPATCH_SIMULTANEOUSLY"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Filtración de primicia a medio afín vs Divulgación simétrica regulada",
+      "diferencia": "La filtración a un medio afín expone al directorio a sanciones penales por uso de información privilegiada; la divulgación simétrica protege la transparencia bursátil y la equidad de mercado."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Primicias preferenciales vs Divulgación simultánea",
+      "resolution": "Prevalece la divulgación simultánea mandatoria; prohibida la entrega selectiva de información material."
+    }
+  ],
+  "metrics_and_denominators": {
+    "selective_disclosure_infractions": "0 denuncias de divulgación asimétrica"
+  },
+  "bridge_implications": "Garantiza el cumplimiento estricto de las normas bursátiles chilenas e internacionales para todos los clientes corporativos.",
+  "open_gaps": [
+    "Protocolos de respuesta ante filtraciones de contrapartes comerciales involucradas en transacciones de M&A."
+  ],
+  "next_question_ids": [
+    "P10-C14",
+    "P10-C15"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T06:35:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

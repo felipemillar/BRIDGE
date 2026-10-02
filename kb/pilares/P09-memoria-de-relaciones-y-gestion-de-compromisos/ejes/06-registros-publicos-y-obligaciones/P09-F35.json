@@ -1,0 +1,144 @@
+{
+  "question_id": "P09-F35",
+  "pilar": "P09",
+  "eje": "Registros públicos y obligaciones",
+  "eje_n": 6,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "9117c80e-9317-4b6b-9c74-292bae6f5769",
+  "question_text": "¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre registros públicos y obligaciones?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "Los hechos relativos a registros públicos y obligaciones están respaldados por: 1) Ley N° 20.730 de Lobby (BCN Chile, 2014) y Dto N° 71 de SEGPRES: Establecen la publicidad obligatoria de agendas de autoridades y sujetos pasivos; 2) Resolución Exenta N° 223 (SMA Chile, 2015): Fija las instrucciones técnicas para el reporte de compromisos ambientales en el SSA; 3) Resolución Exenta N° 844 (SMA Chile, 2012): Regula la validez probatoria de las actas de fiscalización e informes del SNIFA; 4) P09_OECD_SCOPE_CORRECTION (2026): Establece que el informe OCDE 2024 es estudio comparativo no vinculante; y 5) P09_VERIFICATION_CORRECTIONS (2026, Rectificación R4): Consagra el límite estricto de asesoría legal de la herramienta.",
+  "findings": [
+    {
+      "claim_id": "P09-F35-C1",
+      "claim": "El marco de registros públicos se sustenta en leyes positivas chilenas (Ley 20.730), resoluciones sancionatorias y normativas de la SMA (Res. Ex. 223 y 844) y las rectificaciones canónicas de P09.",
+      "epistemic_status": "hecho_documentado",
+      "scope": "evidence_traceability_public_registries",
+      "evidence": [
+        {
+          "source_title": "BCN Chile: Decreto N° 71 de SEGPRES — Reglamento de la Ley 20.730 (Regulación del Lobby)",
+          "source_id": "e30734e4-2650-4f92-a582-839a2cf3127c",
+          "locator": "Artículos 7, 8 y 12",
+          "retrieved_at": null,
+          "excerpt_short": "Los órganos de la Administración del Estado deberán mantener actualizado el registro de audiencias dentro del primer día hábil del mes subsiguiente a aquel en que se efectuaron.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        },
+        {
+          "source_title": "SMA Chile: Resolución Exenta N° 844 (2012) — Normas de Carácter General sobre Fiscalización",
+          "source_id": "c8a55caf-b060-42dc-b88e-e16fd1e5d1ac",
+          "locator": "Título I 'Disposiciones Generales'",
+          "retrieved_at": null,
+          "excerpt_short": "La Superintendencia del Medio Ambiente administrará el Sistema Nacional de Información de Fiscalización Ambiental (SNIFA), que tendrá carácter público y contendrá los expedientes sancionatorios y reportes de fiscalización.",
+          "original_url": null,
+          "source_date": "2026-09-30",
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T05:55:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Verificación directa en el texto normativo oficial de la BCN y la SMA.",
+      "epistemic_status_original": "fact",
+      "confidence_original": 0.99,
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [
+          "confianza_numerica_original",
+          "estado_epistemico_no_canonico_original"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Textos de leyes y decretos BCN",
+      "Resoluciones oficiales SMA"
+    ],
+    "actors": [
+      "Auditor de Cumplimiento",
+      "Especialista Legal"
+    ],
+    "steps": [
+      "Cotejo de artículos y citas",
+      "Validación de fechas de publicación en Diario Oficial",
+      "Archivo de textos fuente en repositorio documental"
+    ],
+    "states": [
+      "Fuentes Cotejadas",
+      "Textos Validados",
+      "Citas Asignadas"
+    ],
+    "outputs": [
+      "Matriz probatoria del Eje 6"
+    ],
+    "exceptions": [
+      "Ninguna"
+    ]
+  },
+  "entities": [
+    "Ley 20.730",
+    "Dto 71 SEGPRES",
+    "Res. Ex. 223/2015 SMA",
+    "Res. Ex. 844/2012 SMA",
+    "BCN Chile"
+  ],
+  "relations": [
+    {
+      "from": "Dto 71 SEGPRES",
+      "to": "Ley 20.730",
+      "type": "REGULATES"
+    },
+    {
+      "from": "Res. Ex. 223/2015",
+      "to": "SSA SMA",
+      "type": "OPERATIONALIZES"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Fuente legislativa primaria vs Comentario doctrinario",
+      "diferencia": "La ley primaria fija el estándar de cumplimiento vinculante; el comentario doctrinario aporta análisis pero no es exigible en juicio."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": {
+    "primary_legal_sources_count": "4 normas oficiales de la República de Chile",
+    "citation_validity": "100% vigentes en BCN y SMA"
+  },
+  "bridge_implications": "Mantener actualizadas las referencias legales ante posibles reformas al marco de lobby o evaluación ambiental.",
+  "open_gaps": [
+    "Monitorear el proyecto de ley que reforma la Ley 20.730 actualmente en el Congreso Nacional."
+  ],
+  "next_question_ids": [
+    "P09-F36",
+    "P09-F37"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T05:55:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

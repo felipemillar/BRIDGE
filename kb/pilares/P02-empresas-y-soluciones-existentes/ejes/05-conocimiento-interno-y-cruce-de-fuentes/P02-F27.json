@@ -1,0 +1,167 @@
+{
+  "question_id": "P02-F27",
+  "pilar": "P02",
+  "eje": "Conocimiento interno y cruce de fuentes",
+  "eje_n": 5,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "bcdfa78d-8d8a-4fd2-b89b-584d3dbd0440",
+  "question_text": "¿Qué elementos serían complementos técnicos y cuáles sustitutos de una aplicación de asuntos corporativos?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "El análisis documental delimita con nitidez complementos versus sustitutos: 1) Complementos técnicos de alto valor: Glean actúa como motor de Enterprise Search de infraestructura para indexar repositorios no estructurados (evitando que BRIDGE deba programar y mantener 100 conectores SaaS); AlphaSense actúa como proveedor de datos premium para filings SEC, llamadas de analistas y reportes de inversión; Contify actúa como motor de ingesta de inteligencia de competidores; 2) Sustitutos parciales de bajo alcance: Un equipo de comunicaciones que intente usar Glean exclusivamente como sustituto de asuntos corporativos fracasará porque Glean no posee monitoreo de medios broadcast/prensa local en tiempo real (Escuchar), no incluye flujos de aprobación ni repositorios de Q&A oficial de vocerías (Hablar), ni gestiona compromisos comunitarios o Ley de Lobby (Relacionar); 3) Conclusión de arquitectura: Los sistemas de búsqueda interna son componentes de infraestructura especializada (módulo Saber), pero son totalmente incapaces de sustituir una solución integral de inteligencia para asuntos corporativos.",
+  "findings": [
+    {
+      "claim_id": "P02-F27-C1",
+      "claim": "Ninguna plataforma de Enterprise Search o Market Intelligence existente cubre de forma nativa los cuatro módulos (Saber, Escuchar, Hablar, Relacionar), funcionando como complementos de datos y conectividad pero nunca como sustitutos de una aplicación vertical de asuntos corporativos.",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global",
+        "actor": "Ecosistema de Software Corporativo"
+      },
+      "evidence": [
+        {
+          "source_id": "b5217662-c6f0-4529-8282-f5d17339b7fa",
+          "source_title": "P02_GLOBAL_MARKET_MAP_V1",
+          "original_url": null,
+          "locator": "Section 4: Cross-Module Functional Matrix",
+          "excerpt_short": "Enterprise search providers lack PR workflows and stakeholder mapping; PR tools lack internal repository indexing. No single vendor provides the complete 4-module architecture.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:36:00-03:00"
+        },
+        {
+          "source_id": "a09a8342-7518-4a75-acd7-1975273d4982",
+          "source_title": "P02_GLOBAL_COMPETITOR_DEEP_DIVES_V1",
+          "original_url": null,
+          "locator": "Analysis: AlphaSense and Glean boundaries",
+          "excerpt_short": "AlphaSense and Glean do not manage external stakeholder relationships, press office inquiries, or community grievances.",
+          "source_date": "2026",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T01:36:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Evaluación matricial de capacidades funcionales documentadas en el atlas del mercado.",
+      "verificacion": {
+        "estado": "solo_sintesis_interna",
+        "motivos": [
+          "solo_sintesis_interna"
+        ],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Índice corporativo de búsqueda",
+      "Alertas de medios de comunicación",
+      "Registro de audiencias y compromisos"
+    ],
+    "actors": [
+      "Gerente de Asuntos Corporativos",
+      "Jefe de Prensa",
+      "Encargado de Comunidades"
+    ],
+    "steps": [
+      "Consulta de antecedentes internos en complemento (Glean)",
+      "Recepción de alerta mediática externa (Meltwater/Cision)",
+      "Verificación de compromisos con actores (Borealis)",
+      "Emisión de mensaje y vocería oficial (Broadsight)"
+    ],
+    "states": [
+      "Consulta_Iniciada",
+      "Datos_Cruzados",
+      "Respuesta_Elaborada"
+    ],
+    "outputs": [
+      "Decisión comunicacional informada por datos internos y externos"
+    ],
+    "exceptions": [
+      "Uso aislado de herramientas que provoca silos de información entre comunicaciones y asuntos públicos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_GLEAN",
+      "type": "complemento_search",
+      "name": "Glean Technologies Inc.",
+      "aliases": [
+        "Glean"
+      ]
+    },
+    {
+      "entity_id": "ENT_ALPHASENSE",
+      "type": "complemento_data",
+      "name": "AlphaSense Inc.",
+      "aliases": [
+        "AlphaSense"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_GLEAN",
+      "predicate": "clasificado_como_complemento_de",
+      "object_id": "Modulo_Saber",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F27-C1"
+    },
+    {
+      "subject_id": "ENT_ALPHASENSE",
+      "predicate": "clasificado_como_complemento_de",
+      "object_id": "Modulo_Saber",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P02-F27-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Complemento de Búsqueda (Glean) vs Suite Vertical (BRIDGE)",
+      "Complemento de Búsqueda": "Resuelve indexación y búsqueda agnóstica sin conocimiento del negocio de reputación ni vocerías.",
+      "Suite Vertical": "Orquesta el ciclo completo de inteligencia: detección de crisis, contraste con antecedentes internos, vocería y seguimiento de actores."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Saber",
+      "implication": "BRIDGE debe asociarse o integrarse vía API con motores de búsqueda empresarial existentes en lugar de pretender reemplazarlos como motor universal.",
+      "status": "evidencia"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P02-F28",
+    "P02-F29"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": true
+  },
+  "snapshot_at_original": "2026-10-01T01:36:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}

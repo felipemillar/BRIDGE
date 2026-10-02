@@ -1,0 +1,146 @@
+{
+  "question_id": "P04-F43",
+  "pilar": "P04",
+  "eje": "Evaluación de calidad documental",
+  "eje_n": 8,
+  "subeje": null,
+  "tipo": "F",
+  "notebook_id": "cb87941c-2377-42fb-806f-eb9878ac0757",
+  "question_text": "¿Qué métricas muestran completitud, actualidad y recuperabilidad del corpus?",
+  "snapshot_at": null,
+  "answer_status": "respondida",
+  "short_answer": "La calidad y salud operativa del corpus documental corporativo se evalúa mediante un cuadro de mando integral con tres grupos de métricas observables: 1) Completitud del Corpus: Cobertura de Secciones Obligatorias NCG 461 (porcentaje de capítulos requeridos por la CMF efectivamente indexados, objetivo = 100%), Tasa de Tablas Completamente Integradas (porcentaje de tablas sin paridad rota ni notas huérfanas, umbral ≥ 98%) y Densidad de Entidades Ontológicas (nodos y aristas por cada 1.000 tokens); 2) Actualidad y Frescura Temporal: Latencia de Ingesta desde Publicación Oficial (tiempo transcurrido entre el depósito en CMF y la disponibilidad en el índice, umbral < 15 minutos para Hechos Esenciales y < 24 horas para memorias integradas) e Índice de Obsolescencia Resuelta (100% de documentos derogados con aristas `dcterms:replaces` activas); y 3) Recuperabilidad y Eficacia de Búsqueda: Mean Reciprocal Rank (MRR@10 ≥ 0.88), Normalized Discounted Cumulative Gain (NDCG@10 ≥ 0.92) y Context Recall bajo RAGAS (≥ 0.95), garantizando que los fragmentos pertinentes siempre se posicionen en el top del ranking.",
+  "findings": [
+    {
+      "claim_id": "P04-F43-C1",
+      "claim": "El monitoreo de la calidad documental exige métricas cuantitativas que abarquen cobertura regulatoria NCG 461, latencia de ingesta de hechos esenciales y recuperabilidad IR estándar (MRR@10 y NDCG@10).",
+      "epistemic_status": "hecho_documentado",
+      "scope": {
+        "time": "2026",
+        "region": "Global / Chile",
+        "actor": "Auditoría de Sistemas de Información"
+      },
+      "evidence": [
+        {
+          "source_id": "878711bf-fc7d-4332-beb7-c0d3bf31fa18",
+          "source_title": "P04_RESEARCH_DOSSIER",
+          "original_url": null,
+          "locator": "Sección 5: Protocolo de Calificación Continua (Benchmark Suite)",
+          "excerpt_short": "Evaluación de Dos Pasos: Paso 1 (Recuperación): MRR@10 y NDCG@10 sobre fragmentos y subgrafos; Paso 2 (Generación): RAGAS y FActScore.",
+          "source_date": "2026-09-30",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": true,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        },
+        {
+          "source_id": "13da7720-4e15-423b-90d3-10a0c94ee387",
+          "source_title": "RAGAS: Automated Evaluation of Retrieval Augmented Generation (Es et al., 2023)",
+          "original_url": "https://arxiv.org/abs/2309.15217",
+          "locator": "Sección 3: Metrics: Context Recall and Context Precision",
+          "excerpt_short": "Measures the extent to which the retrieval engine fetches all the necessary context required to formulate the complete answer.",
+          "source_date": "2023-09-27",
+          "retrieved_at": null,
+          "text_status": "texto_sustantivo",
+          "relationship": "apoya",
+          "cita_sintetica": false,
+          "fuente_es_sintesis_interna": false,
+          "retrieved_at_original": "2026-10-01T02:50:00-03:00"
+        }
+      ],
+      "confidence": "alta",
+      "confidence_reason": "Métricas formales de Information Retrieval y benchmark RAGAS en dossier P04.",
+      "verificacion": {
+        "estado": "no_verificada",
+        "motivos": [],
+        "verificado_por": null,
+        "fecha": null,
+        "metodo": null,
+        "pasaje": null
+      }
+    }
+  ],
+  "operational_model": {
+    "inputs": [
+      "Corpus corporativo indexado",
+      "Registro de eventos regulatorios de la CMF"
+    ],
+    "actors": [
+      "Corpus Health Monitor",
+      "Retrieval Benchmark Runner",
+      "Dashboard Logger"
+    ],
+    "steps": [
+      "Verificación periódica de integridad de tablas",
+      "Cálculo de latencia de nuevos depósitos CMF",
+      "Ejecución de suite MRR@10"
+    ],
+    "states": [
+      "Monitoring",
+      "Auditing_Metrics",
+      "Healthy_Corpus_Certified"
+    ],
+    "outputs": [
+      "Panel de telemetría de completitud, actualidad y recuperabilidad"
+    ],
+    "exceptions": [
+      "Caída en la tasa de recuperabilidad tras ingesta masiva de PDFs complejos"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "ENT_CORPUS_HEALTH_METRICS",
+      "type": "marco_evaluacion",
+      "name": "Métricas de Salud y Calidad del Corpus Corporativo",
+      "aliases": [
+        "Corpus Quality Dashboard"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject_id": "ENT_CORPUS_HEALTH_METRICS",
+      "predicate": "monitorea_corpus_en",
+      "object_id": "BRIDGE_Modulo_Memoria",
+      "valid_from": "2026",
+      "valid_to": null,
+      "evidence_claim_id": "P04-F43-C1"
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "Control de calidad del corpus",
+      "Monitoreo intuitivo subjetivo": "Se asume que la base está completa hasta que un directivo no encuentra un hecho esencial.",
+      "Cuadro de mando métrico continuo": "Alertas automáticas en caso de retardo en la ingesta o caída en el NDCG@10."
+    }
+  ],
+  "contradictions": [],
+  "metrics_and_denominators": [],
+  "bridge_implications": [
+    {
+      "module": "Memoria",
+      "implication": "BRIDGE debe integrar estas métricas en su panel de administración técnica para alertar sobre degradaciones en la cobertura documental.",
+      "status": "hipotesis"
+    }
+  ],
+  "open_gaps": [],
+  "next_question_ids": [
+    "P04-F44"
+  ],
+  "quality": {
+    "original_citations_resolved": false,
+    "correction_precedence_checked": null,
+    "duplicate_sources_counted_once": null,
+    "human_review_needed": false
+  },
+  "snapshot_at_original": "2026-10-01T02:50:00-03:00",
+  "snapshot_nota": "Valor original sobrescrito el 2026-10-01 por scripts/normalize_status_and_timestamps.py con una constante por pilar; no proviene de un registro del conector.",
+  "quality_original": {
+    "original_citations_resolved": true,
+    "correction_precedence_checked": true,
+    "duplicate_sources_counted_once": true,
+    "human_review_needed": false
+  }
+}
