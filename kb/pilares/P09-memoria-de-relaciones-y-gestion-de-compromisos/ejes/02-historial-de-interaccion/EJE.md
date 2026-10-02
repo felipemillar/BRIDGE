@@ -54,6 +54,6 @@
 
 > Caso Concreto Documentado: 'Reunión Informativa y Audiencia de Diálogo con la Junta de Vecinos N° 4 El Melocotón y Visita del Delegado Municipal de San José de Maipo'. Entradas: 1) Fecha: 12 de noviembre de 2025, 15:00 a 16:45 h; 2) Asistentes Externos: Rosa Morales (Presidenta JJVV N° 4) y Pedro Va
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P09-F12.json](P09-F12.json)
 
