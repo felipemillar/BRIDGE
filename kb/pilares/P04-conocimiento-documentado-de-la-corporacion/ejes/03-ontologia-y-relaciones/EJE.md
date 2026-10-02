@@ -48,7 +48,7 @@
 
 > Los fundamentos sobre ontología y relaciones corporativas descansan en cuatro fuentes primarias del corpus: 1) EDM Council Financial Industry Business Ontology (FIBO, edición marzo 2024), módulos Corporate Governance y Business Entities, que tipifican personas jurídicas, filiales y titularidad forma
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P04-F17.json](P04-F17.json)
 ### P04-F18: ¿Qué caso concreto, con entradas y resultado esperado, ilustra ontología y relaciones sin introducir datos no documentados?
 

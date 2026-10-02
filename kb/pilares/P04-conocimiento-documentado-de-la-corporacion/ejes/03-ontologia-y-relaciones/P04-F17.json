@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Verificación cruzada de fuentes estándar internacionales en el corpus P04.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://spec.edmcouncil.org/fibo/",
+        "sha256_texto": "043c59ca0635c1d907053178738633929c7763e67f3825e13da5a2dcf20e860a",
+        "pasaje": "Ontological modeling of corporate ownership, control structures, and legal entities in financial ecosystems.",
+        "motivos": []
       }
     }
   ],
