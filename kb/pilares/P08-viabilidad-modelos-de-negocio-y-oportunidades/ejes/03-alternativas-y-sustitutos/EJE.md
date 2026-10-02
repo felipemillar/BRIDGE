@@ -48,7 +48,7 @@
 
 > Los hechos de este eje se respaldan en cinco fuentes documentadas del corpus: 1) 00_P02_GLOBAL_READ_ME_AND_ERRATA (2026), que establece la regla canónica de precedencia sobre los 70 vendors y sus claims comerciales; 2) Quorum vs FiscalNote 2026 Platform Comparison, que documenta la estructura de pre
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P08-F17.json](P08-F17.json)
 ### P08-F18: ¿Qué caso concreto, con entradas y resultado esperado, ilustra alternativas y sustitutos sin introducir datos no documentados?
 

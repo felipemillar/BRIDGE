@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.95,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.quorum.us/blog/quorum-vs-fiscalnote/",
+        "sha256_texto": "ad915b55e6a1a8264dcc84c21259151f87bd59e6ca7a8a77d9b754e011cc93a1",
+        "pasaje": "Both Quorum and FiscalNote dominate North American legislative and grassroots tracking, but their expansion into Latin American jurisdictions remains hampered by reliance on third-party scrapers and lack of localized regulatory ontologies.",
+        "motivos": []
       }
     }
   ],
