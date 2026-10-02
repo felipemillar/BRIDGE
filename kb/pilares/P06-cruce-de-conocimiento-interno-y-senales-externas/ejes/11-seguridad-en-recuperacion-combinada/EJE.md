@@ -36,7 +36,7 @@
 
 > La seguridad en recuperación combinada se sustenta en las siguientes fuentes verificadas del corpus: 1) Palantir Technologies (2024; 'Palantir AIP: Architecture Overview & Context Engineering', Junio 2024): Documentación oficial de arquitectura industrial, Secciones sobre Context Engineering, Granul
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P06-X21.json](P06-X21.json)
 ### P06-X22: ¿Qué caso concreto, con entradas y resultado esperado, ilustra seguridad en recuperación combinada sin introducir datos no documentados?
 
