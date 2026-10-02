@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.95,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://cloud.google.com/vertex-ai/docs/generative-ai/data-governance",
+        "sha256_texto": "e07ff3c21fef9dfeaf299299a63a71f8eb7cee828829eedfffedfe64dee8aa64",
+        "pasaje": "Customer inputs, prompts, and completions are strictly isolated. Data processed through enterprise endpoints is not used to train or fine-tune foundational models, enabling compliant human-in-the-loop application design.",
+        "motivos": []
       }
     }
   ],

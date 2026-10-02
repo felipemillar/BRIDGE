@@ -48,7 +48,7 @@
 
 > Los hechos sobre modelos de entrega se fundamentan en cinco fuentes principales del corpus: 1) Arthur W. Page Society ('Beyond Communication', 2024-2026), que conceptualiza los servicios apoyados por tecnología y la nueva relación de confianza con el CCO; 2) PRSA Guidance on AI & Ethics (2024-2026),
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P08-F23.json](P08-F23.json)
 ### P08-F24: ¿Qué caso concreto, con entradas y resultado esperado, ilustra modelos de entrega sin introducir datos no documentados?
 
