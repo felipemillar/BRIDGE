@@ -127,7 +127,7 @@ def generate_p02_synthesis():
         source_title = findings[0]["evidence"][0].get("source_title", "Manifiesto P02") if (findings and findings[0].get("evidence")) else "P02 Sources"
         ev_level = r.get("evidence_level", "DTI")
         
-        md.append(f"| [{qid}](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/respuestas/P02.jsonl) | {qtype} | {axis} | {status} | {claim_short} | {source_title} | {ev_level} |\n")
+        md.append(f"| [{qid}](respuestas/P02.jsonl) | {qtype} | {axis} | {status} | {claim_short} | {source_title} | {ev_level} |\n")
         
     md_content = "".join(md)
     out_file = Path("sintesis/P02.md")

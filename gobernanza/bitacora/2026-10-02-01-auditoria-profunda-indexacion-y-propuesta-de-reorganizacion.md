@@ -2,7 +2,7 @@
 **Objetivo:** Auditar de forma independiente el estado real del repositorio tras el cierre reconciliado, generar un índice navegable de todo el contenido y proponer una estructura que permita a agentes de cualquier modelo consumir la base de forma eficiente.
 
 ### ✅ Cambios Realizados:
-- Creada la carpeta [`auditoria/`](auditoria/) con [`INFORME_AUDITORIA.md`](auditoria/INFORME_AUDITORIA.md), [`INDICE.md`](auditoria/INDICE.md), [`PROPUESTA_REORGANIZACION.md`](auditoria/PROPUESTA_REORGANIZACION.md) y el generador reproducible [`construir_indice.py`](auditoria/construir_indice.py).
+- Creada la carpeta [`auditoria/`](../../auditoria) con [`INFORME_AUDITORIA.md`](../../auditoria/INFORME_AUDITORIA.md), [`INDICE.md`](../../auditoria/INDICE.md), [`PROPUESTA_REORGANIZACION.md`](../../auditoria/PROPUESTA_REORGANIZACION.md) y el generador reproducible [`construir_indice.py`](../../auditoria/construir_indice.py).
 - Generados `indice_preguntas.jsonl` (864 filas con archivo, línea, eje y banderas de calidad), `indice_fuentes.jsonl` (551 fuentes con sus citas) y `resumen_indice.json`.
 - No se modificó ningún dato existente.
 

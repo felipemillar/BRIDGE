@@ -2,10 +2,10 @@
 **Objetivo:** Configurar el repositorio local, definir estándares operativos, reglas de comportamiento del agente y preparar la estructura base para respaldo continuo en GitHub.
 
 ### ✅ Cambios Realizados:
-- **Control de Versiones**: Se inicializó el repositorio Git con rama principal `main` y exclusiones completas en [`.gitignore`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/.gitignore).
-- **Directrices de Agente**: Se configuró [`.agents/AGENTS.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/.agents/AGENTS.md) con las reglas locales de desarrollo, enmascaramiento de errores, seguridad de credenciales y flujo de registro en bitácora.
-- **Documentación Base**: Se creó [`README.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/README.md) con la estructura general y convenciones del proyecto.
-- **Registro de Bitácora**: Se inicializó [`BITACORA.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/BITACORA.md) como fuente de verdad para el seguimiento de sesiones.
+- **Control de Versiones**: Se inicializó el repositorio Git con rama principal `main` y exclusiones completas en [`.gitignore`](../../.gitignore).
+- **Directrices de Agente**: Se configuró [`.agents/AGENTS.md`](../../.agents/AGENTS.md) con las reglas locales de desarrollo, enmascaramiento de errores, seguridad de credenciales y flujo de registro en bitácora.
+- **Documentación Base**: Se creó [`README.md`](../../README.md) con la estructura general y convenciones del proyecto.
+- **Registro de Bitácora**: Se inicializó [`BITACORA.md`](.) como fuente de verdad para el seguimiento de sesiones.
 
 ### 🧠 Decisiones y Notas de Diseño:
 - Se adoptó la convención Conventional Commits para mantener un historial limpio y estructurado en GitHub.

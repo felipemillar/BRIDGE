@@ -305,6 +305,23 @@ def convertir_enlaces() -> None:
 
                 # Resolver respecto a doc_dir
                 target_abs = (doc_dir / dest_path).resolve()
+                if not target_abs.exists():
+                    # Intento 1: ¿era una ruta relativa a la raíz del repositorio?
+                    if (r / dest_path).exists():
+                        nueva_rel = os.path.relpath(r / dest_path, doc_dir)
+                        modificado = True
+                        return f"[{texto}]({nueva_rel}{ancla_str})"
+                    # Intento 2: ¿está en mapa_rutas directamente o por nombre de archivo?
+                    for orig_k, dest_k in mapa_rutas.items():
+                        if dest_path == orig_k or dest_path.endswith("/" + orig_k) or Path(dest_path).name == Path(orig_k).name:
+                            nueva_rel = os.path.relpath(r / dest_k, doc_dir)
+                            modificado = True
+                            return f"[{texto}]({nueva_rel}{ancla_str})"
+                    # Intento 3: ¿era un script retirado?
+                    if "scripts/" in dest_path:
+                        modificado = True
+                        return f"{texto} (retirado; ver tag pre-migracion)"
+
                 try:
                     rel_to_r = os.path.relpath(target_abs, r)
                 except ValueError:
@@ -319,6 +336,7 @@ def convertir_enlaces() -> None:
                     return f"{texto} (retirado; ver tag pre-migracion)"
 
                 return match.group(0)
+
 
             patron_rel = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
             nuevo_contenido = patron_rel.sub(repl_rel, nuevo_contenido)

@@ -19,7 +19,7 @@ Bienvenido al espacio de trabajo **BRIDGE**. Este archivo define los lineamiento
   - Jamás commitear claves de API, tokens privados ni archivos `.env`.
   - Utilizar `.env.example` para documentar variables de entorno requeridas.
 - **Trazabilidad de Archivos**:
-  - Al citar archivos o rutas, utilizar siempre enlaces en formato markdown con esquema `file://` (ej. `[archivo](file:///ruta/al/archivo)`).
+  - Al citar archivos o rutas, utilizar siempre enlaces relativos en formato markdown (ej. [mandato](../kb/canon/mandato.md)).
 
 ---
 

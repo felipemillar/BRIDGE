@@ -46,18 +46,18 @@
 ### 3. Manifiestos de Fuentes Reales por Cuaderno
 | Cuaderno | Manifiesto JSON | Fuentes Totales | Sustantivas | Parciales / Fallidas | Precedencia Canónica Rectora |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **P01** | [`fuentes/P01.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P01.json) | 39 | 32 | 7 | Precedencia canónica... |
-| **P02** | [`fuentes/P02.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P02.json) | 80 | 74 | 6 | 00_P02_GLOBAL_READ_ME_AND_ERRATA takes absolute precedence o... |
-| **P03** | [`fuentes/P03.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P03.json) | 33 | 32 | 1 | P03_QUALITY_ADDENDUM and P03_EVIDENCE_MAP take precedence ov... |
-| **P04** | [`fuentes/P04.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P04.json) | 34 | 30 | 4 | P04_EVIDENCE_MAP and P04_RESEARCH_DOSSIER govern corporate d... |
-| **P05** | [`fuentes/P05.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P05.json) | 36 | 35 | 1 | P05_EVIDENCE_MAP, P05_QUALITY_ADDENDUM and P05_RESEARCH_DOSS... |
-| **P06** | [`fuentes/P06.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P06.json) | 38 | 38 | 0 | P06_EVIDENCE_MAP, P06_QUALITY_ADDENDUM and P06_RESEARCH_DOSS... |
-| **P07** | [`fuentes/P07.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P07.json) | 39 | 35 | 4 | P07_EVIDENCE_MAP, P07_RESEARCH_DOSSIER, P07_GAPS_AND_VALIDAT... |
-| **P08** | [`fuentes/P08.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P08.json) | 40 | 34 | 6 | P08_EVIDENCE_MAP, P08_QUALITY_ADDENDUM, P08_RESEARCH_DOSSIER... |
-| **P09** | [`fuentes/P09.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P09.json) | 45 | 36 | 9 | En P09, P09_VERIFICATION_CORRECTIONS y P09_OECD_SCOPE_CORREC... |
-| **P10** | [`fuentes/P10.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P10.json) | 41 | 38 | 3 | P10_VERIFICATION_CORRECTIONS (f043631e) prevalece sobre P10_... |
-| **P11** | [`fuentes/P11.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/P11.json) | 51 | 48 | 3 | P11_VERIFICATION_CORRECTIONS (49d7882a) y P11_2026_LAW_AND_P... |
-| **T01** | [`fuentes/T01.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/T01.json) | 75 | 61 | 14 | T01_VERIFICATION_CORRECTIONS (f5a15f9d) ejerce prevalencia c... |
+| **P01** | [`fuentes/P01.json`](../../kb/pilares/P01-asuntos-corporativos-y-sus-usuarios/pilar.json) | 39 | 32 | 7 | Precedencia canónica... |
+| **P02** | [`fuentes/P02.json`](../../kb/pilares/P02-empresas-y-soluciones-existentes/pilar.json) | 80 | 74 | 6 | 00_P02_GLOBAL_READ_ME_AND_ERRATA takes absolute precedence o... |
+| **P03** | [`fuentes/P03.json`](../../kb/pilares/P03-monitoreo-del-entorno-y-acceso-a-fuentes/pilar.json) | 33 | 32 | 1 | P03_QUALITY_ADDENDUM and P03_EVIDENCE_MAP take precedence ov... |
+| **P04** | [`fuentes/P04.json`](../../kb/pilares/P04-conocimiento-documentado-de-la-corporacion/pilar.json) | 34 | 30 | 4 | P04_EVIDENCE_MAP and P04_RESEARCH_DOSSIER govern corporate d... |
+| **P05** | [`fuentes/P05.json`](../../kb/pilares/P05-reputacion-narrativas-y-actores/pilar.json) | 36 | 35 | 1 | P05_EVIDENCE_MAP, P05_QUALITY_ADDENDUM and P05_RESEARCH_DOSS... |
+| **P06** | [`fuentes/P06.json`](../../kb/pilares/P06-cruce-de-conocimiento-interno-y-senales-externas/pilar.json) | 38 | 38 | 0 | P06_EVIDENCE_MAP, P06_QUALITY_ADDENDUM and P06_RESEARCH_DOSS... |
+| **P07** | [`fuentes/P07.json`](../../kb/pilares/P07-preparacion-ejecutiva-y-apoyo-estrategico/pilar.json) | 39 | 35 | 4 | P07_EVIDENCE_MAP, P07_RESEARCH_DOSSIER, P07_GAPS_AND_VALIDAT... |
+| **P08** | [`fuentes/P08.json`](../../kb/pilares/P08-viabilidad-modelos-de-negocio-y-oportunidades/pilar.json) | 40 | 34 | 6 | P08_EVIDENCE_MAP, P08_QUALITY_ADDENDUM, P08_RESEARCH_DOSSIER... |
+| **P09** | [`fuentes/P09.json`](../../kb/pilares/P09-memoria-de-relaciones-y-gestion-de-compromisos/pilar.json) | 45 | 36 | 9 | En P09, P09_VERIFICATION_CORRECTIONS y P09_OECD_SCOPE_CORREC... |
+| **P10** | [`fuentes/P10.json`](../../kb/pilares/P10-gestion-y-aprobacion-de-la-comunicacion-corporativa/pilar.json) | 41 | 38 | 3 | P10_VERIFICATION_CORRECTIONS (f043631e) prevalece sobre P10_... |
+| **P11** | [`fuentes/P11.json`](../../kb/pilares/P11-gobernanza-de-informacion-y-operacion-entre-clientes/pilar.json) | 51 | 48 | 3 | P11_VERIFICATION_CORRECTIONS (49d7882a) y P11_2026_LAW_AND_P... |
+| **T01** | [`fuentes/T01.json`](../../kb/pilares/T01-evaluacion-y-pilotos/pilar.json) | 75 | 61 | 14 | T01_VERIFICATION_CORRECTIONS (f5a15f9d) ejerce prevalencia c... |
 | **TOTAL** | — | **551 fuentes** | — | — | Suma exacta verificada en archivos fuente |
 
 ---
@@ -94,13 +94,13 @@
 ---
 
 ### 6. Enlaces Canónicos a Archivos del Repositorio
-- **Índice Global y Síntesis Transversal:** [`indice_global.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/indice_global.md)
-- **Matriz de Cobertura Completa (864 IDs):** [`matriz_cobertura.csv`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/matriz_cobertura.csv)
-- **Telemetría de Ejecución:** [`ejecucion.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/ejecucion.json)
-- **Base de Entidades Deduplicadas:** [`entidades.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/entidades.jsonl)
-- **Grafo de Relaciones:** [`relaciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/relaciones.jsonl)
-- **Inventario de Contradicciones:** [`contradicciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/contradicciones.jsonl)
-- **Bitácora de Desarrollo:** [`BITACORA.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/BITACORA.md)
+- **Índice Global y Síntesis Transversal:** [`indice_global.md`](../../kb/transversal/SINTESIS_LEGADO.md)
+- **Matriz de Cobertura Completa (864 IDs):** [`matriz_cobertura.csv`](matriz_cobertura.csv)
+- **Telemetría de Ejecución:** [`ejecucion.json`](ejecucion.json)
+- **Base de Entidades Deduplicadas:** [`entidades.jsonl`](../../kb/grafo/entidades.jsonl)
+- **Grafo de Relaciones:** [`relaciones.jsonl`](../../kb/grafo/relaciones.jsonl)
+- **Inventario de Contradicciones:** [`contradicciones.jsonl`](../../kb/grafo/contradicciones.jsonl)
+- **Bitácora de Desarrollo:** [`BITACORA.md`](../bitacora)
 
 ---
 

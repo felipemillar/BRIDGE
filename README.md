@@ -16,9 +16,9 @@ El programa consolida la base de conocimiento empírica, técnica y legal sobre 
 | **Universo de Fuentes** | 551 fuentes verificadas en los 12 manifiestos |
 | **Evidencia Científica** | 11 PDFs de texto completo ArXiv incorporados (300k+ tokens científicos) |
 | **Auditoría de Calidad** | Dictamen independiente y hallazgos detallados en [INFORME_AUDITORIA.md](auditoria/INFORME_AUDITORIA.md) |
-| **Entidades Deduplicadas** | 1.528 entidades en [`entidades.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/entidades.jsonl) |
-| **Grafo de Relaciones** | 477 relaciones dirigidas en [`relaciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/relaciones.jsonl) |
-| **Contradicciones Reconciliadas** | 93 discrepancias catalogadas en [`contradicciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/contradicciones.jsonl) |
+| **Entidades Deduplicadas** | 1.528 entidades en [`entidades.jsonl`](kb/grafo/entidades.jsonl) |
+| **Grafo de Relaciones** | 477 relaciones dirigidas en [`relaciones.jsonl`](kb/grafo/relaciones.jsonl) |
+| **Contradicciones Reconciliadas** | 93 discrepancias catalogadas en [`contradicciones.jsonl`](kb/grafo/contradicciones.jsonl) |
 
 > **Aviso de Auditoría:** Para el dictamen independiente sobre el estado del corpus y sus banderas de calidad, consulte [INFORME_AUDITORIA.md](auditoria/INFORME_AUDITORIA.md).
 
@@ -58,11 +58,11 @@ BRIDGE/
 
 ## 🧭 Documentos Clave de Consulta
 
-- 📄 **[Índice Global y Síntesis Transversal](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/indice_global.md)**: Visión global de los 12 cuadernos y respuesta a las 6 preguntas estratégicas del mandato.
-- 📋 **[Registro Formal de Cierre](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/REGISTRO_DE_CIERRE.md)**: Acta de cierre del programa según Sección 6 del mandato (cuentas, manifiestos, estados, cambios de corpus y certificación).
-- 📊 **[Matriz de Cobertura Completa (864 IDs)](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/matriz_cobertura.csv)**: Tabla exhaustiva con IDs, textos exactos, estado de respuesta, confianza y citas.
-- ⚙️ **[Telemetría de Ejecución JSON](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/ejecucion.json)**: Estadísticas consolidadas de ejecución y distribución de respuestas.
-- 📝 **[Bitácora de Desarrollo](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/BITACORA.md)**: Historial detallado de todas las sesiones de trabajo del proyecto.
+- 📄 **[Índice Global y Síntesis Transversal](kb/transversal/SINTESIS_LEGADO.md)**: Visión global de los 12 cuadernos y respuesta a las 6 preguntas estratégicas del mandato.
+- 📋 **[Registro Formal de Cierre](gobernanza/cierre/REGISTRO_DE_CIERRE.md)**: Acta de cierre del programa según Sección 6 del mandato (cuentas, manifiestos, estados, cambios de corpus y certificación).
+- 📊 **[Matriz de Cobertura Completa (864 IDs)](gobernanza/cierre/matriz_cobertura.csv)**: Tabla exhaustiva con IDs, textos exactos, estado de respuesta, confianza y citas.
+- ⚙️ **[Telemetría de Ejecución JSON](gobernanza/cierre/ejecucion.json)**: Estadísticas consolidadas de ejecución y distribución de respuestas.
+- 📝 **[Bitácora de Desarrollo](gobernanza/bitacora)**: Historial detallado de todas las sesiones de trabajo del proyecto.
 
 ---
 

@@ -367,7 +367,7 @@ def build_registro_cierre_md(manifest_info, pillar_stats, status_counts, all_con
     md.append("| Cuaderno | Manifiesto JSON | Fuentes Totales | Sustantivas | Parciales / Fallidas | Precedencia Canónica Rectora |")
     md.append("| :--- | :--- | :---: | :---: | :---: | :--- |")
     for p_id, m_info in manifest_info.items():
-        md.append(f"| **{p_id}** | [`fuentes/{p_id}.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/{p_id}.json) | {m_info['total_sources']} | {m_info['substantive_count']} | {m_info['partial_count']} | {m_info['precedence_rule'][:60]}... |")
+        md.append(f"| **{p_id}** | [`fuentes/{p_id}.json`](fuentes/{p_id}.json) | {m_info['total_sources']} | {m_info['substantive_count']} | {m_info['partial_count']} | {m_info['precedence_rule'][:60]}... |")
     md.append(f"| **TOTAL** | — | **{total_sources_count} fuentes** | — | — | Suma exacta verificada en archivos fuente |")
     md.append("\n---\n")
 
@@ -401,13 +401,13 @@ def build_registro_cierre_md(manifest_info, pillar_stats, status_counts, all_con
     md.append("\n---\n")
 
     md.append("### 6. Enlaces Canónicos a Archivos del Repositorio")
-    md.append("- **Índice Global y Síntesis Transversal:** [`indice_global.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/indice_global.md)")
-    md.append("- **Matriz de Cobertura Completa (864 IDs):** [`matriz_cobertura.csv`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/matriz_cobertura.csv)")
-    md.append("- **Telemetría de Ejecución:** [`ejecucion.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/ejecucion.json)")
-    md.append("- **Base de Entidades Deduplicadas:** [`entidades.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/entidades.jsonl)")
-    md.append("- **Grafo de Relaciones:** [`relaciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/relaciones.jsonl)")
-    md.append("- **Inventario de Contradicciones:** [`contradicciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/contradicciones.jsonl)")
-    md.append("- **Bitácora de Desarrollo:** [`BITACORA.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/BITACORA.md)")
+    md.append("- **Índice Global y Síntesis Transversal:** [`indice_global.md`](indice_global.md)")
+    md.append("- **Matriz de Cobertura Completa (864 IDs):** [`matriz_cobertura.csv`](matriz_cobertura.csv)")
+    md.append("- **Telemetría de Ejecución:** [`ejecucion.json`](ejecucion.json)")
+    md.append("- **Base de Entidades Deduplicadas:** [`entidades.jsonl`](entidades.jsonl)")
+    md.append("- **Grafo de Relaciones:** [`relaciones.jsonl`](relaciones.jsonl)")
+    md.append("- **Inventario de Contradicciones:** [`contradicciones.jsonl`](contradicciones.jsonl)")
+    md.append("- **Bitácora de Desarrollo:** [`BITACORA.md`](BITACORA.md)")
     md.append("\n---\n")
     md.append("### 7. Dictamen de Cierre Reconciliado")
     md.append("El programa de investigación sobre los 12 cuadernos canónicos queda **formalmente reconciliado, verificado por auditoría automatizada estricta y documentado con trazabilidad plena**. Se distinguen con rigor los hechos comprobados de las hipótesis de diseño y se mantienen explícitos los vacíos empíricos abiertos que requieren validación de campo antes de su explotación comercial.\n")
@@ -444,7 +444,7 @@ def build_indice_global_md(manifest_info, pillar_stats, status_counts, total_sou
     md.append("| :--- | :--- | :---: | :---: | :--- | :--- | :--- |")
     for p_id, p_info in pillar_stats.items():
         m_info = manifest_info[p_id]
-        md.append(f"| **{p_id}** | {p_info['title']} | **{p_info['total_records']} IDs** ({p_info['f_count']}F + {p_info['c_count']}C + {p_info['x_count']}X) | {m_info['total_sources']} fuentes | [`fuentes/{p_id}.json`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/fuentes/{p_id}.json) | [`respuestas/{p_id}.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/respuestas/{p_id}.jsonl) | [`sintesis/{p_id}.md`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/sintesis/{p_id}.md) |")
+        md.append(f"| **{p_id}** | {p_info['title']} | **{p_info['total_records']} IDs** ({p_info['f_count']}F + {p_info['c_count']}C + {p_info['x_count']}X) | {m_info['total_sources']} fuentes | [`fuentes/{p_id}.json`](fuentes/{p_id}.json) | [`respuestas/{p_id}.jsonl`](respuestas/{p_id}.jsonl) | [`sintesis/{p_id}.md`](sintesis/{p_id}.md) |")
     md.append(f"| **TOTAL** | **12 Cuadernos Canónicos** | **864 IDs (100% Procesadas)** | **{total_sources_count} fuentes** | — | — | — |")
     md.append("\n---\n")
 
@@ -497,13 +497,13 @@ def build_indice_global_md(manifest_info, pillar_stats, status_counts, total_sou
     md.append("\n---\n")
 
     md.append("## 3. Inventario y Acceso a los Entregables Globales")
-    md.append("- [Registro de Cierre Formal y Reconciliado](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/REGISTRO_DE_CIERRE.md)")
-    md.append("- [Matriz de Cobertura Completa CSV (864 IDs)](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/matriz_cobertura.csv)")
-    md.append("- [Telemetría Global de Ejecución JSON](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/ejecucion.json)")
-    md.append("- [Catálogo Consolidado de Entidades JSONL](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/entidades.jsonl)")
-    md.append("- [Grafo Consolidado de Relaciones JSONL](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/relaciones.jsonl)")
-    md.append("- [Inventario Consolidado de Contradicciones JSONL](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/contradicciones.jsonl)")
-    md.append("- [Bitácora de Desarrollo del Repositorio](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/BITACORA.md)")
+    md.append("- [Registro de Cierre Formal y Reconciliado](REGISTRO_DE_CIERRE.md)")
+    md.append("- [Matriz de Cobertura Completa CSV (864 IDs)](matriz_cobertura.csv)")
+    md.append("- [Telemetría Global de Ejecución JSON](ejecucion.json)")
+    md.append("- [Catálogo Consolidado de Entidades JSONL](entidades.jsonl)")
+    md.append("- [Grafo Consolidado de Relaciones JSONL](relaciones.jsonl)")
+    md.append("- [Inventario Consolidado de Contradicciones JSONL](contradicciones.jsonl)")
+    md.append("- [Bitácora de Desarrollo del Repositorio](BITACORA.md)")
     md.append("\n---\n")
 
     with open("indice_global.md", "w", encoding="utf-8") as f:

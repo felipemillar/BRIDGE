@@ -1,7 +1,7 @@
 # Auditoría preliminar del cierre de investigación de Antigravity
 
 **Fecha:** 1 de octubre de 2026.  
-**Corpus examinado:** repositorio local `/Users/fmillar/Proyectos_Desarrollo/BRIDGE`, informe de cierre pegado por el usuario y [mandato original](mandato-antigravity-investigacion-asuntos-corporativos.md).  
+**Corpus examinado:** repositorio local `/Users/fmillar/Proyectos_Desarrollo/BRIDGE`, informe de cierre pegado por el usuario y [mandato original](../../kb/canon/mandato.md).  
 **Alcance de esta revisión:** controles independientes de integridad, concordancia con el mandato y una comprobación puntual de procedencia empírica. No es una auditoría exhaustiva de las 864 respuestas ni una nueva consulta a NotebookLM.
 
 ## Dictamen
