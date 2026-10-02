@@ -48,7 +48,7 @@
 
 > Los hechos normativos y metodológicos relativos a la verificación fáctica están respaldados por: 1) Cornell LII: 17 CFR § 240.10b-5 (SEC Rule 10b-5, fuente sustantiva comprobada en sustitución de eCFR): Prohíbe formalmente hacer cualquier declaración falsa sobre hechos materiales o incurrir en omisi
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P10-F11.json](P10-F11.json)
 ### P10-F12: ¿Qué caso concreto, con entradas y resultado esperado, ilustra verificación de hechos y cifras sin introducir datos no documentados?
 
