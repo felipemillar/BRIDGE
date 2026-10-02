@@ -48,7 +48,7 @@
 
 > Los hechos están respaldados por el informe censal Dircom ECE 2025 (25-sep-2025; reporte al CEO), el Global Capability Framework (2021; 11 capacidades), la Ley N° 20.730 de Lobby de Chile (texto actualizado a abr-2026), la NCG 461 de la CMF (nov-2021/nov-2025), el informe McKinsey 2025 (08-oct-2025)
 
-- **Verificación:** no_verificada: 4
+- **Verificación:** no_verificada: 3, verificada: 1
 - **Registro:** [P01-F05.json](P01-F05.json)
 ### P01-F06: ¿Qué caso concreto, con entradas y resultado esperado, ilustra mandato y fronteras de asuntos corporativos sin introducir datos no documentados?
 

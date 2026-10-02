@@ -147,12 +147,18 @@
       "confidence": "alta",
       "confidence_reason": "Publicación insignia de McKinsey & Company.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.mckinsey.com/capabilities/geopolitics/our-insights/upgrading-corporate-affairs-for-a-new-geopolitical-era",
+        "sha256_texto": "eda3cd7c8ff6e0e3854722fb4723c0e5e9784d68d3b3b7755ca18ead83aae390",
+        "pasaje": "Teams can use gen AI to create briefings combining external insight with internal policy positions... teams need to supplement it with direct knowledge only humans can provide.",
+        "motivos": []
       }
     }
   ],
