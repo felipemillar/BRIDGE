@@ -1,0 +1,1804 @@
+{
+  "IFC World Bank": [
+    "conservado",
+    "org:ifc-world-bank",
+    "organizacion",
+    "Corporación Financiera Internacional del Banco Mundial (IFC)",
+    [
+      "IFC",
+      "World Bank Group"
+    ],
+    null
+  ],
+  "Comunidad Diaguita Huasco Alto": [
+    "conservado",
+    "org:comunidad-diaguita-huasco-alto",
+    "organizacion",
+    "Comunidad Indígena Diaguita de los Huascoaltinos",
+    [
+      "Comunidad Huascoaltinos"
+    ],
+    null
+  ],
+  "SEA Atacama": [
+    "fusionado",
+    "org:sea",
+    "organizacion",
+    "Servicio de Evaluación Ambiental (SEA)",
+    [
+      "SEA Atacama"
+    ],
+    "variante_territorial"
+  ],
+  "SEA Chile": [
+    "fusionado",
+    "org:sea",
+    "organizacion",
+    "Servicio de Evaluación Ambiental (SEA)",
+    [
+      "SEA Chile"
+    ],
+    "variante_denominacion"
+  ],
+  "SMA Chile": [
+    "fusionado",
+    "org:sma",
+    "organizacion",
+    "Superintendencia del Medio Ambiente de Chile",
+    [
+      "SMA Chile"
+    ],
+    "variante_denominacion"
+  ],
+  "DOH Chile": [
+    "conservado",
+    "org:direccion-de-obras-hidraulicas-doh",
+    "organizacion",
+    "Dirección de Obras Hidráulicas de Chile (DOH)",
+    [
+      "DOH"
+    ],
+    null
+  ],
+  "ICMM": [
+    "conservado",
+    "org:icmm",
+    "organizacion",
+    "International Council on Mining and Metals (ICMM)",
+    [
+      "ICMM"
+    ],
+    null
+  ],
+  "Naciones Unidas": [
+    "conservado",
+    "org:naciones-unidas",
+    "organizacion",
+    "Organización de las Naciones Unidas (ONU)",
+    [
+      "ONU",
+      "UN"
+    ],
+    null
+  ],
+  "Comunidad Indígena de Solor": [
+    "conservado",
+    "org:comunidad-indigena-de-solor",
+    "organizacion",
+    "Comunidad Indígena de Solor (San Pedro de Atacama)",
+    [
+      "Comunidad de Solor"
+    ],
+    null
+  ],
+  "Tribunales Ambientales": [
+    "conservado",
+    "org:tribunales-ambientales-de-chile",
+    "organizacion",
+    "Tribunales Ambientales de Chile",
+    [
+      "Tribunales Ambientales"
+    ],
+    null
+  ],
+  "Corte Suprema": [
+    "conservado",
+    "org:corte-suprema-de-chile",
+    "organizacion",
+    "Corte Suprema de Justicia de Chile",
+    [
+      "Corte Suprema"
+    ],
+    null
+  ],
+  "CGR Chile": [
+    "conservado",
+    "org:contraloria-general-de-la-republica-cgr",
+    "organizacion",
+    "Contraloría General de la República de Chile (CGR)",
+    [
+      "CGR"
+    ],
+    null
+  ],
+  "Ilustre Municipalidad de Colina": [
+    "conservado",
+    "org:municipalidad-de-colina",
+    "organizacion",
+    "Ilustre Municipalidad de Colina",
+    [
+      "Municipalidad de Colina"
+    ],
+    null
+  ],
+  "INDH (Sustituido)": [
+    "conservado",
+    "org:instituto-nacional-de-derechos-humanos-indh",
+    "organizacion",
+    "Instituto Nacional de Derechos Humanos (INDH)",
+    [
+      "INDH"
+    ],
+    null
+  ],
+  "DGA / Sernageomin": [
+    "conservado",
+    "org:dga-sernageomin",
+    "organizacion",
+    "Dirección General de Aguas (DGA) / SERNAGEOMIN",
+    [
+      "DGA",
+      "SERNAGEOMIN"
+    ],
+    null
+  ],
+  "Kancha Investigación": [
+    "conservado",
+    "org:kancha-investigacion",
+    "organizacion",
+    "Kancha Investigación y Consultoría",
+    [
+      "Kancha"
+    ],
+    null
+  ],
+  "Stakeholder": [
+    "conservado",
+    "rol:grupo-de-interes-stakeholder",
+    "persona_rol",
+    "Grupo de Interés o Stakeholder Relevante",
+    [
+      "Stakeholder",
+      "Actor Clave"
+    ],
+    null
+  ],
+  "Organización Colectiva": [
+    "conservado",
+    "rol:organizacion-colectiva-comunitaria",
+    "persona_rol",
+    "Organización Colectiva Comunitaria o Indígena",
+    [
+      "Organización Comunitaria"
+    ],
+    null
+  ],
+  "Sujeto Pasivo Lobby": [
+    "conservado",
+    "rol:sujeto-pasivo-ley-de-lobby",
+    "persona_rol",
+    "Sujeto Pasivo Regulado por la Ley de Lobby",
+    [
+      "Sujeto Pasivo Lobby"
+    ],
+    null
+  ],
+  "Oficial de Cumplimiento": [
+    "conservado",
+    "rol:oficial-de-cumplimiento",
+    "persona_rol",
+    "Oficial de Cumplimiento Normativo (Compliance Officer)",
+    [
+      "Compliance Officer"
+    ],
+    null
+  ],
+  "Dueño Único (Single Point of Accountability)": [
+    "conservado",
+    "rol:dueno-unico-compromiso-spa",
+    "persona_rol",
+    "Responsable Único Asignado al Compromiso (Single Point of Accountability)",
+    [
+      "Single Point of Accountability",
+      "SPA"
+    ],
+    null
+  ],
+  "Single Point of Accountability": [
+    "fusionado",
+    "rol:dueno-unico-compromiso-spa",
+    "persona_rol",
+    "Responsable Único Asignado al Compromiso (Single Point of Accountability)",
+    [
+      "SPA"
+    ],
+    "variante_denominacion"
+  ],
+  "AA1000SES": [
+    "conservado",
+    "doc:norma-aa1000ses",
+    "documento",
+    "Norma de Compromiso con los Grupos de Interés AA1000SES",
+    [
+      "AA1000SES"
+    ],
+    null
+  ],
+  "AccountAbility AA1000SES": [
+    "fusionado",
+    "doc:norma-aa1000ses",
+    "documento",
+    "Norma de Compromiso con los Grupos de Interés AA1000SES",
+    [
+      "AccountAbility AA1000SES"
+    ],
+    "variante_denominacion"
+  ],
+  "RCA Faena": [
+    "fusionado",
+    "doc:resolucion-calificacion-ambiental",
+    "documento",
+    "Resolución de Calificación Ambiental (RCA)",
+    [
+      "RCA Faena"
+    ],
+    "variante_denominacion"
+  ],
+  "RCA N° 450/2021": [
+    "conservado",
+    "doc:rca-450-2021",
+    "documento",
+    "Resolución de Calificación Ambiental RCA N° 450/2021",
+    [
+      "RCA 450/2021"
+    ],
+    null
+  ],
+  "Art. 86 RSEIA": [
+    "conservado",
+    "doc:reglamento-seia-decreto-40",
+    "documento",
+    "Artículo 86 del Reglamento del SEIA (Decreto Supremo N° 40)",
+    [
+      "Art. 86 RSEIA",
+      "RSEIA"
+    ],
+    null
+  ],
+  "Acta Notarial de Asamblea": [
+    "conservado",
+    "doc:acta-notarial-de-asamblea",
+    "documento",
+    "Acta Notarial de Asamblea Comunitaria o Indígena",
+    [
+      "Acta Notarial"
+    ],
+    null
+  ],
+  "Acta Firmada": [
+    "conservado",
+    "doc:acta-formal-de-compromisos",
+    "documento",
+    "Acta Formal de Acuerdos y Compromisos Firmada",
+    [
+      "Acta Firmada"
+    ],
+    null
+  ],
+  "Minuta Aprobada": [
+    "fusionado",
+    "doc:acta-formal-de-compromisos",
+    "documento",
+    "Acta Formal de Acuerdos y Compromisos Firmada",
+    [
+      "Minuta Aprobada"
+    ],
+    "variante_denominacion"
+  ],
+  "Acta Conforme": [
+    "fusionado",
+    "doc:acta-formal-de-compromisos",
+    "documento",
+    "Acta Formal de Acuerdos y Compromisos Firmada",
+    [
+      "Acta Conforme"
+    ],
+    "variante_denominacion"
+  ],
+  "Principio 31 ONU": [
+    "conservado",
+    "doc:principios-rectores-onu-derechos-humanos-principio-31",
+    "documento",
+    "Principio 31 de los Principios Rectores sobre Empresas y Derechos Humanos de la ONU",
+    [
+      "Principio 31 ONU"
+    ],
+    null
+  ],
+  "Briefing Ejecutivo": [
+    "conservado",
+    "doc:briefing-ejecutivo-formato",
+    "documento",
+    "Briefing Ejecutivo de Posicionamiento y Relacionamiento",
+    [
+      "Executive Briefing"
+    ],
+    null
+  ],
+  "Res. Ex. 223/2015 SMA": [
+    "conservado",
+    "doc:res-ex-223-2015-sma",
+    "documento",
+    "Resolución Exenta N° 223/2015 de la Superintendencia del Medio Ambiente",
+    [
+      "Res. Ex. 223/2015"
+    ],
+    null
+  ],
+  "Res. Ex. 844/2012 SMA": [
+    "conservado",
+    "doc:res-ex-844-2012-sma",
+    "documento",
+    "Resolución Exenta N° 844/2012 de la Superintendencia del Medio Ambiente",
+    [
+      "Res. Ex. 844/2012"
+    ],
+    null
+  ],
+  "Ley 19.418": [
+    "conservado",
+    "doc:ley-19418",
+    "documento",
+    "Ley N° 19.418 sobre Juntas de Vecinos y demás Organizaciones Comunitarias",
+    [
+      "Ley 19418"
+    ],
+    null
+  ],
+  "GHPPI": [
+    "conservado",
+    "doc:ghppi-guidance",
+    "documento",
+    "Good Health and Public Participation Guidelines (GHPPI)",
+    [
+      "GHPPI"
+    ],
+    null
+  ],
+  "ICMM Maturity Matrix": [
+    "conservado",
+    "doc:icmm-stakeholder-engagement-maturity-matrix",
+    "documento",
+    "Matriz de Madurez de Relacionamiento con Comunidades del ICMM",
+    [
+      "ICMM Maturity Matrix"
+    ],
+    null
+  ],
+  "OECD 2024": [
+    "conservado",
+    "doc:oecd-due-diligence-guidance-2024",
+    "documento",
+    "OECD Guidelines and Due Diligence Report 2024",
+    [
+      "OECD 2024"
+    ],
+    null
+  ],
+  "OECD 2024 Report": [
+    "fusionado",
+    "doc:oecd-due-diligence-guidance-2024",
+    "documento",
+    "OECD Guidelines and Due Diligence Report 2024",
+    [
+      "OECD 2024 Report"
+    ],
+    "variante_denominacion"
+  ],
+  "OECD PDF Oficial": [
+    "fusionado",
+    "doc:oecd-due-diligence-guidance-2024",
+    "documento",
+    "OECD Guidelines and Due Diligence Report 2024",
+    [
+      "OECD PDF Oficial"
+    ],
+    "variante_denominacion"
+  ],
+  "Ley Orgánica SMA": [
+    "conservado",
+    "doc:ley-organica-sma",
+    "documento",
+    "Ley Orgánica de la Superintendencia del Medio Ambiente (LOSMA - Ley N° 20.417)",
+    [
+      "LOSMA"
+    ],
+    null
+  ],
+  "Dto 71 SEGPRES": [
+    "conservado",
+    "doc:decreto-71-segpres-reglamento-lobby",
+    "documento",
+    "Decreto Supremo N° 71 del Ministerio Secretaría General de la Presidencia (Reglamento Ley de Lobby)",
+    [
+      "Dto 71 SEGPRES"
+    ],
+    null
+  ],
+  "Decreto 236": [
+    "conservado",
+    "doc:decreto-236-convenio-169-oit",
+    "documento",
+    "Decreto Supremo N° 236 que Promulga el Convenio 169 de la OIT en Chile",
+    [
+      "Convenio 169 OIT"
+    ],
+    null
+  ],
+  "SOC 2 Type II": [
+    "fusionado",
+    "doc:estandar-soc-2",
+    "documento",
+    "Estándar de Control y Seguridad SOC 2 Type II",
+    [
+      "SOC 2 Type II"
+    ],
+    "entidad_existente"
+  ],
+  "Disclaimer Legal Mandatorio": [
+    "conservado",
+    "doc:disclaimer-legal-mandatorio",
+    "documento",
+    "Disclaimer Legal Mandatorio en Comunicaciones Corporativas",
+    [
+      "Disclaimer Legal"
+    ],
+    null
+  ],
+  "Código CUT SUBDERE": [
+    "conservado",
+    "doc:codigo-unico-territorial-subdere",
+    "documento",
+    "Código Único Territorial (CUT) de SUBDERE Chile",
+    [
+      "Código CUT"
+    ],
+    null
+  ],
+  "RiuNet": [
+    "conservado",
+    "fte:riunet-repositorio-academico",
+    "fuente",
+    "Repositorio Académico RiuNet de la Universitat Politècnica de València",
+    [
+      "RiuNet"
+    ],
+    null
+  ],
+  "Taylor & Francis": [
+    "conservado",
+    "fte:taylor-and-francis-journal",
+    "fuente",
+    "Taylor & Francis Academic Publishing Group",
+    [
+      "Taylor & Francis"
+    ],
+    null
+  ],
+  "Boréalis SRM": [
+    "conservado",
+    "prod:borealis-srm",
+    "producto",
+    "Boréalis Stakeholder Engagement Software (SRM)",
+    [
+      "Boréalis"
+    ],
+    null
+  ],
+  "Boréalis": [
+    "fusionado",
+    "prod:borealis-srm",
+    "producto",
+    "Boréalis Stakeholder Engagement Software (SRM)",
+    [
+      "Boréalis"
+    ],
+    "variante_denominacion"
+  ],
+  "Boréalis (Sustituto)": [
+    "fusionado",
+    "prod:borealis-srm",
+    "producto",
+    "Boréalis Stakeholder Engagement Software (SRM)",
+    [
+      "Boréalis (Sustituto)"
+    ],
+    "variante_denominacion"
+  ],
+  "Tractivity SRM": [
+    "conservado",
+    "prod:tractivity-srm",
+    "producto",
+    "Tractivity Stakeholder Management Software",
+    [
+      "Tractivity"
+    ],
+    null
+  ],
+  "Tractivity": [
+    "fusionado",
+    "prod:tractivity-srm",
+    "producto",
+    "Tractivity Stakeholder Management Software",
+    [
+      "Tractivity"
+    ],
+    "variante_denominacion"
+  ],
+  "Tractivity (Sustituto)": [
+    "fusionado",
+    "prod:tractivity-srm",
+    "producto",
+    "Tractivity Stakeholder Management Software",
+    [
+      "Tractivity (Sustituto)"
+    ],
+    "variante_denominacion"
+  ],
+  "Simply Stakeholders": [
+    "conservado",
+    "prod:simply-stakeholders",
+    "producto",
+    "Simply Stakeholders Software Platform",
+    [
+      "Simply Stakeholders"
+    ],
+    null
+  ],
+  "Simply Stakeholders (Sustituto)": [
+    "fusionado",
+    "prod:simply-stakeholders",
+    "producto",
+    "Simply Stakeholders Software Platform",
+    [
+      "Simply Stakeholders (Sustituto)"
+    ],
+    "variante_denominacion"
+  ],
+  "Consultation Manager": [
+    "conservado",
+    "prod:consultation-manager",
+    "producto",
+    "Consultation Manager Stakeholder Platform",
+    [
+      "Consultation Manager"
+    ],
+    null
+  ],
+  "Sopact": [
+    "conservado",
+    "prod:sopact-impact-cloud",
+    "producto",
+    "Sopact Social Impact Cloud Platform",
+    [
+      "Sopact"
+    ],
+    null
+  ],
+  "Prowly": [
+    "conservado",
+    "prod:prowly-pr-software",
+    "producto",
+    "Prowly PR Software Platform",
+    [
+      "Prowly"
+    ],
+    null
+  ],
+  "SustaiNet (Sustituido)": [
+    "conservado",
+    "prod:sustainet-software",
+    "producto",
+    "SustaiNet Stakeholder Tracking Software",
+    [
+      "SustaiNet"
+    ],
+    null
+  ],
+  "Darzin (Fuente Fallida)": [
+    "conservado",
+    "prod:darzin-software",
+    "producto",
+    "Darzin Stakeholder Engagement Software",
+    [
+      "Darzin"
+    ],
+    null
+  ],
+  "Guideflow": [
+    "conservado",
+    "prod:guideflow-software",
+    "producto",
+    "Guideflow Interactive Interactive Demo Platform",
+    [
+      "Guideflow"
+    ],
+    null
+  ],
+  "SAP/ERP": [
+    "conservado",
+    "prod:sap-erp-corporativo",
+    "producto",
+    "Sistema ERP Corporativo SAP",
+    [
+      "SAP",
+      "ERP SAP"
+    ],
+    null
+  ],
+  "ERP SAP": [
+    "fusionado",
+    "prod:sap-erp-corporativo",
+    "producto",
+    "Sistema ERP Corporativo SAP",
+    [
+      "ERP SAP"
+    ],
+    "variante_denominacion"
+  ],
+  "Sistema SSA": [
+    "conservado",
+    "prod:sistema-seguimiento-ambiental-ssa",
+    "producto",
+    "Sistema de Seguimiento Ambiental (SSA) de la SMA",
+    [
+      "SSA"
+    ],
+    null
+  ],
+  "SSA SMA": [
+    "fusionado",
+    "prod:sistema-seguimiento-ambiental-ssa",
+    "producto",
+    "Sistema de Seguimiento Ambiental (SSA) de la SMA",
+    [
+      "SSA SMA"
+    ],
+    "variante_denominacion"
+  ],
+  "SNIFA SMA": [
+    "conservado",
+    "prod:snifa-sma-portal",
+    "producto",
+    "Sistema Nacional de Información de Fiscalización Ambiental (SNIFA SMA)",
+    [
+      "SNIFA"
+    ],
+    null
+  ],
+  "e-SEIA": [
+    "conservado",
+    "prod:e-seia-plataforma",
+    "producto",
+    "Plataforma Electrónica e-SEIA de Evaluación Ambiental",
+    [
+      "e-SEIA"
+    ],
+    null
+  ],
+  "PostgreSQL/Neo4j": [
+    "conservado",
+    "prod:stack-postgresql-neo4j",
+    "producto",
+    "Stack Tecnológico Híbrido PostgreSQL / Neo4j",
+    [
+      "PostgreSQL Neo4j"
+    ],
+    null
+  ],
+  "PostgreSQL": [
+    "fusionado",
+    "prod:stack-postgresql-neo4j",
+    "producto",
+    "Stack Tecnológico Híbrido PostgreSQL / Neo4j",
+    [
+      "PostgreSQL"
+    ],
+    "variante_denominacion"
+  ],
+  "PostGIS": [
+    "conservado",
+    "prod:postgis-extension-espacial",
+    "producto",
+    "Extensión Espacial PostGIS para PostgreSQL",
+    [
+      "PostGIS"
+    ],
+    null
+  ],
+  "Slack / Teams API": [
+    "conservado",
+    "prod:webhooks-slack-teams",
+    "producto",
+    "Webhooks y APIs de Integración Slack / Microsoft Teams",
+    [
+      "Slack Teams API"
+    ],
+    null
+  ],
+  "Webhooks Slack/Teams": [
+    "fusionado",
+    "prod:webhooks-slack-teams",
+    "producto",
+    "Webhooks y APIs de Integración Slack / Microsoft Teams",
+    [
+      "Webhooks Slack/Teams"
+    ],
+    "variante_denominacion"
+  ],
+  "LDAP Corporativo": [
+    "conservado",
+    "prod:directorio-ldap-corporativo",
+    "producto",
+    "Directorio Activo y LDAP Corporativo",
+    [
+      "LDAP"
+    ],
+    null
+  ],
+  "Audit Log": [
+    "fusionado",
+    "prod:log-de-trazabilidad-humana",
+    "producto",
+    "Sistema de Registro y Auditoría de Trazabilidad Humana",
+    [
+      "Audit Log"
+    ],
+    "entidad_existente"
+  ],
+  "Compromiso Huérfano (Prohibido)": [
+    "conservado",
+    "comp:prohibicion-compromisos-huerfanos",
+    "compromiso",
+    "Prohibición Absoluta de Compromisos Huérfanos sin Asignación",
+    [
+      "Compromisos Huérfanos"
+    ],
+    null
+  ],
+  "Dato Sensible Prohibido": [
+    "conservado",
+    "comp:prohibicion-registro-datos-sensibles",
+    "compromiso",
+    "Prohibición de Registro y Almacenamiento de Datos Personales Sensibles",
+    [
+      "Datos Sensibles"
+    ],
+    null
+  ],
+  "Perfilamiento Sensible Prohibido": [
+    "fusionado",
+    "comp:prohibicion-registro-datos-sensibles",
+    "compromiso",
+    "Prohibición de Registro y Almacenamiento de Datos Personales Sensibles",
+    [
+      "Perfilamiento Sensible"
+    ],
+    "variante_denominacion"
+  ],
+  "Regla de Verificación Previa": [
+    "conservado",
+    "comp:regla-verificacion-previa-cierre",
+    "compromiso",
+    "Regla Mandatoria de Verificación Documental Previa al Cierre de Compromisos",
+    [
+      "Verificación Previa"
+    ],
+    null
+  ],
+  "Consentimiento Informado": [
+    "conservado",
+    "comp:consentimiento-informado-comunitario",
+    "compromiso",
+    "Exigencia de Consentimiento Libre, Previo e Informado en Diálogos Comunitarios",
+    [
+      "Consentimiento Informado"
+    ],
+    null
+  ],
+  "Compromiso Derivado": [
+    "conservado",
+    "comp:compromiso-comunitario-derivado",
+    "compromiso",
+    "Compromiso Formal Derivado de Mesas de Trabajo o Acuerdos",
+    [
+      "Compromiso Derivado"
+    ],
+    null
+  ],
+  "Audiencia de Lobby": [
+    "conservado",
+    "evt:audiencia-de-lobby-regulada",
+    "evento",
+    "Audiencia Formal de Lobby Regulada por Ley N° 20.730",
+    [
+      "Audiencia Lobby"
+    ],
+    null
+  ],
+  "Curva S de Avance": [
+    "conservado",
+    "met:curva-s-avance-compromisos",
+    "metrica",
+    "Curva S de Avance Programado vs Ejecutado de Compromisos",
+    [
+      "Curva S"
+    ],
+    null
+  ],
+  "Índice de Frescura": [
+    "conservado",
+    "met:indice-frescura-datos-interacciones",
+    "metrica",
+    "Índice de Frescura y Actualización de Datos de Relacionamiento",
+    [
+      "Índice de Frescura"
+    ],
+    null
+  ],
+  "Latencia de Publicación": [
+    "conservado",
+    "met:latencia-publicacion-actas",
+    "metrica",
+    "Latencia Temporal de Carga y Publicación de Actas y Minutas",
+    [
+      "Latencia de Publicación"
+    ],
+    null
+  ],
+  "TCO Financiero": [
+    "fusionado",
+    "met:total-cost-of-ownership-tco",
+    "metrica",
+    "Costo Total de Propiedad (TCO)",
+    [
+      "TCO Financiero"
+    ],
+    "entidad_existente"
+  ],
+  "Grafo Relacional": [
+    "conservado",
+    "tema:grafo-relacional-stakeholders",
+    "tema",
+    "Modelado de Redes y Grafo Relacional de Stakeholders",
+    [
+      "Grafo Relacional"
+    ],
+    null
+  ],
+  "Grafo de Alianzas": [
+    "fusionado",
+    "tema:grafo-relacional-stakeholders",
+    "tema",
+    "Modelado de Redes y Grafo Relacional de Stakeholders",
+    [
+      "Grafo de Alianzas"
+    ],
+    "variante_denominacion"
+  ],
+  "Representatividad Espuria": [
+    "conservado",
+    "tema:analisis-representatividad-espuria",
+    "tema",
+    "Detección y Mitigación de Representatividad Espuria en Liderazgos Comunitarios",
+    [
+      "Representatividad Espuria"
+    ],
+    null
+  ],
+  "Mandato Asambleario": [
+    "conservado",
+    "tema:mandato-asambleario-comunitario",
+    "tema",
+    "Legitimidad Basada en Mandato Asambleario Formal",
+    [
+      "Mandato Asambleario"
+    ],
+    null
+  ],
+  "Disenso Interno": [
+    "conservado",
+    "tema:mapeo-disenso-interno-comunidad",
+    "tema",
+    "Mapeo y Tratamiento del Disenso Interno en Comunidades",
+    [
+      "Disenso Interno"
+    ],
+    null
+  ],
+  "Modelo de Salience (Mitchell et al.)": [
+    "fusionado",
+    "tema:modelo-prominencia-mitchell-agle-wood",
+    "tema",
+    "Modelo de Prominencia de Mitchell, Agle y Wood",
+    [
+      "Modelo de Salience"
+    ],
+    "entidad_existente"
+  ],
+  "Salience Model": [
+    "fusionado",
+    "tema:modelo-prominencia-mitchell-agle-wood",
+    "tema",
+    "Modelo de Prominencia de Mitchell, Agle y Wood",
+    [
+      "Salience Model"
+    ],
+    "entidad_existente"
+  ],
+  "Poder-Legitimidad-Urgencia": [
+    "fusionado",
+    "tema:modelo-prominencia-mitchell-agle-wood",
+    "tema",
+    "Modelo de Prominencia de Mitchell, Agle y Wood",
+    [
+      "Poder-Legitimidad-Urgencia"
+    ],
+    "variante_denominacion"
+  ],
+  "RBAC": [
+    "conservado",
+    "tema:control-acceso-basado-en-roles-rbac",
+    "tema",
+    "Control de Acceso Basado en Roles (Role-Based Access Control - RBAC)",
+    [
+      "RBAC"
+    ],
+    null
+  ],
+  "RBAC / ABAC": [
+    "fusionado",
+    "tema:control-acceso-basado-en-roles-rbac",
+    "tema",
+    "Control de Acceso Basado en Roles (Role-Based Access Control - RBAC)",
+    [
+      "RBAC / ABAC"
+    ],
+    "variante_denominacion"
+  ],
+  "Tractivity Security": [
+    "fusionado",
+    "tema:control-acceso-basado-en-roles-rbac",
+    "tema",
+    "Control de Acceso Basado en Roles (Role-Based Access Control - RBAC)",
+    [
+      "Tractivity Security"
+    ],
+    "variante_denominacion"
+  ],
+  "Hecho Observado": [
+    "conservado",
+    "tema:distincion-hecho-observado-vs-interpretacion",
+    "tema",
+    "Distinción Metodológica entre Hecho Observado e Interpretación Subjetiva",
+    [
+      "Hecho Observado"
+    ],
+    null
+  ],
+  "Amnesia Institucional": [
+    "conservado",
+    "tema:prevencion-amnesia-institucional",
+    "tema",
+    "Prevención y Mitigación de la Amnesia Institucional Corporativa",
+    [
+      "Amnesia Institucional"
+    ],
+    null
+  ],
+  "Amnesia Corporativa": [
+    "fusionado",
+    "tema:prevencion-amnesia-institucional",
+    "tema",
+    "Prevención y Mitigación de la Amnesia Institucional Corporativa",
+    [
+      "Amnesia Corporativa"
+    ],
+    "variante_denominacion"
+  ],
+  "Trazabilidad de Promesas": [
+    "conservado",
+    "tema:trazabilidad-integral-promesas-compromisos",
+    "tema",
+    "Trazabilidad Integral de Promesas y Compromisos Adquiridos",
+    [
+      "Trazabilidad de Promesas"
+    ],
+    null
+  ],
+  "Grafo de Trazabilidad": [
+    "fusionado",
+    "tema:trazabilidad-integral-promesas-compromisos",
+    "tema",
+    "Trazabilidad Integral de Promesas y Compromisos Adquiridos",
+    [
+      "Grafo de Trazabilidad"
+    ],
+    "variante_denominacion"
+  ],
+  "Alerta Preventiva": [
+    "conservado",
+    "tema:sistema-alertas-preventivas-desviaciones",
+    "tema",
+    "Sistema Escalonado de Alertas Preventivas ante Desviaciones",
+    [
+      "Alerta Preventiva"
+    ],
+    null
+  ],
+  "Escalamiento Preventivo": [
+    "fusionado",
+    "tema:sistema-alertas-preventivas-desviaciones",
+    "tema",
+    "Sistema Escalonado de Alertas Preventivas ante Desviaciones",
+    [
+      "Escalamiento Preventivo"
+    ],
+    "variante_denominacion"
+  ],
+  "Alerta Roja Legal": [
+    "fusionado",
+    "tema:sistema-alertas-preventivas-desviaciones",
+    "tema",
+    "Sistema Escalonado de Alertas Preventivas ante Desviaciones",
+    [
+      "Alerta Roja Legal"
+    ],
+    "variante_denominacion"
+  ],
+  "Alertas Escalonadas (T-30/T-15/T-7)": [
+    "fusionado",
+    "tema:sistema-alertas-preventivas-desviaciones",
+    "tema",
+    "Sistema Escalonado de Alertas Preventivas ante Desviaciones",
+    [
+      "Alertas Escalonadas"
+    ],
+    "variante_denominacion"
+  ],
+  "Fatiga de Alertas (Notification Fatigue)": [
+    "conservado",
+    "tema:mitigacion-fatiga-alertas",
+    "tema",
+    "Mitigación de la Fatiga de Alertas (Notification Fatigue)",
+    [
+      "Fatiga de Alertas"
+    ],
+    null
+  ],
+  "Máquina de Estados": [
+    "conservado",
+    "tema:maquina-estados-ciclo-vida-compromisos",
+    "tema",
+    "Máquina de Estados Finita para el Ciclo de Vida de Compromisos",
+    [
+      "FSM Compromisos"
+    ],
+    null
+  ],
+  "Máquina de Estados Finita (FSM)": [
+    "fusionado",
+    "tema:maquina-estados-ciclo-vida-compromisos",
+    "tema",
+    "Máquina de Estados Finita para el Ciclo de Vida de Compromisos",
+    [
+      "FSM"
+    ],
+    "variante_denominacion"
+  ],
+  "FSM 8 Estados": [
+    "fusionado",
+    "tema:maquina-estados-ciclo-vida-compromisos",
+    "tema",
+    "Máquina de Estados Finita para el Ciclo de Vida de Compromisos",
+    [
+      "FSM 8 Estados"
+    ],
+    "variante_denominacion"
+  ],
+  "Máquina de Estados de 8 Etapas": [
+    "fusionado",
+    "tema:maquina-estados-ciclo-vida-compromisos",
+    "tema",
+    "Máquina de Estados Finita para el Ciclo de Vida de Compromisos",
+    [
+      "Máquina de Estados 8 Etapas"
+    ],
+    "variante_denominacion"
+  ],
+  "Evidencia Probatoria": [
+    "conservado",
+    "tema:evidencia-probatoria-cumplimiento",
+    "tema",
+    "Gestión y Custodia de Evidencia Probatoria de Cumplimiento",
+    [
+      "Evidencia Probatoria"
+    ],
+    null
+  ],
+  "Matriz de Excepciones": [
+    "conservado",
+    "tema:matriz-gestion-excepciones-bloqueos",
+    "tema",
+    "Matriz de Gestión de Excepciones y Desbloqueo Operativo",
+    [
+      "Matriz de Excepciones"
+    ],
+    null
+  ],
+  "Audit Trail Inmutable": [
+    "conservado",
+    "tema:audit-trail-inmutable-append-only",
+    "tema",
+    "Arquitectura de Pista de Auditoría Inmutable (Append-Only Audit Trail)",
+    [
+      "Audit Trail Inmutable"
+    ],
+    null
+  ],
+  "Audit Trail Append-Only": [
+    "fusionado",
+    "tema:audit-trail-inmutable-append-only",
+    "tema",
+    "Arquitectura de Pista de Auditoría Inmutable (Append-Only Audit Trail)",
+    [
+      "Audit Trail Append-Only"
+    ],
+    "variante_denominacion"
+  ],
+  "Audit Trail Forense": [
+    "fusionado",
+    "tema:audit-trail-inmutable-append-only",
+    "tema",
+    "Arquitectura de Pista de Auditoría Inmutable (Append-Only Audit Trail)",
+    [
+      "Audit Trail Forense"
+    ],
+    "variante_denominacion"
+  ],
+  "Read Audit Trail": [
+    "fusionado",
+    "tema:audit-trail-inmutable-append-only",
+    "tema",
+    "Arquitectura de Pista de Auditoría Inmutable (Append-Only Audit Trail)",
+    [
+      "Read Audit Trail"
+    ],
+    "variante_denominacion"
+  ],
+  "Inmutabilidad Append-Only": [
+    "fusionado",
+    "tema:audit-trail-inmutable-append-only",
+    "tema",
+    "Arquitectura de Pista de Auditoría Inmutable (Append-Only Audit Trail)",
+    [
+      "Inmutabilidad Append-Only"
+    ],
+    "variante_denominacion"
+  ],
+  "Bloqueo Criptográfico": [
+    "fusionado",
+    "tema:audit-trail-inmutable-append-only",
+    "tema",
+    "Arquitectura de Pista de Auditoría Inmutable (Append-Only Audit Trail)",
+    [
+      "Bloqueo Criptográfico"
+    ],
+    "variante_denominacion"
+  ],
+  "Versionado Inmutable": [
+    "conservado",
+    "tema:versionado-inmutable-de-documentos",
+    "tema",
+    "Versionado Inmutable de Registros y Documentos Corporativos",
+    [
+      "Versionado Inmutable"
+    ],
+    null
+  ],
+  "SUPERSEDES": [
+    "fusionado",
+    "tema:versionado-inmutable-de-documentos",
+    "tema",
+    "Versionado Inmutable de Registros y Documentos Corporativos",
+    [
+      "SUPERSEDES"
+    ],
+    "variante_denominacion"
+  ],
+  "Caso Quebrada Seca": [
+    "fusionado",
+    "tema:sector-quebrada-seca-territorio",
+    "tema",
+    "Sector Quebrada Seca (Zona de Influencia Socioambiental)",
+    [
+      "Caso Quebrada Seca"
+    ],
+    "entidad_existente"
+  ],
+  "APR": [
+    "conservado",
+    "tema:agua-potable-rural-apr",
+    "tema",
+    "Sistemas de Agua Potable Rural (APR)",
+    [
+      "Agua Potable Rural"
+    ],
+    null
+  ],
+  "Grievance Mechanism": [
+    "conservado",
+    "tema:mecanismo-quejas-reclamos-grievance",
+    "tema",
+    "Mecanismo Operativo de Quejas y Reclamos Comunitarios (Grievance Mechanism)",
+    [
+      "Mecanismo de Quejas"
+    ],
+    null
+  ],
+  "Conflicto Socioambiental": [
+    "conservado",
+    "tema:dinamicas-conflicto-socioambiental-chile",
+    "tema",
+    "Dinámicas y Factores Críticos de Conflicto Socioambiental en Chile",
+    [
+      "Conflicto Socioambiental"
+    ],
+    null
+  ],
+  "Handover Estructurado": [
+    "conservado",
+    "tema:protocolo-handover-estructurado",
+    "tema",
+    "Protocolo de Traspaso y Handover Estructurado entre Equipos",
+    [
+      "Handover Estructurado"
+    ],
+    null
+  ],
+  "System of Record": [
+    "conservado",
+    "tema:concepto-system-of-record-relacionamiento",
+    "tema",
+    "Concepto y Requisitos de System of Record en Relacionamiento Comunitario",
+    [
+      "System of Record"
+    ],
+    null
+  ],
+  "Salar de Atacama": [
+    "conservado",
+    "tema:cuenca-salar-de-atacama-territorio",
+    "tema",
+    "Cuenca del Salar de Atacama (Zona Crítica de Influencia)",
+    [
+      "Salar de Atacama"
+    ],
+    null
+  ],
+  "Monitoreo Participativo": [
+    "conservado",
+    "tema:monitoreo-socioambiental-participativo",
+    "tema",
+    "Metodología de Monitoreo Socioambiental Participativo con Comunidades",
+    [
+      "Monitoreo Participativo"
+    ],
+    null
+  ],
+  "CRM vs SRM": [
+    "conservado",
+    "tema:diferenciacion-arquitectonica-crm-vs-srm",
+    "tema",
+    "Diferenciación Arquitectónica y Operativa: CRM Comercial vs SRM Especializado",
+    [
+      "CRM vs SRM"
+    ],
+    null
+  ],
+  "CRM Comercial vs SRM Especializado": [
+    "fusionado",
+    "tema:diferenciacion-arquitectonica-crm-vs-srm",
+    "tema",
+    "Diferenciación Arquitectónica y Operativa: CRM Comercial vs SRM Especializado",
+    [
+      "CRM vs SRM Especializado"
+    ],
+    "variante_denominacion"
+  ],
+  "Feedback Analytics": [
+    "conservado",
+    "tema:analisis-retroalimentacion-comunitaria",
+    "tema",
+    "Técnicas de Análisis y Retroalimentación Comunitaria (Feedback Analytics)",
+    [
+      "Feedback Analytics"
+    ],
+    null
+  ],
+  "Servicios de Consultoría": [
+    "conservado",
+    "tema:servicios-profesionales-consultoria",
+    "tema",
+    "Servicios Profesionales de Consultoría en Asuntos Públicos",
+    [
+      "Consultoría"
+    ],
+    null
+  ],
+  "Escucha Externa": [
+    "conservado",
+    "tema:dimension-escucha-externa-senales",
+    "tema",
+    "Integración de la Escucha Externa de Señales Públicas y Normativas",
+    [
+      "Escucha Externa"
+    ],
+    null
+  ],
+  "Conocimiento Interno": [
+    "conservado",
+    "tema:dimension-conocimiento-interno-corporativo",
+    "tema",
+    "Gestión y Estructuración del Conocimiento Interno Corporativo",
+    [
+      "Conocimiento Interno"
+    ],
+    null
+  ],
+  "Radar Comparativo": [
+    "conservado",
+    "tema:evaluacion-radar-comparativo-soluciones",
+    "tema",
+    "Metodología de Evaluación por Radar Comparativo de Soluciones",
+    [
+      "Radar Comparativo"
+    ],
+    null
+  ],
+  "Migración de Excel a SRM": [
+    "conservado",
+    "tema:estrategia-migracion-excel-a-srm",
+    "tema",
+    "Estrategia y Riesgos de Migración de Hojas de Cálculo a SRM",
+    [
+      "Migración Excel"
+    ],
+    null
+  ],
+  "Deduplicación": [
+    "conservado",
+    "tema:estrategia-deduplicacion-entidades",
+    "tema",
+    "Estrategia de Deduplicación y Consolidación de Entidades y Contactos",
+    [
+      "Deduplicación"
+    ],
+    null
+  ],
+  "Deduplicación de Fuentes": [
+    "fusionado",
+    "tema:estrategia-deduplicacion-entidades",
+    "tema",
+    "Estrategia de Deduplicación y Consolidación de Entidades y Contactos",
+    [
+      "Deduplicación de Fuentes"
+    ],
+    "variante_denominacion"
+  ],
+  "Auditoría de Cumplimiento": [
+    "conservado",
+    "tema:auditoria-cumplimiento-compromisos",
+    "tema",
+    "Auditoría Forense y Verificación de Cumplimiento de Obligaciones",
+    [
+      "Auditoría Cumplimiento"
+    ],
+    null
+  ],
+  "Prueba de Completitud": [
+    "conservado",
+    "tema:prueba-completitud-registros",
+    "tema",
+    "Prueba de Completitud e Integridad de Registros de Compromiso",
+    [
+      "Prueba de Completitud"
+    ],
+    null
+  ],
+  "Prevalencia Canónica": [
+    "conservado",
+    "tema:regla-prevalencia-canonica-datos",
+    "tema",
+    "Regla de Prevalencia Canónica ante Fuentes Divergentes",
+    [
+      "Prevalencia Canónica"
+    ],
+    null
+  ],
+  "Fail-Closed Pattern": [
+    "conservado",
+    "tema:patron-seguridad-fail-closed",
+    "tema",
+    "Patrón de Seguridad Fail-Closed en Control de Acceso",
+    [
+      "Fail-Closed"
+    ],
+    null
+  ],
+  "No Repudio": [
+    "conservado",
+    "tema:principio-seguridad-no-repudio",
+    "tema",
+    "Principio de No Repudio Criptográfico en Acuerdos Corporativos",
+    [
+      "No Repudio"
+    ],
+    null
+  ],
+  "Adenda Aclaratoria": [
+    "conservado",
+    "tema:instrumento-adenda-aclaratoria",
+    "tema",
+    "Uso y Formalización de Adenda Aclaratoria ante Modificaciones de Compromisos",
+    [
+      "Adenda Aclaratoria"
+    ],
+    null
+  ],
+  "Gobernanza de Compromisos": [
+    "conservado",
+    "tema:gobernanza-corporativa-compromisos",
+    "tema",
+    "Marco Integral de Gobernanza Corporativa de Compromisos",
+    [
+      "Gobernanza de Compromisos"
+    ],
+    null
+  ],
+  "Permisología Sectorial": [
+    "conservado",
+    "tema:gestion-permisologia-sectorial-chile",
+    "tema",
+    "Gestión Estratégica de Permisología Sectorial y Ambiental en Chile",
+    [
+      "Permisología"
+    ],
+    null
+  ],
+  "Test A/B de Alertas": [
+    "conservado",
+    "tema:experimentacion-ab-optimizacion-alertas",
+    "tema",
+    "Experimentación A/B en Frecuencia y Formato de Alertas Operativas",
+    [
+      "Test A/B Alertas"
+    ],
+    null
+  ],
+  "Buzón Físico vs Digital": [
+    "conservado",
+    "tema:canales-buzon-fisico-vs-digital",
+    "tema",
+    "Estrategia Híbrida de Canales de Recepción: Buzón Físico vs Digital",
+    [
+      "Buzón Físico"
+    ],
+    null
+  ],
+  "Brecha Digital Rural": [
+    "conservado",
+    "tema:impacto-brecha-digital-rural-comunidades",
+    "tema",
+    "Impacto y Mitigación de la Brecha Digital Rural en Zonas Aisladas",
+    [
+      "Brecha Digital"
+    ],
+    null
+  ],
+  "Subreporte (Shadow Communications)": [
+    "conservado",
+    "tema:riesgo-subreporte-shadow-communications",
+    "tema",
+    "Riesgo Operativo de Subreporte y Comunicaciones Informales (Shadow Communications)",
+    [
+      "Shadow Communications"
+    ],
+    null
+  ],
+  "Conciliación de Gastos ERP": [
+    "conservado",
+    "tema:conciliacion-gastos-compromisos-erp",
+    "tema",
+    "Protocolo de Conciliación de Gastos Comunitarios con el ERP Corporativo",
+    [
+      "Conciliación Gastos"
+    ],
+    null
+  ],
+  "Entity_Interaction": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_MeetingMinutes": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_Commitment": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_Milestone": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_AuditTrail": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_Alert": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_Territory": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_Grievance": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_PublicLobbyRecord": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_EnvironmentalPermit": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_PublicObligation": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_SRMSolution": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_CapabilityMatrix": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_AccessPolicy": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_ReadAccessLog": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Entity_DataQualityAudit": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "P09_VERIFICATION_CORRECTIONS": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "P09_RESEARCH_DOSSIER": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "P09_OECD_SCOPE_CORRECTION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "P09_PENDING_SOURCES_RESOLUTION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "P09_GAPS_AND_VALIDATION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "OECD PDF Oficial (`49910d9b`)": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "identificador_interno_fuente"
+  ],
+  "COMP-2025-0104": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "caso_prueba_hipotetico"
+  ],
+  "COMP-2025-0045": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "caso_prueba_hipotetico"
+  ],
+  "Caso Tipo Comunitario": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "caso_prueba_hipotetico"
+  ],
+  "Caso Auditoría Forense": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "caso_prueba_hipotetico"
+  ],
+  "CUMPLIDO_CERRADO": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "estado_fsm_interno"
+  ],
+  "EN_VERIFICACION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "estado_fsm_interno"
+  ],
+  "Pydantic Schema": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "Check Constraint": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "mecanismo_tecnico_bd"
+  ],
+  "SHA-256 Hash": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "algoritmo_criptografico_estandar"
+  ],
+  "Hash SHA-256": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "algoritmo_criptografico_estandar"
+  ],
+  "Inmutabilidad SHA-256": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "algoritmo_criptografico_estandar"
+  ]
+}
+
