@@ -365,72 +365,144 @@ P01_MAP = {
     ),
 }
 
+# Mapeo explícito y verificado para P02 (114 IDs legados)
+P02_MAP = {
+    # Casos de prueba -> eliminados
+    "CASO_CONTINGENCIA_RCA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "CASO_CONTINGENCIA_CALAMA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "CASO_ASUNTOS_PUB_ANTOFAGASTA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "TEST_CASE_DEDUPLICACION": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_APAGON": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_ARQUITECTURA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_COMPLIANCE_OPA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_FRICCION_SILOS": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_HIDRICO": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_HUASCO": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_LICITACION_SANITARIA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
+    "ENT_CASO_SOBERANIA_ANTOFAGASTA": ("eliminado", None, None, None, [], "caso_prueba_hipotetico"),
 
-def cargar_entidades_legado() -> list[dict]:
-    """Carga las entidades originales desde pre-migracion:entidades.jsonl."""
-    res = subprocess.run(
-        ["git", "show", "pre-migracion:entidades.jsonl"],
-        capture_output=True,
-        text=True,
-        check=True,
-    )
-    return [json.loads(line) for line in res.stdout.splitlines() if line.strip()]
+    # Esquemas internos y modelos de datos -> eliminados
+    "ENT_MODELO_CERTEZA_COMERCIAL": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_MODELO_DERECHOS": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_MODELO_GRUPOS": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_MODELO_HABLAR": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_MODELO_POSICIONAMIENTO": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_MODELO_PROXIMIDAD": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_MODELO_REGIONAL": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ENT_MODELO_SABER": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "ONT_ASUNTOS_PUBLICOS": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+    "SCH_ATLAS_EMPRESAS": ("eliminado", None, None, None, [], "esquema_datos_interno"),
+
+    # Vacíos y patologías operativas -> eliminados
+    "GAP_KNOWLEDGE_SENSING": ("eliminado", None, None, None, [], "vacio_estructural_metodologico"),
+    "SILOS_CORPORATIVOS": ("eliminado", None, None, None, [], "patologia_operativa_interna"),
+    "MATRIZ_TRAZABILIDAD_P02": ("eliminado", None, None, None, [], "registro_interno_auditoria"),
+    "TRAZABILIDAD_COMPETIDORES": ("eliminado", None, None, None, [], "registro_interno_auditoria"),
+
+    # Fusiones con entidades previas o de P02
+    "ENT_INFOLOBBY_CHILE": ("fusionado", "prod:infolobby", "producto", None, ["Plataforma Ley de Lobby Chile"], "variante_denominacion_infolobby"),
+    "ENT_THE_BRIDGE": ("fusionado", "prod:bridge-intelligence", "producto", None, ["The Bridge Intelligence Model"], "variante_modelo_bridge"),
+    "ENT_THE_BRIDGE_DESIGN": ("fusionado", "prod:bridge-intelligence", "producto", None, ["The Bridge Reference Design"], "variante_diseno_bridge"),
+    "ENT_KKR_KITE": ("fusionado", "org:kkr", "organizacion", None, ["Kite Bidco Inc. (KKR Funds)"], "subsidiaria_fondo_kkr"),
+    "GRP_KKR_FGS": ("fusionado", "org:kkr", "organizacion", None, ["Kite Bidco Inc. (KKR)"], "holding_corporativo_kkr"),
+    "GRP_WPP_BURSON": ("fusionado", "org:wpp", "organizacion", None, ["WPP plc / Burson Global"], "holding_corporativo_wpp"),
+
+    # Arquetipos de mercado
+    "ARQ_PROV_COMERCIAL": ("conservado", "tema:arquetipo-proveedor-comercial-global", "tema", "Arquetipo Proveedor Comercial Global", ["Proveedor Comercial Global"], None),
+    "ARQ_ASOCIACION": ("conservado", "tema:arquetipo-asociacion-gremial", "tema", "Arquetipo Asociación Gremial", ["Asociación Gremial"], None),
+    "ARQ_ESTANDAR": ("conservado", "tema:arquetipo-estandar-industria", "tema", "Arquetipo Estándar de la Industria", ["Estándar de la Industria"], None),
+    "ARQ_CONSULTORA": ("conservado", "tema:arquetipo-consultora-estrategica", "tema", "Arquetipo Consultora Estratégica", ["Consultora Estratégica"], None),
+    "ARQ_REFERENCIA": ("conservado", "tema:arquetipo-diseno-referencia", "tema", "Arquetipo Diseño de Referencia", ["Diseño de Referencia"], None),
+
+    # Entidades conservadas
+    "ENT_ALIANZAS_DATOS": ("conservado", "tema:alianzas-datos-conectores", "tema", "Alianzas Estratégicas de Datos y Conectores", ["Alianzas Datos"], None),
+    "ENT_ALPHASENSE": ("conservado", "org:alphasense", "organizacion", "AlphaSense Inc.", ["AlphaSense"], None),
+    "ENT_ALPHASENSE_REPORT": ("conservado", "doc:alphasense-forrester-wave", "documento", "Forrester Wave Market and Competitive Intelligence", ["Forrester Wave CI/MI"], None),
+    "ENT_AMEC": ("conservado", "org:amec", "organizacion", "International Association for Measurement and Evaluation of Communication", ["AMEC"], None),
+    "ENT_ATLAS_RECONCILIACION_DOC": ("conservado", "doc:atlas-reconciliacion-v1", "documento", "Global Atlas Reconciliation V1", ["Atlas Reconciliación V1"], None),
+    "ENT_ATLAS_RECONCILIADO": ("conservado", "doc:atlas-reconciliado-p02", "documento", "P02_GLOBAL_ATLAS_RECONCILIATION_V1", ["Atlas Reconciliado P02"], None),
+    "ENT_AUDITORIA_INTEGRACION_POST_M&A": ("conservado", "exp:auditoria-integracion-post-ma", "experimento", "Auditoría de Integración Técnica Post-Adquisición", ["Auditoría M&A Vendors"], None),
+    "ENT_BENCHMARK_4_ARQUETIPOS": ("conservado", "exp:benchmark-cuatro-arquetipos", "experimento", "Benchmark 4 Arquetipos de Corporate Affairs", ["Benchmark 4 Arquetipos"], None),
+    "ENT_BENCHMARK_RAG_RCA": ("conservado", "exp:benchmark-rag-rca", "experimento", "Benchmark RAG Expedientes Ambientales RCA", ["Benchmark RAG RCA"], None),
+    "ENT_BENCHMARK_SENTIMIENTO": ("conservado", "exp:benchmark-sentimiento-regional", "experimento", "Benchmark Independiente de Sentimiento Regional", ["Benchmark Sentimiento"], None),
+    "ENT_BOREALIS": ("conservado", "org:borealis-irth", "organizacion", "Borealis / Irth Solutions", ["Borealis Software", "Irth Solutions"], None),
+    "ENT_BRECHA_COBERTURA": ("conservado", "tema:brecha-cobertura-global-local", "tema", "Brecha de Cobertura Global vs Local", ["Cobertura Global vs Local"], None),
+    "ENT_BRECHA_INTEROP": ("conservado", "tema:brecha-interoperabilidad-multi-modulo", "tema", "Brecha de Interoperabilidad Multi-Módulo", ["Interoperabilidad Multi-Módulo"], None),
+    "ENT_BROADSIGHT": ("conservado", "org:broadsight", "organizacion", "Broadsight / Broadsight AI", ["Broadsight AI"], None),
+    "ENT_BROADSIGHT_CASES": ("conservado", "doc:broadsight-customer-cases", "documento", "Broadsight Enterprise Customer Cases", ["Casos Broadsight"], None),
+    "ENT_BROADSIGHT_SAAS": ("conservado", "prod:broadsight-software", "producto", "Broadsight Software", ["Broadsight SaaS"], None),
+    "ENT_BROADSIGHT_SOURCE": ("conservado", "doc:broadsight-system-of-record", "documento", "Broadsight System of Record Documentation", ["Broadsight System of Record"], None),
+    "ENT_BURSON": ("conservado", "org:burson", "organizacion", "Burson Global", ["Burson"], None),
+    "ENT_CATALOGO_CANONICO_70": ("conservado", "doc:catalogo-canonico-70-vendors", "documento", "Catálogo Maestro Canónico 70 Vendors P02", ["Catálogo 70 Vendors"], None),
+    "ENT_CONTIFY": ("conservado", "org:contify", "organizacion", "Contify", ["Contify Market Intelligence"], None),
+    "ENT_DATAEQ": ("conservado", "org:dataeq", "organizacion", "DataEQ", ["DataEQ Listening"], None),
+    "ENT_DDI_CHILE": ("conservado", "org:ddi-chile", "organizacion", "Departamento de Derechos Intelectuales de Chile", ["DDI Chile"], None),
+    "ENT_DEEP_DIVES_V1": ("conservado", "doc:global-competitor-deep-dives-v1", "documento", "Global Competitor Deep Dives V1", ["Deep Dives V1"], None),
+    "ENT_DIRECT_SIGNAL": ("conservado", "org:direct-signal", "organizacion", "Direct Signal", ["Direct Signal Listening"], None),
+    "ENT_ECOSISTEMA_CHILE": ("conservado", "tema:ecosistema-tecnologico-medios-chile", "tema", "Ecosistema Tecnológico de Medios Chile", ["Ecosistema Medios Chile"], None),
+    "ENT_ENTUAL": ("conservado", "org:entual", "organizacion", "Entual B.V.", ["Entual Intelligence"], None),
+    "ENT_ENTUAL_SOURCE": ("conservado", "doc:entual-platform-faq", "documento", "Entual Platform FAQ", ["FAQ Entual"], None),
+    "ENT_ESCALA_EVIDENCIA_P02": ("conservado", "doc:escala-epistemica-certeza-comercial", "documento", "Escala Epistémica de Certeza Comercial P02", ["Escala Epistémica Comercial"], None),
+    "ENT_ESTRATEGIA_BUILD_BUY": ("conservado", "tema:estrategia-build-buy-partner", "tema", "Estrategia Build Buy Partner BRIDGE", ["Build Buy Partner"], None),
+    "ENT_ESTUDIO_ACEPTABILIDAD_IA": ("conservado", "doc:estudio-aceptabilidad-ia", "documento", "Estudio de Aceptabilidad Legal de Declaraciones por IA", ["Aceptabilidad Legal IA"], None),
+    "ENT_ESTUDIO_BUNDLING": ("conservado", "doc:estudio-disposicion-pagar-bundling", "documento", "Estudio de Disposición a Pagar por Suite Unificada", ["Disposición a Pagar Bundling"], None),
+    "ENT_ESTUDIO_PREDICCION": ("conservado", "doc:estudio-prediccion-litigios", "documento", "Estudio Retrospectivo Predicción Litigios Socioambientales", ["Predicción Litigios"], None),
+    "ENT_ESTUDIO_TCO_REAL": ("conservado", "doc:estudio-tco-real-software", "documento", "Estudio de TCO Real y Costos Ocultos de Software", ["TCO Real Software"], None),
+    "ENT_FE_ERRATAS_P02": ("conservado", "doc:p02-global-readme-errata", "documento", "00_P02_GLOBAL_READ_ME_AND_ERRATA", ["Errata P02 Global"], None),
+    "ENT_FGS_GLOBAL": ("conservado", "org:fgs-global", "organizacion", "FGS Global", ["FGS"], None),
+    "ENT_FUENTE_ADDENDUM": ("conservado", "doc:regional-addendum-v1", "documento", "Regional Addendum V1", ["Addendum Regional V1"], None),
+    "ENT_FUENTE_ADDENDUM_SEC6": ("conservado", "doc:regional-addendum-sec6", "documento", "Regional Addendum Section 6", ["Addendum Section 6"], None),
+    "ENT_FUENTE_LITORAL": ("conservado", "doc:litoralpress-documentation", "documento", "Litoralpress Documentation", ["Documentación Litoralpress"], None),
+    "ENT_FUENTE_MAP_V1": ("conservado", "doc:global-market-map-v1", "documento", "Global Market Map V1", ["Market Map V1"], None),
+    "ENT_GLEAN": ("conservado", "org:glean", "organizacion", "Glean Technologies Inc.", ["Glean"], None),
+    "ENT_GLEAN_SPEC": ("conservado", "doc:glean-product-specifications", "documento", "Glean Product Specifications", ["Specs Glean"], None),
+    "ENT_HOOTSUITE": ("conservado", "org:hootsuite", "organizacion", "Hootsuite Inc.", ["Hootsuite"], None),
+    "ENT_IRTH_SOLUTIONS": ("conservado", "org:irth-solutions", "organizacion", "Irth Solutions LLC", ["Irth Solutions"], None),
+    "ENT_KKR": ("conservado", "org:kkr", "organizacion", "Kohlberg Kravis Roberts & Co. (KKR)", ["KKR"], None),
+    "ENT_LICENCIAS_PRENSA": ("conservado", "doc:licencias-colectivas-reproduccion-prensa", "documento", "Licencias Colectivas de Reproducción de Prensa", ["Licencias Colectivas Prensa"], None),
+    "ENT_LITORALPRESS": ("conservado", "org:litoralpress", "organizacion", "Litoralpress Ltda.", ["Litoralpress"], None),
+    "ENT_MELTWATER": ("conservado", "org:meltwater", "organizacion", "Meltwater Group", ["Meltwater N.V.", "Meltwater"], None),
+    "ENT_MERCADO_PUBLICO_CHILE": ("conservado", "org:mercado-publico-chile", "organizacion", "Mercado Público Chile (ChileCompra)", ["Mercado Público", "ChileCompra"], None),
+    "ENT_ONCLUSIVE": ("conservado", "org:onclusive", "organizacion", "Onclusive Inc.", ["Onclusive"], None),
+    "ENT_OPEN_POINT": ("conservado", "org:open-point-group", "organizacion", "Open Point Group", ["Open Point"], None),
+    "ENT_PILOTO_MUNICIPAL": ("conservado", "exp:piloto-ingesta-municipal", "experimento", "Piloto de Ingesta Regulatoria Municipal Descentralizada", ["Piloto Municipal"], None),
+    "ENT_POLITICA_RETENCION": ("conservado", "doc:politica-retencion-copyright", "documento", "Política Canónica de Retención y Copyright", ["Política Retención"], None),
+    "ENT_PREZLY": ("conservado", "org:prezly", "organizacion", "Prezly SPRL", ["Prezly"], None),
+    "ENT_PREZLY_CASES": ("conservado", "doc:prezly-customer-cases", "documento", "Prezly Customer Cases", ["Casos Prezly"], None),
+    "ENT_PROTOCOLO_DEMO_TOP10": ("conservado", "doc:protocolo-auditoria-demos-top10", "documento", "Protocolo de Auditoría de Demos Top 10 Comparables", ["Protocolo Demos Top 10"], None),
+    "ENT_PRUEBA_ESTRES_GRAFO": ("conservado", "exp:prueba-estres-grafo-unificado", "experimento", "Prueba de Estrés Grafo Unificado 4 Módulos", ["Estrés Grafo 4 Módulos"], None),
+    "ENT_QUORUM": ("conservado", "org:quorum-analytics", "organizacion", "Quorum Analytics Inc.", ["Quorum"], None),
+    "ENT_RECTIFICACION_M&A": ("conservado", "doc:directiva-rectificacion-ma-p02", "documento", "Directiva de Rectificación M&A P02", ["Rectificación M&A P02"], None),
+    "ENT_REFUTACION_ALL_IN_ONE": ("conservado", "doc:dictamen-refutacion-all-in-one", "documento", "Dictamen de Refutación de Suites All-in-One", ["Refutación All in One"], None),
+    "ENT_REGION_APAC": ("conservado", "tema:region-mercado-apac", "tema", "Mercado Asia-Pacífico", ["APAC"], None),
+    "ENT_REGION_LATAM": ("conservado", "tema:region-mercado-latam", "tema", "Mercado América Latina", ["LatAm"], None),
+    "ENT_REGLA_CERO_POR": ("conservado", "doc:regla-canonica-cero-por-p02", "documento", "Regla Canónica Cero POR en Vendors P02", ["Regla Cero POR"], None),
+    "ENT_SEC_FORM_6K": ("conservado", "doc:sec-form-6k-wpp-plc", "documento", "SEC Form 6-K a5017o.htm (WPP plc)", ["SEC Form 6-K WPP"], None),
+    "ENT_SILOS_OPERACIONALES": ("conservado", "riesgo:silos-operacionales-post-adquisicion", "riesgo", "Silos Operacionales Post-Adquisición", ["Silos Post-M&A"], None),
+    "ENT_SUBTEL_CHILE": ("conservado", "org:subtel-chile", "organizacion", "Subsecretaría de Telecomunicaciones de Chile", ["SUBTEL"], None),
+    "ENT_TIMELINE_MA": ("conservado", "doc:cronologia-auditada-ma-p02", "documento", "Cronología Auditada M&A Corporate Affairs", ["Cronología M&A P02"], None),
+    "ENT_WPP_PLC": ("conservado", "org:wpp", "organizacion", "WPP plc", ["WPP"], None),
+    "ESTANDAR_AMEC_3": ("conservado", "doc:amec-barcelona-principles-3", "documento", "AMEC Barcelona Principles 3.0", ["Barcelona Principles 3.0"], None),
+    "GRAFO_BIPARTITO": ("conservado", "tema:grafo-bipartito-bitemporal", "tema", "Grafo Bipartito Bitemporal BRIDGE", ["Grafo Bipartito Bitemporal"], None),
+    "GRP_CISION": ("conservado", "org:cision", "organizacion", "Cision Ltd. (Platinum Equity)", ["Cision", "Cision Ltd."], None),
+    "GRP_SIGNAL_AI": ("conservado", "org:signal-ai", "organizacion", "Signal AI Ltd.", ["Signal AI"], None),
+    "INF_CISION_BRANDWATCH": ("conservado", "tema:integracion-cision-brandwatch", "tema", "Cision + Brandwatch (M&A Segregado)", ["Cision Brandwatch Segregado"], None),
+    "INT_ALPHASENSE_DRIVE": ("conservado", "prod:conector-alphasense-sharepoint-drive", "producto", "AlphaSense + SharePoint/Drive Connector", ["Conector AlphaSense Drive"], None),
+    "INT_DATAMINR_CRISIS24": ("conservado", "prod:integracion-dataminr-crisis24-horizon", "producto", "Dataminr + Crisis24 Horizon", ["Dataminr Crisis24"], None),
+    "MOD_EXECUTIVE_BRIEF": ("conservado", "prod:modulo-executive-briefs-bridge", "producto", "Generador de Executive Briefs BRIDGE", ["Executive Briefs BRIDGE"], None),
+    "REG_FUENTES_ASUNTOS_PUB": ("conservado", "doc:registro-fuentes-asuntos-publicos-p02", "documento", "Registro de Fuentes de Asuntos Públicos P02", ["Fuentes Asuntos Públicos P02"], None),
+    "REG_FUENTES_ESCUCHA": ("conservado", "doc:registro-fuentes-plataformas-escucha-p02", "documento", "Registro de Fuentes de Plataformas de Escucha", ["Fuentes Escucha P02"], None),
+}
 
 
-def obtener_primer_pilar(entidad: dict) -> str:
-    """Calcula el primer pilar donde aparece mencionada la entidad."""
-    pils = set()
-    for nb in entidad.get("mentioned_in_notebooks", []):
-        pils.add(nb[:3])
-    for q in entidad.get("questions", []):
-        pils.add(q[:3])
-    for p in PILARES:
-        if p in pils:
-            return p
-    return "P01"
-
-
-def cargar_existentes(r: Path) -> tuple[dict[str, dict], list[dict]]:
-    """Carga las entidades y el mapa existentes si ya fueron inicializados."""
-    entidades = {}
-    mapa = []
-
-    ent_path = r / "kb" / "grafo" / "entidades.jsonl"
-    if ent_path.exists():
-        with open(ent_path, "r", encoding="utf-8") as fh:
-            for line in fh:
-                if not line.strip():
-                    continue
-                try:
-                    e = json.loads(line)
-                    # Si es formato canónico con ids_legado
-                    if "ids_legado" in e and "entity_id" in e:
-                        entidades[e["entity_id"]] = e
-                except Exception as err:
-                    logger.error(f"Error cargando entidad: {type(err).__name__} (detalles omitidos por seguridad)")
-
-    mapa_path = r / "kb" / "grafo" / "mapa_ids.jsonl"
-    if mapa_path.exists():
-        with open(mapa_path, "r", encoding="utf-8") as fh:
-            for line in fh:
-                if not line.strip():
-                    continue
-                try:
-                    m = json.loads(line)
-                    mapa.append(m)
-                except Exception as err:
-                    logger.error(f"Error cargando mapa: {type(err).__name__} (detalles omitidos por seguridad)")
-
-    return entidades, mapa
-
-
-def resolver_pilar_p01(r: Path) -> tuple[dict[str, dict], list[dict]]:
-    """Resuelve las 64 entidades del pilar P01."""
-    entidades, mapa = cargar_existentes(r)
+def aplicar_mapa_pilar(
+    entidades: dict[str, dict], mapa: list[dict], pilar_map: dict
+) -> tuple[dict[str, dict], list[dict]]:
+    """Aplica las reglas de mapeo de un pilar de forma determinista en dos pases."""
     ids_mapa_vistos = {m["id_legado"] for m in mapa}
 
     # Pase 1: Crear entidades conservadas
-    for leg_id, (accion, id_nuevo, tipo, canon_name, aliases, motivo) in P01_MAP.items():
+    for leg_id, (accion, id_nuevo, tipo, canon_name, aliases, motivo) in pilar_map.items():
         if leg_id in ids_mapa_vistos:
             continue
         if accion == "conservado":
@@ -456,7 +528,7 @@ def resolver_pilar_p01(r: Path) -> tuple[dict[str, dict], list[dict]]:
                         entidades[id_nuevo]["aliases"].append(a)
 
     # Pase 2: Procesar fusionados y eliminados
-    for leg_id, (accion, id_nuevo, tipo, canon_name, aliases, motivo) in P01_MAP.items():
+    for leg_id, (accion, id_nuevo, tipo, canon_name, aliases, motivo) in pilar_map.items():
         if leg_id in ids_mapa_vistos:
             continue
         if accion == "fusionado":
@@ -481,6 +553,51 @@ def resolver_pilar_p01(r: Path) -> tuple[dict[str, dict], list[dict]]:
             })
 
     return entidades, mapa
+
+
+def cargar_existentes(r: Path) -> tuple[dict[str, dict], list[dict]]:
+    """Carga las entidades y el mapa existentes si ya fueron inicializados."""
+    entidades = {}
+    mapa = []
+
+    ent_path = r / "kb" / "grafo" / "entidades.jsonl"
+    if ent_path.exists():
+        with open(ent_path, "r", encoding="utf-8") as fh:
+            for line in fh:
+                if not line.strip():
+                    continue
+                try:
+                    e = json.loads(line)
+                    if "ids_legado" in e and "entity_id" in e:
+                        entidades[e["entity_id"]] = e
+                except Exception as err:
+                    logger.error(f"Error cargando entidad: {type(err).__name__} (detalles omitidos por seguridad)")
+
+    mapa_path = r / "kb" / "grafo" / "mapa_ids.jsonl"
+    if mapa_path.exists():
+        with open(mapa_path, "r", encoding="utf-8") as fh:
+            for line in fh:
+                if not line.strip():
+                    continue
+                try:
+                    m = json.loads(line)
+                    mapa.append(m)
+                except Exception as err:
+                    logger.error(f"Error cargando mapa: {type(err).__name__} (detalles omitidos por seguridad)")
+
+    return entidades, mapa
+
+
+def resolver_pilar_p01(r: Path) -> tuple[dict[str, dict], list[dict]]:
+    """Resuelve las 64 entidades del pilar P01."""
+    entidades, mapa = cargar_existentes(r)
+    return aplicar_mapa_pilar(entidades, mapa, P01_MAP)
+
+
+def resolver_pilar_p02(r: Path) -> tuple[dict[str, dict], list[dict]]:
+    """Resuelve las 114 entidades del pilar P02."""
+    entidades, mapa = cargar_existentes(r)
+    return aplicar_mapa_pilar(entidades, mapa, P02_MAP)
 
 
 def guardar_grafo(r: Path, entidades: dict[str, dict], mapa: list[dict]):
@@ -560,6 +677,8 @@ def main():
 
     if pilar == "P01":
         entidades, mapa = resolver_pilar_p01(r)
+    elif pilar == "P02":
+        entidades, mapa = resolver_pilar_p02(r)
     else:
         print(f"Resolución para pilar {pilar} aún no implementada en este paso.")
         sys.exit(1)
