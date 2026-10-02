@@ -6,15 +6,25 @@
 {"id_legado": "ABAC", "accion": "fusionado", "id_nuevo": "prod:control-acceso-pre-recuperacion-abac", "motivo": "entidad_existente"}
 {"id_legado": "ABAC Micro-Latency", "accion": "conservado", "id_nuevo": "tema:optimizacion-micro-latencia-abac", "motivo": null}
 {"id_legado": "ABAC PDP/PEP", "accion": "conservado", "id_nuevo": "prod:motor-abac-pdp-pep", "motivo": null}
+{"id_legado": "AHORRO_HORAS_DEMOSTRADO", "accion": "fusionado", "id_nuevo": "met:ahorro-neto-tiempo-validado", "motivo": "variante_denominacion"}
+{"id_legado": "AHORRO_NETO_VALIDADO", "accion": "conservado", "id_nuevo": "met:ahorro-neto-tiempo-validado", "motivo": null}
 {"id_legado": "AICPA SOC 2", "accion": "fusionado", "id_nuevo": "doc:estandar-soc-2", "motivo": "entidad_existente"}
 {"id_legado": "AICPA SOC 2 Type II", "accion": "fusionado", "id_nuevo": "doc:estandar-soc-2", "motivo": "entidad_existente"}
+{"id_legado": "ALCE_BENCHMARK", "accion": "conservado", "id_nuevo": "prod:alce-benchmark", "motivo": null}
+{"id_legado": "ALCE_CITATION_PRECISION", "accion": "conservado", "id_nuevo": "met:precision-citacion-alce", "motivo": null}
+{"id_legado": "ALCE_PAPER", "accion": "conservado", "id_nuevo": "doc:gao-et-al-2023-alce", "motivo": null}
 {"id_legado": "AMEC", "accion": "fusionado", "id_nuevo": "org:amec", "motivo": "variante_denominacion_amec"}
+{"id_legado": "AMEC BP 3.0", "accion": "fusionado", "id_nuevo": "doc:amec-barcelona-principles-3", "motivo": "entidad_existente"}
 {"id_legado": "AMEC Framework", "accion": "fusionado", "id_nuevo": "tema:taxonomia-medicion-amec-ief", "motivo": "variante_denominacion_amec_framework"}
 {"id_legado": "AMEC Principles 3.0", "accion": "fusionado", "id_nuevo": "doc:amec-barcelona-principles-3", "motivo": "entidad_existente"}
 {"id_legado": "AMEC ROI", "accion": "conservado", "id_nuevo": "met:retorno-inversion-comunicacion-amec", "motivo": null}
+{"id_legado": "AMEC_FRAMEWORK", "accion": "fusionado", "id_nuevo": "tema:taxonomia-medicion-amec-ief", "motivo": "entidad_existente"}
+{"id_legado": "AMEC_STANDARDS_DOC", "accion": "fusionado", "id_nuevo": "doc:amec-barcelona-principles-3", "motivo": "entidad_existente"}
+{"id_legado": "ANCLA_SEMANTICA", "accion": "conservado", "id_nuevo": "met:ancla-semantica-escala-likert", "motivo": null}
 {"id_legado": "ANLA", "accion": "conservado", "id_nuevo": "org:anla-colombia", "motivo": null}
 {"id_legado": "API Gateway", "accion": "conservado", "id_nuevo": "prod:api-gateway-corporativo", "motivo": null}
 {"id_legado": "APR", "accion": "conservado", "id_nuevo": "tema:agua-potable-rural-apr", "motivo": null}
+{"id_legado": "ARES_EVAL", "accion": "conservado", "id_nuevo": "prod:ares-evaluation-framework", "motivo": null}
 {"id_legado": "ARPU", "accion": "conservado", "id_nuevo": "met:arpu-ingreso-promedio-usuario", "motivo": null}
 {"id_legado": "ARQ_ASOCIACION", "accion": "conservado", "id_nuevo": "tema:arquetipo-asociacion-gremial", "motivo": null}
 {"id_legado": "ARQ_CONSULTORA", "accion": "conservado", "id_nuevo": "tema:arquetipo-consultora-estrategica", "motivo": null}
@@ -22,6 +32,7 @@
 {"id_legado": "ARQ_PROV_COMERCIAL", "accion": "conservado", "id_nuevo": "tema:arquetipo-proveedor-comercial-global", "motivo": null}
 {"id_legado": "ARQ_REFERENCIA", "accion": "conservado", "id_nuevo": "tema:arquetipo-diseno-referencia", "motivo": null}
 {"id_legado": "ARR USD 300.000", "accion": "conservado", "id_nuevo": "met:annual-recurring-revenue-arr", "motivo": null}
+{"id_legado": "ATAQUE_CROSS_TENANT", "accion": "conservado", "id_nuevo": "riesgo:ataque-fuga-cross-tenant", "motivo": null}
 {"id_legado": "AVE Pseudocientífico", "accion": "fusionado", "id_nuevo": "comp:proscripcion-definitiva-ave", "motivo": "variante_denominacion_proscripcion_ave"}
 {"id_legado": "AVE Repudiation", "accion": "fusionado", "id_nuevo": "comp:proscripcion-definitiva-ave", "motivo": "entidad_existente"}
 {"id_legado": "AWS Bedrock", "accion": "conservado", "id_nuevo": "prod:amazon-bedrock-platform", "motivo": null}
@@ -56,6 +67,7 @@
 {"id_legado": "ApprovalGate", "accion": "conservado", "id_nuevo": "prod:compuerta-aprobacion-approval-gate", "motivo": null}
 {"id_legado": "ApprovedMessageSchema", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "ArXiv", "accion": "conservado", "id_nuevo": "org:arxiv", "motivo": null}
+{"id_legado": "ArXiv 2025 Cost-Benefit", "accion": "fusionado", "id_nuevo": "doc:arxiv-2025-cost-benefit-analysis", "motivo": "variante_denominacion"}
 {"id_legado": "ArXiv:2404.11446", "accion": "conservado", "id_nuevo": "doc:arxiv-2404-11446", "motivo": null}
 {"id_legado": "Arbitraje Fáctico", "accion": "conservado", "id_nuevo": "tema:arbitraje-factico-discrepancias", "motivo": null}
 {"id_legado": "Arquitectura en 2 Tiers", "accion": "fusionado", "id_nuevo": "tema:estrategia-computo-llm-multitier", "motivo": "variante_denominacion"}
@@ -82,16 +94,22 @@
 {"id_legado": "Autonomía de Procurement", "accion": "conservado", "id_nuevo": "tema:autonomia-de-adquisicion-procurement", "motivo": null}
 {"id_legado": "Azerta", "accion": "conservado", "id_nuevo": "org:azerta", "motivo": null}
 {"id_legado": "Azure OpenAI", "accion": "fusionado", "id_nuevo": "prod:azure-openai-service", "motivo": "variante_denominacion"}
+{"id_legado": "BANDA_EDICION_SALUDABLE", "accion": "conservado", "id_nuevo": "met:banda-edicion-humana-saludable", "motivo": null}
 {"id_legado": "BCMMetrics", "accion": "conservado", "id_nuevo": "met:bcm-metrics", "motivo": null}
 {"id_legado": "BCN API OAS 3.1", "accion": "conservado", "id_nuevo": "doc:bcn-api-oas-31", "motivo": null}
 {"id_legado": "BCN Chile", "accion": "fusionado", "id_nuevo": "org:bcn", "motivo": "variante_denominacion_bcn"}
 {"id_legado": "BCN Ley Chile", "accion": "conservado", "id_nuevo": "prod:bcn-ley-chile-portal", "motivo": null}
 {"id_legado": "BCN Rate Limits", "accion": "conservado", "id_nuevo": "riesgo:limites-tasa-peticiones-bcn-api", "motivo": null}
+{"id_legado": "BM25 vs RAG", "accion": "conservado", "id_nuevo": "tema:comparacion-bm25-lexico-vs-rag-vectorial", "motivo": null}
 {"id_legado": "BOLA / IDOR", "accion": "conservado", "id_nuevo": "tema:vulnerabilidades-bola-idor-api", "motivo": null}
+{"id_legado": "BOOTSTRAP_CI", "accion": "conservado", "id_nuevo": "met:intervalos-confianza-bootstrap-95", "motivo": null}
+{"id_legado": "BOVEDA_LEY_19799", "accion": "conservado", "id_nuevo": "prod:boveda-criptografica-ley-19799", "motivo": null}
 {"id_legado": "BRIDGE", "accion": "fusionado", "id_nuevo": "prod:bridge-intelligence", "motivo": "variante_denominacion"}
 {"id_legado": "BRIDGE Local Advantage", "accion": "conservado", "id_nuevo": "tema:ventaja-local-bridge", "motivo": null}
 {"id_legado": "BRIDGE Multi-Tenant", "accion": "fusionado", "id_nuevo": "prod:bridge-intelligence", "motivo": "variante_denominacion"}
+{"id_legado": "BRIDGE Multi-Tenant RAG", "accion": "conservado", "id_nuevo": "prod:bridge-multi-tenant-rag", "motivo": null}
 {"id_legado": "BRIDGE Tech-Enabled", "accion": "fusionado", "id_nuevo": "prod:bridge-intelligence", "motivo": "variante_denominacion"}
+{"id_legado": "BRIDGE_STUDIO_MX_EXCLUIDA", "accion": "eliminado", "id_nuevo": null, "motivo": "fuente_descartada_auditoria"}
 {"id_legado": "Banca CMF", "accion": "conservado", "id_nuevo": "tema:sector-bancario-regulado-cmf", "motivo": null}
 {"id_legado": "Banco Santander Chile", "accion": "conservado", "id_nuevo": "org:banco-santander-chile", "motivo": null}
 {"id_legado": "Banco Sudamericano Corporativo", "accion": "conservado", "id_nuevo": "org:banco-sudamericano-corporativo", "motivo": null}
@@ -99,7 +117,9 @@
 {"id_legado": "Banderas Rojas", "accion": "fusionado", "id_nuevo": "tema:linea-roja-argumental-voceria", "motivo": "variante_denominacion"}
 {"id_legado": "Barcelona Principles 3.0", "accion": "fusionado", "id_nuevo": "doc:amec-barcelona-principles-3", "motivo": "variante_denominacion_barcelona_principles"}
 {"id_legado": "Baseline Pre-Test", "accion": "conservado", "id_nuevo": "exp:baseline-pre-test", "motivo": null}
+{"id_legado": "BaselineWorkflowDef", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Benchmark Empírico", "accion": "conservado", "id_nuevo": "tema:benchmark-empirico-desempeno", "motivo": null}
+{"id_legado": "BenchmarkedTaskExecution", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Biomarcadores de Estrés", "accion": "conservado", "id_nuevo": "exp:medicion-biomarcadores-estres", "motivo": null}
 {"id_legado": "Bitácora WORM", "accion": "fusionado", "id_nuevo": "tema:almacenamiento-inmutable-worm", "motivo": "variante_denominacion"}
 {"id_legado": "Bloqueo Criptográfico", "accion": "fusionado", "id_nuevo": "tema:audit-trail-inmutable-append-only", "motivo": "variante_denominacion"}
@@ -119,29 +139,45 @@
 {"id_legado": "Broadsight Knowledge", "accion": "fusionado", "id_nuevo": "prod:broadsight-platform", "motivo": "variante_denominacion"}
 {"id_legado": "Broadsight System of Record", "accion": "fusionado", "id_nuevo": "prod:broadsight-platform", "motivo": "variante_denominacion"}
 {"id_legado": "Broadsight Workflow", "accion": "fusionado", "id_nuevo": "prod:broadsight-platform", "motivo": "variante_denominacion"}
+{"id_legado": "Brynjolfsson et al. (NBER)", "accion": "conservado", "id_nuevo": "doc:brynjolfsson-et-al-2023-generative-ai-at-work", "motivo": null}
 {"id_legado": "Bucket Forense Cifrado", "accion": "conservado", "id_nuevo": "tema:almacenamiento-bucket-forense-cifrado", "motivo": null}
 {"id_legado": "Buzón Físico vs Digital", "accion": "conservado", "id_nuevo": "tema:canales-buzon-fisico-vs-digital", "motivo": null}
 {"id_legado": "Buzón Unificado", "accion": "conservado", "id_nuevo": "prod:buzon-unificado-intake-comunicaciones", "motivo": null}
 {"id_legado": "C-Suite", "accion": "conservado", "id_nuevo": "rol:c-suite", "motivo": null}
 {"id_legado": "CAC", "accion": "conservado", "id_nuevo": "met:costo-adquisicion-cliente-cac", "motivo": null}
 {"id_legado": "CAC Payback", "accion": "conservado", "id_nuevo": "met:tiempo-recuperacion-cac-payback", "motivo": null}
+{"id_legado": "CADENA_VALOR_AMEC", "accion": "conservado", "id_nuevo": "doc:cadena-valor-4-fases-amec", "motivo": null}
 {"id_legado": "CAR", "accion": "conservado", "id_nuevo": "tema:conciencia-situacional-car", "motivo": null}
 {"id_legado": "CASO_ASUNTOS_PUB_ANTOFAGASTA", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
+{"id_legado": "CASO_CAE_255", "accion": "conservado", "id_nuevo": "exp:caso-auditoria-estadistica-cae-t01-255", "motivo": null}
+{"id_legado": "CASO_CAF_380", "accion": "conservado", "id_nuevo": "exp:caso-auditoria-forense-caf-t01-380", "motivo": null}
 {"id_legado": "CASO_CAV_P06_404", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
+{"id_legado": "CASO_CCA_140", "accion": "conservado", "id_nuevo": "exp:caso-atribucion-cca-t01-140", "motivo": null}
+{"id_legado": "CASO_CCC_210", "accion": "conservado", "id_nuevo": "exp:caso-continuidad-ccc-t01-210", "motivo": null}
+{"id_legado": "CASO_CCM_105", "accion": "conservado", "id_nuevo": "exp:caso-medicion-ccm-t01-105", "motivo": null}
+{"id_legado": "CASO_CCP_182", "accion": "conservado", "id_nuevo": "exp:caso-pricing-ccp-t01-182", "motivo": null}
 {"id_legado": "CASO_CG_P06_101", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
 {"id_legado": "CASO_CONTINGENCIA_CALAMA", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
 {"id_legado": "CASO_CONTINGENCIA_RCA", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
+{"id_legado": "CASO_CPA_280", "accion": "conservado", "id_nuevo": "exp:caso-pentest-cpa-t01-280", "motivo": null}
 {"id_legado": "CASO_CRC_P06_202", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
 {"id_legado": "CASO_CSR_P06_303", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
+{"id_legado": "CASO_CTH_320", "accion": "conservado", "id_nuevo": "exp:caso-adopcion-humana-cth-t01-320", "motivo": null}
+{"id_legado": "CASO_SMA_PILOTO", "accion": "conservado", "id_nuevo": "exp:caso-evaluacion-humana-ceh-t01-088", "motivo": null}
 {"id_legado": "CCO", "accion": "fusionado", "id_nuevo": "rol:cco", "motivo": "variante_denominacion_cco"}
 {"id_legado": "CCO Chile", "accion": "fusionado", "id_nuevo": "rol:cco", "motivo": "variante_denominacion_cco_chile"}
 {"id_legado": "CEO", "accion": "conservado", "id_nuevo": "rol:ceo", "motivo": null}
+{"id_legado": "CERTIFICADO_FORENSE", "accion": "conservado", "id_nuevo": "doc:certificado-reproduccion-forense-determinista", "motivo": null}
 {"id_legado": "CGR Chile", "accion": "conservado", "id_nuevo": "org:contraloria-general-de-la-republica-cgr", "motivo": null}
 {"id_legado": "CI/CD Sandbox", "accion": "fusionado", "id_nuevo": "tema:integracion-testing-seguridad-cicd", "motivo": "variante_denominacion"}
 {"id_legado": "CIPR", "accion": "conservado", "id_nuevo": "org:cipr-chartered-institute-public-relations", "motivo": null}
 {"id_legado": "CIPR Ethics Guide", "accion": "conservado", "id_nuevo": "doc:cipr-code-conduct-ethics-guide", "motivo": null}
+{"id_legado": "CIRCUIT_BREAKER_CANONICO", "accion": "fusionado", "id_nuevo": "prod:circuit-breaker-multi-proveedor", "motivo": "variante_denominacion"}
+{"id_legado": "CIRCUIT_BREAKER_FAILOVER", "accion": "conservado", "id_nuevo": "prod:circuit-breaker-multi-proveedor", "motivo": null}
 {"id_legado": "CISO", "accion": "fusionado", "id_nuevo": "rol:ciso", "motivo": "entidad_existente"}
 {"id_legado": "CISO Bancario", "accion": "fusionado", "id_nuevo": "rol:ciso", "motivo": "variante_sectorial_ciso"}
+{"id_legado": "CITATION_INSPECTION_RATE", "accion": "conservado", "id_nuevo": "met:tasa-inspeccion-citas", "motivo": null}
+{"id_legado": "CLAUSULA_DELIMITACION", "accion": "conservado", "id_nuevo": "doc:clausula-delimitacion-causal-bridge", "motivo": null}
 {"id_legado": "CMF", "accion": "fusionado", "id_nuevo": "org:cmf", "motivo": "variante_denominacion_cmf"}
 {"id_legado": "CMF Chile", "accion": "fusionado", "id_nuevo": "org:cmf", "motivo": "variante_denominacion_cmf"}
 {"id_legado": "CMF NCG 30", "accion": "conservado", "id_nuevo": "doc:cmf-ncg-30", "motivo": null}
@@ -154,13 +190,24 @@
 {"id_legado": "COMM-Ticket", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "COMP-2025-0045", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
 {"id_legado": "COMP-2025-0104", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
+{"id_legado": "COMPLACENCIA_AUTOMATIZADA", "accion": "fusionado", "id_nuevo": "tema:prevencion-aprobacion-automatica-rubber-stamping", "motivo": "entidad_existente"}
+{"id_legado": "COMPUERTA_G3_STAGE_GATE", "accion": "fusionado", "id_nuevo": "evt:compuerta-stage-gate-g3", "motivo": "variante_denominacion"}
 {"id_legado": "CONADI", "accion": "conservado", "id_nuevo": "org:conadi", "motivo": null}
 {"id_legado": "COPE", "accion": "conservado", "id_nuevo": "org:committee-on-publication-ethics-cope", "motivo": null}
 {"id_legado": "COPE Guidelines", "accion": "conservado", "id_nuevo": "doc:cope-retraction-guidelines", "motivo": null}
+{"id_legado": "CORPUS_EJE8", "accion": "eliminado", "id_nuevo": null, "motivo": "artefacto_auditoria_interno"}
+{"id_legado": "CORPUS_ESTADISTICO_T01", "accion": "eliminado", "id_nuevo": null, "motivo": "artefacto_auditoria_interno"}
+{"id_legado": "CORPUS_HUMANO_T01", "accion": "eliminado", "id_nuevo": null, "motivo": "artefacto_auditoria_interno"}
+{"id_legado": "CORPUS_OCR_HISTORICO", "accion": "conservado", "id_nuevo": "doc:corpus-prueba-ocr-historico", "motivo": null}
+{"id_legado": "CORPUS_REPRODUCCION_T01", "accion": "eliminado", "id_nuevo": null, "motivo": "artefacto_auditoria_interno"}
+{"id_legado": "CORPUS_SEGURIDAD_T01", "accion": "eliminado", "id_nuevo": null, "motivo": "artefacto_auditoria_interno"}
+{"id_legado": "CORRELACION_INTRA_CLUSTER", "accion": "conservado", "id_nuevo": "met:coeficiente-correlacion-intra-cluster-icc", "motivo": null}
+{"id_legado": "CRITERIOS_MUST_MEET", "accion": "conservado", "id_nuevo": "met:criterios-must-meet-innegociables", "motivo": null}
 {"id_legado": "CRM Comercial vs SRM Especializado", "accion": "fusionado", "id_nuevo": "tema:diferenciacion-arquitectonica-crm-vs-srm", "motivo": "variante_denominacion"}
 {"id_legado": "CRM vs SRM", "accion": "conservado", "id_nuevo": "tema:diferenciacion-arquitectonica-crm-vs-srm", "motivo": null}
 {"id_legado": "CSA CCM v4", "accion": "conservado", "id_nuevo": "doc:csa-cloud-controls-matrix-v4", "motivo": null}
 {"id_legado": "CSIRT Nacional", "accion": "conservado", "id_nuevo": "org:csirt-nacional-chile", "motivo": null}
+{"id_legado": "CUATRO_CONTROLES_T01", "accion": "fusionado", "id_nuevo": "exp:cohorte-control-0-manual", "motivo": "variante_denominacion"}
 {"id_legado": "CUMPLIDO_CERRADO", "accion": "eliminado", "id_nuevo": null, "motivo": "estado_fsm_interno"}
 {"id_legado": "Caching Distribuido", "accion": "conservado", "id_nuevo": "tema:arquitectura-caching-distribuido", "motivo": null}
 {"id_legado": "Caché Espejo Local", "accion": "conservado", "id_nuevo": "prod:cache-espejo-local", "motivo": null}
@@ -184,12 +231,14 @@
 {"id_legado": "Celulosa del Biobío", "accion": "fusionado", "id_nuevo": "org:celulosa-del-biobio", "motivo": "variante_denominacion"}
 {"id_legado": "Celulosa del Biobío S.A.", "accion": "conservado", "id_nuevo": "org:celulosa-del-biobio", "motivo": null}
 {"id_legado": "Certificado de Calidad", "accion": "conservado", "id_nuevo": "doc:certificado-calidad-comunicacion", "motivo": null}
+{"id_legado": "ChatGPT Alucinaciones", "accion": "conservado", "id_nuevo": "tema:estudio-alucinaciones-llm-commodity", "motivo": null}
 {"id_legado": "Check Constraint", "accion": "eliminado", "id_nuevo": null, "motivo": "mecanismo_tecnico_bd"}
 {"id_legado": "ChileCompra", "accion": "fusionado", "id_nuevo": "org:mercado-publico-chile", "motivo": "variante_denominacion"}
 {"id_legado": "Choapa", "accion": "conservado", "id_nuevo": "tema:provincia-del-choapa-territorio", "motivo": null}
 {"id_legado": "Churn Anual", "accion": "conservado", "id_nuevo": "met:tasa-churn-anual", "motivo": null}
 {"id_legado": "Ciclo de Vida", "accion": "conservado", "id_nuevo": "tema:ciclo-de-vida-de-la-informacion-dlm", "motivo": null}
 {"id_legado": "Cision", "accion": "fusionado", "id_nuevo": "org:cision", "motivo": "variante_denominacion_cision"}
+{"id_legado": "Cision Clipping", "accion": "fusionado", "id_nuevo": "org:cision", "motivo": "entidad_existente"}
 {"id_legado": "CitationCrossTenantScrubber", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "City of Oshawa Policy", "accion": "conservado", "id_nuevo": "doc:politica-comunicacion-city-of-oshawa", "motivo": null}
 {"id_legado": "ClassificationTier", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
@@ -207,17 +256,24 @@
 {"id_legado": "Comité de Crisis", "accion": "conservado", "id_nuevo": "rol:comite-de-crisis", "motivo": null}
 {"id_legado": "Comms Manoeuvres", "accion": "conservado", "id_nuevo": "tema:maniobras-comunicacionales-estrategicas", "motivo": null}
 {"id_legado": "CommunicationChannel", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "ComparativeControlCohort", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "Compañía Minera del Norte S.A.", "accion": "conservado", "id_nuevo": "org:compania-minera-del-norte", "motivo": null}
 {"id_legado": "Compañía Portuaria del Pacífico", "accion": "conservado", "id_nuevo": "org:compania-portuaria-del-pacifico", "motivo": null}
 {"id_legado": "CompensatingControl", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Componente Arquitectura", "accion": "conservado", "id_nuevo": "tema:componentes-arquitectura-tecnologica", "motivo": null}
 {"id_legado": "Compromiso Derivado", "accion": "conservado", "id_nuevo": "comp:compromiso-comunitario-derivado", "motivo": null}
 {"id_legado": "Compromiso Huérfano (Prohibido)", "accion": "conservado", "id_nuevo": "comp:prohibicion-compromisos-huerfanos", "motivo": null}
+{"id_legado": "Compuerta G0", "accion": "conservado", "id_nuevo": "evt:compuerta-stage-gate-g0", "motivo": null}
+{"id_legado": "Compuerta G1", "accion": "conservado", "id_nuevo": "evt:compuerta-stage-gate-g1", "motivo": null}
+{"id_legado": "Compuerta G2", "accion": "conservado", "id_nuevo": "evt:compuerta-stage-gate-g2", "motivo": null}
+{"id_legado": "Compuerta G3", "accion": "conservado", "id_nuevo": "evt:compuerta-stage-gate-g3", "motivo": null}
 {"id_legado": "Compuerta de Decisión", "accion": "conservado", "id_nuevo": "tema:compuertas-decision-etapas-piloto", "motivo": null}
 {"id_legado": "Compuertas Copulativas", "accion": "conservado", "id_nuevo": "tema:compuertas-copulativas-autorizacion", "motivo": null}
 {"id_legado": "Compuertas de Abstención", "accion": "conservado", "id_nuevo": "comp:compuertas-abstencion-comunicacional", "motivo": null}
 {"id_legado": "Compuertas de Elevación", "accion": "conservado", "id_nuevo": "comp:compuertas-elevacion-comite", "motivo": null}
 {"id_legado": "Comunicado de Prensa", "accion": "conservado", "id_nuevo": "tema:canal-comunicado-de-prensa", "motivo": null}
 {"id_legado": "Comunidad Diaguita Huasco Alto", "accion": "conservado", "id_nuevo": "org:comunidad-diaguita-huasco-alto", "motivo": null}
+{"id_legado": "Comunidad El Quillay", "accion": "conservado", "id_nuevo": "org:comunidad-el-quillay", "motivo": null}
 {"id_legado": "Comunidad Indígena de Solor", "accion": "conservado", "id_nuevo": "org:comunidad-indigena-de-solor", "motivo": null}
 {"id_legado": "Comunidades Locales", "accion": "conservado", "id_nuevo": "rol:comunidades-locales", "motivo": null}
 {"id_legado": "Conciliación Fáctica", "accion": "fusionado", "id_nuevo": "tema:arbitraje-factico-discrepancias", "motivo": "variante_denominacion"}
@@ -232,6 +288,10 @@
 {"id_legado": "ContainmentAction", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "ContentGrip", "accion": "conservado", "id_nuevo": "prod:contentgrip-platform", "motivo": null}
 {"id_legado": "Contrato Anual USD 60K", "accion": "conservado", "id_nuevo": "met:valor-contrato-anual-acv", "motivo": null}
+{"id_legado": "Control 0 (Manual)", "accion": "conservado", "id_nuevo": "exp:cohorte-control-0-manual", "motivo": null}
+{"id_legado": "Control 1 (BM25)", "accion": "conservado", "id_nuevo": "exp:cohorte-control-1-bm25", "motivo": null}
+{"id_legado": "Control 2 (Commodity LLM)", "accion": "conservado", "id_nuevo": "exp:cohorte-control-2-commodity-llm", "motivo": null}
+{"id_legado": "Control 3 (Agencia Clipping)", "accion": "conservado", "id_nuevo": "exp:cohorte-control-3-agencia-clipping", "motivo": null}
 {"id_legado": "ControlDef", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "ControlImplementation", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Controles Compensatorios", "accion": "conservado", "id_nuevo": "comp:adopcion-controles-compensatorios-seguridad", "motivo": null}
@@ -239,10 +299,13 @@
 {"id_legado": "Conversión 65%", "accion": "fusionado", "id_nuevo": "met:tasa-conversion-anual", "motivo": "cifra_en_denominacion"}
 {"id_legado": "Conversión Anual", "accion": "conservado", "id_nuevo": "met:tasa-conversion-anual", "motivo": null}
 {"id_legado": "Coombs SCCT", "accion": "fusionado", "id_nuevo": "tema:teoria-situacional-comunicacion-crisis-scct", "motivo": "variante_denominacion_scct"}
+{"id_legado": "Cooper Stage-Gate", "accion": "fusionado", "id_nuevo": "doc:cooper-stage-gate-system", "motivo": "variante_denominacion"}
 {"id_legado": "Cornell LII", "accion": "conservado", "id_nuevo": "org:cornell-legal-information-institute-lii", "motivo": null}
 {"id_legado": "Cornell LII 10b-5", "accion": "fusionado", "id_nuevo": "doc:sec-rule-10b-5", "motivo": "variante_denominacion"}
 {"id_legado": "Corte Suprema", "accion": "conservado", "id_nuevo": "org:corte-suprema-de-chile", "motivo": null}
 {"id_legado": "Corte de Apelaciones", "accion": "conservado", "id_nuevo": "org:corte-de-apelaciones-de-chile", "motivo": null}
+{"id_legado": "CostBenefitCalculation", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "Costo Asimétrico del Error", "accion": "fusionado", "id_nuevo": "riesgo:principio-fallo-fatal-asimetrico", "motivo": "variante_denominacion"}
 {"id_legado": "Costo Marginal", "accion": "conservado", "id_nuevo": "met:costo-marginal-por-reporte", "motivo": null}
 {"id_legado": "Costos Cotizados", "accion": "conservado", "id_nuevo": "met:costos-cotizados", "motivo": null}
 {"id_legado": "Costos Observados", "accion": "conservado", "id_nuevo": "met:costos-observados", "motivo": null}
@@ -268,11 +331,17 @@
 {"id_legado": "D4 Datos Personales", "accion": "conservado", "id_nuevo": "tema:clasificacion-datos-d4-datos-personales", "motivo": null}
 {"id_legado": "D5 Secretos Terceros", "accion": "conservado", "id_nuevo": "tema:clasificacion-datos-d5-secretos-terceros", "motivo": null}
 {"id_legado": "DAG de Aprobación", "accion": "conservado", "id_nuevo": "tema:grafo-dag-aprobacion-flujos", "motivo": null}
+{"id_legado": "DATA_POISONING_RIESGO", "accion": "conservado", "id_nuevo": "riesgo:envenenamiento-fuentes-documentales", "motivo": null}
+{"id_legado": "DENOMINADORES_CANONICOS_AMEC", "accion": "fusionado", "id_nuevo": "doc:especificacion-denominadores-canonicos-amec", "motivo": "variante_denominacion"}
+{"id_legado": "DENOMINADOR_CANONICO", "accion": "conservado", "id_nuevo": "doc:especificacion-denominadores-canonicos-amec", "motivo": null}
+{"id_legado": "DESLINDE_REPUTACIONAL", "accion": "fusionado", "id_nuevo": "doc:clausula-delimitacion-causal-bridge", "motivo": "variante_denominacion"}
 {"id_legado": "DGA", "accion": "conservado", "id_nuevo": "org:dga", "motivo": null}
 {"id_legado": "DGA / Sernageomin", "accion": "conservado", "id_nuevo": "org:dga-sernageomin", "motivo": null}
 {"id_legado": "DINFOS", "accion": "conservado", "id_nuevo": "org:dinfos", "motivo": null}
+{"id_legado": "DISCREPANCIA_EJE1", "accion": "conservado", "id_nuevo": "riesgo:discrepancia-compuertas-piloto", "motivo": null}
 {"id_legado": "DOH Chile", "accion": "conservado", "id_nuevo": "org:direccion-de-obras-hidraulicas-doh", "motivo": null}
 {"id_legado": "DPA", "accion": "fusionado", "id_nuevo": "doc:openai-services-agreement-and-dpa", "motivo": "variante_denominacion"}
+{"id_legado": "DRAFT_ACCEPTANCE_RATE", "accion": "conservado", "id_nuevo": "met:tasa-aceptacion-borradores", "motivo": null}
 {"id_legado": "Darzin (Fuente Fallida)", "accion": "conservado", "id_nuevo": "prod:darzin-software", "motivo": null}
 {"id_legado": "Data Custodian", "accion": "conservado", "id_nuevo": "rol:data-custodian-corporativo", "motivo": null}
 {"id_legado": "Data Minimization", "accion": "conservado", "id_nuevo": "comp:principio-minimizacion-de-datos", "motivo": null}
@@ -288,6 +357,7 @@
 {"id_legado": "Deduplicación", "accion": "conservado", "id_nuevo": "tema:estrategia-deduplicacion-entidades", "motivo": null}
 {"id_legado": "Deduplicación de Fuentes", "accion": "fusionado", "id_nuevo": "tema:estrategia-deduplicacion-entidades", "motivo": "variante_denominacion"}
 {"id_legado": "Deepfakes", "accion": "conservado", "id_nuevo": "tema:mitigacion-deepfakes-desinformacion", "motivo": null}
+{"id_legado": "Deephouse (2000)", "accion": "conservado", "id_nuevo": "doc:deephouse-2000-media-reputation", "motivo": null}
 {"id_legado": "Defensibilidad (Moat)", "accion": "conservado", "id_nuevo": "tema:defensibilidad-estrategica-moat", "motivo": null}
 {"id_legado": "Delegado Presidencial", "accion": "conservado", "id_nuevo": "rol:delegado-presidencial-regional", "motivo": null}
 {"id_legado": "Derecho al Olvido", "accion": "conservado", "id_nuevo": "tema:derecho-al-olvido-y-supresion-datos", "motivo": null}
@@ -689,13 +759,17 @@
 {"id_legado": "EN_VERIFICACION", "accion": "eliminado", "id_nuevo": null, "motivo": "estado_fsm_interno"}
 {"id_legado": "ERP SAP", "accion": "fusionado", "id_nuevo": "prod:sap-erp-corporativo", "motivo": "variante_denominacion"}
 {"id_legado": "ESTANDAR_AMEC_3", "accion": "conservado", "id_nuevo": "doc:amec-barcelona-principles-3", "motivo": null}
+{"id_legado": "ESTUDIO_COGNITIVO_12M", "accion": "conservado", "id_nuevo": "exp:estudio-longitudinal-competencia-cognitiva", "motivo": null}
 {"id_legado": "EU AI Act Annex III", "accion": "conservado", "id_nuevo": "doc:eu-ai-act-annex-iii", "motivo": null}
+{"id_legado": "EXECUTION_MANIFEST_BRIDGE", "accion": "conservado", "id_nuevo": "doc:manifiesto-ejecucion-inmutable-reproducibilidad", "motivo": null}
+{"id_legado": "EXPERIMENTO_CHUNKING_CMF", "accion": "conservado", "id_nuevo": "exp:experimento-chunking-tabular-cmf", "motivo": null}
 {"id_legado": "EY Audit", "accion": "conservado", "id_nuevo": "org:ernst-and-young", "motivo": null}
 {"id_legado": "Economic Buyer", "accion": "conservado", "id_nuevo": "rol:economic-buyer", "motivo": null}
 {"id_legado": "EmbargoSchedule", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Emisiones Alcance 1 y 2", "accion": "conservado", "id_nuevo": "met:emisiones-gei-alcance-1-y-2", "motivo": null}
 {"id_legado": "Emisiones GEI", "accion": "fusionado", "id_nuevo": "met:emisiones-gei-alcance-1-y-2", "motivo": "variante_denominacion"}
 {"id_legado": "Encaje Producto-Mercado", "accion": "conservado", "id_nuevo": "tema:encaje-producto-mercado-pmf", "motivo": null}
+{"id_legado": "Energía Austral S.A.", "accion": "conservado", "id_nuevo": "org:energia-austral-sa", "motivo": null}
 {"id_legado": "Enlace Bidireccional", "accion": "fusionado", "id_nuevo": "tema:enlace-canonico-fuentes-evidencia", "motivo": "variante_denominacion"}
 {"id_legado": "Enlace Canónico", "accion": "conservado", "id_nuevo": "tema:enlace-canonico-fuentes-evidencia", "motivo": null}
 {"id_legado": "Entity_AccessPolicy", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
@@ -731,6 +805,7 @@
 {"id_legado": "Escucha Externa", "accion": "conservado", "id_nuevo": "tema:dimension-escucha-externa-senales", "motivo": null}
 {"id_legado": "Escuchar", "accion": "conservado", "id_nuevo": "tema:dimension-ontologica-escuchar", "motivo": null}
 {"id_legado": "European Commission Green Claims", "accion": "conservado", "id_nuevo": "doc:directiva-green-claims-union-europea", "motivo": null}
+{"id_legado": "EvaluationGate", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Event Sourcing", "accion": "conservado", "id_nuevo": "tema:event-sourcing-arquitectura", "motivo": null}
 {"id_legado": "Event Study Methodology", "accion": "conservado", "id_nuevo": "exp:metodologia-estudio-de-eventos", "motivo": null}
 {"id_legado": "Evento Detonante", "accion": "conservado", "id_nuevo": "evt:evento-detonante-contingencia", "motivo": null}
@@ -740,10 +815,17 @@
 {"id_legado": "ExpressRoute", "accion": "conservado", "id_nuevo": "prod:azure-expressroute", "motivo": null}
 {"id_legado": "ExternalDataFlow", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Eye-Tracking", "accion": "conservado", "id_nuevo": "met:medicion-atencion-eye-tracking", "motivo": null}
+{"id_legado": "FATAL_FLAW_RULE", "accion": "conservado", "id_nuevo": "riesgo:principio-fallo-fatal-asimetrico", "motivo": null}
+{"id_legado": "FINOPS_METRIC", "accion": "conservado", "id_nuevo": "met:costo-unitario-por-caso-usd", "motivo": null}
+{"id_legado": "FINOPS_PILOTO", "accion": "conservado", "id_nuevo": "met:estructura-costo-total-piloto-finops", "motivo": null}
+{"id_legado": "FLEISS_KAPPA", "accion": "conservado", "id_nuevo": "met:coeficiente-fleiss-kappa", "motivo": null}
+{"id_legado": "FRESHQA_BENCHMARK", "accion": "conservado", "id_nuevo": "prod:freshqa-benchmark", "motivo": null}
+{"id_legado": "FRICCION_GOBERNANZA", "accion": "conservado", "id_nuevo": "riesgo:friccion-excesiva-gobernanza-permisos", "motivo": null}
 {"id_legado": "FSM (Finite State Machine)", "accion": "fusionado", "id_nuevo": "tema:maquina-estados-ciclo-vida-compromisos", "motivo": "entidad_existente"}
 {"id_legado": "FSM 8 Estados", "accion": "fusionado", "id_nuevo": "tema:maquina-estados-ciclo-vida-compromisos", "motivo": "variante_denominacion"}
 {"id_legado": "Fact Check Record", "accion": "conservado", "id_nuevo": "tema:registro-verificacion-fact-check", "motivo": null}
 {"id_legado": "Factiva Snapshots", "accion": "fusionado", "id_nuevo": "prod:dow-jones-factiva", "motivo": "variante_denominacion"}
+{"id_legado": "FactualQualityAssessment", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Faena Candelaria", "accion": "conservado", "id_nuevo": "org:minera-candelaria", "motivo": null}
 {"id_legado": "Faena Centinela", "accion": "conservado", "id_nuevo": "org:minera-centinela", "motivo": null}
 {"id_legado": "Faena Pelambres", "accion": "conservado", "id_nuevo": "org:minera-los-pelambres", "motivo": null}
@@ -773,15 +855,20 @@
 {"id_legado": "GAP_LEGAL_CHILE_NLP", "accion": "eliminado", "id_nuevo": null, "motivo": "vacio_investigacion"}
 {"id_legado": "GAP_LONGITUDINAL_REPUTATION", "accion": "eliminado", "id_nuevo": null, "motivo": "vacio_investigacion"}
 {"id_legado": "GAP_SIDE_CHANNEL", "accion": "eliminado", "id_nuevo": null, "motivo": "vacio_investigacion"}
+{"id_legado": "GATE_SCORECARD_BRIDGE", "accion": "conservado", "id_nuevo": "doc:gate-decision-scorecard-bridge", "motivo": null}
 {"id_legado": "GDPR", "accion": "conservado", "id_nuevo": "doc:gdpr-reglamento-general-proteccion-datos", "motivo": null}
 {"id_legado": "GDPR Art 3.2", "accion": "fusionado", "id_nuevo": "doc:gdpr-reglamento-general-proteccion-datos", "motivo": "articulo_especifico_gdpr"}
 {"id_legado": "GDPR Art. 17", "accion": "fusionado", "id_nuevo": "doc:gdpr-reglamento-general-proteccion-datos", "motivo": "articulo_especifico_gdpr"}
 {"id_legado": "GHPPI", "accion": "conservado", "id_nuevo": "doc:ghppi-guidance", "motivo": null}
+{"id_legado": "GOLDEN_TESTSET", "accion": "conservado", "id_nuevo": "doc:golden-benchmark-ciego-bridge", "motivo": null}
 {"id_legado": "GRAFO_BIPARTITO", "accion": "conservado", "id_nuevo": "tema:grafo-bipartito-bitemporal", "motivo": null}
+{"id_legado": "GRAFO_VALOR_AMEC", "accion": "conservado", "id_nuevo": "doc:grafo-causalidad-amec-dag", "motivo": null}
 {"id_legado": "GRP_CISION", "accion": "conservado", "id_nuevo": "org:cision", "motivo": null}
 {"id_legado": "GRP_KKR_FGS", "accion": "fusionado", "id_nuevo": "org:kkr", "motivo": "holding_corporativo_kkr"}
 {"id_legado": "GRP_SIGNAL_AI", "accion": "conservado", "id_nuevo": "org:signal-ai", "motivo": null}
 {"id_legado": "GRP_WPP_BURSON", "accion": "fusionado", "id_nuevo": "org:wpp", "motivo": "holding_corporativo_wpp"}
+{"id_legado": "GateDecisionAudit", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "GateMetricThreshold", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Gatekeeper CISO", "accion": "fusionado", "id_nuevo": "rol:ciso", "motivo": "variante_funcional_ciso"}
 {"id_legado": "Gating Logic", "accion": "conservado", "id_nuevo": "tema:logica-compuertas-gating", "motivo": null}
 {"id_legado": "Gemini 1.5 Flash", "accion": "conservado", "id_nuevo": "prod:gemini-15-flash", "motivo": null}
@@ -810,9 +897,11 @@
 {"id_legado": "Grounded Generation", "accion": "conservado", "id_nuevo": "tema:grounded-generation-anclaje-factual", "motivo": null}
 {"id_legado": "Grounding Index", "accion": "conservado", "id_nuevo": "met:indice-de-grounding", "motivo": null}
 {"id_legado": "Grounding Ratio", "accion": "conservado", "id_nuevo": "met:grounding-ratio", "motivo": null}
+{"id_legado": "Grupo de Control Contemporáneo", "accion": "conservado", "id_nuevo": "tema:grupo-control-contemporaneo-evaluacion", "motivo": null}
 {"id_legado": "Guardrails Semánticos", "accion": "fusionado", "id_nuevo": "tema:guardrails-mensajes-corporativos", "motivo": "variante_denominacion"}
 {"id_legado": "Guardrails de Mensaje", "accion": "conservado", "id_nuevo": "tema:guardrails-mensajes-corporativos", "motivo": null}
 {"id_legado": "Guideflow", "accion": "conservado", "id_nuevo": "prod:guideflow-software", "motivo": null}
+{"id_legado": "HECHO_ESENCIAL_CMF", "accion": "fusionado", "id_nuevo": "doc:cmf-ncg-30", "motivo": "entidad_existente"}
 {"id_legado": "HITL", "accion": "conservado", "id_nuevo": "tema:paradigma-human-in-the-loop-hitl", "motivo": null}
 {"id_legado": "HITL Cost", "accion": "conservado", "id_nuevo": "met:costo-operativo-hitl", "motivo": null}
 {"id_legado": "HITL Workflow", "accion": "conservado", "id_nuevo": "tema:flujo-human-in-the-loop", "motivo": null}
@@ -840,8 +929,10 @@
 {"id_legado": "IFC World Bank", "accion": "conservado", "id_nuevo": "org:ifc-world-bank", "motivo": null}
 {"id_legado": "INDH (Sustituido)", "accion": "conservado", "id_nuevo": "org:instituto-nacional-de-derechos-humanos-indh", "motivo": null}
 {"id_legado": "INF_CISION_BRANDWATCH", "accion": "conservado", "id_nuevo": "tema:integracion-cision-brandwatch", "motivo": null}
+{"id_legado": "INTERVALO_95_PRECISION", "accion": "fusionado", "id_nuevo": "met:intervalos-confianza-bootstrap-95", "motivo": "variante_denominacion"}
 {"id_legado": "INT_ALPHASENSE_DRIVE", "accion": "conservado", "id_nuevo": "prod:conector-alphasense-sharepoint-drive", "motivo": null}
 {"id_legado": "INT_DATAMINR_CRISIS24", "accion": "conservado", "id_nuevo": "prod:integracion-dataminr-crisis24-horizon", "motivo": null}
+{"id_legado": "INYECCION_INDIRECTA", "accion": "conservado", "id_nuevo": "riesgo:inyeccion-indirecta-prompts-ocultos", "motivo": null}
 {"id_legado": "IPC Chile", "accion": "conservado", "id_nuevo": "met:indice-precios-consumidor-ipc", "motivo": null}
 {"id_legado": "IPR", "accion": "conservado", "id_nuevo": "org:institute-for-public-relations", "motivo": null}
 {"id_legado": "IPR & CIPR", "accion": "fusionado", "id_nuevo": "org:institute-for-public-relations", "motivo": "variante_asociacion_ipr_cipr"}
@@ -874,13 +965,16 @@
 {"id_legado": "JSON Schema", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Jurisdicción Territorial", "accion": "conservado", "id_nuevo": "tema:jurisdiccion-territorial-normativa", "motivo": null}
 {"id_legado": "Jurisdiction", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "KILL_SWITCH_EMERGENCIA", "accion": "fusionado", "id_nuevo": "evt:detencion-obligatoria-piloto-kill", "motivo": "variante_denominacion"}
 {"id_legado": "KMS CMK", "accion": "fusionado", "id_nuevo": "prod:aws-key-management-service-kms", "motivo": "variante_denominacion"}
 {"id_legado": "KPIs Preacordados", "accion": "conservado", "id_nuevo": "met:kpis-preacordados-piloto", "motivo": null}
 {"id_legado": "KPIs de Éxito", "accion": "fusionado", "id_nuevo": "met:kpis-preacordados-piloto", "motivo": "variante_denominacion"}
+{"id_legado": "KRIPPENDORFF_ALPHA", "accion": "conservado", "id_nuevo": "met:coeficiente-krippendorff-alpha", "motivo": null}
 {"id_legado": "Kancha Investigación", "accion": "conservado", "id_nuevo": "org:kancha-investigacion", "motivo": null}
 {"id_legado": "Kill/Stop", "accion": "conservado", "id_nuevo": "tema:criterio-decision-kill-stop", "motivo": null}
 {"id_legado": "LDAP Corporativo", "accion": "conservado", "id_nuevo": "prod:directorio-ldap-corporativo", "motivo": null}
 {"id_legado": "LEGAL_HOLD_PENDING", "accion": "eliminado", "id_nuevo": null, "motivo": "estado_fsm_interno"}
+{"id_legado": "LLAMA_GUARD_SAFEGUARD", "accion": "conservado", "id_nuevo": "prod:llama-guard-classifier", "motivo": null}
 {"id_legado": "LLYC", "accion": "conservado", "id_nuevo": "org:llyc", "motivo": null}
 {"id_legado": "LTV", "accion": "conservado", "id_nuevo": "met:customer-lifetime-value-ltv", "motivo": null}
 {"id_legado": "Latencia", "accion": "conservado", "id_nuevo": "met:latencia-procesamiento", "motivo": null}
@@ -921,15 +1015,20 @@
 {"id_legado": "Locust Load Testing", "accion": "fusionado", "id_nuevo": "prod:locust-load-testing", "motivo": "entidad_existente"}
 {"id_legado": "Log de Trazabilidad", "accion": "conservado", "id_nuevo": "prod:log-de-trazabilidad-humana", "motivo": null}
 {"id_legado": "Los Vilos", "accion": "conservado", "id_nuevo": "tema:comuna-de-los-vilos-territorio", "motivo": null}
+{"id_legado": "Línea Base Manual", "accion": "conservado", "id_nuevo": "tema:linea-base-manual-operaciones", "motivo": null}
 {"id_legado": "Línea Roja", "accion": "conservado", "id_nuevo": "tema:linea-roja-argumental-voceria", "motivo": null}
 {"id_legado": "Línea Roja Institucional", "accion": "conservado", "id_nuevo": "comp:linea-roja-institucional-voceria", "motivo": null}
 {"id_legado": "Línea Roja de Vocería", "accion": "fusionado", "id_nuevo": "comp:linea-roja-institucional-voceria", "motivo": "variante_denominacion"}
 {"id_legado": "Líneas Rojas", "accion": "fusionado", "id_nuevo": "tema:linea-roja-argumental-voceria", "motivo": "entidad_existente"}
 {"id_legado": "M&A Competidores", "accion": "conservado", "id_nuevo": "riesgo:adquisiciones-competitivas-ma", "motivo": null}
+{"id_legado": "MATRIZ_ESTRATIFICADA", "accion": "conservado", "id_nuevo": "doc:matriz-estratificacion-bidimensional", "motivo": null}
 {"id_legado": "MATRIZ_TRAZABILIDAD_P02", "accion": "eliminado", "id_nuevo": null, "motivo": "registro_interno_auditoria"}
 {"id_legado": "MDPI Academic Review 2026", "accion": "conservado", "id_nuevo": "doc:mdpi-academic-review-2026", "motivo": null}
+{"id_legado": "MODELO_ACTUARIAL_RIESGO", "accion": "conservado", "id_nuevo": "met:modelo-actuarial-riesgo-evitado", "motivo": null}
 {"id_legado": "MOD_EXECUTIVE_BRIEF", "accion": "conservado", "id_nuevo": "prod:modulo-executive-briefs-bridge", "motivo": null}
+{"id_legado": "MONOTONICIDAD_PRECIOS", "accion": "conservado", "id_nuevo": "met:regla-monotonicidad-precios-psm", "motivo": null}
 {"id_legado": "MRR USD 25.000", "accion": "conservado", "id_nuevo": "met:monthly-recurring-revenue-mrr", "motivo": null}
+{"id_legado": "MUESTRA_CANONICA_ARES", "accion": "conservado", "id_nuevo": "exp:muestra-canonica-ares-300-claims", "motivo": null}
 {"id_legado": "Make-or-Buy", "accion": "conservado", "id_nuevo": "tema:analisis-make-or-buy-corporativo", "motivo": null}
 {"id_legado": "Mandato Asambleario", "accion": "conservado", "id_nuevo": "tema:mandato-asambleario-comunitario", "motivo": null}
 {"id_legado": "Mandatory Expert Review", "accion": "conservado", "id_nuevo": "comp:revision-experta-humana-obligatoria", "motivo": null}
@@ -970,6 +1069,7 @@
 {"id_legado": "Modelo Híbrido", "accion": "conservado", "id_nuevo": "tema:modelo-hibrido-ia-experticia-humana", "motivo": null}
 {"id_legado": "Modelo Ontológico de Sustitutos", "accion": "conservado", "id_nuevo": "tema:modelo-ontologico-sustitutos", "motivo": null}
 {"id_legado": "Modelo de Salience (Mitchell et al.)", "accion": "fusionado", "id_nuevo": "tema:modelo-prominencia-mitchell-agle-wood", "motivo": "entidad_existente"}
+{"id_legado": "ModuleHypothesis", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Monitoreo Participativo", "accion": "conservado", "id_nuevo": "tema:monitoreo-socioambiental-participativo", "motivo": null}
 {"id_legado": "Monte Carlo", "accion": "conservado", "id_nuevo": "tema:simulacion-monte-carlo-financiera", "motivo": null}
 {"id_legado": "Multi-Agent Testing Suite", "accion": "conservado", "id_nuevo": "prod:multi-agent-testing-suite", "motivo": null}
@@ -980,11 +1080,18 @@
 {"id_legado": "Máquina de Estados Finita (FSM)", "accion": "fusionado", "id_nuevo": "tema:maquina-estados-ciclo-vida-compromisos", "motivo": "variante_denominacion"}
 {"id_legado": "Máquina de Estados de 8 Etapas", "accion": "fusionado", "id_nuevo": "tema:maquina-estados-ciclo-vida-compromisos", "motivo": "variante_denominacion"}
 {"id_legado": "Mínimo Privilegio", "accion": "conservado", "id_nuevo": "comp:principio-minimo-privilegio-seguridad", "motivo": null}
+{"id_legado": "Módulo Escuchar", "accion": "conservado", "id_nuevo": "prod:modulo-escuchar-bridge", "motivo": null}
+{"id_legado": "Módulo Hablar", "accion": "conservado", "id_nuevo": "prod:modulo-hablar-bridge", "motivo": null}
+{"id_legado": "Módulo Relacionar", "accion": "conservado", "id_nuevo": "prod:modulo-relacionar-bridge", "motivo": null}
+{"id_legado": "Módulo Saber", "accion": "conservado", "id_nuevo": "prod:modulo-saber-bridge", "motivo": null}
 {"id_legado": "Módulo de Crisis", "accion": "conservado", "id_nuevo": "prod:modulo-de-gestion-crisis", "motivo": null}
+{"id_legado": "NASA_TLX_INDEX", "accion": "conservado", "id_nuevo": "met:indice-carga-mental-nasa-tlx", "motivo": null}
+{"id_legado": "NASA_TLX_METRIC", "accion": "fusionado", "id_nuevo": "met:indice-carga-mental-nasa-tlx", "motivo": "variante_denominacion"}
 {"id_legado": "NCG 30", "accion": "fusionado", "id_nuevo": "doc:cmf-ncg-30", "motivo": "variante_denominacion"}
 {"id_legado": "NCG 461", "accion": "fusionado", "id_nuevo": "doc:cmf-ncg-461", "motivo": "entidad_existente"}
 {"id_legado": "NCG 461 CMF", "accion": "fusionado", "id_nuevo": "doc:cmf-ncg-461", "motivo": "variante_denominacion_ncg_461"}
 {"id_legado": "NDAA Media Relations", "accion": "conservado", "id_nuevo": "doc:ndaa-media-relations-guidelines", "motivo": null}
+{"id_legado": "NEMO_GUARDRAILS", "accion": "conservado", "id_nuevo": "prod:nemo-guardrails-nvidia", "motivo": null}
 {"id_legado": "NIST AI 100-1 AI RMF", "accion": "fusionado", "id_nuevo": "doc:nist-ai-rmf", "motivo": "entidad_existente"}
 {"id_legado": "NIST AI 600-1", "accion": "conservado", "id_nuevo": "doc:nist-ai-600-1", "motivo": null}
 {"id_legado": "NIST AI RMF", "accion": "conservado", "id_nuevo": "doc:nist-ai-rmf", "motivo": null}
@@ -999,6 +1106,7 @@
 {"id_legado": "NIST SP 800-88 Rev. 2", "accion": "fusionado", "id_nuevo": "doc:nist-sp-800-88-media-sanitization", "motivo": "variante_denominacion"}
 {"id_legado": "NIST SP 800-88 r2", "accion": "conservado", "id_nuevo": "doc:nist-sp-800-88-media-sanitization", "motivo": null}
 {"id_legado": "NIST SP 800-92", "accion": "conservado", "id_nuevo": "doc:nist-sp-800-92-log-management", "motivo": null}
+{"id_legado": "NOTIFICACION_CSIRT", "accion": "conservado", "id_nuevo": "doc:protocolo-notificacion-csirt-3h", "motivo": null}
 {"id_legado": "NRR", "accion": "conservado", "id_nuevo": "met:net-revenue-retention-nrr", "motivo": null}
 {"id_legado": "Naciones Unidas", "accion": "conservado", "id_nuevo": "org:naciones-unidas", "motivo": null}
 {"id_legado": "Negociación Colectiva", "accion": "conservado", "id_nuevo": "tema:negociacion-colectiva-laboral-mineria", "motivo": null}
@@ -1006,6 +1114,10 @@
 {"id_legado": "No Comment", "accion": "conservado", "id_nuevo": "tema:estrategia-no-comment-riesgos", "motivo": null}
 {"id_legado": "No Repudio", "accion": "conservado", "id_nuevo": "tema:principio-seguridad-no-repudio", "motivo": null}
 {"id_legado": "No-Training Clause", "accion": "conservado", "id_nuevo": "comp:clausula-no-entrenamiento-modelos", "motivo": null}
+{"id_legado": "Noy & Zhang (2023)", "accion": "fusionado", "id_nuevo": "doc:noy-zhang-2023-experimental-evidence-productivity", "motivo": "variante_denominacion"}
+{"id_legado": "Noy & Zhang (Science 2023)", "accion": "conservado", "id_nuevo": "doc:noy-zhang-2023-experimental-evidence-productivity", "motivo": null}
+{"id_legado": "Noy & Zhang (Science)", "accion": "fusionado", "id_nuevo": "doc:noy-zhang-2023-experimental-evidence-productivity", "motivo": "variante_denominacion"}
+{"id_legado": "OBSOLESCENCIA_APIS", "accion": "conservado", "id_nuevo": "riesgo:obsolescencia-depreciacion-apis-llm", "motivo": null}
 {"id_legado": "OECD", "accion": "conservado", "id_nuevo": "org:oecd", "motivo": null}
 {"id_legado": "OECD 2024", "accion": "conservado", "id_nuevo": "doc:oecd-due-diligence-guidance-2024", "motivo": null}
 {"id_legado": "OECD 2024 Report", "accion": "fusionado", "id_nuevo": "doc:oecd-due-diligence-guidance-2024", "motivo": "variante_denominacion"}
@@ -1016,6 +1128,7 @@
 {"id_legado": "OECD Principles", "accion": "fusionado", "id_nuevo": "doc:oecd-principios-gobierno-corporativo", "motivo": "variante_denominacion_oecd_principios"}
 {"id_legado": "OECD Principles of Corporate Governance", "accion": "fusionado", "id_nuevo": "doc:oecd-principios-gobierno-corporativo", "motivo": "variante_denominacion_oecd_principios"}
 {"id_legado": "ONT_ASUNTOS_PUBLICOS", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "ORQUESTADOR_MULTICLOUD", "accion": "fusionado", "id_nuevo": "prod:circuit-breaker-multi-proveedor", "motivo": "variante_denominacion"}
 {"id_legado": "OSINERGMIN", "accion": "conservado", "id_nuevo": "org:osinergmin", "motivo": null}
 {"id_legado": "OWASP GenAI 2025", "accion": "conservado", "id_nuevo": "doc:owasp-top-10-for-llm-applications", "motivo": null}
 {"id_legado": "OWASP GenAI LLM01", "accion": "fusionado", "id_nuevo": "doc:owasp-top-10-for-llm-applications", "motivo": "vulnerabilidad_owasp"}
@@ -1059,11 +1172,26 @@
 {"id_legado": "P11_RESEARCH_DOSSIER", "accion": "eliminado", "id_nuevo": null, "motivo": "artefacto_auditoria_interno"}
 {"id_legado": "P11_SOURCE_INDEX", "accion": "eliminado", "id_nuevo": null, "motivo": "artefacto_auditoria_interno"}
 {"id_legado": "P11_VERIFICATION_CORRECTIONS", "accion": "eliminado", "id_nuevo": null, "motivo": "artefacto_auditoria_interno"}
+{"id_legado": "PANEL_INTERDISCIPLINAR", "accion": "conservado", "id_nuevo": "exp:panel-evaluador-interdisciplinar", "motivo": null}
+{"id_legado": "PDFS_ARXIV_T01", "accion": "conservado", "id_nuevo": "doc:corpus-papers-arxiv-t01", "motivo": null}
+{"id_legado": "PIPELINE_REGRESION_RAG", "accion": "conservado", "id_nuevo": "prod:pipeline-regresion-rag", "motivo": null}
+{"id_legado": "POLITICA_DETERMINISTA_BRIDGE", "accion": "conservado", "id_nuevo": "doc:politica-reproducibilidad-determinista", "motivo": null}
+{"id_legado": "POLITICA_POTENCIA_ESTADISTICA", "accion": "conservado", "id_nuevo": "doc:politica-potencia-muestreo-bridge", "motivo": null}
+{"id_legado": "POLITICA_SLA_999", "accion": "conservado", "id_nuevo": "doc:politica-sla-corporativo-999", "motivo": null}
+{"id_legado": "POSTGRES_RLS_GUARD", "accion": "fusionado", "id_nuevo": "prod:postgresql-database-engine", "motivo": "entidad_existente"}
+{"id_legado": "PPI_INFERENCE", "accion": "conservado", "id_nuevo": "met:prediction-powered-inference-ppi", "motivo": null}
 {"id_legado": "PR Council", "accion": "conservado", "id_nuevo": "org:pr-council", "motivo": null}
 {"id_legado": "PR Council Guidelines", "accion": "conservado", "id_nuevo": "doc:pr-council-ethics-guidelines", "motivo": null}
+{"id_legado": "PRECIO_OPP_4500", "accion": "conservado", "id_nuevo": "met:precio-optimo-opp-4500-usd", "motivo": null}
+{"id_legado": "PRENSA_FINANCIERA", "accion": "conservado", "id_nuevo": "doc:reporte-prensa-financiera-fuente-secundaria", "motivo": null}
+{"id_legado": "PRINCIPIO_PAGE_2", "accion": "fusionado", "id_nuevo": "doc:page-principles", "motivo": "entidad_existente"}
+{"id_legado": "PROTOCOLO_PENTEST_G0", "accion": "conservado", "id_nuevo": "doc:protocolo-pentest-adversarial-g0", "motivo": null}
 {"id_legado": "PRSA", "accion": "conservado", "id_nuevo": "org:prsa", "motivo": null}
 {"id_legado": "PRSA Code of Ethics", "accion": "fusionado", "id_nuevo": "doc:codigo-etica-prsa", "motivo": "entidad_existente"}
 {"id_legado": "PRSA Guidance", "accion": "conservado", "id_nuevo": "doc:prsa-guidance-ai-ethics", "motivo": null}
+{"id_legado": "PRUEBA_EGRESS_TRANSFRONTERIZO", "accion": "conservado", "id_nuevo": "exp:prueba-carga-egress-transfronterizo", "motivo": null}
+{"id_legado": "PSM_CANONICO", "accion": "fusionado", "id_nuevo": "met:van-westendorp-price-sensitivity-meter", "motivo": "variante_denominacion"}
+{"id_legado": "PSM_SOURCES", "accion": "conservado", "id_nuevo": "doc:corpus-van-westendorp-cooper", "motivo": null}
 {"id_legado": "Page Principles", "accion": "conservado", "id_nuevo": "doc:page-principles", "motivo": null}
 {"id_legado": "Page Society", "accion": "fusionado", "id_nuevo": "org:arthur-w-page-society", "motivo": "variante_denominacion_page_society"}
 {"id_legado": "Page Society Principle 1", "accion": "fusionado", "id_nuevo": "doc:page-principles", "motivo": "variante_denominacion"}
@@ -1074,6 +1202,7 @@
 {"id_legado": "Peritaje Técnico", "accion": "conservado", "id_nuevo": "tema:peritaje-tecnico-socioambiental", "motivo": null}
 {"id_legado": "Permisología Sectorial", "accion": "conservado", "id_nuevo": "tema:gestion-permisologia-sectorial-chile", "motivo": null}
 {"id_legado": "Perímetro de Vocero", "accion": "conservado", "id_nuevo": "tema:perimetro-actuacion-vocero", "motivo": null}
+{"id_legado": "PilotEngagement", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "Piloto Pagado", "accion": "conservado", "id_nuevo": "exp:piloto-pagado-validacion", "motivo": null}
 {"id_legado": "Piloto Pagado 60d", "accion": "conservado", "id_nuevo": "exp:piloto-pagado-60-dias", "motivo": null}
 {"id_legado": "Pivote Estratégico", "accion": "conservado", "id_nuevo": "tema:pivote-estrategico-modelo-negocio", "motivo": null}
@@ -1129,20 +1258,34 @@
 {"id_legado": "Quorum vs FiscalNote", "accion": "conservado", "id_nuevo": "tema:analisis-competitivo-quorum-fiscalnote", "motivo": null}
 {"id_legado": "RACI Framework", "accion": "fusionado", "id_nuevo": "doc:matriz-raci-conocimiento-corporativo", "motivo": "entidad_existente"}
 {"id_legado": "RAG Admissibility", "accion": "conservado", "id_nuevo": "tema:reglas-admisibilidad-rag-seguridad", "motivo": null}
+{"id_legado": "RAGAS_FRAMEWORK", "accion": "conservado", "id_nuevo": "prod:ragas-framework", "motivo": null}
+{"id_legado": "RAGAS_PAPER", "accion": "conservado", "id_nuevo": "doc:es-et-al-2023-ragas", "motivo": null}
 {"id_legado": "RBAC", "accion": "conservado", "id_nuevo": "tema:control-acceso-basado-en-roles-rbac", "motivo": null}
 {"id_legado": "RBAC / ABAC", "accion": "fusionado", "id_nuevo": "tema:control-acceso-basado-en-roles-rbac", "motivo": "variante_denominacion"}
 {"id_legado": "RBAC Estático", "accion": "fusionado", "id_nuevo": "tema:control-acceso-basado-en-roles-rbac", "motivo": "entidad_existente"}
 {"id_legado": "RCA", "accion": "fusionado", "id_nuevo": "doc:resolucion-calificacion-ambiental", "motivo": "variante_denominacion_rca"}
+{"id_legado": "RCA 2018", "accion": "fusionado", "id_nuevo": "doc:resolucion-calificacion-ambiental", "motivo": "entidad_existente"}
 {"id_legado": "RCA 245/2018", "accion": "conservado", "id_nuevo": "doc:rca-245-2018", "motivo": null}
 {"id_legado": "RCA Ambiental", "accion": "fusionado", "id_nuevo": "doc:resolucion-calificacion-ambiental", "motivo": "variante_denominacion"}
 {"id_legado": "RCA Faena", "accion": "fusionado", "id_nuevo": "doc:resolucion-calificacion-ambiental", "motivo": "variante_denominacion"}
 {"id_legado": "RCA N° 124/2021", "accion": "conservado", "id_nuevo": "doc:rca-124-2021", "motivo": null}
 {"id_legado": "RCA N° 450/2021", "accion": "conservado", "id_nuevo": "doc:rca-450-2021", "motivo": null}
 {"id_legado": "RCT", "accion": "conservado", "id_nuevo": "exp:ensayo-controlado-aleatorizado-rct", "motivo": null}
+{"id_legado": "REDTEAM_SUITE_T01", "accion": "conservado", "id_nuevo": "exp:suite-pruebas-adversariales-red-team", "motivo": null}
+{"id_legado": "REDUCCION_FATIGA_42", "accion": "fusionado", "id_nuevo": "met:indice-carga-mental-nasa-tlx", "motivo": "variante_denominacion"}
+{"id_legado": "REGLA_FALLO_FATAL", "accion": "fusionado", "id_nuevo": "riesgo:principio-fallo-fatal-asimetrico", "motivo": "variante_denominacion"}
+{"id_legado": "REGLA_INCOMPARABILIDAD", "accion": "conservado", "id_nuevo": "doc:protocolo-incomparabilidad-muestras", "motivo": null}
+{"id_legado": "REGLA_WORM_AUDITORIA", "accion": "fusionado", "id_nuevo": "tema:almacenamiento-inmutable-worm", "motivo": "entidad_existente"}
 {"id_legado": "REG_FUENTES_ASUNTOS_PUB", "accion": "conservado", "id_nuevo": "doc:registro-fuentes-asuntos-publicos-p02", "motivo": null}
 {"id_legado": "REG_FUENTES_ESCUCHA", "accion": "conservado", "id_nuevo": "doc:registro-fuentes-plataformas-escucha-p02", "motivo": null}
+{"id_legado": "REPORTE_INCERTIDUMBRE", "accion": "conservado", "id_nuevo": "doc:estandar-reporte-incertidumbre-bridge", "motivo": null}
+{"id_legado": "REPORTE_SOSTENIBILIDAD", "accion": "conservado", "id_nuevo": "doc:reporte-sostenibilidad-memoria-esg", "motivo": null}
+{"id_legado": "RIESGO_SHADOW_AI", "accion": "conservado", "id_nuevo": "riesgo:uso-clandestino-shadow-ai", "motivo": null}
+{"id_legado": "ROI Ajustado por Calidad", "accion": "conservado", "id_nuevo": "tema:retorno-inversion-ajustado-calidad-qari", "motivo": null}
 {"id_legado": "Radar Comparativo", "accion": "conservado", "id_nuevo": "tema:evaluacion-radar-comparativo-soluciones", "motivo": null}
 {"id_legado": "Radio Comunitaria", "accion": "conservado", "id_nuevo": "tema:radios-comunitarias-difusion-local", "motivo": null}
+{"id_legado": "Ragas Faithfulness", "accion": "conservado", "id_nuevo": "met:ragas-faithfulness", "motivo": null}
+{"id_legado": "Ragas Faithfulness 0.932", "accion": "eliminado", "id_nuevo": null, "motivo": "valor_metrica_con_cifra_obsoleta"}
 {"id_legado": "Ratio Analista/Cliente", "accion": "fusionado", "id_nuevo": "met:ratio-hitl-analista-cliente", "motivo": "variante_denominacion"}
 {"id_legado": "Ratio HITL", "accion": "conservado", "id_nuevo": "met:ratio-hitl-analista-cliente", "motivo": null}
 {"id_legado": "Read Audit Trail", "accion": "fusionado", "id_nuevo": "tema:audit-trail-inmutable-append-only", "motivo": "variante_denominacion"}
@@ -1159,6 +1302,7 @@
 {"id_legado": "Representatividad Espuria", "accion": "conservado", "id_nuevo": "tema:analisis-representatividad-espuria", "motivo": null}
 {"id_legado": "Res. Ex. 223/2015 SMA", "accion": "conservado", "id_nuevo": "doc:res-ex-223-2015-sma", "motivo": null}
 {"id_legado": "Res. Ex. 844/2012 SMA", "accion": "conservado", "id_nuevo": "doc:res-ex-844-2012-sma", "motivo": null}
+{"id_legado": "Resolución Go", "accion": "conservado", "id_nuevo": "evt:resolucion-go-decision-compuerta", "motivo": null}
 {"id_legado": "Resultado Conversión", "accion": "fusionado", "id_nuevo": "met:tasa-conversion-anual", "motivo": "variante_denominacion"}
 {"id_legado": "Retainer Tradicional", "accion": "conservado", "id_nuevo": "tema:modelo-retainer-tradicional", "motivo": null}
 {"id_legado": "Retención Cognitiva", "accion": "conservado", "id_nuevo": "tema:retencion-cognitiva-mensajes-clave", "motivo": null}
@@ -1173,14 +1317,27 @@
 {"id_legado": "Rumor vs Hecho Confirmado", "accion": "conservado", "id_nuevo": "tema:distincion-rumor-vs-hecho-confirmado", "motivo": null}
 {"id_legado": "Ruptura de Embargo", "accion": "conservado", "id_nuevo": "evt:ruptura-embargo-informativo", "motivo": null}
 {"id_legado": "Rúbrica Multidimensional", "accion": "conservado", "id_nuevo": "doc:rubrica-multidimensional-evaluacion", "motivo": null}
+{"id_legado": "SABER_BENCHMARK", "accion": "conservado", "id_nuevo": "prod:saber-benchmark", "motivo": null}
+{"id_legado": "SABER_PAPER", "accion": "fusionado", "id_nuevo": "doc:benchmark-saber-zhu-et-al-2026", "motivo": "entidad_existente"}
 {"id_legado": "SAM", "accion": "conservado", "id_nuevo": "met:serviceable-addressable-market-sam", "motivo": null}
 {"id_legado": "SAM Oficial", "accion": "fusionado", "id_nuevo": "met:serviceable-addressable-market-sam", "motivo": "variante_metrica"}
 {"id_legado": "SAM Regional Andino", "accion": "fusionado", "id_nuevo": "met:serviceable-addressable-market-sam", "motivo": "variante_metrica"}
 {"id_legado": "SAP/ERP", "accion": "conservado", "id_nuevo": "prod:sap-erp-corporativo", "motivo": null}
+{"id_legado": "SAY_DO_RATIO", "accion": "conservado", "id_nuevo": "met:ratio-say-do-intencion-vs-accion", "motivo": null}
 {"id_legado": "SCCT", "accion": "conservado", "id_nuevo": "tema:teoria-situacional-comunicacion-crisis-scct", "motivo": null}
 {"id_legado": "SCCT Anderson", "accion": "fusionado", "id_nuevo": "tema:teoria-situacional-comunicacion-crisis-scct", "motivo": "entidad_existente"}
 {"id_legado": "SCCT Cluster Accidente", "accion": "conservado", "id_nuevo": "tema:scct-cluster-accidente", "motivo": null}
 {"id_legado": "SCCT Framework", "accion": "fusionado", "id_nuevo": "tema:teoria-situacional-comunicacion-crisis-scct", "motivo": "entidad_existente"}
+{"id_legado": "SCHEMA_ADVERSARIAL_LOG", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "SCHEMA_ATRIBUCION", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "SCHEMA_COSTOS_SLA", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "SCHEMA_DISENO_ESTADISTICO", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "SCHEMA_ENTREVISTAS_WTP", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "SCHEMA_GOLDEN", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "SCHEMA_METRICAS", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "SCHEMA_REPRODUCIBILIDAD", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "SCHEMA_RUBRICA", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
+{"id_legado": "SCHEMA_TRABAJO_HUMANO", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "SCH_ATLAS_EMPRESAS", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "SEA", "accion": "conservado", "id_nuevo": "org:sea", "motivo": null}
 {"id_legado": "SEA Antofagasta", "accion": "conservado", "id_nuevo": "org:sea-antofagasta", "motivo": null}
@@ -1189,8 +1346,11 @@
 {"id_legado": "SEC", "accion": "conservado", "id_nuevo": "org:sec-chile", "motivo": null}
 {"id_legado": "SEC Regulation FD", "accion": "conservado", "id_nuevo": "doc:sec-regulation-fd", "motivo": null}
 {"id_legado": "SEC Rule 10b-5", "accion": "conservado", "id_nuevo": "doc:sec-rule-10b-5", "motivo": null}
+{"id_legado": "SEGURIDAD_PSICOLOGICA_ANALISTA", "accion": "conservado", "id_nuevo": "met:seguridad-psicologica-decisional", "motivo": null}
 {"id_legado": "SEIA", "accion": "conservado", "id_nuevo": "tema:sistema-evaluacion-impacto-ambiental-seia", "motivo": null}
+{"id_legado": "SELFCHECKGPT_PAPER", "accion": "conservado", "id_nuevo": "doc:manakul-et-al-2023-selfcheckgpt", "motivo": null}
 {"id_legado": "SERNAC", "accion": "conservado", "id_nuevo": "org:sernac", "motivo": null}
+{"id_legado": "SESGO_COMPLACENCIA", "accion": "conservado", "id_nuevo": "riesgo:sesgo-complacencia-cortesia-social", "motivo": null}
 {"id_legado": "SHA-256", "accion": "eliminado", "id_nuevo": null, "motivo": "algoritmo_criptografico_generico"}
 {"id_legado": "SHA-256 Chaining", "accion": "conservado", "id_nuevo": "tema:encadenamiento-criptografico-hashes", "motivo": null}
 {"id_legado": "SHA-256 Hash", "accion": "eliminado", "id_nuevo": null, "motivo": "algoritmo_criptografico_estandar"}
@@ -1211,8 +1371,14 @@
 {"id_legado": "SOC 2 Criteria", "accion": "fusionado", "id_nuevo": "doc:estandar-soc-2", "motivo": "entidad_existente"}
 {"id_legado": "SOC 2 Criteria CC6.3", "accion": "fusionado", "id_nuevo": "doc:estandar-soc-2", "motivo": "entidad_existente"}
 {"id_legado": "SOC 2 Type II", "accion": "fusionado", "id_nuevo": "doc:estandar-soc-2", "motivo": "entidad_existente"}
+{"id_legado": "SOCIAL_IQA_PAPER", "accion": "conservado", "id_nuevo": "doc:sap-et-al-2019-social-iqa", "motivo": null}
 {"id_legado": "SOM", "accion": "conservado", "id_nuevo": "met:serviceable-obtainable-market-som", "motivo": null}
 {"id_legado": "SSA SMA", "accion": "fusionado", "id_nuevo": "prod:sistema-seguimiento-ambiental-ssa", "motivo": "variante_denominacion"}
+{"id_legado": "STAGE_GATE_KILL", "accion": "conservado", "id_nuevo": "evt:detencion-obligatoria-piloto-kill", "motivo": null}
+{"id_legado": "STAGE_GATE_SYSTEM", "accion": "fusionado", "id_nuevo": "doc:cooper-stage-gate-system", "motivo": "variante_denominacion"}
+{"id_legado": "STUDY_ARXIV_COST", "accion": "conservado", "id_nuevo": "doc:arxiv-2025-cost-benefit-analysis", "motivo": null}
+{"id_legado": "SUMMEVAL", "accion": "conservado", "id_nuevo": "prod:summeval-benchmark", "motivo": null}
+{"id_legado": "SUMMEVAL_DIMENSIONS", "accion": "conservado", "id_nuevo": "doc:dimensiones-summeval", "motivo": null}
 {"id_legado": "SUPERSEDES", "accion": "fusionado", "id_nuevo": "tema:versionado-inmutable-de-documentos", "motivo": "variante_denominacion"}
 {"id_legado": "SaaS Puro", "accion": "fusionado", "id_nuevo": "tema:modelo-software-as-a-service-puro", "motivo": "variante_denominacion"}
 {"id_legado": "Saber", "accion": "conservado", "id_nuevo": "tema:dimension-ontologica-saber", "motivo": null}
@@ -1228,6 +1394,7 @@
 {"id_legado": "Sensibilidad de Margen", "accion": "fusionado", "id_nuevo": "met:margen-bruto-operativo", "motivo": "variante_metrica"}
 {"id_legado": "Servicios de Consultoría", "accion": "conservado", "id_nuevo": "tema:servicios-profesionales-consultoria", "motivo": null}
 {"id_legado": "Session Bleed", "accion": "conservado", "id_nuevo": "tema:vulnerabilidad-session-bleed-multitenant", "motivo": null}
+{"id_legado": "SharePoint", "accion": "conservado", "id_nuevo": "prod:microsoft-sharepoint", "motivo": null}
 {"id_legado": "Shared Fact Record", "accion": "fusionado", "id_nuevo": "tema:registro-verificacion-fact-check", "motivo": "variante_denominacion"}
 {"id_legado": "Shared Responsibility Model", "accion": "conservado", "id_nuevo": "tema:modelo-responsabilidad-compartida-cloud", "motivo": null}
 {"id_legado": "Shared Semantic Backbone", "accion": "conservado", "id_nuevo": "tema:shared-semantic-backbone-mensajes", "motivo": null}
@@ -1246,6 +1413,8 @@
 {"id_legado": "Sopact", "accion": "conservado", "id_nuevo": "prod:sopact-impact-cloud", "motivo": null}
 {"id_legado": "Soundbite Discipline", "accion": "conservado", "id_nuevo": "tema:disciplina-de-soundbite", "motivo": null}
 {"id_legado": "Spokesperson Readiness Score", "accion": "conservado", "id_nuevo": "met:spokesperson-readiness-score", "motivo": null}
+{"id_legado": "Stage-Gate Cooper", "accion": "fusionado", "id_nuevo": "doc:cooper-stage-gate-system", "motivo": "variante_denominacion"}
+{"id_legado": "Stage-Gate System (Cooper)", "accion": "conservado", "id_nuevo": "doc:cooper-stage-gate-system", "motivo": null}
 {"id_legado": "Stakeholder", "accion": "conservado", "id_nuevo": "rol:grupo-de-interes-stakeholder", "motivo": null}
 {"id_legado": "StateTransition", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
 {"id_legado": "StatutoryInstrument", "accion": "eliminado", "id_nuevo": null, "motivo": "esquema_datos_interno"}
@@ -1261,11 +1430,14 @@
 {"id_legado": "Switching Cost", "accion": "conservado", "id_nuevo": "tema:costos-de-cambio-switching-costs", "motivo": null}
 {"id_legado": "Synthetic Test Cases", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
 {"id_legado": "System of Record", "accion": "conservado", "id_nuevo": "tema:concepto-system-of-record-relacionamiento", "motivo": null}
+{"id_legado": "T01_VERIFICATION_CORRECTIONS", "accion": "eliminado", "id_nuevo": null, "motivo": "artefacto_auditoria_interno"}
 {"id_legado": "TAM", "accion": "conservado", "id_nuevo": "met:total-addressable-market-tam", "motivo": null}
 {"id_legado": "TAXONOMIA_MUTACION", "accion": "conservado", "id_nuevo": "tema:taxonomia-mutaciones-corporativas", "motivo": null}
 {"id_legado": "TCO", "accion": "conservado", "id_nuevo": "met:total-cost-of-ownership-tco", "motivo": null}
 {"id_legado": "TCO Financiero", "accion": "fusionado", "id_nuevo": "met:total-cost-of-ownership-tco", "motivo": "entidad_existente"}
+{"id_legado": "TELEMETRIA_SUPERVISION", "accion": "conservado", "id_nuevo": "met:indice-supervision-critica-efectiva", "motivo": null}
 {"id_legado": "TEST_CASE_DEDUPLICACION", "accion": "eliminado", "id_nuevo": null, "motivo": "caso_prueba_hipotetico"}
+{"id_legado": "TIER_MID_MARKET", "accion": "conservado", "id_nuevo": "prod:bridge-tier-growth-mid-market", "motivo": null}
 {"id_legado": "TRAZABILIDAD_COMPETIDORES", "accion": "eliminado", "id_nuevo": null, "motivo": "registro_interno_auditoria"}
 {"id_legado": "TVN / CNN Chile", "accion": "conservado", "id_nuevo": "org:tvn-cnn-chile", "motivo": null}
 {"id_legado": "Tabletop Exercise", "accion": "conservado", "id_nuevo": "exp:ejercicio-tabletop-crisis", "motivo": null}
@@ -1305,6 +1477,9 @@
 {"id_legado": "Umbral de Falsación", "accion": "conservado", "id_nuevo": "tema:umbral-cuantitativo-falsacion", "motivo": null}
 {"id_legado": "Umbrex", "accion": "fusionado", "id_nuevo": "doc:umbrex-framework", "motivo": "variante_denominacion_umbrex"}
 {"id_legado": "Umbrex Framework", "accion": "conservado", "id_nuevo": "doc:umbrex-framework", "motivo": null}
+{"id_legado": "VACIO_LONGITUDINAL_G2", "accion": "conservado", "id_nuevo": "riesgo:vacio-retencion-longitudinal-g2", "motivo": null}
+{"id_legado": "VAN_WESTENDORP_PSM", "accion": "conservado", "id_nuevo": "met:van-westendorp-price-sensitivity-meter", "motivo": null}
+{"id_legado": "VARIABLES_CONFUSORAS", "accion": "conservado", "id_nuevo": "riesgo:factores-exogenos-variables-confusoras", "motivo": null}
 {"id_legado": "VP Asuntos Corporativos", "accion": "conservado", "id_nuevo": "rol:vp-asuntos-corporativos", "motivo": null}
 {"id_legado": "Validación Comercial Definitiva", "accion": "conservado", "id_nuevo": "exp:validacion-comercial-definitiva", "motivo": null}
 {"id_legado": "Valor Percibido", "accion": "conservado", "id_nuevo": "tema:propuesta-valor-percibido-ejecutivo", "motivo": null}

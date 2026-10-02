@@ -1,0 +1,1715 @@
+{
+  "Módulo Saber": [
+    "conservado",
+    "prod:modulo-saber-bridge",
+    "producto",
+    "Módulo Saber de BRIDGE (Conocimiento Interno)",
+    [
+      "Módulo Saber"
+    ],
+    null
+  ],
+  "Módulo Escuchar": [
+    "conservado",
+    "prod:modulo-escuchar-bridge",
+    "producto",
+    "Módulo Escuchar de BRIDGE (Señales Externas)",
+    [
+      "Módulo Escuchar"
+    ],
+    null
+  ],
+  "Módulo Hablar": [
+    "conservado",
+    "prod:modulo-hablar-bridge",
+    "producto",
+    "Módulo Hablar de BRIDGE (Generación y Posicionamiento)",
+    [
+      "Módulo Hablar"
+    ],
+    null
+  ],
+  "Módulo Relacionar": [
+    "conservado",
+    "prod:modulo-relacionar-bridge",
+    "producto",
+    "Módulo Relacionar de BRIDGE (Gestión de Stakeholders y Compromisos)",
+    [
+      "Módulo Relacionar"
+    ],
+    null
+  ],
+  "Stage-Gate System (Cooper)": [
+    "conservado",
+    "doc:cooper-stage-gate-system",
+    "documento",
+    "Sistema Stage-Gate de Robert G. Cooper para Desarrollo e Innovación",
+    [
+      "Stage-Gate Cooper",
+      "Cooper Stage-Gate"
+    ],
+    null
+  ],
+  "Cooper Stage-Gate": [
+    "fusionado",
+    "doc:cooper-stage-gate-system",
+    "documento",
+    "Sistema Stage-Gate de Robert G. Cooper para Desarrollo e Innovación",
+    [
+      "Cooper Stage-Gate"
+    ],
+    "variante_denominacion"
+  ],
+  "Stage-Gate Cooper": [
+    "fusionado",
+    "doc:cooper-stage-gate-system",
+    "documento",
+    "Sistema Stage-Gate de Robert G. Cooper para Desarrollo e Innovación",
+    [
+      "Stage-Gate Cooper"
+    ],
+    "variante_denominacion"
+  ],
+  "STAGE_GATE_SYSTEM": [
+    "fusionado",
+    "doc:cooper-stage-gate-system",
+    "documento",
+    "Sistema Stage-Gate de Robert G. Cooper para Desarrollo e Innovación",
+    [
+      "STAGE_GATE_SYSTEM"
+    ],
+    "variante_denominacion"
+  ],
+  "Compuerta G0": [
+    "conservado",
+    "evt:compuerta-stage-gate-g0",
+    "evento",
+    "Compuerta Stage-Gate G0: Factibilidad y Alineamiento Estratégico",
+    [
+      "Gate 0",
+      "Compuerta G0"
+    ],
+    null
+  ],
+  "Compuerta G1": [
+    "conservado",
+    "evt:compuerta-stage-gate-g1",
+    "evento",
+    "Compuerta Stage-Gate G1: Validación Funcional y Benchmark Ciego",
+    [
+      "Gate 1",
+      "Compuerta G1"
+    ],
+    null
+  ],
+  "Compuerta G2": [
+    "conservado",
+    "evt:compuerta-stage-gate-g2",
+    "evento",
+    "Compuerta Stage-Gate G2: Despliegue en Entorno de Prueba Controlado",
+    [
+      "Gate 2",
+      "Compuerta G2"
+    ],
+    null
+  ],
+  "Compuerta G3": [
+    "conservado",
+    "evt:compuerta-stage-gate-g3",
+    "evento",
+    "Compuerta Stage-Gate G3: Decisión de Comercialización y Escalabilidad",
+    [
+      "Gate 3",
+      "Compuerta G3"
+    ],
+    null
+  ],
+  "COMPUERTA_G3_STAGE_GATE": [
+    "fusionado",
+    "evt:compuerta-stage-gate-g3",
+    "evento",
+    "Compuerta Stage-Gate G3: Decisión de Comercialización y Escalabilidad",
+    [
+      "COMPUERTA_G3_STAGE_GATE"
+    ],
+    "variante_denominacion"
+  ],
+  "Resolución Go": [
+    "conservado",
+    "evt:resolucion-go-decision-compuerta",
+    "evento",
+    "Resolución Favorable Go en Compuertas de Evaluación",
+    [
+      "Decisión Go"
+    ],
+    null
+  ],
+  "STAGE_GATE_KILL": [
+    "conservado",
+    "evt:detencion-obligatoria-piloto-kill",
+    "evento",
+    "Detención Obligatoria de Piloto o Proyecto (Decisión Kill)",
+    [
+      "Stage-Gate Kill"
+    ],
+    null
+  ],
+  "KILL_SWITCH_EMERGENCIA": [
+    "fusionado",
+    "evt:detencion-obligatoria-piloto-kill",
+    "evento",
+    "Detención Obligatoria de Piloto o Proyecto (Decisión Kill)",
+    [
+      "KILL_SWITCH_EMERGENCIA"
+    ],
+    "variante_denominacion"
+  ],
+  "Ragas Faithfulness 0.932": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "valor_metrica_con_cifra_obsoleta"
+  ],
+  "Ragas Faithfulness": [
+    "conservado",
+    "met:ragas-faithfulness",
+    "metrica",
+    "Métrica Ragas Faithfulness (Fidelidad Factual)",
+    [
+      "Ragas Faithfulness",
+      "Fidelidad Factual Ragas"
+    ],
+    null
+  ],
+  "RAGAS_FRAMEWORK": [
+    "conservado",
+    "prod:ragas-framework",
+    "producto",
+    "Ragas Framework para Evaluación de RAG",
+    [
+      "Ragas Framework",
+      "Es et al. 2023"
+    ],
+    null
+  ],
+  "RAGAS_PAPER": [
+    "conservado",
+    "doc:es-et-al-2023-ragas",
+    "documento",
+    "Es et al. (2023) RAGAS: Automated Evaluation of Retrieval Augmented Generation",
+    [
+      "Ragas Paper",
+      "01d6cab0"
+    ],
+    null
+  ],
+  "Noy & Zhang (Science 2023)": [
+    "conservado",
+    "doc:noy-zhang-2023-experimental-evidence-productivity",
+    "documento",
+    "Noy & Zhang (Science 2023) Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence",
+    [
+      "Noy & Zhang 2023"
+    ],
+    null
+  ],
+  "Noy & Zhang (2023)": [
+    "fusionado",
+    "doc:noy-zhang-2023-experimental-evidence-productivity",
+    "documento",
+    "Noy & Zhang (Science 2023) Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence",
+    [
+      "Noy & Zhang (2023)"
+    ],
+    "variante_denominacion"
+  ],
+  "Noy & Zhang (Science)": [
+    "fusionado",
+    "doc:noy-zhang-2023-experimental-evidence-productivity",
+    "documento",
+    "Noy & Zhang (Science 2023) Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence",
+    [
+      "Noy & Zhang (Science)"
+    ],
+    "variante_denominacion"
+  ],
+  "Brynjolfsson et al. (NBER)": [
+    "conservado",
+    "doc:brynjolfsson-et-al-2023-generative-ai-at-work",
+    "documento",
+    "Brynjolfsson, Li & Raymond (NBER 2023) Generative AI at Work",
+    [
+      "Brynjolfsson et al. 2023"
+    ],
+    null
+  ],
+  "Deephouse (2000)": [
+    "conservado",
+    "doc:deephouse-2000-media-reputation",
+    "documento",
+    "Deephouse (2000) Media Reputation as a Strategic Resource",
+    [
+      "Deephouse 2000"
+    ],
+    null
+  ],
+  "STUDY_ARXIV_COST": [
+    "conservado",
+    "doc:arxiv-2025-cost-benefit-analysis",
+    "documento",
+    "ArXiv (2025) Cost-Benefit and FinOps Analysis of Enterprise LLM Pipelines",
+    [
+      "f57279c5"
+    ],
+    null
+  ],
+  "ArXiv 2025 Cost-Benefit": [
+    "fusionado",
+    "doc:arxiv-2025-cost-benefit-analysis",
+    "documento",
+    "ArXiv (2025) Cost-Benefit and FinOps Analysis of Enterprise LLM Pipelines",
+    [
+      "ArXiv 2025 Cost-Benefit"
+    ],
+    "variante_denominacion"
+  ],
+  "PDFS_ARXIV_T01": [
+    "conservado",
+    "doc:corpus-papers-arxiv-t01",
+    "documento",
+    "Corpus Académico de 9 Papers de Texto Completo ArXiv para T01",
+    [
+      "ArXiv T01 Corpus"
+    ],
+    null
+  ],
+  "ALCE_PAPER": [
+    "conservado",
+    "doc:gao-et-al-2023-alce",
+    "documento",
+    "Gao et al. (2023) Enabling Large Language Models to Generate Text with Citations (ALCE)",
+    [
+      "ALCE Paper",
+      "e1a0171b"
+    ],
+    null
+  ],
+  "SABER_PAPER": [
+    "fusionado",
+    "doc:benchmark-saber-zhu-et-al-2026",
+    "documento",
+    "Benchmark SABER (Zhu et al. 2026)",
+    [
+      "SABER_PAPER"
+    ],
+    "entidad_existente"
+  ],
+  "SELFCHECKGPT_PAPER": [
+    "conservado",
+    "doc:manakul-et-al-2023-selfcheckgpt",
+    "documento",
+    "Manakul et al. (2023) SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+    [
+      "SelfCheckGPT",
+      "c103d2e1"
+    ],
+    null
+  ],
+  "SOCIAL_IQA_PAPER": [
+    "conservado",
+    "doc:sap-et-al-2019-social-iqa",
+    "documento",
+    "Sap et al. (2019) Social IQa: Commonsense Reasoning about Social Interactions",
+    [
+      "Social IQa",
+      "45cf111e"
+    ],
+    null
+  ],
+  "PSM_SOURCES": [
+    "conservado",
+    "doc:corpus-van-westendorp-cooper",
+    "documento",
+    "Corpus Metodológico Van Westendorp (1976) y Cooper (Stage-Gate)",
+    [
+      "6f83ad5e",
+      "773f1a85"
+    ],
+    null
+  ],
+  "SABER_BENCHMARK": [
+    "conservado",
+    "prod:saber-benchmark",
+    "producto",
+    "SABER Benchmark para Conflictos de Conocimiento Paramétrico vs Contextual",
+    [
+      "SABER Benchmark",
+      "Zhu et al. 2026"
+    ],
+    null
+  ],
+  "ARES_EVAL": [
+    "conservado",
+    "prod:ares-evaluation-framework",
+    "producto",
+    "ARES Automated RAG Evaluation System",
+    [
+      "ARES Framework",
+      "Saad-Falcon et al. 2023"
+    ],
+    null
+  ],
+  "ALCE_BENCHMARK": [
+    "conservado",
+    "prod:alce-benchmark",
+    "producto",
+    "ALCE Benchmark para Generación con Citas Factuales",
+    [
+      "ALCE Benchmark",
+      "Gao et al. 2023"
+    ],
+    null
+  ],
+  "SUMMEVAL": [
+    "conservado",
+    "prod:summeval-benchmark",
+    "producto",
+    "SummEval Benchmark para Evaluación de Sumarización",
+    [
+      "SummEval",
+      "Fabbri et al. 2021"
+    ],
+    null
+  ],
+  "FRESHQA_BENCHMARK": [
+    "conservado",
+    "prod:freshqa-benchmark",
+    "producto",
+    "FreshQA Benchmark Dinámico de Conocimiento Rápido",
+    [
+      "FreshQA",
+      "Vu et al. 2023"
+    ],
+    null
+  ],
+  "NEMO_GUARDRAILS": [
+    "conservado",
+    "prod:nemo-guardrails-nvidia",
+    "producto",
+    "NVIDIA NeMo Guardrails Toolkit",
+    [
+      "NeMo Guardrails",
+      "Rebedea et al. 2023"
+    ],
+    null
+  ],
+  "LLAMA_GUARD_SAFEGUARD": [
+    "conservado",
+    "prod:llama-guard-classifier",
+    "producto",
+    "Llama Guard Safety Classifier Model",
+    [
+      "Llama Guard",
+      "Inan et al. 2023"
+    ],
+    null
+  ],
+  "CIRCUIT_BREAKER_FAILOVER": [
+    "conservado",
+    "prod:circuit-breaker-multi-proveedor",
+    "producto",
+    "Circuit Breaker y Orquestador de Failover Multi-Proveedor",
+    [
+      "Circuit Breaker Multi-Provider"
+    ],
+    null
+  ],
+  "CIRCUIT_BREAKER_CANONICO": [
+    "fusionado",
+    "prod:circuit-breaker-multi-proveedor",
+    "producto",
+    "Circuit Breaker y Orquestador de Failover Multi-Proveedor",
+    [
+      "CIRCUIT_BREAKER_CANONICO"
+    ],
+    "variante_denominacion"
+  ],
+  "ORQUESTADOR_MULTICLOUD": [
+    "fusionado",
+    "prod:circuit-breaker-multi-proveedor",
+    "producto",
+    "Circuit Breaker y Orquestador de Failover Multi-Proveedor",
+    [
+      "ORQUESTADOR_MULTICLOUD"
+    ],
+    "variante_denominacion"
+  ],
+  "TIER_MID_MARKET": [
+    "conservado",
+    "prod:bridge-tier-growth-mid-market",
+    "producto",
+    "Tier Comercial BRIDGE Growth (Mid-Market)",
+    [
+      "BRIDGE Growth"
+    ],
+    null
+  ],
+  "BRIDGE Multi-Tenant RAG": [
+    "conservado",
+    "prod:bridge-multi-tenant-rag",
+    "producto",
+    "Arquitectura Central BRIDGE Multi-Tenant RAG",
+    [
+      "BRIDGE RAG"
+    ],
+    null
+  ],
+  "PIPELINE_REGRESION_RAG": [
+    "conservado",
+    "prod:pipeline-regresion-rag",
+    "producto",
+    "Pipeline de Pruebas de Regresión Continua RAG",
+    [
+      "Continuous Benchmark Runner"
+    ],
+    null
+  ],
+  "BOVEDA_LEY_19799": [
+    "conservado",
+    "prod:boveda-criptografica-ley-19799",
+    "producto",
+    "Bóveda de Evidencia Criptográfica según Ley N° 19.799",
+    [
+      "Legal Evidence Vault"
+    ],
+    null
+  ],
+  "POSTGRES_RLS_GUARD": [
+    "fusionado",
+    "prod:postgresql-database-engine",
+    "producto",
+    "Motor de Base de Datos PostgreSQL con Row-Level Security (RLS)",
+    [
+      "POSTGRES_RLS_GUARD"
+    ],
+    "entidad_existente"
+  ],
+  "SharePoint": [
+    "conservado",
+    "prod:microsoft-sharepoint",
+    "producto",
+    "Microsoft SharePoint Document Management",
+    [
+      "SharePoint"
+    ],
+    null
+  ],
+  "Cision Clipping": [
+    "fusionado",
+    "org:cision",
+    "organizacion",
+    "Cision Ltd.",
+    [
+      "Cision Clipping"
+    ],
+    "entidad_existente"
+  ],
+  "AMEC BP 3.0": [
+    "fusionado",
+    "doc:amec-barcelona-principles-3",
+    "documento",
+    "AMEC Barcelona Principles 3.0",
+    [
+      "AMEC BP 3.0"
+    ],
+    "entidad_existente"
+  ],
+  "AMEC_FRAMEWORK": [
+    "fusionado",
+    "tema:taxonomia-medicion-amec-ief",
+    "tema",
+    "Taxonomía de Medición AMEC IEF",
+    [
+      "AMEC_FRAMEWORK"
+    ],
+    "entidad_existente"
+  ],
+  "AMEC_STANDARDS_DOC": [
+    "fusionado",
+    "doc:amec-barcelona-principles-3",
+    "documento",
+    "AMEC Barcelona Principles 3.0",
+    [
+      "AMEC_STANDARDS_DOC"
+    ],
+    "entidad_existente"
+  ],
+  "CADENA_VALOR_AMEC": [
+    "conservado",
+    "doc:cadena-valor-4-fases-amec",
+    "documento",
+    "Cadena de Valor de 4 Fases AMEC (Outputs, Outtakes, Outcomes, Impact)",
+    [
+      "Cadena de Valor AMEC"
+    ],
+    null
+  ],
+  "DENOMINADOR_CANONICO": [
+    "conservado",
+    "doc:especificacion-denominadores-canonicos-amec",
+    "documento",
+    "Especificación y Estándar de Denominadores Canónicos AMEC",
+    [
+      "AMEC Denominator Standard"
+    ],
+    null
+  ],
+  "DENOMINADORES_CANONICOS_AMEC": [
+    "fusionado",
+    "doc:especificacion-denominadores-canonicos-amec",
+    "documento",
+    "Especificación y Estándar de Denominadores Canónicos AMEC",
+    [
+      "DENOMINADORES_CANONICOS_AMEC"
+    ],
+    "variante_denominacion"
+  ],
+  "GRAFO_VALOR_AMEC": [
+    "conservado",
+    "doc:grafo-causalidad-amec-dag",
+    "documento",
+    "Grafo Dirigido Acíclico (DAG) de Atribución de Causalidad AMEC",
+    [
+      "DAG Attribution Model"
+    ],
+    null
+  ],
+  "PRINCIPIO_PAGE_2": [
+    "fusionado",
+    "doc:page-principles",
+    "documento",
+    "Principios de Arthur W. Page (Page Principles)",
+    [
+      "PRINCIPIO_PAGE_2"
+    ],
+    "entidad_existente"
+  ],
+  "GOLDEN_TESTSET": [
+    "conservado",
+    "doc:golden-benchmark-ciego-bridge",
+    "documento",
+    "Golden Benchmark Ciego de Evaluación BRIDGE (Testset G1-G2)",
+    [
+      "Golden Testset"
+    ],
+    null
+  ],
+  "HECHO_ESENCIAL_CMF": [
+    "fusionado",
+    "doc:cmf-ncg-30",
+    "documento",
+    "Norma de Carácter General N° 30 de la CMF (Hechos Esenciales e Información Continua)",
+    [
+      "HECHO_ESENCIAL_CMF"
+    ],
+    "entidad_existente"
+  ],
+  "PRENSA_FINANCIERA": [
+    "conservado",
+    "doc:reporte-prensa-financiera-fuente-secundaria",
+    "documento",
+    "Reportes y Despachos de Prensa Financiera (Fuente Secundaria No Oficial)",
+    [
+      "Prensa Financiera"
+    ],
+    null
+  ],
+  "SUMMEVAL_DIMENSIONS": [
+    "conservado",
+    "doc:dimensiones-summeval",
+    "documento",
+    "Taxonomía de Dimensiones Evaluativas SummEval (Consistencia, Coherencia, Relevancia, Fluidez)",
+    [
+      "SummEval Dimensions"
+    ],
+    null
+  ],
+  "REGLA_INCOMPARABILIDAD": [
+    "conservado",
+    "doc:protocolo-incomparabilidad-muestras",
+    "documento",
+    "Protocolo de Incomparabilidad de Muestras y Benchmarking Transversal",
+    [
+      "Cross-Domain Guardrail"
+    ],
+    null
+  ],
+  "REPORTE_SOSTENIBILIDAD": [
+    "conservado",
+    "doc:reporte-sostenibilidad-memoria-esg",
+    "documento",
+    "Reporte Integrado y Memoria ESG Corporativa Anual",
+    [
+      "Memoria ESG"
+    ],
+    null
+  ],
+  "CLAUSULA_DELIMITACION": [
+    "conservado",
+    "doc:clausula-delimitacion-causal-bridge",
+    "documento",
+    "Cláusula de Delimitación y Deslinde de Atribución Causal BRIDGE",
+    [
+      "Non-Causal Disclaimer"
+    ],
+    null
+  ],
+  "DESLINDE_REPUTACIONAL": [
+    "fusionado",
+    "doc:clausula-delimitacion-causal-bridge",
+    "documento",
+    "Cláusula de Delimitación y Deslinde de Atribución Causal BRIDGE",
+    [
+      "DESLINDE_REPUTACIONAL"
+    ],
+    "variante_denominacion"
+  ],
+  "POLITICA_SLA_999": [
+    "conservado",
+    "doc:politica-sla-corporativo-999",
+    "documento",
+    "Política de Service Level Agreement (SLA) Corporativo 99.9% de Disponibilidad",
+    [
+      "SLA 99.9%"
+    ],
+    null
+  ],
+  "CORPUS_OCR_HISTORICO": [
+    "conservado",
+    "doc:corpus-prueba-ocr-historico",
+    "documento",
+    "Corpus de Prueba de Escaneos y Documentos Históricos con OCR Degradado",
+    [
+      "Corpus OCR"
+    ],
+    null
+  ],
+  "REPORTE_INCERTIDUMBRE": [
+    "conservado",
+    "doc:estandar-reporte-incertidumbre-bridge",
+    "documento",
+    "Estándar de Reporte de Incertidumbre y Bandas de Confianza Estadística",
+    [
+      "Reporting Confidence Bounds"
+    ],
+    null
+  ],
+  "MATRIZ_ESTRATIFICADA": [
+    "conservado",
+    "doc:matriz-estratificacion-bidimensional",
+    "documento",
+    "Matriz de Estratificación Bidimensional para Pruebas Estadísticas",
+    [
+      "Balanced Benchmark Matrix"
+    ],
+    null
+  ],
+  "POLITICA_POTENCIA_ESTADISTICA": [
+    "conservado",
+    "doc:politica-potencia-muestreo-bridge",
+    "documento",
+    "Política y Estándar de Potencia Estadística y Tamaño Muestral",
+    [
+      "Power & Sample Size Policy"
+    ],
+    null
+  ],
+  "NOTIFICACION_CSIRT": [
+    "conservado",
+    "doc:protocolo-notificacion-csirt-3h",
+    "documento",
+    "Protocolo de Notificación de Incidentes Críticos al CSIRT Nacional en 3 Horas",
+    [
+      "Alerta Temprana CSIRT"
+    ],
+    null
+  ],
+  "PROTOCOLO_PENTEST_G0": [
+    "conservado",
+    "doc:protocolo-pentest-adversarial-g0",
+    "documento",
+    "Protocolo Obligatorio de Pentest Adversarial y Red Teaming para Compuerta G0",
+    [
+      "Gate 0 Pentest"
+    ],
+    null
+  ],
+  "EXECUTION_MANIFEST_BRIDGE": [
+    "conservado",
+    "doc:manifiesto-ejecucion-inmutable-reproducibilidad",
+    "documento",
+    "Manifiesto de Ejecución Inmutable para Trazabilidad y Reproducibilidad Forense",
+    [
+      "Reproducibility Manifest"
+    ],
+    null
+  ],
+  "REGLA_WORM_AUDITORIA": [
+    "fusionado",
+    "tema:almacenamiento-inmutable-worm",
+    "tema",
+    "Almacenamiento Inmutable Write Once Read Many (WORM)",
+    [
+      "REGLA_WORM_AUDITORIA"
+    ],
+    "entidad_existente"
+  ],
+  "GATE_SCORECARD_BRIDGE": [
+    "conservado",
+    "doc:gate-decision-scorecard-bridge",
+    "documento",
+    "Acta y Registro Formal de Decisión de Compuerta (Gate Decision Scorecard)",
+    [
+      "Gate Scorecard"
+    ],
+    null
+  ],
+  "CERTIFICADO_FORENSE": [
+    "conservado",
+    "doc:certificado-reproduccion-forense-determinista",
+    "documento",
+    "Certificado de Reproducción Forense Bit-a-Bit Determinista",
+    [
+      "Deterministic Proof Certificate"
+    ],
+    null
+  ],
+  "POLITICA_DETERMINISTA_BRIDGE": [
+    "conservado",
+    "doc:politica-reproducibilidad-determinista",
+    "documento",
+    "Política de Reproducibilidad Determinista y Cero Variabilidad Paramétrica",
+    [
+      "Zero-Temperature Policy"
+    ],
+    null
+  ],
+  "RCA 2018": [
+    "fusionado",
+    "doc:resolucion-calificacion-ambiental",
+    "documento",
+    "Resolución de Calificación Ambiental (RCA)",
+    [
+      "RCA 2018"
+    ],
+    "entidad_existente"
+  ],
+  "KRIPPENDORFF_ALPHA": [
+    "conservado",
+    "met:coeficiente-krippendorff-alpha",
+    "metrica",
+    "Coeficiente Alpha de Krippendorff para Acuerdo Inter-Juez",
+    [
+      "Krippendorff's Alpha"
+    ],
+    null
+  ],
+  "FLEISS_KAPPA": [
+    "conservado",
+    "met:coeficiente-fleiss-kappa",
+    "metrica",
+    "Coeficiente Kappa de Fleiss para Concordancia Multi-Juez",
+    [
+      "Fleiss' Kappa"
+    ],
+    null
+  ],
+  "ANCLA_SEMANTICA": [
+    "conservado",
+    "met:ancla-semantica-escala-likert",
+    "metrica",
+    "Anclas Semánticas Definidas para Escala Likert de Evaluación Humana",
+    [
+      "Likert Anchor"
+    ],
+    null
+  ],
+  "ALCE_CITATION_PRECISION": [
+    "conservado",
+    "met:precision-citacion-alce",
+    "metrica",
+    "Precisión y Exhaustividad de Citación según Métrica ALCE",
+    [
+      "ALCE Citation Precision"
+    ],
+    null
+  ],
+  "FINOPS_METRIC": [
+    "conservado",
+    "met:costo-unitario-por-caso-usd",
+    "metrica",
+    "Costo Unitario de Inferencia por Caso Resuelto (USD)",
+    [
+      "FinOps Unit Cost"
+    ],
+    null
+  ],
+  "AHORRO_NETO_VALIDADO": [
+    "conservado",
+    "met:ahorro-neto-tiempo-validado",
+    "metrica",
+    "Ahorro Neto de Tiempo Validado en Tareas Críticas de Asuntos Corporativos",
+    [
+      "Net Time Savings"
+    ],
+    null
+  ],
+  "DRAFT_ACCEPTANCE_RATE": [
+    "conservado",
+    "met:tasa-aceptacion-borradores",
+    "metrica",
+    "Tasa de Retención y Aceptación de Borradores Generados (Draft Acceptance Rate)",
+    [
+      "Draft Acceptance Rate"
+    ],
+    null
+  ],
+  "AHORRO_HORAS_DEMOSTRADO": [
+    "fusionado",
+    "met:ahorro-neto-tiempo-validado",
+    "metrica",
+    "Ahorro Neto de Tiempo Validado en Tareas Críticas de Asuntos Corporativos",
+    [
+      "AHORRO_HORAS_DEMOSTRADO"
+    ],
+    "variante_denominacion"
+  ],
+  "CITATION_INSPECTION_RATE": [
+    "conservado",
+    "met:tasa-inspeccion-citas",
+    "metrica",
+    "Tasa de Clics e Inspección de Evidencias Respaldadas (Citation Inspection Rate)",
+    [
+      "Citation Inspection Rate"
+    ],
+    null
+  ],
+  "VAN_WESTENDORP_PSM": [
+    "conservado",
+    "met:van-westendorp-price-sensitivity-meter",
+    "metrica",
+    "Métrica de Sensibilidad de Precios Van Westendorp (PSM)",
+    [
+      "Van Westendorp PSM"
+    ],
+    null
+  ],
+  "PSM_CANONICO": [
+    "fusionado",
+    "met:van-westendorp-price-sensitivity-meter",
+    "metrica",
+    "Métrica de Sensibilidad de Precios Van Westendorp (PSM)",
+    [
+      "PSM_CANONICO"
+    ],
+    "variante_denominacion"
+  ],
+  "SAY_DO_RATIO": [
+    "conservado",
+    "met:ratio-say-do-intencion-vs-accion",
+    "metrica",
+    "Ratio Decir vs Hacer (Say/Do Ratio) de Intención Comercial Efectiva",
+    [
+      "Say/Do Ratio"
+    ],
+    null
+  ],
+  "MONOTONICIDAD_PRECIOS": [
+    "conservado",
+    "met:regla-monotonicidad-precios-psm",
+    "metrica",
+    "Criterio de Monotonicidad Estricta en Curvas de Precio Van Westendorp",
+    [
+      "Price Monotonicity Rule"
+    ],
+    null
+  ],
+  "PRECIO_OPP_4500": [
+    "conservado",
+    "met:precio-optimo-opp-4500-usd",
+    "metrica",
+    "Punto de Precio Óptimo Validado (Optimal Price Point - $4.500 USD/mes)",
+    [
+      "Optimal Price Point"
+    ],
+    null
+  ],
+  "FINOPS_PILOTO": [
+    "conservado",
+    "met:estructura-costo-total-piloto-finops",
+    "metrica",
+    "Estructura de Costo Total de Propiedad del Piloto (FinOps TCO)",
+    [
+      "TCO Piloto"
+    ],
+    null
+  ],
+  "NASA_TLX_INDEX": [
+    "conservado",
+    "met:indice-carga-mental-nasa-tlx",
+    "metrica",
+    "Índice de Carga de Trabajo y Demanda Mental NASA-TLX",
+    [
+      "NASA-TLX Index"
+    ],
+    null
+  ],
+  "NASA_TLX_METRIC": [
+    "fusionado",
+    "met:indice-carga-mental-nasa-tlx",
+    "metrica",
+    "Índice de Carga de Trabajo y Demanda Mental NASA-TLX",
+    [
+      "NASA_TLX_METRIC"
+    ],
+    "variante_denominacion"
+  ],
+  "REDUCCION_FATIGA_42": [
+    "fusionado",
+    "met:indice-carga-mental-nasa-tlx",
+    "metrica",
+    "Índice de Carga de Trabajo y Demanda Mental NASA-TLX",
+    [
+      "REDUCCION_FATIGA_42"
+    ],
+    "variante_denominacion"
+  ],
+  "MODELO_ACTUARIAL_RIESGO": [
+    "conservado",
+    "met:modelo-actuarial-riesgo-evitado",
+    "metrica",
+    "Modelo Actuarial de Valor Esperado de Riesgo Normativo Evitado",
+    [
+      "Expected Value Insurance"
+    ],
+    null
+  ],
+  "PPI_INFERENCE": [
+    "conservado",
+    "met:prediction-powered-inference-ppi",
+    "metrica",
+    "Métrica de Inferencia Asistida por Predicción (Prediction-Powered Inference - PPI)",
+    [
+      "PPI Inference"
+    ],
+    null
+  ],
+  "BOOTSTRAP_CI": [
+    "conservado",
+    "met:intervalos-confianza-bootstrap-95",
+    "metrica",
+    "Intervalos de Confianza al 95% mediante Bootstrap y Wilson Score",
+    [
+      "Bootstrap 95% CI"
+    ],
+    null
+  ],
+  "INTERVALO_95_PRECISION": [
+    "fusionado",
+    "met:intervalos-confianza-bootstrap-95",
+    "metrica",
+    "Intervalos de Confianza al 95% mediante Bootstrap y Wilson Score",
+    [
+      "INTERVALO_95_PRECISION"
+    ],
+    "variante_denominacion"
+  ],
+  "CORRELACION_INTRA_CLUSTER": [
+    "conservado",
+    "met:coeficiente-correlacion-intra-cluster-icc",
+    "metrica",
+    "Coeficiente de Correlación Intra-Clúster (ICC) para Muestreo Jerárquico",
+    [
+      "Intra-Cluster Correlation"
+    ],
+    null
+  ],
+  "TELEMETRIA_SUPERVISION": [
+    "conservado",
+    "met:indice-supervision-critica-efectiva",
+    "metrica",
+    "Índice de Supervisión Humana Crítica Efectiva (Effective Oversight Index)",
+    [
+      "Human Oversight Index"
+    ],
+    null
+  ],
+  "SEGURIDAD_PSICOLOGICA_ANALISTA": [
+    "conservado",
+    "met:seguridad-psicologica-decisional",
+    "metrica",
+    "Nivel de Seguridad Psicológica y Confianza Decisional del Analista",
+    [
+      "Decision Confidence Score"
+    ],
+    null
+  ],
+  "BANDA_EDICION_SALUDABLE": [
+    "conservado",
+    "met:banda-edicion-humana-saludable",
+    "metrica",
+    "Banda de Edición Humana Saludable (15% a 30% de Diff Ratio)",
+    [
+      "Healthy Edit Ratio"
+    ],
+    null
+  ],
+  "CRITERIOS_MUST_MEET": [
+    "conservado",
+    "met:criterios-must-meet-innegociables",
+    "metrica",
+    "Criterios Must-Meet Innegociables de Calidad y Seguridad para Compuertas",
+    [
+      "Must-Meet Criteria"
+    ],
+    null
+  ],
+  "FATAL_FLAW_RULE": [
+    "conservado",
+    "riesgo:principio-fallo-fatal-asimetrico",
+    "riesgo",
+    "Riesgo de Fallo Fatal Asimétrico en Respuestas Corporativas Críticas",
+    [
+      "Fatal Flaw Rule"
+    ],
+    null
+  ],
+  "REGLA_FALLO_FATAL": [
+    "fusionado",
+    "riesgo:principio-fallo-fatal-asimetrico",
+    "riesgo",
+    "Riesgo de Fallo Fatal Asimétrico en Respuestas Corporativas Críticas",
+    [
+      "REGLA_FALLO_FATAL"
+    ],
+    "variante_denominacion"
+  ],
+  "Costo Asimétrico del Error": [
+    "fusionado",
+    "riesgo:principio-fallo-fatal-asimetrico",
+    "riesgo",
+    "Riesgo de Fallo Fatal Asimétrico en Respuestas Corporativas Críticas",
+    [
+      "Costo Asimétrico del Error"
+    ],
+    "variante_denominacion"
+  ],
+  "VARIABLES_CONFUSORAS": [
+    "conservado",
+    "riesgo:factores-exogenos-variables-confusoras",
+    "riesgo",
+    "Riesgo Metodológico de Factores Exógenos y Variables Confusoras en Evaluación",
+    [
+      "Confounding Variables"
+    ],
+    null
+  ],
+  "SESGO_COMPLACENCIA": [
+    "conservado",
+    "riesgo:sesgo-complacencia-cortesia-social",
+    "riesgo",
+    "Riesgo de Sesgo de Complacencia y Cortesía Social en Validación de Usuarios",
+    [
+      "Courtesy Bias"
+    ],
+    null
+  ],
+  "DISCREPANCIA_EJE1": [
+    "conservado",
+    "riesgo:discrepancia-compuertas-piloto",
+    "riesgo",
+    "Riesgo de Discrepancia Metodológica en Criterios de Compuertas",
+    [
+      "Gate Discrepancy Risk"
+    ],
+    null
+  ],
+  "VACIO_LONGITUDINAL_G2": [
+    "conservado",
+    "riesgo:vacio-retencion-longitudinal-g2",
+    "riesgo",
+    "Riesgo de Desgaste y Pérdida de Retención Longitudinal de Usuarios (G2)",
+    [
+      "Long-Term Churn Risk"
+    ],
+    null
+  ],
+  "ATAQUE_CROSS_TENANT": [
+    "conservado",
+    "riesgo:ataque-fuga-cross-tenant",
+    "riesgo",
+    "Riesgo de Fuga y Exfiltración de Datos Cross-Tenant entre Clientes",
+    [
+      "Cross-Tenant Data Leak"
+    ],
+    null
+  ],
+  "INYECCION_INDIRECTA": [
+    "conservado",
+    "riesgo:inyeccion-indirecta-prompts-ocultos",
+    "riesgo",
+    "Riesgo de Inyección Indirecta de Prompts Mediante Fuentes Documentales Ocultas",
+    [
+      "Indirect Prompt Injection"
+    ],
+    null
+  ],
+  "DATA_POISONING_RIESGO": [
+    "conservado",
+    "riesgo:envenenamiento-fuentes-documentales",
+    "riesgo",
+    "Riesgo de Envenenamiento Persistente de Fuentes Documentales (Corpus Poisoning)",
+    [
+      "Data Poisoning Risk"
+    ],
+    null
+  ],
+  "COMPLACENCIA_AUTOMATIZADA": [
+    "fusionado",
+    "tema:prevencion-aprobacion-automatica-rubber-stamping",
+    "tema",
+    "Prevención de Aprobaciones Superficiales sin Lectura (Rubber-Stamping)",
+    [
+      "COMPLACENCIA_AUTOMATIZADA"
+    ],
+    "entidad_existente"
+  ],
+  "FRICCION_GOBERNANZA": [
+    "conservado",
+    "riesgo:friccion-excesiva-gobernanza-permisos",
+    "riesgo",
+    "Riesgo de Fricción Operacional por Gobernanza Excesiva y Trazabilidad Rígida",
+    [
+      "Governance Friction"
+    ],
+    null
+  ],
+  "RIESGO_SHADOW_AI": [
+    "conservado",
+    "riesgo:uso-clandestino-shadow-ai",
+    "riesgo",
+    "Riesgo de Uso Clandestino de Herramientas de IA No Autorizadas (Shadow AI)",
+    [
+      "Shadow AI Risk"
+    ],
+    null
+  ],
+  "OBSOLESCENCIA_APIS": [
+    "conservado",
+    "riesgo:obsolescencia-depreciacion-apis-llm",
+    "riesgo",
+    "Riesgo de Sunset y Depreciación Inesperada de Checkpoints y APIs de Modelos",
+    [
+      "API Sunset Risk"
+    ],
+    null
+  ],
+  "Compañía Minera del Norte S.A.": [
+    "conservado",
+    "org:compania-minera-del-norte",
+    "organizacion",
+    "Compañía Minera del Norte S.A. (Empresa Minera Piloto)",
+    [
+      "Minera del Norte"
+    ],
+    null
+  ],
+  "Energía Austral S.A.": [
+    "conservado",
+    "org:energia-austral-sa",
+    "organizacion",
+    "Energía Austral S.A.",
+    [
+      "Energía Austral"
+    ],
+    null
+  ],
+  "Comunidad El Quillay": [
+    "conservado",
+    "org:comunidad-el-quillay",
+    "organizacion",
+    "Comunidad Agrícola y Vecinal El Quillay",
+    [
+      "Comunidad El Quillay"
+    ],
+    null
+  ],
+  "Grupo de Control Contemporáneo": [
+    "conservado",
+    "tema:grupo-control-contemporaneo-evaluacion",
+    "tema",
+    "Diseño Experimental con Grupo de Control Contemporáneo Cuasi-Experimental",
+    [
+      "Control Contemporáneo"
+    ],
+    null
+  ],
+  "Línea Base Manual": [
+    "conservado",
+    "tema:linea-base-manual-operaciones",
+    "tema",
+    "Medición de Línea Base Manual en Operaciones Previas a la Adopción de IA",
+    [
+      "Línea Base Manual"
+    ],
+    null
+  ],
+  "ROI Ajustado por Calidad": [
+    "conservado",
+    "tema:retorno-inversion-ajustado-calidad-qari",
+    "tema",
+    "Modelo de Retorno de Inversión Ajustado por Calidad y Precisión (QARI)",
+    [
+      "Quality-Adjusted ROI"
+    ],
+    null
+  ],
+  "BM25 vs RAG": [
+    "conservado",
+    "tema:comparacion-bm25-lexico-vs-rag-vectorial",
+    "tema",
+    "Comparación de Rendimiento Factual: BM25 Léxico vs RAG Semántico",
+    [
+      "BM25 vs RAG"
+    ],
+    null
+  ],
+  "ChatGPT Alucinaciones": [
+    "conservado",
+    "tema:estudio-alucinaciones-llm-commodity",
+    "tema",
+    "Estudio y Medición de Tasa de Alucinaciones en Modelos Genéricos Commodity",
+    [
+      "Commodity Hallucinations"
+    ],
+    null
+  ],
+  "Control 0 (Manual)": [
+    "conservado",
+    "exp:cohorte-control-0-manual",
+    "experimento",
+    "Cohorte de Control 0: Proceso Manual Humano Tradicional",
+    [
+      "Control 0"
+    ],
+    null
+  ],
+  "Control 1 (BM25)": [
+    "conservado",
+    "exp:cohorte-control-1-bm25",
+    "experimento",
+    "Cohorte de Control 1: Recuperación Léxica BM25 Tradicional",
+    [
+      "Control 1"
+    ],
+    null
+  ],
+  "Control 2 (Commodity LLM)": [
+    "conservado",
+    "exp:cohorte-control-2-commodity-llm",
+    "experimento",
+    "Cohorte de Control 2: Modelo Commodity sin Retrieval Especializado",
+    [
+      "Control 2"
+    ],
+    null
+  ],
+  "Control 3 (Agencia Clipping)": [
+    "conservado",
+    "exp:cohorte-control-3-agencia-clipping",
+    "experimento",
+    "Cohorte de Control 3: Agencia de Comunicaciones y Clipping Tradicional",
+    [
+      "Control 3"
+    ],
+    null
+  ],
+  "CUATRO_CONTROLES_T01": [
+    "fusionado",
+    "exp:cohorte-control-0-manual",
+    "experimento",
+    "Cohorte de Control 0: Proceso Manual Humano Tradicional",
+    [
+      "CUATRO_CONTROLES_T01"
+    ],
+    "variante_denominacion"
+  ],
+  "CASO_SMA_PILOTO": [
+    "conservado",
+    "exp:caso-evaluacion-humana-ceh-t01-088",
+    "experimento",
+    "Caso de Evaluación Humana Ciega CEH-T01-088 (Fiscalización SMA)",
+    [
+      "Prueba Ciega SMA"
+    ],
+    null
+  ],
+  "CASO_CCM_105": [
+    "conservado",
+    "exp:caso-medicion-ccm-t01-105",
+    "experimento",
+    "Caso de Medición CCM-T01-105 (Huella Hídrica y Declaración Ambiental)",
+    [
+      "Prueba Huella Hídrica"
+    ],
+    null
+  ],
+  "CASO_CCA_140": [
+    "conservado",
+    "exp:caso-atribucion-cca-t01-140",
+    "experimento",
+    "Caso de Atribución CCA-T01-140 (Piloto Consulta Indígena)",
+    [
+      "Piloto Consulta Indígena"
+    ],
+    null
+  ],
+  "CASO_CCP_182": [
+    "conservado",
+    "exp:caso-pricing-ccp-t01-182",
+    "experimento",
+    "Caso de Validación Comercial y Pricing CCP-T01-182 en Gran Minería",
+    [
+      "Validación Comercial Minera"
+    ],
+    null
+  ],
+  "CASO_CCC_210": [
+    "conservado",
+    "exp:caso-continuidad-ccc-t01-210",
+    "experimento",
+    "Caso de Continuidad Operacional y Failover CCC-T01-210",
+    [
+      "Prueba Failover Q3"
+    ],
+    null
+  ],
+  "CASO_CAE_255": [
+    "conservado",
+    "exp:caso-auditoria-estadistica-cae-t01-255",
+    "experimento",
+    "Caso de Auditoría Estadística CAE-T01-255 (Validación PPI en Banca)",
+    [
+      "Validación PPI Banca"
+    ],
+    null
+  ],
+  "CASO_CPA_280": [
+    "conservado",
+    "exp:caso-pentest-cpa-t01-280",
+    "experimento",
+    "Caso de Pentest CPA-T01-280 (Prueba Inyección Indirecta)",
+    [
+      "Prueba Inyección Indirecta"
+    ],
+    null
+  ],
+  "CASO_CTH_320": [
+    "conservado",
+    "exp:caso-adopcion-humana-cth-t01-320",
+    "experimento",
+    "Caso de Adopción Humana CTH-T01-320 (Prueba Negociación Colectiva)",
+    [
+      "Prueba Negociación Colectiva"
+    ],
+    null
+  ],
+  "CASO_CAF_380": [
+    "conservado",
+    "exp:caso-auditoria-forense-caf-t01-380",
+    "experimento",
+    "Caso de Auditoría Forense CAF-T01-380 (Peritaje CMF a 9 Meses)",
+    [
+      "Peritaje CMF"
+    ],
+    null
+  ],
+  "PANEL_INTERDISCIPLINAR": [
+    "conservado",
+    "exp:panel-evaluador-interdisciplinar",
+    "experimento",
+    "Panel Evaluador Interdisciplinar Ciego (Legal, Comunicaciones y Comunidad)",
+    [
+      "Panel Interdisciplinar"
+    ],
+    null
+  ],
+  "EXPERIMENTO_CHUNKING_CMF": [
+    "conservado",
+    "exp:experimento-chunking-tabular-cmf",
+    "experimento",
+    "Experimento de Optimización de Chunking Tabular para Reportes CMF",
+    [
+      "Table RAG Optimization"
+    ],
+    null
+  ],
+  "PRUEBA_EGRESS_TRANSFRONTERIZO": [
+    "conservado",
+    "exp:prueba-carga-egress-transfronterizo",
+    "experimento",
+    "Prueba de Carga y Egress Transfronterizo bajo Contingencia Failover",
+    [
+      "Cross-Border Failover Test"
+    ],
+    null
+  ],
+  "MUESTRA_CANONICA_ARES": [
+    "conservado",
+    "exp:muestra-canonica-ares-300-claims",
+    "experimento",
+    "Muestra Canónica de 300 Afirmaciones Evaluadas con ARES (Potencia 0.80)",
+    [
+      "Muestra Canónica ARES"
+    ],
+    null
+  ],
+  "REDTEAM_SUITE_T01": [
+    "conservado",
+    "exp:suite-pruebas-adversariales-red-team",
+    "experimento",
+    "Suite Integral de Pruebas Adversariales Red Team (Inyecciones, Homónimos, Tokens Caducados)",
+    [
+      "Red Team Suite"
+    ],
+    null
+  ],
+  "ESTUDIO_COGNITIVO_12M": [
+    "conservado",
+    "exp:estudio-longitudinal-competencia-cognitiva",
+    "experimento",
+    "Estudio Longitudinal de Retención de Competencias Cognitivas a 12 Meses",
+    [
+      "Cognitive Retention Study"
+    ],
+    null
+  ],
+  "PilotEngagement": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "ModuleHypothesis": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "EvaluationGate": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "GateMetricThreshold": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "GateDecisionAudit": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "BaselineWorkflowDef": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "ComparativeControlCohort": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "BenchmarkedTaskExecution": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "FactualQualityAssessment": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "CostBenefitCalculation": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_GOLDEN": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_RUBRICA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_METRICAS": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_ATRIBUCION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_ENTREVISTAS_WTP": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_COSTOS_SLA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_DISENO_ESTADISTICO": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_ADVERSARIAL_LOG": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_TRABAJO_HUMANO": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "SCHEMA_REPRODUCIBILIDAD": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "esquema_datos_interno"
+  ],
+  "T01_VERIFICATION_CORRECTIONS": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "BRIDGE_STUDIO_MX_EXCLUIDA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "fuente_descartada_auditoria"
+  ],
+  "CORPUS_EJE8": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "CORPUS_ESTADISTICO_T01": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "CORPUS_SEGURIDAD_T01": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "CORPUS_HUMANO_T01": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ],
+  "CORPUS_REPRODUCCION_T01": [
+    "eliminado",
+    null,
+    null,
+    null,
+    null,
+    "artefacto_auditoria_interno"
+  ]
+}
