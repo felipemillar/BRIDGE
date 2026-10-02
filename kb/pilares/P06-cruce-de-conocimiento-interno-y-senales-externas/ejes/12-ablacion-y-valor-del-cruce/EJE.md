@@ -36,7 +36,7 @@
 
 > La fundamentación teórica y experimental de la ablación y valor del cruce se respalda en las siguientes fuentes verificadas del corpus: 1) Es et al. (2023, ArXiv:2309.15217; 'Ragas: Automated Evaluation of Retrieval Augmented Generation', Septiembre 2023): Secciones 3 y 4, proveyendo los estimadores
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P06-X29.json](P06-X29.json)
 ### P06-X30: ¿Qué caso concreto, con entradas y resultado esperado, ilustra ablación y valor del cruce sin introducir datos no documentados?
 
