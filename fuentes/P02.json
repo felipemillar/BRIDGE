@@ -5,6 +5,13 @@
   "total_sources": 80,
   "snapshot_at": "2026-10-01T01:21:00-03:00",
   "editorial_precedence_rule": "00_P02_GLOBAL_READ_ME_AND_ERRATA takes absolute precedence over all other sources in this notebook. Reconciles atlas count and corrects commercial vendor claims.",
+  "counts": {
+    "total": 80,
+    "usable": 74,
+    "failed_or_blocked": 6,
+    "internal_synthesis": 12,
+    "external_sources": 68
+  },
   "sources": [
     {
       "source_id": "e08c2111-b14b-44d9-bd3c-54651ef434b5",
@@ -101,9 +108,10 @@
       "original_url": null,
       "status_code": 3,
       "word_count": null,
-      "text_status": "fallida_o_bloqueada",
+      "text_status": "fallida",
       "is_internal_synthesis": false,
-      "verified_at": "2026-10-01T01:21:00-03:00"
+      "verified_at": "2026-10-01T01:21:00-03:00",
+      "text_status_original": "fallida_o_bloqueada"
     },
     {
       "source_id": "f7ea6578-7fa7-4f39-98ee-2350cfa8ff43",
@@ -222,9 +230,10 @@
       "original_url": null,
       "status_code": 3,
       "word_count": null,
-      "text_status": "fallida_o_bloqueada",
+      "text_status": "fallida",
       "is_internal_synthesis": false,
-      "verified_at": "2026-10-01T01:21:00-03:00"
+      "verified_at": "2026-10-01T01:21:00-03:00",
+      "text_status_original": "fallida_o_bloqueada"
     },
     {
       "source_id": "a51da039-b818-4b63-8492-e18d87337e50",
@@ -376,9 +385,10 @@
       "original_url": null,
       "status_code": 3,
       "word_count": null,
-      "text_status": "fallida_o_bloqueada",
+      "text_status": "fallida",
       "is_internal_synthesis": false,
-      "verified_at": "2026-10-01T01:21:00-03:00"
+      "verified_at": "2026-10-01T01:21:00-03:00",
+      "text_status_original": "fallida_o_bloqueada"
     },
     {
       "source_id": "f0e5491c-be5a-405e-8178-dc1875be20d0",
@@ -409,9 +419,10 @@
       "original_url": null,
       "status_code": 3,
       "word_count": null,
-      "text_status": "fallida_o_bloqueada",
+      "text_status": "fallida",
       "is_internal_synthesis": false,
-      "verified_at": "2026-10-01T01:21:00-03:00"
+      "verified_at": "2026-10-01T01:21:00-03:00",
+      "text_status_original": "fallida_o_bloqueada"
     },
     {
       "source_id": "22f02864-850a-4cf2-b56d-77c23f83d441",
@@ -541,9 +552,10 @@
       "original_url": null,
       "status_code": 3,
       "word_count": null,
-      "text_status": "fallida_o_bloqueada",
+      "text_status": "fallida",
       "is_internal_synthesis": false,
-      "verified_at": "2026-10-01T01:21:00-03:00"
+      "verified_at": "2026-10-01T01:21:00-03:00",
+      "text_status_original": "fallida_o_bloqueada"
     },
     {
       "source_id": "015e0705-b4dc-4b33-b329-3bece62f8b16",
@@ -794,9 +806,10 @@
       "original_url": null,
       "status_code": 3,
       "word_count": null,
-      "text_status": "fallida_o_bloqueada",
+      "text_status": "fallida",
       "is_internal_synthesis": false,
-      "verified_at": "2026-10-01T01:21:00-03:00"
+      "verified_at": "2026-10-01T01:21:00-03:00",
+      "text_status_original": "fallida_o_bloqueada"
     },
     {
       "source_id": "3cd556b0-adad-4a02-9088-9f21a1b2b1b3",
@@ -886,12 +899,5 @@
       "is_internal_synthesis": false,
       "verified_at": "2026-10-01T01:21:00-03:00"
     }
-  ],
-  "counts": {
-    "total": 80,
-    "usable": 74,
-    "failed_or_blocked": 6,
-    "internal_synthesis": 12,
-    "external_sources": 68
-  }
+  ]
 }

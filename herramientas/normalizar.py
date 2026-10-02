@@ -4,12 +4,28 @@ Aplica las reglas N1–N8 de auditoria/PLAN_MIGRACION_ANTIGRAVITY.md Anexo A.
 Es idempotente y preserva los valores originales en campos *_original.
 """
 import logging
-from herramientas.kb import (
-    cargar_respuestas,
-    guardar_respuestas,
-    cargar_manifiestos,
-    guardar_manifiestos,
-)
+import sys
+from pathlib import Path
+
+_RAIZ = Path(__file__).resolve().parent.parent
+if str(_RAIZ) not in sys.path:
+    sys.path.insert(0, str(_RAIZ))
+
+try:
+    from herramientas.kb import (
+        cargar_respuestas,
+        guardar_respuestas,
+        cargar_manifiestos,
+        guardar_manifiestos,
+    )
+except ModuleNotFoundError:
+    from kb import (
+        cargar_respuestas,
+        guardar_respuestas,
+        cargar_manifiestos,
+        guardar_manifiestos,
+    )
+
 
 logger = logging.getLogger("normalizar")
 
