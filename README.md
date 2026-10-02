@@ -15,10 +15,12 @@ El programa consolida la base de conocimiento empírica, técnica y legal sobre 
 | **Desglose de Preguntas** | 576 Fundamentales (F) + 192 Contraste (C) + 96 Profundización (X) |
 | **Universo de Fuentes** | 551 fuentes verificadas en los 12 manifiestos |
 | **Evidencia Científica** | 11 PDFs de texto completo ArXiv incorporados (300k+ tokens científicos) |
-| **Auditoría de Calidad** | **100% PASS** en auditoría endurecida (0 fallas críticas, 100% citas resolubles) |
+| **Auditoría de Calidad** | Dictamen independiente y hallazgos detallados en [INFORME_AUDITORIA.md](auditoria/INFORME_AUDITORIA.md) |
 | **Entidades Deduplicadas** | 1.528 entidades en [`entidades.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/entidades.jsonl) |
 | **Grafo de Relaciones** | 477 relaciones dirigidas en [`relaciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/relaciones.jsonl) |
 | **Contradicciones Reconciliadas** | 93 discrepancias catalogadas en [`contradicciones.jsonl`](file:///Users/fmillar/Proyectos_Desarrollo/BRIDGE/contradicciones.jsonl) |
+
+> **Aviso de Auditoría:** Para el dictamen independiente sobre el estado del corpus y sus banderas de calidad, consulte [INFORME_AUDITORIA.md](auditoria/INFORME_AUDITORIA.md).
 
 ---
 

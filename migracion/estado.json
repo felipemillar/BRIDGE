@@ -5,7 +5,7 @@
   "fases_cerradas": [
     "PREP"
   ],
-  "iteracion": 2,
+  "iteracion": 3,
   "tareas": {
     "P.1": {
       "estado": "hecha",
@@ -38,9 +38,9 @@
       "commit": "4042b90"
     },
     "F0.1": {
-      "estado": "pendiente",
-      "intentos": 0,
-      "commit": null
+      "estado": "hecha",
+      "intentos": 1,
+      "commit": "684902d"
     },
     "F0.2": {
       "estado": "pendiente",
@@ -549,9 +549,9 @@
     }
   },
   "ultima_comprobacion": {
-    "comando": "python3 auditoria/comprobar_migracion.py --hasta PREP",
-    "resultado": "OK",
-    "fecha": "2026-10-02T14:12:43Z"
+    "comando": "python3 auditoria/comprobar_migracion.py --hasta F0",
+    "resultado": "FALLA (5)",
+    "fecha": "2026-10-02T14:15:07Z"
   },
   "bloqueo": null
 }
