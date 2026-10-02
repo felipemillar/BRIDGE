@@ -42,7 +42,7 @@
 
 > La representación estructurada de calidad, acceso y correcciones exige: 1) Entidad de Control de Acceso: `Entity_AccessPolicy` con atributos (policy_id, user_role, resource_sensitivity_level [public, confidential, restricted], allowed_actions [read, write, audit, export]); 2) Entidad de Registro de
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P09-F46.json](P09-F46.json)
 ### P09-F47: ¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre calidad, acceso y correcciones?
 
