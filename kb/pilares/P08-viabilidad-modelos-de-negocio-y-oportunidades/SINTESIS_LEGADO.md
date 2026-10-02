@@ -1,3 +1,5 @@
+> Documento heredado del 2026-10-01. Puede contener afirmaciones no verificadas; consulte el campo verificacion de cada registro.
+
 # Síntesis Ejecutiva y Documento de Evidencia Canónica: Pilar P08
 ## Viabilidad, Modelos de Negocio y Oportunidades de Inteligencia Corporativa
 

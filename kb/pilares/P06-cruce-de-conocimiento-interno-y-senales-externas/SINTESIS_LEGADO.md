@@ -1,3 +1,5 @@
+> Documento heredado del 2026-10-01. Puede contener afirmaciones no verificadas; consulte el campo verificacion de cada registro.
+
 # Síntesis Ejecutiva y Metodológica — Pilar P06: Cruce de Conocimiento Interno y Señales Externas
 
 **Programa de Investigación:** Inteligencia para Asuntos Corporativos  

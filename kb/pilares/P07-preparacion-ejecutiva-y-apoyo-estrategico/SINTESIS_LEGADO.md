@@ -1,3 +1,5 @@
+> Documento heredado del 2026-10-01. Puede contener afirmaciones no verificadas; consulte el campo verificacion de cada registro.
+
 # Síntesis Ejecutiva y Metodológica — Pilar P07: Preparación Ejecutiva y Apoyo Estratégico
 
 **Programa de Investigación de Inteligencia en Asuntos Corporativos — Proyecto BRIDGE**  

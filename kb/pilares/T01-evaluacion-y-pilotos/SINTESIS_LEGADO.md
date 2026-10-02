@@ -1,3 +1,5 @@
+> Documento heredado del 2026-10-01. Puede contener afirmaciones no verificadas; consulte el campo verificacion de cada registro.
+
 # Cuaderno Final T01 — Evaluación y Pilotos
 ## Síntesis Canónica, Marco Experimental, Protocolo Stage-Gate y Análisis Econométrico de Adopción
 

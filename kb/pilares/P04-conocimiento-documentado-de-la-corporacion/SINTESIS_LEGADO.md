@@ -1,3 +1,5 @@
+> Documento heredado del 2026-10-01. Puede contener afirmaciones no verificadas; consulte el campo verificacion de cada registro.
+
 # Síntesis Ejecutiva y Metodológica — Pilar P04: Conocimiento Documentado de la Corporación
 
 **Programa de Investigación:** Inteligencia para Asuntos Corporativos  

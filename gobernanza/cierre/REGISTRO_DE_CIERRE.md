@@ -1,3 +1,5 @@
+> Documento heredado del 2026-10-01. Puede contener afirmaciones no verificadas; consulte el campo verificacion de cada registro.
+
 # Registro de Cierre Formal y Reconciliación del Programa de Investigación
 ## Conforme al Mandato de Extracción Densa de Conocimiento y Auditoría Post-Verificación Independiente
 

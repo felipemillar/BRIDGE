@@ -1,3 +1,5 @@
+> Documento heredado del 2026-10-01. Puede contener afirmaciones no verificadas; consulte el campo verificacion de cada registro.
+
 # Índice Global y Síntesis Transversal del Programa de Investigación
 ## The Bridge Intelligence — Plataforma de Inteligencia para Asuntos Corporativos
 

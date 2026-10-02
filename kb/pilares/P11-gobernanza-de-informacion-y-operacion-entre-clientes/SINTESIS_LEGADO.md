@@ -1,3 +1,5 @@
+> Documento heredado del 2026-10-01. Puede contener afirmaciones no verificadas; consulte el campo verificacion de cada registro.
+
 # Pilar P11 — Gobernanza de Información y Operación entre Clientes
 ## Síntesis Canónica, Arquitectura de Seguridad Multi-Tenant y Matriz de Cumplimiento Normativo
 
