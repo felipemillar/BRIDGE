@@ -1,0 +1,672 @@
+{
+  "ENT_ACCION_EMPRESAS": [
+    "conservado",
+    "org:accion-empresas",
+    "organizacion",
+    "Acción Empresas Chile",
+    [
+      "Acción Empresas",
+      "Red de Empresas Sostenibles"
+    ],
+    null
+  ],
+  "ENT_BCN": [
+    "conservado",
+    "org:bcn",
+    "organizacion",
+    "Biblioteca del Congreso Nacional de Chile",
+    [
+      "BCN",
+      "Biblioteca del Congreso"
+    ],
+    null
+  ],
+  "ENT_CADEM": [
+    "conservado",
+    "org:cadem",
+    "organizacion",
+    "Cadem Chile",
+    [
+      "Cadem",
+      "Plaza Pública Cadem"
+    ],
+    null
+  ],
+  "ENT_CADENA_CAUSAL_ASIMETRIA": [
+    "conservado",
+    "riesgo:cadena-causal-asimetria",
+    "riesgo",
+    "Cadena Causal de Falla de Inteligencia",
+    [
+      "Falla de Inteligencia por Asimetría",
+      "Cadena Causal de Asimetría"
+    ],
+    null
+  ],
+  "ENT_CASO_COMPARATIVO_HIDRICO": [
+    "conservado",
+    "exp:caso-comparativo-hidrico",
+    "experimento",
+    "Caso Comparativo de Contingencia Hídrica Flujo A vs B",
+    [
+      "Contingencia Hídrica Flujo A vs B"
+    ],
+    null
+  ],
+  "ENT_CASO_LOBBY_MINERIA": [
+    "conservado",
+    "exp:caso-lobby-mineria",
+    "experimento",
+    "Caso Práctico: Contingencia Hídrica y Audiencia de Lobby",
+    [
+      "Contingencia Hídrica y Audiencia de Lobby"
+    ],
+    null
+  ],
+  "ENT_CASO_MINERO_NORTE": [
+    "conservado",
+    "exp:caso-minero-norte",
+    "experimento",
+    "Caso de Diálogo Territorial y Permisos Ambientales en Minería",
+    [
+      "Diálogo Territorial y Permisos Ambientales en Minería"
+    ],
+    null
+  ],
+  "ENT_CASO_REGIONAL_HIBRIDO": [
+    "conservado",
+    "exp:caso-regional-hibrido",
+    "experimento",
+    "Caso Regional de Contingencia Hídrica y Audiencia Ministerial",
+    [
+      "Caso Práctico P01-F42",
+      "Contingencia Hídrica y Audiencia Ministerial"
+    ],
+    null
+  ],
+  "ENT_CASO_ROI_MINERO": [
+    "conservado",
+    "exp:caso-roi-minero",
+    "experimento",
+    "Caso Práctico de Retorno de Valor en Sector Minero",
+    [
+      "Retorno de Valor en Sector Minero",
+      "Caso ROI Minero"
+    ],
+    null
+  ],
+  "ENT_CCO": [
+    "conservado",
+    "rol:cco",
+    "persona_rol",
+    "Chief Communications Officer (CCO / Dircom)",
+    [
+      "Dircom",
+      "Director de Asuntos Corporativos",
+      "Chief Communications Officer"
+    ],
+    null
+  ],
+  "ENT_CCO_INTEGRADOR": [
+    "fusionado",
+    "rol:cco",
+    "persona_rol",
+    null,
+    [
+      "CCO as Integrator (Arthur W. Page Society)",
+      "Articulador de Silos del C-Suite"
+    ],
+    "variante_rol_cco_integrador"
+  ],
+  "ENT_CISO": [
+    "conservado",
+    "rol:ciso",
+    "persona_rol",
+    "Chief Information Security Officer (CISO)",
+    [
+      "CISO",
+      "Gerente de Ciberseguridad"
+    ],
+    null
+  ],
+  "ENT_CMF": [
+    "conservado",
+    "org:cmf",
+    "organizacion",
+    "Comisión para el Mercado Financiero",
+    [
+      "CMF",
+      "Superintendencia de Valores y Seguros"
+    ],
+    null
+  ],
+  "ENT_CMF_NCG461": [
+    "conservado",
+    "doc:cmf-ncg-461",
+    "documento",
+    "NCG N° 461 de la Comisión para el Mercado Financiero",
+    [
+      "NCG 461",
+      "Norma de Carácter General N° 461"
+    ],
+    null
+  ],
+  "ENT_CONDICIONES_CONTENCION": [
+    "conservado",
+    "tema:condiciones-contencion",
+    "tema",
+    "Condiciones de Contención e Inteligencia Estructurada",
+    [
+      "Inteligencia Estructurada en Crisis",
+      "Contención Decisional"
+    ],
+    null
+  ],
+  "ENT_CORPUS_P01": [
+    "conservado",
+    "doc:corpus-p01",
+    "documento",
+    "Corpus P01: Asuntos Corporativos y sus Usuarios",
+    [
+      "Corpus P01"
+    ],
+    null
+  ],
+  "ENT_DEONTOLOGIA_PRSA": [
+    "conservado",
+    "doc:codigo-etica-prsa",
+    "documento",
+    "Código de Ética y Salvaguarda de Confidencias PRSA",
+    [
+      "PRSA Code of Ethics",
+      "Código Deontológico PRSA"
+    ],
+    null
+  ],
+  "ENT_DIRCOM": [
+    "fusionado",
+    "org:dircom-espana",
+    "organizacion",
+    null,
+    [
+      "Asociación de Directivos de Comunicación (Dircom)"
+    ],
+    "variante_denominacion_asociacion_dircom"
+  ],
+  "ENT_DIRCOM_ECE2025": [
+    "conservado",
+    "doc:dircom-ece-2025",
+    "documento",
+    "El Estado de la Comunicación en España 2025",
+    [
+      "ECE 2025",
+      "Estado Comunicación España 2025"
+    ],
+    null
+  ],
+  "ENT_DIRCOM_ESP": [
+    "conservado",
+    "org:dircom-espana",
+    "organizacion",
+    "Asociación de Directivos de Comunicación (Dircom España)",
+    [
+      "Dircom España",
+      "Asociación Dircom"
+    ],
+    null
+  ],
+  "ENT_DOSSIER_P01": [
+    "conservado",
+    "doc:dossier-p01",
+    "documento",
+    "P01_RESEARCH_DOSSIER",
+    [
+      "Dossier de Investigación P01"
+    ],
+    null
+  ],
+  "ENT_ECM": [
+    "conservado",
+    "doc:european-communication-monitor-2023",
+    "documento",
+    "European Communication Monitor 2023",
+    [
+      "ECM 2023"
+    ],
+    null
+  ],
+  "ENT_EDELMAN_TRUST": [
+    "conservado",
+    "doc:edelman-trust-barometer",
+    "documento",
+    "Edelman Trust Barometer 2025/2026",
+    [
+      "Edelman Trust Barometer"
+    ],
+    null
+  ],
+  "ENT_ESCENARIOS_FRICCION": [
+    "conservado",
+    "tema:escenarios-friccion",
+    "tema",
+    "Escenarios de Reunión y Fricción Decisional",
+    [
+      "Fricción Decisional B2B"
+    ],
+    null
+  ],
+  "ENT_ESTADIOS_MADUREZ": [
+    "conservado",
+    "tema:estadios-madurez-commtech",
+    "tema",
+    "Estadios de Madurez Digital CommTech",
+    [
+      "Madurez Artesanal, Estratégica y Agéntica"
+    ],
+    null
+  ],
+  "ENT_ESTUDIO_USUARIOS_CHILE": [
+    "conservado",
+    "doc:estudio-usuarios-chile",
+    "documento",
+    "Estudio Empírico de Usuarios de Asuntos Corporativos en Chile",
+    [
+      "Validación de Campo Fase 1 y 2"
+    ],
+    null
+  ],
+  "ENT_EUPRERA_LCM": [
+    "conservado",
+    "doc:euprera-latin-american-communication-monitor",
+    "documento",
+    "EUPRERA Latin American Communication Monitor",
+    [
+      "Latin American Communication Monitor",
+      "LCM EUPRERA"
+    ],
+    null
+  ],
+  "ENT_FISCAL_LEGAL": [
+    "conservado",
+    "rol:fiscal-legal",
+    "persona_rol",
+    "Fiscal Legal / Gerente de Compliance",
+    [
+      "Fiscal Legal",
+      "Gerente de Compliance",
+      "Compliance Officer"
+    ],
+    null
+  ],
+  "ENT_FUENTES_FALLIDAS_P01": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "registro_interno_auditoria"
+  ],
+  "ENT_GCF": [
+    "conservado",
+    "doc:global-capability-framework",
+    "documento",
+    "Global Capability Framework",
+    [
+      "GCF",
+      "Marco Global de Capacidades"
+    ],
+    null
+  ],
+  "ENT_GLOBAL_ALLIANCE": [
+    "conservado",
+    "org:global-alliance",
+    "organizacion",
+    "Global Alliance for Public Relations and Communication Management",
+    [
+      "Global Alliance"
+    ],
+    null
+  ],
+  "ENT_INFOLOBBY": [
+    "conservado",
+    "prod:infolobby",
+    "producto",
+    "Plataforma InfoLobby Chile",
+    [
+      "InfoLobby",
+      "Plataforma de Lobby BCN"
+    ],
+    null
+  ],
+  "ENT_JTBD_CRISIS": [
+    "conservado",
+    "tema:jtbd-minuta-crisis",
+    "tema",
+    "Preparación de Minuta de Crisis",
+    [
+      "Briefing Book Urgente",
+      "JTBD Minuta de Crisis"
+    ],
+    null
+  ],
+  "ENT_JTBD_DIMENSIONS": [
+    "conservado",
+    "tema:jtbd-dimensiones",
+    "tema",
+    "Dimensiones de Jobs-to-be-Done en Asuntos Corporativos",
+    [
+      "Jobs to be Done Asuntos Corporativos"
+    ],
+    null
+  ],
+  "ENT_JTBD_F1": [
+    "conservado",
+    "tema:jtbd-briefing-ejecutivo",
+    "tema",
+    "JTBD-F1: Compilación de Briefing Ejecutivo",
+    [
+      "Compilación de Briefing Ejecutivo"
+    ],
+    null
+  ],
+  "ENT_LEGAL_COMPLIANCE": [
+    "fusionado",
+    "rol:fiscal-legal",
+    "persona_rol",
+    null,
+    [
+      "Fiscal Legal / Compliance Officer"
+    ],
+    "variante_rol_fiscal_legal_compliance"
+  ],
+  "ENT_LEY_LOBBY": [
+    "conservado",
+    "doc:ley-20730",
+    "documento",
+    "Ley N° 20.730 que Regula el Lobby",
+    [
+      "Ley del Lobby",
+      "Ley 20730",
+      "Ley 20.730"
+    ],
+    null
+  ],
+  "ENT_MATRIZ_FUENTES_REGIONALES": [
+    "conservado",
+    "doc:matriz-fuentes-regionales-p01",
+    "documento",
+    "Matriz de Fuentes y Respaldos Regionales P01",
+    [
+      "Evidencia de Usuarios en Chile y LatAm"
+    ],
+    null
+  ],
+  "ENT_MATRIZ_OBJECIONES_CISO": [
+    "conservado",
+    "doc:matriz-objeciones-ciso",
+    "documento",
+    "Matriz de Objeciones Técnicas de CISOs en LatAm",
+    [
+      "Parámetros de Homologación B2B"
+    ],
+    null
+  ],
+  "ENT_MCKINSEY": [
+    "conservado",
+    "org:mckinsey",
+    "organizacion",
+    "McKinsey & Company",
+    [
+      "McKinsey"
+    ],
+    null
+  ],
+  "ENT_MERCO": [
+    "conservado",
+    "org:merco-chile",
+    "organizacion",
+    "Merco Chile",
+    [
+      "Merco",
+      "Monitor Empresarial de Reputación Corporativa"
+    ],
+    null
+  ],
+  "ENT_MODELO_RETORNO_VALOR": [
+    "conservado",
+    "tema:modelo-retorno-valor",
+    "tema",
+    "Modelo de Retorno de Valor en Asuntos Corporativos",
+    [
+      "Intangible Asset Valuation & Efficiency"
+    ],
+    null
+  ],
+  "ENT_MODELO_VALOR_P01": [
+    "conservado",
+    "tema:modelo-valor-asuntos-corporativos",
+    "tema",
+    "Modelo Multidimensional de Valor en Asuntos Corporativos",
+    [
+      "Modelo de Valor P01"
+    ],
+    null
+  ],
+  "ENT_P01_BRIDGE": [
+    "conservado",
+    "prod:bridge-intelligence",
+    "producto",
+    "The Bridge Intelligence",
+    [
+      "BRIDGE Intelligence",
+      "The Bridge Platform"
+    ],
+    null
+  ],
+  "ENT_P01_CORP": [
+    "conservado",
+    "org:corporacion-emisora-cmf",
+    "organizacion",
+    "Corporación Emisora CMF",
+    [
+      "Emisor de Valores CMF",
+      "Empresa Regulada CMF"
+    ],
+    null
+  ],
+  "ENT_P01_REG": [
+    "conservado",
+    "org:reguladores-sectoriales-chile",
+    "organizacion",
+    "CMF / SERNAC / SMA",
+    [
+      "Reguladores Sectoriales Chile",
+      "Entidades Reguladoras"
+    ],
+    null
+  ],
+  "ENT_PAGE_SOCIETY": [
+    "conservado",
+    "org:arthur-w-page-society",
+    "organizacion",
+    "Arthur W. Page Society",
+    [
+      "Page Society"
+    ],
+    null
+  ],
+  "ENT_PANEL_TRIPARTITO": [
+    "conservado",
+    "rol:panel-evaluador-tripartito",
+    "persona_rol",
+    "Panel Evaluador Tripartito (CCO, CISO, Fiscal Legal)",
+    [
+      "Comité de Adopción Tecnológica",
+      "Panel Tripartito"
+    ],
+    null
+  ],
+  "ENT_PARADOJA_LOBBY": [
+    "conservado",
+    "tema:paradoja-legitimidad-lobby",
+    "tema",
+    "Paradoja de Legitimidad en Ley de Lobby",
+    [
+      "Cumplimiento Legal vs Reputación"
+    ],
+    null
+  ],
+  "ENT_PLAN_3_FASES": [
+    "conservado",
+    "exp:plan-validacion-tres-fases",
+    "experimento",
+    "Plan de Validación Empírica en Tres Fases (12 Semanas)",
+    [
+      "Roadmap de Validación de Campo BRIDGE"
+    ],
+    null
+  ],
+  "ENT_POC_MINERA_IPSA": [
+    "conservado",
+    "exp:poc-minera-ipsa",
+    "experimento",
+    "Prueba de Concepto en Corporación Minero-Energética IPSA",
+    [
+      "PoC de Validación P01-F48"
+    ],
+    null
+  ],
+  "ENT_POC_TRIPARTITA": [
+    "conservado",
+    "exp:poc-trilateral-fase-3",
+    "experimento",
+    "Prueba de Concepto Trilateral (Fase 3)",
+    [
+      "Validación de Retorno B2B y Arquitectura"
+    ],
+    null
+  ],
+  "ENT_PROTOCOLO_VALIDACION": [
+    "conservado",
+    "doc:protocolo-validacion-tres-fases",
+    "documento",
+    "Protocolo de Validación Empírica en 3 Fases",
+    [
+      "Gaps & Validation Plan"
+    ],
+    null
+  ],
+  "ENT_PRSA_ESA22": [
+    "conservado",
+    "doc:prsa-ethical-standards-advisory-22",
+    "documento",
+    "PRSA Ethical Standards Advisory #22",
+    [
+      "PRSA ESA #22",
+      "ESA 22"
+    ],
+    null
+  ],
+  "ENT_RCA": [
+    "conservado",
+    "doc:resolucion-calificacion-ambiental",
+    "documento",
+    "Resolución de Calificación Ambiental (RCA)",
+    [
+      "RCA",
+      "Resolución Ambiental"
+    ],
+    null
+  ],
+  "ENT_RIESGO_PREPARACION": [
+    "conservado",
+    "riesgo:preparacion-insuficiente",
+    "riesgo",
+    "Riesgo de Preparación Insuficiente",
+    [
+      "Patología de Cocina Artesanal"
+    ],
+    null
+  ],
+  "ENT_SHADOWING_CRISIS": [
+    "conservado",
+    "exp:shadowing-preparacion-crisis",
+    "experimento",
+    "Shadowing de Preparación de Crisis",
+    [
+      "Observación Cronometrada en Tiempo Real"
+    ],
+    null
+  ],
+  "ENT_STAGE_GATES_P01": [
+    "conservado",
+    "comp:stage-gates-validacion-b2b",
+    "compromiso",
+    "Stage Gates de Validación B2B P01",
+    [
+      "Compuertas de Salida de Validación"
+    ],
+    null
+  ],
+  "ENT_SUBSECRETARIA": [
+    "conservado",
+    "org:subsecretaria-de-estado",
+    "organizacion",
+    "Subsecretaría de Estado",
+    [
+      "Subsecretaría Ministerial"
+    ],
+    null
+  ],
+  "ENT_TRIADA_B2B": [
+    "conservado",
+    "tema:triada-b2b-decision",
+    "tema",
+    "Tríada B2B (Usuario - Comprador - Aprobador)",
+    [
+      "Matriz de Decisión Tecnológica B2B",
+      "Ecosistema B2B de Decisión"
+    ],
+    null
+  ],
+  "ENT_TRIADA_CONTROL": [
+    "conservado",
+    "tema:triada-control-cco-legal-ops",
+    "tema",
+    "Tríada CCO - Legal - Operaciones",
+    [
+      "Tríada de Control Operativo"
+    ],
+    null
+  ],
+  "ENT_USUARIO_CHILENO": [
+    "conservado",
+    "rol:usuario-asuntos-corporativos-chile",
+    "persona_rol",
+    "Usuario de Asuntos Corporativos en Chile",
+    [
+      "Dircom Regulado en Chile"
+    ],
+    null
+  ],
+  "ENT_VECTORES_CRITICIDAD": [
+    "conservado",
+    "tema:cuatro-vectores-criticidad",
+    "tema",
+    "Cuatro Vectores de Criticidad",
+    [
+      "Vectores de Criticidad Decisional"
+    ],
+    null
+  ],
+  "ENT_VETO_VINCULANTE_CISO": [
+    "conservado",
+    "comp:veto-vinculante-ciso-legal",
+    "compromiso",
+    "Veto Vinculante de CISO y Fiscal Legal",
+    [
+      "Poder de Bloqueo B2B"
+    ],
+    null
+  ]
+}

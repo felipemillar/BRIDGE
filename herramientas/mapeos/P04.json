@@ -1,0 +1,637 @@
+{
+  "ENT_GAP_CHILE_ONTOLOGY": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_epistemico"
+  ],
+  "ENT_GAP_CRISIS_SIMULATION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_epistemico"
+  ],
+  "ENT_GAP_EMERGENCY_OVERRIDE": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_epistemico"
+  ],
+  "ENT_GAP_ESRS_MAPPING": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_epistemico"
+  ],
+  "ENT_GAP_GRAPHRAG_BENCHMARK": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_epistemico"
+  ],
+  "ENT_GAP_SILENT_DRIFT": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_epistemico"
+  ],
+  "ENT_GAP_SILENT_REEXPRESSION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_epistemico"
+  ],
+  "ENT_GAP_TABLE_PARSING": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "vacio_epistemico"
+  ],
+  "ENT_CASE_ANNUAL_REPORT_2025": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "ENT_CASE_DISAMBIGUATION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "ENT_CASE_EMBARGO_TEST": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "ENT_CASE_GENDER_DIVERSITY": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "ENT_CASE_REEXPRESSION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "ENT_CASE_TABLE_INGEST": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "ENT_WATER_COMMITMENT_CASE": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "caso_prueba_hipotetico"
+  ],
+  "ENT_ABAC_POLICY_SCHEMA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "esquema_datos_interno"
+  ],
+  "ENT_CHUNK_SCHEMA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "esquema_datos_interno"
+  ],
+  "ENT_DOC_INVENTORY_SCHEMA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "esquema_datos_interno"
+  ],
+  "ENT_RESPONSE_SCHEMA": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "esquema_datos_interno"
+  ],
+  "ENT_ABAC_PRE_RETRIEVAL_DECISION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "decision_diseno_interna"
+  ],
+  "ENT_ATOMIC_EVAL_RESOLUTION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "decision_diseno_interna"
+  ],
+  "ENT_HIERARCHICAL_RESOLUTION": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "decision_diseno_interna"
+  ],
+  "ENT_EDITORIAL_PRECEDENCE_P04": [
+    "eliminado",
+    null,
+    null,
+    null,
+    [],
+    "registro_editorial_interno"
+  ],
+  "ENT_4_EPISTEMIC_STATES": [
+    "conservado",
+    "tema:taxonomia-cuatro-estados-epistemicos",
+    "tema",
+    "Taxonomía Canónica de 4 Estados Epistémicos",
+    [
+      "4 Epistemic States Taxonomy",
+      "Cuatro Estados Epistémicos"
+    ],
+    null
+  ],
+  "ENT_ADVERSARIAL_SUITE": [
+    "conservado",
+    "exp:bateria-penetracion-semantica-abac",
+    "experimento",
+    "Batería de Penetración Semántica y Fuga de Permisos",
+    [
+      "Semantic Red Teaming Suite",
+      "Penetración Semántica ABAC"
+    ],
+    null
+  ],
+  "ENT_AS_OF_QUERY": [
+    "conservado",
+    "prod:mecanismo-consulta-retrospectiva-as-of",
+    "producto",
+    "Mecanismo de Consulta Retrospectiva As-Of",
+    [
+      "Point-in-Time Corporate Query",
+      "Consulta As-Of"
+    ],
+    null
+  ],
+  "ENT_ATTRIBUTION_VERIFIER": [
+    "conservado",
+    "prod:verificador-atribucion-atomica-citas",
+    "producto",
+    "Verificador de Atribución Atómica de Citas",
+    [
+      "Atomic Citation Verifier",
+      "Verificador Atribución"
+    ],
+    null
+  ],
+  "ENT_BITEMPORAL_MODEL": [
+    "conservado",
+    "tema:modelo-bitemporal-corporativo",
+    "tema",
+    "Modelo Bitemporal Corporativo",
+    [
+      "Corporate Bitemporal Data Model",
+      "Modelo Bitemporal"
+    ],
+    null
+  ],
+  "ENT_COMMITMENT_DATASHEET": [
+    "conservado",
+    "doc:ficha-canonica-compromiso-corporativo",
+    "documento",
+    "Ficha Canónica de Compromiso Corporativo",
+    [
+      "Corporate Commitment Data Sheet",
+      "Ficha Compromiso Corporativo"
+    ],
+    null
+  ],
+  "ENT_COMMITMENT_SOURCES": [
+    "conservado",
+    "doc:corpus-normativo-compromisos-corporativos",
+    "documento",
+    "Corpus Normativo de Compromisos Corporativos",
+    [
+      "Normative Commitment Frameworks",
+      "Fuentes Compromisos"
+    ],
+    null
+  ],
+  "ENT_COMMITMENT_STATES": [
+    "conservado",
+    "tema:estados-operativos-compromisos-corporativos",
+    "tema",
+    "Estados Operativos de Compromisos Corporativos",
+    [
+      "Corporate Commitment Lifecycle States",
+      "Ciclo de Vida Compromisos"
+    ],
+    null
+  ],
+  "ENT_CORPUS_FAMILIES": [
+    "conservado",
+    "tema:taxonomia-familias-corpus-institucional",
+    "tema",
+    "Familias del Corpus Institucional",
+    [
+      "Taxonomía Documental Corporativa",
+      "Familias Corpus Institucional"
+    ],
+    null
+  ],
+  "ENT_CORPUS_HEALTH_METRICS": [
+    "conservado",
+    "met:salud-calidad-corpus-corporativo",
+    "metrica",
+    "Métricas de Salud y Calidad del Corpus Corporativo",
+    [
+      "Corpus Quality Dashboard",
+      "Métricas Salud Corpus"
+    ],
+    null
+  ],
+  "ENT_CORP_ONTOLOGY": [
+    "conservado",
+    "doc:ontologia-maestra-memoria-corporativa",
+    "documento",
+    "Ontología Maestra de Memoria Corporativa",
+    [
+      "Corporate Memory Master Ontology",
+      "Ontología Memoria Corporativa"
+    ],
+    null
+  ],
+  "ENT_DOC_GOVERNANCE": [
+    "conservado",
+    "doc:modelo-atributos-gobierno-documental",
+    "documento",
+    "Modelo de Atributos de Gobierno Documental",
+    [
+      "ABAC Governance Profile",
+      "Gobierno Documental ABAC"
+    ],
+    null
+  ],
+  "ENT_EDGE_EPISTEMICS": [
+    "conservado",
+    "prod:control-epistemico-aristas-grafo",
+    "producto",
+    "Control Epistémico de Aristas en Grafos",
+    [
+      "Edge Epistemic Guardrail",
+      "Control Epistémico Aristas"
+    ],
+    null
+  ],
+  "ENT_EVAL_CRITERIA_MATRIX": [
+    "conservado",
+    "doc:matriz-criterios-umbrales-calidad",
+    "documento",
+    "Matriz de Criterios y Umbrales de Calidad Documental",
+    [
+      "Quality Evaluation Matrix",
+      "Criterios Calidad Documental"
+    ],
+    null
+  ],
+  "ENT_EVAL_LITERATURE": [
+    "conservado",
+    "doc:literatura-evaluacion-factualidad-rag",
+    "documento",
+    "Literatura Científica de Evaluación de Factualidad y RAG",
+    [
+      "Factuality Evaluation Academic Corpus",
+      "Evaluación Factualidad RAG"
+    ],
+    null
+  ],
+  "ENT_EVIDENCE_INVENTORY": [
+    "conservado",
+    "doc:corpus-normativo-inventario-documental",
+    "documento",
+    "Corpus Normativo del Inventario Documental",
+    [
+      "Normative Evidence Base",
+      "Inventario Evidencia"
+    ],
+    null
+  ],
+  "ENT_FOUR_EYES_AUDIT": [
+    "conservado",
+    "comp:protocolo-cuatro-ojos-auditoria",
+    "compromiso",
+    "Protocolo de Cuatro Ojos y Auditoría de Afirmaciones",
+    [
+      "Four-Eyes Review Protocol",
+      "Protocolo Cuatro Ojos"
+    ],
+    null
+  ],
+  "ENT_GOLD_STANDARD_SUITE": [
+    "conservado",
+    "exp:suite-referencia-gold-standard-250",
+    "experimento",
+    "Suite de Referencia Gold Standard (250 Casos)",
+    [
+      "Corporate Benchmark Suite",
+      "Gold Standard 250"
+    ],
+    null
+  ],
+  "ENT_HIERARCHICAL_CHUNKER": [
+    "conservado",
+    "prod:chunker-jerarquico-parent-child",
+    "producto",
+    "Chunking Jerárquico Parent-Child",
+    [
+      "Parent Document Retrieval",
+      "Chunker Jerárquico"
+    ],
+    null
+  ],
+  "ENT_HYBRID_ROUTER": [
+    "conservado",
+    "prod:enrutador-hibrido-busqueda-corporativa",
+    "producto",
+    "Enrutador Híbrido de Búsqueda Corporativa",
+    [
+      "Hybrid Search & GraphRAG Router",
+      "Enrutador Híbrido"
+    ],
+    null
+  ],
+  "ENT_IMMUTABLE_VERSION_CHAIN": [
+    "conservado",
+    "tema:cadena-inmutable-versionado-bitemporal",
+    "tema",
+    "Cadena Inmutable de Versionado Bitemporal",
+    [
+      "Bitemporal Immutable Version Chain",
+      "Cadena Inmutable Versionado"
+    ],
+    null
+  ],
+  "ENT_INGESTION_GUARD": [
+    "conservado",
+    "prod:validador-integridad-ingesta-tabular",
+    "producto",
+    "Validador de Integridad de Ingesta Tabular",
+    [
+      "Ingestion Quality Guardrail",
+      "Guardia de Ingesta"
+    ],
+    null
+  ],
+  "ENT_INGESTION_RESEARCH": [
+    "conservado",
+    "doc:literatura-cientifica-ingesta-rag-esg",
+    "documento",
+    "Literatura Científica de Ingesta RAG y ESG",
+    [
+      "RAG Ingestion Academic Corpus",
+      "Investigación Ingesta ESG"
+    ],
+    null
+  ],
+  "ENT_INTEGRITY_RULES": [
+    "conservado",
+    "doc:reglas-consistencia-logica-compromisos",
+    "documento",
+    "Reglas de Consistencia Lógica de Compromisos",
+    [
+      "Commitment Data Integrity Rules",
+      "Consistencia Lógica Compromisos"
+    ],
+    null
+  ],
+  "ENT_LAYOUT_PARSER": [
+    "conservado",
+    "prod:extractor-layout-tablas",
+    "producto",
+    "Extractor Sensible al Layout y Tablas",
+    [
+      "Layout-Aware Table Parser",
+      "Extractor Layout"
+    ],
+    null
+  ],
+  "ENT_LEGAL_HIERARCHY": [
+    "conservado",
+    "tema:jerarquia-juridico-operacional-corporativa",
+    "tema",
+    "Jerarquía Jurídico-Operacional Corporativa",
+    [
+      "Corporate Legal and Operational Hierarchy",
+      "Jerarquía Jurídico-Operacional"
+    ],
+    null
+  ],
+  "ENT_NEURAL_SYMBOLIC_GATEWAY": [
+    "conservado",
+    "prod:compuerta-neuronal-simbolica",
+    "producto",
+    "Compuerta de Validación Neuronal-Simbólica",
+    [
+      "Neural-Symbolic Integrity Gate",
+      "Validación Neuronal Simbólica"
+    ],
+    null
+  ],
+  "ENT_ONTOLOGY_STANDARDS": [
+    "conservado",
+    "doc:estandares-ontologicos-internacionales",
+    "documento",
+    "Estándares Ontológicos Internacionales",
+    [
+      "Semantic Graph Standards",
+      "Estándares Ontológicos"
+    ],
+    null
+  ],
+  "ENT_POST_VERIFICATION_PROTOCOL": [
+    "conservado",
+    "comp:protocolo-post-verificacion-algoritmica",
+    "compromiso",
+    "Protocolo de Post-Verificación Algorítmica de Citas",
+    [
+      "Algorithmic Citation Verification Protocol",
+      "Post-Verificación Citas"
+    ],
+    null
+  ],
+  "ENT_PRE_RETRIEVAL_ABAC": [
+    "conservado",
+    "prod:control-acceso-pre-recuperacion-abac",
+    "producto",
+    "Control de Acceso Pre-Recuperación ABAC",
+    [
+      "Pre-Retrieval ABAC Guardrail",
+      "Control Pre-Recuperación ABAC"
+    ],
+    null
+  ],
+  "ENT_PROVENANCE_GRAPH": [
+    "conservado",
+    "prod:grafo-procedencia-linaje-corporativo",
+    "producto",
+    "Grafo de Procedencia y Linaje Corporativo",
+    [
+      "Corporate Provenance Knowledge Graph",
+      "Grafo de Procedencia"
+    ],
+    null
+  ],
+  "ENT_RACI_MATRIX": [
+    "conservado",
+    "doc:matriz-raci-conocimiento-corporativo",
+    "documento",
+    "Matriz RACI de Conocimiento Corporativo",
+    [
+      "Corporate Knowledge RACI Matrix",
+      "Matriz RACI Corporativa"
+    ],
+    null
+  ],
+  "ENT_RELEASE_CERTIFICATE": [
+    "conservado",
+    "doc:certificado-conformidad-release",
+    "documento",
+    "Certificado de Conformidad de Release Corporativo",
+    [
+      "Corporate Release Compliance Certificate",
+      "Certificado Release"
+    ],
+    null
+  ],
+  "ENT_RETRIEVAL_PAPERS": [
+    "conservado",
+    "doc:literatura-vanguardia-recuperacion-rag",
+    "documento",
+    "Literatura de Vanguardia en Recuperación y RAG",
+    [
+      "Advanced RAG Scientific Literature",
+      "Literatura RAG Avanzado"
+    ],
+    null
+  ],
+  "ENT_SAFE_ABSTENTION": [
+    "conservado",
+    "prod:mecanismo-abstencion-activa",
+    "producto",
+    "Mecanismo de Abstención Activa y Detección de Conflictos",
+    [
+      "Safe Abstention Guardrail",
+      "Abstención Activa"
+    ],
+    null
+  ],
+  "ENT_SECURITY_STANDARDS": [
+    "conservado",
+    "doc:estandares-seguridad-control-acceso-abac",
+    "documento",
+    "Estándares de Seguridad y Control de Acceso",
+    [
+      "Cybersecurity ABAC Standards",
+      "Estándares Seguridad ABAC"
+    ],
+    null
+  ],
+  "ENT_SHACL_CONSTRAINTS": [
+    "conservado",
+    "doc:restricciones-shacl-integridad-ontologica",
+    "documento",
+    "Restricciones SHACL de Integridad Ontológica",
+    [
+      "Corporate KG SHACL Shapes",
+      "Restricciones SHACL"
+    ],
+    null
+  ],
+  "ENT_SSOT_CRITERIA": [
+    "conservado",
+    "doc:criterio-fuente-verdad-institucional",
+    "documento",
+    "Criterio de Fuente de Verdad Institucional",
+    [
+      "SSOT Corporate Model",
+      "Criterio SSOT"
+    ],
+    null
+  ],
+  "ENT_SUPERSEDED_PROTOCOL": [
+    "conservado",
+    "comp:protocolo-superacion-deprecacion-documental",
+    "compromiso",
+    "Protocolo de Superación y Deprecación Documental",
+    [
+      "Document Superseding Protocol",
+      "Protocolo Deprecación Documental"
+    ],
+    null
+  ],
+  "ENT_TEMPORAL_STANDARDS": [
+    "conservado",
+    "doc:estandares-w3c-procedencia-temporalidad",
+    "documento",
+    "Estándares W3C de Procedencia y Temporalidad",
+    [
+      "W3C Temporal Standards",
+      "Estándares W3C Temporalidad"
+    ],
+    null
+  ],
+  "ENT_VERSIONING_RULES": [
+    "conservado",
+    "doc:reglas-integridad-versionado-temporal",
+    "documento",
+    "Reglas de Integridad del Versionado Temporal",
+    [
+      "Temporal Versioning Integrity Rules",
+      "Reglas Versionado Temporal"
+    ],
+    null
+  ]
+}
