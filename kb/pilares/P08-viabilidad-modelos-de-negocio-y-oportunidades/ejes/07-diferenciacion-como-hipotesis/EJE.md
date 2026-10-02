@@ -24,7 +24,7 @@
 
 > El flujo completo que distingue a BRIDGE frente a cualquier alternativa existente articula cuatro cuadrantes sinérgicos (Saber, Escuchar, Hablar y Relacionar): 1) Escuchar: Ingesta algorítmica de señales del entorno externo (prensa, boletines del Congreso BCN, resoluciones de la SMA y Hechos Esencia
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P08-F37.json](P08-F37.json)
 ### P08-F38: ¿Qué parte del valor depende de integrar datos internos, externos y memoria relacional?
 
