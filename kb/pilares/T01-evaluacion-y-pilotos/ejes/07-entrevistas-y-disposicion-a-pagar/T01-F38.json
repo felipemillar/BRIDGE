@@ -89,12 +89,18 @@
       "confidence": "alta",
       "confidence_reason": "Regla de validación comercial en Stage-Gate.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.stage-gate.com/blog/the-stage-gate-model-an-overview/",
+        "sha256_texto": "5e2cc0dddcc9685471934994db14f19d0a68c3fad8b331a9da7630df38669450",
+        "pasaje": "Passing Gate 3 requires formal budget identification, procurement alignment, or pre-orders. Verbal enthusiasm without financial commitment is treated as a failed gate.",
+        "motivos": []
       }
     }
   ],

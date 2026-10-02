@@ -30,7 +30,7 @@
 
 > Para revelar presupuesto real y proceso de compra corporativo, The Bridge Intelligence utiliza dos pruebas metodológicas de rigor empírico: 1) Metodología Van Westendorp Price Sensitivity Meter (PSM / Van Westendorp 1976, SurveyMonkey b62914e1): Se aplican las cuatro preguntas canónicas a los sponso
 
-- **Verificación:** no_verificada: 2
+- **Verificación:** no_verificada: 1, verificada: 1
 - **Registro:** [T01-F38.json](T01-F38.json)
 ### T01-F39: ¿Qué señales de complacencia o sesgo de selección afectan las conclusiones?
 
