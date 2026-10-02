@@ -24,7 +24,7 @@
 
 > Representar la memoria corporativa exige un Grafo de Conocimiento (Knowledge Graph) compuesto por 7 clases maestras de entidades y sus relaciones dirigidas: 1) `org:Organization` (matriz, filiales, subsidiarias con RUT/LEI); 2) `corp:FacilityProject` (faenas operacionales, plantas industriales o pro
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P04-F13.json](P04-F13.json)
 ### P04-F14: ¿Qué casos exigen separar matriz, filial, proyecto, instalación y vocero?
 

@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Convergencia de estándares formales Schema.org, FIBO y ontología de arquitectura P04.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://schema.org/Organization",
+        "sha256_texto": "578b71b4a2d6669f604f3b4bd8379ddd64b9190bb9f3db51064c7bee125b3270",
+        "pasaje": "Defines semantic hierarchy between parent corporations, subsidiaries, departments and spokespersons.",
+        "motivos": []
       }
     }
   ],
