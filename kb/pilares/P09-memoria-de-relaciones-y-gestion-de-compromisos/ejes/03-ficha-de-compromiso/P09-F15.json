@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.95,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.tractivity.co.uk/blog/stakeholder-commitment-tracking",
+        "sha256_texto": "544de481ccc10a71994eb80264dba5578e7f25672c18250268147dea229ebd08",
+        "pasaje": "Automated escalation triggers alert leadership before a deadline expires, preventing sudden breach of trust and enabling proactive dialogue with affected stakeholders.",
+        "motivos": []
       }
     }
   ],

@@ -36,7 +36,7 @@
 
 > El sistema categoriza tres niveles de excepción que exigen protocolos rigurosos de gobernanza: 1) Modificación de Alcance o Presupuesto: Requiere aprobación formal del Gerente de Asuntos Corporativos y el Gerente de Operaciones, registrando el motivo técnico justificatorio en el audit trail inmutabl
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P09-F15.json](P09-F15.json)
 ### P09-F16: ¿Qué variables, categorías, relaciones y condiciones exige representar ficha de compromiso de forma estructurada?
 
