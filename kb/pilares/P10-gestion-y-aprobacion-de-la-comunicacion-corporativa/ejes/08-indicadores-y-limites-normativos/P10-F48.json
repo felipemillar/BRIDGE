@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.99,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.bcn.cl/leychile/navegar?idNorma=61438",
+        "sha256_texto": "21d60db3e0dc9263e5841b556937ab5ed73c5440cc0c7ba7616c896bd1c3d012",
+        "pasaje": "Comete infracción quien a través de cualquier mensaje publicitario induzca a error o engaño respecto a las características relevantes del bien o servicio... debiendo comprobarse la veracidad de las aseveraciones.",
+        "motivos": []
       }
     }
   ],

@@ -54,6 +54,6 @@
 
 > Caso Concreto: Auditoría Trimestral de Calidad y Cumplimiento Normativo en Emisión de Reporte Integrado de Sostenibilidad. Entradas: 1) Producción de 45 piezas comunicacionales durante el trimestre (incluyendo comunicado de resultados financieros, reporte NCG 461 y 12 notas de prensa ESG); 2) Módulo
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P10-F48.json](P10-F48.json)
 
