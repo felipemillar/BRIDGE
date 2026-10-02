@@ -36,7 +36,7 @@
 
 > La distinción se basa en tres filtros metodológicos acumulativos: 1) Umbral de materialidad regulatoria y financiera: una mención de marca es un evento meramente comunicacional (ej. auspicio deportivo, review de producto), mientras que un cambio material altera los derechos, obligaciones, gobernanza
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P03-F03.json](P03-F03.json)
 ### P03-F04: ¿Qué variables, categorías, relaciones y condiciones exige representar taxonomía de señales externas de forma estructurada?
 

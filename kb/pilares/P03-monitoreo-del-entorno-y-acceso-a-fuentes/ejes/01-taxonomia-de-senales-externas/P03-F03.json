@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Respaldo directo en normativa legal de mercado de valores y estándares AMEC.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://amecorg.com/barcelona-principles-3-0-translations/",
+        "sha256_texto": "75346fcf02c7ad3ad6eceba4872fa694df088c151fcd5f9d47004c2ffece976b",
+        "pasaje": "Outcomes include shifts in awareness, comprehension, attitude, stance, and organizational impact, distinct from mere mention volume or media impressions.",
+        "motivos": []
       }
     }
   ],
