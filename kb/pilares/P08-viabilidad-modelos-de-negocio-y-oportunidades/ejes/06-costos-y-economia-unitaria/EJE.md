@@ -48,7 +48,7 @@
 
 > Los datos cuantitativos y fundamentos de la economía unitaria se sustentan en cuatro fuentes primarias del corpus: 1) Michael Page Chile (2025-2026), que provee las tablas salariales y cargas laborales oficiales de analistas de asuntos corporativos en Santiago; 2) Google Cloud Vertex AI Pricing Calc
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P08-F35.json](P08-F35.json)
 ### P08-F36: ¿Qué caso concreto, con entradas y resultado esperado, ilustra costos y economía unitaria sin introducir datos no documentados?
 

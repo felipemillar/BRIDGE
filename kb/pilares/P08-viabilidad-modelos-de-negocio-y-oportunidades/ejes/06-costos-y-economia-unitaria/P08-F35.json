@@ -51,15 +51,18 @@
       "epistemic_status_original": "fact",
       "confidence_original": 0.95,
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [
-          "confianza_numerica_original",
-          "estado_epistemico_no_canonico_original"
-        ],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.michaelpage.cl/seleccion-de-personal/estudios-y-tendencias/estudio-de-remuneracion-2022",
+        "sha256_texto": "ffc7034bc723be1780f7c9f02f52afb967f3678da0b5f0448e736a9bfb9ed7d0",
+        "pasaje": "Rango de remuneración mensual para Analista Senior de Asuntos Corporativos y Comunicaciones: Mínimo CLP 2.200.000 líquido, Promedio CLP 2.600.000 líquido, Máximo CLP 3.200.000 líquido. Las empresas multinacionales y mineras se sitúan en el cuartil superior con paquetes de beneficios complementarios.",
+        "motivos": []
       }
     }
   ],
