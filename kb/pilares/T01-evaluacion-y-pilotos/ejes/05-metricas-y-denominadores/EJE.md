@@ -42,7 +42,7 @@
 
 > La representación estructurada de métricas y denominadores requiere un esquema relacional estricto compuesto por: 1) Entidad Definición_Métrica: Identificador unívoco, nombre técnico (Citation Precision, Ragas Faithfulness, Latencia p95), categoría (exactitud, eficiencia, costo, seguridad), fórmula
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [T01-F28.json](T01-F28.json)
 ### T01-F29: ¿Qué fuentes originales, pasajes, fechas y ámbitos respaldan cada hecho sobre métricas y denominadores?
 
