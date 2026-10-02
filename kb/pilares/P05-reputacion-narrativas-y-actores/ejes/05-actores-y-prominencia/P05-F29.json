@@ -53,12 +53,18 @@
       "confidence": "alta",
       "confidence_reason": "Textos legales oficiales de la República de Chile y estándares internacionales auditables.",
       "verificacion": {
-        "estado": "no_verificada",
-        "motivos": [],
-        "verificado_por": null,
-        "fecha": null,
-        "metodo": null,
-        "pasaje": null
+        "estado": "verificada",
+        "fecha": "2026-10-02T20:40:00Z",
+        "verificado_por": {
+          "rol": "verificador_evidencia",
+          "modelo": "antigravity-swarm",
+          "run_id": "piloto-001"
+        },
+        "metodo": "lectura_url_original",
+        "url_consultada": "https://www.accountability.org/standards/aa1000-stakeholder-engagement",
+        "sha256_texto": "9f9bbfcfaec1600875bf6897795d8e412af8db2e7ac26b47583bd8df729e10b3",
+        "pasaje": "Provides a globally accepted framework for an organization to assess, design, implement and communicate their stakeholder engagement to support sustainability.",
+        "motivos": []
       }
     }
   ],

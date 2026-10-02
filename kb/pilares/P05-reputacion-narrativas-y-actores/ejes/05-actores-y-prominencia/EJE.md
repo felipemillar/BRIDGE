@@ -48,7 +48,7 @@
 
 > Los hechos documentados sobre actores y prominencia están respaldados por cinco fuentes primarias del corpus: 1) Mitchell, Agle & Wood (1997, Academy of Management Review, 22(4), pp. 853-886 / Umbrex 2024, ámbito: teoría organizacional y dirección estratégica): respalda la definición de poder, legit
 
-- **Verificación:** no_verificada: 1
+- **Verificación:** verificada: 1
 - **Registro:** [P05-F29.json](P05-F29.json)
 ### P05-F30: ¿Qué caso concreto, con entradas y resultado esperado, ilustra actores y prominencia sin introducir datos no documentados?
 
