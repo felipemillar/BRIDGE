@@ -14,16 +14,24 @@ logger = logging.getLogger("generar_grafo_html")
 RAIZ = Path(__file__).resolve().parent.parent
 
 COLORES_TIPO = {
+    "persona_rol": {"background": "#8b5cf6", "border": "#6d28d9", "highlight": "#a78bfa"},
     "rol": {"background": "#8b5cf6", "border": "#6d28d9", "highlight": "#a78bfa"},
+    "organizacion": {"background": "#3b82f6", "border": "#1d4ed8", "highlight": "#60a5fa"},
     "org": {"background": "#3b82f6", "border": "#1d4ed8", "highlight": "#60a5fa"},
     "riesgo": {"background": "#ef4444", "border": "#b91c1c", "highlight": "#f87171"},
     "tema": {"background": "#10b981", "border": "#047857", "highlight": "#34d399"},
+    "documento": {"background": "#f59e0b", "border": "#b45309", "highlight": "#fbbf24"},
     "doc": {"background": "#f59e0b", "border": "#b45309", "highlight": "#fbbf24"},
+    "compromiso": {"background": "#6366f1", "border": "#4338ca", "highlight": "#818cf8"},
     "comp": {"background": "#6366f1", "border": "#4338ca", "highlight": "#818cf8"},
+    "producto": {"background": "#06b6d4", "border": "#0e7490", "highlight": "#22d3ee"},
     "prod": {"background": "#06b6d4", "border": "#0e7490", "highlight": "#22d3ee"},
+    "experimento": {"background": "#ec4899", "border": "#be185d", "highlight": "#f472b6"},
     "exp": {"background": "#ec4899", "border": "#be185d", "highlight": "#f472b6"},
+    "metrica": {"background": "#14b8a6", "border": "#0f766e", "highlight": "#2dd4bf"},
     "met": {"background": "#14b8a6", "border": "#0f766e", "highlight": "#2dd4bf"},
-    "req": {"background": "#84cc16", "border": "#4d7c0f", "highlight": "#a3e635"},
+    "evento": {"background": "#f43f5e", "border": "#be123c", "highlight": "#fb7185"},
+    "evt": {"background": "#f43f5e", "border": "#be123c", "highlight": "#fb7185"},
     "entidad": {"background": "#64748b", "border": "#334155", "highlight": "#94a3b8"}
 }
 
@@ -119,25 +127,33 @@ def construir_html(entidades, relaciones, contradicciones):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Bridge Intelligence — Grafo de Conocimiento Canónico</title>
-  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.9/standalone/umd/vis-network.min.js"></script>
+  <script>
+    if (typeof vis === 'undefined') {{
+      document.write('<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"><\\/script>');
+    }}
+  </script>
   <style>
     :root {{
       --bg: #090d16;
-      --panel-bg: rgba(15, 23, 42, 0.85);
-      --border: rgba(51, 65, 85, 0.6);
+      --panel-bg: rgba(15, 23, 42, 0.88);
+      --border: rgba(51, 65, 85, 0.65);
       --text: #f1f5f9;
       --muted: #94a3b8;
       --accent: #38bdf8;
     }}
     * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    html, body {{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }}
     body {{
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      overflow: hidden;
       display: flex;
       flex-direction: column;
-      height: 100vh;
     }}
     header {{
       background: var(--panel-bg);
@@ -148,6 +164,8 @@ def construir_html(entidades, relaciones, contradicciones):
       align-items: center;
       justify-content: space-between;
       z-index: 10;
+      flex-shrink: 0;
+      height: 56px;
     }}
     .brand {{
       display: flex;
@@ -181,15 +199,21 @@ def construir_html(entidades, relaciones, contradicciones):
     #app {{
       display: flex;
       flex: 1;
+      height: calc(100vh - 56px);
+      min-height: 0;
       position: relative;
+      overflow: hidden;
     }}
     #network {{
       flex: 1;
       height: 100%;
+      min-height: 0;
+      width: 100%;
+      position: relative;
       background: radial-gradient(circle at center, #111827 0%, #090d16 100%);
     }}
     .sidebar {{
-      width: 320px;
+      width: 330px;
       background: var(--panel-bg);
       backdrop-filter: blur(12px);
       border-left: 1px solid var(--border);
@@ -198,7 +222,9 @@ def construir_html(entidades, relaciones, contradicciones):
       padding: 16px;
       gap: 16px;
       z-index: 10;
+      height: 100%;
       overflow-y: auto;
+      flex-shrink: 0;
     }}
     .search-box input {{
       width: 100%;
@@ -243,15 +269,17 @@ def construir_html(entidades, relaciones, contradicciones):
       cursor: pointer;
       border: 1px solid transparent;
       user-select: none;
+      transition: background 0.15s, border-color 0.15s;
     }}
     .legend-item:hover, .legend-item.active {{
       border-color: var(--border);
-      background: rgba(51, 65, 85, 0.6);
+      background: rgba(51, 65, 85, 0.7);
     }}
     .dot {{
-      width: 8px;
-      height: 8px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
+      flex-shrink: 0;
     }}
     .detail-card {{
       background: rgba(30, 41, 59, 0.6);
@@ -265,12 +293,14 @@ def construir_html(entidades, relaciones, contradicciones):
       font-size: 0.95rem;
       color: var(--accent);
       margin-bottom: 6px;
+      word-break: break-word;
     }}
     .detail-card code {{
       background: rgba(15, 23, 42, 0.7);
       padding: 2px 5px;
       border-radius: 4px;
       font-size: 0.78rem;
+      word-break: break-all;
     }}
     .controls {{
       margin-top: auto;
@@ -288,6 +318,7 @@ def construir_html(entidades, relaciones, contradicciones):
       cursor: pointer;
       font-weight: 500;
       transition: background 0.15s;
+      text-align: center;
     }}
     .btn:hover {{
       background: rgba(51, 65, 85, 0.9);
@@ -362,7 +393,7 @@ def construir_html(entidades, relaciones, contradicciones):
           springConstant: 0.08,
           damping: 0.4
         }},
-        stabilization: {{ iterations: 150 }}
+        stabilization: {{ iterations: 120, updateInterval: 25 }}
       }},
       interaction: {{
         hover: true,
@@ -373,6 +404,16 @@ def construir_html(entidades, relaciones, contradicciones):
     }};
 
     const network = new vis.Network(container, data, options);
+    window.network = network;
+
+    // Ajustar vista tras renderizado inicial
+    network.once('stabilizationIterationsDone', function() {{
+      network.fit({{ animation: true }});
+    }});
+    window.addEventListener('resize', () => {{
+      network.redraw();
+      network.fit();
+    }});
 
     // Poblar leyenda
     const legendContainer = document.getElementById('legendContainer');
@@ -385,6 +426,13 @@ def construir_html(entidades, relaciones, contradicciones):
       item.onclick = () => {{
         const matchingIds = rawNodes.filter(n => n.tipo === tipo).map(n => n.id);
         network.selectNodes(matchingIds);
+        detailCard.innerHTML = `
+          <h3>Filtro: ${{tipo}}</h3>
+          <p><strong>Entidades seleccionadas:</strong> ${{matchingIds.length}}</p>
+          <ul style="padding-left:16px; margin-top:6px; font-size:0.75rem; color:var(--muted); max-height:160px; overflow-y:auto;">
+            ${{matchingIds.map(id => `<li>${{id}}</li>`).join('')}}
+          </ul>
+        `;
       }};
       legendContainer.appendChild(item);
     }});
