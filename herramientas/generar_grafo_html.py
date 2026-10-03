@@ -500,8 +500,10 @@ def main():
         html = construir_html(entidades, relaciones, contradicciones)
         out_path = RAIZ / "visualizador_grafo.html"
         out_path.write_text(html, encoding="utf-8")
-        logger.info(f"Visualizador generado exitosamente en: {out_path}")
-        print(f"OK: Visualizador generado en {out_path.name}")
+        index_path = RAIZ / "index.html"
+        index_path.write_text(html, encoding="utf-8")
+        logger.info(f"Visualizador generado exitosamente en: {out_path} e {index_path}")
+        print(f"OK: Visualizador generado en {out_path.name} e {index_path.name}")
     except Exception as err:
         logger.error(f"Error al generar visualizador: {type(err).__name__} (detalles omitidos por seguridad)")
         raise

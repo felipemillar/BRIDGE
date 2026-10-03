@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/grafo", "destination": "/visualizador_grafo.html" },
+    { "source": "/", "destination": "/index.html" }
+  ]
+}
